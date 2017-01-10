@@ -12,8 +12,8 @@
     "less-plugin-remcalc": "git+ssh://git@stash.ovh.net:7999/~guillaume.coguiec/less-plugin-remcalc.git"
   },
   "devDependencies": {
-    "less": "^2.7.1",
-    "stylefmt": "^5.0.2",
-    "stylelint": "^7.6.0"
+    "less": "^2.7.2",
+    "stylefmt": "^5.0.3",
+    "stylelint": "^7.7.1"
   }
 }
