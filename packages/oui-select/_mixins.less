@@ -1,0 +1,141 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .select(
+    @icon-selector,
+    @font-color: @oui-select-font-color,
+    @font-size: @oui-select-font-size,
+    @font-weight: @oui-select-font-weight,
+    @icon-size: @oui-select-icon-size,
+    @icon-position-right: @oui-icon-position-right,
+    @border-color: @oui-select-border-color,
+    @spacing: @oui-select-spacing,
+    @padding: @oui-select-padding
+  ) {
+    position: relative;
+    display: block;
+    border-radius: @oui-global-base-radius;
+    margin: @spacing;
+
+    &__input {
+      width: 100%;
+      max-width: 100%;
+      height: ~"calc(@{font-size} * 2.25)";
+      min-height: rem-calc(36);
+      padding: 0 rem-calc(20) 0 @padding;
+      border: 1px solid @border-color;
+      border-radius: @oui-global-base-radius;
+      background: #ffffff;
+      color: @font-color;
+      font-size: @font-size;
+      line-height: rem-calc(34);
+      font-weight: @font-weight;
+      cursor: pointer;
+      -webkit-appearance: none;
+
+      // Firefox adds a small padding before text so we need to remove it
+      @-moz-document url-prefix() {
+        padding-right: 0;
+        padding-left: calc(@padding - 0.4rem);
+      }
+
+      select&::-ms-expand {
+        display: none;
+      }
+    }
+
+    &__input:focus {
+      #oui > .animate();
+
+      border: 1px solid #0090b1;
+      outline: none;
+      box-shadow: inset 1px 1px 2px 0px rgba(102, 199, 214, 0.5), 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+      background: #f5fcfd;
+
+      ~ .@{icon-selector} {
+        box-shadow: inset -1px 1px 1px 0px rgba(102, 199, 214, 0.5);
+        background: #f5fcfd;
+      }
+
+      ~ .@{icon-selector}::before {
+        color: #0090b1;
+      }
+    }
+
+    &__input:disabled {
+      border-color: #e6e6e6;
+      background-color: @oui-color-concrete;
+      color: #b3b3b3;
+      text-shadow: none;
+      cursor: not-allowed;
+
+      ~ .@{icon-selector} {
+        background-color: @oui-color-concrete;
+      }
+
+      ~ .@{icon-selector}::before {
+        color: #b3b3b3;
+      }
+    }
+
+    .@{icon-selector} {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      width: ~"calc(@{icon-size} * 2)";
+      height: auto;
+      border-radius: ~"calc(@{oui-global-base-radius} - 1px)";
+      margin: auto;
+      background: #fff;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      pointer-events: none;
+
+      &::before {
+        display: inline-block;
+        color: @oui-color-shuttle;
+        font-size: @icon-size;
+      }
+    }
+  }
+
+  .select-status(@index: length(@oui-select-status)) when (@index > 0) {
+    .select-status(@index - 1);
+
+    @select-selector: oui-select;
+    @icon-selector: oui-icon;
+    @status: extract(@oui-select-status, @index);
+    @status-font-color: "oui-color-@{status}-dark";
+    @status-icon-color: "oui-color-@{status}-medium";
+    @status-border-color: "oui-color-@{status}-light";
+    @status-background-color: "oui-color-@{status}-fade";
+
+    &_@{status} .@{select-selector}__input,
+    &_@{status} .@{select-selector}__input:hover,
+    &_@{status} .@{select-selector}__input:active,
+    &_@{status} .@{select-selector}__input:focus {
+      border-color: @@status-border-color;
+      background-color: @@status-background-color;
+      color: @@status-font-color;
+
+      ~ .@{icon-selector} {
+        box-shadow: none;
+        background-color: @@status-background-color;
+
+        /* stylelint-disable max-nesting-depth */
+        &::before {
+          color: @@status-font-color;
+        }
+        /* stylelint-enable max-nesting-depth */
+      }
+    }
+
+    &_@{status} .@{select-selector}__input:focus {
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
+}

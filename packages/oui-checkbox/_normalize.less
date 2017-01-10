@@ -1,0 +1,14 @@
+@import '../oui-typography/_mixins';
+
+#oui {
+  .checkbox-normalize() {
+    &__label-container {
+      font-weight: inherit;
+    }
+
+    &__label,
+    &__description {
+      #oui > .base-font();
+    }
+  }
+}

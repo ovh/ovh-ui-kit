@@ -1,0 +1,96 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .base-font() {
+    font-family: @oui-global-base-font-family;
+    line-height: @oui-global-base-line-height;
+    letter-spacing: @oui-global-base-letter-spacing;
+  }
+
+  .headers(@index: length(@oui-header-font-sizes)) when(@index > 0) {
+    .headers(@index - 1);
+
+    &_@{index} {
+      .base-font();
+      font-size: extract(@oui-header-font-sizes, @index);
+      font-weight: extract(@oui-header-font-weights, @index);
+      margin: extract(@oui-header-margins, @index);
+      color: inherit;
+    }
+  }
+
+  .header-underline(
+    @border-width: @oui-header-border-width,
+    @border-color: @oui-header-border-color
+  ) {
+    border-bottom: @border-width solid @border-color;
+  }
+
+  .link(
+    @font-color: @oui-link-font-color,
+    @font-color_hover: @oui-link-font-color_hover,
+    @text-decoration: @oui-link-text-decoration,
+    @text-decoration_hover: @oui-link-text-decoration_hover
+  ) {
+    .base-font();
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+    color: @font-color;
+    text-decoration: @text-decoration;
+    line-height: inherit;
+    cursor: pointer;
+    -webkit-text-decoration-skip: objects;
+
+    &:active,
+    &:hover {
+      outline-width: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: @font-color_hover;
+    }
+
+    &:hover {
+      text-decoration: @text-decoration_hover;
+    }
+
+    img {
+      border-style: none;
+    }
+  }
+
+  .text-ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .horizontal-line-base(
+    @margin-bottom: @oui-horizontal-line-margin-bottom;
+    @width: @oui-horizontal-line-width;
+    @color: @oui-horizontal-line-color;
+    @style: @oui-horizontal-line-style;
+  ) {
+    margin: 0;
+    margin-bottom: @margin-bottom;
+    border-top-style: @style;
+    border-top-color: @color;
+    border-top-width: @width;
+  }
+
+  .horizontal-line-dark(
+    @color: @oui-horizontal-line-dark-color
+  ) {
+    border-top-color: @color;
+  }
+
+  .horizontal-line-thin(
+    @width: @oui-horizontal-line-thin-width
+  ) {
+    border-top-width: @width;
+  }
+}

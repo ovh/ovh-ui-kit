@@ -1,0 +1,14 @@
+@import '../oui-typography/_mixins';
+
+#oui {
+  .radio-normalize() {
+    &__label-container {
+      font-weight: inherit;
+      cursor: pointer;
+    }
+
+    &__label {
+      #oui > .base-font();
+    }
+  }
+}

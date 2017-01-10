@@ -1,0 +1,23 @@
+{
+  "name": "ovh-ui-kit",
+  "version": "1.0.0-alpha.5",
+  "description": "A LESS stylekit for the OVH brand.",
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
+    "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons",
+    "build": "rimraf dist && npm run build:less && npm run build:icons",
+    "fix": "stylefmt -r packages",
+    "lint": "stylelint --syntax less 'packages/**/*.less'",
+    "preversion": "npm build",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "icon-font-generator": "^1.0.7",
+    "less": "^2.7.2",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.5.4",
+    "stylefmt": "^5.0.3",
+    "stylelint": "^7.7.1"
+  }
+}

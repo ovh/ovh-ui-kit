@@ -1,0 +1,75 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .color-badge-base(
+    @border-color: @oui-color-badge-border-color,
+    @palette-size: @oui-color-badge-palette-size,
+    @prop-font-size: @oui-color-badge-prop-font-size,
+    @width: rem-calc(144),
+    @spacing: rem-calc(20) auto,
+    @padding: rem-calc(7)
+  ) {
+    position: relative;
+    border: 1px solid @border-color;
+    width: @width;
+    max-width: 100%;
+    margin: @spacing;
+    padding: @padding;
+    padding-top: @palette-size + 2 * @padding;
+    padding-bottom: rem-calc(12);
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: @padding;
+      right: 0;
+      left: 0;
+      content: '';
+      width: 90%;
+      height: @palette-size;
+      margin: auto;
+    }
+
+    &__prop {
+      #oui > .text-ellipsis();
+
+      display: block;
+      font-size: @oui-color-badge-prop-font-size;
+      text-align: center;
+
+      &:first-child,
+      &:last-child {
+        margin: rem-calc(5) 0 0;
+      }
+    }
+  }
+
+  .color-badge-variant(
+    @palette-size: @oui-color-badge-variant-palette-size
+  ) {
+    margin-top: rem-calc(50);
+    padding-top: rem-calc(22);
+
+    &::before {
+      border-radius: 50%;
+      width: @palette-size;
+      height: @palette-size;
+      top: rem-calc(-40);
+      left: rem-calc(42);
+    }
+  }
+
+  .color-badge-theme(@name, @color) {
+    &_@{name}::before {
+      background-color: @color;
+    }
+  }
+
+  .color-badge-themes(@index: length(@oui-color-badge-themes)) when (@index > 0) {
+    .color-badge-themes(@index - 1);
+    @name: extract(@oui-color-badge-themes, @index);
+    .color-badge-theme(@name, @@name);
+  }
+}

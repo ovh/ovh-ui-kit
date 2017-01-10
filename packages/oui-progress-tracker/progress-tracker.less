@@ -1,0 +1,9 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-progress-tracker {
+  @oui-progress-tracker-selector: oui-progress-tracker;
+
+  #oui > .progress-tracker-normalize();
+  #oui > .progress-tracker(@oui-progress-tracker-selector);
+}

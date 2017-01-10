@@ -1,0 +1,194 @@
+@import '../oui-animation/_mixins';
+@import './_variables';
+
+#oui {
+  .table-base(
+    @width: @oui-table-width,
+    @margin: @oui-table-margin
+  ) {
+    position: relative;
+    z-index: 1;
+    width: @width;
+    border: 0;
+    border-collapse: separate;
+    margin: @margin;
+    text-align: left;
+  }
+
+  .table-row(
+    @background-color: @oui-table-row-background-color
+  ) {
+    #oui > .animate();
+
+    background: fade(@background-color, 0);
+
+    &:hover,
+    &:focus {
+      outline: none;
+      background: fade(@background-color, 50%);
+    }
+  }
+
+  .table-header(
+    @background-color: @oui-table-header-background-color,
+    @font-color: @oui-table-header-font-color
+  ) {
+    background-color: @background-color;
+    color: @font-color;
+    font-weight: @oui-font-regular;
+  }
+
+  .table-cell(
+    @background-color: @oui-table-cell-background-color,
+    @border-color: @oui-table-cell-border-color,
+    @font-color: @oui-table-cell-font-color,
+    @padding: @oui-table-cell-padding
+  ) {
+    position: relative;
+    padding: @padding;
+    border-bottom: 1px solid @border-color;
+    outline: none;
+    color: @font-color;
+    cursor: default;
+  }
+
+  .table-cell-sortable(
+    @arrow-size: @oui-table-arrow-size
+  ) {
+    &,
+    &.oui-table__header {
+      #oui > .animate();
+
+      padding-right: ~"calc(@{arrow-size} * 3)";
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        background-color: @oui-table-background-color-hover;
+      }
+    }
+  }
+
+  .table-header-arrow(
+    @arrow-color: @oui-table-arrow-color,
+    @arrow-size: @oui-table-arrow-size
+  ) {
+    display: inline-block;
+    width: ~"calc(@{arrow-size} * 2)";
+    height: @arrow-size;
+    margin: auto;
+    color: @arrow-color;
+    font-family: 'Oui Icons';
+    font-size: @arrow-size;
+    line-height: 1;
+    font-weight: @oui-font-regular;
+    text-align: center;
+  }
+
+  .table-arrow-asc(
+    @arrow-color: @oui-table-arrow-color,
+    @arrow-size: @oui-table-arrow-size
+  ) {
+    &,
+    &.oui-table__header {
+      font-weight: @oui-font-bold;
+
+      &::after {
+        .table-header-arrow();
+        content: @oui-icon-index-arrow-up;
+      }
+    }
+  }
+
+  .table-arrow-desc(
+    @arrow-color: @oui-table-arrow-color,
+    @arrow-size: @oui-table-arrow-size
+  ) {
+    &,
+    &.oui-table__header {
+      font-weight: @oui-font-bold;
+
+      &::after {
+        .table-header-arrow();
+        content: @oui-icon-index-arrow-down;
+      }
+    }
+  }
+
+  .table-container(
+    @selector,
+    @margin: @oui-table-container-margin
+  ) {
+    margin: @margin;
+
+    &__headers {
+      display: flex;
+      justify-content: stretch;
+
+      .@{selector}-container__header {
+        .table-cell();
+        .table-header();
+
+        flex: 1 1;
+        box-sizing: border-box;
+
+        &.@{selector}__cell_sortable,
+        &.@{selector}__cell_sortable-asc,
+        &.@{selector}__cell_sortable-desc {
+          .table-cell-sortable();
+        }
+
+        &.@{selector}__cell_sortable {
+          &:not(.@{selector}__cell_sortable-asc):not(.@{selector}__cell_sortable-desc) {
+            &:focus, &:hover {
+              &::after {
+                .table-header-arrow();
+                content: @oui-icon-index-arrow-up;
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+
+        &.@{selector}__cell_sortable-asc {
+          .table-arrow-asc();
+        }
+
+        &.@{selector}__cell_sortable-desc {
+          .table-arrow-desc();
+        }
+      }
+    }
+
+    &__body {
+      overflow: hidden;
+      overflow-y: scroll;
+      overflow-y: overlay;
+
+      .@{selector} {
+        table-layout: fixed;
+        margin: -1px 0 0;
+
+        .@{selector}__headers {
+          .@{selector}__header {
+            opacity: 0;
+            font-size: 0;
+            line-height: 0;
+            padding: 0;
+            border: 0;
+
+            &::after {
+              font-size: 0;
+              line-height: 0;
+            }
+          }
+
+          .@{selector}__cell_sortable-asc::after,
+          .@{selector}__cell_sortable-desc::after {
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+}

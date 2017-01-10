@@ -1,0 +1,42 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-table-container {
+  @oui-selector: oui-table;
+
+  #oui > .table-normalize();
+  #oui > .table-container(@oui-selector);
+}
+
+.oui-table {
+  #oui > .table-normalize();
+  #oui > .table-base();
+
+  &__row {
+    #oui > .table-row();
+  }
+
+  &__header {
+    #oui > .text-ellipsis();
+    #oui > .table-cell();
+    #oui > .table-header();
+  }
+
+  &__cell {
+    #oui > .table-cell();
+
+    &_sortable,
+    &_sortable-asc,
+    &_sortable-desc {
+      #oui > .table-cell-sortable();
+    }
+
+    &_sortable-asc {
+      #oui > .table-arrow-asc();
+    }
+
+    &_sortable-desc {
+      #oui > .table-arrow-desc();
+    }
+  }
+}

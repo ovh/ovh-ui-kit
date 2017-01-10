@@ -1,0 +1,34 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-button {
+  @oui-icon-selector: oui-icon;
+
+  #oui > .button-normalize();
+  #oui > .button-base();
+
+  &_primary {
+    #oui > .button-filled();
+  }
+
+  &_secondary {
+    #oui > .button-hollow();
+  }
+
+  &_dropdown {
+    #oui > .button-hollow();
+    #oui > .button-dropdown(@oui-icon-selector);
+  }
+
+  &_icon-right {
+    #oui > .button-filled();
+    #oui > .button-icon-base(@oui-icon-selector);
+    #oui > .button-icon-right(@oui-icon-selector);
+  }
+
+  &_icon-left {
+    #oui > .button-hollow();
+    #oui > .button-icon-base(@oui-icon-selector);
+    #oui > .button-icon-left(@oui-icon-selector);
+  }
+}

@@ -1,0 +1,11 @@
+@import '../oui-typography/_mixins';
+
+#oui {
+  .input-normalize() {
+    #oui > .base-font();
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+}

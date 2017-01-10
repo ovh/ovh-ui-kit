@@ -1,0 +1,9 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-navbar {
+  @select-selector: oui-select;
+
+  #oui > .navbar-normalize();
+  #oui > .navbar(@select-selector);
+}
