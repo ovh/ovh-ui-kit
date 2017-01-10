@@ -1,0 +1,162 @@
+@import '../oui/_settings';
+@import '../oui-typography/_constants';
+@import '../oui-typography/_mixins';
+@import '../oui-color/_variables';
+@import '../oui-animation/_mixins';
+@import '../oui-accessibility/_mixins';
+@import './_variables';
+
+#oui {
+  .radio-position(
+    @outer-circle-top,
+    @outer-circle-left,
+    @inner-circle-top,
+    @inner-circle-left
+  ) {
+    &__label::before {
+      top: @outer-circle-top;
+      left: @outer-circle-left;
+    }
+
+    &__input:checked ~ &__label::after {
+      top: @inner-circle-top;
+      left: @inner-circle-left;
+    }
+  }
+
+  .radio-size(
+    @outer-circle-size,
+    @inner-circle-size
+  ) {
+    &__label::before {
+      width: @outer-circle-size;
+      height: @outer-circle-size;
+    }
+
+    &__input:checked ~ &__label::after {
+      width: @inner-circle-size;
+      height: @inner-circle-size;
+    }
+  }
+
+  .radio(
+    @label-font-size: @radio-label-font-size,
+    @label-font-color: @radio-label-font-color,
+    @label-font-color_disabled: @radio-label-font-color_disabled,
+    @label-font-color_input-checked: @radio-label-font-color_input-checked,
+    @outer-circle-border-color: @radio-outer-circle-border-color,
+    @outer-circle-border-color_disabled: @radio-outer-circle-border-color_disabled,
+    @outer-circle-border-color_input-checked: @radio-outer-circle-border-color_input-checked,
+    @outer-circle-background-color: @radio-outer-circle-background-color,
+    @outer-circle-background-color_disabled: @radio-outer-circle-background-color_disabled,
+    @outer-circle-border-color_hover: @radio-outer-circle-border-color_hover,
+    @outer-circle-border-color_input-checked-hover: @radio-outer-circle-border-color_input-checked-hover,
+    @outer-circle-border-color_active: @radio-outer-circle-border-color_active,
+    @inner-circle-background-color: @radio-inner-circle-background-color,
+    @inner-circle-background-color_active: @radio-inner-circle-background-color_active,
+    @inner-circle-background-color_input-checked-disabled: @radio-inner-circle-background-color_input-checked-disabled,
+    @spacing: rem-calc(10) 0,
+    @outer-circle-size: rem-calc(16),
+    @outer-circle-top: rem-calc(4),
+    @outer-circle-left: 0,
+    @inner-circle-size: rem-calc(6),
+    @inner-circle-top: rem-calc(9),
+    @inner-circle-left: rem-calc(5),
+    @padding-left: rem-calc(25),
+  ) {
+    .radio-size(
+      @outer-circle-size,
+      @inner-circle-size
+    );
+
+    .radio-position(
+      @outer-circle-top,
+      @outer-circle-left,
+      @inner-circle-top,
+      @inner-circle-left
+    );
+
+    position: relative;
+    display: block;
+    padding-left: @padding-left;
+    margin: @spacing;
+
+    &,
+    &__label,
+    &__label::before,
+    &__label::after {
+      #oui > .animate();
+      user-select: none;
+    }
+
+    &__label {
+      #oui > .base-font();
+      font-size: @label-font-size;
+      color: @label-font-color;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 1px;
+        border-color: @outer-circle-border-color;
+        border-radius: 50%;
+        background-color: @outer-circle-background-color;
+      }
+    }
+
+    &__input {
+      #oui > .visually-hidden();
+    }
+
+    &__input:checked ~ &__label {
+      color: @label-font-color_input-checked;
+
+      &::before {
+        border-color: @outer-circle-border-color_input-checked;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        border-radius: 50%;
+        background-color: @inner-circle-background-color;
+      }
+    }
+
+    &__input:disabled ~ &__label {
+      color: @label-font-color_disabled;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: @outer-circle-background-color_disabled;
+        border-color: @outer-circle-border-color_disabled;
+      }
+    }
+
+    &__input:disabled:checked ~ &__label {
+      &::after {
+        background-color: @inner-circle-background-color_input-checked-disabled;
+      }
+    }
+
+    &:hover:not(:active) > &__input:not(:disabled) ~ &__label::before {
+      border-color: @outer-circle-border-color_hover;
+    }
+
+    &:hover:not(:active) &__input:checked:not(:disabled) ~ &__label::before {
+      border-color: @outer-circle-border-color_input-checked-hover;
+    }
+
+    &:active > &__input:not(:disabled) ~ &__label {
+      &::before {
+        border-color: @outer-circle-border-color_active;
+      }
+
+      &::after {
+        background-color: @inner-circle-background-color_active;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .color-badge-base(
+    @border-color: @color-badge-border-color,
+    @palette-size: @color-badge-palette-size,
+    @prop-font-size: @color-badge-prop-font-size,
+    @width: rem-calc(144),
+    @spacing: rem-calc(20) rem-calc(32),
+    @padding: rem-calc(7)
+  ) {
+    position: relative;
+    border: 1px solid @border-color;
+    width: @width;
+    margin: @spacing;
+    padding: @padding;
+    padding-top: @palette-size + 2 * @padding;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: @padding;
+      left: @padding;
+      content: '';
+      width: @palette-size;
+      height: @palette-size;
+    }
+
+    &__prop {
+      display: block;
+      text-align: center;
+      font-size: @color-badge-prop-font-size;
+    }
+  }
+
+  .color-badge-variant(
+    @palette-size: @color-badge-variant-palette-size
+  ) {
+    margin-top: rem-calc(50);
+    padding-top: rem-calc(22);
+
+    &::before {
+      border-radius: 50%;
+      width: @palette-size;
+      height: @palette-size;
+      top: rem-calc(-40);
+      left: rem-calc(42);
+    }
+  }
+
+  .color-badge-theme(@name, @color) {
+    &_@{name}::before {
+      background-color: @color;
+    }
+  }
+
+  .color-badge-themes(@index: length(@color-badge-themes)) when (@index > 0) {
+    .color-badge-themes(@index - 1);
+    @name: extract(@color-badge-themes, @index);
+    .color-badge-theme(@name, @@name);
+  }
+}

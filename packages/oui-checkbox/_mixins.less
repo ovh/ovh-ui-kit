@@ -1,0 +1,91 @@
+@import '../oui-typography/_mixins';
+@import '../oui-animation/_mixins';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .checkbox(
+    @outline-color: @checkbox-outline-color,
+    @outline-color_hover: @checkbox-outline-color_hover,
+    @outline-color_checked: @checkbox-outline-color_checked,
+    @outline-color_checked-hover: @checkbox-outline-color_checked-hover,
+    @spacing: @checkbox-spacing
+  ) {
+    position: relative;
+    display: block;
+    padding-left: @checkbox-facade-size + rem-calc(10);
+    margin: @spacing;
+    min-height: @checkbox-facade-size;
+
+    &__outline_checked,
+    &__checkmark,
+    &__false-bottom {
+      display: none;
+    }
+
+    &__label {
+      #oui > .base-font();
+    }
+
+    &__facade,
+    &__label {
+      user-select: none;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__input,
+    &__facade {
+      margin: 0;
+      position: absolute;
+      width: @checkbox-facade-size;
+      height: @checkbox-facade-size;
+      left: 0;
+      top: rem-calc(3);
+    }
+
+    &__input {
+      #oui > .visually-hidden();
+    }
+
+    &__outline,
+    &__checkmark {
+      #oui > .animate();
+      fill: @outline-color;
+    }
+
+    &__facade:hover > &__outline {
+      fill: @checkbox-outline-color_hover;
+    }
+
+    &:active &__false-bottom {
+      display: block;
+      fill: fade(@pacific, 10);
+    }
+
+    &:active &__outline,
+    &:active &__input:checked ~ &__facade > &__outline,
+    &:active &__input:checked ~ &__facade > &__checkmark {
+      fill: @pacific;
+    }
+
+    &__input:checked ~ &__facade &__outline_unchecked {
+      display: none;
+    }
+
+    &__input:checked ~ &__facade &__outline:not(&__outline_checked),
+    &__input:checked ~ &__facade &__checkmark {
+      fill: @outline-color_checked;
+    }
+
+    &__input:checked ~ &__facade &__outline_checked,
+    &__input:checked ~ &__facade &__checkmark {
+      display: block;
+    }
+
+    &__input:checked ~ &__facade:hover > &__outline {
+      fill: @dusty;
+    }
+  }
+}

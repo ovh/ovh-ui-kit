@@ -1,0 +1,61 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .base-font() {
+    font-family: @global-base-font-family;
+    line-height: @global-base-line-height;
+  }
+
+  .headers(@index: length(@header-font-sizes)) when(@index > 0) {
+    .headers(@index - 1);
+
+    &@{index} {
+      .base-font();
+      font-size: extract(@header-font-sizes, @index);
+      font-weight: extract(@header-font-weights, @index);
+      margin: extract(@header-margins, @index);
+      color: inherit;
+    }
+  }
+
+  .link(
+    @font-color: @link-font-color,
+    @font-color_hover: @link-font-color_hover,
+    @text-decoration: @link-text-decoration,
+    @text-decoration_hover: @link-text-decoration_hover
+  ) {
+    .base-font();
+    color: @font-color;
+    text-decoration: @text-decoration;
+    line-height: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+
+    &:active,
+    &:hover {
+      outline-width: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: @font-color_hover;
+    }
+
+    &:hover {
+      text-decoration: @text-decoration_hover;
+    }
+
+    img {
+      border-style: none;
+    }
+  }
+
+  .text-ellipsis() {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

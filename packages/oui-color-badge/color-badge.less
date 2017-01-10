@@ -1,0 +1,14 @@
+@import './_mixins';
+
+.oui-color-badge {
+  #oui > .color-badge-base();
+  #oui > .color-badge-themes();
+
+  &_variant {
+    #oui > .color-badge-variant();
+  }
+
+  &_white::before {
+    border: solid 1px @color-badge-palette-border-color;
+  }
+}

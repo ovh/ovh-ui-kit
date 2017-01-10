@@ -1,0 +1,19 @@
+{
+  "name": "oui-less",
+  "version": "0.1.0",
+  "description": "A stylekit for the OVH brand (Less).",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
+    "fix": "stylefmt -r packages",
+    "lint": "stylelint --syntax less 'packages/**/*.less'"
+  },
+  "dependencies": {
+    "less-plugin-remcalc": "git+ssh://git@stash.ovh.net:7999/~guillaume.coguiec/less-plugin-remcalc.git"
+  },
+  "devDependencies": {
+    "less": "^2.7.1",
+    "stylefmt": "^5.0.2",
+    "stylelint": "^7.6.0"
+  }
+}
