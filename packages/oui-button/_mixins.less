@@ -1,6 +1,5 @@
 @import '../oui/_settings';
 @import '../oui-typography/_constants';
-@import '../oui-typography/_mixins';
 @import '../oui-animation/_mixins';
 @import '../oui-color/_variables';
 @import './_variables';
@@ -18,28 +17,17 @@
     @line-height: 1,
     @letter-spacing: 0.007em
   ) {
-    #oui > .text-ellipsis();
-    #oui > .base-font();
     min-width: @min-width;
     max-width: @max-width;
-    display: inline-block;
     position: relative;
     margin: @spacing;
     padding: @padding;
-    vertical-align: middle;
-    text-align: center;
     line-height: @line-height;
-    cursor: pointer;
     font-size: @font-size;
     font-weight: @font-weight;
     letter-spacing: @letter-spacing;
-    border: none;
     border-radius: @radius;
     color: @font-color;
-    overflow-y: hidden;
-    user-select: none;
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     &,
     &:focus,
