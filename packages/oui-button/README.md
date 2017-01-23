@@ -49,14 +49,14 @@ Define the base styles for a button.
 ```
 
 ```less
-#oui > .button-base(@font-color, @font-size, @font-weight);
+#oui > .button-base(@oui-font-color, @oui-font-size, @oui-font-weight);
 ```
 
 | Parameter | Type | Default Value | Comments |
 | --- | --- | --- | --- |
-| __@font-color__ | Color | `@button-font-color` | -
-| __@font-size__ | Number | `@button-font-size`| -
-| __@font-weight__ | Keyword | `@button-font-weight` | -
+| __@oui-font-color__ | Color | `@oui-button-font-color` | -
+| __@oui-font-size__ | Number | `@oui-button-font-size`| -
+| __@oui-font-weight__ | Keyword | `@oui-button-font-weight` | -
 
 ### .button-filled
 
@@ -67,15 +67,15 @@ Will stylize your button as a filled one.
 ```
 
 ```less
-#oui > .button-filled(@background-color, @background-color_hover, @background-color_disabled, @font-color_disabled, @box-shadow-color_active)
+#oui > .button-filled(@background-color, @background-color_hover, @background-color_disabled, @oui-font-color_disabled, @box-shadow-color_active)
 ```
 | Parameter | Type | Default Value | Comments |
 | --- | --- | --- | --- |
-| __@background-color__ | Color | `@button-filled-background-color` | -
-| __@background-color_hover__ | Color | `@button-filled-background-color_hover`| -
-| __@background-color_disabled__ | Color | `@button-filled-background-color_disabled` | -
-| __@font-color_disabled__ | Color | `@button-filled-font-color_disabled` | -
-| __@box-shadow-color_active__ | Color | `@button-filled-box-shadow-color_active` | -
+| __@background-color__ | Color | `@oui-button-filled-background-color` | -
+| __@background-color_hover__ | Color | `@oui-button-filled-background-color_hover`| -
+| __@background-color_disabled__ | Color | `@oui-button-filled-background-color_disabled` | -
+| __@oui-font-color_disabled__ | Color | `@oui-button-filled-font-color_disabled` | -
+| __@box-shadow-color_active__ | Color | `@oui-button-filled-box-shadow-color_active` | -
 
 ### .button-hollow
 
@@ -91,12 +91,12 @@ Will stylize your button as a hollow one.
 
 | Parameter | Type | Default Value | Comments |
 | --- | --- | --- | --- |
-| __@background-color__ | Color | `@button-hollow-background-color` | -
-| __@background-color_disabled__ | Color | `@button-hollow-background-color_disabled` | -
-| __@font-color_disabled__ | Color | `@button-hollow-font-color_disabled` | -
-| __@border-color_hover__ | Color | `@button-hollow-border-color_hover` | -
-| __@border-color_disabled__ | Color | `@button-hollow-border-color_disabled` | -
-| __@box-shadow-color_active__ | Color | `@button-hollow-box-shadow-color_active` | -
+| __@background-color__ | Color | `@oui-button-hollow-background-color` | -
+| __@background-color_disabled__ | Color | `@oui-button-hollow-background-color_disabled` | -
+| __@oui-font-color_disabled__ | Color | `@oui-button-hollow-font-color_disabled` | -
+| __@border-color_hover__ | Color | `@oui-button-hollow-border-color_hover` | -
+| __@border-color_disabled__ | Color | `@oui-button-hollow-border-color_disabled` | -
+| __@box-shadow-color_active__ | Color | `@oui-button-hollow-box-shadow-color_active` | -
 
 ## Classes
 

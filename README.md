@@ -1,7 +1,3 @@
-<p align="center"><img src="http://i.imgur.com/JJYWgLD.png" alt="ovh"/></p>
-
-<hr>
-
 # OVH UI (Less)
 
 A stylekit for the OVH brand.
@@ -11,7 +7,7 @@ A stylekit for the OVH brand.
 ## Installation
 
 ```
-yarn add --dev "git+ssh://git@stash.ovh.net:7999/~guillaume.coguiec/oui-less.git"
+yarn add --dev "git+ssh://git@stash.ovh.net:7999/UXCOMPONENTS/oui-less.git"
 ```
 
 ## Usage

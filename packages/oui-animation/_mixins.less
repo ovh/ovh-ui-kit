@@ -1,13 +1,13 @@
 @import './_variables';
 
 #oui {
-  .animate-fast-out-slow-in(@duration: @animation-default-timing) {
+  .animate-fast-out-slow-in(@duration: @oui-animation-default-timing) {
     transition-duration: @duration;
-    transition-timing-function: @animation-fast-out-slow-in;
+    transition-timing-function: @oui-animation-fast-out-slow-in;
   }
 
-  .animate(@duration: @animation-default-timing) {
+  .animate(@duration: @oui-animation-default-timing) {
     transition-duration: @duration;
-    transition-timing-function: @animation-default;
+    transition-timing-function: @oui-animation-default;
   }
 }

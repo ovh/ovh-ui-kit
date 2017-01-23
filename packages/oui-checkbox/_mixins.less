@@ -5,17 +5,17 @@
 
 #oui {
   .checkbox(
-    @outline-color: @checkbox-outline-color,
-    @outline-color_hover: @checkbox-outline-color_hover,
-    @outline-color_checked: @checkbox-outline-color_checked,
-    @outline-color_checked-hover: @checkbox-outline-color_checked-hover,
-    @spacing: @checkbox-spacing
+    @outline-color: @oui-checkbox-outline-color,
+    @outline-color_hover: @oui-checkbox-outline-color_hover,
+    @outline-color_checked: @oui-checkbox-outline-color_checked,
+    @outline-color_checked-hover: @oui-checkbox-outline-color_checked-hover,
+    @spacing: @oui-checkbox-spacing
   ) {
     position: relative;
     display: block;
-    padding-left: @checkbox-facade-size + rem-calc(10);
+    padding-left: @oui-checkbox-facade-size + rem-calc(10);
     margin: @spacing;
-    min-height: @checkbox-facade-size;
+    min-height: @oui-checkbox-facade-size;
 
     &__outline_checked,
     &__checkmark,
@@ -35,8 +35,8 @@
     &__facade {
       margin: 0;
       position: absolute;
-      width: @checkbox-facade-size;
-      height: @checkbox-facade-size;
+      width: @oui-checkbox-facade-size;
+      height: @oui-checkbox-facade-size;
       left: 0;
       top: rem-calc(3);
     }
@@ -52,18 +52,18 @@
     }
 
     &__facade:hover > &__outline {
-      fill: @checkbox-outline-color_hover;
+      fill: @oui-checkbox-outline-color_hover;
     }
 
     &:active &__false-bottom {
       display: block;
-      fill: fade(@pacific, 10);
+      fill: fade(@oui-color-pacific, 10);
     }
 
     &:active &__outline,
     &:active &__input:checked ~ &__facade > &__outline,
     &:active &__input:checked ~ &__facade > &__checkmark {
-      fill: @pacific;
+      fill: @oui-color-pacific;
     }
 
     &__input:checked ~ &__facade &__outline_unchecked {
@@ -81,7 +81,7 @@
     }
 
     &__input:checked ~ &__facade:hover > &__outline {
-      fill: @dusty;
+      fill: @oui-color-dusty;
     }
   }
 }

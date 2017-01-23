@@ -4,27 +4,27 @@
 
 #oui {
   .base-font() {
-    font-family: @global-base-font-family;
-    line-height: @global-base-line-height;
+    font-family: @oui-global-base-font-family;
+    line-height: @oui-global-base-line-height;
   }
 
-  .headers(@index: length(@header-font-sizes)) when(@index > 0) {
+  .headers(@index: length(@oui-header-font-sizes)) when(@index > 0) {
     .headers(@index - 1);
 
     &@{index} {
       .base-font();
-      font-size: extract(@header-font-sizes, @index);
-      font-weight: extract(@header-font-weights, @index);
-      margin: extract(@header-margins, @index);
+      font-size: extract(@oui-header-font-sizes, @index);
+      font-weight: extract(@oui-header-font-weights, @index);
+      margin: extract(@oui-header-margins, @index);
       color: inherit;
     }
   }
 
   .link(
-    @font-color: @link-font-color,
-    @font-color_hover: @link-font-color_hover,
-    @text-decoration: @link-text-decoration,
-    @text-decoration_hover: @link-text-decoration_hover
+    @font-color: @oui-link-font-color,
+    @font-color_hover: @oui-link-font-color_hover,
+    @text-decoration: @oui-link-text-decoration,
+    @text-decoration_hover: @oui-link-text-decoration_hover
   ) {
     .base-font();
     color: @font-color;
