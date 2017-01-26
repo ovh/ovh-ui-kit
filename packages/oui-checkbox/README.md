@@ -84,16 +84,15 @@ The block class is `oui-checkbox` (top-level element).
 
 Inner elements:
 
-```html
-<input type="checkbox" class="oui-checkbox__input">
-<span class="oui-checkbox__label"></span>
-<svg class="oui-checkbox__facade">
-	<path class="oui-checkbox__false-bottom"></path>
-	<path class="oui-checkbox__outline oui-checkbox__outline_unchecked"></path>
-	<path class="oui-checkbox__outline oui-checkbox__outline_checked"></path>
-	<path class="oui-checkbox__checkmark"></path>
-</svg>
-```
+| Element | Class |
+| --- | --- |
+| __input[type=checkbox]__ | `oui-checkbox__input` | -
+| __span__ | `oui-checkbox__label` | -
+| __svg__ | `oui-checkbox__facade` |
+| path | `oui-checkbox__false-bottom` |
+| path | `oui-checkbox__outline oui-checkbox__outline_unchecked` |
+| path | `oui-checkbox__outline oui-checkbox__outline_checked` |
+| path | `oui-checkbox__checkmark` | -
 
 ### Modifier
 
