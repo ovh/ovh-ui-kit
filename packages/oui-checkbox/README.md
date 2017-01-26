@@ -84,13 +84,16 @@ The block class is `oui-checkbox` (top-level element).
 
 Inner elements:
 
-input[type=checkbox] class `oui-checkbox__input`
-span class `oui-checkbox__label`
-svg class `oui-checkbox__facade`
-	path class `oui-checkbox__false-bottom`
-	path class `oui-checkbox__outline oui-checkbox__outline_unchecked`
-	path class `oui-checkbox__outline oui-checkbox__outline_checked`
-	path class `oui-checkbox__checkmark`
+```html
+<input type="checkbox" class="oui-checkbox__input">
+<span class="oui-checkbox__label"></span>
+<svg class="oui-checkbox__facade">
+	<path class="oui-checkbox__false-bottom"></path>
+	<path class="oui-checkbox__outline oui-checkbox__outline_unchecked"></path>
+	<path class="oui-checkbox__outline oui-checkbox__outline_checked"></path>
+	<path class="oui-checkbox__checkmark"></path>
+</svg>
+```
 
 ### Modifier
 
