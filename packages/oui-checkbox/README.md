@@ -88,11 +88,11 @@ Inner elements:
 | --- | --- |
 | __input[type=checkbox]__ | `oui-checkbox__input` | -
 | __span__ | `oui-checkbox__label` | -
-| __svg__ | `oui-checkbox__facade` |
+| __svg__ | `oui-checkbox__facade` | -
 | path | `oui-checkbox__false-bottom` |
 | path | `oui-checkbox__outline oui-checkbox__outline_unchecked` |
 | path | `oui-checkbox__outline oui-checkbox__outline_checked` |
-| path | `oui-checkbox__checkmark` | -
+| path | `oui-checkbox__checkmark` |
 
 ### Modifier
 
