@@ -11,6 +11,7 @@
     @outline-color_checked-hover: @oui-checkbox-outline-color_checked-hover,
     @spacing: @oui-checkbox-spacing
   ) {
+
     position: relative;
     display: block;
     padding-left: @oui-checkbox-facade-size + rem-calc(10);
@@ -81,6 +82,39 @@
     }
 
     &__input:checked ~ &__facade:hover > &__outline {
+      fill: @oui-color-dusty;
+    }
+    
+    &__input:disabled {
+      cursor: default;
+      pointer-events: none;
+      color: @oui-color-nurse;
+    }
+
+    &__input:disabled ~ &__label {
+      cursor: default;
+      pointer-events: none;
+      color: @oui-color-dusty;
+    }
+
+    &__input:disabled ~ &__facade {
+      cursor: default;
+      pointer-events: none;
+      fill: @oui-color-nurse;
+    }
+
+    &__input:disabled ~ &__facade &__false-bottom {
+      display: block;
+      fill: @oui-color-nurse;
+    }
+
+    &__input:disabled ~ &__facade &__checkmark {
+      fill: @oui-color-dusty;
+    }
+
+    &:active &__input:disabled ~ &__facade &__outline,
+    &:active &__input:disabled ~ &__facade > &__outline,
+    &:active &__input:disabled ~ &__facade > &__checkmark {
       fill: @oui-color-dusty;
     }
   }
