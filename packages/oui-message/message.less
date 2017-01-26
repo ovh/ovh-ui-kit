@@ -1,0 +1,27 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-message {
+  #oui > .message-normalize();
+  #oui > .message-base();
+
+  &_success {
+  	#oui > .message-success();
+  }
+
+  &_info {
+  	#oui > .message-info();
+  }
+
+  &_warning {
+  	#oui > .message-warning();
+  }
+
+  &_error {
+  	#oui > .message-error();
+  }
+  
+  &_no-icon {
+  	#oui > .message-no-icon();
+  }
+}
