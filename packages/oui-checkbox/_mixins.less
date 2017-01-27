@@ -100,19 +100,16 @@
       color: @oui-color-dusty;
     }
 
-    &__input:disabled ~ &__facade {
+    &__input:disabled ~ &__facade,
+    &__input:disabled ~ &__facade &__false-bottom {
       fill: @oui-color-nurse;
     }
 
     &__input:disabled ~ &__facade &__false-bottom {
       display: block;
-      fill: @oui-color-nurse;
     }
 
-    &__input:disabled ~ &__facade &__checkmark {
-      fill: @oui-color-dusty;
-    }
-
+    &__input:disabled ~ &__facade &__checkmark,
     &:active &__input:disabled ~ &__facade &__outline,
     &:active &__input:disabled ~ &__facade > &__outline,
     &:active &__input:disabled ~ &__facade > &__checkmark {
