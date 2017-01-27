@@ -85,21 +85,23 @@
       fill: @oui-color-dusty;
     }
     
-    &__input:disabled {
+    &__input:disabled,
+    &__input:disabled ~ &__label,
+    &__input:disabled ~ &__facade {
       cursor: default;
       pointer-events: none;
+    }
+
+    &__input:disabled {
+      
       color: @oui-color-nurse;
     }
 
     &__input:disabled ~ &__label {
-      cursor: default;
-      pointer-events: none;
       color: @oui-color-dusty;
     }
 
     &__input:disabled ~ &__facade {
-      cursor: default;
-      pointer-events: none;
       fill: @oui-color-nurse;
     }
 
