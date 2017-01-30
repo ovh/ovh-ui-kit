@@ -1,7 +1,6 @@
 @import '../oui/_settings';
 @import '../oui-typography/_constants';
 @import '../oui-animation/_mixins';
-@import '../oui-transform/_mixins';
 @import '../oui-color/_variables';
 @import './_variables';
 
@@ -53,8 +52,10 @@
     @background-color_hover: @oui-button-filled-background-color_hover,
     @background-color_disabled: @oui-button-filled-background-color_disabled,
     @font-color_disabled: @oui-button-filled-font-color_disabled,
-    @box-shadow-color_active: @oui-button-filled-box-shadow-color_active
+    @box-shadow-color_active: @oui-button-filled-box-shadow-color_active,
+    @padding: @oui-button-filled-padding
   ) {
+    padding: @padding;
     background-color: @background-color;
 
     &:hover {
@@ -73,14 +74,14 @@
   }
 
   .button-hollow(
-    @padding: rem-calc(9) rem-calc(29),
     @background-color: @oui-button-hollow-background-color,
     @background-color_disabled: @oui-button-hollow-background-color_disabled,
     @font-color_disabled: @oui-button-hollow-font-color_disabled,
     @border-color: @oui-button-hollow-border-color,
     @border-color_hover: @oui-button-hollow-border-color_hover,
     @border-color_disabled: @oui-button-hollow-border-color_disabled,
-    @box-shadow-color_active: @oui-button-hollow-box-shadow-color_active
+    @box-shadow-color_active: @oui-button-hollow-box-shadow-color_active,
+    @padding: @oui-button-hollow-padding
   ) {
     padding: @padding;
     background-color: @background-color;
@@ -106,9 +107,14 @@
   }
 
   .button-dropdown(
-    @padding: rem-calc(9) rem-calc(34) rem-calc(9) rem-calc(15),
-    @font-color: @oui-button-font-color,
-    @font-color_disabled: @oui-button-hollow-font-color_disabled
+    @icon-color: @oui-button-dropdown-icon-color,
+    @icon-color_active: @oui-button-dropdown-icon-color_active,
+    @font-color_active: @oui-button-dropdown-font-color_active,
+    @background-color_active: @oui-button-dropdown-background-color_active,
+    @border-color_active: @oui-button-dropdown-border-color_active,
+    @box-shadow-color_active: @oui-button-dropdown-box-shadow-color_active,
+    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
+    @padding: @oui-button-dropdown-padding
   ) {
     position: relative;
     padding: @padding;
@@ -122,32 +128,34 @@
       width: rem-calc(10);
       height: rem-calc(6);
       margin: auto;
-      fill: @font-color;
+      fill: @icon-color;
     }
     
     &:active {
-      border-color: @oui-color-pacific;
-      background: fade(@oui-color-pacific, 10);
-      box-shadow: none;
+      border-color: @border-color_active;
+      background: @background-color_active;
+      box-shadow: inset 1px 1px 3px 0 @box-shadow-color_active;
+      font-color: @font-color_active;
     }
 
     &:active &__icon {
-      fill: @oui-color-pacific;
+      fill: @icon-color_active;
     }
 
     &:disabled &__icon {
-      fill: @font-color_disabled;
+      fill: @icon-color_disabled;
     }
 
     &.open &__icon {
-      #oui > .rotate(180deg);
+      transform: rotate(180deg);
     }
   }
 
   .button-star(
-    @padding: rem-calc(9) rem-calc(16),
-    @font-color: @oui-button-font-color,
-    @font-color_disabled: @oui-button-hollow-font-color_disabled
+    @icon-color: @oui-button-star-icon-color,
+    @icon-color_active: @oui-button-star-icon-color_active,
+    @icon-color_disabled: @oui-button-star-icon-color_disabled,
+    @padding: @oui-button-star-padding
   ) {
     min-width: 0;
     padding: @padding;
@@ -161,16 +169,21 @@
       width: rem-calc(15);
       height: rem-calc(15);
       margin: auto;
-      fill: fade(@oui-color-regent, 50);
-      stroke: @oui-color-regent;
+      fill: fade(@icon-color, 50);
+      stroke: @icon-color;
       stroke-width: 1.5;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
+    &:active &__icon {
+      fill: fade(@icon-color_active, 50);
+      stroke: @icon-color_active;
+    }
+
     &:disabled &__icon {
-      fill: fade(@font-color_disabled, 50);
-      stroke: @font-color_disabled;
+      fill: fade(@icon-color_disabled, 50);
+      stroke: @icon-color_disabled;
     }
   }
 }
