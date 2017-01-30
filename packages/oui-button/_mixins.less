@@ -1,6 +1,7 @@
 @import '../oui/_settings';
 @import '../oui-typography/_constants';
 @import '../oui-animation/_mixins';
+@import '../oui-transform/_mixins';
 @import '../oui-color/_variables';
 @import './_variables';
 
@@ -39,6 +40,7 @@
 
     &:disabled {
       cursor: not-allowed;
+      
     }
 
     &:active:disabled {
@@ -66,6 +68,7 @@
     &:disabled {
       color: @font-color_disabled;
       background-color: @background-color_disabled;
+      cursor: not-allowed; 
     }
   }
 
@@ -93,19 +96,22 @@
       box-shadow: inset 1px 1px 3px 0 @box-shadow-color_active;
     }
 
-    &:disabled {
+    &:disabled,
+    &:disabled:active {
       color: @font-color_disabled;
       border-color: @border-color_disabled;
       background-color: @background-color_disabled;
+      cursor: not-allowed;
     }
   }
 
   .button-dropdown(
+    @padding: rem-calc(9) rem-calc(34) rem-calc(9) rem-calc(15),
     @font-color: @oui-button-font-color,
     @font-color_disabled: @oui-button-hollow-font-color_disabled
   ) {
     position: relative;
-    padding: rem-calc(9) rem-calc(34) rem-calc(9) rem-calc(15);
+    padding: @padding;
     text-align: left;
 
     &__icon {
@@ -113,10 +119,20 @@
       top: 0;
       right: rem-calc(12);
       bottom: 0;
-      width: 10px;
-      height: 6px;
+      width: rem-calc(10);
+      height: rem-calc(6);
       margin: auto;
       fill: @font-color;
+    }
+    
+    &:active {
+      border-color: @oui-color-pacific;
+      background: fade(@oui-color-pacific, 10);
+      box-shadow: none;
+    }
+
+    &:active &__icon {
+      fill: @oui-color-pacific;
     }
 
     &:disabled &__icon {
@@ -124,18 +140,17 @@
     }
 
     &.open &__icon {
-      -ms-transform: rotate(180deg);
-      -webkit-transform: rotate(180deg);
-      transform: rotate(180deg);
+      #oui > .rotate(180deg);
     }
   }
 
   .button-star(
+    @padding: rem-calc(9) rem-calc(16),
     @font-color: @oui-button-font-color,
     @font-color_disabled: @oui-button-hollow-font-color_disabled
   ) {
     min-width: 0;
-    @padding: rem-calc(9);
+    padding: @padding;
 
     &__icon {
       position: absolute;
@@ -143,20 +158,19 @@
       right: 0;
       bottom: 0;
       left: 0;
-      width: 16px;
-      height: 16px;
+      width: rem-calc(15);
+      height: rem-calc(15);
       margin: auto;
-      fill: @font-color;
-    }
-  
-    &__back {
-      // fill :@oui-color-silver;
-      // stroke: @oui-color-rhino;
-      fill: #b4bed2;
-      stroke: #7c869a;
-      stroke-width: 1;
+      fill: fade(@oui-color-regent, 50);
+      stroke: @oui-color-regent;
+      stroke-width: 1.5;
       stroke-linecap: round;
       stroke-linejoin: round;
+    }
+
+    &:disabled &__icon {
+      fill: fade(@font-color_disabled, 50);
+      stroke: @font-color_disabled;
     }
   }
 }
