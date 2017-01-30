@@ -9,18 +9,24 @@
 #oui {
   .radio-position(
     @outer-circle-top,
+    @outer-circle-bottom,
     @outer-circle-left,
     @inner-circle-top,
+    @inner-circle-bottom,
     @inner-circle-left
   ) {
     &__label::before {
       top: @outer-circle-top;
+      bottom: @outer-circle-bottom;
       left: @outer-circle-left;
+      margin: auto;
     }
 
     &__input:checked ~ &__label::after {
       top: @inner-circle-top;
+      bottom: @inner-circle-bottom;
       left: @inner-circle-left;
+      margin: auto;
     }
   }
 
@@ -57,11 +63,13 @@
     @inner-circle-background-color_input-checked-disabled: @oui-radio-inner-circle-background-color_input-checked-disabled,
     @spacing: rem-calc(10) 0,
     @outer-circle-size: rem-calc(16),
-    @outer-circle-top: rem-calc(4),
+    @outer-circle-top: 0,
+    @outer-circle-bottom: 0,
     @outer-circle-left: 0,
     @inner-circle-size: rem-calc(6),
-    @inner-circle-top: rem-calc(9),
-    @inner-circle-left: rem-calc(5),
+    @inner-circle-top: 0,
+    @inner-circle-bottom: 0,
+    @inner-circle-left: rem-calc(6),
     @padding-left: rem-calc(25),
   ) {
     .radio-size(
@@ -71,11 +79,12 @@
 
     .radio-position(
       @outer-circle-top,
+      @outer-circle-bottom,
       @outer-circle-left,
       @inner-circle-top,
+      @inner-circle-bottom,
       @inner-circle-left
     );
-
     position: relative;
     display: block;
     padding-left: @padding-left;
