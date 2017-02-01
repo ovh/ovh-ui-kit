@@ -12,12 +12,32 @@
 @oui-button-filled-background-color_disabled: #dedede;
 @oui-button-filled-font-color_disabled: #999;
 @oui-button-filled-box-shadow-color_active: rgba(0, 0, 0, 1/3);
+@oui-button-filled-padding: rem-calc(10) rem-calc(30);
 
 // Button - Hollow
-@oui-button-hollow-background-color: white;
+@oui-button-hollow-background-color: #fff;
 @oui-button-hollow-border-color: #bbbdbf;
 @oui-button-hollow-border-color_hover: #999;
 @oui-button-hollow-border-color_disabled: #e6e6e6;
 @oui-button-hollow-background-color_disabled: #f2f2f2;
 @oui-button-hollow-font-color_disabled: #b3b3b3;
 @oui-button-hollow-box-shadow-color_active: rgba(0, 0, 0, 0.15);
+@oui-button-hollow-padding: rem-calc(9) rem-calc(29);
+
+// Button - Dropdown
+
+@oui-button-dropdown-icon-color: @oui-color-zodiac;
+@oui-button-dropdown-icon-color_active: @oui-color-pacific;
+@oui-button-dropdown-font-color_active: @oui-color-zodiac;
+@oui-button-dropdown-background-color_active: fade(@oui-color-pacific, 10);
+@oui-button-dropdown-border-color_active:  @oui-color-pacific;
+@oui-button-dropdown-box-shadow-color_active: transparent;
+@oui-button-dropdown-icon-color_disabled: #b3b3b3;
+@oui-button-dropdown-padding: rem-calc(9) rem-calc(34) rem-calc(9) rem-calc(15);
+
+// Button - Star
+
+@oui-button-star-icon-color: @oui-color-regent;
+@oui-button-star-icon-color_active: @oui-color-regent;
+@oui-button-star-icon-color_disabled: #999;
+@oui-button-star-padding: rem-calc(9) rem-calc(18);

@@ -39,6 +39,7 @@
 
     &:disabled {
       cursor: not-allowed;
+      
     }
 
     &:active:disabled {
@@ -51,8 +52,10 @@
     @background-color_hover: @oui-button-filled-background-color_hover,
     @background-color_disabled: @oui-button-filled-background-color_disabled,
     @font-color_disabled: @oui-button-filled-font-color_disabled,
-    @box-shadow-color_active: @oui-button-filled-box-shadow-color_active
+    @box-shadow-color_active: @oui-button-filled-box-shadow-color_active,
+    @padding: @oui-button-filled-padding
   ) {
+    padding: @padding;
     background-color: @background-color;
 
     &:hover {
@@ -66,18 +69,21 @@
     &:disabled {
       color: @font-color_disabled;
       background-color: @background-color_disabled;
+      cursor: not-allowed; 
     }
   }
 
   .button-hollow(
     @background-color: @oui-button-hollow-background-color,
-    @background-color_disabled: @oui-button-hollow-background-color_disabled,
-    @font-color_disabled: @oui-button-hollow-font-color_disabled,
     @border-color: @oui-button-hollow-border-color,
     @border-color_hover: @oui-button-hollow-border-color_hover,
     @border-color_disabled: @oui-button-hollow-border-color_disabled,
-    @box-shadow-color_active: @oui-button-hollow-box-shadow-color_active
+    @background-color_disabled: @oui-button-hollow-background-color_disabled,
+    @font-color_disabled: @oui-button-hollow-font-color_disabled,
+    @box-shadow-color_active: @oui-button-hollow-box-shadow-color_active,
+    @padding: @oui-button-hollow-padding
   ) {
+    padding: @padding;
     background-color: @background-color;
     border-width: 1px;
     border-style: solid;
@@ -91,10 +97,93 @@
       box-shadow: inset 1px 1px 3px 0 @box-shadow-color_active;
     }
 
-    &:disabled {
+    &:disabled,
+    &:disabled:active {
       color: @font-color_disabled;
       border-color: @border-color_disabled;
       background-color: @background-color_disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  .button-dropdown(
+    @icon-color: @oui-button-dropdown-icon-color,
+    @icon-color_active: @oui-button-dropdown-icon-color_active,
+    @font-color_active: @oui-button-dropdown-font-color_active,
+    @background-color_active: @oui-button-dropdown-background-color_active,
+    @border-color_active: @oui-button-dropdown-border-color_active,
+    @box-shadow-color_active: @oui-button-dropdown-box-shadow-color_active,
+    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
+    @padding: @oui-button-dropdown-padding
+  ) {
+    position: relative;
+    padding: @padding;
+    text-align: left;
+
+    &__icon {
+      position: absolute;
+      top: 0;
+      right: rem-calc(12);
+      bottom: 0;
+      width: rem-calc(10);
+      height: rem-calc(6);
+      margin: auto;
+      fill: @icon-color;
+    }
+    
+    &:active {
+      border-color: @border-color_active;
+      background: @background-color_active;
+      box-shadow: inset 1px 1px 3px 0 @box-shadow-color_active;
+      font-color: @font-color_active;
+    }
+
+    &:active &__icon {
+      fill: @icon-color_active;
+    }
+
+    &:disabled &__icon {
+      fill: @icon-color_disabled;
+    }
+
+    &.open &__icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .button-star(
+    @icon-color: @oui-button-star-icon-color,
+    @icon-color_active: @oui-button-star-icon-color_active,
+    @icon-color_disabled: @oui-button-star-icon-color_disabled,
+    @padding: @oui-button-star-padding
+  ) {
+    min-width: 0;
+    padding: @padding;
+
+    &__icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: rem-calc(15);
+      height: rem-calc(15);
+      margin: auto;
+      fill: fade(@icon-color, 50);
+      stroke: @icon-color;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    &:active &__icon {
+      fill: fade(@icon-color_active, 50);
+      stroke: @icon-color_active;
+    }
+
+    &:disabled &__icon {
+      fill: fade(@icon-color_disabled, 50);
+      stroke: @icon-color_disabled;
     }
   }
 }
