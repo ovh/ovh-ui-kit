@@ -1,11 +1,20 @@
 # oui-color
+<style>
+.markup img {
+	display: block;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+</style>
 
 ## Main colors
 
 | Constant                | Value     | Color                        			  										     | Comments 			  |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------ | ---------------------- |
-| `@oui-color-sapphire`   | #113f6d   | <div style="width: 100px; height: 20px; background-color: #113f6d;">&nbsp;</div>	 | `@oui-color-brand`	  |
-| `@oui-color-silver`     | #bbbdbf   | <div style="width: 100px; height: 20px; background-color: #bbbdbf;">&nbsp;</div>	 | -					  |
+| `@oui-color-sapphire`   | #113f6d   | <img src="assets/img/113f6d.png" width="100" height="20" border="0" />				 | `@oui-color-brand`	  |
+| `@oui-color-silver`     | #bbbdbf   | <div style="background-color: #bbbdbf; width: 100px; height: 20px;">&nbsp;</div>	 | -					  |
 | `@oui-color-concrete`   | #f2f2f2   | <div style="width: 100px; height: 20px; background-color: #f2f2f2;">&nbsp;</div>	 | -					  |
 | `@oui-color-zodiac` 	  | #122844   | <div style="width: 100px; height: 20px; background-color: #122844;">&nbsp;</div>	 | `@oui-color-primary`   |
 | `@oui-color-turquoise`  | #59d2ef   | <div style="width: 100px; height: 20px; background-color: #59d2ef;">&nbsp;</div>	 | `@oui-color-secondary` |
