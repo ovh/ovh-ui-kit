@@ -4,7 +4,7 @@
 
 | Constant                | Value     | Color                        			  										     | Comments 			  |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------ | ---------------------- |
-| `@oui-color-sapphire`   | #113f6d   | <img src="assets/img/113f6d.png" width="100" height="20" border="0" />				 | `@oui-color-brand`	  |
+| `@oui-color-sapphire`   | #113f6d   | <img src="assets/img/113f6d.png" width="100" height="20" border="0" style="display: block; margin: 0; padding: 0;" /> | `@oui-color-brand`	  |
 | `@oui-color-silver`     | #bbbdbf   | <div style="background-color: #bbbdbf; width: 100px; height: 20px;">&nbsp;</div>	 | -					  |
 | `@oui-color-concrete`   | #f2f2f2   | <div style="width: 100px; height: 20px; background-color: #f2f2f2;">&nbsp;</div>	 | -					  |
 | `@oui-color-zodiac` 	  | #122844   | <div style="width: 100px; height: 20px; background-color: #122844;">&nbsp;</div>	 | `@oui-color-primary`   |
