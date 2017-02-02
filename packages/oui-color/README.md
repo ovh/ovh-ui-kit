@@ -4,8 +4,8 @@
 
 | Constant                | Value     | Color                        			  										     | Comments 			  |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------ | ---------------------- |
-| `@oui-color-sapphire`   | #113f6d   | <img src="assets/img/113f6d.png" />													 | `@oui-color-brand`	  |
-| `@oui-color-silver`     | #bbbdbf   | <div style="width: 100px; height: 20px; background-color: #bbbdbf;">&nbsp;</div>	 | -					  |
+| `@oui-color-sapphire`   | #113f6d   | <img src="assets/img/113f6d.png" width="100" height="20" border="0" />				 | `@oui-color-brand`	  |
+| `@oui-color-silver`     | #bbbdbf   | <div style="background-color: #bbbdbf; width: 100px; height: 20px;">&nbsp;</div>	 | -					  |
 | `@oui-color-concrete`   | #f2f2f2   | <div style="width: 100px; height: 20px; background-color: #f2f2f2;">&nbsp;</div>	 | -					  |
 | `@oui-color-zodiac` 	  | #122844   | <div style="width: 100px; height: 20px; background-color: #122844;">&nbsp;</div>	 | `@oui-color-primary`   |
 | `@oui-color-turquoise`  | #59d2ef   | <div style="width: 100px; height: 20px; background-color: #59d2ef;">&nbsp;</div>	 | `@oui-color-secondary` |
@@ -55,5 +55,3 @@
 | `@oui-color-error-medium`    | #e36947   | <div style="width: 100px; height: 20px; background-color: #e36947;">&nbsp;</div>	 | -		|
 | `@oui-color-error-light`     | #eca490   | <div style="width: 100px; height: 20px; background-color: #eca490;">&nbsp;</div>	 | -		|
 | `@oui-color-error-fade`      | #f5e0da   | <div style="width: 100px; height: 20px; background-color: #f5e0da;">&nbsp;</div>	 | -		|
-
-
