@@ -4,7 +4,7 @@
 
 | Constant                | Value     | Color                        			  										     | Comments 			  |
 | ----------------------- | --------- | ------------------------------------------------------------------------------------ | ---------------------- |
-| `@oui-color-sapphire`   | #113f6d   | <div style="width: 100px; height: 20px; background-color: #113f6d;"><span>&nbsp;</span></div>					 | `@oui-color-brand`	  |
+| `@oui-color-sapphire`   | #113f6d   | <img src="assets/img/113f6d.png" />													 | `@oui-color-brand`	  |
 | `@oui-color-silver`     | #bbbdbf   | <div style="width: 100px; height: 20px; background-color: #bbbdbf;">&nbsp;</div>	 | -					  |
 | `@oui-color-concrete`   | #f2f2f2   | <div style="width: 100px; height: 20px; background-color: #f2f2f2;">&nbsp;</div>	 | -					  |
 | `@oui-color-zodiac` 	  | #122844   | <div style="width: 100px; height: 20px; background-color: #122844;">&nbsp;</div>	 | `@oui-color-primary`   |
@@ -57,15 +57,3 @@
 | `@oui-color-error-fade`      | #f5e0da   | <div style="width: 100px; height: 20px; background-color: #f5e0da;">&nbsp;</div>	 | -		|
 
 
-<div style="width: 100px; height: 20px; background-color: #113f6d;"> </div>	 
-<div style="width: 100px; height: 20px; background-color: #113f6d;">Test</div>	 
-
-<div style="width: 100px; height: 20px; background-color: #113f6d;"><span>&nbsp;</span></div>	 
-<div style="width: 100px; height: 20px; background-color: #113f6d;"><span>Test</span></div>	 
-
-<div style="width: 100px; height: 20px; background-color: #113f6d;">
-	<span>&nbsp;</span>
-</div>
-<div style="width: 100px; height: 20px; background-color: #113f6d;">
-	<span>Test</span>
-</div>	 	 
