@@ -26,7 +26,7 @@ oui-button is a package which provide styles for the button component.
   <button class="oui-button oui-button_star">
     Star Button
   </button>
-<div>
+</div>
 <div>
   <button class="oui-button oui-button_primary" disabled>
     Primary Button
