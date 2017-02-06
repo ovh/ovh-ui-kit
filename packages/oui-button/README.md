@@ -51,7 +51,7 @@ oui-button is a package which provide styles for the button component.
 </button>
 
 <button class="oui-button oui-button_secondary">
-  Primary Button
+  Secondary Button
 </button>
 
 <button class="oui-button oui-button_dropdown">
@@ -67,7 +67,7 @@ oui-button is a package which provide styles for the button component.
 </button>
 
 <button class="oui-button oui-button_secondary" disabled>
-  Primary Button
+  Secondary Button
 </button>
 
 <button class="oui-button oui-button_dropdown" disabled>
