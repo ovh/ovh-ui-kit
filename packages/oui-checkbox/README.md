@@ -10,8 +10,6 @@ oui-checkbox is a package which provide styles for the checkbox component.
 
 ## Usage
 
-### Checkbox
-
 <label class="oui-checkbox">
   <input class="oui-checkbox__input" name="oui-checkbox-1" type="checkbox" checked="checked">
   <span class="oui-checkbox__label">Checked</span>
@@ -117,16 +115,22 @@ Define the base styles for a checkbox.
 ```
 
 ```less
-#oui > .checkbox(@outline-color, @outline-color_hover, @outline-color_checked, @outline-color_checked-hover, @spacing);
+#oui > .checkbox(
+  @outline-color,
+  @outline-color_hover,
+  @outline-color_checked,
+  @outline-color_checked-hover,
+  @spacing
+);
 ```
 
-| Parameter | Type | Default Value | Comments |
-| --- | --- | --- | --- |
-| __@outline-color__ | Color | `@oui-checkbox-outline-color` | -
-| __@outline-color_hover__ | Color | `@oui-checkbox-outline-color_hover`| -
-| __@outline-color_checked__ | Color | `@oui-checkbox-outline-color_checked` | -
-| __@outline-color_checked-hover__ | Color | `@oui-checkbox-outline-color_checked-hover`| -
-| __@spacing__ | Number | `@oui-checkbox-spacing` | -
+| Parameter                        | Type   | Default Value                                                             |
+| -------------------------------- | ------ | ------------------------------------------------------------------------- |
+| __@outline-color__               | Color  | `@oui-checkbox-outline-color: @oui-color-dusty`                           |
+| __@outline-color_hover__         | Color  | `@oui-checkbox-outline-color_hover: @oui-checkbox-outline-color_checked`  |
+| __@outline-color_checked__       | Color  | `@oui-checkbox-outline-color_checked: @oui-color-zodiac`                  |
+| __@outline-color_checked-hover__ | Color  | `@oui-checkbox-outline-color_checked-hover: @oui-color-dusty`             |
+| __@spacing__                     | Number | `@oui-checkbox-spacing: 0 rem-calc(5) 0 0`                                |
 
 ## Classes
 
@@ -138,15 +142,15 @@ The block class is `oui-checkbox` (top-level element).
 
 Inner elements:
 
-| Element | Class |
-| --- | --- |
-| __input[type=checkbox]__ | `oui-checkbox__input` |
-| __span__ | `oui-checkbox__label` |
-| __svg__ | `oui-checkbox__facade` |
-| path | `oui-checkbox__false-bottom` |
-| path | `oui-checkbox__outline oui-checkbox__outline_unchecked` |
-| path | `oui-checkbox__outline oui-checkbox__outline_checked` |
-| path | `oui-checkbox__checkmark` |
+| Element                   | Class                                                   |
+| ------------------------- | ------------------------------------------------------- |
+| __input[type=checkbox]__  | `oui-checkbox__input`                                   |
+| __span__                  | `oui-checkbox__label`                                   |
+| __svg__                   | `oui-checkbox__facade`                                  |
+| path                      | `oui-checkbox__false-bottom`                            |
+| path                      | `oui-checkbox__outline oui-checkbox__outline_unchecked` |
+| path                      | `oui-checkbox__outline oui-checkbox__outline_checked`   |
+| path                      | `oui-checkbox__checkmark`                               |
 
 ### Modifier
 
