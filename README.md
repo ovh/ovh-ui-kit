@@ -56,6 +56,28 @@ Webpack provide the `~` prefix for package imports:
 
 [...]
 ```
+
+## Publish a new version
+
+When publishing a new version npm or yarn will execute some common tasks:
+
+1. Build the project, if the build fail publish is aborted
+2. Change the version inside the `package.json` to the new version
+3. Commit the new `package.json` and create a new tag like `v<version>`
+4. Changes and tags are pushed to the remote server
+
+### npm
+
+```
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
+```
+
+### yarn
+
+```
+yarn version --new-version <version>
+```
+
 ## Documentation
 
 Documentation is available from the `packages/` folder, every package is self-documented throught a `README.md` file.
