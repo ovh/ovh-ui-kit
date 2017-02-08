@@ -61,10 +61,11 @@ Webpack provide the `~` prefix for package imports:
 
 When publishing a new version npm or yarn will execute some common tasks:
 
-1. Build the project, if the build fail publish is aborted
+1. Build the project (if the build fail, publish is aborted)
 2. Change the version inside the `package.json` to the new version
-3. Commit the new `package.json` and create a new tag like `v<version>`
-4. Changes and tags are pushed to the remote server
+3. Commit the new `package.json`
+4. Create a new tag like `v<version>`
+5. Changes and tags are pushed to the remote server
 
 ### npm
 
