@@ -4,4 +4,13 @@
 .oui-checkbox {
   #oui > .checkbox-normalize();
   #oui > .checkbox();
+
+  &_big {
+    #oui > .checkbox-size(@oui-checkbox-big-facade-size, oui-checkbox);
+    #oui > .checkbox-label(
+      @oui-checkbox-big-label-font-size,
+      @oui-checkbox-big-facade-size + @oui-checkbox-facade-top-spacing,
+      oui-checkbox
+    );
+  }
 }
