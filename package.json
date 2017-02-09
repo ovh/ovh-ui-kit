@@ -6,7 +6,9 @@
   "scripts": {
     "build": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
     "fix": "stylefmt -r packages",
-    "lint": "stylelint --syntax less 'packages/**/*.less'"
+    "lint": "stylelint --syntax less 'packages/**/*.less'",
+    "preversion": "npm build",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "less-plugin-remcalc": "git+ssh://git@stash.ovh.net:7999/UXTOOLS/less-plugin-remcalc.git"
