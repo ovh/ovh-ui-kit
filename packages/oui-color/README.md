@@ -2,56 +2,412 @@
 
 ## Main colors
 
-| Constant                | Value     | Color                        			  										     | Comments 			  |
-| ----------------------- | --------- | ------------------------------------------------------------------------------------ | ---------------------- |
-| `@oui-color-sapphire`   | #113f6d   | <div style="width: 100px; height: 20px; background-color: #113f6d;">&nbsp;</div>	 | `@oui-color-brand`	  |
-| `@oui-color-silver`     | #bbbdbf   | <div style="width: 100px; height: 20px; background-color: #bbbdbf;">&nbsp;</div>	 | -					  |
-| `@oui-color-concrete`   | #f2f2f2   | <div style="width: 100px; height: 20px; background-color: #f2f2f2;">&nbsp;</div>	 | -					  |
-| `@oui-color-zodiac` 	  | #122844   | <div style="width: 100px; height: 20px; background-color: #122844;">&nbsp;</div>	 | `@oui-color-primary`   |
-| `@oui-color-turquoise`  | #59d2ef   | <div style="width: 100px; height: 20px; background-color: #59d2ef;">&nbsp;</div>	 | `@oui-color-secondary` |
-| `@oui-color-pacific`    | #00a2bf   | <div style="width: 100px; height: 20px; background-color: #00a2bf;">&nbsp;</div>	 | `@oui-color-tertiary`  |
-| `@oui-color-nurse`      | #e9ebe7   | <div style="width: 100px; height: 20px; background-color: #e9ebe7;">&nbsp;</div>	 | -					  |
-| `@oui-color-gothic`     | #7991a3   | <div style="width: 100px; height: 20px; background-color: #7991a3;">&nbsp;</div>	 | -					  |
-| `@oui-color-foam`       | #e0f6fd   | <div style="width: 100px; height: 20px; background-color: #e0f6fd;">&nbsp;</div>	 | -					  |
-| `@oui-color-rhino`      | #273b54   | <div style="width: 100px; height: 20px; background-color: #273b54;">&nbsp;</div>	 | -					  |
-| `@oui-color-fiord`      | #3f5167   | <div style="width: 100px; height: 20px; background-color: #3f5167;">&nbsp;</div>	 | -					  |
-| `@oui-color-shuttle`    | #59697d   | <div style="width: 100px; height: 20px; background-color: #59697d;">&nbsp;</div>	 | -					  |
-| `@oui-color-regent`     | #818b99   | <div style="width: 100px; height: 20px; background-color: #818b99;">&nbsp;</div>	 | -					  |
-| `@oui-color-mischka`    | #d5dae0   | <div style="width: 100px; height: 20px; background-color: #d5dae0;">&nbsp;</div>	 | -					  |
-| `@oui-color-dusty`      | #999999   | <div style="width: 100px; height: 20px; background-color: #999999;">&nbsp;</div>	 | -					  |
+<div class="container row">
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-sapphire">
+        <span class="oui-color-badge__prop">@oui-color-sapphire</span>
+        <span class="oui-color-badge__prop">@oui-color-brand</span>
+        <span class="oui-color-badge__prop">
+            <code>#113f6d</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-silver">
+        <span class="oui-color-badge__prop">@oui-color-silver</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#bbbdbf</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-concrete">
+        <span class="oui-color-badge__prop">@oui-color-concrete</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#f2f2f2</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-zodiac">
+        <span class="oui-color-badge__prop">@oui-color-zodiac</span>
+        <span class="oui-color-badge__prop">@oui-color-primary</span>
+        <span class="oui-color-badge__prop">
+            <code>#122844</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-turquoise">
+        <span class="oui-color-badge__prop">@oui-color-turquoise</span>
+        <span class="oui-color-badge__prop">@oui-color-secondary</span>
+        <span class="oui-color-badge__prop">
+            <code>#59d2ef</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-pacific">
+        <span class="oui-color-badge__prop">@oui-color-pacific</span>
+        <span class="oui-color-badge__prop">@oui-color-tertiary</span>
+        <span class="oui-color-badge__prop">
+            <code>#00a2bf</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-nurse">
+        <span class="oui-color-badge__prop">@oui-color-nurse</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#e9ebe7</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-gothic">
+        <span class="oui-color-badge__prop">@oui-color-gothic</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#7991a3</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-foam">
+        <span class="oui-color-badge__prop">@oui-color-foam</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#e0f6fd</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-rhino">
+        <span class="oui-color-badge__prop">@oui-color-rhino</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#273b54</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-fiord">
+        <span class="oui-color-badge__prop">@oui-color-fiord</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#3f5167</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-shuttle">
+        <span class="oui-color-badge__prop">@oui-color-shuttle</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#59697d</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-regent">
+        <span class="oui-color-badge__prop">@oui-color-regent</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#818b99</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-mischka">
+        <span class="oui-color-badge__prop">@oui-color-mischka</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#d5dae0</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-dusty">
+        <span class="oui-color-badge__prop">@oui-color-dusty</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#999999</code>
+        </span>
+    </div>
+  </div>
+</div>
 
 ## Univers colors
 
-| Constant                | Value     | Color                        														 | Comments |
-| ----------------------- | --------- | ------------------------------------------------------------------------------------ | -------- |
-| `@oui-color-jungle`     | #27b9a2   | <div style="width: 100px; height: 20px; background-color: #27b9a2;">&nbsp;</div>	 | -		|
-| `@oui-color-dodger`     | #32acff   | <div style="width: 100px; height: 20px; background-color: #32acff;">&nbsp;</div>	 | -		|
-| `@oui-color-supernova`  | #ffcc00   | <div style="width: 100px; height: 20px; background-color: #ffcc00;">&nbsp;</div>	 | -		|
-| `@oui-color-pomegranate`| #ee4036   | <div style="width: 100px; height: 20px; background-color: #ee4036;">&nbsp;</div>	 | -		|
-| `@oui-color-iceberg`    | #ddf4f2   | <div style="width: 100px; height: 20px; background-color: #ddf4f2;">&nbsp;</div>	 | -		|
-| `@oui-color-milkpunch`  | #fff7d8   | <div style="width: 100px; height: 20px; background-color: #fff7d8;">&nbsp;</div>	 | -		|
-| `@oui-color-california` | #ff9803   | <div style="width: 100px; height: 20px; background-color: #ff9803;">&nbsp;</div>	 | -		|
-| `@oui-color-atlantis`   | #88c424   | <div style="width: 100px; height: 20px; background-color: #88c424;">&nbsp;</div>	 | -		|
-| `@oui-color-flirt`      | #ad0067   | <div style="width: 100px; height: 20px; background-color: #ad0067;">&nbsp;</div>	 | -		|
-| `@oui-color-claret`     | #701447   | <div style="width: 100px; height: 20px; background-color: #701447;">&nbsp;</div>	 | -		|
+<div class="container row">
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-jungle">
+        <span class="oui-color-badge__prop">@oui-color-jungle</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#27b9a2</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-dodger">
+        <span class="oui-color-badge__prop">@oui-color-dodger</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#32acff</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-pomegranate">
+        <span class="oui-color-badge__prop">@oui-color-pomegranate</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#ee4036</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-iceberg">
+        <span class="oui-color-badge__prop">@oui-color-iceberg</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#ddf4f2</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-milkpunch">
+        <span class="oui-color-badge__prop">@oui-color-milkpunch</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#fff7d8</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-california">
+        <span class="oui-color-badge__prop">@oui-color-california</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#ff9803</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-atlantis">
+        <span class="oui-color-badge__prop">@oui-color-atlantis</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#88c424</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-flirt">
+        <span class="oui-color-badge__prop">@oui-color-flirt</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#ad0067</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-claret">
+        <span class="oui-color-badge__prop">@oui-color-claret</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#701447</code>
+        </span>
+    </div>
+  </div>
+</div>
 
 ## Alert colors
 
-| Constant              	   | Value     | Color                        														 | Comments |
-| ---------------------------- | --------- | ----------------------------------------------------------------------------------- | -------- |
-| `@oui-color-info-dark`       | #3f5167   | <div style="width: 100px; height: 20px; background-color: #3f5167;">&nbsp;</div>	 | -		|
-| `@oui-color-info-medium`     | #7d8da1   | <div style="width: 100px; height: 20px; background-color: #7d8da1;">&nbsp;</div>	 | -		|
-| `@oui-color-info-light`  	   | #b3becc   | <div style="width: 100px; height: 20px; background-color: #b3becc;">&nbsp;</div>	 | -		|
-| `@oui-color-info-fade` 	   | #dfeaf8   | <div style="width: 100px; height: 20px; background-color: #dfeaf8;">&nbsp;</div>	 | -		|
-| `@oui-color-success-dark`    | #57710e   | <div style="width: 100px; height: 20px; background-color: #57710e;">&nbsp;</div>	 | -		|
-| `@oui-color-success-medium`  | #b0ca67   | <div style="width: 100px; height: 20px; background-color: #b0ca67;">&nbsp;</div>	 | -		|
-| `@oui-color-success-light`   | #b0ca67   | <div style="width: 100px; height: 20px; background-color: #b0ca67;">&nbsp;</div>	 | -		|
-| `@oui-color-success-fade`    | #e0eac2   | <div style="width: 100px; height: 20px; background-color: #e0eac2;">&nbsp;</div>	 | -		|
-| `@oui-color-warning-dark`    | #8a5300   | <div style="width: 100px; height: 20px; background-color: #8a5300;">&nbsp;</div>	 | -		|
-| `@oui-color-warning-medium`  | #d9ae00   | <div style="width: 100px; height: 20px; background-color: #d9ae00;">&nbsp;</div>	 | -		|
-| `@oui-color-warning-light`   | #e3cd4d   | <div style="width: 100px; height: 20px; background-color: #e3cd4d;">&nbsp;</div>	 | -		|
-| `@oui-color-warning-fade`    | #faefa0   | <div style="width: 100px; height: 20px; background-color: #faefa0;">&nbsp;</div>	 | -		|
-| `@oui-color-error-dark` 	   | #b04020   | <div style="width: 100px; height: 20px; background-color: #b04020;">&nbsp;</div>	 | -		|
-| `@oui-color-error-medium`    | #e36947   | <div style="width: 100px; height: 20px; background-color: #e36947;">&nbsp;</div>	 | -		|
-| `@oui-color-error-light`     | #eca490   | <div style="width: 100px; height: 20px; background-color: #eca490;">&nbsp;</div>	 | -		|
-| `@oui-color-error-fade`      | #f5e0da   | <div style="width: 100px; height: 20px; background-color: #f5e0da;">&nbsp;</div>	 | -		|
+<div class="container row">
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-info-dark">
+        <span class="oui-color-badge__prop">@oui-color-info-dark</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#3f5167</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-info-medium">
+        <span class="oui-color-badge__prop">@oui-color-info-medium</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#7d8da1</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-info-light">
+        <span class="oui-color-badge__prop">@oui-color-info-light</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#b3becc</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-info-fade">
+        <span class="oui-color-badge__prop">@oui-color-info-fade</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#dfeaf8</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-success-dark">
+        <span class="oui-color-badge__prop">@oui-color-success-dark</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#57710e</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-success-medium">
+        <span class="oui-color-badge__prop">@oui-color-success-medium</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#b0ca67</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-success-light">
+        <span class="oui-color-badge__prop">@oui-color-success-light</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#b0ca67</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-success-fade">
+        <span class="oui-color-badge__prop">@oui-color-success-fade</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#e0eac2</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-warning-dark">
+        <span class="oui-color-badge__prop">@oui-color-warning-dark</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#8a5300</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-warning-medium">
+        <span class="oui-color-badge__prop">@oui-color-warning-medium</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#d9ae00</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-warning-light">
+        <span class="oui-color-badge__prop">@oui-color-warning-light</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#e3cd4d</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-warning-fade">
+        <span class="oui-color-badge__prop">@oui-color-warning-fade</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#faefa0</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-error-dark">
+        <span class="oui-color-badge__prop">@oui-color-error-dark</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#b04020</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-error-medium">
+        <span class="oui-color-badge__prop">@oui-color-error-medium</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#e36947</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-error-light">
+        <span class="oui-color-badge__prop">@oui-color-error-light</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#eca490</code>
+        </span>
+    </div>
+  </div>
+
+  <div class="col-xs-5 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-error-fade">
+        <span class="oui-color-badge__prop">@oui-color-error-fade</span>
+        <span class="oui-color-badge__prop">-</span>
+        <span class="oui-color-badge__prop">
+            <code>#f5e0da</code>
+        </span>
+    </div>
+  </div>
+</div>
