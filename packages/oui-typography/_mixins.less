@@ -27,13 +27,15 @@
     @text-decoration_hover: @oui-link-text-decoration_hover
   ) {
     .base-font();
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
     color: @font-color;
     text-decoration: @text-decoration;
     line-height: inherit;
     cursor: pointer;
-    background-color: transparent;
     -webkit-text-decoration-skip: objects;
-
+    
     &:active,
     &:hover {
       outline-width: 0;

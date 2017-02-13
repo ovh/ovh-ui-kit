@@ -37,13 +37,19 @@ oui-typography is a package which provides tools as constants and mixins for man
   </h6>
 
   <p class="oui-paragraph">
-    [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et, hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
+    [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
   </p>
 
   <a href="#" class="oui-link">
       [Link] The quick brown fox jumps over the lazy dog.
-  </a>
+  </a><br>
+
+  <button class="oui-link">
+    [Button Link]
+  </button><br><br>
+
 </div>
+
 
 ```html
   <h1 class="oui-heading">
@@ -71,14 +77,17 @@ oui-typography is a package which provides tools as constants and mixins for man
   </h6>
 
   <p class="oui-paragraph">
-    [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et, hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
+    [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
   </p>
 
   <a href="#" class="oui-link">
       [Link] The quick brown fox jumps over the lazy dog.
   </a>
-```
 
+  <button class="oui-link">
+    [Button Link]
+  </button>
+```
 
 ## Constants
 
