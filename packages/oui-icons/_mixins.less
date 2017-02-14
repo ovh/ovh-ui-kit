@@ -1,0 +1,75 @@
+@import '../oui/_settings';
+@import '../oui-typography/_constants';
+@import '../oui-animation/_mixins';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .icon(
+    @icon-size: @oui-icon-size,
+    @icon-color: @oui-icon-color,
+    @spacing: @oui-icon-spacing,
+    @padding: @oui-icon-padding
+  ) {
+      display: inline-block;
+      margin: @spacing;
+      padding: @padding;
+      color: @icon-color;
+      font-family: 'Oui Icons';
+      font-size: @icon-size;
+      line-height: 1;
+      font-weight: normal;
+      font-style: normal;
+
+      &.oui-icon-close::before {
+        display: block;
+        content: @oui-icon-index-close;
+      }
+
+      &.oui-icon-error_circle::before {
+        display: block;
+        content: @oui-icon-index-error_circle;
+      }
+
+      &.oui-icon-info_circle::before {
+        display: block;
+        content: @oui-icon-index-info_circle;
+      }
+
+      &.oui-icon-success_circle::before {
+        display: block;
+        content: @oui-icon-index-success_circle;
+      }
+
+      &.oui-icon-warning_circle::before {
+        display: block;
+        content: @oui-icon-index-warning_circle;
+      }
+  }
+
+  .icon-bicolor(
+    @icon-char-color: @oui-icon-char-color;
+  ){
+    position: relative;
+    z-index: 1;
+    &::after {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 90%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      background: @icon-char-color;
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &.oui-icon-warning_circle::after {
+        width: 25%;
+        height: 75%;
+    }
+  }
+}
