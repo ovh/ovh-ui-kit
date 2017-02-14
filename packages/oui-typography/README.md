@@ -64,7 +64,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 
 ### Paragraphs
 <p class="oui-paragraph">
-[Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
+  [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
 </p>
 
 ```html
@@ -76,7 +76,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 ### Links
 <div>
   <a href="#" class="oui-link">
-      [Link] The quick brown fox jumps over the lazy dog.
+    [Link] The quick brown fox jumps over the lazy dog.
   </a>
 </div>
 
@@ -88,7 +88,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 
 ```html
   <a href="#" class="oui-link">
-      [Link] The quick brown fox jumps over the lazy dog.
+    [Link] The quick brown fox jumps over the lazy dog.
   </a>
 
   <button class="oui-link">
@@ -108,11 +108,11 @@ oui-typography is a package which provides tools as constants and mixins for man
 <hr class="oui-horizontal-line oui-horizontal-line_dark">
 
 ```html
-<hr class="oui-horizontal-line">
+  <hr class="oui-horizontal-line">
 
-<hr class="oui-horizontal-line oui-horizontal-line_thin">
+  <hr class="oui-horizontal-line oui-horizontal-line_thin">
 
-<hr class="oui-horizontal-line oui-horizontal-line_dark">
+  <hr class="oui-horizontal-line oui-horizontal-line_dark">
 ```
 
 ## Constants
@@ -137,7 +137,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 Define the base style for the typography.
 
 ```less
-#oui > .base-font();
+  #oui > .base-font();
 ```
 
 ### .headers
@@ -145,7 +145,7 @@ Define the base style for the typography.
 Will stylize the headlines h1 to h6.
 
 ```less
-#oui > .headers();
+  #oui > .headers();
 ```
 
 ### .link
@@ -153,16 +153,16 @@ Will stylize the headlines h1 to h6.
 Will stylize the links.
 
 ```less
-#oui > .link();
+  #oui > .link();
 ```
 
 ```less
-#oui > .link(
-  @font-color,
-  @font-color_hover,
-  @text-decoration,
-  @text-decoration_hover
-);
+  #oui > .link(
+    @font-color,
+    @font-color_hover,
+    @text-decoration,
+    @text-decoration_hover
+  );
 ```
 
 | Parameter                       | Type      | Default Value                                                     |
@@ -177,11 +177,11 @@ Will stylize the links.
 Define the base styles for a horizontal line.
 
 ```less
-#oui > .button-base();
+  #oui > .horizontal-line-base();
 ```
 
 ```less
-#oui > .button-base(@oui-margin-bottom, @oui-width, @oui-color, @oui-style);
+  #oui > .horizontal-line-base(@oui-margin-bottom, @oui-width, @oui-color, @oui-style);
 ```
 
 | Parameter                | Type   | Default Value                          |
@@ -196,11 +196,11 @@ Define the base styles for a horizontal line.
 Will stylize your horizontal line as a dark one.
 
 ```less
-#oui > .horizontal-line-dark();
+  #oui > .horizontal-line-dark();
 ```
 
 ```less
-#oui > .horizontal-line-dark(@oui-color)
+  #oui > .horizontal-line-dark(@oui-color)
 ```
 | Parameter        | Type  | Default Value                       |
 | ---------------- | ----- | ----------------------------------- |
@@ -211,11 +211,11 @@ Will stylize your horizontal line as a dark one.
 Will stylize your horizontal line as a thin one.
 
 ```less
-#oui > .horizontal-line-thin();
+  #oui > .horizontal-line-thin();
 ```
 
 ```less
-#oui > .horizontal-line-thin(@oui-width)
+  #oui > .horizontal-line-thin(@oui-width)
 ```
 | Parameter        | Type  | Default Value                       |
 | ---------------- | ----- | ----------------------------------- |
