@@ -1,0 +1,173 @@
+@import '../oui-animation/_mixins';
+@import '../oui-accessibility/_mixins';
+@import '../oui-icons/_mixins';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .message-base(
+    @margin: @oui-message-margin;
+    @font-weight: @oui-message-font-weight;
+    @font-color: @oui-message-font-color;
+    @background-color: @oui-message-background-color;
+    @border: @oui-message-border;
+    @border-radius: @oui-message-border-radius;
+    @padding: @oui-message-padding;
+    @close-button-color: @oui-message-close-button-color;
+    @close-button-background-color: @oui-message-close-button-background-color;
+    @close-button-border: @oui-message-close-button-border;
+    @close-button-width: @oui-message-close-button-width;
+    @close-button-height: @oui-message-close-button-height;
+    @close-button-font-size: @oui-message-close-button-font-size;
+    @close-button-margin: @oui-message-close-button-margin;
+    @close-button-padding: @oui-message-close-button-padding;
+  ) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: rem-calc(50);
+    margin: @margin;
+    padding: @padding;
+    border: @border;
+    border-radius: @border-radius;
+    background-color: @background-color;
+    color: @font-color;
+    font-weight: @font-weight;
+
+    &__body {
+      flex: 1;
+      margin: 0;
+    }
+
+    &__close-button {
+      cursor: pointer;
+      position: relative;
+      align-self: flex-start;
+      width: @close-button-width;
+      height: @close-button-height;
+      overflow: hidden;
+      margin: @close-button-margin;
+      padding: @close-button-padding;
+      border: @close-button-border;
+      background-color: @close-button-background-color;
+      color: @close-button-color;
+      font-size: @close-button-font-size;
+      line-height: 0;
+      text-align: center;
+
+      &:before {
+        display: block;
+      }
+    }
+  }
+
+  .message-info(
+    @font-color: @oui-message-info-font-color;
+    @border-color: @oui-message-info-border-color;
+    @background-color: @oui-message-info-background-color;
+    @icon-color: @oui-message-info-icon-color;
+    @icon-size: @oui-message-info-icon-size;
+    @icon-position-top: @oui-message-info-icon-position-top;
+    @icon-position-left: @oui-message-info-icon-position-left;
+    @padding: @oui-message-info-padding;
+  ) {
+    padding: @padding;
+    border-color: @border-color;
+    background-color: @background-color;
+    color: @font-color;
+    
+    .oui-icon-info_circle {
+      position: absolute;
+      display: block;
+      top: @icon-position-top;
+      left: @icon-position-left;
+      color: @icon-color;
+      font-size: @icon-size;
+    }
+  }
+
+  .message-success(
+    @font-color: @oui-message-success-font-color;
+    @border-color: @oui-message-success-border-color;
+    @background-color: @oui-message-success-background-color;
+    @icon-color: @oui-message-success-icon-color;
+    @icon-size: @oui-message-success-icon-size;
+    @icon-position-top: @oui-message-success-icon-position-top;
+    @icon-position-left: @oui-message-success-icon-position-left;
+    @padding: @oui-message-success-padding;
+  ) {
+    padding: @padding;
+    border-color: @border-color;
+    background-color: @background-color;
+    color: @font-color;
+
+    .oui-icon-success_circle {
+      position: absolute;
+      display: block;
+      top: @icon-position-top;
+      left: @icon-position-left;
+      color: @icon-color;
+      font-size: @icon-size;
+    }
+  }
+
+  .message-warning(
+    @font-color: @oui-message-warning-font-color;
+    @border-color: @oui-message-warning-border-color;
+    @background-color: @oui-message-warning-background-color;
+    @icon-color: @oui-message-warning-icon-color;
+    @icon-size: @oui-message-warning-icon-size;
+    @icon-position-top: @oui-message-warning-icon-position-top;
+    @icon-position-left: @oui-message-warning-icon-position-left;
+    @padding: @oui-message-warning-padding;
+  ) {
+    padding: @padding;
+    border-color: @border-color;
+    background-color: @background-color;
+    color: @font-color;
+    
+    .oui-icon-warning_circle {
+      position: absolute;
+      display: block;
+      top: @icon-position-top;
+      left: @icon-position-left;
+      color: @icon-color;
+      font-size: @icon-size;
+    }
+  }
+
+  .message-error(
+    @font-color: @oui-message-error-font-color;
+    @border-color: @oui-message-error-border-color;
+    @background-color: @oui-message-error-background-color;
+    @icon-color: @oui-message-error-icon-color;
+    @icon-size: @oui-message-error-icon-size;
+    @icon-position-top: @oui-message-error-icon-position-top;
+    @icon-position-left: @oui-message-error-icon-position-left;
+    @padding: @oui-message-error-padding;
+  ) {
+    padding: @padding;
+    border-color: @border-color;
+    background-color: @background-color;
+    color: @font-color;
+    
+    .oui-icon-error_circle {
+      position: absolute;
+      display: block;
+      top: @icon-position-top;
+      left: @icon-position-left;
+      color: @icon-color;
+      font-size: @icon-size;
+    }
+  }
+
+  .message-no-icon(
+    @padding: @oui-message-no-icon-padding;
+  ) {
+    padding: @padding;
+
+    &:before {
+      content: "";
+    }
+  }
+}
