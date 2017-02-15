@@ -1,0 +1,132 @@
+@import '../oui/_settings';
+@import '../oui-typography/_constants';
+@import '../oui-animation/_mixins';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .navbar(
+    @background-color: @oui-navbar-background-color;
+    @font-color: @oui-navbar-font-color;
+    @icon-color: @oui-navbar-icon-color;
+  ) {
+    display: flex;
+    align-items: center;
+    padding: rem-calc(8) rem-calc(16);
+    background-color: @background-color;
+    color: @font-color;
+    user-select: none;
+
+    .oui-icon.oui-icon-logo {
+      color: @icon-color;
+    }
+    
+    &__title,
+    &__item,
+    &__link {
+      &,
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited,
+      & a:link {
+        color: @font-color;
+        text-decoration: none;
+      }
+    }
+
+    &__title {
+      flex: 9;
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      color: @font-color;
+      text-decoration: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &__title-text {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      font-size: rem-calc(28);
+      line-height: 1;
+      vertical-align: middle;
+    }
+
+    &__title-bold {
+      display: block;
+      margin-left: rem-calc(8);
+      font-weight: 600;
+    }
+
+    &__title-small {
+      display: block;
+      margin-left: rem-calc(4);
+      font-weight: 300;
+    }
+
+    &__items {
+      display: flex;
+      flex: 2;
+      margin: 0 rem-calc(16);
+      padding: 0;
+      list-style: none;
+      white-space: nowrap;
+    }
+
+    &__item {
+      display: block;
+      margin-left: rem-calc(16);
+      border-radius: 2px;
+    }
+    
+    &__item_current,
+    &__item:hover {
+      background-color: @oui-color-fiord;
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      padding: rem-calc(7) rem-calc(16);
+      overflow: hidden;
+      font-size: rem-calc(14);
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    
+    &__selector {
+      flex: 1;
+    }
+
+    &__select {
+      cursor: pointer;
+      width: 100%;
+      padding: rem-calc(6.5) rem-calc(16);
+      border: 1px solid @oui-color-silver;
+      border-radius: 2px;
+      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.15);
+      color: @oui-color-zodiac;
+      font-size: rem-calc(14);
+    
+      &,
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        color: @oui-color-zodiac;
+        text-decoration: none;
+      }
+
+      &:focus {
+        background: #f5fcfd;
+        border-color: #0090b1;
+        outline: none;
+      }
+    }
+  }
+}
