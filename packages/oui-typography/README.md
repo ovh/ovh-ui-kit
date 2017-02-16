@@ -12,31 +12,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 ## Usage
 
 ### Headers
-<h1 class="oui-heading">
-    [h1] Lorem ipsum dolor sit amet
-</h1>
-
-<h2 class="oui-heading">
-    [h2] Donec vitae metus tellus
-</h2>
-
-<h3 class="oui-heading">
-    [h3] Nam aliquam neque ac nisi egestas dapibus
-</h3>
-
-<h4 class="oui-heading">
-    [h4] Where no man has gone before.
-</h4>
-
-<h5 class="oui-heading">
-    [h5] Where no man has gone before.
-</h5>
-
-<h6 class="oui-heading">
-    [h6] Where no man has gone before.
-</h6>
-
-```html
+```html:preview
   <h1 class="oui-heading">
       [h1] Lorem ipsum dolor sit amet
   </h1>
@@ -63,51 +39,30 @@ oui-typography is a package which provides tools as constants and mixins for man
 ```
 
 ### Paragraphs
-<p class="oui-paragraph">
-  [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
-</p>
-
-```html
+```html:preview
   <p class="oui-paragraph">
     [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
   </p>
 ```
 
 ### Links
-<div>
-  <a href="#" class="oui-link">
-    [Link] The quick brown fox jumps over the lazy dog.
-  </a>
-</div>
+```html:preview
+  <div>
+    <a href="#" class="oui-link">
+      [Link] The quick brown fox jumps over the lazy dog.
+    </a>
+  </div>
 
-<div>
-  <button class="oui-link">
-    [Button Link]
-  </button>
-</div>
-
-```html
-  <a href="#" class="oui-link">
-    [Link] The quick brown fox jumps over the lazy dog.
-  </a>
-
-  <button class="oui-link">
-    [Button Link]
-  </button>
+  <div>
+    <button class="oui-link">
+      [Button Link]
+    </button>
+  </div>
 ```
 
 ### Horizontal line
 
-**Normal**
-<hr class="oui-horizontal-line">
-
-**Thin**
-<hr class="oui-horizontal-line oui-horizontal-line_thin">
-
-**Dark**
-<hr class="oui-horizontal-line oui-horizontal-line_dark">
-
-```html
+```html:preview
   <hr class="oui-horizontal-line">
 
   <hr class="oui-horizontal-line oui-horizontal-line_thin">

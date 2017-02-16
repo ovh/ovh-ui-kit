@@ -10,6 +10,7 @@ oui-button is a package which provide styles for the button component.
 
 ## Usage
 
+```html:preview
 <div>
   <button class="oui-button oui-button_primary">
     Primary Button
@@ -27,6 +28,7 @@ oui-button is a package which provide styles for the button component.
     Star Button
   </button>
 </div>
+
 <div>
   <button class="oui-button oui-button_primary" disabled>
     Primary Button
@@ -44,39 +46,6 @@ oui-button is a package which provide styles for the button component.
     Star Button
   </button>
 </div>
-
-```html
-<button class="oui-button oui-button_primary">
-  Primary Button
-</button>
-
-<button class="oui-button oui-button_secondary">
-  Secondary Button
-</button>
-
-<button class="oui-button oui-button_dropdown">
-  Dropdown Button
-</button>
-
-<button class="oui-button oui-button_star">
-  Star Button
-</button>
-
-<button class="oui-button oui-button_primary" disabled>
-  Primary Button
-</button>
-
-<button class="oui-button oui-button_secondary" disabled>
-  Secondary Button
-</button>
-
-<button class="oui-button oui-button_dropdown" disabled>
-  Dropdown Button
-</button>
-
-<button class="oui-button oui-button_star" disabled>
-  Star Button
-</button>
 ```
 
 ## Mixins
