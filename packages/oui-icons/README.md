@@ -12,7 +12,7 @@ oui-icons is a package which provide styles for the icons.
 
 ### Icon
 
-```html
+```html:preview
   <i class="oui-icon oui-icon-close"></i>
   <i class="oui-icon oui-icon-error_circle"></i>
   <i class="oui-icon oui-icon-info_circle"></i>
@@ -22,7 +22,7 @@ oui-icons is a package which provide styles for the icons.
 
 ### Bicolor
 
-```html
+```html:preview
   <i class="oui-icon oui-icon-error_circle oui-icon_bicolor"></i>
   <i class="oui-icon oui-icon-info_circle oui-icon_bicolor"></i>
   <i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
