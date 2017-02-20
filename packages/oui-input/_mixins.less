@@ -1,0 +1,59 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import '../oui-typography/_constants';
+@import '../oui-icons/_mixins';
+@import '../oui-accessibility/_mixins';
+@import '../oui-animation/_mixins';
+@import './_variables';
+
+#oui {
+  .input-base(
+    @color: @oui-input-color,
+    @font-size: @oui-input-font-size,
+    @font-weight: @oui-input-font-weight,
+    @padding: @oui-input-padding,
+    @margin: @oui-input-margin,
+    @border: @oui-input-border-color
+  ) {
+    display: block;
+    width: 100%;
+    padding: @padding;
+    border: 1px solid @border;
+    border-radius: @oui-global-base-radius;
+    margin: @margin;
+    color: @color;
+    font-size: @font-size;
+    font-weight: @font-weight;
+
+    &:focus {
+      #oui > .animate();
+
+      border-color: @oui-input-border-color-focus;
+      outline: none;
+      box-shadow: 0 0 5px @oui-input-border-color-focus;
+      background-color: @oui-input-background-focus;
+      color: @oui-input-color-focus;
+      text-decoration: none;
+    }
+
+    &:disabled {
+      opacity:.7;
+      background-color: @oui-input-background-disabled;
+      border-color: @oui-input-border-color-disabled;
+      color: @oui-input-color-disabled;
+      cursor: not-allowed;
+    }
+
+    &:read-only {
+      box-shadow: none;
+      background-color: @oui-input-background-readonly;
+      border-color: @oui-input-border-color-readonly;
+      color: @oui-input-color-readonly;
+      user-select: none;
+    }
+
+    &::placeholder {
+      color: @oui-input-color-readonly;
+    }
+  }
+}
