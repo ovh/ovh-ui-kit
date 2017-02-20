@@ -2,15 +2,42 @@
 @import './_mixins';
 
 .oui-checkbox {
+  @oui-checkbox-selector: oui-checkbox;
+
   #oui > .checkbox-normalize();
-  #oui > .checkbox();
+  #oui > .checkbox(@oui-checkbox-selector);
 
   &_big {
-    #oui > .checkbox-size(@oui-checkbox-big-facade-size, oui-checkbox);
+    #oui > .checkbox-size(
+      @oui-checkbox-selector,
+      @oui-checkbox-big-facade-size
+    );
     #oui > .checkbox-label(
+      @oui-checkbox-selector,
       @oui-checkbox-big-label-font-size,
-      @oui-checkbox-big-facade-size + @oui-checkbox-facade-top-spacing,
-      oui-checkbox
+      @oui-checkbox-big-facade-size + @oui-checkbox-facade-top-spacing
+    );
+  }
+
+  &_thumbnail {
+    #oui > .checkbox-thumbnail(
+      @oui-checkbox-selector
+    );
+  }
+
+  &_thumbnail&_big {
+    #oui > .checkbox-thumbnail(
+      @oui-checkbox-selector
+    );
+    #oui > .checkbox-size(
+      @oui-checkbox-selector,
+      @oui-checkbox-big-facade-size,
+      false
+    );
+    #oui > .checkbox-label(
+      @oui-checkbox-selector,
+      @oui-checkbox-big-label-font-size,
+      @oui-checkbox-big-facade-size + @oui-checkbox-facade-top-spacing
     );
   }
 }

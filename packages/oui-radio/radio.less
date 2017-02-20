@@ -2,29 +2,55 @@
 @import './_mixins';
 
 .oui-radio {
+  @oui-radio-selector: oui-radio;
+
   #oui > .radio-normalize();
-  #oui > .radio();
+  #oui > .radio(@oui-radio-selector);
 
   &_big {
     #oui > .radio-size(
+      @oui-radio-selector,
       @oui-radio-big-outer-circle-size,
       @oui-radio-big-inner-circle-size,
-      @oui-radio-padding-left,
-      oui-radio
+      @oui-radio-padding-left
     );
 
     #oui > .radio-position(
+      @oui-radio-selector,
       @oui-radio-big-outer-circle-top,
       @oui-radio-big-outer-circle-left,
       @oui-radio-big-inner-circle-top,
-      @oui-radio-big-inner-circle-left,
-      oui-radio
+      @oui-radio-big-inner-circle-left
     );
 
     #oui > .radio-label(
+      @oui-radio-selector,
       @oui-radio-big-inner-font-size,
+      @oui-radio-big-outer-circle-size
+    );
+  }
+
+  &_thumbnail {
+    #oui > .radio-thumbnail(
+      @oui-radio-selector
+    );
+  }
+
+  &_thumbnail&_big {
+    #oui > .radio-thumbnail(
+      @oui-radio-selector
+    );
+    #oui > .radio-size(
+      @oui-radio-selector,
       @oui-radio-big-outer-circle-size,
-      oui-radio
+      @oui-radio-big-inner-circle-size,
+      @oui-radio-padding-left,
+      false
+    );
+    #oui > .radio-label(
+      @oui-radio-selector,
+      @oui-radio-big-inner-font-size,
+      @oui-radio-big-outer-circle-size
     );
   }
 }

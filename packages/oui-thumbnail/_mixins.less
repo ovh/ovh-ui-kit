@@ -1,0 +1,31 @@
+@import './_variables';
+
+#oui {
+  .thumbnail-base(
+    @border-color: @oui-thumbnail-border-color,
+    @border-hover-color: @oui-thumbnail-border-hover-color,
+    @background: @oui-thumbnail-background,
+    @border-size: @oui-thumbnail-border-size,
+    @border-radius: @oui-thumbnail-border-radius,
+    @padding: @oui-thumbnail-padding
+  ) {
+    padding: @padding;
+    border: @border-size solid @border-color;
+    border-radius: @border-radius;
+    background: @background;
+    cursor: pointer;
+
+    &:hover {
+      border: @border-size solid @border-hover-color;
+    }
+  }
+
+  .thumbnail-base-checked(
+    @border-color: @oui-thumbnail-checked-border-color,
+    @background: @oui-thumbnail-checked-background,
+    @border-size: @oui-thumbnail-border-size,
+  ) {
+    border: @border-size solid @border-color;
+    background: @background;
+  }
+}
