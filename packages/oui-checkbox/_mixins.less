@@ -73,9 +73,12 @@
     }
 
     &__outline_checked,
-    &__checkmark,
     &__false-bottom {
-      display: none;
+      fill: #fff;
+    }
+
+    &__checkmark {
+      fill: transparent;
     }
 
     &__facade,
@@ -102,10 +105,13 @@
       #oui > .visually-hidden();
     }
 
-    &__outline,
-    &__checkmark {
+    &__outline {
       #oui > .animate();
       fill: @outline-color;
+    }
+
+    &__checkmark {
+      fill: transparent;
     }
 
     &__facade:hover > &__outline {
@@ -170,6 +176,10 @@
     &:active &__input:disabled ~ &__facade > &__outline,
     &:active &__input:disabled ~ &__facade > &__checkmark {
       fill: @oui-color-dusty;
+    }
+
+    &__outline_checked:disabled {
+      display: none;
     }
   }
 }
