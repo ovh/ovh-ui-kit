@@ -433,7 +433,7 @@ Will stylize your message as a message with a bigger icon.
 ```
 
 ```less
-#oui > .message-no-icon(
+#oui > .message-icon-2x(
     @padding,
     @icon-2x-size,
     @icon-2x-position-top,
@@ -483,13 +483,17 @@ The message component has 3 inner elements:
 
 The provided modifiers are:
 
-| Class 									 | Description         						 			    |
-| -----------------------------------------  | -------------------------------------------------------- |
-| `oui-message_info`   						 | Make the alert looks like an info message with an icon   |
-| `oui-message_info oui-message_no-icon`     | Make the alert looks like an info message with no icon   |
-| `oui-message_success` 					 | Make the alert looks like a success message with an icon |
-| `oui-message_success oui-message_no-icon`  | Make the alert looks like a success message with no icon |
-| `oui-message_warning` 					 | Make the alert looks like a warning message with an icon |
-| `oui-message_warning oui-message_no-icon`  | Make the alert looks like a warning message with no icon |
-| `oui-message_error`  						 | Make the alert looks like an error message with an icon  |
-| `oui-message_error oui-message_no-icon`  	 | Make the alert looks like an error message with no icon  |
+| Class 									 | Description         						 			   		|
+| -----------------------------------------  | ------------------------------------------------------------ |
+| `oui-message_info`   						 | Make the alert looks like an info message with an icon   	|
+| `oui-message_info oui-message_icon-2x`     | Make the alert looks like an info message with a bigger icon |
+| `oui-message_info oui-message_no-icon`     | Make the alert looks like an info message with no icon   	|
+| `oui-message_success` 					 | Make the alert looks like a success message with an icon 	|
+| `oui-message_success oui-message_icon-2x`  | Make the alert looks like an info message with a bigger icon |
+| `oui-message_success oui-message_no-icon`  | Make the alert looks like a success message with no icon 	|
+| `oui-message_warning` 					 | Make the alert looks like a warning message with an icon 	|
+| `oui-message_warning oui-message_icon-2x`  | Make the alert looks like an info message with a bigger icon |
+| `oui-message_warning oui-message_no-icon`  | Make the alert looks like a warning message with no icon 	|
+| `oui-message_error`  						 | Make the alert looks like an error message with an icon  	|
+| `oui-message_error oui-message_icon-2x`    | Make the alert looks like an info message with a bigger icon |
+| `oui-message_error oui-message_no-icon`  	 | Make the alert looks like an error message with no icon  	|
