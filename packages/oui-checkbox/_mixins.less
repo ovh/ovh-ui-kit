@@ -7,8 +7,8 @@
   .checkbox-size (
     @size,
   ) {
-    padding-left: @size + rem-calc(10);
     min-height: @size;
+    padding-left: @size + rem-calc(10);
 
     &__input,
     &__facade {
@@ -22,8 +22,8 @@
     @size,
     @selector
   ) {
-    padding-left: @size + rem-calc(10);
     min-height: @size;
+    padding-left: @size + rem-calc(10);
 
     .@{selector}__input,
     .@{selector}__facade {
@@ -61,7 +61,6 @@
     @outline-color_checked-hover: @oui-checkbox-outline-color_checked-hover,
     @spacing: @oui-checkbox-spacing
   ) {
-
     .checkbox-size(@oui-checkbox-facade-size);
     .checkbox-label(inherit, @oui-checkbox-facade-size);
 
@@ -95,8 +94,8 @@
     &__facade {
       margin: 0;
       position: absolute;
-      left: 0;
       top: @oui-checkbox-facade-top-spacing;
+      left: 0;
     }
 
     &__input {
