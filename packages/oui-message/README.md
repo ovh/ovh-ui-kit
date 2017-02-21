@@ -45,6 +45,27 @@ oui-message is a package which provide styles for the `oui-message` component.
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
 ```
+### Info with icon 2x
+
+```html:preview
+	<div class="oui-message oui-message_info oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-info_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+	</div>
+```
+### Info with icon 2x and close button
+
+```html:preview
+	<div class="oui-message oui-message_info oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-info_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+	</div>
+```
 ### Info with no icon
 
 ```html:preview
@@ -52,7 +73,7 @@ oui-message is a package which provide styles for the `oui-message` component.
 		<p class="oui-message__body">Info message no icon</p>
 	</div>
 ```
-### Info with close button and no icon
+### Info with no icon and close button
 
 ```html:preview
 	<div class="oui-message oui-message_info oui-message_no-icon" role="alert">
@@ -75,6 +96,27 @@ oui-message is a package which provide styles for the `oui-message` component.
 	<div class="oui-message oui-message_success" role="alert">
 		<i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
 		<p class="oui-message__body">Success message with close button</p>
+		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+	</div>
+```
+### Success with icon 2x
+
+```html:preview
+	<div class="oui-message oui-message_success oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+	</div>
+```
+### Success with icon 2x and close button
+
+```html:preview
+	<div class="oui-message oui-message_success oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
 ```
@@ -111,6 +153,27 @@ oui-message is a package which provide styles for the `oui-message` component.
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
 ```
+### Warning with icon 2x
+
+```html:preview
+	<div class="oui-message oui-message_warning oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+	</div>
+```
+### Warning with icon 2x and close button
+
+```html:preview
+	<div class="oui-message oui-message_warning oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+	</div>
+```
 ### Warning with no icon
 
 ```html:preview
@@ -141,6 +204,27 @@ oui-message is a package which provide styles for the `oui-message` component.
 	<div class="oui-message oui-message_error" role="alert">
 		<i class="oui-icon oui-icon-error_circle oui-icon_bicolor"></i>
 		<p class="oui-message__body">Error message with close button</p>
+		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+	</div>
+```
+### Error with icon 2x
+
+```html:preview
+	<div class="oui-message oui-message_error oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-error_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+	</div>
+```
+### Success with icon 2x and close button
+
+```html:preview
+	<div class="oui-message oui-message_error oui-message_icon-2x" role="alert">
+		<i class="oui-icon oui-icon-error_circle oui-icon_bicolor"></i>
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
 ```
@@ -339,6 +423,30 @@ Will stylize your message as an error one.
 | __@icon-position-left__ 			 | Number 	| `@oui-message-error-position-left` 			|
 | __@icon-size__ 					 | Number 	| `@oui-message-info-size` 		     			|
 | __@padding__ 						 | Number 	| `@oui-message-error-padding` 					|
+
+### .message-icon-2x
+
+Will stylize your message as a message with a bigger icon.
+
+```less
+#oui > .message-icon-2x();
+```
+
+```less
+#oui > .message-no-icon(
+    @padding,
+    @icon-2x-size,
+    @icon-2x-position-top,
+    @icon-2x-position-left,
+);
+```
+
+| Parameter 						 | Type		| Default Value 																		|
+| :--------------------------------- | :------- | :------------------------------------------------------------------------------------ |
+| __@padding__ 						 | Number 	| `@oui-message-icon-2x-padding: rem-calc(16) rem-calc(16) rem-calc(16) rem-calc(66)` 	|
+| __@icon-2x-size__ 				 | Number 	| `@oui-message-icon-2x-size: rem-calc(34)` 											|
+| __@icon-2x-position-top__ 		 | Number 	| `@oui-message-icon-2x-position-top: rem-calc(20)` 									|
+| __@icon-2x-position-left__ 		 | Number 	| `@oui-message-icon-2x-position-left: rem-calc(16)` 									|
 
 ### .message-no-icon
 
