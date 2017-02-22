@@ -19,9 +19,6 @@ oui-navbar is a package which provide styles for the navbar component.
       <span class="oui-navbar__title-small">UIKit</span>
     </h1>
   </a>
-  <div id="" class="oui-navbar__control oui-navbar__control-close">
-    <span></span><span></span><span></span>
-  </div>
   <ul class="oui-navbar__items">
     <li class="oui-navbar__item">
       <a class="oui-navbar__link" href="#!/documentation">Documentation</a>
@@ -87,7 +84,6 @@ Inner elements:
 |     i                     | `oui-icon oui-icon-logo`                         |
 |     span                  | `oui-navbar__title-bold`                         |
 |     span                  | `oui-navbar__title-small`                        |
-| __div__                   | `oui-navbar__control oui-navbar__control-close`  |
 | __ul__                    | `oui-navbar__items`                              |
 |   li                      | `oui-navbar__item`                               |
 |     a                     | `oui-navbar__link`                               |
