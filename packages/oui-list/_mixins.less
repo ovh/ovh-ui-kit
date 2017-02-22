@@ -1,0 +1,161 @@
+@import '../oui/_settings';
+@import '../oui-typography/_constants';
+@import '../oui-animation/_mixins';
+@import '../oui-color/_variables';
+@import './_variables';
+
+#oui {
+  .list(
+    @selector,
+    @background-color: @oui-list-background-color,
+    @item-border: @oui-list-item-border,
+    @title-color: @oui-list-title-color,
+    @link-color: @oui-list-link-color,
+    @link-active-color: @oui-list-link-active-color,
+    @link-active-background-color: @oui-list-link-active-background-color,
+    @title-font-size: @oui-list-title-font-size,
+    @font-size: @oui-list-font-size,
+    @padding: @oui-list-padding,
+    @header-padding: @oui-list-header-padding,
+    @item-padding: @oui-list-item-padding
+  ) {
+    padding: @padding;
+    background-color: @background-color;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      padding: @header-padding;
+      color: @title-color;
+      font-weight: @oui-font-semibold;
+      font-size: @title-font-size;
+      cursor: default;
+      user-select: none;
+    }
+
+    &__items {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    &__group,
+    &__item {
+      border-bottom: @oui-list-item-border;
+    }
+
+    &__item_current {
+      background-color: @link-active-background-color
+    }
+
+    &__text {
+      display: block;
+      padding: @item-padding;
+      font-size: @font-size;
+      cursor: default;
+    }
+
+    &__link,
+    &__link:active,
+    &__link:focus,
+    &__link:hover,
+    &__link:visited {
+      #oui > .link();
+      display: flex;
+      align-items: center;
+      padding: @item-padding;
+      overflow: hidden;
+      color: @link-color;
+      font-size: @font-size;
+      font-weight: @oui-font-regular;
+    }
+
+    &__item_current > &__link,
+    &__item_current > &__link:active,
+    &__item_current > &__link:focus,
+    &__item_current > &__link:hover,
+    &__item_current > &__link:visited {
+      color: @link-active-color;
+      font-weight: @oui-font-semibold;
+      text-decoration: none;
+      cursor: default;
+    }
+
+    &__sub-items {
+      margin: 0;
+      padding: 0 0 0 rem-calc(20);
+      border-bottom: 0 none;
+      list-style: none;
+    }
+  }
+
+  .list-nav(
+    @selector,
+    @background-color: @oui-list-nav-background-color,
+    @item-border: @oui-list-nav-item-border,
+    @title-color: @oui-list-nav-title-color,
+    @link-color: @oui-list-nav-link-color,
+    @link-active-color: @oui-list-nav-link-active-color,
+    @link-active-background-color: @oui-list-nav-link-active-background-color,
+    @title-font-size: @oui-list-nav-title-font-size,
+    @font-size: @oui-list-nav-font-size,
+    @padding: @oui-list-nav-padding,
+    @header-padding: @oui-list-nav-header-padding,
+    @item-padding: @oui-list-nav-item-padding
+  ) {
+    padding: @padding;
+    background-color: @background-color;
+
+    .@{selector}__header {
+      padding: @header-padding;
+      color: @title-color;
+      font-weight: @oui-font-semibold;
+      font-size: @title-font-size;
+    }
+    
+    .@{selector}__group,
+    .@{selector}__item,
+    .@{selector}__sub-item {
+      #oui > .text-ellipsis();
+    }
+
+    .@{selector}__group,
+    .@{selector}__item {
+      border-bottom: @oui-list-nav-item-border;
+    }
+
+    .@{selector}__item_current {
+      background-color: @link-active-background-color;
+    }
+
+    .@{selector}__text {
+      padding: @item-padding;
+      font-size: @font-size;
+    }
+
+    .@{selector}__link,
+    .@{selector}__link:active,
+    .@{selector}__link:focus,
+    .@{selector}__link:hover,
+    .@{selector}__link:visited {
+      padding: @item-padding;
+      color: @link-color;
+      font-size: @font-size;
+      font-weight: @oui-font-regular;
+      text-decoration: none;
+    }
+
+    .@{selector}__link:hover {
+      background-color: hsla(0, 0%, 100%, .5)
+    }
+
+    .@{selector}__item_current > .@{selector}__link,
+    .@{selector}__item_current > .@{selector}__link:active,
+    .@{selector}__item_current > .@{selector}__link:focus,
+    .@{selector}__item_current > .@{selector}__link:hover,
+    .@{selector}__item_current > .@{selector}__link:visited {
+      color: @link-active-color;
+      font-weight: @oui-font-semibold;
+    }
+  }
+}
