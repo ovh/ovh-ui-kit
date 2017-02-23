@@ -76,6 +76,13 @@ The block class is `oui-icon` (top-level element).
 ## Available icons
 
 <div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-ovh"></i></div>
+    <div class="oui-icon-badge__code">
+      `<i class="oui-icon oui-icon-ovh"></i>`
+    </div>
+</div>
+
+<div class="oui-icon-badge">
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-close"></i>`
@@ -142,5 +149,17 @@ The block class is `oui-icon` (top-level element).
     <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-logo"></i></div>
     <div class="oui-icon-badge__code">
       `<i class="oui-icon oui-icon-logo"></i>`
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-eye"></i></div>
+    <div class="oui-icon-badge__code">
+      `<i class="oui-icon oui-icon-eye"></i>`
+    </div>
+</div>
+
+<div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-eye-blocked"></i></div>
+    <div class="oui-icon-badge__code">
+      `<i class="oui-icon oui-icon-eye-blocked"></i>`
     </div>
 </div>

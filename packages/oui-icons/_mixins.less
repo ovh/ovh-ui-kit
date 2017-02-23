@@ -20,6 +20,11 @@
       line-height: 1;
       font-weight: normal;
       font-style: normal;
+      
+      &.oui-icon-ovh::before {
+        display: block;
+        content: @oui-icon-index-ovh;
+      }
 
       &.oui-icon-close::before {
         display: block;
@@ -49,6 +54,15 @@
       &.oui-icon-logo::before {
         display: block;
         content: @oui-icon-index-logo;
+
+      &.oui-icon-eye::before {
+        display: block;
+        content: @oui-icon-index-eye;
+      }
+
+      &.oui-icon-eye-blocked::before {
+        display: block;
+        content: @oui-icon-index-eye-blocked;
       }
   }
 
