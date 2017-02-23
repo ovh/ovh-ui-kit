@@ -37,7 +37,6 @@
     font-size: @font-size;
     line-height: 1.375;
     font-weight: @font-weight;
-    letter-spacing: 0.007em;
 
     &__body {
       flex: 1;
@@ -46,11 +45,12 @@
 
     &__close-button {
       #oui > .animate();
+
       cursor: pointer;
       position: relative;
       align-self: flex-start;
-      width: @close-button-width;
-      height: @close-button-height;
+      min-width: @close-button-width;
+      min-height: @close-button-height;
       overflow: hidden;
       margin: @close-button-margin;
       padding: @close-button-padding;
