@@ -72,7 +72,10 @@
       cursor: pointer;
     }
 
-    &__outline_checked,
+    &__outline_checked {
+      display: none
+    }
+
     &__false-bottom {
       fill: #fff;
     }
@@ -176,10 +179,6 @@
     &:active &__input:disabled ~ &__facade > &__outline,
     &:active &__input:disabled ~ &__facade > &__checkmark {
       fill: @oui-color-dusty;
-    }
-
-    &__outline_checked:disabled {
-      display: none;
     }
   }
 }
