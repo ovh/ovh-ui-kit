@@ -10,6 +10,8 @@ oui-radio is a package which provide styles for the input radio component.
 
 ## Usage
 
+### Label
+
 ```html:preview
   <label class="oui-radio" for="oui-radio-1">
     <input class="oui-radio__input" type="radio" name="oui-radio-1" value="oui-radio-1" id="oui-radio-1" checked="checked" />
@@ -29,6 +31,31 @@ oui-radio is a package which provide styles for the input radio component.
   <label class="oui-radio" for="oui-radio-4">
     <input class="oui-radio__input" type="radio" name="oui-radio-4" value="oui-radio-4" id="oui-radio-4" disabled="disabled" />
     <span class="oui-radio__label">Disabled [Unchecked]</span>
+  </label>
+
+  <label class="oui-radio oui-radio_big" for="oui-radio-5">
+    <input class="oui-radio__input" type="radio" name="oui-radio-5" value="oui-radio-5" id="oui-radio-5" checked="checked" />
+    <span class="oui-radio__label">Big [Checked]</span>
+  </label>
+```
+
+### Description
+
+```html:preview
+  <label class="oui-radio" for="oui-radio-6">
+    <input class="oui-radio__input" type="radio" name="oui-radio-6" value="oui-radio-6" id="oui-radio-6" checked="checked" />
+    <span class="oui-radio__label">Checked</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. Nam ac blandit mauris. Donec semper tellus et felis viverra, in molestie lacus sodales. Proin fringilla vestibulum tempus. In feugiat risus mauris, tempus lacinia dolor posuere vel.
+    </span>
+  </label>
+
+  <label class="oui-radio oui-radio_big" for="oui-radio-7">
+    <input class="oui-radio__input" type="radio" name="oui-radio-7" value="oui-radio-7" id="oui-radio-7" checked="checked" />
+    <span class="oui-radio__label">Big [Checked]</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. Nam ac blandit mauris. Donec semper tellus et felis viverra, in molestie lacus sodales. Proin fringilla vestibulum tempus. In feugiat risus mauris, tempus lacinia dolor posuere vel.
+    </span>
   </label>
 ```
 
@@ -100,6 +127,64 @@ Define the base styles for a radio.
 | __@inner-circle-left__                                       | Number | `rem-calc(6)`                                                                                           |
 | __@padding-left__                                            | Number | `rem-calc(25)`                                                                                          |
 
+### .radio-position
+
+Change the position of a radio
+
+```less
+#oui > .radio-position(
+  @outer-circle-top,
+  @outer-circle-left,
+  @inner-circle-top,
+  @inner-circle-left,
+  @selector
+)
+```
+
+| Parameter              | Type   | Comments                                                       |
+| ---------------------- | ------ | -------------------------------------------------------------- |
+| __@outer-circle-top__  | Number |                                                                |
+| __@outer-circle-left__ | Number |                                                                |
+| __@inner-circle-top__  | Number |                                                                |
+| __@inner-circle-left__ | Number |                                                                |
+| __@selector__          | Class  | [Optional] Class name that will be prefixed on each subclasses |
+
+### .radio-size
+
+Change the size of a radio
+
+```less
+#oui > .radio-size(
+  @outer-circle-size,
+  @inner-circle-size,
+  @selector
+)
+```
+
+| Parameter               | Type   | Comments                                                       |
+| ----------------------- | ------ | -------------------------------------------------------------- |
+| __@outer-circle-size__  | Number |                                                                |
+| __@inner-circle-size__  | Number |                                                                |
+| __@selector__           | Class  | [Optional] Class name that will be prefixed on each subclasses |
+
+### .radio-label
+
+Change the label properties of a radio
+
+```less
+#oui > .radio-label(
+  @font-size,
+  @line-height
+  @selector
+)
+```
+
+| Parameter             | Type   | Comments                                                       |
+| --------------------- | ------ | -------------------------------------------------------------- |
+| __@font-size__        | Number |                                                                |
+| __@line-height__      | Number |                                                                |
+| __@selector__         | Class  | [Optional] Class name that will be prefixed on each subclasses |
+
 ## Classes
 
 ### Block
@@ -118,4 +203,8 @@ Inner elements:
 
 ### Modifier
 
-The radio component has no modifier elements.
+The provided modifiers are:
+
+| Class              | Description                                 |
+| ------------------ | ------------------------------------------- |
+| `oui-radio_big`    | Make the radio looks bigger                 |

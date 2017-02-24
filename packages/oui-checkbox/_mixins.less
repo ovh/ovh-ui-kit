@@ -4,6 +4,56 @@
 @import './_variables';
 
 #oui {
+  .checkbox-size (
+    @size,
+  ) {
+    min-height: @size;
+    padding-left: @size + rem-calc(10);
+
+    &__input,
+    &__facade {
+      width: @size;
+      height: @size;
+    }
+  }
+
+  // TODO: Find a better way to not require this duplicate
+  .checkbox-size (
+    @size,
+    @selector
+  ) {
+    min-height: @size;
+    padding-left: @size + rem-calc(10);
+
+    .@{selector}__input,
+    .@{selector}__facade {
+      width: @size;
+      height: @size;
+    }
+  }
+
+  .checkbox-label (
+    @font-size,
+    @line-height
+  ) {
+    &__label {
+      font-size: @font-size;
+      line-height: @line-height;
+    }
+  }
+
+  // TODO: Find a better way to not require this duplicate
+  .checkbox-label (
+    @font-size,
+    @line-height,
+    @selector
+  ) {
+    .@{selector}__label {
+      font-size: @font-size;
+      line-height: @line-height;
+    }
+  }
+
   .checkbox(
     @outline-color: @oui-checkbox-outline-color,
     @outline-color_hover: @oui-checkbox-outline-color_hover,
@@ -11,12 +61,16 @@
     @outline-color_checked-hover: @oui-checkbox-outline-color_checked-hover,
     @spacing: @oui-checkbox-spacing
   ) {
+    .checkbox-size(@oui-checkbox-facade-size);
+    .checkbox-label(inherit, @oui-checkbox-facade-size);
 
     position: relative;
     display: block;
-    padding-left: @oui-checkbox-facade-size + rem-calc(10);
     margin: @spacing;
-    min-height: @oui-checkbox-facade-size;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     &__outline_checked,
     &__checkmark,
@@ -25,21 +79,23 @@
     }
 
     &__facade,
-    &__label {
+    &__label,
+    &__description {
       user-select: none;
-      &:hover {
-        cursor: pointer;
-      }
+    }
+
+    &__label {
+      display: inline-block;
+      width: 100%;
+      font-weight: @oui-font-semibold;
     }
 
     &__input,
     &__facade {
       margin: 0;
       position: absolute;
-      width: @oui-checkbox-facade-size;
-      height: @oui-checkbox-facade-size;
+      top: @oui-checkbox-facade-top-spacing;
       left: 0;
-      top: rem-calc(3);
     }
 
     &__input {
@@ -84,7 +140,7 @@
     &__input:checked ~ &__facade:hover > &__outline {
       fill: @oui-color-dusty;
     }
-    
+
     &__input:disabled,
     &__input:disabled ~ &__label,
     &__input:disabled ~ &__facade {

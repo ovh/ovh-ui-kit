@@ -4,4 +4,27 @@
 .oui-radio {
   #oui > .radio-normalize();
   #oui > .radio();
+
+  &_big {
+    #oui > .radio-size(
+      @oui-radio-big-outer-circle-size,
+      @oui-radio-big-inner-circle-size,
+      @oui-radio-padding-left,
+      oui-radio
+    );
+
+    #oui > .radio-position(
+      @oui-radio-big-outer-circle-top,
+      @oui-radio-big-outer-circle-left,
+      @oui-radio-big-inner-circle-top,
+      @oui-radio-big-inner-circle-left,
+      oui-radio
+    );
+
+    #oui > .radio-label(
+      @oui-radio-big-inner-font-size,
+      @oui-radio-big-outer-circle-size,
+      oui-radio
+    );
+  }
 }
