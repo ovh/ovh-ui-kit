@@ -137,3 +137,10 @@ The block class is `oui-icon` (top-level element).
       `<i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>`
     </div>
 </div>
+
+<div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-logo"></i></div>
+    <div class="oui-icon-badge__code">
+      `<i class="oui-icon oui-icon-logo"></i>`
+    </div>
+</div>
