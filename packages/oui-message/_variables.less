@@ -6,6 +6,7 @@
 @oui-message-border-radius: 6px;
 @oui-message-background-color: #fff;
 @oui-message-font-color: @oui-color-zodiac;
+@oui-message-font-size: rem-calc(16);
 @oui-message-font-weight: @oui-font-regular;
 
 /* Message - Close button */
@@ -13,10 +14,10 @@
 @oui-message-close-button-color: @oui-color-zodiac;
 @oui-message-close-button-background-color: transparent;
 @oui-message-close-button-border: 0 none;
-@oui-message-close-button-width: rem-calc(12);
-@oui-message-close-button-height: rem-calc(12);
-@oui-message-close-button-font-size: rem-calc(12);
-@oui-message-close-button-margin: 0 0 0 rem-calc(16);
+@oui-message-close-button-width: @oui-message-close-button-font-size;
+@oui-message-close-button-height: @oui-message-close-button-font-size;
+@oui-message-close-button-font-size: rem-calc(10);
+@oui-message-close-button-margin: rem-calc(-5) rem-calc(-6) 0 rem-calc(16);
 @oui-message-close-button-padding: 0;
 
 /* Message info */
@@ -62,6 +63,13 @@
 @oui-message-error-icon-position-left: rem-calc(16);
 @oui-message-error-icon-size: rem-calc(26);
 @oui-message-error-icon-color: @oui-color-error-medium;
+
+/* Message icon 2x */
+
+@oui-message-icon-2x-padding: rem-calc(16) rem-calc(16) rem-calc(16) rem-calc(66);
+@oui-message-icon-2x-size: rem-calc(34);
+@oui-message-icon-2x-position-top: rem-calc(20);
+@oui-message-icon-2x-position-left: rem-calc(16);
 
 /* Message no-icon */
 

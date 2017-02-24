@@ -7,6 +7,7 @@
 #oui {
   .message-base(
     @margin: @oui-message-margin;
+    @font-size: @oui-message-font-size;
     @font-weight: @oui-message-font-weight;
     @font-color: @oui-message-font-color;
     @background-color: @oui-message-background-color;
@@ -25,6 +26,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    max-width: rem-calc(1000);
     min-height: rem-calc(50);
     margin: @margin;
     padding: @padding;
@@ -32,6 +34,8 @@
     border-radius: @border-radius;
     background-color: @background-color;
     color: @font-color;
+    font-size: @font-size;
+    line-height: 1.375;
     font-weight: @font-weight;
 
     &__body {
@@ -40,16 +44,19 @@
     }
 
     &__close-button {
+      #oui > .animate();
+
       cursor: pointer;
       position: relative;
       align-self: flex-start;
-      width: @close-button-width;
-      height: @close-button-height;
+      min-width: @close-button-width;
+      min-height: @close-button-height;
       overflow: hidden;
       margin: @close-button-margin;
       padding: @close-button-padding;
       border: @close-button-border;
       background-color: @close-button-background-color;
+      opacity: .75;
       color: @close-button-color;
       font-size: @close-button-font-size;
       line-height: 0;
@@ -57,6 +64,13 @@
 
       &:before {
         display: block;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        #oui > .animate();
+        opacity: 1;
       }
     }
   }
@@ -158,6 +172,23 @@
       left: @icon-position-left;
       color: @icon-color;
       font-size: @icon-size;
+    }
+  }
+  
+  .message-icon-2x(
+    @padding: @oui-message-icon-2x-padding;
+    @icon-2x-size: @oui-message-icon-2x-size;
+    @icon-2x-position-top: @oui-message-icon-2x-position-top;
+    @icon-2x-position-left: @oui-message-icon-2x-position-left;
+  ) {
+    padding: @padding;
+
+    .oui-icon:not(.oui-icon-close) {
+      position: absolute;
+      display: block;
+      top: @icon-2x-position-top;
+      left: @icon-2x-position-left;
+      font-size: @icon-2x-size;
     }
   }
 
