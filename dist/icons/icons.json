@@ -1,7 +1,10 @@
 {
     "icon-close": "\\f101",
     "icon-error_circle": "\\f102",
-    "icon-info_circle": "\\f103",
-    "icon-success_circle": "\\f104",
-    "icon-warning_circle": "\\f105"
+    "icon-eye-blocked": "\\f103",
+    "icon-eye": "\\f104",
+    "icon-info_circle": "\\f105",
+    "icon-ovh": "\\f106",
+    "icon-success_circle": "\\f107",
+    "icon-warning_circle": "\\f108"
 }
