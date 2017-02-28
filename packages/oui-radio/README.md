@@ -187,7 +187,7 @@ oui-radio is a package which provide styles for the input radio component.
 ## Mixins
 
 ```less
-  @import 'oui-radio/radio/_mixins';
+  @import 'oui-radio/_mixins';
 ```
 
 ### .radio
@@ -202,20 +202,19 @@ Define the base styles for a radio.
 #oui > .radio(
   @selector: Class, // Class name that will be prefixed on each subclasses
   @label-font-size: Number,
-  @label-font-color: Color,
-  @label-font-color_disabled: Color,
-  @label-font-color_input-checked: Color,
+  @label-color-disabled: Color,
+  @label-color-input-checked: Color,
   @outer-circle-border-: Color,
-  @outer-circle-border-color_disabled: Color,
-  @outer-circle-border-color_input-checked: Color,
+  @outer-circle-border-color-disabled: Color,
+  @outer-circle-border-color-input-checked: Color,
   @outer-circle-background-color: Color,
-  @outer-circle-background-color_disabled: Color,
-  @outer-circle-border-color_hover: Color,
-  @outer-circle-border-color_input-checked-hover: Color,
-  @outer-circle-border-color_active: Color,
+  @outer-circle-background-color-disabled: Color,
+  @outer-circle-border-color-hover: Color,
+  @outer-circle-border-color-input-checked-hover: Color,
+  @outer-circle-border-color-active: Color,
   @inner-circle-background-color: Color,
-  @inner-circle-background-color_active: Color,
-  @inner-circle-background-color_input-checked-disabled: Color,
+  @inner-circle-background-color-active: Color,
+  @inner-circle-background-color-input-checked-disabled: Color,
   @spacing: Number,
   @outer-circle-size: Number,
   @outer-circle-top: Number,
@@ -275,12 +274,14 @@ Will stylize your radio as a thumbnail one.
 .radio-thumbnail (
   @selector: Class, // Class name that will be prefixed on each subclasses
   @border-color: Color,
-  @border-hover-color: Color,
-  @border-checked-color: Color,
+  @border-color-hover: Color,
+  @border-color-checked: Color,
+  @border-color-checked-hover: Color,
   @background: Color,
+  @background-hover: Color,
   @background-checked: Color,
+  @background-checked-hover: Color,
   @border-size: Number,
-  @border-radius: Number,
   @padding: Number,
   @label-padding-left: Number,
   @outer-circle-size: Number,

@@ -304,7 +304,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
 ## Mixins
 
 ```less
-  @import 'oui-checkbox/checkbox/_mixins';
+  @import 'oui-checkbox/_mixins';
 ```
 
 ### .checkbox
@@ -319,9 +319,8 @@ Define the base styles for a checkbox.
 #oui > .checkbox(
   @selector: Class, // Class name that will be prefixed on each subclasses
   @outline-color: Color,
-  @outline-color_hover: Color,
-  @outline-color_checked: Color,
-  @outline-color_checked-hover: Color,
+  @outline-color-hover: Color,
+  @outline-color-checked: Color,
   @spacing: Number
 );
 ```
@@ -358,12 +357,14 @@ Will stylize your checkbox as a thumbnail one.
 .checkbox-thumbnail(
   @selector: Class, // Class name that will be prefixed on each subclasses
   @border-color: Color,
-  @border-hover-color: Color,
-  @border-checked-color: Color,
+  @border-color-hover: Color,
+  @border-color-checked: Color,
+  @border-color-checked-hover: Color,
   @background: Color,
+  @background-hover: Color,
   @background-checked: Color,
+  @background-checked-hover: Color,
   @border-size: Color,
-  @border-radius: Number,
   @padding: Number
 )
 ```
