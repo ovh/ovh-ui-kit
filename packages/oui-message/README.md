@@ -1,5 +1,7 @@
 # oui-message
 
+<component-status cx-design="partial" ux="rc"></component-status>
+
 oui-message is a package which provide styles for the `oui-message` component.
 
 ## Installation
@@ -50,8 +52,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_info oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-info_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 	</div>
 ```
@@ -60,8 +62,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_info oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-info_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
@@ -104,8 +106,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_success oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 	</div>
 ```
@@ -114,8 +116,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_success oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
@@ -158,8 +160,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_warning oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 	</div>
 ```
@@ -168,8 +170,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_warning oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>
@@ -212,8 +214,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_error oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-error_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 	</div>
 ```
@@ -222,8 +224,8 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
 	<div class="oui-message oui-message_error oui-message_icon-2x" role="alert">
 		<i class="oui-icon oui-icon-error_circle oui-icon_bicolor"></i>
-		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem. 
-		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis 
+		<p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+		Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
 		imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 		<button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 	</div>

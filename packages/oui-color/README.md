@@ -1,5 +1,7 @@
 # oui-color
 
+<component-status cx-design="partial" ux="rc"></component-status>
+
 ## Main colors
 
 <div class="container row">

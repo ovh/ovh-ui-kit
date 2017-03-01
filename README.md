@@ -2,8 +2,6 @@
 
 A stylekit for the OVH brand.
 
-> Project status: **mvp**
-
 ## Installation
 
 ```
