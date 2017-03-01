@@ -194,7 +194,11 @@
       display: block;
     }
 
-    &__input:disabled ~ &__label-container > &__facade &__checkmark,
+    &__input:disabled:not(:checked) ~ &__label-container > &__facade &__checkmark {
+      display :none;
+    }
+
+    &__input:disabled:checked ~ &__label-container > &__facade &__checkmark,
     &:active &__input:disabled ~ &__label-container > &__facade &__outline,
     &:active &__input:disabled ~ &__label-container > &__facade > &__outline,
     &:active &__input:disabled ~ &__label-container > &__facade > &__checkmark,
