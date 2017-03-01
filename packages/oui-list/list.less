@@ -1,0 +1,13 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-list {
+  @oui-list-selector: oui-list;
+
+  #oui > .list-normalize();
+  #oui > .list(@oui-list-selector);
+
+  &_nav {
+  	#oui > .list-nav(@oui-list-selector);
+  }
+}
