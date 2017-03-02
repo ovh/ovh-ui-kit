@@ -21,10 +21,6 @@ oui-input-group is a package which provide styles to group inputs together.
   <button class="oui-button" disabled>Find</button>
 </div>
 
-<button class="oui-button oui-button_primary" >-</button>
-<input class="oui-input" placeholder="vCores"
-  style="display: inline-block; width: inherit">
-
 <div class="oui-input-group">
   <button class="oui-button">-</button>
   <input class="oui-input" placeholder="vCores">
