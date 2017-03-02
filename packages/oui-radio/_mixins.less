@@ -4,100 +4,95 @@
 @import '../oui-color/_variables';
 @import '../oui-animation/_mixins';
 @import '../oui-accessibility/_mixins';
+@import '../oui-thumbnail/_mixins';
 @import './_variables';
 
 #oui {
   .radio-position(
+    @selector,
     @outer-circle-top,
     @outer-circle-left,
     @inner-circle-top,
     @inner-circle-left
   ) {
-    &__label::before {
+    .@{selector}__label-container::before {
       top: @outer-circle-top;
       left: @outer-circle-left;
     }
 
-    &__input:checked ~ &__label::after {
-      top: @inner-circle-top;
-      left: @inner-circle-left;
-    }
-  }
-
-  // TODO: Find a better way to not require this duplicate
-  .radio-position(
-    @outer-circle-top,
-    @outer-circle-left,
-    @inner-circle-top,
-    @inner-circle-left,
-    @selector
-  ) {
-    .@{selector}__label::before {
-      top: @outer-circle-top;
-      left: @outer-circle-left;
-    }
-
-    .@{selector}__input:checked ~ .@{selector}__label::after {
+    .@{selector}__input:checked ~ .@{selector}__label-container::after {
       top: @inner-circle-top;
       left: @inner-circle-left;
     }
   }
 
   .radio-size(
+    @selector,
+    @outer-circle-size,
+    @inner-circle-size,
+    @padding-left,
+    @apply-padding-to-description
+  ) when (@apply-padding-to-description = false) {
+    min-height: @outer-circle-size;
+
+    .@{selector}__label-container::before {
+      width: @outer-circle-size;
+      height: @outer-circle-size;
+    }
+
+    .@{selector}__label {
+      padding-left: @outer-circle-size + @padding-left;
+    }
+
+    .@{selector}__description {
+      padding-left: 0;
+    }
+
+    .@{selector}__input:checked ~ .@{selector}__label-container::after {
+      width: @inner-circle-size;
+      height: @inner-circle-size;
+    }
+  }
+
+  .radio-size(
+    @selector,
+    @outer-circle-size,
+    @inner-circle-size,
+    @padding-left,
+    @apply-padding-to-description
+  ) when (@apply-padding-to-description = true) {
+    .radio-size(
+      @selector,
+      @outer-circle-size,
+      @inner-circle-size,
+      @padding-left,
+      false
+    );
+
+    .@{selector}__description {
+      padding-left: @outer-circle-size + @padding-left;
+    }
+  }
+
+  .radio-size(
+    @selector,
     @outer-circle-size,
     @inner-circle-size,
     @padding-left
   ) {
-    min-height: @outer-circle-size;
-    padding-left: @outer-circle-size + @padding-left;
-
-    &__label::before {
-      width: @outer-circle-size;
-      height: @outer-circle-size;
-    }
-
-    &__input:checked ~ &__label::after {
-      width: @inner-circle-size;
-      height: @inner-circle-size;
-    }
-  }
-
-  // TODO: Find a better way to not require this duplicate
-  .radio-size(
-    @outer-circle-size,
-    @inner-circle-size,
-    @padding-left,
-    @selector
-  ) {
-    min-height: @outer-circle-size;
-    padding-left: @outer-circle-size + @padding-left;
-
-    .@{selector}__label::before {
-      width: @outer-circle-size;
-      height: @outer-circle-size;
-    }
-
-    .@{selector}__input:checked ~ .@{selector}__label::after {
-      width: @inner-circle-size;
-      height: @inner-circle-size;
-    }
+    .radio-size(
+      @selector,
+      @outer-circle-size,
+      @inner-circle-size,
+      @padding-left,
+      true
+    );
   }
 
   .radio-label (
+    @selector,
     @font-size,
     @line-height
-  ) {
-    &__label {
-      font-size: @font-size;
-      line-height: @line-height;
-    }
-  }
-
-  // TODO: Find a better way to not require this duplicate
-  .radio-label (
-    @font-size,
-    @line-height,
-    @selector
   ) {
     .@{selector}__label {
       font-size: @font-size;
@@ -106,21 +101,21 @@
   }
 
   .radio(
+    @selector,
     @label-font-size: @oui-radio-label-font-size,
-    @label-font-color: @oui-radio-label-font-color,
-    @label-font-color_disabled: @oui-radio-label-font-color_disabled,
-    @label-font-color_input-checked: @oui-radio-label-font-color_input-checked,
+    @label-color-disabled: @oui-radio-label-color-disabled,
+    @label-color-input-checked: @oui-radio-label-color-input-checked,
     @outer-circle-border-color: @oui-radio-outer-circle-border-color,
-    @outer-circle-border-color_disabled: @oui-radio-outer-circle-border-color_disabled,
-    @outer-circle-border-color_input-checked: @oui-radio-outer-circle-border-color_input-checked,
+    @outer-circle-border-color-disabled: @oui-radio-outer-circle-border-color-disabled,
+    @outer-circle-border-color-input-checked: @oui-radio-outer-circle-border-color-input-checked,
     @outer-circle-background-color: @oui-radio-outer-circle-background-color,
-    @outer-circle-background-color_disabled: @oui-radio-outer-circle-background-color_disabled,
-    @outer-circle-border-color_hover: @oui-radio-outer-circle-border-color_hover,
-    @outer-circle-border-color_input-checked-hover: @oui-radio-outer-circle-border-color_input-checked-hover,
-    @outer-circle-border-color_active: @oui-radio-outer-circle-border-color_active,
+    @outer-circle-background-color-disabled: @oui-radio-outer-circle-background-color-disabled,
+    @outer-circle-border-color-hover: @oui-radio-outer-circle-border-color-hover,
+    @outer-circle-border-color-input-checked-hover: @oui-radio-outer-circle-border-color-input-checked-hover,
+    @outer-circle-border-color-active: @oui-radio-outer-circle-border-color-active,
     @inner-circle-background-color: @oui-radio-inner-circle-background-color,
-    @inner-circle-background-color_active: @oui-radio-inner-circle-background-color_active,
-    @inner-circle-background-color_input-checked-disabled: @oui-radio-inner-circle-background-color_input-checked-disabled,
+    @inner-circle-background-color-active: @oui-radio-inner-circle-background-color-active,
+    @inner-circle-background-color-input-checked-disabled: @oui-radio-inner-circle-background-color-input-checked-disabled,
     @spacing: rem-calc(10) 0,
     @outer-circle-size: @oui-radio-outer-circle-size,
     @outer-circle-top: @oui-radio-outer-circle-top,
@@ -128,61 +123,70 @@
     @inner-circle-size: @oui-radio-inner-circle-size,
     @inner-circle-top: @oui-radio-inner-circle-top,
     @inner-circle-left: @oui-radio-inner-circle-left,
-    @padding-left: @oui-radio-padding-left,
+    @label-padding-left: @oui-radio-padding-left,
   ) {
     .radio-size(
+      @selector,
       @outer-circle-size,
       @inner-circle-size,
-      @padding-left
+      @label-padding-left
     );
     .radio-position(
+      @selector,
       @outer-circle-top,
       @outer-circle-left,
       @inner-circle-top,
       @inner-circle-left
     );
     .radio-label(
+      @selector,
       @label-font-size,
-      @inner-circle-size
+      @outer-circle-size
     );
     position: relative;
     display: block;
     margin: @spacing;
 
     &,
-    &__label,
-    &__label::before,
-    &__label::after {
+    &__label-container,
+    &__label-container::before,
+    &__label-container::after {
       #oui > .animate();
       user-select: none;
     }
 
-    &__label {
+    &__label-container {
+      display: block;
+      cursor: pointer;
+    }
+
+    &__label-container::before {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 1px;
+      border-color: @outer-circle-border-color;
+      border-radius: 50%;
+      background-color: @outer-circle-background-color;
+    }
+
+    &__label,
+    &__description {
       display: inline-block;
       width: 100%;
-      color: @label-font-color;
-      font-weight: @oui-font-semibold;
+    }
 
-      &::before {
-        content: '';
-        position: absolute;
-        border-style: solid;
-        border-width: 1px;
-        border-color: @outer-circle-border-color;
-        border-radius: 50%;
-        background-color: @outer-circle-background-color;
-      }
+    &__label {
+      font-weight: @oui-font-semibold;
     }
 
     &__input {
       #oui > .visually-hidden();
     }
 
-    &__input:checked ~ &__label {
-      color: @label-font-color_input-checked;
-
+    &__input:checked ~ &__label-container {
       &::before {
-        border-color: @outer-circle-border-color_input-checked;
+        border-color: @outer-circle-border-color-input-checked;
       }
 
       &::after {
@@ -193,38 +197,119 @@
       }
     }
 
-    &__input:disabled ~ &__label {
-      color: @label-font-color_disabled;
-      cursor: not-allowed;
+    &__input:checked ~ &__label-container > &__label {
+      color: @label-color-input-checked;
+    }
 
+    &__input:disabled ~ &__label-container {
+      cursor: default;
+    }
+
+    &__input:disabled ~ &__label-container::before {
+      border-color: @outer-circle-border-color-disabled;
+      background-color: @outer-circle-background-color-disabled;
+    }
+
+    &__input:disabled ~ &__label-container > &__label,
+    &__input:disabled ~ &__label-container > &__description {
+      color: @label-color-disabled;
+    }
+
+    &__input:disabled:checked ~ &__label-container::after {
+      background-color: @inner-circle-background-color-input-checked-disabled;
+    }
+
+    &:hover:not(:active) > &__input:not(:disabled) ~ &__label-container::before {
+      border-color: @outer-circle-border-color-hover;
+    }
+
+    &:hover:not(:active) &__input:checked:not(:disabled) ~ &__label-container::before {
+      border-color: @outer-circle-border-color-input-checked-hover;
+    }
+
+    &:active > &__input:not(:disabled) ~ &__label-container {
       &::before {
-        background-color: @outer-circle-background-color_disabled;
-        border-color: @outer-circle-border-color_disabled;
-      }
-    }
-
-    &__input:disabled:checked ~ &__label {
-      &::after {
-        background-color: @inner-circle-background-color_input-checked-disabled;
-      }
-    }
-
-    &:hover:not(:active) > &__input:not(:disabled) ~ &__label::before {
-      border-color: @outer-circle-border-color_hover;
-    }
-
-    &:hover:not(:active) &__input:checked:not(:disabled) ~ &__label::before {
-      border-color: @outer-circle-border-color_input-checked-hover;
-    }
-
-    &:active > &__input:not(:disabled) ~ &__label {
-      &::before {
-        border-color: @outer-circle-border-color_active;
+        border-color: @outer-circle-border-color-active;
       }
 
       &::after {
-        background-color: @inner-circle-background-color_active;
+        background-color: @inner-circle-background-color-active;
       }
+    }
+  }
+
+  .radio-thumbnail (
+    @selector,
+    @border-color: @oui-thumbnail-border-color,
+    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color-checked: @oui-thumbnail-border-color-checked,
+    @border-color-checked-hover: @oui-thumbnail-border-color-checked-hover,
+    @background: @oui-thumbnail-background,
+    @background-hover: @oui-thumbnail-background-hover,
+    @background-checked: @oui-thumbnail-background-checked,
+    @background-checked-hover: @oui-thumbnail-background-checked-hover,
+    @border-size: @oui-thumbnail-border-size,
+    @padding: @oui-thumbnail-padding,
+    @label-padding-left: @oui-radio-padding-left,
+    @outer-circle-size: @oui-radio-outer-circle-size,
+    @outer-circle-top: @oui-radio-outer-circle-top,
+    @outer-circle-left: @oui-radio-outer-circle-left,
+    @inner-circle-size: @oui-radio-inner-circle-size,
+    @inner-circle-top: @oui-radio-inner-circle-top,
+    @inner-circle-left: @oui-radio-inner-circle-left
+  ) {
+    .radio-size(
+      @selector,
+      @outer-circle-size,
+      @inner-circle-size,
+      @label-padding-left,
+      false
+    );
+    .radio-position(
+      @selector,
+      @padding + @border-size + @outer-circle-top,
+      @padding + @border-size + @outer-circle-left,
+      @padding + @border-size + @inner-circle-top,
+      @padding + @border-size + @inner-circle-left
+    );
+
+    .@{selector}__label-container {
+      #oui > .thumbnail-base(
+        @border-color,
+        @background,
+        @border-size,
+        @padding
+      );
+    }
+
+    .@{selector}__description {
+      padding-top: rem-calc(12);
+      border-top: rem-calc(1) solid #cbd2d7;
+      margin-top: rem-calc(11);
+    }
+
+    .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover {
+      #oui > .thumbnail-base-color(
+        @border-color-hover,
+        @background-hover,
+        @border-size
+      );
+    }
+
+    .@{selector}__input:checked + .@{selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color-checked,
+        @background-checked,
+        @border-size
+      )
+    }
+
+    .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover {
+      #oui > .thumbnail-base-color(
+        @border-color-checked-hover,
+        @background-checked-hover,
+        @border-size
+      )
     }
   }
 }

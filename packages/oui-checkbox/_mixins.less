@@ -1,52 +1,55 @@
 @import '../oui-animation/_mixins';
 @import '../oui-accessibility/_mixins';
+@import '../oui-thumbnail/_mixins';
 @import '../oui-color/_variables';
 @import './_variables';
 
 #oui {
   .checkbox-size (
+    @selector,
     @size,
-  ) {
+    @apply-padding-to-description
+  ) when (@apply-padding-to-description = false) {
     min-height: @size;
-    padding-left: @size + rem-calc(10);
-
-    &__input,
-    &__facade {
-      width: @size;
-      height: @size;
-    }
-  }
-
-  // TODO: Find a better way to not require this duplicate
-  .checkbox-size (
-    @size,
-    @selector
-  ) {
-    min-height: @size;
-    padding-left: @size + rem-calc(10);
 
     .@{selector}__input,
     .@{selector}__facade {
       width: @size;
       height: @size;
     }
-  }
 
-  .checkbox-label (
-    @font-size,
-    @line-height
-  ) {
-    &__label {
-      font-size: @font-size;
-      line-height: @line-height;
+    .@{selector}__label {
+      padding-left: @size + rem-calc(10);
+    }
+
+    .@{selector}__description {
+      padding-left: 0;
     }
   }
 
-  // TODO: Find a better way to not require this duplicate
+  .checkbox-size (
+    @selector,
+    @size,
+    @apply-padding-to-description
+  ) when (@apply-padding-to-description = true) {
+    .checkbox-size(@selector, @size, false);
+
+    .@{selector}__description {
+      padding-left: @size + rem-calc(10);
+    }
+  }
+
+  .checkbox-size (
+    @selector,
+    @size
+  ) {
+    .checkbox-size(@selector, @size, true);
+  }
+
   .checkbox-label (
+    @selector,
     @font-size,
-    @line-height,
-    @selector
+    @line-height
   ) {
     .@{selector}__label {
       font-size: @font-size;
@@ -54,21 +57,35 @@
     }
   }
 
+  .checkbox-position(
+    @selector,
+    @top,
+    @left
+  ) {
+    .@{selector}__input,
+    .@{selector}__facade {
+      top: @top;
+      left: @left;
+    }
+  }
+
   .checkbox(
+    @selector,
     @outline-color: @oui-checkbox-outline-color,
-    @outline-color_hover: @oui-checkbox-outline-color_hover,
-    @outline-color_checked: @oui-checkbox-outline-color_checked,
-    @outline-color_checked-hover: @oui-checkbox-outline-color_checked-hover,
+    @outline-color-hover: @oui-checkbox-outline-color-hover,
+    @outline-color-checked: @oui-checkbox-outline-color-checked,
     @spacing: @oui-checkbox-spacing
   ) {
-    .checkbox-size(@oui-checkbox-facade-size);
-    .checkbox-label(inherit, @oui-checkbox-facade-size);
+    .checkbox-size(@selector, @oui-checkbox-facade-size);
+    .checkbox-label(@selector, inherit, @oui-checkbox-facade-size);
+    .checkbox-position(@selector, rem-calc(3), @oui-checkbox-facade-top-spacing);
 
     position: relative;
     display: block;
     margin: @spacing;
 
-    &:hover {
+    &__label-container {
+      display: block;
       cursor: pointer;
     }
 
@@ -85,14 +102,19 @@
     }
 
     &__facade,
+    &__label-container,
     &__label,
     &__description {
       user-select: none;
     }
 
-    &__label {
+    &__label,
+    &__description {
       display: inline-block;
       width: 100%;
+    }
+
+    &__label {
       font-weight: @oui-font-semibold;
     }
 
@@ -100,8 +122,6 @@
     &__facade {
       margin: 0;
       position: absolute;
-      top: @oui-checkbox-facade-top-spacing;
-      left: 0;
     }
 
     &__input {
@@ -117,8 +137,8 @@
       fill: transparent;
     }
 
-    &__facade:hover > &__outline {
-      fill: @oui-checkbox-outline-color_hover;
+    &__label-container:hover > &__facade > &__outline {
+      fill: @oui-checkbox-outline-color-hover;
     }
 
     &:active &__false-bottom {
@@ -127,32 +147,31 @@
     }
 
     &:active &__outline,
-    &:active &__input:checked ~ &__facade > &__outline,
-    &:active &__input:checked ~ &__facade > &__checkmark {
+    &:active &__input:checked ~ &__label-container > &__facade > &__outline,
+    &:active &__input:checked ~ &__label-container > &__facade > &__checkmark {
       fill: @oui-color-pacific;
     }
 
-    &__input:checked ~ &__facade &__outline_unchecked {
+    &__input:checked ~ &__label-container > &__facade &__outline_unchecked {
       display: none;
     }
 
-    &__input:checked ~ &__facade &__outline:not(&__outline_checked),
-    &__input:checked ~ &__facade &__checkmark {
-      fill: @outline-color_checked;
+    &__input:checked ~ &__label-container > &__facade &__outline:not(&__outline_checked),
+    &__input:checked ~ &__label-container > &__facade &__checkmark {
+      fill: @outline-color-checked;
     }
 
-    &__input:checked ~ &__facade &__outline_checked,
-    &__input:checked ~ &__facade &__checkmark {
+    &__input:checked ~ &__label-container > &__facade &__outline_checked,
+    &__input:checked ~ &__label-container > &__facade &__checkmark {
       display: block;
     }
 
-    &__input:checked ~ &__facade:hover > &__outline {
+    &__input:checked ~ &__label-container > &__facade:hover > &__outline {
       fill: @oui-color-dusty;
     }
 
     &__input:disabled,
-    &__input:disabled ~ &__label,
-    &__input:disabled ~ &__facade {
+    &__input:disabled ~ &__label-container {
       cursor: default;
       pointer-events: none;
     }
@@ -161,24 +180,94 @@
       color: @oui-color-nurse;
     }
 
-    &__input:disabled ~ &__label {
+    &__input:disabled ~ &__label-container > &__label,
+    &__input:disabled ~ &__label-container > &__description {
       color: @oui-color-dusty;
     }
 
-    &__input:disabled ~ &__facade,
-    &__input:disabled ~ &__facade &__false-bottom {
+    &__input:disabled ~ &__label-container > &__facade,
+    &__input:disabled ~ &__label-container > &__facade &__false-bottom {
       fill: @oui-color-nurse;
     }
 
-    &__input:disabled ~ &__facade &__false-bottom {
+    &__input:disabled ~ &__label-container > &__facade &__false-bottom {
       display: block;
     }
 
-    &__input:disabled ~ &__facade &__checkmark,
-    &:active &__input:disabled ~ &__facade &__outline,
-    &:active &__input:disabled ~ &__facade > &__outline,
-    &:active &__input:disabled ~ &__facade > &__checkmark {
+    &__input:disabled:not(:checked) ~ &__label-container > &__facade &__checkmark {
+      display :none;
+    }
+
+    &__input:disabled:checked ~ &__label-container > &__facade &__checkmark,
+    &:active &__input:disabled ~ &__label-container > &__facade &__outline,
+    &:active &__input:disabled ~ &__label-container > &__facade > &__outline,
+    &:active &__input:disabled ~ &__label-container > &__facade > &__checkmark,
+    &__input:disabled ~ &__label-container > &__facade > &__outline {
       fill: @oui-color-dusty;
+    }
+  }
+
+  .checkbox-thumbnail(
+    @selector,
+    @border-color: @oui-thumbnail-border-color,
+    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color-checked: @oui-thumbnail-border-color-checked,
+    @border-color-checked-hover: @oui-thumbnail-border-color-checked-hover,
+    @background: @oui-thumbnail-background,
+    @background-hover: @oui-thumbnail-background-hover,
+    @background-checked: @oui-thumbnail-background-checked,
+    @background-checked-hover: @oui-thumbnail-background-checked-hover,
+    @border-size: @oui-thumbnail-border-size,
+    @padding: @oui-thumbnail-padding
+  ) {
+    .checkbox-size(
+      @selector,
+      @oui-checkbox-facade-size,
+      false
+    );
+    .checkbox-position(
+      @selector,
+      @border-size + @oui-checkbox-facade-top-spacing + @padding,
+      @border-size + @padding
+    );
+
+    .@{selector}__label-container {
+      #oui > .thumbnail-base(
+        @border-color,
+        @background,
+        @border-size,
+        @padding
+      );
+    }
+
+    .@{selector}__description {
+      padding-top: rem-calc(12);
+      border-top: rem-calc(1) solid #cbd2d7;
+      margin-top: rem-calc(11);
+    }
+
+    .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover {
+      #oui > .thumbnail-base-color(
+        @border-color-hover,
+        @background-hover,
+        @border-size
+      );
+    }
+
+    .@{selector}__input:checked + .@{selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color-checked,
+        @background-checked,
+        @border-size
+      )
+    }
+
+    .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover {
+      #oui > .thumbnail-base-color(
+        @border-color-checked-hover,
+        @background-checked-hover,
+        @border-size
+      )
     }
   }
 }

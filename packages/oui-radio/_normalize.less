@@ -2,11 +2,13 @@
 
 #oui {
   .radio-normalize {
-    font-weight: inherit;
+    &__label-container {
+      font-weight: inherit;
+      cursor: pointer;
+    }
 
     &__label {
       #oui > .base-font();
-      cursor: pointer;
     }
   }
 }
