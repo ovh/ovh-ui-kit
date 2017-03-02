@@ -24,8 +24,8 @@
   .icon-type(@index: length(@oui-icon-index)) when (@index > 0) {
     .icon-type(@index - 1);
     @icon-index: extract(@oui-icon-index, @index);
-    @icon-name: extract(@icon-index,1);
-    @icon-content: extract(@icon-index,2);
+    @icon-name: extract(@icon-index, 1);
+    @icon-content: extract(@icon-index, 2);
     &.oui-icon-@{icon-name}:before {
       display: block;
       content: @icon-content; 
@@ -34,7 +34,7 @@
 
   .icon-bicolor(
     @icon-char-color: @oui-icon-char-color;
-  ){
+  ) {
     position: relative;
     z-index: 1;
     &::after {
@@ -53,8 +53,8 @@
       z-index: -1;
     }
     &.oui-icon-warning_circle::after {
-        width: 25%;
-        height: 75%;
+      width: 25%;
+      height: 75%;
     }
   }
 }
