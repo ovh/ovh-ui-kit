@@ -1,5 +1,7 @@
 # oui-checkbox
 
+<component-status cx-design="partial" ux="rc"></component-status>
+
 oui-checkbox is a package which provide styles for the checkbox component.
 
 ## Installation
