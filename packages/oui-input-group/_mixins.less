@@ -1,0 +1,59 @@
+@import '../oui-input/_mixins';
+@import './_variables';
+
+#oui {
+  .input-group-base(
+    @button-background-color: @oui-input-group-button-hollow-background-color,
+    @button-padding: @oui-input-group-button-hollow-padding
+  ) {
+    display: flex;
+    align-content: stretch;
+    align-items: center;
+
+    & > .oui-button,
+    & > .oui-input {
+      border-radius: 0;
+
+      &:first-child {
+        border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
+      }
+
+      &:last-child {
+        border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
+      }
+    }
+
+    & > .oui-button {
+      #oui > .button-hollow(
+        @background-color: @button-background-color,
+        @padding: @button-padding
+      );
+
+      min-width: ~"calc(@{oui-input-group-button-min-width} + @{button-padding} * 2)";
+
+      & + .oui-button,
+      & + .oui-input {
+        border-left: 0;
+      }
+    }
+
+    & > .oui-input {
+      flex-grow: 2;
+
+      &__number {
+        -moz-appearance: textfield;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      & + .oui-input,
+      & + .oui-button {
+        border-left: 0;
+      }
+    }
+  }
+}
