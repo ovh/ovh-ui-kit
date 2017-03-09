@@ -1,0 +1,66 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import '../oui-icons/_mixins';
+@import '../oui-accessibility/_mixins';
+@import '../oui-animation/_mixins';
+@import './_variables';
+
+#oui {
+  .select(
+    @border-color: @oui-select-border-color,
+    @font-color: @oui-select-font-color,
+    @font-size: @oui-select-font-size,
+    @font-weight: @oui-select-font-weight,
+    @icon-size: @oui-select-icon-size,
+    @icon-position-right: @oui-icon-position-right,
+    @padding: @oui-select-padding
+  ) {
+    position: relative;
+    display: block;
+    border-radius: @oui-global-base-radius;
+        
+    &__input {
+      width: 100%;
+      max-width: 100%;
+      min-height: rem-calc(36);
+      padding: @padding;
+      border: 1px solid @border-color;
+      border-radius: @oui-global-base-radius;
+      background: #fff;
+      color: @font-color;
+      font-size: @font-size;
+      line-height: 1;
+      font-weight: @font-weight;
+      cursor: pointer;
+    }
+
+    &__input:focus {
+      #oui > .animate();
+
+      border: 1px solid #0090b1;
+      outline: none;
+      box-shadow: inset 1px 1px 2px 0px rgba(102, 199, 214, 0.5), 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+      background: #f5fcfd;
+
+      + .oui-icon-chevron-down:before {
+        color: #0090b1;
+      }
+    }
+
+    .oui-icon-chevron-down {
+      position: absolute;
+      top: 50%;
+      width: @icon-size;
+      height: @icon-size;
+      margin-top: ~"calc(-@{icon-size} / 2)";
+      right: @icon-position-right;
+      cursor: pointer;
+      pointer-events: none;
+
+      &:before {
+        color: @oui-color-shuttle;
+        font-size: @icon-size;
+      }
+    }
+  }
+}

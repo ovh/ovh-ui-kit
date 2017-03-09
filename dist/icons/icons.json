@@ -1,10 +1,14 @@
 {
-    "icon-close": "\\f101",
-    "icon-error_circle": "\\f102",
-    "icon-eye-blocked": "\\f103",
-    "icon-eye": "\\f104",
-    "icon-info_circle": "\\f105",
-    "icon-ovh": "\\f106",
-    "icon-success_circle": "\\f107",
-    "icon-warning_circle": "\\f108"
+    "icon-chevron-down": "\\f101",
+    "icon-chevron-left": "\\f102",
+    "icon-chevron-right": "\\f103",
+    "icon-chevron-up": "\\f104",
+    "icon-close": "\\f105",
+    "icon-error_circle": "\\f106",
+    "icon-eye-blocked": "\\f107",
+    "icon-eye": "\\f108",
+    "icon-info_circle": "\\f109",
+    "icon-ovh": "\\f10a",
+    "icon-success_circle": "\\f10b",
+    "icon-warning_circle": "\\f10c"
 }
