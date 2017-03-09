@@ -39,48 +39,6 @@
     @background-color: @oui-tip-background-color
   ) {
     &:after, &:before {
-      bottom: 100%;
-      left: 50%;
-    }
-
-    &:after {
-      margin-left: -@size;
-      border-bottom-color: @background-color;
-    }
-
-    &:before {
-      margin-left: ~"calc(-@{size} - 3px)";
-      border-bottom-color: @border-color;
-    }
-  }
-
-  .tip-right(
-    @size: @oui-tip-size,
-    @border-color: @oui-tip-border-color,
-    @background-color: @oui-tip-background-color
-  ) {
-    &:after, &:before {
-      top: 50%;
-      left: 100%;
-    }
-
-    &:after {
-      margin-top: -@size;
-      border-left-color: @background-color;
-    }
-
-    &:before {
-      margin-top: ~"calc(-@{size} - 3px)";
-      border-left-color: @border-color;
-    }
-  }
-
-  .tip-bottom(
-    @size: @oui-tip-size,
-    @border-color: @oui-tip-border-color,
-    @background-color: @oui-tip-background-color
-  ) {
-    &:after, &:before {
       top: 100%;
       left: 50%;
     }
@@ -96,7 +54,7 @@
     }
   }
 
-  .tip-left(
+  .tip-right(
     @size: @oui-tip-size,
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
@@ -115,6 +73,48 @@
     &:before {
       margin-top: ~"calc(-@{size} - 3px)";
       border-right-color: @border-color;
+    }
+  }
+
+  .tip-bottom(
+    @size: @oui-tip-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    &:after, &:before {
+      bottom: 100%;
+      left: 50%;
+    }
+
+    &:after {
+      margin-left: -@size;
+      border-bottom-color: @background-color;
+    }
+
+    &:before {
+      margin-left: ~"calc(-@{size} - 3px)";
+      border-bottom-color: @border-color;
+    }
+  }
+
+  .tip-left(
+    @size: @oui-tip-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    &:after, &:before {
+      top: 50%;
+      left: 100%;
+    }
+
+    &:after {
+      margin-top: -@size;
+      border-left-color: @background-color;
+    }
+
+    &:before {
+      margin-top: ~"calc(-@{size} - 3px)";
+      border-left-color: @border-color;
     }
   }
 }

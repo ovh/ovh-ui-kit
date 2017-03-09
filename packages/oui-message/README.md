@@ -27,26 +27,6 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Default with tip
-
-```html:preview
-  <div class="oui-message" role="alert">
-    <i class="oui-tip_top" aria-hidden="true"></i>
-    <p class="oui-message__body">Default message with tip top</p>
-  </div>
-  <div class="oui-message" role="alert">
-    <i class="oui-tip_right" aria-hidden="true"></i>
-    <p class="oui-message__body">Default message with tip right</p>
-  </div>
-  <div class="oui-message" role="alert">
-    <i class="oui-tip_bottom" aria-hidden="true"></i>
-    <p class="oui-message__body">Default message with tip bottom</p>
-  </div>
-  <div class="oui-message" role="alert">
-    <i class="oui-tip_left" aria-hidden="true"></i>
-    <p class="oui-message__body">Default message with tip left</p>
-  </div>
-```
 
 ### Info
 
@@ -98,30 +78,6 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
   <div class="oui-message oui-message_info oui-message_no-icon" role="alert">
     <p class="oui-message__body">Info message with close button and no icon</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-```
-### Info with tip
-
-```html:preview
-  <div class="oui-message oui-message_info" role="alert">
-    <i class="oui-tip_top" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Info message with icon and tip top</p>
-  </div>
-  <div class="oui-message oui-message_info oui-message_no-icon" role="alert">
-    <i class="oui-tip_right" aria-hidden="true"></i>
-    <p class="oui-message__body">Info message with no icon and tip right</p>
-  </div>
-  <div class="oui-message oui-message_info oui-message_no-icon" role="alert">
-    <i class="oui-tip_bottom" aria-hidden="true"></i>
-    <p class="oui-message__body">Info message with icon, tip bottom and close button</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-  <div class="oui-message oui-message_info" role="alert">
-    <i class="oui-tip_left" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Info message with icon, tip left and close button</p>
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
@@ -179,30 +135,6 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Success with tip
-
-```html:preview
-  <div class="oui-message oui-message_success" role="alert">
-    <i class="oui-tip_top" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Success message with icon and tip top</p>
-  </div>
-  <div class="oui-message oui-message_success oui-message_no-icon" role="alert">
-    <i class="oui-tip_right" aria-hidden="true"></i>
-    <p class="oui-message__body">Success message with no icon and tip right</p>
-  </div>
-  <div class="oui-message oui-message_success oui-message_no-icon" role="alert">
-    <i class="oui-tip_bottom" aria-hidden="true"></i>
-    <p class="oui-message__body">Success message with no icon, tip bottom and close button</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-  <div class="oui-message oui-message_success" role="alert">
-    <i class="oui-tip_left" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Success message with icon, tip left and close button</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-```
 
 ### Warning
 
@@ -257,30 +189,6 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Warning with tip
-
-```html:preview
-  <div class="oui-message oui-message_warning" role="alert">
-    <i class="oui-tip_top" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Warning message with icon and tip top</p>
-  </div>
-  <div class="oui-message oui-message_warning oui-message_no-icon" role="alert">
-    <i class="oui-tip_right" aria-hidden="true"></i>
-    <p class="oui-message__body">Warning message with no icon and tip right</p>
-  </div>
-  <div class="oui-message oui-message_warning oui-message_no-icon" role="alert">
-    <i class="oui-tip_bottom" aria-hidden="true"></i>
-    <p class="oui-message__body">Warning message with no icon, tip bottom and close button</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-  <div class="oui-message oui-message_warning" role="alert">
-    <i class="oui-tip_left" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Warning message with icon, tip left and close button</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-```
 
 ### Error
 
@@ -332,30 +240,6 @@ oui-message is a package which provide styles for the `oui-message` component.
 ```html:preview
   <div class="oui-message oui-message_error oui-message_no-icon" role="alert">
     <p class="oui-message__body">Error message with close button and no icon</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-```
-### Error with tip
-
-```html:preview
-  <div class="oui-message oui-message_error" role="alert">
-    <i class="oui-tip_top" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Error message with icon and tip top</p>
-  </div>
-  <div class="oui-message oui-message_error oui-message_no-icon" role="alert">
-    <i class="oui-tip_right" aria-hidden="true"></i>
-    <p class="oui-message__body">Error message with no icon and tip right</p>
-  </div>
-  <div class="oui-message oui-message_error oui-message_no-icon" role="alert">
-    <i class="oui-tip_bottom" aria-hidden="true"></i>
-    <p class="oui-message__body">Error message with no icon, tip bottom and close button</p>
-    <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-  </div>
-  <div class="oui-message oui-message_error" role="alert">
-    <i class="oui-tip_left" aria-hidden="true"></i>
-    <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <p class="oui-message__body">Error message with icon, tip left and close button</p>
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
