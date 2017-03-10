@@ -1,0 +1,24 @@
+@import './_variables.less';
+
+#oui {
+  .box-base(
+    @background-color: @oui-box-background-color,
+    @border-color: @oui-box-border-color,
+    @border-size: @oui-box-border-size,
+    @padding: @oui-box-padding
+  ) {
+    background: @background-color;
+    border: @border-size solid @border-color;
+    border-radius: @oui-global-base-radius-medium;
+    padding: @padding;
+  }
+
+  .box-light(
+    @background-color: @oui-box-light-background-color,
+    @border-color: @oui-box-light-border-color,
+    @border-size: @oui-box-border-size
+  ) {
+    background: @background-color;
+    border: @border-size solid @border-color;
+  }
+}
