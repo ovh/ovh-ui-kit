@@ -1,7 +1,9 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import '../oui-icons/_mixins';
+@import '../oui-tip/_mixins';
 @import '../oui-animation/_mixins';
 @import '../oui-accessibility/_mixins';
-@import '../oui-icons/_mixins';
-@import '../oui-color/_variables';
 @import './_variables';
 
 #oui {
@@ -11,7 +13,7 @@
     @font-weight: @oui-message-font-weight;
     @font-color: @oui-message-font-color;
     @background-color: @oui-message-background-color;
-    @border: @oui-message-border;
+    @border-color: @oui-message-border-color;
     @border-radius: @oui-message-border-radius;
     @padding: @oui-message-padding;
     @close-button-color: @oui-message-close-button-color;
@@ -30,7 +32,7 @@
     min-height: rem-calc(50);
     margin: @margin;
     padding: @padding;
-    border: @border;
+    border: 2px solid @border-color;
     border-radius: @border-radius;
     background-color: @background-color;
     color: @font-color;
@@ -70,6 +72,8 @@
       &:focus,
       &:active {
         #oui > .animate();
+
+        outline: none;
         opacity: 1;
       }
     }
@@ -98,6 +102,46 @@
       color: @icon-color;
       font-size: @icon-size;
     }
+
+    .oui-tip-top {
+      &:after {
+        border-top-color: @background-color;
+      }
+
+      &:before {
+        border-top-color: @border-color;
+      }
+    }
+
+    .oui-tip-right {
+      &:after {
+        border-right-color: @background-color;
+      }
+
+      &:before {
+        border-right-color: @border-color;
+      }
+    }
+
+    .oui-tip-bottom {
+      &:after {
+        border-bottom-color: @background-color;
+      }
+
+      &:before {
+        border-bottom-color: @border-color;
+      }
+    }
+
+    .oui-tip-left {
+      &:after {
+        border-left-color: @background-color;
+      }
+
+      &:before {
+        border-left-color: @border-color;
+      }
+    }
   }
 
   .message-success(
@@ -122,6 +166,46 @@
       left: @icon-position-left;
       color: @icon-color;
       font-size: @icon-size;
+    }
+
+    .oui-tip-top {
+      &:after {
+        border-top-color: @background-color;
+      }
+
+      &:before {
+        border-top-color: @border-color;
+      }
+    }
+
+    .oui-tip-right {
+      &:after {
+        border-right-color: @background-color;
+      }
+
+      &:before {
+        border-right-color: @border-color;
+      }
+    }
+
+    .oui-tip-bottom {
+      &:after {
+        border-bottom-color: @background-color;
+      }
+
+      &:before {
+        border-bottom-color: @border-color;
+      }
+    }
+
+    .oui-tip-left {
+      &:after {
+        border-left-color: @background-color;
+      }
+
+      &:before {
+        border-left-color: @border-color;
+      }
     }
   }
 
@@ -148,6 +232,46 @@
       color: @icon-color;
       font-size: @icon-size;
     }
+
+    .oui-tip-top {
+      &:after {
+        border-top-color: @background-color;
+      }
+
+      &:before {
+        border-top-color: @border-color;
+      }
+    }
+
+    .oui-tip-right {
+      &:after {
+        border-right-color: @background-color;
+      }
+
+      &:before {
+        border-right-color: @border-color;
+      }
+    }
+
+    .oui-tip-bottom {
+      &:after {
+        border-bottom-color: @background-color;
+      }
+
+      &:before {
+        border-bottom-color: @border-color;
+      }
+    }
+
+    .oui-tip-left {
+      &:after {
+        border-left-color: @background-color;
+      }
+
+      &:before {
+        border-left-color: @border-color;
+      }
+    }
   }
 
   .message-error(
@@ -172,6 +296,46 @@
       left: @icon-position-left;
       color: @icon-color;
       font-size: @icon-size;
+    }
+
+    .oui-tip-top {
+      &:after {
+        border-top-color: @background-color;
+      }
+
+      &:before {
+        border-top-color: @border-color;
+      }
+    }
+
+    .oui-tip-right {
+      &:after {
+        border-right-color: @background-color;
+      }
+
+      &:before {
+        border-right-color: @border-color;
+      }
+    }
+
+    .oui-tip-bottom {
+      &:after {
+        border-bottom-color: @background-color;
+      }
+
+      &:before {
+        border-bottom-color: @border-color;
+      }
+    }
+
+    .oui-tip-left {
+      &:after {
+        border-left-color: @background-color;
+      }
+
+      &:before {
+        border-left-color: @border-color;
+      }
     }
   }
   
