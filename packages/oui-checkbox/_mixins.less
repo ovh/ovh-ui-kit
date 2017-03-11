@@ -270,4 +270,70 @@
       )
     }
   }
+
+  .checkbox-status(@index: length(@oui-checkbox-status)) when (@index > 0) {
+    .checkbox-status(@index - 1);
+
+    @selector: oui-checkbox;
+    @status: extract(@oui-checkbox-status, @index);
+    @status-font-color: "oui-color-@{status}-dark";
+    @status-icon-color: "oui-color-@{status}-medium";
+    @status-border-color: "oui-color-@{status}-light";
+    @status-background-color: "oui-color-@{status}-fade";
+    
+    &_@{status},
+    &_@{status}:hover {
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container,
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover,
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container:active,
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container:focus,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:active,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:focus  { 
+        .@{selector}__label {
+          color: @@status-font-color;
+        }
+
+        .@{selector}__description {
+          color: @@status-icon-color;
+        }
+
+        .@{selector}__false-bottom {
+          fill: #fff;
+        }
+
+        .@{selector}__outline {
+          fill: @@status-icon-color;
+        }
+      }
+
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:active,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:focus  {
+        .@{selector}__checkmark {
+          fill: @@status-icon-color;
+        }
+      }
+
+      &.@{selector}_thumbnail {
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container,
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover,
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container:active,
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container:focus,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:active,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:focus {
+          border-color: @@status-border-color;
+          background: @@status-background-color;
+
+          .@{selector}__description {
+            border-color: @@status-border-color;
+          }
+        }
+      }
+    }
+  }
 }

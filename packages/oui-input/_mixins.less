@@ -55,4 +55,27 @@
       color: #b3b3b3;
     }
   }
+
+  .input-status(@index: length(@oui-input-status)) when (@index > 0) {
+    .input-status(@index - 1);
+
+    @status: extract(@oui-input-status, @index);
+    @status-font-color: "oui-color-@{status}-dark";
+    @status-icon-color: "oui-color-@{status}-medium";
+    @status-border-color: "oui-color-@{status}-light";
+    @status-background-color: "oui-color-@{status}-fade";
+    
+    &_@{status},
+    &_@{status}:hover,
+    &_@{status}:active,
+    &_@{status}:focus {
+      border-color: @@status-border-color;
+      background-color: @@status-background-color;
+      color: @@status-font-color;
+    }
+
+    &_@{status}:focus {
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+    }
+  }
 }
