@@ -50,7 +50,6 @@
     @background-color_hover: @oui-button-filled-background-color_hover,
     @background-color_disabled: @oui-button-filled-background-color_disabled,
     @font-color_disabled: @oui-button-filled-font-color_disabled,
-    @box-shadow-color_active: @oui-button-filled-box-shadow-color_active,
     @padding: @oui-button-filled-padding
   ) {
     padding: @padding;
@@ -61,7 +60,7 @@
     }
 
     &:active {
-      box-shadow: inset 1px 1px 4px 0 @box-shadow-color_active;
+      box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1/3);
     }
 
     &:disabled {
@@ -78,7 +77,6 @@
     @border-color_disabled: @oui-button-hollow-border-color_disabled,
     @background-color_disabled: @oui-button-hollow-background-color_disabled,
     @font-color_disabled: @oui-button-hollow-font-color_disabled,
-    @box-shadow-color_active: @oui-button-hollow-box-shadow-color_active,
     @padding: @oui-button-hollow-padding
   ) {
     padding: @padding;
@@ -92,7 +90,7 @@
     }
 
     &:active {
-      box-shadow: inset 1px 1px 3px 0 @box-shadow-color_active;
+      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.15);
     }
 
     &:disabled,
@@ -105,83 +103,103 @@
   }
 
   .button-dropdown(
+    @icon-selector,
+    @icon-size: @oui-button-dropdown-icon-size,
     @icon-color: @oui-button-dropdown-icon-color,
     @icon-color_active: @oui-button-dropdown-icon-color_active,
-    @font-color_active: @oui-button-dropdown-font-color_active,
+    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
     @background-color_active: @oui-button-dropdown-background-color_active,
     @border-color_active: @oui-button-dropdown-border-color_active,
-    @box-shadow-color_active: @oui-button-dropdown-box-shadow-color_active,
-    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
-    @padding: @oui-button-dropdown-padding
+    @padding-right: @oui-button-icon-padding-right,
+    @padding-left: @oui-button-icon-padding-left
   ) {
-    position: relative;
-    padding: @padding;
-    text-align: left;
+    padding-right: @padding-right;
+    padding-left: @padding-left;
 
-    &__icon {
-      position: absolute;
-      top: 0;
-      right: rem-calc(12);
-      bottom: 0;
-      width: rem-calc(10);
-      height: rem-calc(6);
-      margin: auto;
-      fill: @icon-color;
+    .@{icon-selector} {
+      width: @icon-size;
+      height: @icon-size;
+      margin-left: ~"calc(@{icon-size} / 2)";
+      color: @icon-color;
+      font-size: @icon-size;
+      line-height: @icon-size;
+      vertical-align: middle;
     }
     
-    &:active {
+    &:active,
+    &:focus {
       border-color: @border-color_active;
       background: @background-color_active;
-      box-shadow: inset 1px 1px 3px 0 @box-shadow-color_active;
-      font-color: @font-color_active;
+      box-shadow: inset 1px 1px 3px 0 transparent;
+
+      .@{icon-selector}{
+        color: @icon-color_active;
+      }
     }
 
-    &:active &__icon {
-      fill: @icon-color_active;
+    &:disabled .@{icon-selector} {
+      color: @icon-color_disabled;
     }
 
-    &:disabled &__icon {
-      fill: @icon-color_disabled;
-    }
-
-    &.open &__icon {
+    &.open .@{icon-selector} {
       transform: rotate(180deg);
     }
   }
 
-  .button-star(
-    @icon-color: @oui-button-star-icon-color,
-    @icon-color_active: @oui-button-star-icon-color_active,
-    @icon-color_disabled: @oui-button-star-icon-color_disabled,
-    @padding: @oui-button-star-padding
+  .button-icon-base(
+    @icon-selector,
+    @icon-size: @oui-button-icon-icon-size,
+    @icon-color: @oui-button-icon-icon-color,
+    @padding-right: @oui-button-icon-padding-right,
+    @padding-left: @oui-button-icon-padding-left
   ) {
-    min-width: 0;
-    padding: @padding;
+    padding-right: @padding-right;
+    padding-left: @padding-left;
 
-    &__icon {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: rem-calc(15);
-      height: rem-calc(15);
-      margin: auto;
-      fill: fade(@icon-color, 50);
-      stroke: @icon-color;
-      stroke-width: 1.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .@{icon-selector}_circle::before {
+      width: @icon-size;
+      height: @icon-size;
+      background: @icon-color;
+      font-size: ~"calc(@{icon-size} / 2)";
+      line-height: @icon-size;
+    }
+  }
+
+  .button-icon-right(
+    @icon-selector,
+    @icon-margin-left: @oui-button-icon-right-icon-margin-left,
+    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled
+  ) {
+
+    .@{icon-selector} {
+      margin-left: @icon-margin-left;
     }
 
-    &:active &__icon {
-      fill: fade(@icon-color_active, 50);
-      stroke: @icon-color_active;
+    .@{icon-selector}_circle::before {
+      text-indent: 2px;
     }
 
-    &:disabled &__icon {
-      fill: fade(@icon-color_disabled, 50);
-      stroke: @icon-color_disabled;
+    &:disabled .@{icon-selector}_circle::before {
+      background: @icon-color_disabled;
+    }
+  }
+
+  .button-icon-left(
+    @icon-selector,
+    @icon-margin-right: @oui-button-icon-right-icon-margin-right,
+    @icon-color_disabled: @oui-button-icon-left-icon-color_disabled
+  ) {
+
+    .@{icon-selector} {
+      margin-right: @icon-margin-right;
+    }
+
+    .@{icon-selector}_circle::before {
+      text-indent: -2px;
+    }
+
+    &:disabled .@{icon-selector}_circle::before {
+      background: @icon-color_disabled;
     }
   }
 }

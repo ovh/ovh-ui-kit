@@ -11,8 +11,7 @@
 @oui-button-filled-background-color_hover: #1bbadf;
 @oui-button-filled-background-color_disabled: #dedede;
 @oui-button-filled-font-color_disabled: #999;
-@oui-button-filled-box-shadow-color_active: rgba(0, 0, 0, 1/3);
-@oui-button-filled-padding: rem-calc(5) rem-calc(30);
+@oui-button-filled-padding: rem-calc(6) rem-calc(30);
 
 // Button - Hollow
 @oui-button-hollow-background-color: #fff;
@@ -21,23 +20,29 @@
 @oui-button-hollow-border-color_disabled: #e6e6e6;
 @oui-button-hollow-background-color_disabled: #f2f2f2;
 @oui-button-hollow-font-color_disabled: #b3b3b3;
-@oui-button-hollow-box-shadow-color_active: rgba(0, 0, 0, 0.15);
-@oui-button-hollow-padding: rem-calc(4.5) rem-calc(29);
+@oui-button-hollow-padding: rem-calc(5) rem-calc(29);
 
 // Button - Dropdown
-
+@oui-button-dropdown-icon-size: rem-calc(12);
 @oui-button-dropdown-icon-color: @oui-color-zodiac;
 @oui-button-dropdown-icon-color_active: @oui-color-pacific;
-@oui-button-dropdown-font-color_active: @oui-color-zodiac;
+@oui-button-dropdown-icon-color_disabled: #b3b3b3;
 @oui-button-dropdown-background-color_active: fade(@oui-color-pacific, 10);
 @oui-button-dropdown-border-color_active:  @oui-color-pacific;
-@oui-button-dropdown-box-shadow-color_active: transparent;
-@oui-button-dropdown-icon-color_disabled: #b3b3b3;
-@oui-button-dropdown-padding: rem-calc(4.5) rem-calc(34) rem-calc(4.5) rem-calc(15);
+@oui-button-dropdown-padding-right: rem-calc(18);
+@oui-button-dropdown-padding-left: rem-calc(18);
 
-// Button - Star
+// Button - Icon
+@oui-button-icon-icon-size: rem-calc(20);
+@oui-button-icon-icon-color: @oui-color-zodiac;
+@oui-button-icon-icon-color_disabled: #999;
+@oui-button-icon-padding-right: rem-calc(18);
+@oui-button-icon-padding-left: rem-calc(18);
 
-@oui-button-star-icon-color: @oui-color-regent;
-@oui-button-star-icon-color_active: @oui-color-regent;
-@oui-button-star-icon-color_disabled: #999;
-@oui-button-star-padding: rem-calc(4.5) rem-calc(18);
+// Button - Icon Right
+@oui-button-icon-right-icon-color_disabled: @oui-button-filled-font-color_disabled;
+@oui-button-icon-right-icon-margin-left: ~"calc(@{oui-button-icon-icon-size} / 2)";
+
+// Button - Icon Left
+@oui-button-icon-left-icon-color_disabled: @oui-button-hollow-font-color_disabled;
+@oui-button-icon-right-icon-margin-right: ~"calc(@{oui-button-icon-icon-size} / 2)";
