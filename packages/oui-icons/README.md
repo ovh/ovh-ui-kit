@@ -54,12 +54,24 @@ Define the base styles for an icon.
 );
 ```
 
+### .icon-circle
+
+Will stylize your icon with a circle.
+
+```less
+#oui > .icon-circle(
+  @icon-size: Number
+);
+```
+
 ### .icon-bicolor
 
 Will stylize your icon as a bicolor one.
 
 ```less
-#oui > .icon-bicolor();
+#oui > .icon-bicolor(
+  @icon-char-color: Color
+);
 ```
 
 ## Classes
@@ -78,9 +90,9 @@ The block class is `oui-icon` (top-level element).
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close" aria-hidden="true"></i></div>
+    <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close oui-icon_circle" aria-hidden="true"></i></div>
     <div class="oui-icon-badge__code">
-      `<i class="oui-icon oui-icon-close" aria-hidden="true"></i>`
+      `<i class="oui-icon oui-icon-close oui-icon_circle" aria-hidden="true"></i>`
     </div>
   </div>
 
