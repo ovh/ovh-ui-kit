@@ -7,12 +7,13 @@ oui-list is a package which provide styles for the list component.
 ## Installation
 
 ```less
-  @import 'oui-list/list';
+@import 'oui-list/list';
 ```
 
 ## Usage
 
 ### Normal
+
 ```html:preview
 <div class="oui-list">
   <ul class="oui-list__items">
@@ -55,6 +56,7 @@ oui-list is a package which provide styles for the list component.
 ```
 
 ### Separated
+
 ```html:preview
 <div class="oui-list oui-list_separated">
   <ul class="oui-list__items">
@@ -97,6 +99,7 @@ oui-list is a package which provide styles for the list component.
 ```
 
 ### Nav
+
 ```html:preview
 <div class="oui-list oui-list_nav">
   <ul class="oui-list__items">
@@ -138,10 +141,50 @@ oui-list is a package which provide styles for the list component.
 </div>
 ```
 
+### Steps
+
+```html:preview
+<div class="oui-list_steps oui-list_separated">
+  <ul class="oui-list__items">
+    <li class="oui-list__item oui-list__group">
+      <span class="oui-list__header">List item</span>
+      <ul class="oui-list__sub-items">
+        <li class="oui-list__sub-item">
+          <a href="#" class="oui-list__link">Item 1.1</a>
+        </li>
+        <li class="oui-list__sub-item">
+          <a href="#" class="oui-list__link">Item 1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="oui-list__item oui-list__item_disabled">
+      <span class="oui-list__header">List item disabled</span>
+    </li>
+    <li class="oui-list__item oui-list__item_checked">
+      <span class="oui-list__header">List item checked</span>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi. 
+        Etiam ultricies metus ante, vel condimentum orci mollis at.
+      </span>
+    </li>
+    <li class="oui-list__item oui-list__item_checked oui-list__item_disabled">
+      <span class="oui-list__header">List item checked disabled</span>
+    </li>
+    <li class="oui-list__item oui-list__item_complete">
+      <a href="#" class="oui-list__header">List item complete</a>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi. 
+        Etiam ultricies metus ante, vel condimentum orci mollis at.
+      </span>
+    </li>
+  </ul>
+</div>
+```
+
 ## Mixins
 
 ```less
-  @import 'oui-list/list/_mixins';
+@import 'oui-list/_mixins';
 ```
 
 ### .list
@@ -150,7 +193,7 @@ Define the base styles for a list.
 
 ```less
 #oui > .list(
-  oui-list
+  @oui-list-selector
 );
 ```
 
@@ -167,7 +210,7 @@ Define the base styles for a list.
   @font-size: Number,
   @padding: Number,
   @header-padding: Number,
-  @item-padding: Number,
+  @item-padding: Number
 );
 ```
 
@@ -177,7 +220,7 @@ Will stylize your list with separator between each items.
 
 ```less
 #oui > .list-separated(
-  oui-list
+  @oui-list-selector
 );
 ```
 
@@ -195,7 +238,7 @@ Will stylize your list as a nav one.
 
 ```less
 #oui > .list-nav(
-  oui-list
+  @oui-list-selector
 );
 ```
 
@@ -213,5 +256,38 @@ Will stylize your list as a nav one.
   @padding: Number,
   @header-padding: Number,
   @item-padding: Number
+);
+```
+
+### .list-steps
+
+Will stylize your list as a steped one.
+
+```less
+#oui > .list-steps(
+  @oui-list-selector
+);
+```
+
+```less
+#oui > .list-steps(
+  @selector: Class,
+  @font-color: Color,
+  @icon-color: Color,
+  @font-color-disabled: Color,
+  @icon-color-disabled: Color,
+  @font-color-checked: Color,
+  @icon-color-checked: Color,
+  @icon-border-color-checked: Color,
+  @font-color-complete: Color,
+  @icon-color-complete: Color,
+  @font-size: Number,
+  @font-weight: Number,
+  @icon-size: Number,
+  @icon-spacing: Number,
+  @border-color: Color,
+  @border-width: Number,
+  @padding: Number,
+  @spacing: Number
 );
 ```
