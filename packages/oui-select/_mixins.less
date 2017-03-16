@@ -7,29 +7,31 @@
 
 #oui {
   .select(
-    @border-color: @oui-select-border-color,
     @font-color: @oui-select-font-color,
     @font-size: @oui-select-font-size,
     @font-weight: @oui-select-font-weight,
     @icon-size: @oui-select-icon-size,
     @icon-position-right: @oui-icon-position-right,
+    @border-color: @oui-select-border-color,
+    @spacing: @oui-select-spacing,
     @padding: @oui-select-padding
   ) {
     position: relative;
     display: block;
     border-radius: @oui-global-base-radius;
-        
+    margin: @spacing;
+
     &__input {
       width: 100%;
       max-width: 100%;
       min-height: rem-calc(36);
-      padding: @padding;
+      padding: @padding ~"calc(@{icon-size} + @{padding} * 2 + 1rem)" @padding ~"calc(@{padding} - 0.4rem)";
+      -webkit-padding-start: @padding;
       border: 1px solid @border-color;
       border-radius: @oui-global-base-radius;
       background: #fff;
       color: @font-color;
       font-size: @font-size;
-      line-height: 1;
       font-weight: @font-weight;
       cursor: pointer;
     }
@@ -49,11 +51,12 @@
 
     .oui-icon-chevron-down {
       position: absolute;
-      top: 50%;
+      top: 0;
+      right: ~"calc(@{padding} + 0.5rem)";
+      bottom: 0;
       width: @icon-size;
       height: @icon-size;
-      margin-top: ~"calc(-@{icon-size} / 2)";
-      right: @icon-position-right;
+      margin: auto;
       cursor: pointer;
       pointer-events: none;
 
