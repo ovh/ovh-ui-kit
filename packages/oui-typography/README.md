@@ -7,69 +7,106 @@ oui-typography is a package which provides tools as constants and mixins for man
 ## Installation
 
 ```less
-  @import 'oui-typography/_constants';
-  @import 'oui-typography/_mixins';
+@import 'oui-typography/_constants';
+@import 'oui-typography/_mixins';
 ```
 
 ## Usage
 
 ### Headers
+
 ```html:preview
-  <h1 class="oui-heading">
-      [h1] Lorem ipsum dolor sit amet
-  </h1>
+<h1 class="oui-header_1">
+  [h1] Where no man has gone before
+</h1>
 
-  <h2 class="oui-heading">
-      [h2] Donec vitae metus tellus
-  </h2>
+<h2 class="oui-header_2">
+  [h2] Where no man has gone before
+</h2>
 
-  <h3 class="oui-heading">
-      [h3] Nam aliquam neque ac nisi egestas dapibus
-  </h3>
+<h3 class="oui-header_3">
+  [h3] Where no man has gone before
+</h3>
 
-  <h4 class="oui-heading">
-      [h4] Where no man has gone before.
-  </h4>
+<h4 class="oui-header_4">
+  [h4] Where no man has gone before
+</h4>
 
-  <h5 class="oui-heading">
-      [h5] Where no man has gone before.
-  </h5>
+<h5 class="oui-header_5">
+  [h5] Where no man has gone before
+</h5>
 
-  <h6 class="oui-heading">
-      [h6] Where no man has gone before.
-  </h6>
+<h6 class="oui-header_6">
+  [h6] Where no man has gone before
+</h6>
+```
+
+### Headers underlined
+
+> Only the oui-header_1 can take an underlined style up to now.
+
+> The class oui-header_underline will have no effect on the others headers.
+
+```html:preview
+<h1 class="oui-header_1 oui-header_underline">
+  [h1 Underlined] Where no man has gone before
+</h1>
+
+<h2 class="oui-header_2 oui-header_underline">
+  [h2] Where no man has gone before
+</h2>
+
+<h3 class="oui-header_3 oui-header_underline">
+  [h3] Where no man has gone before
+</h3>
+
+<h4 class="oui-header_4 oui-header_underline">
+  [h4] Where no man has gone before
+</h4>
+
+<h5 class="oui-header_5 oui-header_underline">
+  [h5] Where no man has gone before
+</h5>
+
+<h6 class="oui-header_6 oui-header_underline">
+  [h6] Where no man has gone before
+</h6>
 ```
 
 ### Paragraphs
+
 ```html:preview
-  <p class="oui-paragraph">
-    [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
-  </p>
+<p class="oui-paragraph">
+  [Paragraph] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet tellus enim, vel porttitor nulla pharetra vel. 
+  Praesent iaculis enim eu lacus dapibus bibendum. Cras in ex aliquam, eleifend arcu et hendrerit quam. Quisque fermentum bibendum lectus. 
+  Cras purus dolor, fermentum sit amet vulputate id, pretium quis lorem.
+</p>
 ```
 
 ### Links
-```html:preview
-  <div>
-    <a href="#" class="oui-link">
-      [Link] The quick brown fox jumps over the lazy dog.
-    </a>
-  </div>
 
-  <div>
-    <button class="oui-link">
-      [Button Link]
-    </button>
-  </div>
+```html:preview
+<div>
+  <a href="#" class="oui-link">
+    [Link] The quick brown fox jumps over the lazy dog
+  </a>
+</div>
+
+<div>
+  <button class="oui-link">
+    [Button Link]
+  </button>
+</div>
 ```
 
 ### Horizontal line
 
 ```html:preview
-  <hr class="oui-horizontal-line">
+<hr class="oui-horizontal-line">
 
-  <hr class="oui-horizontal-line oui-horizontal-line_thin">
+<hr class="oui-horizontal-line oui-horizontal-line_thin">
 
-  <hr class="oui-horizontal-line oui-horizontal-line_dark">
+<hr class="oui-horizontal-line oui-horizontal-line_dark">
 ```
 
 ## Constants
@@ -86,7 +123,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 ## Mixins
 
 ```less
-  @import 'oui-typography/_mixins';
+@import 'oui-typography/_mixins';
 ```
 
 ### .base-font
@@ -94,15 +131,30 @@ oui-typography is a package which provides tools as constants and mixins for man
 Define the base style for the typography.
 
 ```less
-  #oui > .base-font();
+#oui > .base-font();
 ```
 
 ### .headers
 
-Will stylize the headlines h1 to h6.
+Will stylize the headers h1 to h6.
 
 ```less
-  #oui > .headers();
+#oui > .headers();
+```
+
+### .header-underline
+
+Will stylize the headers underlined.
+
+```less
+#oui > .header-underline();
+```
+
+```less
+#oui > .header-underline(
+  @border-width: Number,
+  @border-color: Color
+);
 ```
 
 ### .link
@@ -110,79 +162,74 @@ Will stylize the headlines h1 to h6.
 Will stylize the links.
 
 ```less
-  #oui > .link();
+#oui > .link();
 ```
 
 ```less
-  #oui > .link(
-    @font-color,
-    @font-color_hover,
-    @text-decoration,
-    @text-decoration_hover
-  );
+#oui > .link(
+  @font-color: Color,
+  @font-color_hover: Color,
+  @text-decoration: Keyword,
+  @text-decoration_hover: Keyword
+);
 ```
-
-| Parameter                       | Type      | Default Value                                                     |
-| ------------------------------- | --------- | ----------------------------------------------------------------- |
-| __@font-color__                 | Color     | `@oui-link-font-color: @oui-color-sapphire`                       |
-| __@font-color_hover__           | Color     | `@oui-link-font-color_hover: #007e9b`                             |
-| __@text-decoration__            | Keyword   | `@oui-link-text-decoration: underline`                            |
-| __@text-decoration_hover__      | Keyword   | `@oui-link-text-decoration_hover: @oui-link-text-decoration`      |
 
 ### .horizontal-line-base
 
 Define the base styles for a horizontal line.
 
 ```less
-  #oui > .horizontal-line-base();
+#oui > .horizontal-line-base();
 ```
 
 ```less
-  #oui > .horizontal-line-base(@oui-margin-bottom, @oui-width, @oui-color, @oui-style);
+#oui > .horizontal-line-base(
+  @margin-bottom: Number,
+  @width: Number,
+  @color: Color,
+  @style: Keyword
+);
 ```
-
-| Parameter                | Type   | Default Value                          |
-| ------------------------ | ------ | -------------------------------------- |
-| __@oui-margin-bottom__   | Number | `@oui-horizontal-line-margin-bottom`   |
-| __@oui-width__           | Number | `@oui-horizontal-line-width`           |
-| __@oui-color__           | Color  | `@oui-horizontal-line-color`           |
-| __@oui-style__           | Style  | `@oui-horizontal-line-style`           |
 
 ### .horizontal-line-dark
 
 Will stylize your horizontal line as a dark one.
 
 ```less
-  #oui > .horizontal-line-dark();
+#oui > .horizontal-line-dark();
 ```
 
 ```less
-  #oui > .horizontal-line-dark(@oui-color)
+#oui > .horizontal-line-dark(
+  @color: Color
+);
 ```
-| Parameter        | Type  | Default Value                       |
-| ---------------- | ----- | ----------------------------------- |
-| __@oui-color__   | Color | `@oui-horizontal-line-dark-color`   |
 
 ### .horizontal-line-thin
 
 Will stylize your horizontal line as a thin one.
 
 ```less
-  #oui > .horizontal-line-thin();
+#oui > .horizontal-line-thin();
 ```
 
 ```less
-  #oui > .horizontal-line-thin(@oui-width)
+#oui > .horizontal-line-thin(
+  @width: Number
+);
 ```
-| Parameter        | Type  | Default Value                       |
-| ---------------- | ----- | ----------------------------------- |
-| __@oui-width__   | Color | `@oui-horizontal-line-thin-width`   |
 
 ## Classes
 
 ### Headers
 
-The headers class is `oui-heading` (top-level element).
+The headers classes are `oui-heading1` `oui-heading2` `oui-heading3` `oui-heading4` `oui-heading5` `oui-heading6` (top-level elements).
+
+#### Modifiers
+
+| Class                      | Description                   |
+| -------------------------- | ----------------------------- |
+| `oui-header_underline`     | Make the header underlined    |
 
 ### Link
 

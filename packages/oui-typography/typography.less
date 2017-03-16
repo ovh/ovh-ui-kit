@@ -1,8 +1,12 @@
 @import '../oui-typography/_constants';
 @import './_mixins';
 
-.oui-heading {
+.oui-header {
   #oui > .headers();
+
+  &_1&_underline {
+    #oui > .header-underline();
+  }
 }
 
 .oui-link {
@@ -10,13 +14,13 @@
 }
 
 .oui-horizontal-line {
-    #oui > .horizontal-line-base();
+  #oui > .horizontal-line-base();
 
-    &_dark {
-        #oui > .horizontal-line-dark();
-    }
+  &_dark {
+    #oui > .horizontal-line-dark();
+  }
 
-    &_thin {
-        #oui > .horizontal-line-thin();
-    }
+  &_thin {
+    #oui > .horizontal-line-thin();
+  }
 }
