@@ -32,6 +32,21 @@
     }
   }
 
+  .icon-circle(
+    @icon-size: @oui-icon-size;
+  ) {
+    &::before {
+      width: @icon-size;
+      height: @icon-size;
+      border-radius: 50%;
+      background: #333;
+      color: #fff;
+      font-size: ~"calc(@{icon-size} / 2)";
+      line-height: @icon-size;
+      text-align: center;
+    }
+  }
+
   .icon-bicolor(
     @icon-char-color: @oui-icon-char-color;
   ) {
