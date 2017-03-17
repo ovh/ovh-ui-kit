@@ -25,6 +25,16 @@
     font-size: @font-size;
     font-weight: @font-weight;
 
+    &::selection {
+      background: #0090b1;
+      color: #fff;
+    }
+
+    &::-moz-selection {
+      background: #0090b1;
+      color: #fff;
+    }
+
     &:focus {
       #oui > .animate();
 
@@ -65,17 +75,28 @@
     @status-border-color: "oui-color-@{status}-light";
     @status-background-color: "oui-color-@{status}-fade";
     
-    &_@{status},
-    &_@{status}:hover,
-    &_@{status}:active,
-    &_@{status}:focus {
+    &_@{status}:not(:disabled),
+    &_@{status}:not(:disabled):hover,
+    &_@{status}:not(:disabled):active,
+    &_@{status}:not(:disabled):focus {
       border-color: @@status-border-color;
       background-color: @@status-background-color;
       color: @@status-font-color;
+      font-weight: 400;
     }
 
-    &_@{status}:focus {
+    &_@{status}:not(:disabled):focus {
       box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    &_@{status}::selection {
+      background: @@status-font-color;
+      color: #fff;
+    }
+
+    &_@{status}::-moz-selection {
+      background: @@status-font-color;
+      color: #fff;
     }
   }
 }

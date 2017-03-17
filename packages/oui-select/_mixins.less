@@ -51,9 +51,8 @@
 
     .oui-icon-chevron-down {
       position: absolute;
-      top: 0;
-      right: ~"calc(@{padding} + 0.5rem)";
-      bottom: 0;
+      right: ~"calc(@{padding} + (@{icon-size} / 2))";
+      bottom: ~"calc((@{font-size}) - (@{icon-size} / 2))";
       width: @icon-size;
       height: @icon-size;
       margin: auto;
