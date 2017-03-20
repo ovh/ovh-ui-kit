@@ -7,6 +7,7 @@
 
 #oui {
   .select(
+    @icon-selector,
     @font-color: @oui-select-font-color,
     @font-size: @oui-select-font-size,
     @font-weight: @oui-select-font-weight,
@@ -34,6 +35,10 @@
       font-size: @font-size;
       font-weight: @font-weight;
       cursor: pointer;
+
+      option {
+        background: #fff;
+      }
     }
 
     &__input:focus {
@@ -44,12 +49,23 @@
       box-shadow: inset 1px 1px 2px 0px rgba(102, 199, 214, 0.5), 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
       background: #f5fcfd;
 
-      + .oui-icon-chevron-down:before {
+      ~ .@{icon-selector}:before {
         color: #0090b1;
       }
     }
 
-    .oui-icon-chevron-down {
+    &__input:disabled {
+      border-color: #e6e6e6;
+      background-color: @oui-color-concrete;
+      color: #b3b3b3;
+      cursor: not-allowed;
+
+      ~ .@{icon-selector}:before {
+        color: #b3b3b3;
+      }
+    }
+
+    .@{icon-selector} {
       position: absolute;
       top: 0;
       right: ~"calc(@{padding} + 0.5rem)";
@@ -64,6 +80,35 @@
         color: @oui-color-shuttle;
         font-size: @icon-size;
       }
+    }
+  }
+
+  .select-status(@index: length(@oui-select-status)) when (@index > 0) {
+    .select-status(@index - 1);
+
+    @select-selector: oui-select;
+    @icon-selector: oui-icon;
+    @status: extract(@oui-select-status, @index);
+    @status-font-color: "oui-color-@{status}-dark";
+    @status-icon-color: "oui-color-@{status}-medium";
+    @status-border-color: "oui-color-@{status}-light";
+    @status-background-color: "oui-color-@{status}-fade";
+    
+    &_@{status} .@{select-selector}__input,
+    &_@{status} .@{select-selector}__input:hover,
+    &_@{status} .@{select-selector}__input:active,
+    &_@{status} .@{select-selector}__input:focus {
+      border-color: @@status-border-color;
+      background-color: @@status-background-color;
+      color: @@status-font-color;
+
+      ~ .@{icon-selector}:before {
+        color: @@status-font-color;
+      }
+    }
+
+    &_@{status} .@{select-selector}__input:focus {
+      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
     }
   }
 }
