@@ -2,6 +2,8 @@
 @import './_mixins';
 
 .oui-navbar {
+  @select-selector: oui-select;
+
   #oui > .navbar-normalize();
-  #oui > .navbar();
+  #oui > .navbar(@select-selector);
 }
