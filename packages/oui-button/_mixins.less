@@ -31,6 +31,7 @@
     &:focus,
     &:hover {
       #oui > .animate();
+
       text-decoration: none;
       outline: none;
     }
@@ -55,8 +56,13 @@
     padding: @padding;
     background-color: @background-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: @background-color_hover;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 3px 1px rgba(102, 199, 214, 0.6);
     }
 
     &:active {
@@ -85,8 +91,13 @@
     border-style: solid;
     border-color: @border-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-color: @border-color_hover;
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.15);
     }
 
     &:active {
@@ -125,16 +136,20 @@
       line-height: @icon-size;
       vertical-align: middle;
     }
-    
+
     &:active,
     &:focus {
       border-color: @border-color_active;
       background: @background-color_active;
       box-shadow: inset 1px 1px 3px 0 transparent;
 
-      .@{icon-selector}{
+      .@{icon-selector} {
         color: @icon-color_active;
       }
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.15);
     }
 
     &:disabled .@{icon-selector} {
