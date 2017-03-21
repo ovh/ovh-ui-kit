@@ -32,12 +32,13 @@ oui-navbar is a package which provide styles for the navbar component.
       <a class="oui-navbar__link" href="#!/oui-angular">Oui-angular</a>
     </li>
   </ul>
-  <div class="oui-navbar__selector">
-  <select class="oui-navbar__select">
-    <option label="latest" value="string:latest" selected="selected">Latest</option>
-    <option label="v1.0.0" value="string:v1.0.0">v1.0.0</option>
-  </select>
-  </div>
+  <label class="oui-select">
+    <select class="oui-select__input">
+      <option label="latest" value="string:latest" selected="selected">Latest</option>
+      <option label="v1.0.0" value="string:v1.0.0">v1.0.0</option>
+    </select>
+    <i class="oui-icon oui-icon-chevron-down"></i>
+  </label>
 </nav>
 ```
 

@@ -6,9 +6,10 @@
 
 #oui {
   .navbar(
-    @background-color: @oui-navbar-background-color;
-    @font-color: @oui-navbar-font-color;
-    @icon-color: @oui-navbar-icon-color;
+    @select-selector,
+    @background-color: @oui-navbar-background-color,
+    @font-color: @oui-navbar-font-color,
+    @icon-color: @oui-navbar-icon-color
   ) {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +24,7 @@
     .oui-icon.oui-icon-logo {
       color: @icon-color;
     }
-    
+
     &__title,
     &__title-link,
     &__item,
@@ -88,7 +89,7 @@
       margin-left: rem-calc(16);
       border-radius: 2px;
     }
-    
+
     &__item_current,
     &__item:hover {
       background-color: @oui-color-fiord;
@@ -104,34 +105,12 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-    
-    &__select {
-      cursor: pointer;
-      width: 100%;
-      padding: rem-calc(6.5) rem-calc(16);
-      border: 1px solid @oui-color-silver;
-      border-radius: 2px;
-      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.15);
-      color: @oui-color-zodiac;
-      font-size: rem-calc(14);
-    
-      &,
-      &:active,
-      &:focus,
-      &:hover,
-      &:visited {
-        color: @oui-color-zodiac;
-        text-decoration: none;
-      }
 
-      &:focus {
-        background: #f5fcfd;
-        border-color: #0090b1;
-        outline: none;
-      }
+    .@{select-selector} {
+      margin-bottom: 0;
     }
 
-    @media only screen and (max-width: 960px) {  
+    @media only screen and (max-width: 960px) {
       &__items {
         flex-direction: column;
         width: 100%;
