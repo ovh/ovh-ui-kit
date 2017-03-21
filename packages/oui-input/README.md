@@ -1,5 +1,7 @@
 # oui-input
 
+<component-status cx-design="partial" ux="rc"></component-status>
+
 oui-input is a package which provides styles for the input component.
 
 ## Installation

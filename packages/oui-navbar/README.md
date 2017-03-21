@@ -1,5 +1,7 @@
 # oui-navbar
 
+<component-status cx-design="none" ux="prototype"></component-status>
+
 oui-navbar is a package which provide styles for the navbar component.
 
 ## Installation
@@ -35,7 +37,7 @@ oui-navbar is a package which provide styles for the navbar component.
     <option label="latest" value="string:latest" selected="selected">Latest</option>
     <option label="v1.0.0" value="string:v1.0.0">v1.0.0</option>
   </select>
-  </div>   
+  </div>
 </nav>
 ```
 

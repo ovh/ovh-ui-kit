@@ -1,6 +1,8 @@
 # oui-formfield
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="partial" ux="prototype"></component-status>
+
+> **IMPORTANT:** The name of this component can still be changed at any moment.
 
 oui-formfield is a package which provides styles for the formfield component.
 

@@ -1,5 +1,9 @@
 # oui-input-group
 
+<component-status cx-design="partial" ux="prototype"></component-status>
+
+> **Important:** This component is broken on IE9, IE10 and IE11
+
 oui-input-group is a package which provide styles to group inputs together.
 
 ## Installation
