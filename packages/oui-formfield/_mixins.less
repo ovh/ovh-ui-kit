@@ -1,0 +1,87 @@
+@import '../oui/_settings';
+@import '../oui-color/_variables';
+@import '../oui-typography/_constants';
+@import '../oui-icons/_mixins';
+@import '../oui-accessibility/_mixins';
+@import '../oui-animation/_mixins';
+@import './_variables';
+
+#oui {
+  .input-formfield(
+    @label-selector,
+    @input-selector,
+    @label-default-font-color: @oui-formfield-label-default-font-color,
+    @label-warning-font-color: @oui-formfield-label-warning-font-color,
+    @label-error-font-color: @oui-formfield-label-error-font-color,
+    @label-font-weight: @oui-formfield-label-font-weight
+  ) {
+    display: flex;
+    flex-direction: column-reverse;
+
+    .@{input-selector}:focus + .@{label-selector} {
+      color: @label-default-font-color;
+      font-weight: @label-font-weight;
+    }
+
+    .@{input-selector}_warning + .@{label-selector},
+    .@{input-selector}_warning:focus + .@{label-selector} {
+      color: @label-warning-font-color;
+      font-weight: @label-font-weight;
+    }
+
+    .@{input-selector}_error + .@{label-selector},
+    .@{input-selector}_error:focus + .@{label-selector} {
+      color: @label-error-font-color;
+      font-weight: @label-font-weight;
+    }
+    .@{input-selector}:disabled + .@{label-selector} {
+      color: #b3b3b3;
+      font-weight: 400;
+    }
+  }
+
+  .select-formfield(
+    @label-selector,
+    @select-selector,
+    @label-default-font-color: @oui-formfield-label-default-font-color,
+    @label-warning-font-color: @oui-formfield-label-warning-font-color,
+    @label-error-font-color: @oui-formfield-label-error-font-color,
+    @label-font-weight: @oui-formfield-label-font-weight
+  ) {
+
+    .@{select-selector} {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .@{select-selector}__input:focus + .@{label-selector} {
+        color: @label-default-font-color;
+        font-weight: @label-font-weight;
+      }
+    }
+
+    .@{select-selector}_warning {
+
+      .@{select-selector}__input + .@{label-selector},
+      .@{select-selector}__input:focus + .@{label-selector} {
+        color: @label-warning-font-color;
+        font-weight: @label-font-weight;
+      }
+    }
+
+    .@{select-selector}_error {
+      
+      .@{select-selector}__input + .@{label-selector},
+      .@{select-selector}__input:focus + .@{label-selector} {
+        color: @label-error-font-color;
+        font-weight: @label-font-weight;
+      }
+    }
+
+    .@{select-selector} {
+      .@{select-selector}__input:disabled + .@{label-selector} {
+        color: #b3b3b3;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import './_mixins';
+
+.oui-input-formfield {
+  @oui-label-selector: oui-label;
+  @oui-input-selector: oui-input;
+
+  #oui > .input-formfield(@oui-label-selector, @oui-input-selector);
+}
+
+.oui-select-formfield {
+  @oui-label-selector: oui-label;
+  @oui-select-selector: oui-select;
+  
+  #oui > .select-formfield(@oui-label-selector, @oui-select-selector);
+}
