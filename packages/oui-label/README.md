@@ -1,5 +1,7 @@
 # oui-label
 
+<component-status cx-design="partial" ux="rc"></component-status>
+
 oui-label is a package which provides styles for the label component.
 
 ## Installation

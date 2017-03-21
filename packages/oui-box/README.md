@@ -1,5 +1,7 @@
 # oui-box
 
+<component-status cx-design="partial" ux="rc"></component-status>
+
 oui-box is a package which provide styles for the box component.
 
 ## Installation
