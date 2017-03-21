@@ -37,7 +37,7 @@ oui-navbar is a package which provide styles for the navbar component.
       <option label="latest" value="string:latest" selected="selected">Latest</option>
       <option label="v1.0.0" value="string:v1.0.0">v1.0.0</option>
     </select>
-    <i class="oui-icon oui-icon-chevron-down"></i>
+    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
   </label>
 </nav>
 ```
