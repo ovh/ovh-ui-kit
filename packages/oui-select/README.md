@@ -13,14 +13,41 @@ oui-select is a package which provides styles for the select component.
 ## Usage
 
 ```html:preview
-  <label class="oui-select">
-    <select class="oui-select__input">
-      <option value="Option 1">Option 1</option>
-      <option value="Option 2">Option 2</option>
-      <option value="Option 3">Option 3</option>
-    </select>
-    <i class="oui-icon oui-icon-chevron-down"></i>
-  </label>
+<label class="oui-select">
+  <select id="select" name="select" class="oui-select__input">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+</label>
+
+<label class="oui-select">
+  <select id="select-disabled" name="select-disabled" class="oui-select__input" disabled>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+</label>
+
+<label class="oui-select oui-select_warning">
+  <select id="select-warning" name="select-warning" class="oui-select__input">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+</label>
+
+<label class="oui-select oui-select_error">
+  <select id="select-error" name="select-error" class="oui-select__input">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+</label>
 ```
 ## Mixins
 
@@ -48,16 +75,22 @@ Define the base styles for a select.
   );
 ```
 
+### .select-status
+
+Define the styles for select warning and select error.
+
+```less
+#oui > .select-status();
+```
+
+```less
+#oui > .select-status(
+  @icon-selector: Class
+);
+```
+
 ## Classes
 
 ### Block
 
 The block class is `oui-select` (top-level element).
-
-Inner elements:
-
-| Element               | Class                            |
-| --------------------- | -------------------------------- |
-| __label__             | `oui-select`                     |
-| __select__            | `oui-select__input`              |
-| __i__                 | `oui-icon oui-icon-chevron-down` |

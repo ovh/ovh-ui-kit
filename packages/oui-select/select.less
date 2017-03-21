@@ -2,6 +2,10 @@
 @import './_mixins';
 
 .oui-select {
+  @oui-select-selector: oui-select;
+  @oui-icon-selector: oui-icon;
+
   #oui > .select-normalize();
-  #oui > .select();
+  #oui > .select(@oui-icon-selector);
+  #oui > .select-status();
 }
