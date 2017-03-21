@@ -1,20 +1,19 @@
 @import '../oui-color/_variables';
 
-/* Checkbox */
-@oui-checkbox-spacing: 0 rem-calc(5) 0 0;
-
-/* Checkbox - Outline */
+// Checkbox
+@oui-checkbox-size: rem-calc(16);
+@oui-checkbox-line-height: 1.5;
+@oui-checkbox-padding: rem-calc(0);
+@oui-checkbox-font-color: @oui-color-zodiac;
 @oui-checkbox-outline-color: @oui-color-dusty;
-@oui-checkbox-outline-color-checked: @oui-color-zodiac;
-@oui-checkbox-outline-color-hover: @oui-checkbox-outline-color-checked;
+@oui-checkbox-outline-color-hover: @oui-checkbox-font-color;
+@oui-checkbox-outline-color-active: @oui-color-pacific;
+@oui-checkbox-spacing: 0 0 rem-calc(10);
 
-/* Checkbox - Facade */
-@oui-checkbox-facade-size: rem-calc(16);
-@oui-checkbox-facade-top-spacing: rem-calc(1);
-
-/* Checkbox - Big */
-@oui-checkbox-big-facade-size: rem-calc(20);
-@oui-checkbox-big-label-font-size: rem-calc(19);
+// Checkbox - Large
+@oui-checkbox-large-size: rem-calc(24);
+@oui-checkbox-large-line-height: 1.3;
+@oui-checkbox-large-padding: rem-calc(0);
 
 // Checkbox status
 @oui-checkbox-status:
