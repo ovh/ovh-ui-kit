@@ -223,7 +223,7 @@ Will stylize your horizontal line as a thin one.
 
 ### Headers
 
-The headers classes are `oui-heading1` `oui-heading2` `oui-heading3` `oui-heading4` `oui-heading5` `oui-heading6` (top-level elements).
+The headers classes are `oui-header_1` `oui-header_2` `oui-header_3` `oui-header_4` `oui-header_5` `oui-header_6` (top-level elements).
 
 #### Modifiers
 
