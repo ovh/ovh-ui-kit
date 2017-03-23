@@ -45,20 +45,20 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Info with icon 2x
+### Info with icon medium
 
 ```html:preview
-  <div class="oui-message oui-message_info oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_info oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
     imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
   </div>
 ```
-### Info with icon 2x and close button
+### Info with icon medium and close button
 
 ```html:preview
-  <div class="oui-message oui-message_info oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_info oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
@@ -99,20 +99,20 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Success with icon 2x
+### Success with icon medium
 
 ```html:preview
-  <div class="oui-message oui-message_success oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_success oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
     imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
   </div>
 ```
-### Success with icon 2x and close button
+### Success with icon medium and close button
 
 ```html:preview
-  <div class="oui-message oui-message_success oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_success oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
@@ -153,20 +153,20 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Warning with icon 2x
+### Warning with icon medium
 
 ```html:preview
-  <div class="oui-message oui-message_warning oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_warning oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
     imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
   </div>
 ```
-### Warning with icon 2x and close button
+### Warning with icon medium and close button
 
 ```html:preview
-  <div class="oui-message oui-message_warning oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_warning oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
@@ -207,20 +207,20 @@ oui-message is a package which provide styles for the `oui-message` component.
     <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
   </div>
 ```
-### Error with icon 2x
+### Error with icon medium
 
 ```html:preview
-  <div class="oui-message oui-message_error oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_error oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
     imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
   </div>
 ```
-### Error with icon 2x and close button
+### Error with icon medium and close button
 
 ```html:preview
-  <div class="oui-message oui-message_error oui-message_icon-2x" role="alert">
+  <div class="oui-message oui-message_error oui-message_icon-m" role="alert">
     <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
     <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
     Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
@@ -362,20 +362,20 @@ Will stylize your message as an error one.
   );
 ```
 
-### .message-icon-2x
+### .message-icon-m
 
-Will stylize your message as a message with a bigger icon.
+Will stylize your message as a message with a medium icon.
 
 ```less
-  #oui > .message-icon-2x();
+  #oui > .message-icon-m();
 ```
 
 ```less
-  #oui > .message-icon-2x(
+  #oui > .message-icon-m(
     @padding: Number,
-    @icon-2x-size: Number,
-    @icon-2x-position-top: Number,
-    @icon-2x-position-left: Number
+    @icon-m-size: Number,
+    @icon-m-position-top: Number,
+    @icon-m-position-left: Number
   );
 ```
 
@@ -414,14 +414,14 @@ The provided modifiers are:
 | Class                                      | Description                                                  |
 | ------------------------------------------ | ------------------------------------------------------------ |
 | `oui-message_info`                         | Make the alert looks like an info message with an icon       |
-| `oui-message_info oui-message_icon-2x`     | Make the alert looks like an info message with a bigger icon |
+| `oui-message_info oui-message_icon-m`     | Make the alert looks like an info message with a bigger icon |
 | `oui-message_info oui-message_no-icon`     | Make the alert looks like an info message with no icon       |
 | `oui-message_success`                      | Make the alert looks like a success message with an icon     |
-| `oui-message_success oui-message_icon-2x`  | Make the alert looks like an info message with a bigger icon |
+| `oui-message_success oui-message_icon-m`  | Make the alert looks like an info message with a bigger icon |
 | `oui-message_success oui-message_no-icon`  | Make the alert looks like a success message with no icon     |
 | `oui-message_warning`                      | Make the alert looks like a warning message with an icon     |
-| `oui-message_warning oui-message_icon-2x`  | Make the alert looks like an info message with a bigger icon |
+| `oui-message_warning oui-message_icon-m`  | Make the alert looks like an info message with a bigger icon |
 | `oui-message_warning oui-message_no-icon`  | Make the alert looks like a warning message with no icon     |
 | `oui-message_error`                        | Make the alert looks like an error message with an icon      |
-| `oui-message_error oui-message_icon-2x`    | Make the alert looks like an info message with a bigger icon |
+| `oui-message_error oui-message_icon-m`    | Make the alert looks like an info message with a bigger icon |
 | `oui-message_error oui-message_no-icon`    | Make the alert looks like an error message with no icon      |
