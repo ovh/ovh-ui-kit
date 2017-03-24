@@ -8,30 +8,41 @@
     @palette-size: @oui-color-badge-palette-size,
     @prop-font-size: @oui-color-badge-prop-font-size,
     @width: rem-calc(144),
-    @spacing: rem-calc(20) rem-calc(32),
+    @spacing: rem-calc(20) auto,
     @padding: rem-calc(7)
   ) {
     position: relative;
     border: 1px solid @border-color;
     width: @width;
+    max-width: 100%;
     margin: @spacing;
     padding: @padding;
     padding-top: @palette-size + 2 * @padding;
+    padding-bottom: rem-calc(12);
 
     &::before {
       display: block;
       position: absolute;
       top: @padding;
-      left: @padding;
+      right: 0;
+      left: 0;
       content: '';
-      width: @palette-size;
+      width: 90%;
       height: @palette-size;
+      margin: auto;
     }
 
     &__prop {
+      #oui > .text-ellipsis();
+
       display: block;
-      text-align: center;
       font-size: @oui-color-badge-prop-font-size;
+      text-align: center;
+
+      &:first-child,
+      &:last-child {
+        margin: rem-calc(5) 0 0;
+      }
     }
   }
 
