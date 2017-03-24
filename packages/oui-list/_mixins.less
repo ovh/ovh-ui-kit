@@ -1,7 +1,3 @@
-@import '../oui/_settings';
-@import '../oui-typography/_constants';
-@import '../oui-animation/_mixins';
-@import '../oui-color/_variables';
 @import './_variables';
 
 #oui {
@@ -17,14 +13,17 @@
     @font-size: @oui-list-font-size,
     @padding: @oui-list-padding,
     @header-padding: @oui-list-header-padding,
-    @item-padding: @oui-list-item-padding
+    @item-padding: @oui-list-item-padding,
+    @item-indent: @oui-list-item-indent,
+    @spacing: @oui-list-spacing
   ) {
     padding: @padding;
+    margin: @spacing;
     background-color: @background-color;
 
     &__header {
-      display: flex;
-      align-items: center;
+      display: block;
+
       padding: @header-padding;
       color: @title-color;
       font-weight: @oui-font-semibold;
@@ -87,8 +86,7 @@
     }
 
     &__sub-items {
-      margin: 0;
-      padding: 0 0 0 rem-calc(20);
+      padding: 0 0 0 @item-indent;
       border-bottom: 0 none;
       list-style: none;
     }
@@ -106,7 +104,8 @@
     @font-size: @oui-list-nav-font-size,
     @padding: @oui-list-nav-padding,
     @header-padding: @oui-list-nav-header-padding,
-    @item-padding: @oui-list-nav-item-padding
+    @item-padding: @oui-list-nav-item-padding,
+    @item-indent: @oui-list-nav-item-indent
   ) {
     padding: @padding;
     background-color: @background-color;
@@ -120,13 +119,32 @@
 
     .@{selector}__group,
     .@{selector}__item,
-    .@{selector}__sub-item {
+    .@{selector}__sub-item,
+    .@{selector}__link,
+    .@{selector}__text
+     {
       #oui > .text-ellipsis();
     }
 
     .@{selector}__group,
     .@{selector}__item {
       border-bottom: @oui-list-nav-item-border;
+    }
+
+    .@{selector}__sub-items {
+      padding: 0;
+    }
+
+    .@{selector}__sub-item {
+      text-indent: @item-indent;
+    }
+    
+    .@{selector}__sub-item .@{selector}__sub-item {
+      text-indent: @item-indent * 2;
+    }
+
+    .@{selector}__sub-item .@{selector}__sub-item .@{selector}__sub-item {
+      text-indent: @item-indent * 3;
     }
 
     .@{selector}__item_current {
