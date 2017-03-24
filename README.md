@@ -10,7 +10,15 @@ yarn add --dev "git+ssh://git@stash.ovh.net:7999/UXCOMPONENTS/oui-less.git"
 
 ## Usage
 
-### grunt (grunt-contrib-less)
+### Dependencies
+
+Follow guides for those dependencies, because you need to integrate them by yourself:
+
+- [ux.tools/less-plugin-remcalc](#!/documentation/less-plugin-remcalc)
+
+### Integration
+
+#### grunt (grunt-contrib-less)
 
 To help you prevent `node_modules` from being present in your sources, you may want to configure the stylekit as an include path:
 
@@ -39,7 +47,7 @@ the whole tool will be available for import globally:
 [...]
 ```
 
-### webpack (less-loader)
+#### webpack (less-loader)
 
 Webpack provide the `~` prefix for package imports:
 
@@ -53,6 +61,20 @@ Webpack provide the `~` prefix for package imports:
 @import "~oui-less/packages/oui-field/field.less";
 
 [...]
+```
+
+#### bootstrap
+
+For those who want to use **oui-less** with **bootstrap** on the same project you need change
+the `rem-base` to `10px` otherwise components proportions will not be respected.
+
+```less
+@import '~bootstrap/less/bootstrap';
+
+// Sets rem-base to 10px because bootstrap sets font-size: 10px on the html element.
+@rem-base: rem-base(10px);
+
+@import "~oui-less/packages/oui/stylekit.less";
 ```
 
 ## Publish a new version
