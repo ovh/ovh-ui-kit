@@ -261,7 +261,7 @@ Will stylize your list as a nav one.
 
 ### .list-steps
 
-Will stylize your list as a steped one.
+Will stylize your list as a stepped one.
 
 ```less
 #oui > .list-steps(
