@@ -26,22 +26,18 @@
       width: 100%;
       max-width: 100%;
       min-height: rem-calc(36);
-      padding: @padding ~"calc(@{icon-size} + @{padding} * 2 + 1rem)" @padding @padding;
+      padding: @padding 0 @padding @padding;
       border: 1px solid @border-color;
       border-radius: @oui-global-base-radius;
-      background: #fff;
       color: @font-color;
       font-size: @font-size;
       font-weight: @font-weight;
       cursor: pointer;
 
-      option {
-        background: #fff;
-      }
-
       // Firefox adds a small padding before text so we need to remove it
       @-moz-document url-prefix() {
         padding-left: calc(@padding - 0.4rem);
+        padding-bottom: calc(@padding - 0.1rem);
       }
 
       select&::-ms-expand {
@@ -57,6 +53,11 @@
       box-shadow: inset 1px 1px 2px 0px rgba(102, 199, 214, 0.5), 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
       background: #f5fcfd;
 
+      ~ .@{icon-selector} {
+        box-shadow: inset -1px 1px 1px 0px rgba(102, 199, 214, 0.5);
+        background: #f5fcfd;
+      }
+
       ~ .@{icon-selector}::before {
         color: #0090b1;
       }
@@ -66,24 +67,35 @@
       border-color: #e6e6e6;
       background-color: @oui-color-concrete;
       color: #b3b3b3;
+      text-shadow: none;
       cursor: not-allowed;
+      
+      ~ .@{icon-selector} {
+        background-color: @oui-color-concrete;
+      }
 
-      ~ .@{icon-selector}:before {
+      ~ .@{icon-selector}::before {
         color: #b3b3b3;
       }
     }
 
     .@{icon-selector} {
       position: absolute;
-      right: ~"calc(@{padding} + (@{icon-size} / 2))";
-      bottom: ~"calc((@{font-size}) - (@{icon-size} / 2))";
-      width: @icon-size;
-      height: @icon-size;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      width: ~"calc(@{icon-size} * 2)";
+      height: auto;
+      border-radius: ~"calc(@{oui-global-base-radius} - 1px)";
       margin: auto;
+      background: #fff;
+      text-align: center;
+      vertical-align: middle;
       cursor: pointer;
       pointer-events: none;
 
       &::before {
+        display: inline-block;
         color: @oui-color-shuttle;
         font-size: @icon-size;
       }
@@ -109,8 +121,14 @@
       background-color: @@status-background-color;
       color: @@status-font-color;
 
-      ~ .@{icon-selector}:before {
-        color: @@status-font-color;
+      ~ .@{icon-selector} { 
+        box-shadow: none;
+        background-color: @@status-background-color;
+        
+        
+        &::before {
+          color: @@status-font-color;
+        }
       }
     }
 

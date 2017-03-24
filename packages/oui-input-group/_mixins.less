@@ -8,13 +8,23 @@
     @button-background-color: @oui-input-group-button-hollow-background-color,
     @button-padding: @oui-input-group-button-hollow-padding
   ) {
+    display: table;
     display: flex;
     align-content: stretch;
     align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 rem-calc(20);
+    
+    & > .oui-button {
+      width: rem-calc(100);
+    }
 
     & > .@{button-selector},
     & > .@{input-selector} {
+      display: table-cell;
       border-radius: 0;
+      margin: 0;
 
       &:first-child {
         border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
