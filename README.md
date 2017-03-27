@@ -20,29 +20,14 @@ Follow guides for those dependencies, because you need to integrate them by your
 
 #### grunt (grunt-contrib-less)
 
-To help you prevent `node_modules` from being present in your sources, you may want to configure the stylekit as an include path:
-
-```js
-less: {
-    [...],
-    options: {
-        paths: [
-            "./node_modules/oui-less/packages"
-        ]
-    }
-}
-```
-
-the whole tool will be available for import globally:
-
 ```less
-@import "oui/stylekit";
+@import "./node_modules/oui-less/packages/oui/stylekit";
 
 // or you can import every component a-la-carte:
 
-@import "oui-button/button";
-@import "oui-radio/radio";
-@import "oui-field/field";
+@import "./node_modules/oui-less/packages/oui-button/button";
+@import "./node_modules/oui-less/packages/oui-radio/radio";
+@import "./node_modules/oui-less/packages/oui-field/field";
 
 [...]
 ```
