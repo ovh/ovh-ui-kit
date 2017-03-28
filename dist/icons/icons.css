@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.eot?ea12789b1bf4b127f7a354e36068cb75?#iefix") format("embedded-opentype"),
+url("./icons.woff?ea12789b1bf4b127f7a354e36068cb75") format("woff"),
+url("./icons.ttf?ea12789b1bf4b127f7a354e36068cb75") format("truetype"),
+url("./icons.svg?ea12789b1bf4b127f7a354e36068cb75#icons") format("svg");
+}
+
+i {
+    line-height: 1;
+}
+
+i:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    vertical-align: top;
+}
+
+.oui-icon-chat:before {
+    content: "\f101";
+}
+.oui-icon-chevron-down:before {
+    content: "\f102";
+}
+.oui-icon-chevron-left:before {
+    content: "\f103";
+}
+.oui-icon-chevron-right:before {
+    content: "\f104";
+}
+.oui-icon-chevron-up:before {
+    content: "\f105";
+}
+.oui-icon-close:before {
+    content: "\f106";
+}
+.oui-icon-error_circle:before {
+    content: "\f107";
+}
+.oui-icon-eye-blocked:before {
+    content: "\f108";
+}
+.oui-icon-eye:before {
+    content: "\f109";
+}
+.oui-icon-info_circle:before {
+    content: "\f10a";
+}
+.oui-icon-ovh:before {
+    content: "\f10b";
+}
+.oui-icon-pen:before {
+    content: "\f10c";
+}
+.oui-icon-power:before {
+    content: "\f10d";
+}
+.oui-icon-success_circle:before {
+    content: "\f10e";
+}
+.oui-icon-trash:before {
+    content: "\f10f";
+}
+.oui-icon-warning_circle:before {
+    content: "\f110";
+}
