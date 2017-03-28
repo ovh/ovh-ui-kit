@@ -3,6 +3,8 @@
 
 #oui {
   .input-group-base(
+    @input-selector,
+    @button-selector,
     @button-background-color: @oui-input-group-button-hollow-background-color,
     @button-padding: @oui-input-group-button-hollow-padding
   ) {
@@ -10,8 +12,8 @@
     align-content: stretch;
     align-items: center;
 
-    & > .oui-button,
-    & > .oui-input {
+    & > .@{button-selector},
+    & > .@{input-selector} {
       border-radius: 0;
 
       &:first-child {
@@ -23,19 +25,19 @@
       }
     }
 
-    & > .oui-button {
+    & > .@{button-selector} {
       #oui > .button-hollow(
         @background-color: @button-background-color,
         @padding: @button-padding
       );
 
-      & + .oui-button,
-      & + .oui-input {
+      & + .@{button-selector},
+      & + .@{input-selector} {
         border-left: 0;
       }
     }
 
-    & > .oui-input {
+    & > .@{input-selector} {
       flex: 2 1 auto;
 
       &__number {
@@ -48,24 +50,75 @@
         }
       }
 
-      & + .oui-input,
-      & + .oui-button {
+      & + .@{input-selector},
+      & + .@{button-selector} {
         border-left: 0;
       }
     }
 
-    .oui-input-formfield {
+    .@{input-selector}-formfield {
       width: 100%;
       margin-bottom: rem-calc(20);
 
-      .oui-input {
+      .@{input-selector} {
         border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
       }
 
-      + .oui-button {
+      + .@{button-selector} {
         border-left: 0;
         margin-top: rem-calc(4);
         margin-bottom: rem-calc(16);
+      }
+    }
+  }
+
+  .input-group-button(
+    @input-selector,
+    @button-selector,
+    @icon-selector
+  ) {
+    position: relative;
+
+    .@{input-selector} {
+      &,
+      &:first-child {
+        padding-right: rem-calc(50);
+        border-radius: @oui-global-base-radius;
+      }
+    }
+
+    .@{button-selector} {
+      &,
+      &:hover,
+      &:focus {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        min-width: rem-calc(50);
+        border-color: transparent;
+        background: transparent;
+        box-shadow: none;
+      }
+    }
+
+    .@{icon-selector} {
+      color: @oui-color-silver;
+      font-size: rem-calc(20);
+      vertical-align: middle;
+    }
+
+    .@{input-selector}:focus ~ .@{button-selector},
+    .@{button-selector}:hover {
+      .@{icon-selector} {
+        color: #0090b1;
+      }
+    }
+
+    .@{button-selector}:focus {
+      .@{icon-selector} {
+        color: #0090b1;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
       }
     }
   }
