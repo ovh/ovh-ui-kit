@@ -1,26 +1,36 @@
 #oui {
     .icon-badge-base() {
+        display: table;
         display: flex;
         flex-flow: row;
+        width: 100%;
         border: 1px solid #f0f0f0;
-        margin: 32px auto;
+        margin: rem-calc(32) auto;
         padding: 0;
-        background-color: white;
+        background-color: #fff;
     }
 
     .icon-badge-preview() {
+        display: table-cell;
         display: flex;
         flex-flow: column;
         flex: 0 1 auto;
         align-items: center;
+        justify-content: center;
         width: 128px;
         padding: 16px;
         background-color: #c9c9c9;
+        line-height: 1;
+        text-align: center;
+        vertical-align: middle;
     }
 
     .icon-badge-code() {
-        flex: 1 1 0;
-        padding: 16px;
+        display: table-cell;
+        flex: 1 1 auto;
+        padding: rem-calc(16);
         background-color: white;
+        text-align: left;
+        vertical-align: middle;
     }
 }
