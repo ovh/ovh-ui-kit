@@ -1,3 +1,4 @@
+@import '../oui-icons/_variables';
 @import './_variables';
 
 #oui {
@@ -285,7 +286,7 @@
       }
 
       .@{selector}__header::before {
-        content: "\f10b";
+        content: @success_circle;
         border: 0 none;
         background: none;
         color: @icon-color-checked;
