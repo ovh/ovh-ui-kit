@@ -24,6 +24,7 @@
     .oui-icon.oui-icon-ovh {
       color: @icon-color;
       font-size: rem-calc(30);
+      vertical-align: middle;
     }
 
     &__title,
@@ -42,15 +43,15 @@
     }
 
     &__title {
-      display: flex;
-      align-items: center;
+      display: inline-block;
       margin: 0;
       color: @font-color;
       text-decoration: none;
+      vertical-align: middle;
     }
 
     &__title-link {
-      display: block;
+      display: inline-block;
       padding: 0;
       font-size: rem-calc(14);
       font-weight: 600;
@@ -58,34 +59,35 @@
     }
 
     &__title-text {
-      display: block;
+      display: inline-block;
       font-size: rem-calc(28);
       line-height: 1;
     }
 
     &__title-bold {
-      display: block;
+      display: inline-block;
       margin-left: rem-calc(8);
       font-size: rem-calc(28);
       font-weight: 600;
     }
 
     &__title-small {
-      display: block;
+      display: inline-block;
       margin-left: rem-calc(2);
       font-size: rem-calc(28);
       font-weight: 300;
     }
 
     &__items {
-      display: flex;
-      margin: 0 rem-calc(16) 0 auto;
+      float: right;
+      margin: 0 0 0 auto;
       padding: 0;
       list-style: none;
       white-space: nowrap;
     }
 
     &__item {
+      float: left;
       display: block;
       margin-left: rem-calc(16);
       border-radius: 2px;
@@ -116,12 +118,13 @@
 
     @media only screen and (max-width: 960px) {
       &__items {
-        flex-direction: column;
+        float: none;
         width: 100%;
         margin: rem-calc(12) 0 rem-calc(12) 0;
       }
 
       &__item {
+        float: none;
         margin: 0 rem-calc(-16);
         border-radius: 0;
         border-bottom: 1px solid @oui-color-fiord;
