@@ -207,7 +207,7 @@ The block class is `oui-icon` (top-level element).
   </div>
 </div>
 
-### Linear Icons
+### Line Icons
 
 <div class="oui-icon-badge">
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-pen" aria-hidden="true"></i></div>
@@ -234,5 +234,12 @@ The block class is `oui-icon` (top-level element).
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chat" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-chat" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-check" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-check" aria-hidden="true"></i>`
   </div>
 </div>
