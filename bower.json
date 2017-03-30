@@ -1,0 +1,8 @@
+{
+  "name": "oui-less",
+  "description": "A stylekit for the OVH brand (Less).",
+  "license": "UNLICENSED",
+  "ignore": [
+    "node_modules"
+  ]
+}
