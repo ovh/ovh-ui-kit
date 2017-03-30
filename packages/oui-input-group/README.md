@@ -44,6 +44,20 @@ oui-input-group is a package which provide styles to group inputs together.
   </div>
   <button class="oui-button">Go</button>
 </div>
+
+<div class="oui-input-group oui-input-group_button">
+  <input class="oui-input" id="password" name="password" type="password" placeholder="Password with icon eye" />
+  <button class="oui-button" id="togglePassword" type="button" aria-label="Show password" />
+    <i class="oui-icon oui-icon-eye"></i>
+  </button>
+</div>
+
+<div class="oui-input-group oui-input-group_button">
+  <input class="oui-input oui-input_error" id="passwordError" name="passwordError" type="text" placeholder="Password Error with icon eye blocked" />
+  <button class="oui-button" id="togglePasswordError" type="button" aria-label="Hide password" />
+    <i class="oui-icon oui-icon-eye-blocked"></i>
+  </button>
+</div>
 ```
 
 ## Mixins
@@ -57,7 +71,10 @@ oui-input-group is a package which provide styles to group inputs together.
 Define the base styles for an input-group.
 
 ```less
-#oui > .input-group-base();
+#oui > .input-group-base(
+  @oui-input-selector,
+  @oui-button-selector
+);
 ```
 
 ```less
@@ -65,4 +82,20 @@ Define the base styles for an input-group.
   @button-background-color: Color,
   @button-padding: Number
 );
+```
+
+### .input-group-button
+
+Define the base styles for an input-group with a button.
+
+```less
+#oui > .input-group-button(
+  @oui-input-selector,
+  @oui-button-selector,
+  @oui-icon-selector
+);
+```
+
+```less
+#oui > .input-group-button();
 ```

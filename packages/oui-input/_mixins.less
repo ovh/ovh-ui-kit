@@ -101,5 +101,13 @@
       background: @@status-font-color;
       color: #fff;
     }
+
+    &-group_button .oui-input.oui-input_@{status}:focus ~ .oui-button,
+    &-group_button .oui-input.oui-input_@{status} ~ .oui-button:hover,
+    &-group_button .oui-input.oui-input_@{status} ~ .oui-button:focus {
+      .oui-icon {
+        color: @@status-font-color;
+      }
+    }
   }
 }
