@@ -18,23 +18,23 @@
     display: flex;
     flex-direction: column-reverse;
 
-    .@{input-selector}:focus + .@{label-selector} {
+    .@{input-selector}:focus ~ .@{label-selector} {
       color: @label-default-font-color;
       font-weight: @label-font-weight;
     }
 
-    .@{input-selector}_warning + .@{label-selector},
-    .@{input-selector}_warning:focus + .@{label-selector} {
+    .@{input-selector}_warning ~ .@{label-selector},
+    .@{input-selector}_warning:focus ~ .@{label-selector} {
       color: @label-warning-font-color;
       font-weight: @label-font-weight;
     }
 
-    .@{input-selector}_error + .@{label-selector},
-    .@{input-selector}_error:focus + .@{label-selector} {
+    .@{input-selector}_error ~ .@{label-selector},
+    .@{input-selector}_error:focus ~ .@{label-selector} {
       color: @label-error-font-color;
       font-weight: @label-font-weight;
     }
-    .@{input-selector}:disabled + .@{label-selector} {
+    .@{input-selector}:disabled ~ .@{label-selector} {
       color: #b3b3b3;
       font-weight: 400;
     }
@@ -53,7 +53,7 @@
       display: flex;
       flex-direction: column-reverse;
 
-      .@{select-selector}__input:focus + .@{label-selector} {
+      .@{select-selector}__input:focus ~ .@{label-selector} {
         color: @label-default-font-color;
         font-weight: @label-font-weight;
       }
@@ -61,8 +61,8 @@
 
     .@{select-selector}_warning {
 
-      .@{select-selector}__input + .@{label-selector},
-      .@{select-selector}__input:focus + .@{label-selector} {
+      .@{select-selector}__input ~ .@{label-selector},
+      .@{select-selector}__input:focus ~ .@{label-selector} {
         color: @label-warning-font-color;
         font-weight: @label-font-weight;
       }
@@ -70,15 +70,15 @@
 
     .@{select-selector}_error {
       
-      .@{select-selector}__input + .@{label-selector},
-      .@{select-selector}__input:focus + .@{label-selector} {
+      .@{select-selector}__input ~ .@{label-selector},
+      .@{select-selector}__input:focus ~ .@{label-selector} {
         color: @label-error-font-color;
         font-weight: @label-font-weight;
       }
     }
 
     .@{select-selector} {
-      .@{select-selector}__input:disabled + .@{label-selector} {
+      .@{select-selector}__input:disabled ~ .@{label-selector} {
         color: #b3b3b3;
         font-weight: 400;
       }

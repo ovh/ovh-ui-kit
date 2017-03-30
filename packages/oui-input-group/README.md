@@ -36,6 +36,14 @@ oui-input-group is a package which provide styles to group inputs together.
   <button class="oui-button">Weird action here</button>
   <input class="oui-input" value="ovh.com" disabled>
 </div>
+
+<div class="oui-input-group">
+  <div class="oui-input-formfield">
+    <input type="text" id="text" name="text" class="oui-input" value="Input text" />
+    <label for="text" class="oui-label">Label for Input group</label>
+  </div>
+  <button class="oui-button">Go</button>
+</div>
 ```
 
 ## Mixins
