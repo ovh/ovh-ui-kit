@@ -17,12 +17,15 @@
   ) {
     display: block;
     width: 100%;
-    padding: @padding;
+    min-height: rem-calc(34);
+    padding: 0 @padding;
     border: 1px solid @border-color;
     border-radius: @oui-global-base-radius;
     margin: @margin;
+    vertical-align: middle;
     color: @font-color;
     font-size: @font-size;
+    line-height: rem-calc(34);
     font-weight: @font-weight;
 
     &::selection {
