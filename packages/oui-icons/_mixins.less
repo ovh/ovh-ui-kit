@@ -21,14 +21,22 @@
       font-style: normal;
   }
 
-  .icon-type(@index: length(@oui-icon-index)) when (@index > 0) {
-    .icon-type(@index - 1);
-    @icon-index: extract(@oui-icon-index, @index);
-    @icon-name: extract(@icon-index, 1);
-    @icon-content: extract(@icon-index, 2);
-    &.oui-icon-@{icon-name}:before {
-      display: block;
-      content: @icon-content; 
+  .for(@array)   when (default()) {.for-impl_(length(@array))}
+  .for-impl_(@i) when (@i > 1)    {.for-impl_((@i - 1))}
+  .for-impl_(@i) when (@i > 0)    {.-each(extract(@array, @i))}
+
+  .define(@name) {
+    @content: "oui-icon-index-@{name}";
+  }
+
+  .icon-type() {
+    .for(@oui-icon-index); .-each(@index) {
+      .define(@index);
+
+      &.oui-icon-@{index}::before {
+        display: block;
+        content: @@content;
+      }
     }
   }
 

@@ -168,6 +168,20 @@ The block class is `oui-icon` (top-level element).
   </div>
 </div>
 
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-arrow-up" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-arrow-up" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-arrow-down" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-arrow-down" aria-hidden="true"></i>`
+  </div>
+</div>
+
 ### Bicolor Icons
 
 <div class="oui-icon-badge">
@@ -210,36 +224,36 @@ The block class is `oui-icon` (top-level element).
 ### Line Icons
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-pen" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-pen_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-pen" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-pen_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-power" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-power_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-power" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-power_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-trash" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-trash_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-trash" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-trash_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chat" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chat_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-chat" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-chat_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-check" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-check_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-check" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-check_line" aria-hidden="true"></i>`
   </div>
 </div>
