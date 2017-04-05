@@ -11,7 +11,7 @@
     display: table;
     display: flex;
     align-content: stretch;
-    align-items: center;
+    align-items: end;
     width: 100%;
     max-width: 100%;
     margin: 0 0 rem-calc(20);
@@ -67,17 +67,18 @@
     }
 
     .@{input-selector}-formfield {
+      flex: 2 1 auto;
       width: 100%;
-      margin-bottom: rem-calc(20);
+      margin-bottom: 0;
 
       .@{input-selector} {
         border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
+        margin-bottom: 0;
       }
 
       + .@{button-selector} {
         border-left: 0;
-        margin-top: rem-calc(4);
-        margin-bottom: rem-calc(16);
+        margin: 0;
       }
     }
   }
@@ -106,6 +107,7 @@
         right: 0;
         bottom: 0;
         min-width: rem-calc(50);
+        width: auto;
         border-color: transparent;
         background: transparent;
         box-shadow: none;
