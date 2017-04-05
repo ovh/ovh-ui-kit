@@ -163,6 +163,7 @@
     .@{selector}__link:hover,
     .@{selector}__link:visited {
       padding: @item-padding;
+      outline: 0;
       color: @link-color;
       font-size: @font-size;
       font-weight: @oui-font-regular;
@@ -171,6 +172,10 @@
 
     .@{selector}__link:hover {
       background-color: hsla(0, 0%, 100%, .5)
+    }
+
+    .@{selector}__link:focus {
+      background-color: hsla(0, 0%, 100%, .85)
     }
 
     .@{selector}__item_current > .@{selector}__link,
