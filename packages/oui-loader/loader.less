@@ -1,0 +1,14 @@
+@import './_mixins';
+
+.oui-loader {
+  @oui-selector: oui-loader;
+  #oui > .loader-base();
+
+  &_s {
+    #oui > .loader-s(@oui-selector);
+  }
+
+  &_l {
+    #oui > .loader-l(@oui-selector);
+  }
+}
