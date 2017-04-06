@@ -36,4 +36,23 @@
       padding-left: 0;
     }
   }
+
+  &_thumbnail-light {
+    #oui > .checkbox-thumbnail(@oui-checkbox-selector);
+    #oui > .checkbox-thumbnail-light(@oui-checkbox-selector);
+  }
+
+  &_thumbnail-light&_large {
+    #oui > .checkbox-size(
+      @oui-checkbox-selector,
+      @oui-icon-selector,
+      @oui-checkbox-large-size,
+      @oui-checkbox-large-line-height,
+      @oui-thumbnail-padding
+    );
+
+    .oui-checkbox__description {
+      padding-left: 0;
+    }
+  }
 }

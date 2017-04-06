@@ -260,6 +260,95 @@ oui-checkbox is a package which provide styles for the checkbox component.
 </div>
 ```
 
+### Thumbnail-light
+
+```html:preview
+<div class="oui-checkbox oui-checkbox_thumbnail-light">
+  <input class="oui-checkbox__input" id="oui-checkbox3-6" name="oui-checkbox3-6" type="checkbox">
+  <label class="oui-checkbox__label-container" for="oui-checkbox3-6">
+    <span class="oui-checkbox__label">Checkbox Thumbnail Light</span>
+    <span class="oui-checkbox__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox oui-checkbox_thumbnail-light">
+  <input class="oui-checkbox__input" id="oui-checkbox3-7" name="oui-checkbox3-7" type="checkbox" checked="checked">
+  <label class="oui-checkbox__label-container" for="oui-checkbox3-7">
+    <span class="oui-checkbox__label">Checkbox Thumbnail Light Checked</span>
+    <span class="oui-checkbox__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox oui-checkbox_thumbnail-light">
+  <input class="oui-checkbox__input" id="oui-checkbox3-8" name="oui-checkbox3-8" type="checkbox" disabled="disabled">
+  <label class="oui-checkbox__label-container" for="oui-checkbox3-8">
+    <span class="oui-checkbox__label">Checkbox Thumbnail Light Disabled</span>
+    <span class="oui-checkbox__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox oui-checkbox_thumbnail-light">
+  <input class="oui-checkbox__input" id="oui-checkbox3-9" name="oui-checkbox3-9" type="checkbox" checked="checked" disabled="disabled">
+  <label class="oui-checkbox__label-container" for="oui-checkbox3-9">
+    <span class="oui-checkbox__label">Checkbox Thumbnail Light Checked Disabled</span>
+    <span class="oui-checkbox__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox oui-checkbox_large oui-checkbox_thumbnail-light">
+  <input class="oui-checkbox__input" id="oui-checkbox3-10" name="oui-checkbox3-10" type="checkbox">
+  <label class="oui-checkbox__label-container" for="oui-checkbox3-10">
+    <span class="oui-checkbox__label">
+      Checkbox Thumbnail Large Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-checkbox__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+```
+
 ### Success
 
 ```html:preview
@@ -509,6 +598,22 @@ Will stylize your checkbox as a thumbnail one.
   @background-hover: Color,
   @background-checked: Color,
   @background-checked-hover: Color,
+  @border-size: Color,
+  @padding: Number
+);
+```
+
+### .checkbox-thumbnail-light
+
+Will stylize your checkbox as a light thumbnail one.
+
+```less
+.checkbox-thumbnail(
+  @selector: Class,
+  @border-color: Color,
+  @border-color-hover: Color,
+  @background: Color,
+  @background-hover: Color,
   @border-size: Color,
   @padding: Number
 );
