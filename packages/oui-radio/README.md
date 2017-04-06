@@ -43,14 +43,14 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big">
+<div class="oui-radio oui-radio_m">
   <input class="oui-radio__input" type="radio" name="oui-radio-1-5" value="oui-radio-1-5" id="oui-radio-1-5" checked="checked" />
   <label class="oui-radio__label-container" for="oui-radio-1-5">
-    <span class="oui-radio__label">Big [Checked]</span>
+    <span class="oui-radio__label">M [Checked]</span>
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big">
+<div class="oui-radio oui-radio_m">
   <input class="oui-radio__input" type="radio" name="oui-radio-1-8" value="oui-radio-1-8" id="oui-radio-1-8" />
   <label class="oui-radio__label-container" for="oui-radio-1-8">
     <span class="oui-radio__label">
@@ -85,17 +85,17 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big">
+<div class="oui-radio oui-radio_m">
   <input class="oui-radio__input" type="radio" name="oui-radio-2-3" value="oui-radio-2-3" id="oui-radio-2-3" checked="checked" />
   <label class="oui-radio__label-container" for="oui-radio-2-3">
-    <span class="oui-radio__label">Big [Checked]</span>
+    <span class="oui-radio__label">M [Checked]</span>
     <span class="oui-radio__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big">
+<div class="oui-radio oui-radio_m">
   <input class="oui-radio__input" type="radio" name="oui-radio-2-4" value="oui-radio-2-4" id="oui-radio-2-4" checked="checked" disabled="disabled" />
   <label class="oui-radio__label-container" for="oui-radio-2-4">
     <span class="oui-radio__label">
@@ -163,7 +163,7 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big oui-radio_thumbnail">
+<div class="oui-radio oui-radio_m oui-radio_thumbnail">
   <input class="oui-radio__input" type="radio" name="oui-radio-3-6" value="oui-radio-3-6" id="oui-radio-3-6" checked="checked" />
   <label class="oui-radio__label-container" for="oui-radio-3-6">
     <span class="oui-radio__label">Thumbnail [Checked]</span>
@@ -173,7 +173,7 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big oui-radio_thumbnail">
+<div class="oui-radio oui-radio_m oui-radio_thumbnail">
   <input class="oui-radio__input" type="radio" name="oui-radio-3-7" value="oui-radio-3-7" id="oui-radio-3-7" />
   <label class="oui-radio__label-container" for="oui-radio-3-7">
     <span class="oui-radio__label">
@@ -229,11 +229,11 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big oui-radio_thumbnail-light">
+<div class="oui-radio oui-radio_m oui-radio_thumbnail-light">
   <input class="oui-radio__input" type="radio" name="oui-radio-3-12" value="oui-radio-3-12" id="oui-radio-3-12" />
   <label class="oui-radio__label-container" for="oui-radio-3-12">
     <span class="oui-radio__label">
-      Thumbnail Big Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+      Thumbnail M Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-radio__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
@@ -241,10 +241,10 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 
-<div class="oui-radio oui-radio_big oui-radio_thumbnail-light">
+<div class="oui-radio oui-radio_m oui-radio_thumbnail-light">
   <input class="oui-radio__input" type="radio" name="oui-radio-3-13" value="oui-radio-3-13" id="oui-radio-3-13" checked="checked" />
   <label class="oui-radio__label-container" for="oui-radio-3-13">
-    <span class="oui-radio__label">Thumbnail Big Light [Checked]</span>
+    <span class="oui-radio__label">Thumbnail M Light [Checked]</span>
     <span class="oui-radio__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
@@ -520,7 +520,7 @@ The provided modifiers are:
 
 | Class                 | Description                                 |
 | --------------------- | ------------------------------------------- |
-| `oui-radio_big`       | Make the radio looks bigger                 |
+| `oui-radio_m`         | Make the radio looks medium sized           |
 | `oui-radio_thumbnail` | Make the radio looks like a thumbnail       |
 | `oui-radio_success`   | Make the radio looks like one in success    |
 | `oui-radio_warning`   | Make the radio looks like one in warning    |

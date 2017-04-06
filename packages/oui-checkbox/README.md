@@ -66,11 +66,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large">
+<div class="oui-checkbox oui-checkbox_m">
   <input class="oui-checkbox__input" id="oui-checkbox1-5" name="oui-checkbox1-5" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox1-5">
     <span class="oui-checkbox__label">
-      Checkbox Large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
     </span>
     <span class="oui-checkbox__icon">
@@ -151,11 +151,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large">
+<div class="oui-checkbox oui-checkbox_m">
   <input class="oui-checkbox__input" id="oui-checkbox-5" name="oui-checkbox-5" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox-5">
     <span class="oui-checkbox__label">
-      Checkbox Large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
@@ -238,11 +238,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large oui-checkbox_thumbnail">
+<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail">
   <input class="oui-checkbox__input" id="oui-checkbox3-5" name="oui-checkbox3-5" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox3-5">
     <span class="oui-checkbox__label">
-      Checkbox Thumbnail Large - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox Thumbnail M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
@@ -327,11 +327,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large oui-checkbox_thumbnail-light">
+<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail-light">
   <input class="oui-checkbox__input" id="oui-checkbox3-10" name="oui-checkbox3-10" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox3-10">
     <span class="oui-checkbox__label">
-      Checkbox Thumbnail Large Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox Thumbnail M Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
@@ -392,11 +392,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large oui-checkbox_thumbnail oui-checkbox_success">
+<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail oui-checkbox_success">
   <input class="oui-checkbox__input" id="oui-checkbox4-4" name="oui-checkbox4-4" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox4-4">
     <span class="oui-checkbox__label">
-      Checkbox Success Large Thumbnail
+      Checkbox Success M Thumbnail
     </span>
     <span class="oui-checkbox__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
@@ -454,11 +454,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large oui-checkbox_thumbnail oui-checkbox_warning">
+<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail oui-checkbox_warning">
   <input class="oui-checkbox__input" id="oui-checkbox5-4" name="oui-checkbox5-4" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox5-4">
     <span class="oui-checkbox__label">
-      Checkbox Warning Large Thumbnail
+      Checkbox Warning M Thumbnail
     </span>
     <span class="oui-checkbox__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
@@ -516,11 +516,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   </label>
 </div>
 
-<div class="oui-checkbox oui-checkbox_large oui-checkbox_thumbnail oui-checkbox_error">
+<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail oui-checkbox_error">
   <input class="oui-checkbox__input" id="oui-checkbox6-4" name="oui-checkbox6-4" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox6-4">
     <span class="oui-checkbox__label">
-      Checkbox Error Large Thumbnail
+      Checkbox Error M Thumbnail
     </span>
     <span class="oui-checkbox__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
@@ -641,7 +641,7 @@ The provided modifiers are:
 
 | Class                    | Description                                    |
 | ------------------------ | ---------------------------------------------- |
-| `oui-checkbox_large`     | Make the checkbox looks bigger                 |
+| `oui-checkbox_m`         | Make the checkbox looks medium sized           |
 | `oui-checkbox_thumbnail` | Make the checkbox looks like a thumbnail       |
 | `oui-checkbox_success`   | Make the checkbox looks like one in success    |
 | `oui-checkbox_warning`   | Make the checkbox looks like one in warning    |
