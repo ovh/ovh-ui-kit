@@ -41,6 +41,7 @@
     #oui > .radio-thumbnail(
       @oui-radio-selector
     );
+
     #oui > .radio-size(
       @oui-radio-selector,
       @oui-radio-big-outer-circle-size,
@@ -48,6 +49,41 @@
       @oui-radio-padding-left,
       false
     );
+
+    #oui > .radio-label(
+      @oui-radio-selector,
+      @oui-radio-big-inner-font-size,
+      @oui-radio-big-outer-circle-size
+    );
+  }
+
+  &_thumbnail-light {
+    #oui > .radio-thumbnail(
+      @oui-radio-selector
+    );
+
+    #oui > .radio-thumbnail-light(
+      @oui-radio-selector
+    );
+  }
+
+  &_thumbnail-light&_big {
+    #oui > .radio-thumbnail(
+      @oui-radio-selector
+    );
+
+    #oui > .radio-thumbnail-light(
+      @oui-radio-selector
+    );
+
+    #oui > .radio-size(
+      @oui-radio-selector,
+      @oui-radio-big-outer-circle-size,
+      @oui-radio-big-inner-circle-size,
+      @oui-radio-padding-left,
+      false
+    );
+
     #oui > .radio-label(
       @oui-radio-selector,
       @oui-radio-big-inner-font-size,

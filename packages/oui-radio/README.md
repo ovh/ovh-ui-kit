@@ -186,6 +186,72 @@ oui-radio is a package which provide styles for the input radio component.
 </div>
 ```
 
+### Thumbnail-light
+
+```html:preview
+<div class="oui-radio oui-radio_thumbnail-light">
+  <input class="oui-radio__input" type="radio" name="oui-radio-3-8" value="oui-radio-3-8" id="oui-radio-3-8" />
+  <label class="oui-radio__label-container" for="oui-radio-3-8">
+    <span class="oui-radio__label">Thumbnail Light</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+  </label>
+</div>
+
+<div class="oui-radio oui-radio_thumbnail-light">
+  <input class="oui-radio__input" type="radio" name="oui-radio-3-9" value="oui-radio-3-9" id="oui-radio-3-9" checked="checked" />
+  <label class="oui-radio__label-container" for="oui-radio-3-9">
+    <span class="oui-radio__label">Thumbnail Light [Checked]</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+  </label>
+</div>
+
+<div class="oui-radio oui-radio_thumbnail-light">
+  <input class="oui-radio__input" type="radio" name="oui-radio-3-10" value="oui-radio-3-10" id="oui-radio-3-10" disabled="disabled" />
+  <label class="oui-radio__label-container" for="oui-radio-3-10">
+    <span class="oui-radio__label">Thumbnail Light [Disabled]</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+  </label>
+</div>
+
+<div class="oui-radio oui-radio_thumbnail-light">
+  <input class="oui-radio__input" type="radio" name="oui-radio-3-11" value="oui-radio-3-11" id="oui-radio-3-11" checked="checked" disabled="disabled" />
+  <label class="oui-radio__label-container" for="oui-radio-3-11">
+    <span class="oui-radio__label">Thumbnail Light [Checked + Disabled]</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+  </label>
+</div>
+
+<div class="oui-radio oui-radio_big oui-radio_thumbnail-light">
+  <input class="oui-radio__input" type="radio" name="oui-radio-3-12" value="oui-radio-3-12" id="oui-radio-3-12" />
+  <label class="oui-radio__label-container" for="oui-radio-3-12">
+    <span class="oui-radio__label">
+      Thumbnail Big Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+  </label>
+</div>
+
+<div class="oui-radio oui-radio_big oui-radio_thumbnail-light">
+  <input class="oui-radio__input" type="radio" name="oui-radio-3-13" value="oui-radio-3-13" id="oui-radio-3-13" checked="checked" />
+  <label class="oui-radio__label-container" for="oui-radio-3-13">
+    <span class="oui-radio__label">Thumbnail Big Light [Checked]</span>
+    <span class="oui-radio__description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+    </span>
+  </label>
+</div>
+```
+
 ### Success
 
 ```html:preview
@@ -404,6 +470,21 @@ Will stylize your radio as a thumbnail one.
   @inner-circle-size: Number,
   @inner-circle-top: Number,
   @inner-circle-left: Number
+)
+```
+
+### .radio-thumbnail-light
+
+Will stylize your radio as a light thumbnail one.
+
+```less
+.radio-thumbnail(
+  @selector: Class,
+  @border-color: Color,
+  @border-color-hover: Color,
+  @background: Color,
+  @background-hover: Color,
+  @border-size: Number
 )
 ```
 
