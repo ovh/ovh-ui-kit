@@ -2,7 +2,7 @@
   "name": "oui-less",
   "version": "0.0.0",
   "description": "A stylekit for the OVH brand (Less).",
-  "license": "UNLICENSED",
+  "license": "BSD-3-Clause",
   "scripts": {
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
     "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons",
