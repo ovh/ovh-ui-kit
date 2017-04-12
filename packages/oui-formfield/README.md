@@ -45,48 +45,48 @@ oui-formfield is a package which provides styles for the formfield component.
 
 <div class="oui-select-formfield">
   <div class="oui-select">
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <select id="select" name="select" class="oui-select__input">
       <option value="Option 1">Option 1</option>
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
+    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <label for="select" class="oui-label">Label for Select</label>
   </div>
 </div>
 
 <div class="oui-select-formfield">
   <div class="oui-select">
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
-    <select id="select-disabled" name="select-disabled" class="oui-select__input" disabled="">
+    <select id="select-disabled" name="select-disabled" class="oui-select__input" disabled>
       <option value="Option 1">Option 1</option>
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
+    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <label for="select-disabled" class="oui-label">Label for Select disabled</label>
   </div>
 </div>
 
 <div class="oui-select-formfield">
   <div class="oui-select oui-select_warning">
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <select id="select-warning" name="select-warning" class="oui-select__input">
       <option value="Option 1">Option 1</option>
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
+    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <label for="select-warning" class="oui-label">Label for Select warning</label>
   </div>
 </div>
 
 <div class="oui-select-formfield">
   <div class="oui-select oui-select_error">
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <select id="select-error" name="select-error" class="oui-select__input">
       <option value="Option 1">Option 1</option>
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
+    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
     <label for="select-error" class="oui-label">Label for Select error</label>
   </div>
 </div>

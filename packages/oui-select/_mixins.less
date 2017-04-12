@@ -24,7 +24,7 @@
       max-width: 100%;
       height: ~"calc(@{font-size} * 2.25)";
       min-height: rem-calc(36);
-      padding: 0 0 0 @padding;
+      padding: 0 rem-calc(20) 0 @padding;
       border: 1px solid @border-color;
       border-radius: @oui-global-base-radius;
       background: #ffffff;
@@ -37,6 +37,7 @@
 
       // Firefox adds a small padding before text so we need to remove it
       @-moz-document url-prefix() {
+        padding-right: 0;
         padding-left: calc(@padding - 0.4rem);
       }
 
