@@ -1,6 +1,6 @@
 {
-  "name": "oui-less",
-  "description": "A stylekit for the OVH brand (Less).",
+  "name": "ovh-ui-kit",
+  "description": "A LESS stylekit for the OVH brand.",
   "license": "BSD-3-Clause",
   "ignore": [
     "node_modules"

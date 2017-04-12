@@ -17,8 +17,8 @@ proposal first.
 # Coding style rules
 
 * Use the [BEM CSS selector naming convention](https://en.bem.info/methodology/naming-convention/).
-* Lint your code with stylelint: `stylelint --syntax less 'packages/**/*.less'`.
-* Test your build: `rimraf dist && npm run build:less && npm run build:icons`.
+* Lint your code with stylelint: `npm run lint`.
+* Test your build: `npm run build`.
 
 # Submitting Modifications
 
