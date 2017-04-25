@@ -285,3 +285,12 @@ The block class is `oui-icon` (top-level element).
     `<i class="oui-icon oui-icon-chevron-left_line" aria-hidden="true"></i>`
   </div>
 </div>
+
+### Thin Icons
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i>`
+  </div>
+</div>
