@@ -257,3 +257,31 @@ The block class is `oui-icon` (top-level element).
     `<i class="oui-icon oui-icon-check_line" aria-hidden="true"></i>`
   </div>
 </div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chevron-up_line" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-chevron-up_line" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chevron-right_line" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-chevron-right_line" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chevron-down_line" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-chevron-down_line" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-chevron-left_line" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-chevron-left_line" aria-hidden="true"></i>`
+  </div>
+</div>
