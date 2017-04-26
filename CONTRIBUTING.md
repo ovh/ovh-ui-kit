@@ -106,7 +106,7 @@ yarn link
 
 1. Start from your workspace directory
     example:`~/workspace`
-2. `git clone` the ovh-ui-kit-documentation` repository locally
+2. `git clone` the **ovh-ui-kit-documentation** repository locally
 3. Move to the `ovh-ui-kit` directory
 4. Install external dependencies
 5. Use your local `ovh-ui-kit` repository instead of the remote dependency
