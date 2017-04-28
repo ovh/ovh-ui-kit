@@ -12,9 +12,6 @@
     "preversion": "npm build",
     "postversion": "git push && git push --tags"
   },
-  "dependencies": {
-    "less-plugin-remcalc": "git+ssh://git@stash.ovh.net:7999/UXTOOLS/less-plugin-remcalc.git"
-  },
   "devDependencies": {
     "icon-font-generator": "^1.0.7",
     "less": "^2.7.2",
