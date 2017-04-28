@@ -17,7 +17,7 @@ yarn add --dev "https://github.com/ovh-ux/ovh-ui-kit"
 
 Follow guides for those dependencies, because you need to integrate them by yourself:
 
-- [ux.tools/less-plugin-remcalc](#!/documentation/less-plugin-remcalc)
+- less-plugin-remcalc (will be released soon).
 
 ### Integration
 
