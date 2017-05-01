@@ -70,7 +70,7 @@
       color: #b3b3b3;
       text-shadow: none;
       cursor: not-allowed;
-      
+
       ~ .@{icon-selector} {
         background-color: @oui-color-concrete;
       }
@@ -113,7 +113,7 @@
     @status-icon-color: "oui-color-@{status}-medium";
     @status-border-color: "oui-color-@{status}-light";
     @status-background-color: "oui-color-@{status}-fade";
-    
+
     &_@{status} .@{select-selector}__input,
     &_@{status} .@{select-selector}__input:hover,
     &_@{status} .@{select-selector}__input:active,
@@ -122,14 +122,15 @@
       background-color: @@status-background-color;
       color: @@status-font-color;
 
-      ~ .@{icon-selector} { 
+      ~ .@{icon-selector} {
         box-shadow: none;
         background-color: @@status-background-color;
-        
-        
+
+        /* stylelint-disable max-nesting-depth */
         &::before {
           color: @@status-font-color;
         }
+        /* stylelint-enable max-nesting-depth */
       }
     }
 

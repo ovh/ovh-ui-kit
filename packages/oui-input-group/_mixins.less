@@ -15,7 +15,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0 0 rem-calc(20);
-    
+
     & > .oui-button {
       width: rem-calc(100);
     }
@@ -53,11 +53,13 @@
       &__number {
         -moz-appearance: textfield;
 
+        /* stylelint-disable max-nesting-depth */
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
           -webkit-appearance: none;
           margin: 0;
         }
+        /* stylelint-enable max-nesting-depth */
       }
 
       & + .@{input-selector},
