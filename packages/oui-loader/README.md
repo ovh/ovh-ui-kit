@@ -16,9 +16,7 @@ oui-loader is a package which provide styles for the loader component.
 
 ```html:preview
 <div class="oui-loader oui-loader_s">
-  <div class="oui-loader__container">
-    <div class="oui-loader__image"></div>
-  </div>
+  <div class="oui-loader__image"></div>
 </div>
 ```
 
@@ -26,9 +24,7 @@ oui-loader is a package which provide styles for the loader component.
 
 ```html:preview
 <div class="oui-loader oui-loader_l">
-  <div class="oui-loader__container">
-    <div class="oui-loader__image"></div>
-  </div>
+  <div class="oui-loader__image"></div>
 </div>
 ```
 

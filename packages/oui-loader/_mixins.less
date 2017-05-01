@@ -2,6 +2,9 @@
 
 #oui {
   .loader-base() {
+    position: relative;
+    margin: auto;
+
     @keyframes scale {
       0% {
         opacity: 1;
@@ -22,11 +25,6 @@
       100% {
         transform: rotate(360deg);
       }
-    }
-
-    &__container {
-      position: relative;
-      background: none;
     }
 
     &__image {
@@ -50,10 +48,8 @@
     @speed-rotation: @oui-loader-s-speed-rotation,
     @speed-scale: @oui-loader-s-speed-scale
   ) {
-    .@{selector}__container {
-      width: ~"calc(@{size} + @{spacing})";
-      height: ~"calc(@{size} + @{spacing})";
-    }
+    width: ~"calc(@{size} + @{spacing})";
+    height: ~"calc(@{size} + @{spacing})";
 
     .@{selector}__image {
       width: @size;
@@ -71,10 +67,8 @@
     @speed-rotation: @oui-loader-l-speed-rotation,
     @speed-scale: @oui-loader-l-speed-scale
   ) {
-    .@{selector}__container {
-      width:  ~"calc(@{size} + @{spacing})";
-      height: ~"calc(@{size} + @{spacing})";
-    }
+    width: ~"calc(@{size} + @{spacing})";
+    height: ~"calc(@{size} + @{spacing})";
 
     .@{selector}__image {
       width: @size;
