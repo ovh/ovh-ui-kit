@@ -157,7 +157,7 @@
         color: @outline-color-active;
       }
 
-      .@{checkbox-selector}__icon::before { 
+      .@{checkbox-selector}__icon::before {
         background: #e2f3f8;
       }
     }
@@ -177,7 +177,7 @@
         color: @oui-color-dusty;
       }
 
-      .@{checkbox-selector}__icon::before { 
+      .@{checkbox-selector}__icon::before {
         background: lighten(@oui-color-dusty, 35);
       }
     }
@@ -275,6 +275,7 @@
     }
   }
 
+  /* stylelint-disable max-nesting-depth */
   .checkbox-status(@index: length(@oui-checkbox-status)) when (@index > 0) {
     .checkbox-status(@index - 1);
 
@@ -285,7 +286,7 @@
     @status-icon-color: "oui-color-@{status}-medium";
     @status-border-color: "oui-color-@{status}-light";
     @status-background-color: "oui-color-@{status}-fade";
-    
+
     &_@{status},
     &_@{status}:hover {
       .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container,
@@ -312,13 +313,13 @@
       }
 
       .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:active {
-        .@{checkbox-selector}__icon::before { 
+        .@{checkbox-selector}__icon::before {
           background: fade(#fff, 80%);
         }
       }
 
       .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
-      .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container { 
+      .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
         .@{checkbox-selector}__icon::before {
           box-shadow: 0px 0px 3px 1px @@status-border-color;
         }
@@ -352,10 +353,11 @@
 
         .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
         .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
-          border-color: @@status-border-color; 
+          border-color: @@status-border-color;
           box-shadow: 0px 0px 3px 0px @@status-border-color;
         }
       }
     }
   }
+  /* stylelint-enable max-nesting-depth */
 }

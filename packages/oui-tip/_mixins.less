@@ -12,8 +12,8 @@
     border: 0 none;
     margin: 0;
     line-height: unset;
-    
-    &:after, &:before {
+
+    &::after, &::before {
       content: "  ";
       position: absolute;
       width: 0;
@@ -22,12 +22,12 @@
       pointer-events: none;
     }
 
-    &:after {
+    &::after {
       border-width: @size;
       border-color: rgba(255, 255, 255, 0);
     }
 
-    &:before {
+    &::before {
       border-width: ~"calc(@{size} + 3px)";
       border-color: rgba(0, 0, 0, 0);
     }
@@ -38,17 +38,17 @@
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
-    &:after, &:before {
+    &::after, &::before {
       top: 100%;
       left: 50%;
     }
 
-    &:after {
+    &::after {
       margin-left: -@size;
       border-top-color: @background-color;
     }
 
-    &:before {
+    &::before {
       margin-left: ~"calc(-@{size} - 3px)";
       border-top-color: @border-color;
     }
@@ -60,17 +60,17 @@
     @background-color: @oui-tip-background-color
 
   ) {
-    &:after, &:before {
+    &::after, &::before {
       top: 50%;
       right: 100%;
     }
 
-    &:after {
+    &::after {
       margin-top: -@size;
       border-right-color: @background-color;
     }
 
-    &:before {
+    &::before {
       margin-top: ~"calc(-@{size} - 3px)";
       border-right-color: @border-color;
     }
@@ -81,17 +81,17 @@
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
-    &:after, &:before {
+    &::after, &::before {
       bottom: 100%;
       left: 50%;
     }
 
-    &:after {
+    &::after {
       margin-left: -@size;
       border-bottom-color: @background-color;
     }
 
-    &:before {
+    &::before {
       margin-left: ~"calc(-@{size} - 3px)";
       border-bottom-color: @border-color;
     }
@@ -102,17 +102,17 @@
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
-    &:after, &:before {
+    &::after, &::before {
       top: 50%;
       left: 100%;
     }
 
-    &:after {
+    &::after {
       margin-top: -@size;
       border-left-color: @background-color;
     }
 
-    &:before {
+    &::before {
       margin-top: ~"calc(-@{size} - 3px)";
       border-left-color: @border-color;
     }
