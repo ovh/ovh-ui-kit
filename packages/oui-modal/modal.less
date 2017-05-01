@@ -1,0 +1,12 @@
+@import './_mixins';
+
+.oui-modal {
+  @oui-button-selector: oui-button;
+
+  #oui > .modal-base(@oui-button-selector);
+  #oui > .modal-warning();
+
+  &_shadow {
+    #oui > .modal-shadow();
+  }
+}

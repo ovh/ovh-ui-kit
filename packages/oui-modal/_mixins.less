@@ -1,0 +1,113 @@
+@import './_variables';
+
+#oui {
+  .modal-base(
+    @button-selector,
+    @body-padding: @oui-modal-body-padding,
+    @close-button-width: @oui-modal-close-button-size,
+    @close-button-height: @oui-modal-close-button-size,
+    @close-button-color: @oui-modal-close-button-color,
+    @close-button-font-size: @oui-modal-close-button-size,
+    @close-button-padding: @oui-modal-close-button-padding
+  ) {
+    border-radius: @oui-global-base-radius-medium;
+    border: none;
+
+    &__header {
+      position: relative;
+      height: @close-button-height + @close-button-padding * 2;
+      border-top-right-radius: @oui-global-base-radius-medium;
+      border-top-left-radius: @oui-global-base-radius-medium;
+      background-color: #edefec;
+    }
+
+    &__close-button {
+      #oui > .animate();
+
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: @close-button-width;
+      min-height: @close-button-height;
+      padding: @close-button-padding;
+      border: none;
+      margin: 0;
+      overflow: hidden;
+      background-color: transparent;
+      color: @close-button-color;
+      font-size: @close-button-font-size;
+      line-height: 1;
+      text-align: center;
+
+      &::before {
+        display: block;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        #oui > .animate();
+
+        outline: none;
+        opacity: 1;
+      }
+    }
+
+    &__body {
+      position: relative;
+      padding: @body-padding;
+    }
+
+    &__title {
+      margin-top: 0;
+      color: @oui-color-zodiac;
+      font-size: rem-calc(21);
+      line-height: rem-calc(22.4);
+      letter-spacing: 0.01em;
+      font-weight: 600;
+    }
+
+    &__text {
+      color: @oui-color-zodiac;
+      font-size: rem-calc(16);
+      line-height: rem-calc(22.4);
+      letter-spacing: 0.01em;
+      font-weight: 400;
+
+      strong {
+          font-weight: 600;
+      }
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 36px 24px;
+      border-top: 0 none;
+
+      .@{button-selector} {
+        margin-bottom: 0;
+      }
+
+      .@{button-selector} + .@{button-selector} {
+        margin-left: rem-calc(5);
+      }
+    }
+  }
+
+  .modal-shadow() {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-warning() {
+    .oui-icon-warning_circle {
+      position: absolute;
+      display: block;
+      top: @oui-modal-icon-position-top;
+      left: @oui-modal-icon-position-left;
+      color: @oui-modal-icon-warning-color;
+      font-size: @oui-modal-icon-font-size;
+    }
+  }
+}
