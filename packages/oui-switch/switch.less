@@ -1,0 +1,12 @@
+@import './_mixins';
+
+.oui-switch {
+  @oui-switch-selector: oui-switch;
+  @oui-icon-selector: oui-icon;
+
+  #oui > .switch(@oui-switch-selector, @oui-icon-selector);
+
+  &_square {
+    #oui > .switch-square(@oui-switch-selector);
+  }
+}
