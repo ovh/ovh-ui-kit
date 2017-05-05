@@ -2,6 +2,8 @@
 @import './_mixins';
 
 .oui-message {
+  @oui-message-selector: oui-message;
+
   #oui > .message-normalize();
   #oui > .message-base();
 
@@ -15,10 +17,12 @@
 
   &_warning {
     #oui > .message-warning();
+    #oui > .message-l-warning(@oui-message-selector);
   }
 
   &_error {
     #oui > .message-error();
+    #oui > .message-l-error(@oui-message-selector);
   }
 
   &_icon-m {
@@ -31,5 +35,9 @@
 
   &_no-border {
     #oui > .message-no-border();
+  }
+
+  &_l {
+    #oui > .message-l(@oui-message-selector);
   }
 }
