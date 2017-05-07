@@ -7,7 +7,7 @@ oui-label is a package which provides styles for the label component.
 ## Installation
 
 ```less
-@import 'oui-label/label;
+@import 'oui-label/label';
 ```
 
 ## Usage

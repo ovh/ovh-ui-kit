@@ -10,15 +10,15 @@
     @icon-color: @oui-icon-color,
     @spacing: @oui-icon-spacing
   ) {
-      display: inline-block;
-      margin: @spacing;
-      padding: 0;
-      color: @icon-color;
-      font-family: 'Oui Icons';
-      font-size: @icon-size;
-      line-height: 1;
-      font-weight: normal;
-      font-style: normal;
+    display: inline-block;
+    margin: @spacing;
+    padding: 0;
+    color: @icon-color;
+    font-family: 'Oui Icons';
+    font-size: @icon-size;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
   }
 
   .for(@array)   when (default()) {.for-impl_(length(@array))}
@@ -60,6 +60,7 @@
   ) {
     position: relative;
     z-index: 1;
+
     &::after {
       content: "";
       display: block;
@@ -75,6 +76,7 @@
       border-radius: 50%;
       z-index: -1;
     }
+
     &.oui-icon-warning_circle::after {
       width: 25%;
       height: 75%;

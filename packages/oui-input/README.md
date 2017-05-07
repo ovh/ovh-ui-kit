@@ -7,7 +7,7 @@ oui-input is a package which provides styles for the input component.
 ## Installation
 
 ```less
-  @import 'oui-input/input;
+  @import 'oui-input/input';
 ```
 
 ## Usage

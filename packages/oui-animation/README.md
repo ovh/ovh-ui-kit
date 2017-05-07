@@ -16,4 +16,3 @@ oui-animation is a package which provides tools as mixins for managing motion.
 | --- | --- | --- |
 | `#oui > .animate(@duration)` | `@duration: @oui-animation-default-timing` | will animate using the **default** animation timing function |
 | `#oui > .animate-fast-out-slow-in` | `@duration: @oui-animation-default-timing` | the same but using **fast-out-slow-in** animation function instead |
-

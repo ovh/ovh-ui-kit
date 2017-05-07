@@ -7,7 +7,7 @@ oui-modal is a package which provide styles for the `oui-modal` component.
 ## Installation
 
 ```less
-  @import 'oui-modal/modal.less';
+  @import 'oui-modal/modal';
 ```
 
 ## Usage
