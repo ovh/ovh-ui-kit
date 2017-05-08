@@ -12,6 +12,9 @@
     "preversion": "npm build",
     "postversion": "git push && git push --tags"
   },
+  "dependencies": {
+    "less-plugin-remcalc": "^0.0.1"
+  },
   "devDependencies": {
     "icon-font-generator": "^1.0.7",
     "less": "^2.7.2",
