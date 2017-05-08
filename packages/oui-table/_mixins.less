@@ -95,7 +95,21 @@
 
       &::after {
         .table-header-arrow();
+        opacity: 0;
         content: @oui-icon-index-arrow-up;
+      }
+
+      &:hover::after {
+        #oui > .animate();
+
+        opacity: .5;
+      }
+
+      &:focus::after,
+      &:active::after {
+        #oui > .animate();
+
+        opacity: 1;
       }
     }
   }
@@ -110,7 +124,33 @@
 
       &::after {
         .table-header-arrow();
+        opacity: 0;
         content: @oui-icon-index-arrow-down;
+      }
+
+      &:hover::after {
+        #oui > .animate();
+
+        opacity: .5;
+      }
+
+      &:focus::after,
+      &:active::after {
+        #oui > .animate();
+        
+        opacity: 1;
+      }
+    }
+  }
+
+  .table-cell-sorted(
+  ) {
+    &.oui-table__header {
+      &::after,
+      &:hover::after,
+      &:focus::after,
+      &:active::after {
+        opacity: 1;
       }
     }
   }
@@ -121,7 +161,6 @@
   ) {
     margin: @margin;
 
-    /* stylelint-disable max-nesting-depth */
     &__headers {
       display: flex;
       justify-content: stretch;
@@ -129,7 +168,6 @@
       .@{selector}-container__header {
         .table-cell();
         .table-header();
-
         flex: 1 1;
         box-sizing: border-box;
 
@@ -141,7 +179,8 @@
 
         &.@{selector}__cell_sortable {
           &:not(.@{selector}__cell_sortable-asc):not(.@{selector}__cell_sortable-desc) {
-            &:focus, &:hover {
+            &:hover,
+            &:focus {
               &::after {
                 .table-header-arrow();
                 content: @oui-icon-index-arrow-up;
@@ -160,7 +199,6 @@
         }
       }
     }
-    /* stylelint-enable max-nesting-depth */
 
     &__body {
       overflow: hidden;
@@ -171,7 +209,6 @@
         table-layout: fixed;
         margin: -1px 0 0;
 
-	/* stylelint-disable max-nesting-depth */
         .@{selector}__headers {
           .@{selector}__header {
             opacity: 0;
@@ -191,7 +228,6 @@
             height: 0;
           }
         }
-	/* stylelint-enable max-nesting-depth */
       }
     }
   }
