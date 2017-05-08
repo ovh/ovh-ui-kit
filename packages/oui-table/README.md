@@ -17,6 +17,7 @@ oui-table is a package which provides styles for the table component.
   <thead class="oui-table__headers">
     <tr>
       <th class="oui-table__header oui-table__cell_sortable" tabindex="0">Filename</th>
+      <th class="oui-table__header oui-table__cell_sortable-asc oui-table__cell_sorted" tabindex="0">Id</th>
       <th class="oui-table__header oui-table__cell_sortable-asc" tabindex="0">Size</th>
       <th class="oui-table__header oui-table__cell_sortable-desc" tabindex="0">Creation</th>
     </tr>
@@ -24,36 +25,43 @@ oui-table is a package which provides styles for the table component.
   <tbody class="oui-table__body">
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">1</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">2</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">3</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">4</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">5</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">6</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td class="oui-table__cell">abc</td>
+      <td class="oui-table__cell">7</td>
       <td class="oui-table__cell">123 KB</td>
       <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
@@ -65,7 +73,7 @@ oui-table is a package which provides styles for the table component.
 
 ```
 ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
-┌ oui-table [table]              ───────────────────────────────────────────────────────────────┐
+│ oui-table [table]             │───────────────────────────────────────────────────────────────┐
 ├ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘                                                               │
 │┌oui-table__headers [thead]───────────────────────────────────────────────────────────────────┐│
 ││┌oui-table__row [tr]────────────────────────────────────────────────────────────────────────┐││
@@ -102,7 +110,7 @@ This markup is automatically created with the AngularJS oui-table component.
 
 ```
 ┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
-┌ oui-table-container           ────────────────────────────────────────────────────────────────┐
+│ oui-table-container           │───────────────────────────────────────────────────────────────┐
 ├ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┘                                                               │
 │┌oui-table-container__headers─────────────────────────────────────────────────────────────────┐│
 ││┌oui-table-container__header──┐┌oui-table-container__header──┐┌oui-table-container__header──┐││

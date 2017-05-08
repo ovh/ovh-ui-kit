@@ -12,40 +12,67 @@ oui-message is a package which provide styles for the `oui-message` component.
 
 ## Usage
 
-### Default
+### Initial
 
 ```html:preview
 <div class="oui-message" role="alert">
   <p class="oui-message__body">Default message</p>
 </div>
+
+<div class="oui-message oui-message_info" role="alert">
+  <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Info message</p>
+</div>
+
+<div class="oui-message oui-message_success" role="alert">
+  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Success message</p>
+</div>
+
+<div class="oui-message oui-message_warning" role="alert">
+  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Warning message</p>
+</div>
+
+<div class="oui-message oui-message_error" role="alert">
+  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Error message</p>
+</div>
 ```
-### Default with close button
+### Close button
 
 ```html:preview
 <div class="oui-message" role="alert">
   <p class="oui-message__body">Default message with close button</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
-```
 
-### Info
-
-```html:preview
-<div class="oui-message oui-message_info" role="alert">
-  <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Info message</p>
-</div>
-```
-### Info with close button
-
-```html:preview
 <div class="oui-message oui-message_info" role="alert">
   <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
   <p class="oui-message__body">Info message with close button</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
+
+<div class="oui-message oui-message_success" role="alert">
+  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Success message with close button</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+
+<div class="oui-message oui-message_warning" role="alert">
+  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Warning message with close button</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+
+<div class="oui-message oui-message_error" role="alert">
+  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Error message with close button</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
 ```
-### Info with icon medium
+
+### Icon medium
 
 ```html:preview
 <div class="oui-message oui-message_info oui-message_icon-m" role="alert">
@@ -54,8 +81,29 @@ oui-message is a package which provide styles for the `oui-message` component.
   Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
   imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
 </div>
+
+<div class="oui-message oui-message_success oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+</div>
+
+<div class="oui-message oui-message_warning oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+</div>
+
+<div class="oui-message oui-message_error oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+</div>
 ```
-### Info with icon medium and close button
+### Icon medium and close button
 
 ```html:preview
 <div class="oui-message oui-message_info oui-message_icon-m" role="alert">
@@ -65,23 +113,74 @@ oui-message is a package which provide styles for the `oui-message` component.
   imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
+
+<div class="oui-message oui-message_success oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+
+<div class="oui-message oui-message_warning oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+
+<div class="oui-message oui-message_error oui-message_icon-m" role="alert">
+  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
+  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
+  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
 ```
-### Info with no icon
+### No icon
 
 ```html:preview
 <div class="oui-message oui-message_info oui-message_no-icon" role="alert">
   <p class="oui-message__body">Info message no icon</p>
 </div>
+
+<div class="oui-message oui-message_success oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Success message no icon</p>
+</div>
+
+<div class="oui-message oui-message_warning oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Warning message no icon</p>
+</div>
+
+<div class="oui-message oui-message_error oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Error message no icon</p>
+</div>
 ```
-### Info with no icon and close button
+### Close button and no icon
 
 ```html:preview
 <div class="oui-message oui-message_info oui-message_no-icon" role="alert">
   <p class="oui-message__body">Info message with close button and no icon</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
+
+<div class="oui-message oui-message_success oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Success message with close button and no icon</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+
+<div class="oui-message oui-message_warning oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Warning message with close button and no icon</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
+
+<div class="oui-message oui-message_error oui-message_no-icon" role="alert">
+  <p class="oui-message__body">Error message with close button and no icon</p>
+  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
+</div>
 ```
-### Info with no border
+### No border
 
 ```html:preview
 <div class="oui-message oui-message_info oui-message_no-border" role="alert">
@@ -92,64 +191,7 @@ oui-message is a package which provide styles for the `oui-message` component.
 <div class="oui-message oui-message_info oui-message_no-icon oui-message_no-border" role="alert">
   <p class="oui-message__body"><strong>Info message</strong> no border</p>
 </div>
-```
 
-### Success
-
-```html:preview
-<div class="oui-message oui-message_success" role="alert">
-  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Success message</p>
-</div>
-```
-### Success with close button
-
-```html:preview
-<div class="oui-message oui-message_success" role="alert">
-  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Success message with close button</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Success with icon medium
-
-```html:preview
-<div class="oui-message oui-message_success oui-message_icon-m" role="alert">
-  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
-  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
-  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
-</div>
-```
-### Success with icon medium and close button
-
-```html:preview
-<div class="oui-message oui-message_success oui-message_icon-m" role="alert">
-  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
-  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
-  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Success with no icon
-
-```html:preview
-<div class="oui-message oui-message_success oui-message_no-icon" role="alert">
-  <p class="oui-message__body">Success message no icon</p>
-</div>
-```
-### Success with close button and no icon
-
-```html:preview
-<div class="oui-message oui-message_success oui-message_no-icon" role="alert">
-  <p class="oui-message__body">Success message with close button and no icon</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Success with no border
-
-```html:preview
 <div class="oui-message oui-message_success oui-message_no-border" role="alert">
   <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
   <p class="oui-message__body">Success message no border</p>
@@ -158,64 +200,7 @@ oui-message is a package which provide styles for the `oui-message` component.
 <div class="oui-message oui-message_success oui-message_no-icon oui-message_no-border" role="alert">
   <p class="oui-message__body"><strong>Success message</strong> no border</p>
 </div>
-```
 
-### Warning
-
-```html:preview
-<div class="oui-message oui-message_warning" role="alert">
-  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>
-  <p class="oui-message__body">Warning message</p>
-</div>
-```
-### Warning with close button
-
-```html:preview
-<div class="oui-message oui-message_warning" role="alert">
-  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Warning message with close button</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Warning with icon medium
-
-```html:preview
-<div class="oui-message oui-message_warning oui-message_icon-m" role="alert">
-  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
-  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
-  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
-</div>
-```
-### Warning with icon medium and close button
-
-```html:preview
-<div class="oui-message oui-message_warning oui-message_icon-m" role="alert">
-  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
-  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
-  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Warning with no icon
-
-```html:preview
-<div class="oui-message oui-message_warning oui-message_no-icon" role="alert">
-  <p class="oui-message__body">Warning message no icon</p>
-</div>
-```
-### Warning with close button and no icon
-
-```html:preview
-<div class="oui-message oui-message_warning oui-message_no-icon" role="alert">
-  <p class="oui-message__body">Warning message with close button and no icon</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Warning with no border
-
-```html:preview
 <div class="oui-message oui-message_warning oui-message_no-border" role="alert">
   <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
   <p class="oui-message__body">Warning message no border</p>
@@ -224,64 +209,7 @@ oui-message is a package which provide styles for the `oui-message` component.
 <div class="oui-message oui-message_warning oui-message_no-icon oui-message_no-border" role="alert">
   <p class="oui-message__body"><strong>Warning message</strong> no border</p>
 </div>
-```
 
-### Error
-
-```html:preview
-<div class="oui-message oui-message_error" role="alert">
-  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Error message</p>
-</div>
-```
-### Error with close button
-
-```html:preview
-<div class="oui-message oui-message_error" role="alert">
-  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Error message with close button</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Error with icon medium
-
-```html:preview
-<div class="oui-message oui-message_error oui-message_icon-m" role="alert">
-  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
-  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
-  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
-</div>
-```
-### Error with icon medium and close button
-
-```html:preview
-<div class="oui-message oui-message_error oui-message_icon-m" role="alert">
-  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
-  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra in est sed mollis. Phasellus eu fringilla sem.
-  Nunc molestie tellus et odio dictum condimentum. Vivamus eleifend mauris eget sem cursus, et commodo ipsum ultrices. Praesent mollis lacus quis
-  imperdiet laoreet. In quis ornare turpis. Aliquam sit amet tempus urna. Praesent posuere nisl ut nibh consectetur sagittis.</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Error with no icon
-
-```html:preview
-<div class="oui-message oui-message_error oui-message_no-icon" role="alert">
-  <p class="oui-message__body">Error message no icon</p>
-</div>
-```
-### Error with close button and no icon
-
-```html:preview
-<div class="oui-message oui-message_error oui-message_no-icon" role="alert">
-  <p class="oui-message__body">Error message with close button and no icon</p>
-  <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
-</div>
-```
-### Error with no border
-
-```html:preview
 <div class="oui-message oui-message_error oui-message_no-border" role="alert">
   <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
   <p class="oui-message__body">Error message no border</p>

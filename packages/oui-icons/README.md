@@ -15,7 +15,6 @@ oui-icons is a package which provide styles for the icons.
 ### Icon
 
 ```html:preview
-<i class="oui-icon oui-icon-close"></i>
 <i class="oui-icon oui-icon-error_circle"></i>
 <i class="oui-icon oui-icon-info_circle"></i>
 <i class="oui-icon oui-icon-success_circle"></i>
@@ -106,6 +105,13 @@ The block class is `oui-icon` (top-level element).
 </div>
 
 <div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-help_circle" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-help_circle" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-info_circle" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-info_circle" aria-hidden="true"></i>`
@@ -179,6 +185,20 @@ The block class is `oui-icon` (top-level element).
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-arrow-down" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-arrow-down" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-error" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-error" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-success" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-success" aria-hidden="true"></i>`
   </div>
 </div>
 
