@@ -45,7 +45,7 @@ oui-navbar is a package which provide styles for the navbar component.
 ## Mixins
 
 ```less
-  @import 'oui-navbar/navbar/_mixins';
+  @import 'oui-navbar/_mixins';
 ```
 
 ### .navbar

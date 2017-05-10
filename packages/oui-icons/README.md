@@ -33,7 +33,7 @@ oui-icons is a package which provide styles for the icons.
 ## Mixins
 
 ```less
-@import 'oui-icons/icons/_mixins';
+@import 'oui-icons/_mixins';
 ```
 
 ### .icon

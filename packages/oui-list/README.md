@@ -163,7 +163,7 @@ oui-list is a package which provide styles for the list component.
     <li class="oui-list__item oui-list__item_checked">
       <span class="oui-list__header">List item checked</span>
       <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
     </li>
@@ -173,7 +173,7 @@ oui-list is a package which provide styles for the list component.
     <li class="oui-list__item oui-list__item_complete">
       <a href="#" class="oui-list__header">List item complete</a>
       <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
     </li>

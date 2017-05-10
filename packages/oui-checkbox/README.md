@@ -55,8 +55,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <input class="oui-checkbox__input" id="oui-checkbox1-4" name="oui-checkbox1-4" type="checkbox" disabled="disabled">
   <label class="oui-checkbox__label-container" for="oui-checkbox1-4">
     <span class="oui-checkbox__label">
-      Checkbox Unchecked Disabled - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Checkbox Unchecked Disabled - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -70,8 +70,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <input class="oui-checkbox__input" id="oui-checkbox1-5" name="oui-checkbox1-5" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox1-5">
     <span class="oui-checkbox__label">
-      Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -90,8 +90,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox-1">
     <span class="oui-checkbox__label">Checkbox Checked</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -121,8 +121,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox-3">
     <span class="oui-checkbox__label">Checkbox Checked Disabled</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -136,12 +136,12 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <input class="oui-checkbox__input" id="oui-checkbox-4" name="oui-checkbox-4" type="checkbox" disabled="disabled">
   <label class="oui-checkbox__label-container" for="oui-checkbox-4">
     <span class="oui-checkbox__label">
-      Checkbox Unchecked Disabled - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Checkbox Unchecked Disabled - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -155,11 +155,11 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <input class="oui-checkbox__input" id="oui-checkbox-5" name="oui-checkbox-5" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox-5">
     <span class="oui-checkbox__label">
-      Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -179,7 +179,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-1">
     <span class="oui-checkbox__label">Checkbox Thumbnail</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -195,7 +195,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-2">
     <span class="oui-checkbox__label">Checkbox Thumbnail Checked</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -211,7 +211,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-3">
     <span class="oui-checkbox__label">Checkbox Thumbnail Disabled</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -227,7 +227,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-4">
     <span class="oui-checkbox__label">Checkbox Thumbnail Checked Disabled</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -242,13 +242,13 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <input class="oui-checkbox__input" id="oui-checkbox3-5" name="oui-checkbox3-5" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox3-5">
     <span class="oui-checkbox__label">
-      Checkbox Thumbnail M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox Thumbnail M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -268,7 +268,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-6">
     <span class="oui-checkbox__label">Checkbox Thumbnail Light</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -284,7 +284,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-7">
     <span class="oui-checkbox__label">Checkbox Thumbnail Light Checked</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -300,7 +300,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-8">
     <span class="oui-checkbox__label">Checkbox Thumbnail Light Disabled</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -316,7 +316,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox3-9">
     <span class="oui-checkbox__label">Checkbox Thumbnail Light Checked Disabled</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -331,13 +331,13 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <input class="oui-checkbox__input" id="oui-checkbox3-10" name="oui-checkbox3-10" type="checkbox">
   <label class="oui-checkbox__label-container" for="oui-checkbox3-10">
     <span class="oui-checkbox__label">
-      Checkbox Thumbnail M Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Checkbox Thumbnail M Light - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
@@ -381,8 +381,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox4-3">
     <span class="oui-checkbox__label">Checkbox Success Description</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -399,8 +399,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
       Checkbox Success M Thumbnail
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -443,8 +443,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox5-3">
     <span class="oui-checkbox__label">Checkbox Warning Description</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -461,8 +461,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
       Checkbox Warning M Thumbnail
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -505,8 +505,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
   <label class="oui-checkbox__label-container" for="oui-checkbox6-3">
     <span class="oui-checkbox__label">Checkbox Error Description</span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -523,8 +523,8 @@ oui-checkbox is a package which provide styles for the checkbox component.
       Checkbox Error M Thumbnail
     </span>
     <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. 
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla. 
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
+      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
