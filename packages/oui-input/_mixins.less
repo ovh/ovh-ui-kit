@@ -8,12 +8,23 @@
 
 #oui {
   .input-base(
+    @background-color: @oui-input-background-color,
+    @border-color: @oui-input-border-color,
     @font-color: @oui-input-font-color,
+    @background-color-focus: @oui-input-background-color-focus,
+    @border-color-focus: @oui-input-border-color-focus,
+    @background-color-disabled: @oui-input-background-color-disabled,
+    @border-color-disabled: @oui-input-border-color-disabled,
+    @font-color-disabled: @oui-input-font-color-disabled,
+    @background-color-read-only: @oui-input-background-color-read-only,
+    @border-color-read-only: @oui-input-border-color-read-only,
+    @font-color-read-only: @oui-input-font-color-read-only,
+    @selection-background-color: @oui-input-selection-background-color,
+    @selection-font-color: @oui-input-selection-font-color,
     @font-size: @oui-input-font-size,
     @font-weight: @oui-input-font-weight,
     @padding: @oui-input-padding,
-    @margin: @oui-input-margin,
-    @border-color: @oui-input-border-color
+    @margin: @oui-input-margin
   ) {
     display: block;
     width: 100%;
@@ -23,44 +34,44 @@
     border-radius: @oui-global-base-radius;
     margin: @margin;
     vertical-align: middle;
+    background-color: @background-color;
     color: @font-color;
     font-size: @font-size;
     line-height: rem-calc(34);
     font-weight: @font-weight;
 
     &::selection {
-      background: #0090b1;
-      color: #fff;
+      background: @selection-background-color;
+      color: @selection-font-color;
     }
 
     &::-moz-selection {
-      background: #0090b1;
-      color: #fff;
+      background: @selection-background-color;
+      color: @selection-font-color;
     }
 
     &:focus {
       #oui > .animate();
 
-      border-color: #0090b1;
+      border-color: @border-color-focus;
       outline: none;
       box-shadow: inset 1px 1px 2px 0px rgba(102, 199, 214, 0.5), 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
-      background-color: #f5fcfd;
-      color: #172445;
+      background-color: @background-color-focus;
       text-decoration: none;
     }
 
     &:disabled {
-      border-color: #e6e6e6;
-      background-color: @oui-color-concrete;
-      color: #b3b3b3;
+      border-color: @border-color-disabled;
+      background-color: @background-color-disabled;
+      color: @font-color-disabled;
       cursor: not-allowed;
     }
 
     &:read-only {
-      border-color: #e6e6e6;
+      border-color: @border-color-read-only;
       box-shadow: none;
-      background-color: @oui-color-concrete;
-      color: @oui-color-gothic;
+      background-color: @background-color-read-only;
+      color: @font-color-read-only;
       user-select: none;
     }
 
