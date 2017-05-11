@@ -13,7 +13,7 @@ Tips are used together with a relative positionned component as the `oui-message
 ## Installation
 
 ```less
-@import 'oui-tip/tip.less';
+@import 'oui-tip/tip';
 ```
 
 ## Usage

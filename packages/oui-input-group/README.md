@@ -9,7 +9,7 @@ oui-input-group is a package which provide styles to group inputs together.
 ## Installation
 
 ```less
-  @import 'oui-input-group/input-group;
+  @import 'oui-input-group/input-group';
 ```
 
 ## Usage

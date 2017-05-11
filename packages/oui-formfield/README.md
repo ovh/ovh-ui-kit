@@ -9,7 +9,7 @@ oui-formfield is a package which provides styles for the formfield component.
 ## Installation
 
 ```less
-@import 'oui-formfield/formfield;
+@import 'oui-formfield/formfield';
 ```
 
 ## Usage

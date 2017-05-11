@@ -7,7 +7,7 @@ oui-message is a package which provide styles for the `oui-message` component.
 ## Installation
 
 ```less
-  @import 'oui-message/message.less';
+  @import 'oui-message/message';
 ```
 
 ## Usage
