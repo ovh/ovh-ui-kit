@@ -4,6 +4,7 @@
   .modal-base(
     @button-selector,
     @body-padding: @oui-modal-body-padding,
+    @body-padding-no-icon: @oui-modal-body-padding-no-icon,
     @close-button-width: @oui-modal-close-button-size,
     @close-button-height: @oui-modal-close-button-size,
     @close-button-color: @oui-modal-close-button-color,
@@ -57,6 +58,10 @@
     &__body {
       position: relative;
       padding: @body-padding;
+
+      &_no-icon {
+        padding: @body-padding-no-icon;
+      }
     }
 
     &__title {
