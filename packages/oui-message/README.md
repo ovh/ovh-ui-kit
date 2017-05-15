@@ -220,6 +220,22 @@ oui-message is a package which provide styles for the `oui-message` component.
 </div>
 ```
 
+### Large
+
+```html:preview
+<div class="oui-message oui-message_warning oui-message_l" role="alert">
+  <i class="oui-message_l-icon" aria-hidden="true"></i>
+  <h1 class="oui-message__title">We are sorry, a problem occurred during the loading of the page.</h1>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis a nisl eget pretium. Phasellus.</p>
+</div>
+
+<div class="oui-message oui-message_error oui-message_l" role="alert">
+  <i class="oui-message_l-icon" aria-hidden="true"></i>
+  <h1 class="oui-message__title">We are sorry, a problem occurred during the loading of the page.</h1>
+  <p class="oui-message__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse convallis a nisl eget pretium. Phasellus.</p>
+</div>
+```
+
 ## Mixins
 
 ```less
@@ -377,6 +393,59 @@ Will stylize your message as a message with no border.
 #oui > .message-no-border();
 ```
 
+### .message-l
+
+Will stylize your message as a large message.
+
+```less
+#oui > .message-l(
+  @oui-message-selector: Class,
+  @padding: @oui-message-l-padding: Number,
+  @title-font-size: @oui-message-l-title-font-size: Number,
+  @body-font-size: @oui-message-l-body-font-size: Number,
+  @color: @oui-message-l-color: Color
+);
+```
+
+### .message-l-type-base
+
+Will stylize your message as a large message and add type styles.
+
+```less
+#oui > .message-l-type-base(
+  @oui-message-selector: Class,
+  @background-image: Image,
+  @icon-width: Number,
+  @icon-height: Number
+)
+```
+
+### .message-l-warning
+
+Will stylize your message as a large message.
+
+```less
+#oui > .message-l-warning(
+  @oui-message-selector: Class,
+  @background-image: Image,
+  @icon-width: Number,
+  @icon-height: Number
+)
+```
+
+### .message-l-error
+
+Will stylize your message as a large message.
+
+```less
+#oui > .message-l-error(
+  @oui-message-selector: Class,
+  @background-image: Image,
+  @icon-width: Number,
+  @icon-height: Number
+)
+```
+
 ## Classes
 
 ### Block
@@ -386,10 +455,12 @@ The block class is `oui-message` (top-level element).
 ### Element
 
 The message component can take 1 to 4 inner elements:
+* An inline element class `oui-message__title` which contains the title of the message, works only for large message
 * An inline element class `oui-message__body` which contains the text of the message
-* An optional element class `oui-icon` which displays an icon
-* An optional button class `oui-message__close-button` which provides the possibility to hide the message
-* An optional element class `oui-tip` which displays a tip
+* An optional element class `oui-icon` which displays an icon, works only on small message
+* An optional element class `oui-message_l-icon` which displays an icon, works only on large message
+* An optional button class `oui-message__close-button` which provides the possibility to hide the message, works only on small message
+* An optional element class `oui-tip` which displays a tip, works only on small message
 
 ### Modifiers
 
@@ -413,3 +484,5 @@ The provided modifiers are:
 | `oui-message_error oui-message_icon-m`     | Make the alert looks like an info message with a bigger icon |
 | `oui-message_error oui-message_no-icon`    | Make the alert looks like an error message with no icon      |
 | `oui-message_error oui-message_no-border`  | Make the alert looks like an error message with no border    |
+| `oui-message_l oui-message_warning`        | Make the alert looks like a large warning message           |
+| `oui-message_l oui-message_error`          | Make the alert looks like a large error message             |
