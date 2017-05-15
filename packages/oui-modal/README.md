@@ -40,6 +40,27 @@ oui-modal is a package which provide styles for the `oui-modal` component.
 </div>
 ```
 
+### No icon
+
+```html:preview
+<div class="oui-modal oui-modal_shadow">
+  <div class="oui-modal__header">
+    <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
+  </div>
+  <div class="oui-modal__body oui-modal__body_no-icon">
+    <div class="oui-modal__body-text">
+      <h2 class="oui-modal__title">Storage creation</h2>
+      <p class="oui-modal__text">A new storage will be added to your account.</p>
+    </div>
+  </div>
+  <div class="oui-modal__footer">
+    <button class="oui-button oui-button_primary" type="button">
+      Ok
+    </button>
+  </div>
+</div>
+```
+
 > **Important:** It can also be combined with *Bootstrap* modal classes
 
 ## Mixins
@@ -105,6 +126,7 @@ The modal component can take 6 to 7 inner elements:
 
 The provided modifiers are:
 
-| Class                                      | Description                      |
-| ------------------------------------------ | -------------------------------- |
-| `oui-modal_shadow`                         | Adds a shadow to the modal       |
+| Class                                      | Description                        |
+| ------------------------------------------ | ---------------------------------- |
+| `oui-modal_shadow`                         | Adds a shadow to the modal         |
+| `oui-modal__body_no-icon`                  | Stylize the modal with no icon     |
