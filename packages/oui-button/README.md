@@ -38,6 +38,9 @@ oui-button is a package which provide styles for the button component.
   <button class="oui-button oui-button_link oui-button_icon-left">
     <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button Link Icon Left
   </button>
+  <button class="oui-button oui-button_link oui-button_icon-right">
+    Button Link Icon Right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+  </button>
 </div>
 <div>
   <button class="oui-button oui-button_primary" disabled>
@@ -63,6 +66,9 @@ oui-button is a package which provide styles for the button component.
   </button>
   <button class="oui-button oui-button_link oui-button_icon-left" disabled>
     <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button Link Icon Left
+  </button>
+  <button class="oui-button oui-button_link oui-button_icon-right" disabled>
+    Button Link Icon Right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
   </button>
 </div>
 ```

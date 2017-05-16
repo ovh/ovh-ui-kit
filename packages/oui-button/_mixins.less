@@ -12,8 +12,8 @@
     @min-width: @oui-button-min-width,
     @max-width: @oui-button-max-width,
     @radius: @oui-button-radius,
-    @spacing: 0 0 rem-calc(20),
-    @padding: rem-calc(10) rem-calc(30),
+    @spacing: @oui-button-spacing,
+    @padding: @oui-button-padding,
     @letter-spacing: 0.007em
   ) {
     min-width: @min-width;
@@ -242,17 +242,20 @@
     @icon-color: @oui-button-link-icon-color,
     @font-color: @oui-button-link-font-color,
     @font-weight: @oui-button-link-font-weight,
-    @spacing: 0 0 rem-calc(20),
-    @padding: rem-calc(10)
+    @padding: @oui-button-link-padding
   ){
     min-width: 0;
     padding: @padding;
     border: 0;
-    margin: @spacing;
     background: none;
     color: @font-color;
     font-weight: @font-weight;
     text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
 
     &:disabled,
     &:disabled:active {
