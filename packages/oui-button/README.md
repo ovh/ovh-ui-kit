@@ -32,6 +32,12 @@ oui-button is a package which provide styles for the button component.
     <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
     Button Icon Left
   </button>
+  <button class="oui-button oui-button_link">
+    Button Link
+  </button>
+  <button class="oui-button oui-button_link oui-button_icon-left">
+    <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button Link Icon Left
+  </button>
 </div>
 <div>
   <button class="oui-button oui-button_primary" disabled>
@@ -51,6 +57,12 @@ oui-button is a package which provide styles for the button component.
   <button class="oui-button oui-button_icon-left" disabled>
     <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
     Button Icon Left
+  </button>
+  <button class="oui-button oui-button_link" disabled>
+    Button Link
+  </button>
+  <button class="oui-button oui-button_link oui-button_icon-left" disabled>
+    <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button Link Icon Left
   </button>
 </div>
 ```
@@ -182,6 +194,23 @@ Will stylize your button with an icon on the left.
 );
 ```
 
+### .button-link
+
+Will stylize your button as a link.
+
+```less
+#oui > .button-link();
+```
+
+```less
+#oui > .button-link(
+  @icon-selector: Class,
+  @icon-color: @oui-button-link-icon-color: Color,
+  @font-color: @oui-button-link-font-color: Color,
+  @font-weight: @oui-button-link-font-weight: Number
+);
+```
+
 ## Classes
 
 ### Block
@@ -199,3 +228,4 @@ The provided modifiers are:
 | `oui-button_dropdown`   | Make the button looks like a dropdown button                  |
 | `oui-button_icon-right` | Make the button looks like a button with an icon on the right |
 | `oui-button_icon-left`  | Make the button looks like a button with an icon on the left  |
+| `oui-button_link`       | Make the button looks like a link                             |
