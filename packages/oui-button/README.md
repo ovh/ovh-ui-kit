@@ -41,6 +41,16 @@ oui-button is a package which provide styles for the button component.
   <button class="oui-button oui-button_link oui-button_icon-right">
     Button Link Icon Right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
   </button>
+  <div style="display: inline-block; width: 300px">
+    <button class="oui-button oui-button_link-full-width oui-button_icon-left">
+      <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button Link Full width Icon Left
+    </button>
+  </div>
+  <div style="display: inline-block; width: 300px">
+    <button class="oui-button oui-button_link-full-width oui-button_icon-right">
+      Button Link Full width Icon Right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
 </div>
 <div>
   <button class="oui-button oui-button_primary" disabled>
@@ -70,6 +80,16 @@ oui-button is a package which provide styles for the button component.
   <button class="oui-button oui-button_link oui-button_icon-right" disabled>
     Button Link Icon Right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
   </button>
+  <div style="display: inline-block; width: 300px">
+    <button class="oui-button oui-button_link-full-width oui-button_icon-left" disabled>
+      <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button Link Full width Icon Left
+    </button>
+  </div>
+  <div style="display: inline-block; width: 300px">
+    <button class="oui-button oui-button_link-full-width oui-button_icon-right" disabled>
+      Button Link Full width Icon Right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
 </div>
 ```
 
@@ -211,9 +231,26 @@ Will stylize your button as a link.
 ```less
 #oui > .button-link(
   @icon-selector: Class,
-  @icon-color: @oui-button-link-icon-color: Color,
-  @font-color: @oui-button-link-font-color: Color,
-  @font-weight: @oui-button-link-font-weight: Number
+  @icon-color: Color,
+  @font-color: Color,
+  @font-weight: Number
+);
+```
+
+### .button-link
+
+Will stylize your button as a link full width.
+
+```less
+#oui > .button-link();
+#oui > .button-full-width;
+```
+
+```less
+#oui > .button-link-full-width(
+  @icon-selector: Class,
+  @icon-color: Color,
+  @font-weight: Number
 );
 ```
 

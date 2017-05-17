@@ -268,4 +268,50 @@
       color: @icon-color;
     }
   }
+
+  .button-full-width (
+    @icon-selector
+  ){
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:disabled,
+    &:disabled:active {
+      text-decoration: none;
+    }
+
+    .@{icon-selector}::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .button-full-width-icon-right (
+    @icon-selector
+  ) {
+    text-align: left;
+
+    .@{icon-selector}::before {
+      right: 0;
+    }
+  }
+
+  .button-full-width-icon-left (
+    @icon-selector
+  ) {
+    text-align: right;
+
+    .@{icon-selector}::before {
+      left: 0;
+    }
+  }
 }
