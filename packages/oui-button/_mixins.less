@@ -275,11 +275,10 @@
     max-width: none;
     width: 100%;
     height: 100%;
-    text-decoration: none;
 
     &:hover,
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     &:disabled,
@@ -298,20 +297,16 @@
   .button-full-width-icon-right (
     @icon-selector
   ) {
-    text-align: left;
-
     .@{icon-selector}::before {
-      right: 0;
+      right: @oui-button-icon-padding-right;
     }
   }
 
   .button-full-width-icon-left (
     @icon-selector
   ) {
-    text-align: right;
-
     .@{icon-selector}::before {
-      left: 0;
+      left: @oui-button-icon-padding-left;
     }
   }
 }
