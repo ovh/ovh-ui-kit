@@ -1,0 +1,52 @@
+@import './_mixins';
+@import './_normalize';
+
+@oui-progress-modifiers: info, success, warning, error;
+
+.oui-progress {
+  #oui > .progress-normalize();
+  #oui > .progress-base();
+
+  .oui-progress-modifiers(@i: length(@oui-progress-modifiers)) when (@i > 0) {
+    .oui-progress-modifiers(@i - 1);
+    @current-modifier: extract(@oui-progress-modifiers, @i);
+    @background-color: "oui-progress-@{current-modifier}-background-color";
+    @foreground-color: "oui-progress-@{current-modifier}-foreground-color";
+
+    &_@{current-modifier} {
+      #oui > .progress(
+        @@background-color,
+        @@foreground-color,
+        @oui-progress-height
+      );
+    }
+  }
+  .oui-progress-modifiers();
+
+  &__bar {
+    #oui > .progress-bar-base(@oui-progress-height);
+
+    .oui-progress-bar-modifiers(@i: length(@oui-progress-modifiers)) when (@i > 0) {
+    .oui-progress-bar-modifiers(@i - 1);
+      @current-modifier: extract(@oui-progress-modifiers, @i);
+      @background-color: "oui-progress-@{current-modifier}-foreground-color";
+      @text-color: "oui-progress-@{current-modifier}-text-color";
+
+      &_@{current-modifier} {
+        #oui > .progress-bar(
+          @background-color: @@background-color,
+          @text-color: @@text-color
+        );
+      }
+    }
+    .oui-progress-bar-modifiers();
+  }
+
+  &__label {
+    #oui > .progress-bar-label();
+  }
+
+  &_indeterminate {
+    #oui > .progress-indeterminate();
+  }
+}
