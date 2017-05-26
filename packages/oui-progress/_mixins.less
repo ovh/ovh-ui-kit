@@ -7,14 +7,13 @@
     @margin: @oui-progress-margin
   ) {
     display: flex;
-    height: @height;
     width: 100%;
-    margin: @margin;
-    border-radius: (@height / 2);
-    overflow: hidden;
-
-    appearance: none;
+    height: @height;
     border: none;
+    border-radius: (@height / 2);
+    margin: @margin;
+    overflow: hidden;
+    appearance: none;
   }
 
   .progress(
@@ -64,10 +63,9 @@
     @height: @oui-progress-height,
     @force-radius: false
   ) {
+    position: relative;
     height: @height;
     text-align: right;
-    position: relative;
-
     transition: width @oui-animation-default-timing @oui-animation-default;
 
     & when (@force-radius = true) {
