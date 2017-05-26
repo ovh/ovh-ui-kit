@@ -12,8 +12,8 @@
     @min-width: @oui-button-min-width,
     @max-width: @oui-button-max-width,
     @radius: @oui-button-radius,
-    @spacing: 0 0 rem-calc(20),
-    @padding: rem-calc(10) rem-calc(30),
+    @spacing: @oui-button-spacing,
+    @padding: @oui-button-padding,
     @letter-spacing: 0.007em
   ) {
     min-width: @min-width;
@@ -170,12 +170,20 @@
     padding-right: @padding-right;
     padding-left: @padding-left;
 
-    .@{icon-selector}_circle::before {
+    .@{icon-selector} {
+      vertical-align: text-bottom;
+    }
+
+    .@{icon-selector}::before {
       width: @icon-size;
       height: @icon-size;
+      font-size: ~"calc(@{icon-size} / 1.25)";
+      line-height: @icon-size;
+    }
+
+    .@{icon-selector}_circle::before {
       background: @icon-color;
       font-size: ~"calc(@{icon-size} / 2)";
-      line-height: @icon-size;
     }
   }
 
@@ -194,8 +202,13 @@
       text-indent: 2px;
     }
 
+    &:disabled .@{icon-selector}::before {
+      color: @icon-color_disabled;
+    }
+
     &:disabled .@{icon-selector}_circle::before {
       background: @icon-color_disabled;
+      color: @oui-color-concrete;
     }
   }
 
@@ -214,8 +227,86 @@
       text-indent: -2px;
     }
 
+    &:disabled .@{icon-selector}::before {
+      color: @icon-color_disabled;
+    }
+
     &:disabled .@{icon-selector}_circle::before {
       background: @icon-color_disabled;
+      color: @oui-color-concrete;
+    }
+  }
+
+  .button-link (
+    @icon-selector,
+    @icon-color: @oui-button-link-icon-color,
+    @font-color: @oui-button-link-font-color,
+    @font-weight: @oui-button-link-font-weight,
+    @padding: @oui-button-link-padding
+  ){
+    min-width: 0;
+    padding: @padding;
+    border: 0;
+    background: none;
+    color: @font-color;
+    font-weight: @font-weight;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+
+    &:disabled,
+    &:disabled:active {
+      background: none;
+      color: #b3b3b3;
+      text-decoration: underline;
+    }
+
+    .@{icon-selector} {
+      color: @icon-color;
+    }
+  }
+
+  .button-full-width (
+    @icon-selector
+  ){
+    max-width: none;
+    width: 100%;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    &:disabled,
+    &:disabled:active {
+      text-decoration: none;
+    }
+
+    .@{icon-selector}::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  .button-full-width-icon-right (
+    @icon-selector
+  ) {
+    .@{icon-selector}::before {
+      right: @oui-button-icon-padding-right;
+    }
+  }
+
+  .button-full-width-icon-left (
+    @icon-selector
+  ) {
+    .@{icon-selector}::before {
+      left: @oui-button-icon-padding-left;
     }
   }
 }

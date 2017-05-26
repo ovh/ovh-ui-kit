@@ -5,6 +5,8 @@
 @oui-button-radius: @oui-global-base-radius;
 @oui-button-min-width: rem-calc(100);
 @oui-button-max-width: rem-calc(320);
+@oui-button-padding: rem-calc(10) rem-calc(30);
+@oui-button-spacing: 0 0 rem-calc(20);
 
 // Button - Filled
 @oui-button-filled-background-color: #54c7e4;
@@ -41,8 +43,14 @@
 
 // Button - Icon Right
 @oui-button-icon-right-icon-color_disabled: @oui-button-filled-font-color_disabled;
-@oui-button-icon-right-icon-margin-left: ~"calc(@{oui-button-icon-icon-size} / 2)";
+@oui-button-icon-right-icon-margin-left: ~"calc(@{oui-button-icon-icon-size} / 3)";
 
 // Button - Icon Left
 @oui-button-icon-left-icon-color_disabled: @oui-button-hollow-font-color_disabled;
-@oui-button-icon-right-icon-margin-right: ~"calc(@{oui-button-icon-icon-size} / 2)";
+@oui-button-icon-right-icon-margin-right: ~"calc(@{oui-button-icon-icon-size} / 3)";
+
+// Button - Link
+@oui-button-link-icon-color: #666666;
+@oui-button-link-font-color: @oui-color-pacific;
+@oui-button-link-font-weight: @oui-font-regular;
+@oui-button-link-padding: rem-calc(10);
