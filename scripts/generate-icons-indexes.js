@@ -28,6 +28,7 @@ iconsIndexes.push(`;`);
 file.write(`\n// WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!\n\n`);
 file.write(iconsIndexes.join(`\n`));
 file.write(iconsCodes.join(`\n`));
+file.write(`\n`);
 
 file.end();
 
