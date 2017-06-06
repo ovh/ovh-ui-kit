@@ -5,7 +5,7 @@
   "license": "BSD-3-Clause",
   "scripts": {
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
-    "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons",
+    "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons && node scripts/generate-icons-indexes.js",
     "build": "rimraf dist && npm run build:less && npm run build:icons",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
@@ -16,6 +16,7 @@
     "less-plugin-remcalc": "^0.0.1"
   },
   "devDependencies": {
+    "chalk": "^1.1.3",
     "icon-font-generator": "^1.0.7",
     "less": "^2.7.2",
     "mkdirp": "^0.5.1",
