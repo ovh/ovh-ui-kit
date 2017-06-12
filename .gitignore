@@ -6,3 +6,4 @@ dist/*
 !dist/icons/icons.ttf
 !dist/icons/icons.svg
 !dist/icons/icons.woff
+!dist/icons/icons.woff2
