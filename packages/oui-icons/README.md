@@ -307,51 +307,51 @@ The block class is `oui-icon` (top-level element).
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-check" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-check-circle_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-check" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-check-circle_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-counter" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-counter_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-counter" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-counter_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-gear" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-gear_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-gear" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-gear_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-page" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-page_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-page" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-page_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-paperplane" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-paperplane_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-paperplane" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-paperplane_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-printer" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-printer_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-printer" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-printer_line" aria-hidden="true"></i>`
   </div>
 </div>
 
 <div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-user" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-user_line" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-user" aria-hidden="true"></i>`
+    `<i class="oui-icon oui-icon-user_line" aria-hidden="true"></i>`
   </div>
 </div>
 
