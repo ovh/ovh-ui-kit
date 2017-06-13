@@ -1,7 +1,10 @@
+@import './_normalize';
 @import './_mixins';
 
 .oui-modal {
   @oui-button-selector: oui-button;
+
+  #oui > .modal-normalize();
 
   #oui > .modal-base(@oui-button-selector);
   #oui > .modal-warning();
