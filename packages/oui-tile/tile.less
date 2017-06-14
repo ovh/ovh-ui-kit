@@ -1,0 +1,17 @@
+@import './_mixins';
+@import './_normalize';
+
+.oui-tile {
+    @oui-tile-selector: oui-tile;
+    @oui-dropdown-menu-selector: oui-dropdown-menu;
+    @oui-icon-selector: oui-icon;
+
+    #oui > .tile-normalize();
+    #oui > .tile-base(
+        @oui-tile-selector,
+        @oui-dropdown-menu-selector,
+        @oui-icon-selector
+    );
+}
+
+
