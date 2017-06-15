@@ -11,6 +11,7 @@ module.exports = {
     "number-max-precision": 5,
     "no-invalid-double-slash-comments": true,
     "no-extra-semicolons": true,
-    "declaration-no-important": true
+    "declaration-no-important": true,
+    "indentation": 2
   }
 };
