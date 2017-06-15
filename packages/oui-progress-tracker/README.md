@@ -6,7 +6,7 @@
 
 > As CX requirements this progress tracker is on one line and can't take too much item and too long labels
 
-oui-progress-tracker is a package which provide styles for the progress-tracker component.
+oui-progress-tracker is a package which provides styles for the progress-tracker component.
 
 ## Installation
 

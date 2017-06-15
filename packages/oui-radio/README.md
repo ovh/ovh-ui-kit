@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-radio is a package which provide styles for the input radio component.
+oui-radio is a package which provides styles for the input radio component.
 
 ## Installation
 

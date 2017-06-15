@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-switch is a package which provide styles for the switch component.
+oui-switch is a package which provides styles for the switch component.
 
 ## Installation
 

@@ -2,7 +2,7 @@
 
 <component-status cx-design="none" ux="prototype"></component-status>
 
-oui-navbar is a package which provide styles for the navbar component.
+oui-navbar is a package which provides styles for the navbar component.
 
 ## Installation
 

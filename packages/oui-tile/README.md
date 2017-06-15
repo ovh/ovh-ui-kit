@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="prototype"></component-status>
 
-oui-tile is a package which provide styles for the `oui-tile` component.
+oui-tile is a package which provides styles for the `oui-tile` component.
 
 ## Installation
 
