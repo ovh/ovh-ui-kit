@@ -62,6 +62,7 @@
         }
       }
 
+      // stylelint-disable max-nesting-depth
       &_button {
         &:hover,
         &:focus {
@@ -84,7 +85,7 @@
           }
         }
       }
-
+      // stylelint-enable max-nesting-depth
 
       .@{dropdown-menu-selector} {
         position: absolute;
@@ -92,7 +93,7 @@
         top: @oui-tile-item-top-spacing;
 
         &__content {
-            right: -4px;
+          right: -4px;
         }
       }
     }
