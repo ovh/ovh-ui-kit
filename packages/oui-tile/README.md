@@ -25,7 +25,7 @@ oui-tile is a package which provides styles for the `oui-tile` component.
       </button>
     </div>
     <div class="oui-tile__item oui-tile__item_button">
-      <button type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
+      <button disabled type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
         Button 2
         <i class="oui-icon oui-icon-chevron-right" aria-label="Button 2"></i>
       </button>
