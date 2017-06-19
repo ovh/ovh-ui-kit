@@ -15,7 +15,7 @@
     &__title {
       margin-left: @oui-tile-item-side-spacing;
       margin-right: @oui-tile-item-side-spacing;
-      font-weight: 600;
+      font-weight: @oui-font-semibold;
       color: @oui-tile-title-color;
     }
 
@@ -23,9 +23,8 @@
       margin: 0;
       padding-left: @oui-tile-item-side-spacing;
       padding-right: @oui-tile-item-side-spacing;
-      font-weight: 600;
+      font-weight: @oui-font-semibold;
       text-align: left;
-      text-decoration: none;
 
       &:disabled {
         text-decoration: none;
@@ -105,13 +104,13 @@
     &__term {
       color: @oui-tile-definition-term-color;
       font-size: @oui-tile-definition-term-font-size;
-      font-weight: normal;
+      font-weight: @oui-font-regular;
     }
 
     &__description {
       color: @oui-tile-definition-description-color;
       font-size: @oui-tile-definition-description-font-size;
-      font-weight: 700;
+      font-weight: @oui-font-bold;
       margin-left: 0;
 
       &_vertical-sub {
@@ -119,7 +118,7 @@
       }
 
       small {
-        font-weight: normal;
+        font-weight: @oui-font-regular;
       }
     }
 
