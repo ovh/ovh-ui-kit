@@ -19,13 +19,16 @@ oui-tile is a package which provides styles for the `oui-tile` component.
   <h4 class="oui-header_4 oui-tile__title">Buttons</h4>
   <div class="oui-tile__body">
     <div class="oui-tile__item oui-tile__item_button">
-      <button class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
+      <button type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
         Button 1
-        <i class="oui-icon oui-icon-chevron-right"></i>
+        <i class="oui-icon oui-icon-chevron-right" aria-label="Button 1"></i>
       </button>
     </div>
     <div class="oui-tile__item oui-tile__item_button">
-      <button class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">Button 2</button>
+      <button type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
+        Button 2
+        <i class="oui-icon oui-icon-chevron-right" aria-label="Button 2"></i>
+      </button>
     </div>
   </div>
 </div>
