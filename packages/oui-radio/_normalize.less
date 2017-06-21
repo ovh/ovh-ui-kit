@@ -5,6 +5,11 @@
     &__label-container {
       font-weight: inherit;
       cursor: pointer;
+
+      &::before,
+      &::after {
+        box-sizing: border-box;
+      }
     }
 
     &__label {
