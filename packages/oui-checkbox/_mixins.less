@@ -94,7 +94,7 @@
     &__input:focus ~ .@{checkbox-selector}__label-container,
     &__input:checked:focus ~ .@{checkbox-selector}__label-container {
       .@{checkbox-selector}__icon::before {
-        box-shadow: 0px 0px 3px 1px rgba(102, 199, 214, 0.6);
+        box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
       }
 
       .@{icon-selector}-unchecked,
@@ -232,7 +232,7 @@
     .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
     .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
       border-color: rgba(85, 199, 228, 0.6);
-      box-shadow: 0px 0px 3px 1px rgba(102, 199, 214, 0.6);
+      box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
     }
 
     .@{checkbox-selector}__input:checked + .@{checkbox-selector}__label-container {
@@ -321,7 +321,7 @@
       .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
       .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
         .@{checkbox-selector}__icon::before {
-          box-shadow: 0px 0px 3px 1px @@status-border-color;
+          box-shadow: 0 0 3px 1px @@status-border-color;
         }
       }
 
@@ -354,7 +354,7 @@
         .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
         .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
           border-color: @@status-border-color;
-          box-shadow: 0px 0px 3px 0px @@status-border-color;
+          box-shadow: 0 0 3px 0 @@status-border-color;
         }
       }
     }
