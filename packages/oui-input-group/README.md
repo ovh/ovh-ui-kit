@@ -27,7 +27,7 @@ oui-input-group is a package which provide styles to group inputs together.
 
 <div class="oui-input-group">
   <button class="oui-button">-</button>
-  <input class="oui-input" placeholder="vCores">
+  <input class="oui-input oui-input_number" type="number" placeholder="vCores">
   <button class="oui-button">+</button>
 </div>
 
