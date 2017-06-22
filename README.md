@@ -1,8 +1,10 @@
-![Project statuc alpha](https://img.shields.io/badge/status-alpha-blue.svg) [![Github tag](https://img.shields.io/github/tag/ovh-ux/ovh-ui-kit.svg)]() ![Maintenance](https://img.shields.io/maintenance/yes/2017.svg) [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux)
-
 # OVH UI (Less)
 
+![OVH components](https://user-images.githubusercontent.com/3379410/27423240-3f944bc4-5731-11e7-87bb-3ff603aff8a7.png)
+
 A css theme implemented for the OVH brand.
+
+![Project statuc alpha](https://img.shields.io/badge/status-alpha-blue.svg) [![Github tag](https://img.shields.io/github/tag/ovh-ux/ovh-ui-kit.svg)]() ![Maintenance](https://img.shields.io/maintenance/yes/2017.svg) [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux)
 
 
 ## Installation
