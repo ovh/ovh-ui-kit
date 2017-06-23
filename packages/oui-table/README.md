@@ -233,7 +233,7 @@ Define the base styles for the arrow desc.
 
 ### .table-container
 
-Define the base styles for the AngularJS oui-table component.
+Define the base styles for the wrapper that contains oui-table with a fixed header.
 
 ```less
 #oui > .table-container();
