@@ -13,7 +13,7 @@ oui-table is a package which provides styles for the table component.
 ## Usage
 
 ```html:preview
-<table class="oui-table">
+<table class="oui-table oui-table_responsive">
   <thead class="oui-table__headers">
     <tr>
       <th class="oui-table__header oui-table__cell_sortable" tabindex="0">Filename</th>
@@ -129,6 +129,12 @@ This markup is automatically created with the AngularJS oui-table component.
 └───────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
+## Modifier
+
+### .oui-table_responsive
+
+By default, the table is not responsive. But if want it to be responsive, add `oui-table_responsive` class.
+
 ## Mixins
 
 ```less
@@ -149,6 +155,7 @@ Define the base styles for a table.
   @oui-table-margin: Number
 );
 ```
+
 ### .table-header
 
 Define the base styles for the table headers.
@@ -163,6 +170,7 @@ Define the base styles for the table headers.
   @oui-table-header-font-color: Color
 );
 ```
+
 ### .table-cell
 
 Define the base styles for the table cells.
@@ -179,6 +187,7 @@ Define the base styles for the table cells.
   @oui-table-cell-padding: Number
 );
 ```
+
 ### .table-cell-sortable
 
 Define the base styles for the sortable table cells.
@@ -192,6 +201,7 @@ Define the base styles for the sortable table cells.
   @oui-table-arrow-size: Number
 );
 ```
+
 ### .table-arrow-asc
 
 Define the base styles for the arrow asc.
@@ -220,10 +230,19 @@ Define the base styles for the arrow desc.
   @oui-table-arrow-size: Number
 );
 ```
+
 ### .table-container
 
 Define the base styles for the AngularJS oui-table component.
 
 ```less
 #oui > .table-container();
+```
+
+### .table-responsive
+
+Define additional styles to oui-table to make it responsive.
+
+```less
+#oui > .table-responsive();
 ```
