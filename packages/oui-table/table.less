@@ -14,6 +14,10 @@
   #oui > .table-normalize();
   #oui > .table-base();
 
+  &_responsive {
+    #oui > .table-responsive(@oui-selector);
+  }
+
   &__row {
     #oui > .table-row();
   }
@@ -44,9 +48,5 @@
     &_sorted {
       #oui > .table-cell-sorted();
     }
-  }
-
-  &_responsive {
-    #oui > .table-responsive(@oui-selector);
   }
 }

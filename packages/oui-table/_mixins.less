@@ -174,15 +174,13 @@
     @selector
   ) {
     .tablet({
-      table-layout: auto;
-
-      &__headers {
+      .@{selector}__headers {
         display: block;
         position: absolute;
         left: -9999em;
       }
 
-      &__body {
+      .@{selector}__body {
         .@{selector}__row {
           display: block;
           float: left;
@@ -204,7 +202,7 @@
         }
       }
 
-      &__cell {
+      .@{selector}__cell {
         display: block;
         border: none;
 
@@ -229,7 +227,7 @@
     });
 
     .phone({
-      &__body {
+      .@{selector}__body {
         .@{selector}__row {
           margin-bottom: 0;
           width: 100%;
@@ -326,7 +324,6 @@
       overflow-y: overlay;
 
       .@{selector} {
-        table-layout: fixed;
         margin: -1px 0 0;
 
         .@{selector}__headers {
