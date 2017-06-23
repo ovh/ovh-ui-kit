@@ -208,16 +208,6 @@
         display: block;
         border: none;
 
-        &[data-title]::before {
-          color: @oui-table-responsive-label-color;
-          content: attr(data-title);
-          display: block;
-          font-size: rem-calc(14);
-        }
-      }
-
-      &__cell, &__header {
-        border: none;
         border-left: @oui-table-responsive-border-size solid @oui-table-responsive-border-color;
         border-right: @oui-table-responsive-border-size solid @oui-table-responsive-border-color;
 
@@ -227,6 +217,13 @@
 
         &:last-child {
           border-bottom: @oui-table-responsive-border-size solid @oui-table-responsive-border-color;
+        }
+
+        &[data-title]::before {
+          color: @oui-table-responsive-label-color;
+          content: attr(data-title);
+          display: block;
+          font-size: rem-calc(14);
         }
       }
     });
@@ -267,7 +264,9 @@
 
           &:last-child {
             .@{selector}__cell {
-              border-bottom: none;
+              &:last-child {
+                border-bottom: @oui-table-responsive-border-size solid @oui-table-responsive-border-color;;
+              }
             }
           }
         }
