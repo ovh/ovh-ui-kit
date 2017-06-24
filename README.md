@@ -30,7 +30,7 @@ Those dependencies will be installed automatically by npm:
 
 @import "./node_modules/ovh-ui-kit/packages/oui-button/button";
 @import "./node_modules/ovh-ui-kit/packages/oui-radio/radio";
-@import "./node_modules/ovh-ui-kit/packages/oui-field/field";
+@import "./node_modules/ovh-ui-kit/packages/oui-formfield/formfield";
 
 [...]
 ```
@@ -46,7 +46,7 @@ Webpack provide the `~` prefix for package imports:
 
 @import "~ovh-ui-kit/packages/oui-button/button.less";
 @import "~ovh-ui-kit/packages/oui-radio/radio.less";
-@import "~ovh-ui-kit/packages/oui-field/field.less";
+@import "~ovh-ui-kit/packages/oui-formfield/formfield.less";
 
 [...]
 ```
