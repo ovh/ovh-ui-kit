@@ -55,7 +55,7 @@
 
       border-color: @border-color-focus;
       outline: none;
-      box-shadow: inset 1px 1px 2px 0px rgba(102, 199, 214, 0.5), 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: inset 1px 1px 2px 0 rgba(102, 199, 214, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.35);
       background-color: @background-color-focus;
       text-decoration: none;
     }
@@ -100,7 +100,7 @@
     }
 
     &_@{status}:not(:disabled):focus {
-      box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
     }
 
     &_@{status}::selection {
