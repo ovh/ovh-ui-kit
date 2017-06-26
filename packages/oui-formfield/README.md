@@ -37,8 +37,8 @@ oui-formfield is a package which provides styles for the formfield component.
 
 <div class="oui-input-group">
   <div class="oui-input-formfield">
-    <input type="text" id="text" name="text" class="oui-input" value="Input text" />
-    <label for="text" class="oui-label">Label for Input group</label>
+    <input type="text" id="text-group" name="text-group" class="oui-input" value="Input text" />
+    <label for="text-group" class="oui-label">Label for Input group</label>
   </div>
   <button class="oui-button">Go</button>
 </div>
