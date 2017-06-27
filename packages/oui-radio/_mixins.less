@@ -41,7 +41,7 @@
     }
 
     .@{selector}__label {
-      padding-left: @outer-circle-size + @padding-left;
+      padding-left: ~"@outer-circle-size + @padding-left";
     }
 
     .@{selector}__description {
@@ -70,7 +70,7 @@
     );
 
     .@{selector}__description {
-      padding-left: @outer-circle-size + @padding-left;
+      padding-left: ~"@outer-circle-size + @padding-left";
     }
   }
 
@@ -276,10 +276,10 @@
     );
     .radio-position(
       @selector,
-      @padding + @border-size + @outer-circle-top,
-      @padding + @border-size + @outer-circle-left,
-      @padding + @border-size + @inner-circle-top,
-      @padding + @border-size + @inner-circle-left
+      ~"@padding + @border-size + @outer-circle-top",
+      ~"@padding + @border-size + @outer-circle-left",
+      ~"@padding + @border-size + @inner-circle-top",
+      ~"@padding + @border-size + @inner-circle-left"
     );
 
     .@{selector}__label-container {
