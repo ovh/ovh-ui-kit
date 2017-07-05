@@ -12,6 +12,7 @@ module.exports = {
     "no-invalid-double-slash-comments": true,
     "no-extra-semicolons": true,
     "declaration-no-important": true,
-    "length-zero-no-unit": true
+    "length-zero-no-unit": true,
+    "indentation": 2
   }
 };

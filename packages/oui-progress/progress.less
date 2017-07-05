@@ -27,7 +27,7 @@
     #oui > .progress-bar-base(@oui-progress-height);
 
     .oui-progress-bar-modifiers(@i: length(@oui-progress-modifiers)) when (@i > 0) {
-    .oui-progress-bar-modifiers(@i - 1);
+      .oui-progress-bar-modifiers(@i - 1);
       @current-modifier: extract(@oui-progress-modifiers, @i);
       @background-color: "oui-progress-@{current-modifier}-foreground-color";
       @text-color: "oui-progress-@{current-modifier}-text-color";
