@@ -1,6 +1,6 @@
 # oui-table
 
-<component-status cx-design="prototype" ux="prototype"></component-status>
+<component-status cx-design="partial" ux="prototype"></component-status>
 
 oui-table is a package which provides styles for the table component.
 
@@ -24,46 +24,85 @@ oui-table is a package which provides styles for the table component.
   </thead>
   <tbody class="oui-table__body">
     <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">1</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td data-title="Filename" class="oui-table__cell">abc</td>
+      <td data-title="Id" class="oui-table__cell">1</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">2</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td data-title="Filename" class="oui-table__cell">abc</td>
+      <td data-title="Id" class="oui-table__cell">2</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">3</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td data-title="Filename" class="oui-table__cell">abc</td>
+      <td data-title="Id" class="oui-table__cell">3</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
-    <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">4</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+  </tbody>
+</table>
+```
+
+### Responsive
+
+```html:preview
+<table class="oui-table oui-table_responsive">
+  <thead class="oui-table__headers">
+    <tr>
+      <th class="oui-table__header oui-table__cell_sortable" tabindex="0">Filename</th>
+      <th class="oui-table__header oui-table__cell_sortable-asc oui-table__cell_sorted" tabindex="0">Id</th>
+      <th class="oui-table__header oui-table__cell_sortable-asc" tabindex="0">Size</th>
+      <th class="oui-table__header oui-table__cell_sortable-desc" tabindex="0">Creation</th>
     </tr>
+  </thead>
+  <tbody class="oui-table__body">
     <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">5</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td data-title="Filename" class="oui-table__cell">abc
+        <i role="button" class="oui-icon oui-icon-chevron-right oui-table__expand-button"></i>
+      </td>
+      <td data-title="Id" class="oui-table__cell">1</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
-    <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">6</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+    <tr class="oui-table__row oui-table__row_closed" tabindex="0">
+      <td data-title="Filename" class="oui-table__cell">abc
+        <i role="button" class="oui-icon oui-icon-chevron-right oui-table__expand-button"></i>
+      </td>
+      <td data-title="Id" class="oui-table__cell">2</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
-    <tr class="oui-table__row" tabindex="0">
-      <td class="oui-table__cell">abc</td>
-      <td class="oui-table__cell">7</td>
-      <td class="oui-table__cell">123 KB</td>
-      <td class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+    <tr class="oui-table__row oui-table__row_closed" tabindex="0">
+      <td data-title="Filename" class="oui-table__cell">abc
+        <i role="button" class="oui-icon oui-icon-chevron-right oui-table__expand-button"></i>
+      </td>
+      <td data-title="Id" class="oui-table__cell">3</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+    </tr>
+    <tr class="oui-table__row oui-table__row_closed" tabindex="0">
+      <td data-title="Filename" class="oui-table__cell">abc
+        <i role="button" class="oui-icon oui-icon-chevron-right oui-table__expand-button"></i>
+      </td>
+      <td data-title="Id" class="oui-table__cell">4</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+    </tr>
+    <tr class="oui-table__row oui-table__row_closed" tabindex="0">
+      <td data-title="Filename" class="oui-table__cell">abc
+        <i role="button" class="oui-icon oui-icon-chevron-right oui-table__expand-button"></i>
+      </td>
+      <td data-title="Id" class="oui-table__cell">5</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+    </tr>
+    <tr class="oui-table__row oui-table__row_closed" tabindex="0">
+      <td data-title="Filename" class="oui-table__cell">abc</td>
+      <td data-title="Id" class="oui-table__cell">6</td>
+      <td data-title="Size" class="oui-table__cell">123 KB</td>
+      <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
     </tr>
   </tbody>
 </table>
@@ -129,6 +168,12 @@ This markup is automatically created with the AngularJS oui-table component.
 └───────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
+## Modifier
+
+### .oui-table_responsive
+
+By default, the table is not responsive. But if want it to be responsive, add `oui-table_responsive` class.
+
 ## Mixins
 
 ```less
@@ -149,6 +194,7 @@ Define the base styles for a table.
   @oui-table-margin: Number
 );
 ```
+
 ### .table-header
 
 Define the base styles for the table headers.
@@ -163,6 +209,7 @@ Define the base styles for the table headers.
   @oui-table-header-font-color: Color
 );
 ```
+
 ### .table-cell
 
 Define the base styles for the table cells.
@@ -179,6 +226,7 @@ Define the base styles for the table cells.
   @oui-table-cell-padding: Number
 );
 ```
+
 ### .table-cell-sortable
 
 Define the base styles for the sortable table cells.
@@ -192,6 +240,7 @@ Define the base styles for the sortable table cells.
   @oui-table-arrow-size: Number
 );
 ```
+
 ### .table-arrow-asc
 
 Define the base styles for the arrow asc.
@@ -220,10 +269,19 @@ Define the base styles for the arrow desc.
   @oui-table-arrow-size: Number
 );
 ```
+
 ### .table-container
 
-Define the base styles for the AngularJS oui-table component.
+Define the base styles for the wrapper that contains oui-table with a fixed header.
 
 ```less
 #oui > .table-container();
+```
+
+### .table-responsive
+
+Define additional styles to oui-table to make it responsive.
+
+```less
+#oui > .table-responsive();
 ```

@@ -9,8 +9,14 @@
 }
 
 .oui-table {
+  @oui-selector: oui-table;
+
   #oui > .table-normalize();
   #oui > .table-base();
+
+  &_responsive {
+    #oui > .table-responsive(@oui-selector);
+  }
 
   &__row {
     #oui > .table-row();
@@ -18,12 +24,12 @@
 
   &__header {
     #oui > .text-ellipsis();
-    #oui > .table-cell();
+    #oui > .table-cell(@oui-selector);
     #oui > .table-header();
   }
 
   &__cell {
-    #oui > .table-cell();
+    #oui > .table-cell(@oui-selector);
 
     &_sortable,
     &_sortable-asc,

@@ -1,0 +1,15 @@
+@import './_variables';
+
+.phone(@rules) {
+  .responsive(@oui-responsive-breakpoint-phone, @rules);
+}
+
+.tablet(@rules) {
+  .responsive(@oui-responsive-breakpoint-tablet, @rules);
+}
+
+.responsive(@maxWidth; @rules) {
+  @media screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
