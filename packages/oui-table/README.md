@@ -20,6 +20,7 @@ oui-table is a package which provides styles for the table component.
       <th class="oui-table__header oui-table__cell_sortable-asc oui-table__cell_sorted" tabindex="0">Id</th>
       <th class="oui-table__header oui-table__cell_sortable-asc" tabindex="0">Size</th>
       <th class="oui-table__header oui-table__cell_sortable-desc" tabindex="0">Creation</th>
+      <th class="oui-table__header" tabindex="0">Actions</th>
     </tr>
   </thead>
   <tbody class="oui-table__body">
@@ -28,18 +29,27 @@ oui-table is a package which provides styles for the table component.
       <td data-title="Id" class="oui-table__cell">1</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc</td>
       <td data-title="Id" class="oui-table__cell">2</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc</td>
       <td data-title="Id" class="oui-table__cell">3</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -55,6 +65,7 @@ oui-table is a package which provides styles for the table component.
       <th class="oui-table__header oui-table__cell_sortable-asc oui-table__cell_sorted" tabindex="0">Id</th>
       <th class="oui-table__header oui-table__cell_sortable-asc" tabindex="0">Size</th>
       <th class="oui-table__header oui-table__cell_sortable-desc" tabindex="0">Creation</th>
+      <th class="oui-table__header" tabindex="0">Actions</th>
     </tr>
   </thead>
   <tbody class="oui-table__body">
@@ -65,6 +76,9 @@ oui-table is a package which provides styles for the table component.
       <td data-title="Id" class="oui-table__cell">1</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row oui-table__row_closed" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc
@@ -73,6 +87,9 @@ oui-table is a package which provides styles for the table component.
       <td data-title="Id" class="oui-table__cell">2</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row oui-table__row_closed" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc
@@ -81,6 +98,9 @@ oui-table is a package which provides styles for the table component.
       <td data-title="Id" class="oui-table__cell">3</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row oui-table__row_closed" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc
@@ -89,6 +109,9 @@ oui-table is a package which provides styles for the table component.
       <td data-title="Id" class="oui-table__cell">4</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row oui-table__row_closed" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc
@@ -97,12 +120,18 @@ oui-table is a package which provides styles for the table component.
       <td data-title="Id" class="oui-table__cell">5</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
     <tr class="oui-table__row oui-table__row_closed" tabindex="0">
       <td data-title="Filename" class="oui-table__cell">abc</td>
       <td data-title="Id" class="oui-table__cell">6</td>
       <td data-title="Size" class="oui-table__cell">123 KB</td>
       <td data-title="Creation" class="oui-table__cell">Sun Mar 19 19:53:24 2017</td>
+      <td class="oui-table__cell oui-table__cell_action">
+        <button class="oui-button oui-button_secondary">More...</button>
+      </td>
     </tr>
   </tbody>
 </table>
