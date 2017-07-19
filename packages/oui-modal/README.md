@@ -85,7 +85,9 @@ Define the base styles for a modal.
   @close-button-height: Number,
   @close-button-color: Color,
   @close-button-font-size: Number,
-  @close-button-padding: Number
+  @close-button-padding: Number,
+  @oui-modal-font-size,
+  @font-size: Number
 )
 ```
 
