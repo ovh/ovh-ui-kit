@@ -18,6 +18,17 @@ oui-checkbox is a package which provide styles for the checkbox component.
 <div class="oui-checkbox">
   <input class="oui-checkbox__input" id="oui-checkbox1-1" name="oui-checkbox1-1" type="checkbox" checked="checked">
   <label class="oui-checkbox__label-container" for="oui-checkbox1-1">
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox">
+  <input class="oui-checkbox__input" id="oui-checkbox1-1" name="oui-checkbox1-1" type="checkbox" checked="checked">
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-1">
     <span class="oui-checkbox__label">Checkbox Checked</span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
