@@ -202,6 +202,13 @@ The block class is `oui-icon` (top-level element).
   </div>
 </div>
 
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-padlock-close" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-padlock-close" aria-hidden="true"></i>`
+  </div>
+</div>
+
 ### Bicolor Icons
 
 <div class="oui-icon-badge">
