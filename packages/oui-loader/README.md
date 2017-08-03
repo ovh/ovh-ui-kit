@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-loader is a package which provide styles for the loader component.
+oui-loader is a package which provides styles for the loader component.
 
 ## Installation
 

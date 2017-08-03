@@ -1,0 +1,144 @@
+@import './_variables';
+
+#oui {
+  .tile-base(
+    @tile-selector,
+    @dropdown-menu-selector,
+    @icon-selector
+  ) {
+    padding: @oui-tile-padding;
+    background-color: @oui-tile-background-color;
+    border: 1px solid @oui-tile-border-color;
+    border-radius: @oui-tile-border-radius;
+    box-shadow: @oui-tile-box-shadow;
+
+    &__title {
+      margin-left: @oui-tile-item-side-spacing;
+      margin-right: @oui-tile-item-side-spacing;
+      font-weight: @oui-font-semibold;
+      color: @oui-tile-title-color;
+    }
+
+    &__button {
+      margin: 0;
+      padding-left: @oui-tile-item-side-spacing;
+      padding-right: @oui-tile-item-side-spacing;
+      font-weight: @oui-font-semibold;
+      text-align: left;
+      text-decoration: none;
+
+      .@{icon-selector} {
+        color: @oui-tile-button-color;
+
+        &::before {
+          font-size: rem-calc(12);
+        }
+      }
+    }
+
+    &__item {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        margin: 0 @oui-tile-item-side-spacing;
+        height: 1px;
+        background-color: @oui-tile-item-border-color;
+      }
+
+      &:last-child {
+        &::after {
+          content: "";
+          display: block;
+          margin: 0 @oui-tile-item-side-spacing;
+          height: 1px;
+          background-color: @oui-tile-item-border-color;
+        }
+      }
+
+      // stylelint-disable max-nesting-depth
+      &_button {
+        &:hover,
+        &:focus {
+          background-color: @oui-tile-background-hover;
+
+          &::before {
+            background: none;
+          }
+
+          &:last-child {
+            &::after {
+              background: none;
+            }
+          }
+
+          + .@{tile-selector}__item {
+            &::before {
+              background: none;
+            }
+          }
+        }
+      }
+      // stylelint-enable max-nesting-depth
+
+      .@{dropdown-menu-selector} {
+        position: absolute;
+        right: @oui-tile-item-side-spacing;
+        top: @oui-tile-item-top-spacing;
+
+        &__content {
+          right: -4px;
+        }
+      }
+    }
+
+    &__definition {
+      margin: 0;
+      padding: @oui-tile-item-top-spacing @oui-tile-item-side-spacing;
+    }
+
+    &__term {
+      color: @oui-tile-definition-term-color;
+      font-size: @oui-tile-definition-term-font-size;
+      font-weight: @oui-font-regular;
+    }
+
+    &__description {
+      color: @oui-tile-definition-description-color;
+      font-size: @oui-tile-definition-description-font-size;
+      font-weight: @oui-font-bold;
+      margin-left: 0;
+
+      &_vertical-sub {
+        vertical-align: sub;
+      }
+
+      small {
+        font-weight: @oui-font-regular;
+      }
+    }
+
+    &__body {
+      &_list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &__top-bordered {
+      &::before {
+        content: "";
+        display: block;
+        margin: 0 @oui-tile-padding;
+        height: 1px;
+        background-color: @oui-tile-item-border-color;
+      }
+    }
+
+    &__body-content {
+      padding: 0 @oui-tile-padding;
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="prototype"></component-status>
 
-oui-tip is a package which provide styles for the `oui-tip` component.
+oui-tip is a package which provides styles for the `oui-tip` component.
 
 Tips are used together with a relative positionned component as the `oui-message`.
 

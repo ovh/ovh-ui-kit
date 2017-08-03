@@ -4,7 +4,7 @@
 
 > **Important:** This component is broken on IE9, IE10 and IE11
 
-oui-input-group is a package which provide styles to group inputs together.
+oui-input-group is a package which provides styles to group inputs together.
 
 ## Installation
 

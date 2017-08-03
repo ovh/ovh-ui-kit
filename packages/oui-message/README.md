@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-message is a package which provide styles for the `oui-message` component.
+oui-message is a package which provides styles for the `oui-message` component.
 
 ## Installation
 

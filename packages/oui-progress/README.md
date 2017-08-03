@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="prototype"></component-status>
 
-oui-progress is a package which provide styles for the progress component.
+oui-progress is a package which provides styles for the progress component.
 
 ## Installation
 

@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-list is a package which provide styles for the list component.
+oui-list is a package which provides styles for the list component.
 
 ## Installation
 

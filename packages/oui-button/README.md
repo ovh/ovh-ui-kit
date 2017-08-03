@@ -2,7 +2,7 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-button is a package which provide styles for the button component.
+oui-button is a package which provides styles for the button component.
 
 ## Installation
 
