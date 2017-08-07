@@ -90,4 +90,22 @@
       }
     }
   }
+
+  .textarea-formfield(
+    @label-selector,
+    @textarea-selector,
+    @label-default-font-color: @oui-formfield-label-default-font-color,
+    @label-warning-font-color: @oui-formfield-label-warning-font-color,
+    @label-error-font-color: @oui-formfield-label-error-font-color,
+    @label-font-weight: @oui-formfield-label-font-weight
+  ) {
+    #oui > .input-formfield(
+      @label-selector,
+      @textarea-selector,
+      @label-default-font-color,
+      @label-warning-font-color,
+      @label-error-font-color,
+      @label-font-weight
+    );
+  }
 }

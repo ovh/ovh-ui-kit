@@ -14,6 +14,8 @@ oui-formfield is a package which provides styles for the formfield component.
 
 ## Usage
 
+### Input
+
 ```html:preview
 <div class="oui-input-formfield">
   <input type="text" id="text" name="text" class="oui-input" value="Input text" />
@@ -42,7 +44,11 @@ oui-formfield is a package which provides styles for the formfield component.
   </div>
   <button class="oui-button">Go</button>
 </div>
+```
 
+### Select
+
+```html:preview
 <div class="oui-select-formfield">
   <div class="oui-select">
     <select id="select" name="select" class="oui-select__input">
@@ -92,6 +98,30 @@ oui-formfield is a package which provides styles for the formfield component.
 </div>
 ```
 
+### Textarea
+
+```html:preview
+<div class="oui-textarea-formfield">
+  <textarea class="oui-textarea" name="textarea-field" id="textarea-field">Textarea text</textarea>
+  <label for="textarea-field" class="oui-label">Label for Textarea</label>
+</div>
+
+<div class="oui-textarea-formfield">
+  <textarea class="oui-textarea" name="textarea-disabled" id="textarea-disabled" disabled>Textarea text disabled</textarea>
+  <label for="textarea-disabled" class="oui-label">Label for Textarea disabled</label>
+</div>
+
+<div class="oui-textarea-formfield">
+  <textarea class="oui-textarea oui-textarea_warning" name="textarea-warning" id="textarea-warning">Textarea text warning</textarea>
+  <label for="textarea-warning" class="oui-label">Label for Textarea warning</label>
+</div>
+
+<div class="oui-textarea-formfield">
+  <textarea class="oui-textarea oui-textarea_error" name="textarea-error" id="textarea-error">Textarea text error</textarea>
+  <label for="textarea-error" class="oui-label">Label for Textarea error</label>
+</div>
+```
+
 ## Mixins
 
 ```less
@@ -122,13 +152,33 @@ Define the base styles for an input group with label.
 Define the base styles for an select group with label.
 
 ```less
-#oui > .input-formfield();
+#oui > .select-formfield();
 ```
 
 ```less
-#oui > .input-formfield(
+#oui > .select-formfield(
   @label-selector: Class,
   @select-selector: Class,
+  @default-font-color: Color,
+  @warning-font-color: Color,
+  @error-font-color: Color,
+  @font-weight: Number
+);
+```
+
+### .textarea-formfield
+
+Define the base styles for an textarea group with label.
+It inherits from `.input-formfield`.
+
+```less
+#oui > .textarea-formfield();
+```
+
+```less
+#oui > .textarea-formfield(
+  @label-selector: Class,
+  @textarea-selector: Class,
   @default-font-color: Color,
   @warning-font-color: Color,
   @error-font-color: Color,

@@ -4,7 +4,20 @@
   @oui-label-selector: oui-label;
   @oui-input-selector: oui-input;
 
-  #oui > .input-formfield(@oui-label-selector, @oui-input-selector);
+  #oui > .input-formfield(
+    @oui-label-selector,
+    @oui-input-selector
+  );
+}
+
+.oui-textarea-formfield {
+  @oui-label-selector: oui-label;
+  @oui-textarea-selector: oui-textarea;
+
+  #oui > .textarea-formfield(
+    @oui-label-selector,
+    @oui-textarea-selector
+  );
 }
 
 .oui-select-formfield {
