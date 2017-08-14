@@ -5,7 +5,8 @@
 @oui-button-radius: @oui-global-base-radius;
 @oui-button-min-width: rem-calc(100);
 @oui-button-max-width: rem-calc(320);
-@oui-button-padding: rem-calc(10) rem-calc(30);
+@oui-button-padding-base: rem-calc(10);
+@oui-button-padding: @oui-button-padding-base rem-calc(30);
 @oui-button-spacing: 0 0 rem-calc(20);
 
 // Button - Filled
@@ -13,7 +14,8 @@
 @oui-button-filled-background-color_hover: #1bbadf;
 @oui-button-filled-background-color_disabled: #dedede;
 @oui-button-filled-font-color_disabled: #999;
-@oui-button-filled-padding: rem-calc(6) rem-calc(30);
+@oui-button-filled-padding-base: rem-calc(6);
+@oui-button-filled-padding: @oui-button-filled-padding-base rem-calc(30);
 
 // Button - Hollow
 @oui-button-hollow-background-color: #fff;
@@ -22,7 +24,8 @@
 @oui-button-hollow-border-color_disabled: #e6e6e6;
 @oui-button-hollow-background-color_disabled: #f2f2f2;
 @oui-button-hollow-font-color_disabled: #b3b3b3;
-@oui-button-hollow-padding: rem-calc(5) rem-calc(29);
+@oui-button-hollow-padding-base: rem-calc(5);
+@oui-button-hollow-padding: @oui-button-hollow-padding-base rem-calc(29);
 
 // Button - Dropdown
 @oui-button-dropdown-icon-size: rem-calc(12);
