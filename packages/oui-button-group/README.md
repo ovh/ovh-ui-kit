@@ -15,11 +15,11 @@ oui-button-group is a package which provide styles to group buttons together.
 ```html:preview
 <div>
   <div class="oui-button-group">
-    <button class="oui-button oui-button_secondary">1</button>
-    <button class="oui-button oui-button_secondary">2</button>
-    <button class="oui-button oui-button_secondary">3</button>
-    <button class="oui-button oui-button_secondary">4</button>
-    <button class="oui-button oui-button_secondary">5</button>
+    <button class="oui-button oui-button_secondary oui-button_small-width">1</button>
+    <button class="oui-button oui-button_secondary oui-button_small-width">2</button>
+    <button class="oui-button oui-button_secondary oui-button_small-width">3</button>
+    <button class="oui-button oui-button_secondary oui-button_small-width">4</button>
+    <button class="oui-button oui-button_secondary oui-button_small-width">5</button>
   </div>
 </div>
 

@@ -15,7 +15,6 @@
     .@{button-selector} {
       display: table-cell;
       margin: 0;
-      min-width: @oui-button-group-button-min-width;
       border-radius: 0;
 
       &:first-child {
@@ -32,15 +31,9 @@
     }
 
     .@{button-primary-selector} {
-      padding: @oui-button-group-button-primary-padding;
-
       & + .@{button-secondary-selector} {
         border-left-width: 1px;
       }
-    }
-
-    .@{button-secondary-selector} {
-      padding: @oui-button-group-button-secondary-padding;
     }
   }
 }

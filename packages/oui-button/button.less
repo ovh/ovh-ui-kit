@@ -21,6 +21,10 @@
     #oui > .button-dropdown(@oui-icon-selector);
   }
 
+  &_icon-only {
+    #oui > .button-icon-base(@oui-icon-selector);
+  }
+
   &_icon-right {
     #oui > .button-icon-base(@oui-icon-selector);
     #oui > .button-icon-right(@oui-icon-selector);
@@ -62,5 +66,9 @@
     &.@{oui-button-selector}_icon-right {
       #oui > .button-full-width-icon-right(@oui-icon-selector);
     }
+  }
+
+  &_small-width {
+    #oui > .button-small-width();
   }
 }

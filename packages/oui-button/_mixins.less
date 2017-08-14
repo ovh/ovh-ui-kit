@@ -313,4 +313,13 @@
       left: @oui-button-icon-padding-left;
     }
   }
+
+  .button-small-width (
+    @min-width: @oui-button-small-width-min-width,
+    @padding-left-right: @oui-button-small-width-padding-left-right
+  ) {
+    min-width: @min-width;
+    padding-left: @padding-left-right;
+    padding-right: @padding-left-right;
+  }
 }
