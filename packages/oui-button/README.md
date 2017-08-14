@@ -12,6 +12,8 @@ oui-button is a package which provide styles for the button component.
 
 ## Usage
 
+### Normal
+
 ```html:preview
 <div>
   <button class="oui-button oui-button_primary">
@@ -41,6 +43,47 @@ oui-button is a package which provide styles for the button component.
   <button class="oui-button oui-button_link oui-button_icon-right">
     Button link Icon right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
   </button>
+</div>
+```
+
+### Disabled
+
+```html:preview
+<div>
+  <button class="oui-button oui-button_primary" disabled>
+    Primary Button
+  </button>
+  <button class="oui-button oui-button_secondary" disabled>
+    Secondary Button
+  </button>
+  <button class="oui-button oui-button_dropdown" disabled>
+    Dropdown Button
+    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  </button>
+  <button class="oui-button oui-button_primary oui-button_icon-right" disabled>
+    Button Icon right
+    <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
+  </button>
+  <button class="oui-button oui-button_secondary oui-button_icon-left" disabled>
+    <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
+    Button Icon left
+  </button>
+  <button class="oui-button oui-button_link" disabled>
+    Button link
+  </button>
+  <button class="oui-button oui-button_link oui-button_icon-left" disabled>
+    <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button link Icon left
+  </button>
+  <button class="oui-button oui-button_link oui-button_icon-right" disabled>
+    Button link Icon right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+  </button>
+</div>
+```
+
+### Full width
+
+```html:preview
+<div>
   <div style="display: inline-block; width: 300px">
     <button class="oui-button oui-button_full-width oui-button_link oui-button_icon-left">
       <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button link Full width Icon left
@@ -81,35 +124,6 @@ oui-button is a package which provide styles for the button component.
       Secondary Full width Icon right<i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
     </button>
   </div>
-</div>
-<div>
-  <button class="oui-button oui-button_primary" disabled>
-    Primary Button
-  </button>
-  <button class="oui-button oui-button_secondary" disabled>
-    Secondary Button
-  </button>
-  <button class="oui-button oui-button_dropdown" disabled>
-    Dropdown Button
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
-  </button>
-  <button class="oui-button oui-button_primary oui-button_icon-right" disabled>
-    Button Icon right
-    <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
-  </button>
-  <button class="oui-button oui-button_secondary oui-button_icon-left" disabled>
-    <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
-    Button Icon left
-  </button>
-  <button class="oui-button oui-button_link" disabled>
-    Button link
-  </button>
-  <button class="oui-button oui-button_link oui-button_icon-left" disabled>
-    <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button link Icon left
-  </button>
-  <button class="oui-button oui-button_link oui-button_icon-right" disabled>
-    Button link Icon right<i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
-  </button>
   <div style="display: inline-block; width: 300px">
     <button class="oui-button oui-button_link oui-button_full-width oui-button_icon-left" disabled>
       <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>Button link Full width Icon left
@@ -150,6 +164,22 @@ oui-button is a package which provide styles for the button component.
       Secondary Full width Icon right<i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
     </button>
   </div>
+</div>
+```
+
+### Small width
+
+```html:preview
+<div>
+  <button class="oui-button oui-button_primary oui-button_small-width">
+    1
+  </button>
+  <button class="oui-button oui-button_secondary oui-button_small-width">
+    1
+  </button>
+  <button class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width">
+    <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
+  </button>
 </div>
 ```
 
