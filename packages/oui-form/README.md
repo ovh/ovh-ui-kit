@@ -1,6 +1,21 @@
 # Alignment test
 
+
+| Element               | Default display         | Inline modifier         |
+|-----------------------|-------------------------|-------------------------|
+|  oui-button           |  inline-block           | -                       |
+|  oui-button-group     |  inline-block           | -                       |
+|  oui-input            |  block                  | oui-input_inline        |
+|  oui-input-group      |  flex                   | oui-input-group_inline  |
+|  oui-select           |  block                  | oui-select_inline       |
+|  oui-switch           |  inline-block           | -                       |
+|  oui-checkbox         |  block                  | oui-checkbox_inline     |
+|  oui-radio            |  block                  | oui-radio_inline        |
+
 ```html:preview
+<button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width" aria-label="Previous">
+  <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
+</button>
 <button class="oui-button oui-button_primary">
   Primary Button
 </button>
@@ -24,6 +39,9 @@
   </select>
   <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
 </label>
+<button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width" aria-label="Previous">
+  <i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+</button>
 ```
 
 ```html:preview
