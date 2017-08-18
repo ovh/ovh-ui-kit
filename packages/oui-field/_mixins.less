@@ -1,0 +1,59 @@
+@import './_variables';
+
+#oui {
+  .field-base(
+    @label-selector
+  ) {
+    display: flex;
+    flex-direction: column;
+
+    .@{label-selector} {
+      &_focus {
+        font-weight: @oui-font-semibold;
+        color: @oui-field-label-default-font-color;
+      }
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+    }
+
+    &-control {
+      .make-control-sizes(@i: length(@oui-field-control-sizes)) when (@i > 0) {
+        .make-control-sizes(@i - 1);
+        @pair: extract(@oui-field-control-sizes, @i);
+        @key: extract(@pair, 1);
+        @value: extract(@pair, 2);
+        &_@{key} {
+          width: @value;
+          min-width: @value;
+        }
+      }
+      .make-control-sizes();
+    }
+
+    &-helper {
+      margin: 0 0 rem-calc(20) rem-calc(20);
+      color: @oui-field-helper-color;
+
+      &_top {
+        align-self: flex-start;
+      }
+    }
+
+    &_warning {
+      .@{label-selector} {
+        font-weight: @oui-font-semibold;
+        color: @oui-field-label-warning-font-color;
+      }
+    }
+
+    &_error {
+      .@{label-selector} {
+        font-weight: @oui-font-semibold;
+        color: @oui-field-label-error-font-color;
+      }
+    }
+  }
+}
