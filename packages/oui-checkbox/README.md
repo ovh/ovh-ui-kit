@@ -546,6 +546,33 @@ oui-checkbox is a package which provide styles for the checkbox component.
 </div>
 ```
 
+### Inline
+
+```html:preview
+<div class="oui-checkbox oui-checkbox_inline">
+  <input class="oui-checkbox__input" id="oui-checkbox-inline-1" name="oui-checkbox-inline-1" type="checkbox" checked="checked">
+  <label class="oui-checkbox__label-container" for="oui-checkbox-inline-1">
+    <span class="oui-checkbox__label">Checkbox 1</span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+<div class="oui-checkbox oui-checkbox_inline">
+  <input class="oui-checkbox__input" id="oui-checkbox-inline-2" name="oui-checkbox-inline-2" type="checkbox" checked="checked">
+  <label class="oui-checkbox__label-container" for="oui-checkbox-inline-2">
+    <span class="oui-checkbox__label">Checkbox 2</span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+```
+
 ## Mixins
 
 ```less
@@ -640,6 +667,14 @@ Will stylize your checkbox as one in success, warning or error.
 );
 ```
 
+### .checkbox-inline
+
+`.oui-checkbox` don't give you an inline element by default. If you want an inlined input, you can use this mixin.
+
+```less
+.checkbox-inline();
+```
+
 ## Classes
 
 ### Block
@@ -657,3 +692,4 @@ The provided modifiers are:
 | `oui-checkbox_success`   | Make the checkbox looks like one in success    |
 | `oui-checkbox_warning`   | Make the checkbox looks like one in warning    |
 | `oui-checkbox_error`     | Make the checkbox looks like one in error      |
+| `oui-checkbox_inline`    | Make the checkbox inlined                      |

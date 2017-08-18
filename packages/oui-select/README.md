@@ -49,6 +49,20 @@ oui-select is a package which provides styles for the select component.
   <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
 </label>
 ```
+
+### Inline select
+
+```html:preview
+<label class="oui-select oui-select_inline">
+  <select id="select-inline" name="select-inline" class="oui-select__input">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+</label>
+```
+
 ## Mixins
 
 ```less
@@ -89,8 +103,24 @@ Define the styles for select warning and select error.
 );
 ```
 
+### .select-inline
+
+`.oui-select` don't give you an inline element by default. If you want an inlined input, you can use this mixin.
+
+```less
+#oui > .select-inline();
+```
+
 ## Classes
 
 ### Block
 
 The block class is `oui-select` (top-level element).
+
+### Modifier
+
+The provided modifiers are:
+
+| Class                  | Description                                 |
+| ---------------------- | ------------------------------------------- |
+| `oui-select_inline`    | Make the select inlined                     |

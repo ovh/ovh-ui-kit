@@ -60,6 +60,15 @@ oui-input-group is a package which provide styles to group inputs together.
 </div>
 ```
 
+### Inline input group
+
+```html:preview
+<div class="oui-input-group oui-input-group_inline">
+  <input class="oui-input" placeholder="Email">
+  <button class="oui-button">Find</button>
+</div>
+```
+
 ## Mixins
 
 ```less
@@ -99,3 +108,26 @@ Define the base styles for an input-group with a button.
 ```less
 #oui > .input-group-button();
 ```
+
+### .input-group-inline
+
+`.oui-input-group` don't give you an inline element by default. If you want an inlined input group, you can use this mixin.
+
+```less
+#oui > .input-group-inline();
+```
+
+## Classes
+
+### Block
+
+The block class is `oui-input-group` (top-level element).
+
+### Modifier
+
+The provided modifiers are:
+
+| Class                       | Description                                         |
+| --------------------------- | --------------------------------------------------- |
+| `oui-input-group_button`    | Make the button inside group appear inside input    |
+| `oui-input-group_inline`    | Make the input group inlined                        |

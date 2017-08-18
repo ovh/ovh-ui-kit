@@ -22,6 +22,12 @@ oui-input is a package which provides styles for the input component.
 <input type="text" class="oui-input oui-input_error" value="Input text Error">
 ```
 
+### Inline input
+
+```html:preview
+<input type="text" class="oui-input oui-input_inline" value="Inline input">
+```
+
 ## Mixins
 
 ```less
@@ -61,6 +67,14 @@ Define the styles for input warning and input error.
 );
 ```
 
+### .input-inline
+
+`.oui-input` don't give you an inline element by default. If you want an inlined input, you can use this mixin.
+
+```less
+#oui > .input-inline();
+```
+
 ## Classes
 
 ### Block
@@ -75,3 +89,4 @@ The provided modifiers are:
 | --------------------- | ------------------------------------------- |
 | `oui-input_warning`   | Make the input looks like one in warning    |
 | `oui-input_error`     | Make the input looks like one in error      |
+| `oui-input_inline`    | Make the input inlined                      |

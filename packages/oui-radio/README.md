@@ -364,6 +364,24 @@ oui-radio is a package which provide styles for the input radio component.
   </label>
 </div>
 ```
+
+### Inline
+
+```html:preview
+<div class="oui-radio oui-radio_inline">
+  <input class="oui-radio__input" type="radio" name="oui-radio-inline" value="oui-radio-inline-1" id="oui-radio-inline-1" checked="checked" />
+  <label class="oui-radio__label-container" for="oui-radio-inline-1">
+    <span class="oui-radio__label">Checked</span>
+  </label>
+</div>
+<div class="oui-radio oui-radio_inline">
+  <input class="oui-radio__input" type="radio" name="oui-radio-inline" value="oui-radio-inline-2" id="oui-radio-inline-2" />
+  <label class="oui-radio__label-container" for="oui-radio-inline-2">
+    <span class="oui-radio__label">Unchecked</span>
+  </label>
+</div>
+```
+
 ## Mixins
 
 ```less
