@@ -72,9 +72,14 @@
       vertical-align: middle;
       line-height: 0;
 
-      @{table-cell-action-elements} {
-        margin: 0;
+      .delete-margin-in-action-columns(@i: length(@table-cell-action-elements)) when (@i > 0) {
+        .delete-margin-in-action-columns(@i - 1);
+        @action-column-child:  extract(@table-cell-action-elements, @i);
+        @{action-column-child} {
+          margin: 0;
+        }
       }
+      .delete-margin-in-action-columns();
     }
   }
 
