@@ -16,6 +16,7 @@
   ) {
     position: relative;
     display: block;
+    vertical-align: top;
     border-radius: @oui-global-base-radius;
     margin: @spacing;
 
@@ -135,5 +136,10 @@
     &_@{status} .@{select-selector}__input:focus {
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
     }
+  }
+
+  .select-inline() {
+    display: inline-block;
+    width: inherit;
   }
 }
