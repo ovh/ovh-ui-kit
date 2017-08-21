@@ -44,7 +44,7 @@ oui-field is a package which provides styles for form fields.
 </div>
 
 <div class="oui-field">
-  <label for="text" class="oui-field__label oui-label">Input size 3</label>
+  <label for="text" class="oui-field__label oui-label">Input size 3 (no helper)</label>
   <div class="oui-field__content">
     <div class="oui-field-control oui-field-control_3">
       <div class="oui-input-group">
@@ -52,7 +52,6 @@ oui-field is a package which provides styles for form fields.
         <button class="oui-button">Find</button>
       </div>
     </div>
-    <div class="oui-field-helper">An input group with oui-field-control_3 class</div>
   </div>
 </div>
 
