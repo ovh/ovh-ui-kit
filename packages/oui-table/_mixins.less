@@ -234,6 +234,12 @@
           border-bottom: @oui-table-responsive-border-size solid @oui-table-responsive-border-color;
         }
 
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
         &[data-title]::before {
           display: block;
           color: @oui-table-responsive-label-color;
@@ -242,6 +248,22 @@
         }
 
         &_action {
+          position: relative;
+          padding-top: rem-calc(20);
+          padding-bottom: rem-calc(10);
+
+          &::before {
+              position: absolute;
+              top: 0;
+              line-height: rem-calc(15);
+          }
+
+          &::after {
+              content: "";
+              display: table;
+              clear: both;
+          }
+
           @{table-cell-action-elements} {
             margin-bottom: @table-cell-action-tablet-padding;
           }
