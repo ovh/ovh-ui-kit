@@ -209,6 +209,27 @@ The block class is `oui-icon` (top-level element).
   </div>
 </div>
 
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-copy-error" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-copy-normal" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-copy-success" aria-hidden="true"></i>`
+  </div>
+</div>
+
 ### Bicolor Icons
 
 <div class="oui-icon-badge">
@@ -375,12 +396,5 @@ The block class is `oui-icon` (top-level element).
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i>`
-  </div>
-</div>
-
-<div class="oui-icon-badge">
-  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-close_thin" aria-hidden="true"></i></div>
-  <div class="oui-icon-badge__code">
-    `<i class="oui-icon oui-icon-copy-normal" aria-hidden="true"></i>`
   </div>
 </div>
