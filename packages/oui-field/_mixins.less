@@ -1,3 +1,4 @@
+@import '../oui-responsive/_mixins';
 @import './_variables';
 
 #oui {
@@ -17,6 +18,10 @@
     &__content {
       display: flex;
       align-items: center;
+
+      .tablet({
+        display: block;
+      });
     }
 
     &-control {
@@ -31,15 +36,25 @@
         }
       }
       .make-control-sizes();
+
+      .phone({
+        width: 100%;
+        min-width: inherit;
+      });
     }
 
     &-helper {
       margin: 0 0 @oui-field-helper-spacing @oui-field-helper-spacing;
       color: @oui-field-helper-color;
+      text-align: justify;
 
       &_top {
         align-self: flex-start;
       }
+
+      .tablet({
+        margin-left: 0;
+      });
     }
 
     &_warning {
