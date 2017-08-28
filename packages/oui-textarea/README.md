@@ -21,6 +21,12 @@ oui-textarea is a package which provides styles for the textarea component.
 <textarea class="oui-textarea oui-textarea_error">Textarea text Error</textarea>
 ```
 
+### Inline textarea
+
+```html:preview
+<textarea class="oui-textarea oui-textarea_inline">Textarea inline</textarea>
+```
+
 ## Mixins
 
 ```less
@@ -43,6 +49,14 @@ Define the styles for textarea warning and textarea error. It inherits from `.in
 #oui > .textarea-status();
 ```
 
+### .textarea-inline
+
+`.oui-textarea` don't give you an inline element by default. If you want an inlined input, you can use this mixin.
+
+```less
+#oui > .textarea-inline();
+```
+
 ## Classes
 
 ### Block
@@ -57,3 +71,4 @@ The provided modifiers are:
 | ------------------------ | ---------------------------------------------- |
 | `oui-textarea_warning`   | Make the textarea looks like one in warning    |
 | `oui-textarea_error`     | Make the textarea looks like one in error      |
+| `oui-textarea_inline`    | Make the textarea inlined                      |
