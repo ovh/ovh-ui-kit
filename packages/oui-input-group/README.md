@@ -47,14 +47,14 @@ oui-input-group is a package which provide styles to group inputs together.
 
 <div class="oui-input-group oui-input-group_button">
   <input class="oui-input" id="password" name="password" type="password" placeholder="Password with icon eye" />
-  <button class="oui-button" id="togglePassword" type="button" aria-label="Show password" />
+  <button class="oui-button" id="togglePassword" type="button" aria-label="Show password">
     <i class="oui-icon oui-icon-eye"></i>
   </button>
 </div>
 
 <div class="oui-input-group oui-input-group_button">
   <input class="oui-input oui-input_error" id="passwordError" name="passwordError" type="text" placeholder="Password Error with icon eye blocked" />
-  <button class="oui-button" id="togglePasswordError" type="button" aria-label="Hide password" />
+  <button class="oui-button" id="togglePasswordError" type="button" aria-label="Hide password">
     <i class="oui-icon oui-icon-eye-blocked"></i>
   </button>
 </div>
