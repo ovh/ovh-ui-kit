@@ -12,7 +12,8 @@
     @icon-position-right: @oui-icon-position-right,
     @border-color: @oui-select-border-color,
     @spacing: @oui-select-spacing,
-    @padding: @oui-select-padding
+    @padding: @oui-select-padding,
+    @shadow: @oui-select-shadow
   ) {
     position: relative;
     display: block;
@@ -25,10 +26,11 @@
       max-width: 100%;
       height: ~"calc(@{font-size} * 2.25)";
       min-height: rem-calc(36);
-      padding: 0 rem-calc(20) 0 @padding;
+      padding: 0 rem-calc(30) + @padding * 0.8 0 @padding;
       border: 1px solid @border-color;
       border-radius: @oui-global-base-radius;
       background: #ffffff;
+      box-shadow: @shadow;
       color: @font-color;
       font-size: @font-size;
       line-height: rem-calc(34);
@@ -86,7 +88,7 @@
       top: 1px;
       right: 1px;
       bottom: 1px;
-      width: ~"calc(@{icon-size} * 2)";
+      width: ~"calc(@{icon-size} * 2.5)";
       height: auto;
       border-radius: ~"calc(@{oui-global-base-radius} - 1px)";
       margin: auto;
@@ -98,6 +100,7 @@
 
       &::before {
         display: inline-block;
+        margin-right: @padding * 1.5;
         color: @oui-color-shuttle;
         font-size: @icon-size;
       }
