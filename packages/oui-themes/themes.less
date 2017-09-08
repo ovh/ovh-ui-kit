@@ -1,9 +1,14 @@
-.oui-theme-sapphire {
-  font-size: rem-calc(17);
-  font-family: @oui-global-base-font-family;
-}
+@import './diamond/_mixins';
+@import './sapphire/_mixins';
 
 .oui-theme-diamond {
-  font-size: rem-calc(16);
-  font-family: @oui-global-base-font-family;
+  #oui > .theme-diamond-base();
+
+  & .oui-header {
+    #oui > .theme-diamond-headers();
+  }
+}
+
+.oui-theme-sapphire {
+  #oui > .theme-sapphire-base();
 }
