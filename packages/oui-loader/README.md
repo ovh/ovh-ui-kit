@@ -12,7 +12,13 @@ oui-loader is a package which provide styles for the loader component.
 
 ## Usage
 
-### Small loader
+### X-Small loader (light background)
+Soon.
+
+### X-Small loader (dark background)
+Soon.
+
+### Small loader (light background)
 
 ```html:preview
 <div class="oui-loader oui-loader_s">
@@ -22,7 +28,10 @@ oui-loader is a package which provide styles for the loader component.
 </div>
 ```
 
-### Large loader
+### Small loader (dark background)
+Soon.
+
+### Large loader (light background)
 
 ```html:preview
 <div class="oui-loader oui-loader_l">
@@ -31,6 +40,9 @@ oui-loader is a package which provide styles for the loader component.
   </div>
 </div>
 ```
+
+### Large loader (dark background)
+Soon.
 
 ## Mixins
 
