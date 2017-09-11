@@ -1,6 +1,6 @@
 # oui-typography
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-typography is a package which provides tools as constants and mixins for managing typography.
 
