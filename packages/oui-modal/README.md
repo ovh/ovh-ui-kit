@@ -110,6 +110,7 @@ It is possible to click outside the modal to close it or click X (equivalent to 
 </div>
 ```
 ### No icon
+The no icon modal can contain a short form (4 to 5 inputs) in a single section.
 
 ```html:preview
 <div class="oui-modal oui-modal_shadow">
@@ -123,8 +124,11 @@ It is possible to click outside the modal to close it or click X (equivalent to 
     </div>
   </div>
   <div class="oui-modal__footer">
+  <button class="oui-button oui-button_secondary" type="button">
+      Cancel
+    </button>
     <button class="oui-button oui-button_primary" type="button">
-      Ok
+      Save
     </button>
   </div>
 </div>
