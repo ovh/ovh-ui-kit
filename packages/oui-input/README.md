@@ -1,6 +1,6 @@
 # oui-input
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-input is a package which provides styles for the input component.
 
@@ -11,6 +11,7 @@ oui-input is a package which provides styles for the input component.
 ```
 
 ## Usage
+Guideline : Any text box must be sized according to the expected length of the field in the database.
 
 ```html:preview
 <input type="text" class="oui-input" value="Input text">
@@ -18,7 +19,6 @@ oui-input is a package which provides styles for the input component.
 <input type="text" class="oui-input" value="Input text disabled" disabled="disabled">
 <input type="text" class="oui-input" value="Input text disabled with value" disabled="disabled">
 <input type="text" class="oui-input" value="Input text readonly with value" readonly="readonly">
-<input type="text" class="oui-input oui-input_warning" value="Input text Warning">
 <input type="text" class="oui-input oui-input_error" value="Input text Error">
 ```
 
