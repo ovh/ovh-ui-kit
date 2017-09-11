@@ -1,6 +1,6 @@
 # oui-checkbox
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-checkbox is a package which provide styles for the checkbox component.
 
@@ -348,130 +348,6 @@ oui-checkbox is a package which provide styles for the checkbox component.
     <span class="oui-checkbox__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-```
-
-### Success
-
-```html:preview
-<div class="oui-checkbox oui-checkbox_success">
-  <input class="oui-checkbox__input" id="oui-checkbox4-1" name="oui-checkbox4-1" checked="checked" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox4-1">
-    <span class="oui-checkbox__label">Checkbox Success Checked</span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-
-<div class="oui-checkbox oui-checkbox_success">
-  <input class="oui-checkbox__input" id="oui-checkbox4-2" name="oui-checkbox4-2" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox4-2">
-    <span class="oui-checkbox__label">Checkbox Success Unchecked</span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-
-<div class="oui-checkbox oui-checkbox_success">
-  <input class="oui-checkbox__input" id="oui-checkbox4-3" name="oui-checkbox4-3" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox4-3">
-    <span class="oui-checkbox__label">Checkbox Success Description</span>
-    <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-
-<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail oui-checkbox_success">
-  <input class="oui-checkbox__input" id="oui-checkbox4-4" name="oui-checkbox4-4" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox4-4">
-    <span class="oui-checkbox__label">
-      Checkbox Success M Thumbnail
-    </span>
-    <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-```
-
-### Warning
-
-```html:preview
-<div class="oui-checkbox oui-checkbox_warning">
-  <input class="oui-checkbox__input" id="oui-checkbox5-1" name="oui-checkbox5-1" checked="checked" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox5-1">
-    <span class="oui-checkbox__label">Checkbox Warning Checked</span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-
-<div class="oui-checkbox oui-checkbox_warning">
-  <input class="oui-checkbox__input" id="oui-checkbox5-2" name="oui-checkbox5-2" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox5-2">
-    <span class="oui-checkbox__label">Checkbox Warning Unchecked</span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-
-<div class="oui-checkbox oui-checkbox_warning">
-  <input class="oui-checkbox__input" id="oui-checkbox5-3" name="oui-checkbox5-3" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox5-3">
-    <span class="oui-checkbox__label">Checkbox Warning Description</span>
-    <span class="oui-checkbox__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
-      Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-    <span class="oui-checkbox__icon">
-      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-    </span>
-  </label>
-</div>
-
-<div class="oui-checkbox oui-checkbox_m oui-checkbox_thumbnail oui-checkbox_warning">
-  <input class="oui-checkbox__input" id="oui-checkbox5-4" name="oui-checkbox5-4" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox5-4">
-    <span class="oui-checkbox__label">
-      Checkbox Warning M Thumbnail
-    </span>
-    <span class="oui-checkbox__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
