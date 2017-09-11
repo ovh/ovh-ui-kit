@@ -31,15 +31,6 @@ oui-select is a package which provides styles for the select component.
   <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
 </label>
 
-<label class="oui-select oui-select_warning">
-  <select id="select-warning" name="select-warning" class="oui-select__input">
-    <option value="Option 1">Option 1</option>
-    <option value="Option 2">Option 2</option>
-    <option value="Option 3">Option 3</option>
-  </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
-</label>
-
 <label class="oui-select oui-select_error">
   <select id="select-error" name="select-error" class="oui-select__input">
     <option value="Option 1">Option 1</option>
