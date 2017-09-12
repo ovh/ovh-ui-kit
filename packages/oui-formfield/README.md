@@ -1,6 +1,6 @@
 # oui-formfield
 
-<component-status cx-design="partial" ux="prototype"></component-status>
+<component-status cx-design="complete" ux="prototype"></component-status>
 
 > **IMPORTANT:** The name of this component can still be changed at any moment.
 
@@ -13,6 +13,19 @@ oui-formfield is a package which provides styles for the formfield component.
 ```
 
 ## Usage
+### Error display in a formfield
+Upon initial loading of the form, the text fields have a normal appearance.
+#### Unit validation
+
+* The validation is done when leaving the field and transforms the appearance of the field if it is in error.
+* The field label is becomes red (see Color)
+* The field has a colored outline and an error icon (X) to the right end.  
+* If the unit validation is successful when losing focus, the field returns to its normal appearance.
+
+#### Focusing a field with errors:
+
+* The error message is displayed in a popover. This floats right of the field (except mobile which is found below.)
+* The error message contains context-sensitive help if necessary.
 
 ### Input
 
@@ -25,11 +38,6 @@ oui-formfield is a package which provides styles for the formfield component.
 <div class="oui-input-formfield">
   <input type="text-disabled" id="text-disabled" name="text-disabled" class="oui-input" value="Input text disabled" disabled />
   <label for="text-disabled" class="oui-label">Label for Input disabled</label>
-</div>
-
-<div class="oui-input-formfield">
-  <input type="text-warning" id="text-warning" name="text-warning" class="oui-input oui-input_warning" value="Input text warning" />
-  <label for="text-warning" class="oui-label">Label for Input warning</label>
 </div>
 
 <div class="oui-input-formfield">
@@ -74,18 +82,6 @@ oui-formfield is a package which provides styles for the formfield component.
 </div>
 
 <div class="oui-select-formfield">
-  <div class="oui-select oui-select_warning">
-    <select id="select-warning" name="select-warning" class="oui-select__input">
-      <option value="Option 1">Option 1</option>
-      <option value="Option 2">Option 2</option>
-      <option value="Option 3">Option 3</option>
-    </select>
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
-    <label for="select-warning" class="oui-label">Label for Select warning</label>
-  </div>
-</div>
-
-<div class="oui-select-formfield">
   <div class="oui-select oui-select_error">
     <select id="select-error" name="select-error" class="oui-select__input">
       <option value="Option 1">Option 1</option>
@@ -109,11 +105,6 @@ oui-formfield is a package which provides styles for the formfield component.
 <div class="oui-textarea-formfield">
   <textarea class="oui-textarea" name="textarea-disabled" id="textarea-disabled" disabled>Textarea text disabled</textarea>
   <label for="textarea-disabled" class="oui-label">Label for Textarea disabled</label>
-</div>
-
-<div class="oui-textarea-formfield">
-  <textarea class="oui-textarea oui-textarea_warning" name="textarea-warning" id="textarea-warning">Textarea text warning</textarea>
-  <label for="textarea-warning" class="oui-label">Label for Textarea warning</label>
 </div>
 
 <div class="oui-textarea-formfield">
