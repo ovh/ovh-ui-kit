@@ -1,6 +1,6 @@
 # oui-label
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-label is a package which provides styles for the label component.
 
@@ -11,6 +11,10 @@ oui-label is a package which provides styles for the label component.
 ```
 
 ## Usage
+*Guidelines:*
+A label gives an indication about the information that is expected, in the related input, from the user. The label can be textual or graphical. The label position is important since it indicates its scope.
+
+The label can be found over its related input field. However, these labels are positioned at the right of the checkboxes and radio buttons.
 
 ```html:preview
 <label for="text" class="oui-label">Label for Input text</label>
