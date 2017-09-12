@@ -13,10 +13,9 @@ oui-button is a package which provide styles for the button component.
 ## Usage
 
 ### Primary Action Button
-* This button represents the action that the user is waiting for.  It must stand out visually, catching the eye and encourage the user to click.  This button is equivalent to press on the “Enter” key on the keypad
+* This button represents the action that the user is waiting for.  It must stand out visually, catching the eye and encourage the user to click.  This button is equivalent to press on the “Enter” key on the keypad.
 * Normally, there’s only one primary action button per form.
-* Regardless of the universe, there’s a will to unify button colors and states.
-* The min-width is set to 195px and the max-width is set to 300px. If the translation is longer than that, find a another translation or the bouton will be transform in a link (without border)
+* The min-width is set to 195px and the max-width is set to 300px. If the translation is longer than that, find a another translation or the bouton will be transform in a link (without border).
 
 ```html:preview
 <div>
@@ -33,8 +32,9 @@ oui-button is a package which provide styles for the button component.
     </button>
   </div>
     <div style="display: inline-block; width: 300px">
-    <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_primary">
-      <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>Primary Full width Icon left
+    <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary">
+      Primary Full width Icon right
+      <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
     </button>
   </div>
 </div>
@@ -56,10 +56,10 @@ oui-button is a package which provide styles for the button component.
       Primary Button Full width
     </button>
   </div>
-  
   <div style="display: inline-block; width: 300px">
-    <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_primary" disabled>
-      <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>Primary Full width Icon left
+    <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary" disabled>
+      Primary Full width Icon right
+      <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
     </button>
   </div>
 </div>
@@ -78,29 +78,17 @@ Multiple secondary action buttons can be found on a page.
     <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
     Button Icon left
   </button>
-    <div style="display: inline-block; width: 300px">
+  <div style="display: inline-block; width: 300px">
     <button class="oui-button oui-button_full-width oui-button_secondary">
       Secondary Button Full width
     </button>
   </div>
   <div style="display: inline-block; width: 300px">
-    <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary">
-      Secondary Full width Icon right
-      <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
-    </button>
-  </div>
-    <div style="display: inline-block; width: 300px">
     <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_secondary">
       <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
       Secondary Full width Icon left
     </button>
   </div>  
-  <div style="display: inline-block; width: 300px">
-    <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_secondary">
-      Secondary Full width Icon right
-      <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
-    </button>
-  </div>
 </div>
 ```
 
@@ -120,24 +108,11 @@ Multiple secondary action buttons can be found on a page.
     <button class="oui-button oui-button_full-width oui-button_secondary" disabled>
       Secondary Button Full width
     </button>
-  </div> 
-  <div style="display: inline-block; width: 300px">
-    <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary" disabled>
-      Secondary Full width Icon right
-      <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
-    </button>
   </div>
-  
   <div style="display: inline-block; width: 300px">
     <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_secondary" disabled>
       <i class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></i>
       Secondary Full width Icon left
-    </button>
-  </div>
-  <div style="display: inline-block; width: 300px">
-    <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_secondary" disabled>
-      Secondary Full width Icon right
-      <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
     </button>
   </div>
 </div>
