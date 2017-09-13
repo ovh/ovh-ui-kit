@@ -13,10 +13,10 @@ oui-loader is a package which provide styles for the loader component.
 ## Usage
 
 ### X-Small loader 
-Guideline: Use the x-small format to demonstrate the loading of a single item.
+Guideline: Use the x-small format when loading a single item. (ex: link in the left menu, a content in a table cell)
 
 ### Small loader 
-Guideline: Use the small format to demonstrate the loading of an element group or block.
+Guideline: Use the small format when loading a group or block. (ex: box, panel, zone of a page)
 
 ```html:preview
 <div class="oui-loader oui-loader_s">
@@ -27,7 +27,7 @@ Guideline: Use the small format to demonstrate the loading of an element group o
 ```
 
 ### Large loader 
-Guideline: Use large format to demonstrate the loading of a full page.
+Guideline: Use large format when loading a whole page.
 
 ```html:preview
 <div class="oui-loader oui-loader_l">
