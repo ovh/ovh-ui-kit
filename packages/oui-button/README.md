@@ -205,10 +205,10 @@ Actions grouped under a Dropdown button.  On click, a panel slides down to displ
 ```html:preview
 <div>
   <button class="oui-button oui-button_primary oui-button_small-width">
-    1
+    OK
   </button>
   <button class="oui-button oui-button_secondary oui-button_small-width">
-    1
+    OK
   </button>
   <button class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width">
     <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
