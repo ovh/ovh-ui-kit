@@ -14,7 +14,7 @@ oui-themes is a package which provides already built themes that be used for dif
 
 ### Sapphire
 
-This theme is intended to be mainly used by the OVH Manager.
+This theme is intended to be mainly used by the OVH Control Panel.
 
 ```html:preview
 <div class="oui-theme-sapphire">
