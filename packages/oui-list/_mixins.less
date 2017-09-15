@@ -213,6 +213,9 @@
     @icon-border-color-checked: @oui-list-checked-icon-border-color,
     @font-color-complete: @oui-list-complete-font-color,
     @icon-color-complete: @oui-list-complete-icon-color,
+    @icon-font-size-optional: @oui-list-optional-icon-font-size,
+    @icon-padding-top-optional: @oui-list-optional-icon-padding-top,
+    @icon-padding-left-optional: @oui-list-optional-icon-padding-left,
     @font-size: @oui-list-steps-font-size,
     @font-weight: @oui-list-steps-font-weight,
     @icon-size: @oui-list-steps-icon-size,
@@ -285,7 +288,6 @@
 
     .@{selector}__item_checked,
     .@{selector}__item_complete {
-
       .@{selector}__header {
         line-height: 1.5;
         color: @font-color-checked;
@@ -314,7 +316,6 @@
     }
 
     .@{selector}__item_complete {
-
       .@{selector}__header {
         color: @font-color-complete;
       }
@@ -322,6 +323,26 @@
       .@{selector}__header::before {
         color: @icon-color-complete;
         -webkit-text-stroke: 0;
+      }
+    }
+
+    .@{selector}__item_checked.@{selector}__item_optional {
+      .@{selector}__header::before {
+        content: @oui-icon-index-success;
+        color: @icon-border-color-checked;
+        font-size: @icon-font-size-optional;
+        padding-top: @icon-padding-top-optional;
+        padding-left: @icon-padding-left-optional;
+      }
+    }
+
+    .@{selector}__item_complete.@{selector}__item_optional {
+      .@{selector}__header::before {
+        content: @oui-icon-index-success;
+        color: @icon-color-complete;
+        font-size: @icon-font-size-optional;
+        padding-top: @icon-padding-top-optional;
+        padding-left: @icon-padding-left-optional;
       }
     }
   }
