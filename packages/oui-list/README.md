@@ -177,6 +177,23 @@ oui-list is a package which provide styles for the list component.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
     </li>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_checked">
+      <span class="oui-list__header">List item checked</span>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+        Etiam ultricies metus ante, vel condimentum orci mollis at.
+      </span>
+    </li>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_checked oui-list__item_disabled">
+      <span class="oui-list__header">List item checked disabled</span>
+    </li>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_complete">
+      <a href="#" class="oui-list__header">List item complete</a>
+      <span>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+        Etiam ultricies metus ante, vel condimentum orci mollis at.
+      </span>
+    </li>
   </ul>
 </div>
 ```
@@ -281,6 +298,9 @@ Will stylize your list as a stepped one.
   @icon-border-color-checked: Color,
   @font-color-complete: Color,
   @icon-color-complete: Color,
+  @icon-font-size-optional: Number,
+  @icon-padding-top-optional: Number,
+  @icon-padding-left-optional: Number,
   @font-size: Number,
   @font-weight: Number,
   @icon-size: Number,
