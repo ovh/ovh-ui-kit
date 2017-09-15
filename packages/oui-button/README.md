@@ -183,6 +183,23 @@ oui-button is a package which provide styles for the button component.
 </div>
 ```
 
+### Large height
+
+```html:preview
+<div>
+  <button class="oui-button oui-button_primary oui-button_large-height">
+    Primary Button
+  </button>
+  <button class="oui-button oui-button_secondary oui-button_large-height">
+    Secondary Button
+  </button>
+  <button class="oui-button oui-button_primary oui-button_icon-right oui-button_large-height">
+    Button Icon right
+    <i class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></i>
+  </button>
+</div>
+```
+
 ## Mixins
 
 ```less
@@ -327,12 +344,11 @@ Will stylize your button as a link.
 );
 ```
 
-### .button-link
+### .button-full-width
 
 Will stylize your button as a link full width.
 
 ```less
-#oui > .button-link();
 #oui > .button-full-width;
 ```
 
@@ -341,6 +357,35 @@ Will stylize your button as a link full width.
   @icon-selector: Class,
   @icon-color: Color,
   @font-weight: Number
+);
+```
+
+### .button-small-width
+
+Will stylize your button as a button with smaller width.
+
+```less
+#oui > .button-small-width;
+```
+
+```less
+#oui > .button-small-width(
+  @min-width: Number,
+  @padding-left-right: Number
+);
+```
+
+### .button-large-height
+
+Will stylize your button as a button with larger height.
+
+```less
+#oui > .button-large-height;
+```
+
+```less
+#oui > .button-large-height(
+  @min-height: Number
 );
 ```
 
@@ -354,11 +399,13 @@ The block class is `oui-button` (top-level element).
 
 The provided modifiers are:
 
-| Class                   | Description                                                   |
-| ----------------------- | ------------------------------------------------------------- |
-| `oui-button_primary`    | Make the button looks like a primary button                   |
-| `oui-button_secondary`  | Make the button looks like a secondary button                 |
-| `oui-button_dropdown`   | Make the button looks like a dropdown button                  |
-| `oui-button_icon-right` | Make the button looks like a button with an icon on the right |
-| `oui-button_icon-left`  | Make the button looks like a button with an icon on the left  |
-| `oui-button_link`       | Make the button looks like a link                             |
+| Class                     | Description                                                   |
+| ------------------------- | ------------------------------------------------------------- |
+| `oui-button_primary`      | Make the button looks like a primary button                   |
+| `oui-button_secondary`    | Make the button looks like a secondary button                 |
+| `oui-button_dropdown`     | Make the button looks like a dropdown button                  |
+| `oui-button_icon-right`   | Make the button looks like a button with an icon on the right |
+| `oui-button_icon-left`    | Make the button looks like a button with an icon on the left  |
+| `oui-button_link`         | Make the button looks like a link                             |
+| `oui-button_small-width`  | Make the button looks like a button with smaller width        |
+| `oui-button_large-height` | Make the button looks like a button with larger height        |
