@@ -35,6 +35,7 @@
     margin: @margin;
     vertical-align: top;
     background-color: @background-color;
+    box-shadow: @oui-input-shadow;
     color: @font-color;
     font-size: @font-size;
     line-height: rem-calc(34);
@@ -55,7 +56,7 @@
 
       border-color: @border-color-focus;
       outline: none;
-      box-shadow: inset 1px 1px 2px 0 rgba(102, 199, 214, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+      box-shadow: @oui-input-shadow-focus;
       background-color: @background-color-focus;
       text-decoration: none;
     }
@@ -63,6 +64,7 @@
     &:disabled {
       border-color: @border-color-disabled;
       background-color: @background-color-disabled;
+      box-shadow: none;
       color: @font-color-disabled;
       cursor: not-allowed;
     }
