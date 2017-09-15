@@ -162,7 +162,7 @@ oui-list is a package which provide styles for the list component.
     </li>
     <li class="oui-list__item oui-list__item_checked">
       <span class="oui-list__header">List item checked</span>
-      <span>
+      <span class="oui-list__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
@@ -172,7 +172,24 @@ oui-list is a package which provide styles for the list component.
     </li>
     <li class="oui-list__item oui-list__item_complete">
       <a href="#" class="oui-list__header">List item complete</a>
-      <span>
+      <span class="oui-list__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+        Etiam ultricies metus ante, vel condimentum orci mollis at.
+      </span>
+    </li>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_checked">
+      <span class="oui-list__header">List item checked</span>
+      <span class="oui-list__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+        Etiam ultricies metus ante, vel condimentum orci mollis at.
+      </span>
+    </li>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_checked oui-list__item_disabled">
+      <span class="oui-list__header">List item checked disabled</span>
+    </li>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_complete">
+      <a href="#" class="oui-list__header">List item complete</a>
+      <span class="oui-list__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
@@ -284,6 +301,7 @@ Will stylize your list as a stepped one.
   @font-size: Number,
   @font-weight: Number,
   @icon-size: Number,
+  @icon-check-size: Number,
   @icon-spacing: Number,
   @border-color: Color,
   @border-width: Number,
