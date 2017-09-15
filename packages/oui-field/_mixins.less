@@ -19,9 +19,11 @@
       display: flex;
       align-items: center;
 
+      /* stylelint-disable indentation */
       .tablet({
         display: block;
       });
+      /* stylelint-enable */
     }
 
     &-control {
@@ -37,10 +39,12 @@
       }
       .make-control-sizes();
 
+      /* stylelint-disable indentation */
       .phone({
         width: 100%;
         min-width: inherit;
       });
+      /* stylelint-enable */
     }
 
     &-helper {
@@ -49,12 +53,15 @@
       text-align: justify;
 
       &_top {
+
         align-self: flex-start;
       }
 
+      /* stylelint-disable indentation */
       .tablet({
         margin-left: 0;
       });
+      /* stylelint-enable */
     }
 
     &_warning {
