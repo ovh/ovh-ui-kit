@@ -69,6 +69,16 @@ oui-input-group is a package which provide styles to group inputs together.
 </div>
 ```
 
+### Numeric
+
+```html:preview
+<div class="oui-input-group oui-input-group_numeric">
+  <button class="oui-button oui-button_small-width">-</button>
+  <input class="oui-input oui-input_number" type="number">
+  <button class="oui-button oui-button_small-width">+</button>
+</div>
+```
+
 ## Mixins
 
 ```less
@@ -117,6 +127,16 @@ Define the base styles for an input-group with a button.
 #oui > .input-group-inline();
 ```
 
+### .input-group-numeric
+
+Define the base styles for an input-group for a numeric field.
+
+```less
+.input-group-numeric(
+  @width: Number
+)
+```
+
 ## Classes
 
 ### Block
@@ -131,3 +151,4 @@ The provided modifiers are:
 | --------------------------- | --------------------------------------------------- |
 | `oui-input-group_button`    | Make the button inside group appear inside input    |
 | `oui-input-group_inline`    | Make the input group inlined                        |
+| `oui-input-group_numeric`   | Make the input group styled like a numeric field    |
