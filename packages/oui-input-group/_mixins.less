@@ -143,9 +143,15 @@
   }
 
   .input-group-numeric(
-    @width: @oui-input-group-numeric-width
+    @icon-selector,
+    @width: @oui-input-group-numeric-width,
+    @icon-size: @oui-input-group-numeric-icon-size
   ) {
     width: @width;
     max-width: @width;
+
+    .@{icon-selector}::before {
+      font-size: @icon-size;
+    }
   }
 }
