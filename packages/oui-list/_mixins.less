@@ -216,13 +216,24 @@
     @font-size: @oui-list-steps-font-size,
     @font-weight: @oui-list-steps-font-weight,
     @icon-size: @oui-list-steps-icon-size,
+    @icon-check-size: @oui-list-steps-icon-check-size,
     @icon-spacing: @oui-list-steps-icon-spacing,
     @padding: @oui-list-steps-padding,
     @spacing: @oui-list-steps-spacing
   ) {
+    line-height: 1.2;
 
     .@{selector}__items {
       counter-reset: counter;
+    }
+
+    .@{selector}__item {
+      position: relative;
+
+      .@{selector}__header + .@{selector}__description {
+        display: block;
+        margin-top: 7px;
+      }
     }
 
     .@{selector}__item,
@@ -254,7 +265,7 @@
 
       .@{selector}__header {
         color: @font-color;
-        line-height: 1.4;
+        line-height: 1.2;
       }
 
       .@{selector}__header::before {
@@ -266,6 +277,7 @@
         border-radius: 50%;
         background: @icon-color;
         vertical-align: baseline;
+        line-height: @icon-size;
       }
     }
 
@@ -285,20 +297,30 @@
 
     .@{selector}__item_checked,
     .@{selector}__item_complete {
-
       .@{selector}__header {
-        line-height: 1.5;
+        line-height: 1.2;
         color: @font-color-checked;
       }
 
       .@{selector}__header::before {
-        content: @oui-icon-index-success_circle;
+        position: absolute;
+        content: "";
+        border: 1px solid @icon-border-color-checked;
+        background-color: @icon-color-checked;
+        color: @icon-color-checked;
+      }
+
+      .@{selector}__header::after {
+        position: absolute;
+        top: (@icon-size - @icon-check-size) / 2;
+        left: (@icon-size - @icon-check-size) / 2;
+        content: @oui-icon-index-success;
         border: 0 none;
         background: none;
         color: @icon-color-checked;
         -webkit-text-stroke: 1px @icon-border-color-checked;
         font-family: 'Oui Icons';
-        font-size: @icon-size;
+        font-size: @icon-check-size;
         line-height: 1;
         font-weight: @oui-font-regular;
         vertical-align: bottom;
@@ -314,12 +336,32 @@
     }
 
     .@{selector}__item_complete {
-
       .@{selector}__header {
         color: @font-color-complete;
       }
 
       .@{selector}__header::before {
+        background-color: @icon-color-complete;
+      }
+
+      .@{selector}__header::after {
+        color: @icon-color-checked;
+        -webkit-text-stroke: 0;
+      }
+    }
+
+    .@{selector}__item_checked.@{selector}__item_optional {
+      .@{selector}__header::before {
+        display: none;
+      }
+    }
+
+    .@{selector}__item_complete.@{selector}__item_optional {
+      .@{selector}__header::before {
+        display: none;
+      }
+
+      .@{selector}__header::after {
         color: @icon-color-complete;
         -webkit-text-stroke: 0;
       }
