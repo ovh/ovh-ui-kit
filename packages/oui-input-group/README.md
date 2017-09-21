@@ -17,23 +17,23 @@ oui-input-group is a package which provide styles to group inputs together.
 ```html:preview
 <div class="oui-input-group">
   <input class="oui-input" placeholder="Email">
-  <button class="oui-button">Find</button>
+  <button class="oui-button" type="button">Find</button>
 </div>
 
 <div class="oui-input-group">
   <input class="oui-input" placeholder="Email" disabled>
-  <button class="oui-button" disabled>Find</button>
+  <button class="oui-button" type="button" disabled>Find</button>
 </div>
 
 <div class="oui-input-group">
-  <button class="oui-button">-</button>
+  <button class="oui-button" type="button">-</button>
   <input class="oui-input oui-input_number" type="number" placeholder="vCores">
-  <button class="oui-button">+</button>
+  <button class="oui-button" type="button">+</button>
 </div>
 
 <div class="oui-input-group">
   <input class="oui-input" placeholder="nickhandle">
-  <button class="oui-button">Weird action here</button>
+  <button class="oui-button" type="button">Weird action here</button>
   <input class="oui-input" value="ovh.com" disabled>
 </div>
 
@@ -65,7 +65,7 @@ oui-input-group is a package which provide styles to group inputs together.
 ```html:preview
 <div class="oui-input-group oui-input-group_inline">
   <input class="oui-input" placeholder="Email">
-  <button class="oui-button">Find</button>
+  <button class="oui-button" type="button">Find</button>
 </div>
 ```
 
@@ -73,9 +73,13 @@ oui-input-group is a package which provide styles to group inputs together.
 
 ```html:preview
 <div class="oui-input-group oui-input-group_numeric">
-  <button class="oui-button oui-button_small-width">-</button>
+  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
+    <i class="oui-icon oui-icon-remove" aria-hidden="true"></i>
+  </button>
   <input class="oui-input oui-input_number" type="number">
-  <button class="oui-button oui-button_small-width">+</button>
+  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
+    <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
+  </button>
 </div>
 ```
 
