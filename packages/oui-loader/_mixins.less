@@ -63,6 +63,27 @@
     }
   }
 
+  .loader-m(
+    @selector,
+    @background-image: @oui-loader-m-background-image,
+    @size: @oui-loader-m-size,
+    @spacing: @oui-loader-m-spacing,
+    @speed-rotation: @oui-loader-m-speed-rotation,
+    @speed-scale: @oui-loader-m-speed-scale
+  ) {
+    .@{selector}__container {
+      width: ~"calc(@{size} + @{spacing})";
+      height: ~"calc(@{size} + @{spacing})";
+    }
+
+    .@{selector}__image {
+      width: @size;
+      height: @size;
+      background-image: @background-image;
+      animation: scale @speed-scale 0ms 1 linear, rotation @speed-rotation @speed-scale infinite linear;
+    }
+  }
+
   .loader-l(
     @selector,
     @background-image: @oui-loader-l-background-image,
@@ -82,5 +103,10 @@
       background-image: @background-image;
       animation: scale @speed-scale 0ms 1 linear, rotation @speed-rotation @speed-scale infinite linear;
     }
+  }
+
+  .loader-inline() {
+    display: inline-block;
+    vertical-align: text-top;
   }
 }
