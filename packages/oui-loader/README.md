@@ -36,11 +36,11 @@ oui-loader is a package which provide styles for the loader component.
 
 ```html:preview
 <button class="oui-button oui-button_secondary" disabled>
-  <div class="oui-loader oui-loader_s oui-loader_inline">
-    <div class="oui-loader__container">
-      <div class="oui-loader__image"></div>
-    </div>
-  </div>
+  <span class="oui-loader oui-loader_s oui-loader_inline">
+    <span class="oui-loader__container">
+      <span class="oui-loader__image"></span>
+    </span>
+  </span>
   Loading...
 </button>
 ```
