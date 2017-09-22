@@ -204,6 +204,7 @@
 
   .list-steps (
     @selector,
+    @checkbox-selector,
     @font-color: @oui-list-steps-font-color,
     @icon-color: @oui-list-steps-icon-color,
     @font-color-disabled: @oui-list-steps-disabled-font-color,
@@ -221,7 +222,7 @@
     @padding: @oui-list-steps-padding,
     @spacing: @oui-list-steps-spacing
   ) {
-    line-height: 1.2;
+    line-height: 1.4;
 
     .@{selector}__items {
       counter-reset: counter;
@@ -265,7 +266,7 @@
 
       .@{selector}__header {
         color: @font-color;
-        line-height: 1.2;
+        line-height: 1.4;
       }
 
       .@{selector}__header::before {
@@ -298,32 +299,20 @@
     .@{selector}__item_checked,
     .@{selector}__item_complete {
       .@{selector}__header {
-        line-height: 1.2;
+        line-height: 1.4;
         color: @font-color-checked;
       }
 
       .@{selector}__header::before {
         position: absolute;
-        content: "";
+        content: @oui-icon-index-success;
         border: 1px solid @icon-border-color-checked;
         background-color: @icon-color-checked;
-        color: @icon-color-checked;
-      }
-
-      .@{selector}__header::after {
-        position: absolute;
-        top: (@icon-size - @icon-check-size) / 2;
-        left: (@icon-size - @icon-check-size) / 2;
-        content: @oui-icon-index-success;
-        border: 0 none;
-        background: none;
         color: @icon-color-checked;
         -webkit-text-stroke: 1px @icon-border-color-checked;
         font-family: 'Oui Icons';
         font-size: @icon-check-size;
-        line-height: 1;
         font-weight: @oui-font-regular;
-        vertical-align: bottom;
       }
     }
 
@@ -342,9 +331,6 @@
 
       .@{selector}__header::before {
         background-color: @icon-color-complete;
-      }
-
-      .@{selector}__header::after {
         color: @icon-color-checked;
         -webkit-text-stroke: 0;
       }
@@ -352,19 +338,44 @@
 
     .@{selector}__item_checked.@{selector}__item_optional {
       .@{selector}__header::before {
-        display: none;
+        border: 0 none;
+        background: none;
       }
     }
 
     .@{selector}__item_complete.@{selector}__item_optional {
       .@{selector}__header::before {
-        display: none;
-      }
-
-      .@{selector}__header::after {
         color: @icon-color-complete;
         -webkit-text-stroke: 0;
       }
+    }
+
+    .@{selector}__item > .@{checkbox-selector} {
+      margin-bottom: 0;
+    }
+
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__label-container {
+      position: inherit;
+      margin-bottom: 0;
+    }
+
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__label {
+      padding-top: rem-calc(2);
+      font-size: @font-size;
+    }
+
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__description {
+      margin-top: rem-calc(7);
+      line-height: 1.4;
+    }
+
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__label,
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__description {
+      padding-left: 0;
+    }
+
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}_m .@{checkbox-selector}__icon {
+      left: (@icon-size - @oui-checkbox-m-size) / 2;
     }
   }
 }

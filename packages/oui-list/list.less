@@ -3,6 +3,7 @@
 
 .oui-list {
   @oui-list-selector: oui-list;
+  @oui-checkbox-selector: oui-checkbox;
 
   #oui > .list-normalize();
   #oui > .list(@oui-list-selector);
@@ -17,6 +18,6 @@
 
   &_steps {
     #oui > .list-normalize();
-    #oui > .list-steps(@oui-list-selector);
+    #oui > .list-steps(@oui-list-selector, @oui-checkbox-selector);
   }
 }
