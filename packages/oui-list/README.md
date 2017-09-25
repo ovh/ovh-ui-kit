@@ -178,21 +178,55 @@ oui-list is a package which provide styles for the list component.
       </span>
     </li>
     <li class="oui-list__item oui-list__item_optional oui-list__item_checked">
-      <span class="oui-list__header">List item checked</span>
+      <span class="oui-list__header">Optional list item checked</span>
       <span class="oui-list__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
     </li>
     <li class="oui-list__item oui-list__item_optional oui-list__item_checked oui-list__item_disabled">
-      <span class="oui-list__header">List item checked disabled</span>
+      <span class="oui-list__header">Optional list item checked disabled</span>
     </li>
-    <li class="oui-list__item oui-list__item_optional oui-list__item_complete">
-      <a href="#" class="oui-list__header">List item complete</a>
+    <li class="oui-list__item oui-list__item_optional oui-list__item_checked oui-list__item_complete">
+      <span class="oui-list__header">Optional list item complete</span>
       <span class="oui-list__description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
         Etiam ultricies metus ante, vel condimentum orci mollis at.
       </span>
+    </li>
+    <li class="oui-list__item">
+      <div class="oui-checkbox">
+        <input class="oui-checkbox__input" id="oui-checkbox-1" name="oui-checkbox-1" type="checkbox">
+        <label class="oui-checkbox__label-container" for="oui-checkbox-1">
+          <span class="oui-checkbox__label">Checkbox list item</span>
+          <span class="oui-checkbox__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+            Etiam ultricies metus ante, vel condimentum orci mollis at.
+          </span>
+          <span class="oui-checkbox__icon">
+            <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+            <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+            <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="oui-list__item">
+      <div class="oui-checkbox oui-checkbox_m">
+        <input class="oui-checkbox__input" id="oui-checkbox-2" name="oui-checkbox-2" type="checkbox">
+        <label class="oui-checkbox__label-container" for="oui-checkbox-2">
+          <span class="oui-checkbox__label">Checkbox list item</span>
+          <span class="oui-checkbox__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+            Etiam ultricies metus ante, vel condimentum orci mollis at.
+          </span>
+          <span class="oui-checkbox__icon">
+            <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+            <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+            <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+          </span>
+        </label>
+      </div>
     </li>
   </ul>
 </div>
@@ -282,13 +316,15 @@ Will stylize your list as a stepped one.
 
 ```less
 #oui > .list-steps(
-  @oui-list-selector
+  @oui-list-selector,
+  @oui-checkbox-selector
 );
 ```
 
 ```less
 #oui > .list-steps(
   @selector: Class,
+  @checkbox-selector: Class,
   @font-color: Color,
   @icon-color: Color,
   @font-color-disabled: Color,
