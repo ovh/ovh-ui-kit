@@ -137,7 +137,10 @@ Define the base styles for an input-group for a numeric field.
 
 ```less
 .input-group-numeric(
-  @width: Number
+  @icon-selector: Class,
+  @input-selector: Class,
+  @width: Number,
+  @icon-size: Number
 )
 ```
 
