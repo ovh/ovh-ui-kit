@@ -144,6 +144,7 @@
 
   .input-group-numeric(
     @icon-selector,
+    @input-selector,
     @width: @oui-input-group-numeric-width,
     @icon-size: @oui-input-group-numeric-icon-size
   ) {
@@ -152,6 +153,10 @@
 
     .@{icon-selector}::before {
       font-size: @icon-size;
+    }
+
+    .@{input-selector} {
+      text-align: center;
     }
   }
 }
