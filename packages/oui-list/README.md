@@ -195,9 +195,26 @@ oui-list is a package which provide styles for the list component.
       </span>
     </li>
     <li class="oui-list__item">
+      <div class="oui-checkbox">
+        <input class="oui-checkbox__input" id="oui-checkbox-1" name="oui-checkbox-1" type="checkbox">
+        <label class="oui-checkbox__label-container" for="oui-checkbox-1">
+          <span class="oui-checkbox__label">Checkbox list item</span>
+          <span class="oui-checkbox__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.
+            Etiam ultricies metus ante, vel condimentum orci mollis at.
+          </span>
+          <span class="oui-checkbox__icon">
+            <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+            <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+            <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+          </span>
+        </label>
+      </div>
+    </li>
+    <li class="oui-list__item">
       <div class="oui-checkbox oui-checkbox_m">
-        <input class="oui-checkbox__input" id="oui-checkbox-5" name="oui-checkbox-5" type="checkbox">
-        <label class="oui-checkbox__label-container" for="oui-checkbox-5">
+        <input class="oui-checkbox__input" id="oui-checkbox-2" name="oui-checkbox-2" type="checkbox">
+        <label class="oui-checkbox__label-container" for="oui-checkbox-2">
           <span class="oui-checkbox__label">Checkbox list item</span>
           <span class="oui-checkbox__description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id convallis massa. Aenean eu placerat mi.

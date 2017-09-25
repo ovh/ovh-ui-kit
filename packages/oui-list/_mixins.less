@@ -1,4 +1,5 @@
 @import '../oui-icons/_variables';
+@import '../oui-checkbox/_variables';
 @import './_variables';
 
 #oui {
@@ -222,6 +223,8 @@
     @padding: @oui-list-steps-padding,
     @spacing: @oui-list-steps-spacing
   ) {
+    @label-padding-top: rem-calc(2);
+
     line-height: 1.4;
 
     .@{selector}__items {
@@ -360,7 +363,7 @@
     }
 
     .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__label {
-      padding-top: rem-calc(2);
+      padding-top: @label-padding-top;
       font-size: @font-size;
     }
 
@@ -374,7 +377,13 @@
       padding-left: 0;
     }
 
-    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}_m .@{checkbox-selector}__icon {
+    .@{selector}__item > .@{checkbox-selector} .@{checkbox-selector}__icon {
+      top: (@font-size * @oui-checkbox-line-height - @oui-checkbox-size + @label-padding-top) / 2;
+      left: (@icon-size - @oui-checkbox-size) / 2;
+    }
+
+    .@{selector}__item > .@{checkbox-selector}.@{checkbox-selector}_m .@{checkbox-selector}__icon {
+      top: (@font-size * @oui-checkbox-m-line-height - @oui-checkbox-m-size + @label-padding-top) / 2;
       left: (@icon-size - @oui-checkbox-m-size) / 2;
     }
   }
