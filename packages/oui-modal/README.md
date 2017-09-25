@@ -21,13 +21,11 @@ oui-modal is a package which provide styles for the `oui-modal` component.
   </div>
   <div class="oui-modal__body">
     <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
-    <div class="oui-modal__body-text">
-      <h2 class="oui-modal__title">Warning</h2>
-      <p class="oui-modal__text">The current order is not finished.</p>
-      <p class="oui-modal__text">
-        <strong>Are you sure you want to continue and return to the home page?</strong>
-      </p>
-    </div>
+    <h2 class="oui-modal__title">Warning</h2>
+    <p class="oui-modal__text">The current order is not finished.</p>
+    <p class="oui-modal__text">
+      <strong>Are you sure you want to continue and return to the home page?</strong>
+    </p>
   </div>
   <div class="oui-modal__footer">
     <button class="oui-button oui-button_secondary" type="button">
@@ -48,10 +46,8 @@ oui-modal is a package which provide styles for the `oui-modal` component.
     <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
   </div>
   <div class="oui-modal__body oui-modal__body_no-icon">
-    <div class="oui-modal__body-text">
-      <h2 class="oui-modal__title">Storage creation</h2>
-      <p class="oui-modal__text">A new storage will be added to your account.</p>
-    </div>
+    <h2 class="oui-modal__title">Storage creation</h2>
+    <p class="oui-modal__text">A new storage will be added to your account.</p>
   </div>
   <div class="oui-modal__footer">
     <button class="oui-button oui-button_primary" type="button">
