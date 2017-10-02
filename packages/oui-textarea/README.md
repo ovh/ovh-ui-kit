@@ -1,6 +1,6 @@
 # oui-textarea
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-textarea is a package which provides styles for the textarea component.
 
@@ -17,7 +17,6 @@ oui-textarea is a package which provides styles for the textarea component.
 <textarea class="oui-textarea" placeholder="Textarea text with placeholder"></textarea>
 <textarea class="oui-textarea" disabled="disabled">Textarea text disabled</textarea>
 <textarea class="oui-textarea" readonly="readonly">Textarea text readonly</textarea>
-<textarea class="oui-textarea oui-textarea_warning">Textarea text Warning</textarea>
 <textarea class="oui-textarea oui-textarea_error">Textarea text Error</textarea>
 ```
 
