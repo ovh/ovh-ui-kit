@@ -1,6 +1,6 @@
 # oui-button
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-button is a package which provide styles for the button component.
 
