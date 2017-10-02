@@ -11,6 +11,10 @@ oui-button-group is a package which provide styles to group buttons together.
 ```
 
 ## Usage
+Guidelines : 
+* A button is selected by default.
+* The labels are short: 1 or 2 words.
+* On mobile, the button-group is on a line must remain on one line.
 
 ```html:preview
 <div>
