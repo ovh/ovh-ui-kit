@@ -27,7 +27,7 @@ The modal disappears when a button is clicked.
     <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
   </div>
   <div class="oui-modal__body">
-    <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+    <i class="oui-icon oui-icon-question_circle oui-icon_bicolor" aria-hidden="true"></i>
     <div class="oui-modal__body-text">
       <h2 class="oui-modal__title">Confirmation</h2>
       
@@ -122,6 +122,18 @@ The no icon modal can contain a short form (4 to 5 inputs) in a single section.
       <h2 class="oui-modal__title">Storage creation</h2>
       <p class="oui-modal__text">A new storage will be added to your account.</p>
     </div>
+    <label for="text" class="oui-label">Label for Input text</label>
+<input type="text" id="text" name="text" class="oui-input" />
+
+<label for="select" class="oui-label">Label for Select</label>
+<div class="oui-select">
+  <select id="select" name="select" class="oui-select__input">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <i class="oui-icon oui-icon-chevron-down"></i>
+</div>
   </div>
   <div class="oui-modal__footer">
   <button class="oui-button oui-button_secondary" type="button">
