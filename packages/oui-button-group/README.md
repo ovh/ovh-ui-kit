@@ -1,6 +1,6 @@
 # oui-input-group
 
-<component-status cx-design="partial" ux="prototype"></component-status>
+<component-status cx-design="complete" ux="prototype"></component-status>
 
 oui-button-group is a package which provide styles to group buttons together.
 
