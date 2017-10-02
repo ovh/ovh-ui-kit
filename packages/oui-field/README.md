@@ -13,18 +13,41 @@ oui-field is a package which provides styles for form fields.
 ## Usage
 
 ### Standard sizes
+#### Size 1
+Use it for very short fields like postal code. Field content less than 8 characters.
 
 ```html:preview
 <div class="oui-field">
-  <label for="text" class="oui-field__label oui-label">Input size 1</label>
+  <label for="text" class="oui-field__label oui-label">VLAN ID</label>
   <div class="oui-field__content">
     <div class="oui-field-control oui-field-control_1">
-      <input type="text" id="text" name="text" class="oui-input" value="Input text" />
+      <input type="text" id="text" name="text" class="oui-input" value="2588" />
     </div>
     <div class="oui-field-helper">An input with oui-field-control_1 class</div>
   </div>
 </div>
+<div class="oui-field"> 
+  <label for="text" class="oui-field__label oui-label">Postal Code</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_1">
+       <input type="text" id="text" name="text" class="oui-input" value="A9A 9A9" />
+    </div>
+  </div>
+</div>
+```
+#### Size 2
+Use it for short fields like : amount, phone number. Field contents between 9 to 20 characters.
 
+```html:preview
+<div class="oui-field">
+  <label for="text" class="oui-field__label oui-label">Phone number</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_2">
+      <input type="text" id="text" name="text" class="oui-input" value="123 456-7890" />
+    </div>
+      <div class="oui-field-helper">An input with oui-field-control_2 class</div>
+  </div>
+</div>
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Input size 2</label>
   <div class="oui-field__content">
@@ -38,11 +61,13 @@ oui-field is a package which provides styles for form fields.
         <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
       </label>
     </div>
-    <div class="oui-field-helper">
-      A select box with oui-field-control_2 class with a BIG help. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut nisl est. Aenean sit amet libero et metus suscipit condimentum. Ut feugiat ultricies tincidunt. Quisque in lobortis urna. Phasellus feugiat, tortor eu dictum facilisis, mi erat scelerisque mauris, sed feugiat quam enim sit amet metus. Nulla et rhoncus metus. Aliquam tristique urna ligula, vel tempus massa porttitor eu. Sed vel nunc lectus.</div>
+    <div class="oui-field-helper">A select box with oui-field-control_2 class.</div>
   </div>
 </div>
+```
 
+#### Size 3
+```html:preview
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Input size 3 (no helper)</label>
   <div class="oui-field__content">
@@ -54,7 +79,9 @@ oui-field is a package which provides styles for form fields.
     </div>
   </div>
 </div>
-
+```
+#### Size 4
+```html:preview
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Input size 4</label>
   <div class="oui-field__content">
@@ -64,7 +91,10 @@ oui-field is a package which provides styles for form fields.
     <div class="oui-field-helper oui-field-helper_top">A textarea with oui-field-control_4 class</div>
   </div>
 </div>
+```
+#### Size 5
 
+```html:preview
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Input size 5</label>
   <div class="oui-field__content">
@@ -81,7 +111,10 @@ oui-field is a package which provides styles for form fields.
     <div class="oui-field-helper">A select box with oui-field-control_5 class</div>
   </div>
 </div>
+```
+#### Size 6
 
+```html:preview
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Input size 6</label>
   <div class="oui-field__content">
