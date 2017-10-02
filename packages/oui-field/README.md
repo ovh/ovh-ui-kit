@@ -49,14 +49,15 @@ Use it for short fields like : amount, phone number. Field contents between 9 to
   </div>
 </div>
 <div class="oui-field">
-  <label for="text" class="oui-field__label oui-label">Input size 2</label>
+  <label for="text" class="oui-field__label oui-label">Amount of RAM</label>
   <div class="oui-field__content">
     <div class="oui-field-control oui-field-control_2">
       <label class="oui-select">
         <select id="select" name="select" class="oui-select__input">
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-          <option value="Option 3">Option 3</option>
+          <option value="Option 1">Choose...</option>
+          <option value="Option 2">512MB</option>
+          <option value="Option 3">1024MB</option>
+           <option value="Option 4">2048MB</option>
         </select>
         <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
       </label>
