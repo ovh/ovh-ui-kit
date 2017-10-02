@@ -68,20 +68,31 @@ Use it for short fields like : amount, phone number. Field contents between 9 to
 ```
 
 #### Size 3
+Use it for fields like : email, username, password, IPv4. Fields contents between 21 and 50 characters.
 ```html:preview
 <div class="oui-field">
-  <label for="text" class="oui-field__label oui-label">Input size 3 (no helper)</label>
+  <label for="text" class="oui-field__label oui-label">Domain Name</label>
   <div class="oui-field__content">
     <div class="oui-field-control oui-field-control_3">
       <div class="oui-input-group">
-        <input class="oui-input" placeholder="Email">
+        <input class="oui-input" placeholder="Search">
         <button class="oui-button">Find</button>
       </div>
     </div>
   </div>
 </div>
+<div class="oui-field">
+  <label for="text" class="oui-field__label oui-label">Email</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_3">
+      <input type="text" id="text" name="text" class="oui-input" value="" />
+    </div>
+      <div class="oui-field-helper">An input with oui-field-control_3 class</div>
+  </div>
+</div>
 ```
 #### Size 4
+
 ```html:preview
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Input size 4</label>
@@ -130,16 +141,6 @@ Use it for short fields like : amount, phone number. Field contents between 9 to
 ### Errors
 
 ```html:preview
-<div class="oui-field oui-field_warning">
-  <label for="text" class="oui-field__label oui-label">Input size 4 with warning</label>
-  <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_4">
-      <input type="text" id="text" name="text" class="oui-input oui-input_warning" value="Input text" />
-    </div>
-    <div class="oui-field-helper">A warning input</div>
-  </div>
-</div>
-
 <div class="oui-field oui-field_error">
   <label for="text" class="oui-field__label oui-label">Input size 4 with error</label>
   <div class="oui-field__content">
