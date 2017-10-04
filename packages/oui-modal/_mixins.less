@@ -107,14 +107,37 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 
-  .modal-warning() {
-    &__body > .oui-icon-warning_circle {
+  .modal-icon-base(
+    @icon-selector ,
+    @icon-color
+  ) {
+    &__body > .@{icon-selector} {
       position: absolute;
       display: block;
       top: @oui-modal-icon-position-top;
       left: @oui-modal-icon-position-left;
-      color: @oui-modal-icon-warning-color;
+      color: @icon-color;
       font-size: @oui-modal-icon-font-size;
     }
+  }
+
+  .modal-success {
+    .modal-icon-base(oui-icon-success_circle, @oui-modal-icon-success-color);
+  }
+
+  .modal-error {
+    .modal-icon-base(oui-icon-error_circle, @oui-modal-icon-error-color);
+  }
+
+  .modal-warning {
+    .modal-icon-base(oui-icon-warning_circle, @oui-modal-icon-warning-color);
+  }
+
+  .modal-info {
+    .modal-icon-base(oui-icon-info_circle, @oui-modal-icon-info-color);
+  }
+
+  .modal-help {
+    .modal-icon-base(oui-icon-help_circle, @oui-modal-icon-help-color);
   }
 }
