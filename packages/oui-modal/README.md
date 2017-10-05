@@ -27,7 +27,7 @@ The modal disappears when a button is clicked.
     <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
   </div>
   <div class="oui-modal__body">
-    <i class="oui-icon oui-icon-question_circle oui-icon_bicolor" aria-hidden="true"></i>
+    <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
     <div class="oui-modal__body-text">
       <h2 class="oui-modal__title">Confirmation</h2>
       
