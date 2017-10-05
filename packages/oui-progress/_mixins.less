@@ -7,6 +7,7 @@
     @margin: @oui-progress-margin
   ) {
     display: flex;
+    position: relative;
     width: 100%;
     height: @height;
     border: none;
@@ -92,10 +93,39 @@
     color: @text-color;
   }
 
+  .progress-bar-text-left() {
+    text-align: left;
+  }
+
   .progress-bar-label() {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    padding: 0 @oui-progress-bar-text-spacing;
     font-size: @oui-progress-bar-text-font-size;
+    font-weight: @oui-progress-bar-text-font-weight;
+    line-height: @oui-progress-height;
+  }
+
+  .progress-bar-threshold() {
+    display: inline-block;
     position: absolute;
-    right: @oui-progress-bar-text-spacing;
+    z-index: 1;
+    height: @oui-progress-height;
+    width: 1px;
+    transition: left @oui-animation-default-timing @oui-animation-default;
+    background-color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: @oui-progress-height;
+      width: 1px;
+      left: -1px;
+      background-color: rgba(100, 100, 100, .5);
+    }
+
+    font-size: @oui-progress-bar-text-font-size;
   }
 
   .progress-bar-indeterminate() {

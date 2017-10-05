@@ -25,8 +25,8 @@ oui-progress is a package which provide styles for the progress component.
 
 ```html:preview
 <div class="oui-progress oui-progress_info">
-  <div class="oui-progress__bar oui-progress__bar_info" role="progressbar" style="width: 5%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label">5%</span>
+  <div class="oui-progress__bar oui-progress__bar_info" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">1%</span>
   </div>
 </div>
 <div class="oui-progress oui-progress_success">
@@ -55,6 +55,32 @@ oui-progress is a package which provide styles for the progress component.
   </div>
   <div class="oui-progress__bar oui-progress__bar_error" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
     <span class="oui-progress__label">15%</span>
+  </div>
+</div>
+```
+
+### Thresholds
+
+```html:preview
+<div class="oui-progress oui-progress_info">
+  <div class="oui-progress__threshold" style="left: 25%"></div>
+  <div class="oui-progress__threshold" style="left: 50%"></div>
+  <div class="oui-progress__threshold" style="left: 75%"></div>
+  <div class="oui-progress__bar oui-progress__bar_success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">30%</span>
+  </div>
+  <div class="oui-progress__bar oui-progress__bar_error" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">25%</span>
+  </div>
+</div>
+```
+
+### Label alignment
+
+```html:preview
+<div class="oui-progress oui-progress_info">
+  <div class="oui-progress__bar oui-progress__bar_success oui-progress__bar_text-left" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">Progression: 30%</span>
   </div>
 </div>
 ```
