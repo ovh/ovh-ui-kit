@@ -27,6 +27,8 @@
     }
 
     &-control {
+      width: 100%;
+
       .make-control-sizes(@i: length(@oui-field-control-sizes)) when (@i > 0) {
         .make-control-sizes(@i - 1);
         @pair: extract(@oui-field-control-sizes, @i);
@@ -53,7 +55,6 @@
       text-align: justify;
 
       &_top {
-
         align-self: flex-start;
       }
 
