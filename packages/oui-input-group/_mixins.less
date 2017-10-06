@@ -157,6 +157,10 @@
 
     .@{input-selector} {
       text-align: center;
+      // Two lines bellow are required by firefox otherwise the max-width
+      // defined at root of the mixin isn't applied correctly
+      flex-shrink: 1;
+      min-width: 1px;
     }
   }
 }
