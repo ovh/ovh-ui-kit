@@ -63,6 +63,34 @@ oui-modal is a package which provide styles for the `oui-modal` component.
 </div>
 ```
 
+### Info
+
+```html:preview
+<div class="oui-modal oui-modal_shadow">
+  <div class="oui-modal__header">
+    <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
+  </div>
+  <div class="oui-modal__body">
+    <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
+    <div class="oui-modal__body-text">
+      <h2 class="oui-modal__title">Info</h2>
+      <p class="oui-modal__text">The current order is not finished.</p>
+      <p class="oui-modal__text">
+        <strong>Are you sure you want to exit and return to the home page?</strong>
+      </p>
+    </div>
+  </div>
+  <div class="oui-modal__footer">
+    <button class="oui-button oui-button_secondary" type="button">
+      Cancel
+    </button>
+    <button class="oui-button oui-button_primary" type="button">
+      Exit
+    </button>
+  </div>
+</div>
+```
+
 ### Confirmation or question
 
 ```html:preview
@@ -103,7 +131,6 @@ oui-modal is a package which provide styles for the `oui-modal` component.
     <div class="oui-modal__body-text">
       <h2 class="oui-modal__title">The dynHost was successfully created</h2>
       <p class="oui-modal__text">In order to be able to update a DynHOST field from a software external to the client space, a DynHOST identifier is required.</p>
-      
     </div>
   </div>
   <div class="oui-modal__footer">
@@ -228,7 +255,7 @@ Will stylize your modal as a info one.
 Will stylize your modal as a help one.
 
 ```less
-#oui > .modal-^help();
+#oui > .modal-help();
 ```
 
 ## Classes

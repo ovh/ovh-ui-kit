@@ -7,11 +7,12 @@
   #oui > .modal-normalize();
 
   #oui > .modal-base(@oui-button-selector);
-  #oui > .modal-success();
-  #oui > .modal-error();
-  #oui > .modal-warning();
-  #oui > .modal-info();
-  #oui > .modal-help();
+
+  #oui > .modal-icon-base(oui-icon-success_circle, @oui-modal-icon-success-color);
+  #oui > .modal-icon-base(oui-icon-error_circle, @oui-modal-icon-error-color);
+  #oui > .modal-icon-base(oui-icon-warning_circle, @oui-modal-icon-warning-color);
+  #oui > .modal-icon-base(oui-icon-info_circle, @oui-modal-icon-info-color);
+  #oui > .modal-icon-base(oui-icon-help_circle, @oui-modal-icon-help-color);
 
   &_shadow {
     #oui > .modal-shadow();
