@@ -62,6 +62,12 @@ oui-progress is a package which provide styles for the progress component.
 ### Thresholds
 
 ```html:preview
+<div class="oui-progress oui-progress_error">
+  <div class="oui-progress__threshold" style="left: 70%"></div>
+  <div class="oui-progress__bar oui-progress__bar_error oui-progress__bar_text-left" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">Progression: 80%</span>
+  </div>
+</div>
 <div class="oui-progress oui-progress_info">
   <div class="oui-progress__threshold" style="left: 25%"></div>
   <div class="oui-progress__threshold" style="left: 50%"></div>
