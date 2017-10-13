@@ -167,12 +167,8 @@
   .button-icon-base(
     @icon-selector,
     @icon-size: @oui-button-icon-icon-size,
-    @icon-color: @oui-button-icon-icon-color,
-    @padding-right: @oui-button-icon-padding-right,
-    @padding-left: @oui-button-icon-padding-left
+    @icon-color: @oui-button-icon-icon-color
   ) {
-    padding-right: @padding-right;
-    padding-left: @padding-left;
 
     .@{icon-selector} {
       vertical-align: text-bottom;
@@ -194,8 +190,10 @@
   .button-icon-right(
     @icon-selector,
     @icon-margin-left: @oui-button-icon-right-icon-margin-left,
-    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled
+    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled,
+    @padding-right: @oui-button-icon-padding-right
   ) {
+    padding-right: @padding-right;
 
     .@{icon-selector} {
       margin-left: @icon-margin-left;
@@ -219,8 +217,10 @@
   .button-icon-left(
     @icon-selector,
     @icon-margin-right: @oui-button-icon-right-icon-margin-right,
-    @icon-color_disabled: @oui-button-icon-left-icon-color_disabled
+    @icon-color_disabled: @oui-button-icon-left-icon-color_disabled,
+    @padding-left: @oui-button-icon-padding-left
   ) {
+    padding-left: @padding-left;
 
     .@{icon-selector} {
       margin-right: @icon-margin-right;
