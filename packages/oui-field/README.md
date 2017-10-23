@@ -11,9 +11,22 @@ oui-field is a package which provides styles for form fields.
 ```
 
 ## Usage
+### Error display in a field
+Upon initial loading of the form, the text fields have a normal appearance.
+#### Unit validation
 
-### Standard sizes
-#### Size 1
+* The validation is done when leaving the field and transforms the appearance of the field if it is in error.
+* The field label is becomes red (see Color)
+* The field has a colored outline and an error icon (X) to the right end.  
+* If the unit validation is successful when losing focus, the field returns to its normal appearance.
+
+#### Focusing a field with errors:
+
+* The error message is displayed in a popover. This floats right of the field (except mobile which is found below.)
+* The error message contains context-sensitive help if necessary.
+
+## Standard sizes
+### Size 1
 Use it for very short fields like postal code. Field content less than 8 characters.
 
 ```html:preview
@@ -35,7 +48,7 @@ Use it for very short fields like postal code. Field content less than 8 charact
   </div>
 </div>
 ```
-#### Size 2
+### Size 2
 Use it for short fields like : amount, phone number. Field contents between 9 to 20 characters.
 
 ```html:preview
@@ -67,7 +80,7 @@ Use it for short fields like : amount, phone number. Field contents between 9 to
 </div>
 ```
 
-#### Size 3
+### Size 3
 Use it for fields like : email, username, password, IPv4. Fields contents between 21 and 50 characters.
 ```html:preview
 <div class="oui-field">
@@ -91,7 +104,7 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
   </div>
 </div>
 ```
-#### Size 4
+### Size 4
 
 ```html:preview
 <div class="oui-field">
@@ -104,7 +117,7 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
   </div>
 </div>
 ```
-#### Size 5
+### Size 5
 
 ```html:preview
 <div class="oui-field">
@@ -124,7 +137,7 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
   </div>
 </div>
 ```
-#### Size 6
+### Size 6
 
 ```html:preview
 <div class="oui-field">
@@ -142,12 +155,28 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
 
 ```html:preview
 <div class="oui-field oui-field_error">
-  <label for="text" class="oui-field__label oui-label">Input size 4 with error</label>
+  <label for="text" class="oui-field__label oui-label">Input size 3 with error</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_4">
+    <div class="oui-field-control oui-field-control_3">
       <input type="text" id="text" name="text" class="oui-input oui-input_error" value="Input text" />
     </div>
     <div class="oui-field-helper">An error input</div>
   </div>
 </div>
+<div class="oui-field oui-field_error">
+  <label for="text" class="oui-field__label oui-label">Input size 5 with error</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_5">
+      <label class="oui-select">
+        <select id="select" name="select" class="oui-select__input">
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+          <option value="Option 3">Option 3</option>
+        </select>
+        <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+      </label>
+    </div>
+  </div>
+</div>
 ```
+
