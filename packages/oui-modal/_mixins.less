@@ -107,13 +107,16 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
 
-  .modal-warning() {
-    .oui-icon-warning_circle {
+  .modal-icon-base(
+    @icon-selector ,
+    @icon-color
+  ) {
+    &__body > .@{icon-selector} {
       position: absolute;
       display: block;
       top: @oui-modal-icon-position-top;
       left: @oui-modal-icon-position-left;
-      color: @oui-modal-icon-warning-color;
+      color: @icon-color;
       font-size: @oui-modal-icon-font-size;
     }
   }

@@ -96,7 +96,6 @@ It is possible to click outside the modal to close it or click X (equivalent to 
     <div class="oui-modal__body-text">
       <h2 class="oui-modal__title">The dynHost was successfully created</h2>
       <p class="oui-modal__text">In order to be able to update a DynHOST field from a software external to the client space, a DynHOST identifier is required.</p>
-      
     </div>
   </div>
   <div class="oui-modal__footer">
@@ -109,6 +108,7 @@ It is possible to click outside the modal to close it or click X (equivalent to 
   </div>
 </div>
 ```
+
 ### No icon
 The no icon modal can contain a short form (4 to 5 inputs) in a single section.
 
@@ -184,12 +184,44 @@ Will stylize your modal with a shadow around it.
 #oui > .modal-shadow();
 ```
 
+### .modal-success
+
+Will stylize your modal as a success one.
+
+```less
+#oui > .modal-success();
+```
+
+### .modal-error
+
+Will stylize your modal as a error one.
+
+```less
+#oui > .modal-error();
+```
+
 ### .modal-warning
 
 Will stylize your modal as a warning one.
 
 ```less
 #oui > .modal-warning();
+```
+
+### .modal-info
+
+Will stylize your modal as a info one.
+
+```less
+#oui > .modal-info();
+```
+
+### .modal-help
+
+Will stylize your modal as a help one.
+
+```less
+#oui > .modal-help();
 ```
 
 ## Classes
