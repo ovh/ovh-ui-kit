@@ -1,0 +1,15 @@
+// Dropdown
+@oui-dropdown-background-color: #fff;
+@oui-dropdown-border-width: 1px;
+@oui-dropdown-border-color: @oui-color-silver;
+@oui-dropdown-arrow-size: rem-calc(8);
+@oui-dropdown-arrow-center-position: rem-calc(20);
+@oui-dropdown-shadow-color: @oui-color-info-fade;
+@oui-dropdown-max-width: 300px;
+@oui-dropdown-zindex: 100;
+
+// Calculated value
+@oui-dropdown-arrow-margin: @oui-dropdown-arrow-center-position - @oui-dropdown-arrow-size;
+@oui-dropdown-arrow-border-width: 2px;
+@oui-dropdown-arrow-diff-size: sqrt(2 * @oui-dropdown-arrow-border-width);
+@oui-dropdown-arrow-inner-size: ~"calc(@{oui-dropdown-arrow-size} - @{oui-dropdown-arrow-diff-size})";

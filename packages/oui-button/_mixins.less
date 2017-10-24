@@ -116,6 +116,23 @@
     }
   }
 
+  .button-action-menu() {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    text-align: left;
+    font-weight: @oui-font-regular;
+
+    &:focus,
+    &:hover {
+      #oui > .animate();
+
+      background-color: @oui-button-action-menu-background-color_active;
+      color: @oui-button-action-menu-text-color_active;
+    }
+  }
+
   .button-dropdown(
     @icon-selector,
     @icon-size: @oui-button-dropdown-icon-size,

@@ -1,0 +1,27 @@
+@import '../oui-button/_mixins';
+@import './_variables';
+
+#oui {
+  .action-menu-base() {
+    padding: @oui-action-menu-padding;
+    margin: 0;
+    list-style-type: none;
+    background: @oui-action-menu-background-color;
+  }
+
+  .action-menu-item-divider-base(
+    @button-selector
+  ) {
+    .@{button-selector} {
+      margin-top: 4px;
+    }
+
+    &::before {
+      content: " ";
+      display: block;
+      height: 5px;
+      background-color: @oui-action-menu-background-color;
+      border-bottom: 1px @oui-action-menu-divider-color solid;
+    }
+  }
+}

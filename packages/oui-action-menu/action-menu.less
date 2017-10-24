@@ -1,0 +1,13 @@
+@import './_mixins';
+
+.oui-action-menu {
+  @oui-button-selector: oui-button;
+
+  #oui > .action-menu-base();
+
+  &__item {
+    &_divider {
+      #oui > .action-menu-item-divider-base(@oui-button-selector);
+    }
+  }
+}
