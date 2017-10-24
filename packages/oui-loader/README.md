@@ -12,7 +12,8 @@ oui-loader is a package which provide styles for the loader component.
 
 ## Usage
 
-### Small loader
+### Small loader 
+Guideline: Use the small format when loading a single item. (ex: link in the left menu, a content in a table cell)
 
 ```html:preview
 <div class="oui-loader oui-loader_s">
@@ -22,30 +23,8 @@ oui-loader is a package which provide styles for the loader component.
 </div>
 ```
 
-#### Inline
-
-```html:preview
-<div class="oui-loader oui-loader_s oui-loader_inline">
-  <div class="oui-loader__container">
-    <div class="oui-loader__image"></div>
-  </div>
-</div> Loading...
-```
-
-#### Button
-
-```html:preview
-<button class="oui-button oui-button_secondary" disabled>
-  <span class="oui-loader oui-loader_s oui-loader_inline">
-    <span class="oui-loader__container">
-      <span class="oui-loader__image"></span>
-    </span>
-  </span>
-  Loading...
-</button>
-```
-
-### Medium loader
+### Medum loader 
+Guideline: Use the medium format when loading a group or block. (ex: box, panel, zone of a page)
 
 ```html:preview
 <div class="oui-loader oui-loader_m">
@@ -55,7 +34,8 @@ oui-loader is a package which provide styles for the loader component.
 </div>
 ```
 
-### Large loader
+### Large loader 
+Guideline: Use large format when loading a whole page.
 
 ```html:preview
 <div class="oui-loader oui-loader_l">

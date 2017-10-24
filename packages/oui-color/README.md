@@ -1,6 +1,6 @@
 # oui-color
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 ## Main colors
 

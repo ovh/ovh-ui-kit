@@ -1,6 +1,6 @@
 # oui-typography
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-typography is a package which provides tools as constants and mixins for managing typography.
 
@@ -88,14 +88,8 @@ oui-typography is a package which provides tools as constants and mixins for man
 ```html:preview
 <div>
   <a href="#" class="oui-link">
-    [Link] The quick brown fox jumps over the lazy dog
+    The quick brown fox jumps over the lazy dog
   </a>
-</div>
-
-<div>
-  <button class="oui-link">
-    [Button Link]
-  </button>
 </div>
 ```
 

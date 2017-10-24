@@ -11,19 +11,8 @@ oui-switch is a package which provide styles for the switch component.
 ```
 
 ## Usage
+Guidelines : Switches Are for Instantaneous Actions. The switches do not require an action button to apply the changes.
 
-### Default
-
-```html:preview
-<label class="oui-switch">
-  <input type="checkbox" class="oui-switch__checkbox">
-  <div class="oui-switch__slider"></div>
-</label>
-<label class="oui-switch">
-  <input type="checkbox" class="oui-switch__checkbox" checked="checked">
-  <div class="oui-switch__slider"></div>
-</label>
-```
 ### Default with icons
 
 ```html:preview
@@ -34,35 +23,6 @@ oui-switch is a package which provide styles for the switch component.
   <i class="oui-icon oui-icon-error" aria-hidden="true"></i>
 </label>
 <label class="oui-switch">
-  <input type="checkbox" class="oui-switch__checkbox" checked="checked">
-  <div class="oui-switch__slider"></div>
-  <i class="oui-icon oui-icon-success" aria-hidden="true"></i>
-  <i class="oui-icon oui-icon-error" aria-hidden="true"></i>
-</label>
-```
-
-### Square
-
-```html:preview
-<label class="oui-switch oui-switch_square">
-  <input type="checkbox" class="oui-switch__checkbox">
-  <div class="oui-switch__slider"></div>
-</label>
-<label class="oui-switch oui-switch_square">
-  <input type="checkbox" class="oui-switch__checkbox" checked="checked">
-  <div class="oui-switch__slider"></div>
-</label>
-```
-### Square with icons
-
-```html:preview
-<label class="oui-switch oui-switch_square">
-  <input type="checkbox" class="oui-switch__checkbox">
-  <div class="oui-switch__slider"></div>
-  <i class="oui-icon oui-icon-success" aria-hidden="true"></i>
-  <i class="oui-icon oui-icon-error" aria-hidden="true"></i>
-</label>
-<label class="oui-switch oui-switch_square">
   <input type="checkbox" class="oui-switch__checkbox" checked="checked">
   <div class="oui-switch__slider"></div>
   <i class="oui-icon oui-icon-success" aria-hidden="true"></i>

@@ -1,6 +1,6 @@
 # oui-select
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-select is a package which provides styles for the select component.
 
@@ -24,15 +24,6 @@ oui-select is a package which provides styles for the select component.
 
 <label class="oui-select">
   <select id="select-disabled" name="select-disabled" class="oui-select__input" disabled>
-    <option value="Option 1">Option 1</option>
-    <option value="Option 2">Option 2</option>
-    <option value="Option 3">Option 3</option>
-  </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
-</label>
-
-<label class="oui-select oui-select_warning">
-  <select id="select-warning" name="select-warning" class="oui-select__input">
     <option value="Option 1">Option 1</option>
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>

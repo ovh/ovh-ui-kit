@@ -1,6 +1,6 @@
 # oui-radio
 
-<component-status cx-design="partial" ux="rc"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-radio is a package which provide styles for the input radio component.
 
@@ -252,81 +252,6 @@ oui-radio is a package which provide styles for the input radio component.
 </div>
 ```
 
-### Success
-
-```html:preview
-<div class="oui-radio oui-radio_success">
-  <input class="oui-radio__input" type="radio" name="oui-radio-4-1" value="oui-radio-4-1" id="oui-radio-4-1" />
-  <label class="oui-radio__label-container" for="oui-radio-4-1">
-    <span class="oui-radio__label">Success [Unchecked]</span>
-  </label>
-</div>
-
-<div class="oui-radio oui-radio_success">
-  <input class="oui-radio__input" type="radio" name="oui-radio-4-2" value="oui-radio-4-2" id="oui-radio-4-2" checked="checked" />
-  <label class="oui-radio__label-container" for="oui-radio-4-2">
-    <span class="oui-radio__label">Success [Checked]</span>
-  </label>
-</div>
-
-<div class="oui-radio oui-radio_success">
-  <input class="oui-radio__input" type="radio" name="oui-radio-4-3" value="oui-radio-4-3" id="oui-radio-4-3" />
-  <label class="oui-radio__label-container" for="oui-radio-4-3">
-    <span class="oui-radio__label">Success</span>
-    <span class="oui-radio__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-  </label>
-</div>
-
-<div class="oui-radio oui-radio_thumbnail oui-radio_success">
-  <input class="oui-radio__input" type="radio" name="oui-radio-4-4" value="oui-radio-4-4" id="oui-radio-4-4" />
-  <label class="oui-radio__label-container" for="oui-radio-4-4">
-    <span class="oui-radio__label">Thumbnail [Success]</span>
-    <span class="oui-radio__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-  </label>
-</div>
-```
-
-### Warning
-
-```html:preview
-<div class="oui-radio oui-radio_warning">
-  <input class="oui-radio__input" type="radio" name="oui-radio-5-1" value="oui-radio-5-1" id="oui-radio-5-1" />
-  <label class="oui-radio__label-container" for="oui-radio-5-1">
-    <span class="oui-radio__label">Warning [Unchecked]</span>
-  </label>
-</div>
-
-<div class="oui-radio oui-radio_warning">
-  <input class="oui-radio__input" type="radio" name="oui-radio-5-2" value="oui-radio-5-2" id="oui-radio-5-2" checked="checked" />
-  <label class="oui-radio__label-container" for="oui-radio-5-2">
-    <span class="oui-radio__label">Warning [Checked]</span>
-  </label>
-</div>
-
-<div class="oui-radio oui-radio_warning">
-  <input class="oui-radio__input" type="radio" name="oui-radio-5-3" value="oui-radio-5-3" id="oui-radio-5-3" />
-  <label class="oui-radio__label-container" for="oui-radio-5-3">
-    <span class="oui-radio__label">Warning</span>
-    <span class="oui-radio__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-  </label>
-</div>
-
-<div class="oui-radio oui-radio_thumbnail oui-radio_warning">
-  <input class="oui-radio__input" type="radio" name="oui-radio-5-4" value="oui-radio-5-4" id="oui-radio-5-4" />
-  <label class="oui-radio__label-container" for="oui-radio-5-4">
-    <span class="oui-radio__label">Thumbnail [Warning]</span>
-    <span class="oui-radio__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
-    </span>
-  </label>
-</div>
-```
 ### Error
 
 ```html:preview
