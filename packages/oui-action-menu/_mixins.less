@@ -9,9 +9,25 @@
     background: @oui-action-menu-background-color;
   }
 
-  .action-menu-item-divider-base(
-    @button-selector
+  .action-menu-item-base(
+    @button-selector,
+    @icon-selector
   ) {
+    .@{button-selector} {
+      overflow: visible;
+      white-space: normal;
+      text-overflow: clip;
+      word-wrap: break-word;
+    }
+
+    .@{icon-selector} {
+      padding: 0 rem-calc(5);
+      font-size: rem-calc(12);
+      color: inherit;
+    }
+  }
+
+  .action-menu-item-divider-base(@button-selector) {
     .@{button-selector} {
       margin-top: 4px;
     }

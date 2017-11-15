@@ -2,10 +2,16 @@
 
 .oui-action-menu {
   @oui-button-selector: oui-button;
+  @oui-icon-selector: oui-icon;
 
   #oui > .action-menu-base();
 
   &__item {
+    #oui > .action-menu-item-base(
+      @oui-button-selector,
+      @oui-icon-selector
+    );
+
     &_divider {
       #oui > .action-menu-item-divider-base(@oui-button-selector);
     }

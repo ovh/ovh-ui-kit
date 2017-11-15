@@ -4,6 +4,12 @@
   .dropdown-base(
     @dropdown-selector
   ) {
+    &_active {
+      .@{dropdown-selector}__content {
+        display: block;
+      }
+    }
+
     &__content {
       display: none;
       z-index: @oui-dropdown-zindex;
@@ -11,10 +17,6 @@
       background-color: @oui-dropdown-background-color;
       border: @oui-dropdown-border-width @oui-dropdown-border-color solid;
       box-shadow: 0 4px 6px 0 @oui-dropdown-shadow-color;
-
-      &_active {
-        display: block;
-      }
     }
 
     &__content_arrow {
