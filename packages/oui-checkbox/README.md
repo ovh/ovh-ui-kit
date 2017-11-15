@@ -22,49 +22,66 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
 
 <div class="oui-checkbox">
-  <input class="oui-checkbox__input" id="oui-checkbox1-1" name="oui-checkbox1-1" type="checkbox" checked="checked">
-  <label class="oui-checkbox__label-container" for="oui-checkbox1-1">
+  <input class="oui-checkbox__input" id="oui-checkbox1-2" name="oui-checkbox1-2" type="checkbox" checked="checked">
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-2">
     <span class="oui-checkbox__label">Checkbox Checked</span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
 
 <div class="oui-checkbox">
-  <input class="oui-checkbox__input" id="oui-checkbox1-2" name="oui-checkbox1-2" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox1-2">
+  <input class="oui-checkbox__input" id="oui-checkbox1-3" name="oui-checkbox1-3" type="checkbox">
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-3">
     <span class="oui-checkbox__label">Checkbox Unchecked</span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
 
 <div class="oui-checkbox">
-  <input class="oui-checkbox__input" id="oui-checkbox1-3" name="oui-checkbox1-3" type="checkbox" checked="checked" disabled="disabled">
-  <label class="oui-checkbox__label-container" for="oui-checkbox1-3">
+  <input class="oui-checkbox__input" id="oui-checkbox1-4" name="oui-checkbox1-4" type="checkbox" data-indeterminate>
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-4">
+    <span class="oui-checkbox__label">Checkbox Indeterminated</span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox">
+  <input class="oui-checkbox__input" id="oui-checkbox1-5" name="oui-checkbox1-5" type="checkbox" checked="checked" disabled="disabled">
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-5">
     <span class="oui-checkbox__label">Checkbox Checked Disabled</span>
     <span class="oui-checkbox__icon">
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
 
 <div class="oui-checkbox">
-  <input class="oui-checkbox__input" id="oui-checkbox1-4" name="oui-checkbox1-4" type="checkbox" disabled="disabled">
-  <label class="oui-checkbox__label-container" for="oui-checkbox1-4">
+  <input class="oui-checkbox__input" id="oui-checkbox1-6" name="oui-checkbox1-6" type="checkbox" disabled="disabled">
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-6">
     <span class="oui-checkbox__label">
       Checkbox Unchecked Disabled - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
@@ -73,13 +90,27 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+    </span>
+  </label>
+</div>
+
+<div class="oui-checkbox">
+  <input class="oui-checkbox__input" id="oui-checkbox1-7" name="oui-checkbox1-7" type="checkbox" checked="checked" disabled="disabled" data-indeterminate>
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-7">
+    <span class="oui-checkbox__label">Checkbox Indeterminate Disabled</span>
+    <span class="oui-checkbox__icon">
+      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
 
 <div class="oui-checkbox oui-checkbox_m">
-  <input class="oui-checkbox__input" id="oui-checkbox1-5" name="oui-checkbox1-5" type="checkbox">
-  <label class="oui-checkbox__label-container" for="oui-checkbox1-5">
+  <input class="oui-checkbox__input" id="oui-checkbox1-8" name="oui-checkbox1-8" type="checkbox">
+  <label class="oui-checkbox__label-container" for="oui-checkbox1-8">
     <span class="oui-checkbox__label">
       Checkbox M - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue.
       Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
@@ -88,6 +119,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -108,6 +140,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -123,6 +156,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -139,6 +173,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -158,6 +193,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -177,6 +213,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -197,6 +234,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -213,6 +251,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -229,6 +268,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -245,6 +285,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -266,6 +307,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -286,6 +328,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -302,6 +345,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -318,6 +362,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -334,6 +379,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -355,6 +401,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -371,6 +418,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -383,6 +431,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -399,6 +448,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -417,6 +467,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -433,6 +484,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
@@ -444,6 +496,7 @@ oui-checkbox is a package which provide styles for the checkbox component.
       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
       <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
+      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
     </span>
   </label>
 </div>
