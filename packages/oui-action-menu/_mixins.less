@@ -6,7 +6,7 @@
     padding: @oui-action-menu-padding;
     margin: 0;
     list-style-type: none;
-    background: @oui-action-menu-background-color;
+    background-color: @oui-action-menu-background-color;
   }
 
   .action-menu-item-base(
@@ -18,6 +18,13 @@
       white-space: normal;
       text-overflow: clip;
       word-wrap: break-word;
+      background-color: @oui-action-menu-background-color;
+      color: @oui-action-menu-text-color;
+
+      &:hover, &:focus {
+        background-color: @oui-action-menu-item-active-background-color;
+        color: @oui-action-menu-item-active-text-color;
+      }
     }
 
     .@{icon-selector} {
