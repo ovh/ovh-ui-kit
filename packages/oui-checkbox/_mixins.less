@@ -40,7 +40,8 @@
 
       .@{icon-selector}-unchecked,
       .@{icon-selector}-checked,
-      .@{icon-selector}-checkmark {
+      .@{icon-selector}-checkmark,
+      .@{icon-selector}-indeterminate {
         position: absolute;
         top: 0;
         right: 0;
@@ -104,7 +105,8 @@
 
       .@{icon-selector}-unchecked,
       .@{icon-selector}-checked,
-      .@{icon-selector}-checkmark {
+      .@{icon-selector}-checkmark,
+      .@{icon-selector}-indeterminate {
         color: @outline-color-active;
       }
     }
@@ -135,6 +137,11 @@
         display: none;
         color: @font-color;
       }
+
+      .@{icon-selector}-indeterminate {
+        display: none;
+        color: @font-color;
+      }
     }
 
     &__input:checked ~ &__label-container &__icon {
@@ -143,7 +150,20 @@
         display: block;
       }
 
-      .@{icon-selector}-unchecked {
+      .@{icon-selector}-unchecked,
+      .@{icon-selector}-indeterminate {
+        display: none;
+      }
+    }
+
+    &__input:indeterminate ~ &__label-container &__icon {
+      .@{icon-selector}-unchecked,
+      .@{icon-selector}-indeterminate {
+        display: block;
+      }
+
+      .@{icon-selector}-checked,
+      .@{icon-selector}-checkmark {
         display: none;
       }
     }
@@ -158,7 +178,8 @@
     &__input:not(:disabled) ~ &__label-container:active {
       .@{checkbox-selector}__icon .@{icon-selector}-unchecked,
       .@{checkbox-selector}__icon .@{icon-selector}-checked,
-      .@{checkbox-selector}__icon .@{icon-selector}-checkmark {
+      .@{checkbox-selector}__icon .@{icon-selector}-checkmark,
+      .@{checkbox-selector}__icon .@{icon-selector}-indeterminate {
         color: @outline-color-active;
       }
 
@@ -178,7 +199,8 @@
       .@{checkbox-selector}__description,
       .@{checkbox-selector}__icon .@{icon-selector}-unchecked,
       .@{checkbox-selector}__icon .@{icon-selector}-checked,
-      .@{checkbox-selector}__icon .@{icon-selector}-checkmark {
+      .@{checkbox-selector}__icon .@{icon-selector}-checkmark,
+      .@{checkbox-selector}__icon .@{icon-selector}-indeterminate {
         color: @oui-color-dusty;
       }
 
@@ -312,7 +334,8 @@
 
         .@{icon-selector}-unchecked,
         .@{icon-selector}-checked,
-        .@{icon-selector}-checkmark {
+        .@{icon-selector}-checkmark,
+        .@{icon-selector}-indeterminate {
           color: @@status-icon-color;
         }
       }
