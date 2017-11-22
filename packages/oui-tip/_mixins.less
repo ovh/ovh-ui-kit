@@ -122,4 +122,29 @@
       border-left-color: @border-color;
     }
   }
+
+  .tip-start(
+    @size: @oui-tip-size
+  ) {
+    &::after,
+    &::before { left: 0; }
+
+    &::after { margin-left: @size; }
+
+    &::before { margin-left: rem-calc(3); }
+  }
+
+  .tip-end(
+    @size: @oui-tip-size
+  ) {
+    &::after,
+    &::before {
+      left: auto;
+      right: 0;
+    }
+
+    &::after { margin-right: @size; }
+
+    &::before { margin-right: rem-calc(3); }
+  }
 }

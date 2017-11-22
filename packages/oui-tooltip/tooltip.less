@@ -1,0 +1,23 @@
+@import './_variables';
+
+.oui-tooltip {
+  min-width: @oui-tooltip-min-width;
+  max-width: @oui-tooltip-max-width;
+  margin: rem-calc(6) 0;
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  opacity: 0;
+  transition-property: opacity, z-index;
+  transition-duration: @oui-tooltip-transition-duration;
+  transition-timing-function: @oui-tooltip-transition-animation;
+  z-index: -1;
+
+  &__trigger:focus + &,
+  &__trigger:hover + & {
+    opacity: 1;
+    z-index: @oui-tooltip-z-index;
+  }
+}
