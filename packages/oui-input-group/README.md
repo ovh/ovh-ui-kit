@@ -81,6 +81,16 @@ oui-input-group is a package which provide styles to group inputs together.
     <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
   </button>
 </div>
+
+<div class="oui-input-group oui-input-group_numeric">
+  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
+    <i class="oui-icon oui-icon-remove" aria-hidden="true"></i>
+  </button>
+  <input class="oui-input oui-input_number" type="number" disabled>
+  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
+    <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
+  </button>
+</div>
 ```
 
 ## Mixins

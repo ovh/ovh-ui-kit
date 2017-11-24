@@ -184,7 +184,8 @@
   .button-icon-base(
     @icon-selector,
     @icon-size: @oui-button-icon-icon-size,
-    @icon-color: @oui-button-icon-icon-color
+    @icon-color: @oui-button-icon-icon-color,
+    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled
   ) {
 
     .@{icon-selector} {
@@ -201,6 +202,15 @@
     .@{icon-selector}_circle::before {
       background: @icon-color;
       font-size: ~"calc(@{icon-size} / 2)";
+    }
+
+    &:disabled .@{icon-selector}::before {
+      color: @icon-color_disabled;
+    }
+
+    &:disabled .@{icon-selector}_circle::before {
+      background: @icon-color_disabled;
+      color: @oui-color-concrete;
     }
   }
 
@@ -220,15 +230,6 @@
       line-height: 2;
       text-indent: 2px;
     }
-
-    &:disabled .@{icon-selector}::before {
-      color: @icon-color_disabled;
-    }
-
-    &:disabled .@{icon-selector}_circle::before {
-      background: @icon-color_disabled;
-      color: @oui-color-concrete;
-    }
   }
 
   .button-icon-left(
@@ -246,15 +247,6 @@
     .@{icon-selector}_circle::before {
       line-height: 2;
       text-indent: -2px;
-    }
-
-    &:disabled .@{icon-selector}::before {
-      color: @icon-color_disabled;
-    }
-
-    &:disabled .@{icon-selector}_circle::before {
-      background: @icon-color_disabled;
-      color: @oui-color-concrete;
     }
   }
 
