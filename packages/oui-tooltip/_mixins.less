@@ -1,0 +1,34 @@
+@import './_variables';
+
+#oui {
+  .tooltip(
+    @min-width: @oui-tooltip-min-width,
+    @max-width: @oui-tooltip-max-width,
+    @margin: @oui-tooltip-margin,
+    @transition-duration: @oui-tooltip-transition-duration,
+    @transition-animation: @oui-tooltip-transition-animation,
+    @opacity: @oui-tooltip-opacity,
+    @z-index: @oui-tooltip-z-index
+  ) {
+    min-width: @min-width;
+    max-width: @max-width;
+    box-sizing: border-box;
+    margin: @margin;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    opacity: 0;
+    transition-property: opacity, z-index;
+    transition-duration: @transition-duration;
+    transition-timing-function: @transition-animation;
+    z-index: -1;
+
+    &__trigger:focus + &,
+    &__trigger:hover + & {
+      opacity: @opacity;
+      z-index: @z-index;
+    }
+  }
+}

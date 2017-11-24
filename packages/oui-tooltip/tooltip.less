@@ -1,24 +1,5 @@
-@import './_variables';
+@import './_mixins';
 
 .oui-tooltip {
-  min-width: @oui-tooltip-min-width;
-  max-width: @oui-tooltip-max-width;
-  box-sizing: border-box;
-  margin: @oui-tooltip-margin;
-  position: absolute;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  opacity: 0;
-  transition-property: opacity, z-index;
-  transition-duration: @oui-tooltip-transition-duration;
-  transition-timing-function: @oui-tooltip-transition-animation;
-  z-index: -1;
-
-  &__trigger:focus + &,
-  &__trigger:hover + & {
-    opacity: @oui-tooltip-opacity;
-    z-index: @oui-tooltip-z-index;
-  }
+  #oui > .tooltip();
 }
