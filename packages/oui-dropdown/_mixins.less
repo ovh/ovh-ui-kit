@@ -21,7 +21,7 @@
 
     &__content_arrow {
       &[x-placement^="top"] {
-        margin-bottom: @oui-dropdown-arrow-size;
+        margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-margin;
 
         .@{dropdown-selector}__arrow {
           margin: 0 @oui-dropdown-arrow-margin;
@@ -43,7 +43,7 @@
       }
 
       &[x-placement^="bottom"] {
-        margin-top: @oui-dropdown-arrow-size;
+        margin-top: @oui-dropdown-arrow-size + @oui-dropdown-margin;
 
         .@{dropdown-selector}__arrow {
           margin: 0 @oui-dropdown-arrow-margin;
