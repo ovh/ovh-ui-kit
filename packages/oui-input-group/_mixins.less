@@ -37,12 +37,14 @@
       }
     }
 
-    & > .@{button-selector} {
+    & > .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
       #oui > .button-hollow(
         @background-color: @button-background-color,
         @padding: @button-padding
       );
+    }
 
+    & > .@{button-selector} {
       & + .@{button-selector},
       & + .@{input-selector} {
         border-left: 0;
