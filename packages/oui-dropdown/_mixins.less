@@ -20,6 +20,7 @@
     }
 
     &__content_arrow {
+      // stylelint-disable max-nesting-depth
       &[x-placement^="top"] {
         margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-margin;
 
@@ -98,6 +99,7 @@
           border: @oui-dropdown-arrow-inner-size transparent solid;
         }
       }
+      // stylelint-enable max-nesting-depth
     }
   }
 }
