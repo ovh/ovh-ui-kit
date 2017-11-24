@@ -1,0 +1,34 @@
+@import './_mixins';
+
+@oui-button-action-selector: oui-action-menu-button;
+
+.oui-action-menu {
+  @oui-button-selector: oui-button;
+  @oui-icon-selector: oui-icon;
+
+  #oui > .action-menu-base();
+
+  &__item {
+    #oui > .action-menu-item-base(
+      @oui-button-selector,
+      @oui-icon-selector
+    );
+  }
+
+  &__divider {
+    #oui > .action-menu-item-divider-base();
+  }
+
+  // Separate component for button
+  &-button {
+    #oui > .action-menu-button(@oui-button-action-selector)
+  }
+}
+
+// Container of an action menu can have this class
+// to activate a different color when it's hovered.
+.oui-action-menu-container:hover {
+  .oui-action-menu-button {
+    #oui > .action-menu-button_active(@oui-button-action-selector);
+  }
+}
