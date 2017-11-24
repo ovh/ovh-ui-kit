@@ -1,23 +1,29 @@
 @import './_mixins';
 
 .oui-tip {
+  [x-placement|="top"] > &[x-arrow],
   &-top {
     #oui > .tip();
     #oui > .tip-top();
   }
 
+  [x-placement|="right"] > &[x-arrow],
   &-right {
     #oui > .tip();
     #oui > .tip-right();
   }
 
+  [x-placement|="bottom"] > &[x-arrow],
   &-bottom {
     #oui > .tip();
     #oui > .tip-bottom();
   }
 
+  [x-placement|="left"] > &[x-arrow],
   &-left {
     #oui > .tip();
     #oui > .tip-left();
   }
+
+  [x-placement] > &[x-arrow] { transform: none; }
 }

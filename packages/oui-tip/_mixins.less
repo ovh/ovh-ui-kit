@@ -4,14 +4,16 @@
 
 #oui {
   .tip(
-    @size: @oui-tip-size,
+    @size: @oui-tip-border-size,
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
+    display: block;
     padding: 0;
     border: 0 none;
-    margin: 0;
     line-height: unset;
+    position: absolute;
+    box-sizing: border-box;
 
     &::after,
     &::before {
@@ -35,91 +37,98 @@
   }
 
   .tip-top(
-    @size: @oui-tip-size,
+    @size: @oui-tip-border-size,
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
+    width: @size;
+    height: @size;
+    padding: 0 @oui-tip-size;
+    transform: translateX(-50%);
+    top: 100%;
+    left: 50%;
+
     &::after,
     &::before {
-      top: 100%;
+      top: 0;
       left: 50%;
+      transform: translateX(-50%);
     }
 
-    &::after {
-      margin-left: -@size;
-      border-top-color: @background-color;
-    }
+    &::after { border-top-color: @background-color; }
 
-    &::before {
-      margin-left: ~"calc(-@{size} - 3px)";
-      border-top-color: @border-color;
-    }
+    &::before { border-top-color: @border-color; }
   }
 
   .tip-right(
-    @size: @oui-tip-size,
+    @size: @oui-tip-border-size,
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
-
   ) {
+    width: @size;
+    height: @size;
+    padding: @oui-tip-size 0;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 100%;
+
     &::after,
     &::before {
+      right: 0;
       top: 50%;
-      right: 100%;
+      transform: translateY(-50%);
     }
 
-    &::after {
-      margin-top: -@size;
-      border-right-color: @background-color;
-    }
+    &::after { border-right-color: @background-color; }
 
-    &::before {
-      margin-top: ~"calc(-@{size} - 3px)";
-      border-right-color: @border-color;
-    }
+    &::before { border-right-color: @border-color; }
   }
 
   .tip-bottom(
-    @size: @oui-tip-size,
+    @size: @oui-tip-border-size,
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
+    width: @size;
+    height: @size;
+    padding: 0 @oui-tip-size;
+    transform: translateX(-50%);
+    bottom: 100%;
+    left: 50%;
+
     &::after,
     &::before {
-      bottom: 100%;
+      bottom: 0;
       left: 50%;
+      transform: translateX(-50%);
     }
 
-    &::after {
-      margin-left: -@size;
-      border-bottom-color: @background-color;
-    }
+    &::after { border-bottom-color: @background-color; }
 
-    &::before {
-      margin-left: ~"calc(-@{size} - 3px)";
-      border-bottom-color: @border-color;
-    }
+    &::before { border-bottom-color: @border-color; }
   }
 
   .tip-left(
-    @size: @oui-tip-size,
+    @size: @oui-tip-border-size,
     @border-color: @oui-tip-border-color,
     @background-color: @oui-tip-background-color
   ) {
+    width: @size;
+    height: @size;
+    padding: @oui-tip-size 0;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 100%;
+
     &::after,
     &::before {
+      left: 0;
       top: 50%;
-      left: 100%;
+      transform: translateY(-50%);
     }
 
-    &::after {
-      margin-top: -@size;
-      border-left-color: @background-color;
-    }
+    &::after { border-left-color: @background-color; }
 
-    &::before {
-      margin-top: ~"calc(-@{size} - 3px)";
-      border-left-color: @border-color;
-    }
+    &::before { border-left-color: @border-color; }
   }
 }
