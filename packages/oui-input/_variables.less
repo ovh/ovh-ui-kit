@@ -6,19 +6,19 @@
 @oui-input-font-weight: @oui-font-semibold;
 @oui-input-padding: rem-calc(11);
 @oui-input-margin: 0 0 rem-calc(20);
-@oui-input-selection-background-color: #0090b1;
+@oui-input-selection-background-color: @oui-color-pacific;
 @oui-input-selection-font-color: #ffffff;
-@oui-input-shadow: inset 1px 2px 0 0 rgba(18, 40, 68, 0.07);
+@oui-input-shadow: inset 2px 2px 1px 0 rgba(18, 40, 68, 0.07);
 
 // Focus
 @oui-input-background-color-focus: #f5fcfd;
-@oui-input-border-color-focus: #0090b1;
-@oui-input-shadow-focus: inset 1px 1px 2px 0 rgba(102, 199, 214, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.35);
+@oui-input-border-color-focus: @oui-color-pacific;
+@oui-input-shadow-focus: inset 2px 2px 1px 0 fade(@oui-color-turquoise, 35%), 0 0 3px 0 @oui-color-info-light;
 
 // Disabled
 @oui-input-background-color-disabled: @oui-color-concrete;
-@oui-input-border-color-disabled: #e6e6e6;
-@oui-input-font-color-disabled: #b3b3b3;
+@oui-input-border-color-disabled: @oui-color-silver;
+@oui-input-font-color-disabled: @oui-color-silver;
 
 // Read-only
 @oui-input-background-color-read-only: @oui-color-concrete;
