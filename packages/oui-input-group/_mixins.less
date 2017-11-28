@@ -46,8 +46,8 @@
       );
     }
 
-    & > .@{button-selector} {
-      & + .@{button-selector},
+    & > .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
+      & + .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary),
       & + .@{input-selector} {
         margin-left: -1px;
       }
@@ -67,7 +67,7 @@
       }
 
       & + .@{input-selector},
-      & + .@{button-selector} {
+      & + .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
         border-left: 0;
       }
     }
@@ -82,7 +82,7 @@
         margin-bottom: 0;
       }
 
-      + .@{button-selector} {
+      + .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
         border-left: 0;
         margin: 0;
       }
