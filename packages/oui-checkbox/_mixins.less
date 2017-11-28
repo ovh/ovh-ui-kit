@@ -248,7 +248,7 @@
     }
 
     .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-    .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover {
+      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover {
       #oui > .thumbnail-base-color(
         @border-color_hover,
         @background_hover,
@@ -347,13 +347,13 @@
     &_@{status},
     &_@{status}:hover {
       .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container,
-      .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-      .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:active,
-      .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:focus,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:active,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:focus {
+        .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
+        .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:active,
+        .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:focus,
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container,
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover,
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:active,
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:focus {
         .@{checkbox-selector}__label {
           color: @@status-font-color;
         }
@@ -377,16 +377,16 @@
       }
 
       .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
-      .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
+        .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
         .@{checkbox-selector}__icon::before {
           box-shadow: 0 0 3px 1px @@status-border-color;
         }
       }
 
       .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:active,
-      .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:focus  {
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover,
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:active,
+        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:focus  {
         .@{checkbox-selector}-checkmark {
           color: @@status-icon-color;
         }
@@ -394,13 +394,13 @@
 
       &.@{checkbox-selector}_thumbnail {
         .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container,
-        .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-        .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:active,
-        .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:focus,
-        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container,
-        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:active,
-        .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:focus {
+          .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
+          .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:active,
+          .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:focus,
+          .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container,
+          .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover,
+          .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:active,
+          .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:focus {
           border-color: @@status-border-color;
           background: @@status-background-color;
 
@@ -410,7 +410,7 @@
         }
 
         .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
-        .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
+          .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
           border-color: @@status-border-color;
           box-shadow: 0 0 3px 0 @@status-border-color;
         }
