@@ -251,13 +251,13 @@
   .radio-thumbnail (
     @selector,
     @border-color: @oui-thumbnail-border-color,
-    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color-hover: @oui-thumbnail-border-color_hover,
     @border-color-checked: @oui-thumbnail-border-color-checked,
-    @border-color-checked-hover: @oui-thumbnail-border-color-checked-hover,
+    @border-color-checked-hover: @oui-thumbnail-border-color-checked_hover,
     @background: @oui-thumbnail-background,
-    @background-hover: @oui-thumbnail-background-hover,
+    @background-hover: @oui-thumbnail-background_hover,
     @background-checked: @oui-thumbnail-background-checked,
-    @background-checked-hover: @oui-thumbnail-background-checked-hover,
+    @background-checked-hover: @oui-thumbnail-background-checked_hover,
     @border-size: @oui-thumbnail-border-size,
     @padding: @oui-thumbnail-padding,
     @label-padding-left: @oui-radio-padding-left,
@@ -324,7 +324,7 @@
 
     .@{selector}__input:focus {
       + .@{selector}__label-container {
-        border-color: @oui-thumbnail-border-color-hover;
+        border-color: @oui-thumbnail-border-color_hover;
         box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
       }
 
@@ -338,9 +338,9 @@
   .radio-thumbnail-light (
     @selector,
     @border-color: @oui-thumbnail-border-color,
-    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color-hover: @oui-thumbnail-border-color_hover,
     @background: @oui-thumbnail-background-light,
-    @background-hover: @oui-thumbnail-background-light-hover,
+    @background-hover: @oui-thumbnail-background-light_hover,
     @border-size: @oui-thumbnail-border-size
   ) {
     .@{selector}__label-container {
