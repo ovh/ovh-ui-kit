@@ -76,7 +76,7 @@ oui-input-group is a package which provide styles to group inputs together.
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
     <i class="oui-icon oui-icon-remove" aria-hidden="true"></i>
   </button>
-  <input class="oui-input oui-input_number" type="number">
+  <input class="oui-input oui-input_number" type="number" value="0">
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
     <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
   </button>
@@ -86,7 +86,7 @@ oui-input-group is a package which provide styles to group inputs together.
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
     <i class="oui-icon oui-icon-remove" aria-hidden="true"></i>
   </button>
-  <input class="oui-input oui-input_number" type="number" disabled>
+  <input class="oui-input oui-input_number" type="number" value="0" disabled>
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
     <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
   </button>

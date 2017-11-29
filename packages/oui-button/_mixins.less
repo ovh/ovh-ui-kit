@@ -188,24 +188,27 @@
   .button-icon-base(
     @icon-selector,
     @icon-size: @oui-button-icon-icon-size,
+    @icon-size_large: @oui-button-icon-icon-size_large,
     @icon-color: @oui-button-icon-icon-color,
-    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled
+    @icon-color_disabled: @oui-button-icon-icon-color_disabled
   ) {
-
     .@{icon-selector} {
-      vertical-align: text-bottom;
+      color: @icon-color;
     }
 
     .@{icon-selector}::before {
       width: @icon-size;
       height: @icon-size;
-      font-size: ~"calc(@{icon-size} / 1.25)";
+      font-size: @icon-size;
       line-height: @icon-size;
     }
 
     .@{icon-selector}_circle::before {
       background: @icon-color;
-      font-size: ~"calc(@{icon-size} / 2)";
+      width: @icon-size_large;
+      height: @icon-size_large;
+      font-size: @icon-size;
+      line-height: @icon-size_large;
     }
 
     &:disabled .@{icon-selector}::before {
@@ -214,14 +217,13 @@
 
     &:disabled .@{icon-selector}_circle::before {
       background: @icon-color_disabled;
-      color: @oui-color-concrete;
+      color: #fff;
     }
   }
 
   .button-icon-right(
     @icon-selector,
     @icon-margin-left: @oui-button-icon-right-icon-margin-left,
-    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled,
     @padding-right: @oui-button-icon-padding-right
   ) {
     padding-right: @padding-right;
@@ -232,14 +234,12 @@
 
     .@{icon-selector}_circle::before {
       line-height: 2;
-      text-indent: 2px;
     }
   }
 
   .button-icon-left(
     @icon-selector,
     @icon-margin-right: @oui-button-icon-right-icon-margin-right,
-    @icon-color_disabled: @oui-button-icon-left-icon-color_disabled,
     @padding-left: @oui-button-icon-padding-left
   ) {
     padding-left: @padding-left;
@@ -296,11 +296,6 @@
     max-width: none;
     width: 100%;
     height: 100%;
-
-    &:disabled,
-    &:disabled:active {
-      text-decoration: none;
-    }
 
     .@{icon-selector}::before {
       position: absolute;

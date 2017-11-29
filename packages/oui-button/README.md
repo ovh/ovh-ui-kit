@@ -339,13 +339,14 @@ Will stylize your button as a dropdown one.
 Define the base styles for a button with an icon.
 
 ```less
-#oui > .button-icon();
+#oui > .button-icon-base();
 ```
 
 ```less
-#oui > .button-icon(
+#oui > .button-icon-base(
   @icon-selector: Class,
   @icon-size: Number,
+  @icon-size_large: Number,
   @icon-color: Color,
   @icon-color_disabled: Color
 );
@@ -363,7 +364,6 @@ Will stylize your button with an icon on the right.
 #oui > .button-icon-right(
   @icon-selector: Class,
   @icon-margin-left: Number,
-  @icon-color_disabled: Color,
   @padding-right: Number
 );
 ```
@@ -380,7 +380,6 @@ Will stylize your button with an icon on the left.
 #oui > .button-icon-left(
   @icon-selector: Class,
   @icon-margin-right: Number,
-  @icon-color_disabled: Color,
   @padding-left: Number
 );
 ```
