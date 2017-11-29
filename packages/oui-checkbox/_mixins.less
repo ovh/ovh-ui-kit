@@ -32,8 +32,8 @@
 
     .@{checkbox-selector}__icon {
       position: absolute;
-      top: ~"calc(@{line-height}px * 2 + @{padding})";
-      left: @padding;
+      top: ~"calc(@{line-height}px * 2)";
+      left: 0;
       display: block;
       width: @size;
       height: @size;
@@ -60,7 +60,9 @@
     @outline-color: @oui-checkbox-outline-color,
     @outline-color-hover: @oui-checkbox-outline-color-hover,
     @outline-color-active: @oui-checkbox-outline-color-active,
-    @spacing: @oui-checkbox-spacing
+    @spacing: @oui-checkbox-spacing,
+    @label-spacing: @oui-checkbox-label-spacing,
+    @min-height: @oui-checkbox-min-height
   ) {
     .checkbox-size(
       @oui-checkbox-selector,
@@ -70,18 +72,22 @@
       @oui-checkbox-padding
     );
 
-    display: block;
     margin: @spacing;
 
     &__label-container {
-      position: relative;
-      display: block;
-      min-height: @oui-checkbox-size;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: @min-height;
+      margin: 0;
       cursor: pointer;
       user-select: none;
     }
 
     &__label {
+      position: relative;
+      min-height: @oui-checkbox-size;
+      margin: @label-spacing;
       font-weight: @oui-font-semibold;
     }
 
@@ -244,7 +250,7 @@
       padding-top: rem-calc(12);
       padding-left: 0;
       border-top: 1px solid @oui-color-silver;
-      margin-top: rem-calc(11);
+      margin-top: rem-calc(6);
     }
 
     .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
@@ -390,7 +396,7 @@
   // stylelint-enable max-nesting-depth
 
   .checkbox-inline() {
-    display: inline-block;
+    display: inline-flex;
     margin-right: @oui-checkbox-inline-padding;
   }
 }
