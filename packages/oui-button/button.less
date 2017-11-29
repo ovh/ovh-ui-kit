@@ -33,6 +33,14 @@
     #oui > .button-dropdown(@oui-icon-selector);
   }
 
+  &_link {
+    #oui > .button-link(@oui-icon-selector);
+    #oui > .button-icon-base(
+      @oui-icon-selector,
+      @icon-color_disabled: @oui-button-link-font-color_disabled
+    );
+  }
+
   &_icon-only {
     #oui > .button-icon-base(@oui-icon-selector);
   }
@@ -43,14 +51,6 @@
 
   &_icon-left {
     #oui > .button-icon-left(@oui-icon-selector);
-  }
-
-  &_link {
-    #oui > .button-link(@oui-icon-selector);
-    #oui > .button-icon-base(
-      @oui-icon-selector,
-      @icon-color_disabled: @oui-button-link-font-color_disabled
-    );
   }
 
   &_full-width {

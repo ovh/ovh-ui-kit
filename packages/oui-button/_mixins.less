@@ -145,8 +145,8 @@
     @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
     @background-color_active: @oui-button-dropdown-background-color_active,
     @border-color_active: @oui-button-dropdown-border-color_active,
-    @padding-right: @oui-button-icon-padding-right,
-    @padding-left: @oui-button-icon-padding-left
+    @padding-right: @oui-button-dropdown-padding-right,
+    @padding-left: @oui-button-dropdown-padding-left
   ) {
     padding-right: @padding-right;
     padding-left: @padding-left;
@@ -154,7 +154,7 @@
     .@{icon-selector} {
       width: @icon-size;
       height: @icon-size;
-      margin-left: ~"calc(@{icon-size} / 2)";
+      margin-left: @oui-button-icon-right-icon-margin-right;
       color: @icon-color;
       font-size: @icon-size;
       line-height: @icon-size;
