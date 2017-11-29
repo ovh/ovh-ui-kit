@@ -2,8 +2,97 @@
 @import './_mixins';
 
 .oui-navbar {
-  @select-selector: oui-select;
-
   #oui > .navbar-normalize();
-  #oui > .navbar(@select-selector);
+  #oui > .navbar();
+
+  &__backdrop {
+    #oui > .navbar-backdrop();
+  }
+
+  &__list {
+    #oui > .navbar-list();
+  }
+
+  // Navbar links
+  &__link {
+    #oui > .navbar-link();
+
+    &[aria-expanded="true"] {
+      #oui > .navbar-link-variant(
+        @oui-navbar-font-size,
+        @oui-navbar-menu-font-color,
+        @oui-navbar-menu-background-color,
+        @oui-navbar-menu-background-color
+      );
+    }
+
+    &_secondary {
+      #oui > .navbar-link-variant(
+        @oui-navbar-secondary-font-size,
+        @oui-navbar-secondary-font-color,
+        @oui-navbar-background-color,
+        @oui-navbar-background-color_hover
+      );
+    }
+
+    &_icon,
+    &_icon[aria-expanded="true"] {
+      #oui > .navbar-link-icon();
+    }
+  }
+
+  // Navbar toggler, for collapsible menu
+  &__toggler {
+    #oui > .navbar-toggler();
+  }
+
+  &__menu {
+    #oui > .navbar-menu();
+    #oui > .navbar-menu-animation_opacity();
+
+    @media screen and (max-width: 1024px) {
+      #oui > .navbar-menu-fixed();
+      #oui > .navbar-menu-animation_slide();
+    }
+  }
+
+  // Menu lists
+  &__menu &__list {
+    #oui > .navbar-list(
+      @flex-direction: column,
+      @align-items: stretch
+    );
+
+    @media screen and (max-width: 1024px) {
+      #oui > .navbar-list(
+        @flex-direction: column,
+        @align-items: stretch,
+        @border-bottom: @oui-navbar-menu-border-bottom
+      );
+    }
+  }
+
+  // Menu links
+  &__menu &__link {
+    #oui > .navbar-link-variant(
+      @oui-navbar-font-size,
+      @oui-navbar-menu-font-color,
+      @oui-navbar-menu-background-color,
+      @oui-navbar-menu-background-color_hover,
+      100%
+    );
+
+    &_secondary {
+      #oui > .navbar-link-variant(
+        @oui-navbar-secondary-font-size,
+        @oui-navbar-secondary-font-color,
+        @oui-navbar-menu-background-color,
+        @oui-navbar-menu-background-color_hover,
+        100%
+      );
+    }
+  }
+
+  // Helper for responsive
+  #oui > .navbar-helpers();
 }
