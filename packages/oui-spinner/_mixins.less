@@ -1,7 +1,7 @@
 @import './_variables';
 
 #oui {
-  .loader-base() {
+  .spinner-base() {
     @keyframes scale {
       0% {
         opacity: 1;
@@ -43,13 +43,13 @@
     }
   }
 
-  .loader-s(
+  .spinner-s(
     @selector,
-    @background-image: @oui-loader-s-background-image,
-    @size: @oui-loader-s-size,
-    @spacing: @oui-loader-s-spacing,
-    @speed-rotation: @oui-loader-s-speed-rotation,
-    @speed-scale: @oui-loader-s-speed-scale
+    @background-image: @oui-spinner-s-background-image,
+    @size: @oui-spinner-s-size,
+    @spacing: @oui-spinner-s-spacing,
+    @speed-rotation: @oui-spinner-s-speed-rotation,
+    @speed-scale: @oui-spinner-s-speed-scale
   ) {
     .@{selector}__container {
       width: ~"calc(@{size} + @{spacing})";
@@ -64,13 +64,13 @@
     }
   }
 
-  .loader-m(
+  .spinner-m(
     @selector,
-    @background-image: @oui-loader-m-background-image,
-    @size: @oui-loader-m-size,
-    @spacing: @oui-loader-m-spacing,
-    @speed-rotation: @oui-loader-m-speed-rotation,
-    @speed-scale: @oui-loader-m-speed-scale
+    @background-image: @oui-spinner-m-background-image,
+    @size: @oui-spinner-m-size,
+    @spacing: @oui-spinner-m-spacing,
+    @speed-rotation: @oui-spinner-m-speed-rotation,
+    @speed-scale: @oui-spinner-m-speed-scale
   ) {
     .@{selector}__container {
       width: ~"calc(@{size} + @{spacing})";
@@ -85,13 +85,13 @@
     }
   }
 
-  .loader-l(
+  .spinner-l(
     @selector,
-    @background-image: @oui-loader-l-background-image,
-    @size: @oui-loader-l-size,
-    @spacing: @oui-loader-l-spacing,
-    @speed-rotation: @oui-loader-l-speed-rotation,
-    @speed-scale: @oui-loader-l-speed-scale
+    @background-image: @oui-spinner-l-background-image,
+    @size: @oui-spinner-l-size,
+    @spacing: @oui-spinner-l-spacing,
+    @speed-rotation: @oui-spinner-l-speed-rotation,
+    @speed-scale: @oui-spinner-l-speed-scale
   ) {
     .@{selector}__container {
       width:  ~"calc(@{size} + @{spacing})";
@@ -106,12 +106,12 @@
     }
   }
 
-  .loader-inline() {
+  .spinner-inline() {
     display: inline-block;
     vertical-align: text-top;
   }
 
-  .loader-center() {
+  .spinner-center() {
     text-align: center;
 
     &__container {
