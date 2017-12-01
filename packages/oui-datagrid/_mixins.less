@@ -1,0 +1,344 @@
+@import '../oui-animation/_mixins';
+@import '../oui-typography/_constants';
+@import './_variables';
+
+#oui {
+  .datagrid-base(
+    @width: @oui-datagrid-width,
+    @margin: @oui-datagrid-margin,
+    @font-size: @oui-datagrid-font-size
+  ) {
+    width: @width;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: @margin;
+    text-align: left;
+    font-size: @font-size;
+  }
+
+  .datagrid-headers(
+    @background-color: @oui-datagrid-header-background-color
+  ) {
+    background-color: @background-color;
+  }
+
+  .datagrid-header(
+    @font-color: @oui-datagrid-header-font-color,
+    @padding: @oui-datagrid-header-padding
+  ) {
+    #oui > .animate();
+
+    padding: @padding;
+    outline: none;
+    color: @font-color;
+    font-weight: @oui-font-regular;
+  }
+
+  .datagrid-header-sortable(
+    @datagrid-selector
+    @background-color-hover: @oui-datagrid-header-background-color-hover,
+    @font-color-hover: @oui-datagrid-header-font-color-hover,
+    @padding: @oui-datagrid-header-padding,
+    @arrow-size: @oui-datagrid-arrow-size
+  ) {
+    padding-right: ~"calc(@{arrow-size} * 3)";
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: @background-color-hover;
+      color: @font-color-hover;
+    }
+
+    #oui > .datagrid-arrow-asc(
+      @font-color: @oui-datagrid-header-font-color,
+      @font-weight: @oui-font-regular
+    );
+
+    &:not(.@{datagrid-selector}__header_sortable-asc):not(.@{datagrid-selector}__header_sortable-desc) {
+      &:hover,
+      &:focus {
+        #oui > .datagrid-cell-sorted();
+      }
+    }
+  }
+
+  .datagrid-header-arrow(
+    @arrow-color: @oui-datagrid-header-font-color-sorted,
+    @arrow-size: @oui-datagrid-arrow-size
+  ) {
+    display: inline-block;
+    width: ~"calc(@{arrow-size} * 2)";
+    height: @arrow-size;
+    margin: auto;
+    color: @arrow-color;
+    font-family: 'Oui Icons';
+    font-size: @arrow-size;
+    line-height: 1;
+    font-weight: @oui-font-regular;
+    text-align: center;
+  }
+
+  .datagrid-arrow-asc(
+    @font-color: @oui-datagrid-header-font-color-sorted,
+    @font-weight: @oui-font-bold
+  ) {
+    font-weight: @font-weight;
+    color: @font-color;
+
+    &::after {
+      .datagrid-header-arrow();
+      opacity: 0;
+      content: @oui-icon-index-arrow-up;
+    }
+
+    &:hover::after {
+      #oui > .animate();
+
+      opacity: .5;
+    }
+
+    &:focus::after,
+    &:active::after {
+      #oui > .animate();
+
+      opacity: 1;
+    }
+  }
+
+  .datagrid-arrow-desc(
+    @font-color: @oui-datagrid-header-font-color-sorted,
+  ) {
+    font-weight: @oui-font-bold;
+    color: @font-color;
+
+    &::after {
+      .datagrid-header-arrow();
+      opacity: 0;
+      content: @oui-icon-index-arrow-down;
+    }
+
+    &:hover::after {
+      #oui > .animate();
+
+      opacity: .5;
+    }
+
+    &:focus::after,
+    &:active::after {
+      #oui > .animate();
+
+      opacity: 1;
+    }
+  }
+
+  .datagrid-cell-sorted(
+  ) {
+    &.oui-datagrid__header {
+      &::after,
+      &:hover::after,
+      &:focus::after,
+      &:active::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .datagrid-row(
+    @background-color-odd: @oui-datagrid-row-background-color-odd,
+    @background-color-even: @oui-datagrid-row-background-color-even
+  ) {
+    #oui > .animate();
+
+    &:nth-child(odd) {
+      background-color: @background-color-odd;
+    }
+
+    &:nth-child(even) {
+      background-color: @background-color-even;
+    }
+  }
+
+  .datagrid-cell(
+    @selector,
+    @background-color: @oui-datagrid-cell-background-color,
+    @border-color: @oui-datagrid-cell-border-color,
+    @font-color: @oui-datagrid-cell-font-color,
+    @padding: @oui-datagrid-cell-padding,
+    @datagrid-cell-action-elements: @oui-datagrid-cell-action-elements
+  ) {
+    position: relative;
+    padding: @padding;
+    border-bottom: 1px solid @border-color;
+    outline: none;
+    color: @font-color;
+    cursor: default;
+
+    .@{selector}__expand-button {
+      #oui > .animate-fast-out-slow-in();
+
+      position: absolute;
+      top: rem-calc(15);
+      right: rem-calc(15);
+      display: none;
+      color: @oui-datagrid-responsive-expand-button-color;
+      font-size: rem-calc(18);
+      cursor: pointer;
+    }
+
+    &_action {
+      padding-top: 0;
+      padding-bottom: 0;
+      vertical-align: middle;
+      line-height: 0;
+
+      .delete-margin-in-action-columns(@i: length(@datagrid-cell-action-elements)) when (@i > 0) {
+        .delete-margin-in-action-columns(@i - 1);
+        @action-column-child:  extract(@datagrid-cell-action-elements, @i);
+        @{action-column-child} {
+          margin: 0;
+        }
+      }
+      .delete-margin-in-action-columns();
+    }
+  }
+
+  // // stylelint-disable
+  // .datagrid-responsive(
+  //   @selector,
+  //   @datagrid-cell-action-elements: @oui-datagrid-cell-action-elements,
+  //   @datagrid-cell-action-tablet-padding: @oui-datagrid-cell-action-tablet-padding
+  // ) {
+  //   /* stylelint-disable indentation */
+  //   .tablet({
+  //     .@{selector}__headers {
+  //       position: absolute;
+  //       left: -9999em;
+  //       display: block;
+  //     }
+
+  //     .@{selector}__body {
+  //       .@{selector}__row {
+  //         float: left;
+  //         display: block;
+  //         width: 49.5%;
+  //         margin-right: 1%;
+  //         margin-bottom: 10px;
+
+  //         &:nth-child(odd) {
+  //           clear: left;
+  //         }
+
+  //         &:nth-child(even) {
+  //           margin-right: 0;
+  //         }
+
+  //         &:hover {
+  //           background: none;
+  //         }
+  //       }
+  //     }
+
+  //     .@{selector}__cell {
+  //       display: block;
+  //       border: none;
+  //       border-left: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
+  //       border-right: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
+
+  //       &:first-child {
+  //         border-top: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
+  //       }
+
+  //       &:last-child {
+  //         border-bottom: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
+  //       }
+
+  //       &::after {
+  //         content: "";
+  //         display: datagrid;
+  //         clear: both;
+  //       }
+
+  //       &[data-title]::before {
+  //         display: block;
+  //         color: @oui-datagrid-responsive-label-color;
+  //         font-size: @oui-datagrid-responsive-label-font-size;
+  //         content: attr(data-title);
+  //       }
+
+  //       &_action {
+  //         position: relative;
+  //         padding-top: rem-calc(20);
+  //         padding-bottom: rem-calc(10);
+
+  //         &::before {
+  //             position: absolute;
+  //             top: 0;
+  //             line-height: rem-calc(15);
+  //         }
+
+  //         &::after {
+  //             content: "";
+  //             display: datagrid;
+  //             clear: both;
+  //         }
+
+  //         @{datagrid-cell-action-elements} {
+  //           margin-bottom: @datagrid-cell-action-tablet-padding;
+  //         }
+  //       }
+  //     }
+  //   });
+
+  //   .phone({
+  //     .@{selector}__body {
+  //       .@{selector}__row {
+  //         width: 100%;
+  //         margin-bottom: 0;
+
+  //         .@{selector}__cell {
+  //           border-right: none;
+  //           border-left: none;
+
+  //           .@{selector}__expand-button {
+  //             display: block;
+  //           }
+
+  //           &:last-child {
+  //             border-bottom: none;
+  //           }
+  //         }
+
+  //         &_closed {
+  //           .@{selector}__cell {
+  //             display: none;
+
+  //             &[data-title]::before {
+  //               display: none;
+  //             }
+
+  //             &:first-child {
+  //               display: block;
+
+  //               .@{selector}__expand-button {
+  //                 transform: rotate(90deg);
+  //               }
+  //             }
+  //           }
+  //         }
+
+  //         &:last-child {
+  //           .@{selector}__cell {
+  //             &:last-child {
+  //               border-bottom: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   });
+  //   /* stylelint-enable */
+  // }
+  // // stylelint-enable
+}

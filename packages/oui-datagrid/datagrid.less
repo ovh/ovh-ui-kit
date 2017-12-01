@@ -1,0 +1,49 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-datagrid {
+  @oui-selector: oui-datagrid;
+
+  #oui > .datagrid-normalize();
+  #oui > .datagrid-base();
+
+  // &_responsive {
+  //   #oui > .datagrid-responsive(@oui-selector);
+  // }
+
+  &__row {
+    #oui > .datagrid-row();
+  }
+
+  &__headers {
+    #oui > .datagrid-headers();
+  }
+
+  &__header {
+    // #oui > .text-ellipsis();
+    // #oui > .datagrid-cell(@oui-selector);
+    #oui > .datagrid-header();
+
+    &_sortable,
+    &_sortable-asc,
+    &_sortable-desc {
+      #oui > .datagrid-header-sortable(
+        @datagrid-selector: @oui-selector
+      );
+    }
+
+    &_sortable-asc {
+      #oui > .datagrid-arrow-asc();
+      #oui > .datagrid-cell-sorted();
+    }
+
+    &_sortable-desc {
+      #oui > .datagrid-arrow-desc();
+      #oui > .datagrid-cell-sorted();
+    }
+  }
+
+  &__cell {
+    #oui > .datagrid-cell(@oui-selector);
+  }
+}
