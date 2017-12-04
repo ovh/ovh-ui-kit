@@ -18,21 +18,32 @@
   }
 
   .datagrid-headers(
+    @header-selector,
+    @header-height: @oui-datagrid-header-height,
     @background-color: @oui-datagrid-header-background-color
   ) {
-    background-color: @background-color;
+    .@{header-selector} {
+      height: @header-height;
+      background-color: @background-color;
+    }
   }
 
   .datagrid-header(
+    @checkbox-selector
     @font-color: @oui-datagrid-header-font-color,
     @padding: @oui-datagrid-header-padding
   ) {
     #oui > .animate();
 
     padding: @padding;
+    white-space: nowrap;
     outline: none;
     color: @font-color;
     font-weight: @oui-font-regular;
+
+    .@{checkbox-selector} {
+      margin-bottom: 0;
+    }
   }
 
   .datagrid-header-sortable(
@@ -146,199 +157,142 @@
   }
 
   .datagrid-row(
+    @cell-selector,
     @background-color-odd: @oui-datagrid-row-background-color-odd,
     @background-color-even: @oui-datagrid-row-background-color-even
   ) {
     #oui > .animate();
 
     &:nth-child(odd) {
-      background-color: @background-color-odd;
+      .@{cell-selector} {
+        background-color: @background-color-odd;
+      }
     }
 
     &:nth-child(even) {
-      background-color: @background-color-even;
+      .@{cell-selector} {
+        background-color: @background-color-even;
+      }
     }
   }
 
   .datagrid-cell(
     @selector,
+    @form-elements,
     @background-color: @oui-datagrid-cell-background-color,
     @border-color: @oui-datagrid-cell-border-color,
     @font-color: @oui-datagrid-cell-font-color,
     @padding: @oui-datagrid-cell-padding,
-    @datagrid-cell-action-elements: @oui-datagrid-cell-action-elements
+    @height: @oui-datagrid-cell-height
   ) {
     position: relative;
     padding: @padding;
+    height: @height;
+    white-space: nowrap;
     border-bottom: 1px solid @border-color;
     outline: none;
     color: @font-color;
     cursor: default;
 
-    .@{selector}__expand-button {
-      #oui > .animate-fast-out-slow-in();
-
-      position: absolute;
-      top: rem-calc(15);
-      right: rem-calc(15);
-      display: none;
-      color: @oui-datagrid-responsive-expand-button-color;
-      font-size: rem-calc(18);
-      cursor: pointer;
-    }
-
-    &_action {
-      padding-top: 0;
-      padding-bottom: 0;
-      vertical-align: middle;
-      line-height: 0;
-
-      .delete-margin-in-action-columns(@i: length(@datagrid-cell-action-elements)) when (@i > 0) {
-        .delete-margin-in-action-columns(@i - 1);
-        @action-column-child:  extract(@datagrid-cell-action-elements, @i);
-        @{action-column-child} {
-          margin: 0;
-        }
-      }
-      .delete-margin-in-action-columns();
+    @{form-elements} {
+      margin-bottom: 0;
     }
   }
 
-  // // stylelint-disable
-  // .datagrid-responsive(
-  //   @selector,
-  //   @datagrid-cell-action-elements: @oui-datagrid-cell-action-elements,
-  //   @datagrid-cell-action-tablet-padding: @oui-datagrid-cell-action-tablet-padding
-  // ) {
-  //   /* stylelint-disable indentation */
-  //   .tablet({
-  //     .@{selector}__headers {
-  //       position: absolute;
-  //       left: -9999em;
-  //       display: block;
-  //     }
+  .datagrid-responsive-container() {
+    position: relative;
 
-  //     .@{selector}__body {
-  //       .@{selector}__row {
-  //         float: left;
-  //         display: block;
-  //         width: 49.5%;
-  //         margin-right: 1%;
-  //         margin-bottom: 10px;
+    &_sticky-checkbox {
+      padding-left: 43px;
+    }
 
-  //         &:nth-child(odd) {
-  //           clear: left;
-  //         }
+    &_sticky-actions {
+      padding-right: 79px;
+    }
+  }
 
-  //         &:nth-child(even) {
-  //           margin-right: 0;
-  //         }
+  .datagrid-stick-columns-container(
+    @headers-selector,
+    @row-selector,
+    @sticky-cell-selector,
+    @header-padding: @oui-datagrid-header-padding,
+    @cell-padding: @oui-datagrid-cell-padding
+  ) {
+    &::before {
+      #oui > .animate();
 
-  //         &:hover {
-  //           background: none;
-  //         }
-  //       }
-  //     }
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      margin-left: -80px;
+      width: 80px;
+      height: 100%;
+      border-left: 1px solid #e4e4e4;
+      box-shadow: -10px 0 10px -5px rgba(0,0,0,0.08);
+      pointer-events: none;
+      opacity: 0;
+    }
 
-  //     .@{selector}__cell {
-  //       display: block;
-  //       border: none;
-  //       border-left: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
-  //       border-right: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
+    &::after {
+      #oui > .animate();
 
-  //       &:first-child {
-  //         border-top: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
-  //       }
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 44px;
+      height: 100%;
+      border-right: 1px solid #e4e4e4;
+      box-shadow: 10px 0 10px -5px rgba(0,0,0,0.08);
+      pointer-events: none;
+      opacity: 0;
+    }
 
-  //       &:last-child {
-  //         border-bottom: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;
-  //       }
+    &_scroll-begin::before {
+      opacity: 1;
+      z-index: 1;
+    }
 
-  //       &::after {
-  //         content: "";
-  //         display: datagrid;
-  //         clear: both;
-  //       }
+    &_scroll-end::after {
+      opacity: 1;
+      z-index: 1;
+    }
 
-  //       &[data-title]::before {
-  //         display: block;
-  //         color: @oui-datagrid-responsive-label-color;
-  //         font-size: @oui-datagrid-responsive-label-font-size;
-  //         content: attr(data-title);
-  //       }
+    .@{headers-selector} {
+      .@{sticky-cell-selector} {
+        height: 44px;
+        padding: @header-padding;
+      }
+    }
 
-  //       &_action {
-  //         position: relative;
-  //         padding-top: rem-calc(20);
-  //         padding-bottom: rem-calc(10);
+    .@{row-selector} {
+      .@{sticky-cell-selector} {
+        height: 56px;
+        padding: @cell-padding;
+      }
+    }
 
-  //         &::before {
-  //             position: absolute;
-  //             top: 0;
-  //             line-height: rem-calc(15);
-  //         }
+    .@{sticky-cell-selector} {
+      position: absolute;
+      top: auto;
+      height: 44px;
 
-  //         &::after {
-  //             content: "";
-  //             display: datagrid;
-  //             clear: both;
-  //         }
+      &:first-child {
+        left: 0;
+        width: 44px;
+      }
 
-  //         @{datagrid-cell-action-elements} {
-  //           margin-bottom: @datagrid-cell-action-tablet-padding;
-  //         }
-  //       }
-  //     }
-  //   });
+      &:last-child {
+        right: 0;
+        width: 80px;
+        text-align: center;
+      }
+    }
+  }
 
-  //   .phone({
-  //     .@{selector}__body {
-  //       .@{selector}__row {
-  //         width: 100%;
-  //         margin-bottom: 0;
-
-  //         .@{selector}__cell {
-  //           border-right: none;
-  //           border-left: none;
-
-  //           .@{selector}__expand-button {
-  //             display: block;
-  //           }
-
-  //           &:last-child {
-  //             border-bottom: none;
-  //           }
-  //         }
-
-  //         &_closed {
-  //           .@{selector}__cell {
-  //             display: none;
-
-  //             &[data-title]::before {
-  //               display: none;
-  //             }
-
-  //             &:first-child {
-  //               display: block;
-
-  //               .@{selector}__expand-button {
-  //                 transform: rotate(90deg);
-  //               }
-  //             }
-  //           }
-  //         }
-
-  //         &:last-child {
-  //           .@{selector}__cell {
-  //             &:last-child {
-  //               border-bottom: @oui-datagrid-responsive-border-size solid @oui-datagrid-responsive-border-color;;
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   });
-  //   /* stylelint-enable */
-  // }
-  // // stylelint-enable
+  .datagrid-overflow-container() {
+    max-width: 100%;
+    overflow-x: auto;
+  }
 }
