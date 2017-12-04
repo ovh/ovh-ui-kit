@@ -259,7 +259,13 @@ Define the base styles for a button.
 #oui > .button-base(
   @oui-font-color: Color,
   @oui-font-size: Number,
-  @oui-font-weight: Number
+  @oui-font-weight: Number,
+  @min-width: Number,
+  @max-width: Number,
+  @radius: Number,
+  @spacing: Number,
+  @padding: Number,
+  @letter-spacing: Number
 );
 ```
 
@@ -276,6 +282,8 @@ Will stylize your button as a filled one.
   @background-color: Color,
   @background-color_hover: Color,
   @background-color_disabled: Color,
+  @box-shadow_active: Shadow,
+  @box-shadow_focus: Shadow,
   @oui-font-color_disabled: Color,
   @padding: Number
 );
@@ -292,10 +300,13 @@ Will stylize your button as a hollow one.
 ```less
 #oui > .button-hollow(
   @background-color: Color,
+  @background-color_hover: Color,
   @border-color: Color,
   @border-color_hover: Color,
   @border-color_disabled: Color,
   @background-color_disabled: Color,
+  @box-shadow_active: Shadow,
+  @box-shadow_focus: Shadow,
   @font-color_disabled: Color,
   @padding: Number
 );
@@ -311,12 +322,15 @@ Will stylize your button as a dropdown one.
 
 ```less
 #oui > .button-dropdown(
+  @icon-selector: Class,
+  @icon-size: Number,
   @icon-color: Color,
   @icon-color_active: Color,
   @background-color_active: Color,
   @border-color_active: Color,
   @icon-color_disabled: Color,
-  @padding: Number
+  @padding-right: Number,
+  @padding-left: Number
 );
 ```
 
@@ -325,16 +339,16 @@ Will stylize your button as a dropdown one.
 Define the base styles for a button with an icon.
 
 ```less
-#oui > .button-icon();
+#oui > .button-icon-base();
 ```
 
 ```less
-#oui > .button-icon(
+#oui > .button-icon-base(
+  @icon-selector: Class,
   @icon-size: Number,
+  @icon-size_large: Number,
   @icon-color: Color,
-  @icon-color_disabled: Color,
-  @icon-padding-right: Number,
-  @icon-padding-left: Number
+  @icon-color_disabled: Color
 );
 ```
 
@@ -348,8 +362,9 @@ Will stylize your button with an icon on the right.
 
 ```less
 #oui > .button-icon-right(
+  @icon-selector: Class,
   @icon-margin-left: Number,
-  @icon-color_disabled: Color
+  @padding-right: Number
 );
 ```
 
@@ -363,8 +378,9 @@ Will stylize your button with an icon on the left.
 
 ```less
 #oui > .button-icon-left(
+  @icon-selector: Class,
   @icon-margin-right: Number,
-  @icon-color_disabled: Color
+  @padding-left: Number
 );
 ```
 
@@ -381,23 +397,54 @@ Will stylize your button as a link.
   @icon-selector: Class,
   @icon-color: Color,
   @font-color: Color,
-  @font-weight: Number
+  @font-color_hover: Color,
+  @font-color_disabled: Color,
+  @font-weight: Number,
+  @padding: Number
 );
 ```
 
 ### .button-full-width
 
-Will stylize your button as a link full width.
+Will stylize your button as a button full width.
 
 ```less
 #oui > .button-full-width;
 ```
 
 ```less
-#oui > .button-link-full-width(
+#oui > .button-full-width(
+  @icon-selector: Class
+);
+```
+
+### .button-full-width-icon-right
+
+Will stylize your button as a button full width with an icon on the right.
+
+```less
+#oui > .button-full-width-icon-right();
+```
+
+```less
+#oui > .button-full-width-icon-right(
   @icon-selector: Class,
-  @icon-color: Color,
-  @font-weight: Number
+  @padding-right: Number
+);
+```
+
+### .button-full-width-icon-left
+
+Will stylize your button as a button full width with an icon on the left.
+
+```less
+#oui > .button-full-width-icon-left();
+```
+
+```less
+#oui > .button-full-width-icon-left(
+  @icon-selector: Class,
+  @padding-left: Number
 );
 ```
 

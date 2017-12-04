@@ -58,8 +58,15 @@
     @icon-selector,
     @font-color: @oui-checkbox-font-color,
     @outline-color: @oui-checkbox-outline-color,
-    @outline-color-hover: @oui-checkbox-outline-color-hover,
-    @outline-color-active: @oui-checkbox-outline-color-active,
+    @outline-color_hover: @oui-checkbox-outline-color_hover,
+    @outline-color_active: @oui-checkbox-outline-color_active,
+    @outline-color_disabled: @oui-checkbox-outline-color_disabled,
+    @outline-color-checked: @oui-checkbox-outline-color-checked,
+    @outline-color-checked_hover: @oui-checkbox-outline-color-checked_hover,
+    @background-color: @oui-checkbox-background-color,
+    @background-color_active: @oui-checkbox-background-color_active,
+    @background-color_disabled: @oui-checkbox-background-color_disabled,
+    @box-shadow_focus: @oui-checkbox-box-shadow_focus,
     @spacing: @oui-checkbox-spacing
   ) {
     .checkbox-size(
@@ -100,14 +107,7 @@
     &__input:focus ~ .@{checkbox-selector}__label-container,
     &__input:checked:focus ~ .@{checkbox-selector}__label-container {
       .@{checkbox-selector}__icon::before {
-        box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
-      }
-
-      .@{icon-selector}-unchecked,
-      .@{icon-selector}-checked,
-      .@{icon-selector}-checkmark,
-      .@{icon-selector}-indeterminate {
-        color: @outline-color-active;
+        box-shadow: @box-shadow_focus;
       }
     }
 
@@ -120,7 +120,7 @@
         display: block;
         width: 76%;
         height: 78%;
-        background: #fff;
+        background: @background-color;
       }
 
       .@{icon-selector}-unchecked {
@@ -130,14 +130,10 @@
 
       .@{icon-selector}-checked {
         display: none;
-        color: @outline-color;
+        color: @outline-color-checked;
       }
 
-      .@{icon-selector}-checkmark {
-        display: none;
-        color: @font-color;
-      }
-
+      .@{icon-selector}-checkmark,
       .@{icon-selector}-indeterminate {
         display: none;
         color: @font-color;
@@ -169,10 +165,9 @@
     }
 
     &__label-container:hover {
-      .@{checkbox-selector}__icon .@{icon-selector}-unchecked,
-      .@{checkbox-selector}__icon .@{icon-selector}-checked {
-        color: @outline-color-hover;
-      }
+      .@{checkbox-selector}__icon .@{icon-selector}-unchecked { color: @outline-color_hover; }
+
+      .@{checkbox-selector}__icon .@{icon-selector}-checked { color: @outline-color-checked_hover; }
     }
 
     &__input:not(:disabled) ~ &__label-container:active {
@@ -180,11 +175,11 @@
       .@{checkbox-selector}__icon .@{icon-selector}-checked,
       .@{checkbox-selector}__icon .@{icon-selector}-checkmark,
       .@{checkbox-selector}__icon .@{icon-selector}-indeterminate {
-        color: @outline-color-active;
+        color: @outline-color_active;
       }
 
       .@{checkbox-selector}__icon::before {
-        background: #e2f3f8;
+        background: @background-color_active;
       }
     }
 
@@ -201,11 +196,11 @@
       .@{checkbox-selector}__icon .@{icon-selector}-checked,
       .@{checkbox-selector}__icon .@{icon-selector}-checkmark,
       .@{checkbox-selector}__icon .@{icon-selector}-indeterminate {
-        color: @oui-color-dusty;
+        color: @outline-color_disabled;
       }
 
       .@{checkbox-selector}__icon::before {
-        background: lighten(@oui-color-dusty, 35);
+        background: @background-color_disabled;
       }
     }
   }
@@ -213,13 +208,18 @@
   .checkbox-thumbnail(
     @checkbox-selector,
     @border-color: @oui-thumbnail-border-color,
-    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color_hover: @oui-thumbnail-border-color_hover,
+    @border-color_disabled: @oui-thumbnail-border-color_disabled,
     @border-color-checked: @oui-thumbnail-border-color-checked,
-    @border-color-checked-hover: @oui-thumbnail-border-color-checked-hover,
+    @border-color-checked_hover: @oui-thumbnail-border-color-checked_hover,
+    @border-color-checked_disabled: @oui-thumbnail-border-color-checked_disabled,
     @background: @oui-thumbnail-background,
-    @background-hover: @oui-thumbnail-background-hover,
+    @background_hover: @oui-thumbnail-background_hover,
+    @background_disabled: @oui-thumbnail-background_disabled,
     @background-checked: @oui-thumbnail-background-checked,
-    @background-checked-hover: @oui-thumbnail-background-checked-hover,
+    @background-checked_hover: @oui-thumbnail-background-checked_hover,
+    @background-checked_disabled: @oui-thumbnail-background-checked_disabled,
+    @box-shadow_focus: @oui-thumbnail-box-shadow_focus,
     @border-size: @oui-thumbnail-border-size,
     @padding: @oui-thumbnail-padding
   ) {
@@ -250,16 +250,10 @@
     .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
       .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover {
       #oui > .thumbnail-base-color(
-        @border-color-hover,
-        @background-hover,
+        @border-color_hover,
+        @background_hover,
         @border-size
       );
-    }
-
-    .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container,
-      .@{checkbox-selector}__input:checked:not(:disabled):focus + .@{checkbox-selector}__label-container {
-      border-color: rgba(85, 199, 228, 0.6);
-      box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
     }
 
     .@{checkbox-selector}__input:checked + .@{checkbox-selector}__label-container {
@@ -270,17 +264,37 @@
       )
     }
 
+    .@{checkbox-selector}__input:disabled + .@{checkbox-selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color_disabled,
+        @background_disabled,
+        @border-size
+      )
+    }
+
     .@{checkbox-selector}__input:checked:disabled + .@{checkbox-selector}__label-container {
-      border-color: fade(@border-color-checked, 50%)
+      #oui > .thumbnail-base-color(
+        @border-color-checked_disabled,
+        @background-checked_disabled,
+        @border-size
+      )
+    }
+
+    .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container {
+      box-shadow: @box-shadow_focus;
     }
   }
 
   .checkbox-thumbnail-light(
     @checkbox-selector,
-    @border-color: @oui-thumbnail-border-color,
-    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color: @oui-thumbnail-border-color-light,
+    @border-color_hover: @oui-thumbnail-border-color-light_hover,
+    @border-color_disabled: @oui-thumbnail-border-color-light,
+    @border-color-checked_disabled: @oui-thumbnail-border-color_disabled,
     @background: @oui-thumbnail-background-light,
-    @background-hover: @oui-thumbnail-background-light-hover,
+    @background_hover: @oui-thumbnail-background-light_hover,
+    @background_disabled: @oui-thumbnail-background-light,
+    @background-checked_disabled: @oui-thumbnail-background_disabled,
     @border-size: @oui-thumbnail-border-size,
     @padding: @oui-thumbnail-padding
   ) {
@@ -295,8 +309,24 @@
 
     .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover {
       #oui > .thumbnail-base-color(
-        @border-color-hover,
-        @background-hover,
+        @border-color_hover,
+        @background_hover,
+        @border-size
+      );
+    }
+
+    .@{checkbox-selector}__input:disabled + .@{checkbox-selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color_disabled,
+        @background_disabled,
+        @border-size
+      );
+    }
+
+    .@{checkbox-selector}__input:checked:disabled + .@{checkbox-selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color-checked_disabled,
+        @background-checked_disabled,
         @border-size
       );
     }

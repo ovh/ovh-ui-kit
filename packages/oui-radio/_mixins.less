@@ -251,13 +251,18 @@
   .radio-thumbnail (
     @selector,
     @border-color: @oui-thumbnail-border-color,
-    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color_hover: @oui-thumbnail-border-color_hover,
+    @border-color_disabled: @oui-thumbnail-border-color_disabled,
     @border-color-checked: @oui-thumbnail-border-color-checked,
-    @border-color-checked-hover: @oui-thumbnail-border-color-checked-hover,
+    @border-color-checked_hover: @oui-thumbnail-border-color-checked_hover,
+    @border-color-checked_disabled: @oui-thumbnail-border-color-checked_disabled,
     @background: @oui-thumbnail-background,
-    @background-hover: @oui-thumbnail-background-hover,
+    @background_hover: @oui-thumbnail-background_hover,
+    @background_disabled: @oui-thumbnail-background_disabled,
     @background-checked: @oui-thumbnail-background-checked,
-    @background-checked-hover: @oui-thumbnail-background-checked-hover,
+    @background-checked_hover: @oui-thumbnail-background-checked_hover,
+    @background-checked_disabled: @oui-thumbnail-background-checked_disabled,
+    @box-shadow_focus: @oui-thumbnail-box-shadow_focus,
     @border-size: @oui-thumbnail-border-size,
     @padding: @oui-thumbnail-padding,
     @label-padding-left: @oui-radio-padding-left,
@@ -300,8 +305,8 @@
 
     .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover {
       #oui > .thumbnail-base-color(
-        @border-color-hover,
-        @background-hover,
+        @border-color_hover,
+        @background_hover,
         @border-size
       );
     }
@@ -314,33 +319,37 @@
       )
     }
 
-    .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover {
+    .@{selector}__input:disabled + .@{selector}__label-container {
       #oui > .thumbnail-base-color(
-        @border-color-checked-hover,
-        @background-checked-hover,
+        @border-color_disabled,
+        @background_disabled,
         @border-size
       )
     }
 
-    .@{selector}__input:focus {
-      + .@{selector}__label-container {
-        border-color: @oui-thumbnail-border-color-hover;
-        box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
-      }
+    .@{selector}__input:checked:disabled + .@{selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color-checked_disabled,
+        @background-checked_disabled,
+        @border-size
+      )
+    }
 
-      ~ .@{selector}__label-container::before,
-      &:checked ~ .@{selector}__label-container::before {
-        box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
-      }
+    .@{selector}__input:not(:disabled):focus + .@{selector}__label-container {
+      box-shadow: @box-shadow_focus;
     }
   }
 
   .radio-thumbnail-light (
     @selector,
     @border-color: @oui-thumbnail-border-color,
-    @border-color-hover: @oui-thumbnail-border-color-hover,
+    @border-color-hover: @oui-thumbnail-border-color_hover,
+    @border-color_disabled: @oui-thumbnail-border-color-light,
+    @border-color-checked_disabled: @oui-thumbnail-border-color_disabled,
     @background: @oui-thumbnail-background-light,
-    @background-hover: @oui-thumbnail-background-light-hover,
+    @background-hover: @oui-thumbnail-background-light_hover,
+    @background_disabled: @oui-thumbnail-background-light,
+    @background-checked_disabled: @oui-thumbnail-background_disabled,
     @border-size: @oui-thumbnail-border-size
   ) {
     .@{selector}__label-container {
@@ -355,6 +364,22 @@
       #oui > .thumbnail-base-color(
         @border-color-hover,
         @background-hover,
+        @border-size
+      );
+    }
+
+    .@{selector}__input:disabled + .@{selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color_disabled,
+        @background_disabled,
+        @border-size
+      );
+    }
+
+    .@{selector}__input:checked:disabled + .@{selector}__label-container {
+      #oui > .thumbnail-base-color(
+        @border-color-checked_disabled,
+        @background-checked_disabled,
         @border-size
       );
     }

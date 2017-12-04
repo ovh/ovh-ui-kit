@@ -6,6 +6,7 @@
     @input-selector,
     @button-selector,
     @button-background-color: @oui-input-group-button-hollow-background-color,
+    @button-border-color_disabled: @oui-input-group-button-hollow-border-color_disabled,
     @button-padding: @oui-input-group-button-hollow-padding
   ) {
     display: table;
@@ -16,11 +17,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0 0 rem-calc(20);
-
-    & > .oui-button {
-      width: rem-calc(100);
-      min-height: rem-calc(36);
-    }
+    z-index: 0;
 
     & > .@{button-selector},
     & > .@{input-selector} {
@@ -37,9 +34,14 @@
       }
     }
 
-    & > .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
+    & > .@{input-selector} {
+      z-index: 1; // Set border priority on inputs
+    }
+
+    & > .@{button-selector} {
       #oui > .button-hollow(
         @background-color: @button-background-color,
+        @border-color_disabled: @button-border-color_disabled,
         @padding: @button-padding
       );
     }
@@ -47,7 +49,7 @@
     & > .@{button-selector} {
       & + .@{button-selector},
       & + .@{input-selector} {
-        border-left: 0;
+        margin-left: -1px;
       }
     }
 
@@ -90,14 +92,16 @@
   .input-group-button(
     @input-selector,
     @button-selector,
-    @icon-selector
+    @icon-selector,
+    @button-min-width: @oui-input-group-button-min-width,
+    @button-color_hover: @oui-input-group-button-color_hover
   ) {
     position: relative;
 
     .@{input-selector} {
       &,
       &:first-child {
-        padding-right: rem-calc(50);
+        padding-right: @button-min-width;
         border-radius: @oui-global-base-radius;
       }
     }
@@ -110,11 +114,12 @@
         top: 0;
         right: 0;
         bottom: 0;
-        min-width: rem-calc(50);
+        min-width: @button-min-width;
         width: auto;
         border-color: transparent;
         background: transparent;
         box-shadow: none;
+        z-index: 2; // Avoid to be hidden by inputs
       }
     }
 
@@ -127,13 +132,13 @@
     .@{input-selector}:focus ~ .@{button-selector},
     .@{button-selector}:hover {
       .@{icon-selector} {
-        color: #0090b1;
+        color: @button-color_hover;
       }
     }
 
     .@{button-selector}:focus {
       .@{icon-selector} {
-        color: #0090b1;
+        color: @button-color_hover;
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
       }
     }

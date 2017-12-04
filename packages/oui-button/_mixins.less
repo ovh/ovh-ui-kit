@@ -53,6 +53,8 @@
     @background-color: @oui-button-filled-background-color,
     @background-color_hover: @oui-button-filled-background-color_hover,
     @background-color_disabled: @oui-button-filled-background-color_disabled,
+    @box-shadow_active: @oui-button-filled-box-shadow_active,
+    @box-shadow_focus: @oui-button-filled-box-shadow_focus,
     @font-color_disabled: @oui-button-filled-font-color_disabled,
     @padding: @oui-button-filled-padding
   ) {
@@ -65,11 +67,11 @@
     }
 
     &:focus {
-      box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
+      box-shadow: @box-shadow_focus;
     }
 
     &:active {
-      box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1/3);
+      box-shadow: @box-shadow_active;
     }
 
     &:disabled {
@@ -81,30 +83,32 @@
 
   .button-hollow(
     @background-color: @oui-button-hollow-background-color,
+    @background-color_hover: @oui-button-hollow-background-color_hover,
     @border-color: @oui-button-hollow-border-color,
     @border-color_hover: @oui-button-hollow-border-color_hover,
     @border-color_disabled: @oui-button-hollow-border-color_disabled,
     @background-color_disabled: @oui-button-hollow-background-color_disabled,
+    @box-shadow_active: @oui-button-hollow-box-shadow_active,
+    @box-shadow_focus: @oui-button-hollow-box-shadow_focus,
     @font-color_disabled: @oui-button-hollow-font-color_disabled,
     @padding: @oui-button-hollow-padding
   ) {
     padding: @padding;
     background-color: @background-color;
-    border-width: 1px;
-    border-style: solid;
-    border-color: @border-color;
+    border: 1px solid @border-color;
 
     &:hover,
     &:focus {
+      background-color: @background-color_hover;
       border-color: @border-color_hover;
     }
 
     &:focus {
-      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: @box-shadow_focus;
     }
 
     &:active {
-      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: @box-shadow_active;
     }
 
     &:disabled,
@@ -161,7 +165,7 @@
     &:focus {
       border-color: @border-color_active;
       background: @background-color_active;
-      box-shadow: inset 1px 1px 3px 0 transparent;
+      box-shadow: @oui-button-dropdown-box-shadow_active;
 
       .@{icon-selector} {
         color: @icon-color_active;
@@ -169,7 +173,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+      box-shadow: @oui-button-dropdown-box-shadow_focus;
     }
 
     &:disabled .@{icon-selector} {
@@ -184,24 +188,27 @@
   .button-icon-base(
     @icon-selector,
     @icon-size: @oui-button-icon-icon-size,
+    @icon-size_large: @oui-button-icon-icon-size_large,
     @icon-color: @oui-button-icon-icon-color,
-    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled
+    @icon-color_disabled: @oui-button-icon-icon-color_disabled
   ) {
-
     .@{icon-selector} {
-      vertical-align: text-bottom;
+      color: @icon-color;
     }
 
     .@{icon-selector}::before {
       width: @icon-size;
       height: @icon-size;
-      font-size: ~"calc(@{icon-size} / 1.25)";
+      font-size: @icon-size;
       line-height: @icon-size;
     }
 
     .@{icon-selector}_circle::before {
       background: @icon-color;
-      font-size: ~"calc(@{icon-size} / 2)";
+      width: @icon-size_large;
+      height: @icon-size_large;
+      font-size: @icon-size;
+      line-height: @icon-size_large;
     }
 
     &:disabled .@{icon-selector}::before {
@@ -210,14 +217,13 @@
 
     &:disabled .@{icon-selector}_circle::before {
       background: @icon-color_disabled;
-      color: @oui-color-concrete;
+      color: #fff;
     }
   }
 
   .button-icon-right(
     @icon-selector,
     @icon-margin-left: @oui-button-icon-right-icon-margin-left,
-    @icon-color_disabled: @oui-button-icon-right-icon-color_disabled,
     @padding-right: @oui-button-icon-padding-right
   ) {
     padding-right: @padding-right;
@@ -228,14 +234,12 @@
 
     .@{icon-selector}_circle::before {
       line-height: 2;
-      text-indent: 2px;
     }
   }
 
   .button-icon-left(
     @icon-selector,
     @icon-margin-right: @oui-button-icon-right-icon-margin-right,
-    @icon-color_disabled: @oui-button-icon-left-icon-color_disabled,
     @padding-left: @oui-button-icon-padding-left
   ) {
     padding-left: @padding-left;
@@ -254,6 +258,8 @@
     @icon-selector,
     @icon-color: @oui-button-link-icon-color,
     @font-color: @oui-button-link-font-color,
+    @font-color_hover: @oui-button-link-font-color_hover,
+    @font-color_disabled: @oui-button-link-font-color_disabled,
     @font-weight: @oui-button-link-font-weight,
     @padding: @oui-button-link-padding
   ){
@@ -268,12 +274,14 @@
     &:hover,
     &:focus {
       background: none;
+      color: @font-color_hover;
+      text-decoration: underline;
     }
 
     &:disabled,
     &:disabled:active {
       background: none;
-      color: #b3b3b3;
+      color: @font-color_disabled;
       text-decoration: underline;
     }
 
@@ -289,16 +297,6 @@
     width: 100%;
     height: 100%;
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-
-    &:disabled,
-    &:disabled:active {
-      text-decoration: none;
-    }
-
     .@{icon-selector}::before {
       position: absolute;
       top: 0;
@@ -308,18 +306,20 @@
   }
 
   .button-full-width-icon-right (
-    @icon-selector
+    @icon-selector,
+    @padding-right: @oui-button-icon-padding-right
   ) {
     .@{icon-selector}::before {
-      right: @oui-button-icon-padding-right;
+      right: @padding-right;
     }
   }
 
   .button-full-width-icon-left (
-    @icon-selector
+    @icon-selector,
+    @padding-left: @oui-button-icon-padding-left
   ) {
     .@{icon-selector}::before {
-      left: @oui-button-icon-padding-left;
+      left: @padding-left;
     }
   }
 

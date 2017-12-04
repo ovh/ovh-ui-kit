@@ -10,10 +10,18 @@
 
   &_primary {
     #oui > .button-filled();
+    #oui > .button-icon-base(
+      @oui-icon-selector,
+      @icon-color_disabled: @oui-button-filled-font-color_disabled
+    );
   }
 
   &_secondary {
     #oui > .button-hollow();
+    #oui > .button-icon-base(
+      @oui-icon-selector,
+      @icon-color_disabled: @oui-button-hollow-font-color_disabled
+    );
   }
 
   &_action-menu {
@@ -30,17 +38,19 @@
   }
 
   &_icon-right {
-    #oui > .button-icon-base(@oui-icon-selector);
     #oui > .button-icon-right(@oui-icon-selector);
   }
 
   &_icon-left {
-    #oui > .button-icon-base(@oui-icon-selector);
     #oui > .button-icon-left(@oui-icon-selector);
   }
 
   &_link {
     #oui > .button-link(@oui-icon-selector);
+    #oui > .button-icon-base(
+      @oui-icon-selector,
+      @icon-color_disabled: @oui-button-link-font-color_disabled
+    );
   }
 
   &_full-width {

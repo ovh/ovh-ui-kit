@@ -519,9 +519,18 @@ Define the base styles for a checkbox.
 ```less
 #oui > .checkbox(
   @selector: Class, // Class name that will be prefixed on each subclasses
+  @icon-selector: Class,
+  @font-color: Color,
   @outline-color: Color,
-  @outline-color-hover: Color,
+  @outline-color_hover: Color,
+  @outline-color_active: Color,
+  @outline-color_disabled: Color,
   @outline-color-checked: Color,
+  @outline-color-checked_hover: Color,
+  @background-color: Color,
+  @background-color_active: Color,
+  @background-color_disabled: Color,
+  @box-shadow_focus: Shadow,
   @spacing: Number
 );
 ```
@@ -532,21 +541,11 @@ Change the size of a checkbox
 
 ```less
 #oui > .checkbox-size(
-  @selector: Class, // Class name that will be prefixed on each subclasses
+  @checkbox-selector: Class, // Class name that will be prefixed on each subclasses
+  @icon-selector: Class,
   @size: Number,
-  @apply-padding-to-description: Boolean // [Optional: true] Apply the same padding than label if true, otherwise padding will be 0
-);
-```
-
-### .checkbox-label
-
-Change the label properties of a checkbox
-
-```less
-#oui > .checkbox-label(
-  @selector: Class, // Class name that will be prefixed on each subclasses
-  @font-size: Number,
-  @line-height: Number
+  @line-height: Number,
+  @padding: Boolean
 );
 ```
 
@@ -556,15 +555,15 @@ Will stylize your checkbox as a thumbnail one.
 
 ```less
 .checkbox-thumbnail(
-  @selector: Class, // Class name that will be prefixed on each subclasses
+  @checkbox-selector: Class, // Class name that will be prefixed on each subclasses
   @border-color: Color,
-  @border-color-hover: Color,
+  @border-color_hover: Color,
   @border-color-checked: Color,
-  @border-color-checked-hover: Color,
+  @border-color-checked_hover: Color,
   @background: Color,
-  @background-hover: Color,
+  @background_hover: Color,
   @background-checked: Color,
-  @background-checked-hover: Color,
+  @background-checked_hover: Color,
   @border-size: Color,
   @padding: Number
 );
@@ -575,12 +574,12 @@ Will stylize your checkbox as a thumbnail one.
 Will stylize your checkbox as a light thumbnail one.
 
 ```less
-.checkbox-thumbnail(
-  @selector: Class,
+.checkbox-thumbnail-light(
+  @checkbox-selector: Class,
   @border-color: Color,
-  @border-color-hover: Color,
+  @border-color_hover: Color,
   @background: Color,
-  @background-hover: Color,
+  @background_hover: Color,
   @border-size: Color,
   @padding: Number
 );
