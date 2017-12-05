@@ -2,6 +2,7 @@
 @import '../oui-typography/_constants';
 @import '../oui-animation/_mixins';
 @import '../oui-color/_variables';
+@import '../oui-responsive/_mixins';
 @import './_variables';
 
 #oui {
@@ -78,17 +79,17 @@
     pointer-events: none;
     z-index: @z-index;
 
-    @media screen and (max-width: 1024px) {
-      &.active {
+    &_active {
+      .tablet({
         opacity: @backdrop-opacity;
         pointer-events: auto;
-      }
+      });
     }
   }
 
   .navbar-list(
     @flex-direction: row,
-    @flex-grow: 1,
+    @flex-grow: 0,
     @align-items: center,
     @justify-content: flex-start,
     @border-bottom: none
@@ -109,17 +110,9 @@
       border-bottom: @border-bottom;
     }
 
-    &_grow {
-      flex-grow: 1;
-    }
-
-    // Variant 'start' for List, align 'left'
-    &_start {
-      justify-content: flex-start;
-    }
-
     // Variant 'end' for List, align 'right'
     &_end {
+      flex-grow: 1;
       justify-content: flex-end;
     }
   }
@@ -132,8 +125,7 @@
     @font-color: @oui-navbar-font-color,
     @font-color_active: @oui-navbar-font-color_active,
     @background-color: @oui-navbar-background-color,
-    @background-color_hover: @oui-navbar-background-color_hover,
-    @arrow-color: @oui-navbar-arrow-color
+    @background-color_hover: @oui-navbar-background-color_hover
   ) {
     min-width: @min-width;
     line-height: @height;
@@ -153,28 +145,15 @@
       background-color: @background-color_hover;
     }
 
-    @media screen and (max-width: 1024px) {
-      &[aria-haspopup="true"]::after {
-        content: "\F110";
-        font-family: 'Oui Icons';
-        color: @arrow-color;
-        padding: @padding;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-      }
-    }
-
-    .active > & { color: @font-color_active; }
+    &_active { color: @font-color_active; }
   }
 
   .navbar-link-variant(
-    @font-size,
-    @font-color,
-    @background-color,
-    @background-color_hover,
-    @width: auto
+    @width: auto,
+    @font-size: @oui-navbar-font-size,
+    @font-color: @oui-navbar-font-color,
+    @background-color: @oui-navbar-background-color,
+    @background-color_hover: @oui-navbar-background-color_hover
   ) {
     width: @width;
     font-size: @font-size;
@@ -205,15 +184,33 @@
       display: none;
     }
 
-    @media screen and (max-width: 1024px) {
+    .tablet({
       padding: 0;
       font-size: 0;
       text-align: center;
+    });
 
-      .oui-icon {
+    .oui-icon {
+      .tablet({
         margin: 0;
         vertical-align: middle;
-      }
+      });
+    }
+  }
+
+  .navbar-link-arrow(
+    @padding: @oui-navbar-link-padding,
+    @arrow-color: @oui-navbar-arrow-color
+  ) {
+    &::after {
+      content: "\F110";
+      font-family: 'Oui Icons';
+      color: @arrow-color;
+      padding: @padding;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
     }
   }
 
@@ -244,16 +241,16 @@
     box-shadow: @menu-box-shadow;
     z-index: @menu-z-index;
 
-    @media screen and (max-width: 1024px) {
+    .tablet({
       min-width: 0;
       max-width: @menu-width;
       box-shadow: none;
-    }
+    });
 
-    @media screen and (min-width: 1025px) {
-      &_toggle {
+    &_toggle {
+      .desktop({
         display: none;
-      }
+      });
     }
 
     // Variant 'right' for Menus
@@ -282,9 +279,9 @@
       position: relative;
       padding: @menu-padding;
 
-      @media screen and (max-width: 1024px) {
+      .tablet({
         display: block;
-      }
+      });
     }
 
     // Title for Header
@@ -385,11 +382,11 @@
     display: none;
     text-align: center;
 
-    @media screen and (max-width: 1024px) {
+    .tablet({
       display: block;
-    }
+    });
 
-    &-icon {
+    &-hamburger {
       width: @icon-size;
       height: @icon-size;
       display: inline-block;
@@ -419,14 +416,14 @@
     // Variant 'active'
     &[aria-expanded="true"] {
       #oui > .navbar-link-variant(
-        @font-size,
-        @font-color_active,
-        @background-color_active,
-        @background-color_active
+        @font-size: @font-size,
+        @font-color: @font-color_active,
+        @background-color: @background-color_active,
+        @background-color_hover: @background-color_active
       );
     }
 
-    &[aria-expanded="true"] &-icon {
+    &[aria-expanded="true"] &-hamburger {
       span { background: @font-color_active; }
 
       span:nth-child(1) {
@@ -453,15 +450,15 @@
 
   .navbar-helpers() {
     &__desktop-only {
-      @media screen and (max-width: 1024px) {
+      .tablet({
         display: none;
-      }
+      });
     }
 
     &__mobile-only {
-      @media screen and (min-width: 1025px) {
+      .desktop({
         display: none;
-      }
+      });
     }
   }
 }

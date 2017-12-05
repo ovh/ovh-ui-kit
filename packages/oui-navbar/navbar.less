@@ -1,3 +1,4 @@
+@import '../oui-responsive/_mixins';
 @import './_normalize';
 @import './_mixins';
 
@@ -19,19 +20,19 @@
 
     &[aria-expanded="true"] {
       #oui > .navbar-link-variant(
-        @oui-navbar-font-size,
-        @oui-navbar-menu-font-color,
-        @oui-navbar-menu-background-color,
-        @oui-navbar-menu-background-color
+        @font-size: @oui-navbar-font-size,
+        @font-color: @oui-navbar-menu-font-color,
+        @background-color: @oui-navbar-menu-background-color,
+        @background-color_hover: @oui-navbar-menu-background-color
       );
     }
 
     &_secondary {
       #oui > .navbar-link-variant(
-        @oui-navbar-secondary-font-size,
-        @oui-navbar-secondary-font-color,
-        @oui-navbar-background-color,
-        @oui-navbar-background-color_hover
+        @font-size: @oui-navbar-secondary-font-size,
+        @font-color: @oui-navbar-secondary-font-color,
+        @background-color: @oui-navbar-background-color,
+        @background-color_hover: @oui-navbar-background-color_hover
       );
     }
 
@@ -50,10 +51,10 @@
     #oui > .navbar-menu();
     #oui > .navbar-menu-animation_opacity();
 
-    @media screen and (max-width: 1024px) {
+    .tablet({
       #oui > .navbar-menu-fixed();
       #oui > .navbar-menu-animation_slide();
-    }
+    });
   }
 
   // Menu lists
@@ -63,33 +64,37 @@
       @align-items: stretch
     );
 
-    @media screen and (max-width: 1024px) {
+    .tablet({
       #oui > .navbar-list(
         @flex-direction: column,
         @align-items: stretch,
         @border-bottom: @oui-navbar-menu-border-bottom
       );
-    }
+    });
   }
 
   // Menu links
   &__menu &__link {
     #oui > .navbar-link-variant(
-      @oui-navbar-font-size,
-      @oui-navbar-menu-font-color,
-      @oui-navbar-menu-background-color,
-      @oui-navbar-menu-background-color_hover,
-      100%
+      @width: 100%,
+      @font-size: @oui-navbar-font-size,
+      @font-color: @oui-navbar-menu-font-color,
+      @background-color: @oui-navbar-menu-background-color,
+      @background-color_hover: @oui-navbar-menu-background-color_hover
     );
 
     &_secondary {
       #oui > .navbar-link-variant(
-        @oui-navbar-secondary-font-size,
-        @oui-navbar-secondary-font-color,
-        @oui-navbar-menu-background-color,
-        @oui-navbar-menu-background-color_hover,
-        100%
+        @width: 100%,
+        @font-size: @oui-navbar-secondary-font-size,
+        @font-color: @oui-navbar-secondary-font-color,
+        @background-color: @oui-navbar-menu-background-color,
+        @background-color_hover: @oui-navbar-menu-background-color_hover
       );
+    }
+
+    &[aria-haspopup="true"] {
+      #oui > .navbar-link-arrow();
     }
   }
 

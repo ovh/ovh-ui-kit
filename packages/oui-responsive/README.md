@@ -13,12 +13,12 @@ oui-responsive is a package which provides tools as mixins for managing responsi
   display: block;
 
   // Tablet specific
-  tablet({
+  .tablet({
     display: inline;
   });
 
   // Phone specific
-  phone({
+  .phone({
     display: none;
   });
 }
@@ -32,4 +32,5 @@ You can define custom breakpoints by overwriting `@oui-responsive-breakpoint-pho
 | --- | --- | --- |
 | `#oui > .phone(@rules)` | will define CSS rules for phones only |
 | `#oui > .tablet(@rules)` | will define CSS rules for phones and tablets only |
+| `#oui > .desktop(@rules)` | will define CSS rules for desktop only |
 | `#oui > .responsive(@maxWidth; @rules)` | will define custom rules for screens up to `@maxWidth` |
