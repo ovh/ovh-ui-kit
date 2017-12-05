@@ -7,17 +7,16 @@
 
 #oui {
   .navbar(
-    @font-size: @oui-navbar-font-size,
     @height: @oui-navbar-height,
     @padding: @oui-navbar-padding,
+    @font-size: @oui-navbar-font-size,
     @font-color: @oui-navbar-font-color,
     @font-color_active: @oui-navbar-font-color_active,
     @background-color: @oui-navbar-background-color,
     @background-color_hover: @oui-navbar-background-color_hover,
     @z-index: @oui-navbar-z-index,
     @brand-color: @oui-navbar-brand-color,
-    @brand-padding: @oui-navbar-brand-padding,
-    @backdrop-opacity: @oui-navbar-backdrop-opacity
+    @brand-padding: @oui-navbar-brand-padding
   ) {
     display: flex;
     flex-direction: row;
@@ -66,7 +65,7 @@
   .navbar-backdrop(
     @height: @oui-navbar-height,
     @z-index: @oui-navbar-z-index,
-    @backdrop-opacity: @oui-navbar-backdrop-opacity
+    @opacity: @oui-navbar-backdrop-opacity
   ) {
     position: fixed;
     top: @height;
@@ -81,7 +80,7 @@
 
     &_active {
       .tablet({
-        opacity: @backdrop-opacity;
+        opacity: @opacity;
         pointer-events: auto;
       });
     }
@@ -104,7 +103,7 @@
     list-style: none;
 
     // List items
-    &-item {
+    &__item {
       display: block;
       position: relative;
       border-bottom: @border-bottom;
@@ -148,7 +147,7 @@
     &_active { color: @font-color_active; }
   }
 
-  .navbar-link-variant(
+  .navbar-link_variant(
     @width: auto,
     @font-size: @oui-navbar-font-size,
     @font-color: @oui-navbar-font-color,
@@ -167,7 +166,7 @@
     }
   }
 
-  .navbar-link-icon(
+  .navbar-link_icon(
     @icon-size: @oui-navbar-icon-size,
     @icon-spacing: @oui-navbar-icon-spacing
   ) {
@@ -198,7 +197,7 @@
     }
   }
 
-  .navbar-link-arrow(
+  .navbar-link_arrow(
     @padding: @oui-navbar-link-padding,
     @arrow-color: @oui-navbar-arrow-color
   ) {
@@ -215,35 +214,35 @@
   }
 
   .navbar-menu(
+    @width: @oui-navbar-menu-width,
     @height: @oui-navbar-height,
-    @menu-width: @oui-navbar-menu-width,
-    @menu-padding: @oui-navbar-menu-padding,
-    @menu-background-color: @oui-navbar-menu-background-color,
-    @menu-background-color_hover: @oui-navbar-menu-background-color_hover,
-    @menu-border-bottom: @oui-navbar-menu-border-bottom,
-    @menu-box-shadow: @oui-navbar-menu-box-shadow,
-    @menu-font-color: @oui-navbar-menu-font-color,
-    @menu-font-size: @oui-navbar-menu-font-size,
-    @menu-font-size_small: @oui-navbar-menu-font-size_small,
-    @menu-z-index: @oui-navbar-menu-z-index,
-    @menu-title-font-color: @oui-navbar-menu-title-font-color,
-    @menu-title-font-size: @oui-navbar-menu-title-font-size,
-    @menu-title-line-height: @oui-navbar-menu-title-line-height,
-    @menu-back-padding: @oui-navbar-menu-back-padding
+    @padding: @oui-navbar-menu-padding,
+    @background-color: @oui-navbar-menu-background-color,
+    @background-color_hover: @oui-navbar-menu-background-color_hover,
+    @border-bottom: @oui-navbar-menu-border-bottom,
+    @box-shadow: @oui-navbar-menu-box-shadow,
+    @font-color: @oui-navbar-menu-font-color,
+    @font-size: @oui-navbar-menu-font-size,
+    @font-size_small: @oui-navbar-menu-font-size_small,
+    @z-index: @oui-navbar-menu-z-index,
+    @title-font-color: @oui-navbar-menu-title-font-color,
+    @title-font-size: @oui-navbar-menu-title-font-size,
+    @title-line-height: @oui-navbar-menu-title-line-height,
+    @back-padding: @oui-navbar-menu-back-padding
   ) {
     width: 100%;
-    min-width: @menu-width;
+    min-width: @width;
     position: absolute;
     top: 100%;
     left: 0;
-    color: @menu-font-color;
-    background-color: @menu-background-color;
-    box-shadow: @menu-box-shadow;
-    z-index: @menu-z-index;
+    color: @font-color;
+    background-color: @background-color;
+    box-shadow: @box-shadow;
+    z-index: @z-index;
 
     .tablet({
       min-width: 0;
-      max-width: @menu-width;
+      max-width: @width;
       box-shadow: none;
     });
 
@@ -259,25 +258,25 @@
       right: 0;
     }
 
-    &-header,
-    &-item {
+    &__header,
+    &__item {
       display: block;
-      padding: @menu-padding;
-      font-size: @menu-font-size;
-      color: @menu-font-color;
-      border-bottom: @menu-border-bottom;
+      padding: @padding;
+      font-size: @font-size;
+      color: @font-color;
+      border-bottom: @border-bottom;
     }
 
     // General item for Menu
-    &-item {
+    &__item {
       .oui-button { margin: 0; }
     }
 
     // Header for Menu
-    &-header {
+    &__header {
       display: none;
       position: relative;
-      padding: @menu-padding;
+      padding: @padding;
 
       .tablet({
         display: block;
@@ -285,27 +284,27 @@
     }
 
     // Title for Header
-    &-title {
-      line-height: @menu-title-line-height;
+    &__title {
+      line-height: @title-line-height;
       margin: 0;
       padding: 0;
       text-transform: uppercase;
-      font-size: @menu-title-font-size;
+      font-size: @title-font-size;
       font-weight: bold;
-      color: @menu-title-font-color;
+      color: @title-font-color;
     }
 
     // Bradcrumb for Header
-    &-breadcrumb {
+    &__breadcrumb {
       display: block;
       margin: 0;
-      font-size: @menu-font-size_small;
+      font-size: @font-size_small;
     }
 
     // Back Button
-    &-back {
+    &__back {
       position: absolute;
-      left: @menu-padding;
+      left: @padding;
       top: 50%;
       transform: translateY(-50%);
 
@@ -316,13 +315,13 @@
       }
     }
 
-    &-back ~ &-title,
-    &-back ~ &-breadcrumb {
-      padding-left: @menu-back-padding;
+    &__back ~ &__title,
+    &__back ~ &__breadcrumb {
+      padding-left: @back-padding;
     }
   }
 
-  .navbar-menu-fixed(
+  .navbar-menu_fixed(
     @height: @oui-navbar-height
   ) {
     overflow-x: hidden;
@@ -373,8 +372,8 @@
     @font-color: @oui-navbar-font-color,
     @font-color_active: @oui-navbar-menu-font-color,
     @font-size: @oui-navbar-font-size,
-    @icon-size: @oui-navbar-icon-size,
-    @icon-bar-size: @oui-navbar-icon-bar-size
+    @hamburger-size: @oui-navbar-icon-size,
+    @hamburger-bar-size: @oui-navbar-icon-bar-size
   ) {
     #oui > .navbar-link();
 
@@ -386,16 +385,16 @@
       display: block;
     });
 
-    &-hamburger {
-      width: @icon-size;
-      height: @icon-size;
+    &__hamburger {
+      width: @hamburger-size;
+      height: @hamburger-size;
       display: inline-block;
       position: relative;
       vertical-align: middle;
 
       span {
-        width: @icon-size;
-        height: @icon-bar-size;
+        width: @hamburger-size;
+        height: @hamburger-bar-size;
         display: block;
         position: absolute;
         background: @font-color;
@@ -415,7 +414,7 @@
 
     // Variant 'active'
     &[aria-expanded="true"] {
-      #oui > .navbar-link-variant(
+      #oui > .navbar-link_variant(
         @font-size: @font-size,
         @font-color: @font-color_active,
         @background-color: @background-color_active,
@@ -423,7 +422,7 @@
       );
     }
 
-    &[aria-expanded="true"] &-hamburger {
+    &[aria-expanded="true"] &__hamburger {
       span { background: @font-color_active; }
 
       span:nth-child(1) {
@@ -449,13 +448,13 @@
   }
 
   .navbar-helpers() {
-    &__desktop-only {
+    &_desktop-only {
       .tablet({
         display: none;
       });
     }
 
-    &__mobile-only {
+    &_mobile-only {
       .desktop({
         display: none;
       });

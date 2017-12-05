@@ -6,20 +6,20 @@
   #oui > .navbar-normalize();
   #oui > .navbar();
 
-  &__backdrop {
+  &-backdrop {
     #oui > .navbar-backdrop();
   }
 
-  &__list {
+  &-list {
     #oui > .navbar-list();
   }
 
   // Navbar links
-  &__link {
+  &-link {
     #oui > .navbar-link();
 
     &[aria-expanded="true"] {
-      #oui > .navbar-link-variant(
+      #oui > .navbar-link_variant(
         @font-size: @oui-navbar-font-size,
         @font-color: @oui-navbar-menu-font-color,
         @background-color: @oui-navbar-menu-background-color,
@@ -28,7 +28,7 @@
     }
 
     &_secondary {
-      #oui > .navbar-link-variant(
+      #oui > .navbar-link_variant(
         @font-size: @oui-navbar-secondary-font-size,
         @font-color: @oui-navbar-secondary-font-color,
         @background-color: @oui-navbar-background-color,
@@ -38,27 +38,27 @@
 
     &_icon,
     &_icon[aria-expanded="true"] {
-      #oui > .navbar-link-icon();
+      #oui > .navbar-link_icon();
     }
   }
 
   // Navbar toggler, for collapsible menu
-  &__toggler {
+  &-toggler {
     #oui > .navbar-toggler();
   }
 
-  &__menu {
+  &-menu {
     #oui > .navbar-menu();
     #oui > .navbar-menu-animation_opacity();
 
     .tablet({
-      #oui > .navbar-menu-fixed();
+      #oui > .navbar-menu_fixed();
       #oui > .navbar-menu-animation_slide();
     });
   }
 
   // Menu lists
-  &__menu &__list {
+  &-menu &-list {
     #oui > .navbar-list(
       @flex-direction: column,
       @align-items: stretch
@@ -74,8 +74,8 @@
   }
 
   // Menu links
-  &__menu &__link {
-    #oui > .navbar-link-variant(
+  &-menu &-link {
+    #oui > .navbar-link_variant(
       @width: 100%,
       @font-size: @oui-navbar-font-size,
       @font-color: @oui-navbar-menu-font-color,
@@ -84,7 +84,7 @@
     );
 
     &_secondary {
-      #oui > .navbar-link-variant(
+      #oui > .navbar-link_variant(
         @width: 100%,
         @font-size: @oui-navbar-secondary-font-size,
         @font-color: @oui-navbar-secondary-font-color,
@@ -94,7 +94,7 @@
     }
 
     &[aria-haspopup="true"] {
-      #oui > .navbar-link-arrow();
+      #oui > .navbar-link_arrow();
     }
   }
 
