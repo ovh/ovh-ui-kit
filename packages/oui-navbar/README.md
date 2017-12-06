@@ -68,27 +68,12 @@ oui-navbar is a package which provide styles for the navbar component.
   <a class="oui-navbar__brand" href="">
     <i class="oui-icon oui-icon-ovh"></i>
   </a>
-  <ul class="oui-navbar-list">
-    <li class="oui-navbar-list__item">
-      <button class="oui-navbar-link" type="button" aria-haspopup="true" aria-expanded="true">Lorem ipsum</button>
-      <div class="oui-navbar-menu">
-        <ul class="oui-navbar-list">
-          <li class="oui-navbar-list__item">
-            <a class="oui-navbar-link" href="">Vivamus cursus</a>
-          </li>
-          <li class="oui-navbar-list__item">
-            <a class="oui-navbar-link" href="">Condimentum</a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Dolor sit amet</a>
-    </li>
-  </ul>
   <ul class="oui-navbar-list oui-navbar-list_end">
     <li class="oui-navbar-list__item">
-      <button class="oui-navbar-link" type="button" aria-haspopup="true" aria-expanded="true">Consectetur</button>
+      <a class="oui-navbar-link" href="">Consectetur</a>
+    </li>
+    <li class="oui-navbar-list__item">
+      <button class="oui-navbar-link" type="button" aria-haspopup="true" aria-expanded="true">Adipiscing elit</button>
       <div class="oui-navbar-menu oui-navbar-menu_right">
         <ul class="oui-navbar-list">
           <li class="oui-navbar-list__item">
@@ -100,15 +85,52 @@ oui-navbar is a package which provide styles for the navbar component.
         </ul>
       </div>
     </li>
+  </ul>
+</nav>
+</div>
+```
+
+The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, of the previous `.oui-navbar-link` button or link.
+
+### With responsive toggler
+
+```html:preview
+<div style="margin-bottom: 15px" class="oui-doc-preview-only-keep-children">
+<nav class="oui-navbar" role="navigation">
+  <button type="button" class="oui-navbar-toggler" aria-haspopup="true" aria-expanded="false">
+    <span class="oui-navbar-toggler__hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+  <div class="oui-navbar-menu oui-navbar-menu_fixed oui-navbar-menu_toggle">
+    <ul class="oui-navbar-list">
+      <li class="oui-navbar-list__item">
+        <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
+      </li>
+      <li class="oui-navbar-list__item">
+        <a class="oui-navbar-link" href="">Dolor sit amet</a>
+      </li>
+    </ul>
+  </div>
+  <a class="oui-navbar__brand" href="">
+    <i class="oui-icon oui-icon-ovh"></i>
+  </a>
+  <ul class="oui-navbar-list oui-navbar_desktop-only">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Adipiscing elit</a>
+      <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
+    </li>
+    <li class="oui-navbar-list__item">
+      <a class="oui-navbar-link" href="">Dolor sit amet</a>
     </li>
   </ul>
 </nav>
 </div>
 ```
 
-The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, of the previous `.oui-navbar-link` button or link
+The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, of the `.oui-navbar-toggler` button.
 
 ## Mixins
 
@@ -281,9 +303,12 @@ Define the styles of a menu for a navbar with `position: fixed`.
 
 ```less
 #oui > .navbar-menu_fixed(
+  @width: Number,
   @height: Number
 );
 ```
+
+__Note:__ The classname `.oui-navbar-menu_fixed` use this mixin, but for mobile and tablet only.
 
 ### .navbar-menu-animation_opacity
 
@@ -364,14 +389,15 @@ Inner elements:
 
 The provided modifiers are:
 
-| Class                         | Description                                                             |
-| ----------------------------- | ----------------------------------------------------------------------- |
-| `oui-navbar_fixed`            | Make the navbar fixed on top                                            |
-| `oui-navbar_desktop-only`     | Make the navbar element displayed only on desktop (> 1024px)            |
-| `oui-navbar_mobile-only`      | Make the navbar element displayed only on mobile and tablet (<= 1024px) |
-| `oui-navbar-list_end`         | Make the navbar list align to the right                                 |
-| `oui-navbar-link_active`      | Make the navbar link active                                             |
-| `oui-navbar-link_secondary`   | Make the navbar link secondary                                          |
-| `oui-navbar-menu_right`       | Make the navbar menu positioning to the right                           |
-| `oui-navbar-menu_toggle`      | Make the navbar menu linked to the toggler                              |
-| `oui-navbar-backdrop_active`  | Make the navbar backdrop displayed                                      |
+| Class                        | Description                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `oui-navbar_fixed`           | Make the navbar fixed on top                                                |
+| `oui-navbar_desktop-only`    | Make the navbar element displayed only on desktop (> 1024px)                |
+| `oui-navbar_mobile-only`     | Make the navbar element displayed only on mobile and tablet (<= 1024px)     |
+| `oui-navbar-list_end`        | Make the navbar list align to the right                                     |
+| `oui-navbar-link_active`     | Make the navbar link active                                                 |
+| `oui-navbar-link_secondary`  | Make the navbar link secondary                                              |
+| `oui-navbar-menu_right`      | Make the navbar menu positioning to the right                               |
+| `oui-navbar-menu_toggle`     | Make the navbar menu linked to the toggler                                  |
+| `oui-navbar-menu_fixed`      | Make the navbar menu with a position fixed, __for mobile and tablet only__  |
+| `oui-navbar-backdrop_active` | Make the navbar backdrop displayed                                          |

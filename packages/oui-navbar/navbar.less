@@ -50,13 +50,6 @@
   &-menu {
     #oui > .navbar-menu();
     #oui > .navbar-menu-animation_opacity();
-
-    /* stylelint-disable indentation */
-    .tablet({
-      #oui > .navbar-menu_fixed();
-      #oui > .navbar-menu-animation_slide();
-    });
-    /* stylelint-enable indentation */
   }
 
   // Menu lists
@@ -65,16 +58,6 @@
       @flex-direction: column,
       @align-items: stretch
     );
-
-    /* stylelint-disable indentation */
-    .tablet({
-      #oui > .navbar-list(
-        @flex-direction: column,
-        @align-items: stretch,
-        @border-bottom: @oui-navbar-menu-border-bottom
-      );
-    });
-    /* stylelint-enable indentation */
   }
 
   // Menu links
@@ -100,6 +83,28 @@
     &[aria-haspopup="true"] {
       #oui > .navbar-link_arrow();
     }
+  }
+
+  // Menu variant 'fixed', for mobile only
+  &-menu_fixed {
+    /* stylelint-disable indentation */
+    .tablet({
+      #oui > .navbar-menu_fixed();
+      #oui > .navbar-menu-animation_slide();
+    });
+    /* stylelint-enable indentation */
+  }
+
+  &-menu_fixed &-list {
+    /* stylelint-disable indentation */
+    .tablet({
+      #oui > .navbar-list(
+        @flex-direction: column,
+        @align-items: stretch,
+        @border-bottom: @oui-navbar-menu-border-bottom
+      );
+    });
+    /* stylelint-enable indentation */
   }
 
   // Helper for responsive

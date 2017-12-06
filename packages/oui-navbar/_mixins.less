@@ -247,14 +247,6 @@
     box-shadow: @box-shadow;
     z-index: @z-index;
 
-    /* stylelint-disable indentation */
-    .tablet({
-      min-width: 0;
-      max-width: @width;
-      box-shadow: none;
-    });
-    /* stylelint-enable indentation */
-
     &_toggle {
       /* stylelint-disable indentation */
       .desktop({
@@ -285,15 +277,8 @@
 
     // Header for Menu
     &__header {
-      display: none;
       position: relative;
       padding: @padding;
-
-      /* stylelint-disable indentation */
-      .tablet({
-        display: block;
-      });
-      /* stylelint-enable indentation */
     }
 
     // Title for Header
@@ -341,13 +326,17 @@
   }
 
   .navbar-menu_fixed(
+    @width: @oui-navbar-menu-width,
     @height: @oui-navbar-height
   ) {
+    min-width: 0;
+    max-width: @width;
     overflow-x: hidden;
     overflow-y: auto;
     position: fixed;
     top: @height;
     bottom: 0;
+    box-shadow: none;
 
     & & {
       top: 0;
@@ -472,7 +461,7 @@
     &_desktop-only {
       /* stylelint-disable indentation */
       .tablet({
-        display: none;
+        display: none !important;
       });
       /* stylelint-enable indentation */
     }
@@ -480,7 +469,7 @@
     &_mobile-only {
       /* stylelint-disable indentation */
       .desktop({
-        display: none;
+        display: none !important;
       });
       /* stylelint-enable indentation */
     }
