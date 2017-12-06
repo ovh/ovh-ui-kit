@@ -79,10 +79,12 @@
     z-index: @z-index;
 
     &_active {
+      /* stylelint-disable indentation */
       .tablet({
         opacity: @opacity;
         pointer-events: auto;
       });
+      /* stylelint-enable indentation */
     }
   }
 
@@ -183,17 +185,21 @@
       display: none;
     }
 
+    /* stylelint-disable indentation */
     .tablet({
       padding: 0;
       font-size: 0;
       text-align: center;
     });
+    /* stylelint-enable indentation */
 
     .oui-icon {
+      /* stylelint-disable indentation */
       .tablet({
         margin: 0;
         vertical-align: middle;
       });
+      /* stylelint-enable indentation */
     }
   }
 
@@ -240,16 +246,20 @@
     box-shadow: @box-shadow;
     z-index: @z-index;
 
+    /* stylelint-disable indentation */
     .tablet({
       min-width: 0;
       max-width: @width;
       box-shadow: none;
     });
+    /* stylelint-enable indentation */
 
     &_toggle {
+      /* stylelint-disable indentation */
       .desktop({
         display: none;
       });
+      /* stylelint-enable indentation */
     }
 
     // Variant 'right' for Menus
@@ -278,9 +288,11 @@
       position: relative;
       padding: @padding;
 
+      /* stylelint-disable indentation */
       .tablet({
         display: block;
       });
+      /* stylelint-enable indentation */
     }
 
     // Title for Header
@@ -381,9 +393,11 @@
     display: none;
     text-align: center;
 
+    /* stylelint-disable indentation */
     .tablet({
       display: block;
     });
+    /* stylelint-enable indentation */
 
     &__hamburger {
       width: @hamburger-size;
@@ -449,15 +463,19 @@
 
   .navbar-helpers() {
     &_desktop-only {
+      /* stylelint-disable indentation */
       .tablet({
         display: none;
       });
+      /* stylelint-enable indentation */
     }
 
     &_mobile-only {
+      /* stylelint-disable indentation */
       .desktop({
         display: none;
       });
+      /* stylelint-enable indentation */
     }
   }
 }

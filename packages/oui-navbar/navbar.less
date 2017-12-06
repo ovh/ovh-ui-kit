@@ -51,10 +51,12 @@
     #oui > .navbar-menu();
     #oui > .navbar-menu-animation_opacity();
 
+    /* stylelint-disable indentation */
     .tablet({
       #oui > .navbar-menu_fixed();
       #oui > .navbar-menu-animation_slide();
     });
+    /* stylelint-enable indentation */
   }
 
   // Menu lists
@@ -64,6 +66,7 @@
       @align-items: stretch
     );
 
+    /* stylelint-disable indentation */
     .tablet({
       #oui > .navbar-list(
         @flex-direction: column,
@@ -71,6 +74,7 @@
         @border-bottom: @oui-navbar-menu-border-bottom
       );
     });
+    /* stylelint-enable indentation */
   }
 
   // Menu links
