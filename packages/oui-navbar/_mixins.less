@@ -234,6 +234,7 @@
     @title-font-color: @oui-navbar-menu-title-font-color,
     @title-font-size: @oui-navbar-menu-title-font-size,
     @title-line-height: @oui-navbar-menu-title-line-height,
+    @back-color: @oui-navbar-arrow-color,
     @back-padding: @oui-navbar-menu-back-padding
   ) {
     width: 100%;
@@ -315,15 +316,21 @@
 
     // Back Button
     &__back {
+      display: block;
       position: absolute;
       left: @padding;
       top: 50%;
       transform: translateY(-50%);
 
-      .oui-button,
-      .oui-icon {
+      .oui-icon,
+      .oui-button {
         padding: 0;
         margin-bottom: 0;
+        color: @back-color;
+      }
+
+      .oui-icon::before {
+        font-size: @font-size;
       }
     }
 

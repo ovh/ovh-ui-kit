@@ -266,6 +266,7 @@ Define the base styles of a menu for a navbar.
   @title-font-color: Color,
   @title-font-size: Number,
   @title-line-height: Number,
+  @back-color: Color,
   @back-padding: Number
 );
 ```
