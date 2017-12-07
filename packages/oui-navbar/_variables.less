@@ -1,6 +1,7 @@
 // Navbar
 @oui-navbar-font-size: rem-calc(16);
 @oui-navbar-height: rem-calc(44);
+@oui-navbar-line-height: 1.5;
 @oui-navbar-padding: 0;
 @oui-navbar-font-color: #fff;
 @oui-navbar-font-color_active: #70cee6;
@@ -34,7 +35,10 @@
 // Navbar Link
 @oui-navbar-link-min-width: @oui-navbar-height;
 @oui-navbar-link-height: @oui-navbar-height;
-@oui-navbar-link-padding: 0 rem-calc(15);
+@oui-navbar-link-line-height: @oui-navbar-line-height;
+@oui-navbar-link-padding-h: (@oui-navbar-link-height - (@oui-navbar-font-size * @oui-navbar-link-line-height)) / 2;
+@oui-navbar-link-padding-v: rem-calc(15);
+@oui-navbar-link-padding: @oui-navbar-link-padding-h @oui-navbar-link-padding-v;
 @oui-navbar-icon-size: rem-calc(20);
 @oui-navbar-icon-spacing: rem-calc(10);
 @oui-navbar-icon-bar-size: rem-calc(3);

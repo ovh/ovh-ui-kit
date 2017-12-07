@@ -186,12 +186,13 @@ Define the base styles of a list for a navbar.
 ```
 
 ```less
-#oui > .navbar-backdrop(
+#oui > .navbar-list(
   @flex-direction: Direction,
   @flex-grow: Number,
   @align-items: Flex Alignment,
   @justify-content: Flex Alignment,
-  @border-bottom: Border
+  @border-bottom: Border,
+  @is-menu-list: Boolean // If true, set `position: static` to .oui-navbar-list__item (default `position: relative`)
 );
 ```
 
@@ -206,7 +207,7 @@ Define the base styles of a link for a navbar.
 ```less
 #oui > .navbar-link(
   @min-width: Number,
-  @height: Number,
+  @line-height: Number,
   @padding: Number,
   @font-size: Number,
   @font-color: Color,
@@ -229,6 +230,7 @@ Define the variant styles of a link for a navbar.
   @width: Number,
   @font-size: Number,
   @font-color: Color,
+  @font-color_active: Color,
   @background-color: Color,
   @background-color_hover: Color
 );
@@ -244,6 +246,7 @@ Define the styles of a link with an left icon for a navbar.
 
 ```less
 #oui > .navbar-link_icon(
+    @height: Number,
     @icon-size: Number,
     @icon-spacing: Number
 );

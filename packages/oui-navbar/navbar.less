@@ -95,13 +95,22 @@
     /* stylelint-enable indentation */
   }
 
+  &-menu_fixed&-menu_right {
+    /* stylelint-disable indentation */
+    .tablet({
+      #oui > .navbar-menu-animation_slide(right);
+    });
+    /* stylelint-enable indentation */
+  }
+
   &-menu_fixed &-list {
     /* stylelint-disable indentation */
     .tablet({
       #oui > .navbar-list(
         @flex-direction: column,
         @align-items: stretch,
-        @border-bottom: @oui-navbar-menu-border-bottom
+        @border-bottom: @oui-navbar-menu-border-bottom,
+        @is-menu-list: true
       );
     });
     /* stylelint-enable indentation */
