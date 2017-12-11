@@ -17,29 +17,75 @@
   // Navbar links
   &-link {
     #oui > .navbar-link();
+    #oui > .navbar-link_variant();
 
-    &[aria-expanded="true"] {
+    &_active {
       #oui > .navbar-link_variant(
-        @font-size: @oui-navbar-font-size,
-        @font-color: @oui-navbar-menu-font-color,
-        @background-color: @oui-navbar-menu-background-color,
-        @background-color_hover: @oui-navbar-menu-background-color
+        @background-color: @oui-navbar-link-background-color_active,
+        @font-color: @oui-navbar-link-font-color
+      );
+    }
+
+    &_primary {
+      #oui > .navbar-link_variant(
+        @font-color: @oui-navbar-primary-font-color,
+        @font-size: @oui-navbar-primary-font-size,
+        @font-weight: @oui-navbar-primary-font-weight
+      );
+    }
+
+    &_primary&_active,
+    &_primary[aria-expanded="true"] {
+      #oui > .navbar-link_variant(
+        @background-color: @oui-navbar-background-color_active,
+        @font-color: @oui-navbar-primary-font-color_active,
+        @font-size: @oui-navbar-primary-font-size,
+        @font-weight: @oui-navbar-primary-font-weight
       );
     }
 
     &_secondary {
       #oui > .navbar-link_variant(
-        @font-size: @oui-navbar-secondary-font-size,
         @font-color: @oui-navbar-secondary-font-color,
-        @background-color: @oui-navbar-background-color,
-        @background-color_hover: @oui-navbar-background-color_hover
+        @font-size: @oui-navbar-secondary-font-size,
+        @font-weight: @oui-navbar-secondary-font-weight
       );
     }
 
-    &_icon,
-    &_icon[aria-expanded="true"] {
+    &_secondary&_active,
+    &_secondary[aria-expanded="true"] {
+      #oui > .navbar-link_variant(
+        @background-color: @oui-navbar-background-color_active,
+        @font-color: @oui-navbar-secondary-font-color_active,
+        @font-size: @oui-navbar-secondary-font-size,
+        @font-weight: @oui-navbar-secondary-font-weight
+      );
+    }
+
+    &_icon {
       #oui > .navbar-link_icon();
     }
+
+    &_icon&_active,
+    &_icon[aria-expanded="true"] {
+      #oui > .navbar-link_variant(
+        @background-color: @oui-navbar-icon-background-color_active,
+        @font-color: @oui-navbar-font-color,
+        @font-size: @oui-navbar-link-font-size,
+        @font-weight: @oui-navbar-link-font-weight
+      );
+      #oui > .navbar-link_icon(
+        @icon-color: @oui-navbar-icon-color_active
+      );
+    }
+  }
+
+  // Variant for links displayed in main navbar bar
+  & > &-list > &-list__item > &-link {
+    #oui > .navbar-link(
+      @line-height: @oui-navbar-height,
+      @padding: @oui-navbar-padding
+    );
   }
 
   // Navbar toggler, for collapsible menu
@@ -63,25 +109,15 @@
   // Menu links
   &-menu &-link {
     #oui > .navbar-link_variant(
-      @width: 100%,
-      @font-size: @oui-navbar-font-size,
-      @font-color: @oui-navbar-menu-font-color,
-      @background-color: @oui-navbar-menu-background-color,
-      @background-color_hover: @oui-navbar-menu-background-color_hover
+      @font-color: @oui-navbar-menu-font-color
     );
+    #oui > .navbar-link_menu();
 
-    &_secondary {
+    &_active {
       #oui > .navbar-link_variant(
-        @width: 100%,
-        @font-size: @oui-navbar-secondary-font-size,
-        @font-color: @oui-navbar-secondary-font-color,
-        @background-color: @oui-navbar-menu-background-color,
-        @background-color_hover: @oui-navbar-menu-background-color_hover
+        @background-color: @oui-navbar-menu-background-color_active,
+        @font-color: @oui-navbar-menu-font-color
       );
-    }
-
-    &[aria-haspopup="true"] {
-      #oui > .navbar-link_arrow();
     }
   }
 
@@ -109,7 +145,6 @@
       #oui > .navbar-list(
         @flex-direction: column,
         @align-items: stretch,
-        @border-bottom: @oui-navbar-menu-border-bottom,
         @is-menu-list: true
       );
     });

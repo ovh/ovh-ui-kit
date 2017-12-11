@@ -22,10 +22,10 @@ oui-navbar is a package which provide styles for the navbar component.
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="">Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Dolor sit amet</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
     </li>
   </ul>
 </nav>
@@ -42,18 +42,52 @@ oui-navbar is a package which provide styles for the navbar component.
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="">Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Dolor sit amet</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
     </li>
   </ul>
   <ul class="oui-navbar-list oui-navbar-list_end">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Consectetur</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Consectetur</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Adipiscing elit</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Adipiscing elit</a>
+    </li>
+  </ul>
+</nav>
+</div>
+```
+
+### With links variant
+
+```html:preview
+<div style="margin-bottom: 15px" class="oui-doc-preview-only-keep-children">
+<nav class="oui-navbar" role="navigation">
+  <a class="oui-navbar__brand" href="">
+    <i class="oui-icon oui-icon-ovh"></i>
+  </a>
+  <ul class="oui-navbar-list">
+    <li class="oui-navbar-list__item">
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Lorem ipsum</a>
+    </li>
+    <li class="oui-navbar-list__item">
+      <a class="oui-navbar-link oui-navbar-link_secondary" href="">Dolor sit amet</a>
+    </li>
+  </ul>
+  <ul class="oui-navbar-list oui-navbar-list_end">
+    <li class="oui-navbar-list__item">
+      <a class="oui-navbar-link oui-navbar-link_icon" href="">
+        <span class="oui-icon oui-icon-help_circle" aria-hidden="true"></span>
+        Consectetur
+      </a>
+    </li>
+    <li class="oui-navbar-list__item">
+      <a class="oui-navbar-link oui-navbar-link_icon" href="">
+        <span class="oui-icon oui-icon-info_circle" aria-hidden="true"></span>
+        Adipiscing elit
+      </a>
     </li>
   </ul>
 </nav>
@@ -70,10 +104,10 @@ oui-navbar is a package which provide styles for the navbar component.
   </a>
   <ul class="oui-navbar-list oui-navbar-list_end">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Consectetur</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Consectetur</a>
     </li>
     <li class="oui-navbar-list__item">
-      <button class="oui-navbar-link" type="button" aria-haspopup="true" aria-expanded="true">Adipiscing elit</button>
+      <button class="oui-navbar-link oui-navbar-link_primary" type="button" aria-haspopup="true" aria-expanded="true">Adipiscing elit</button>
       <div class="oui-navbar-menu oui-navbar-menu_right">
         <ul class="oui-navbar-list">
           <li class="oui-navbar-list__item">
@@ -120,17 +154,17 @@ The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, 
   </a>
   <ul class="oui-navbar-list oui-navbar_desktop-only">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="">Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href="">Dolor sit amet</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
     </li>
   </ul>
 </nav>
 </div>
 ```
 
-The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, of the `.oui-navbar-toggler` button.
+The menu `.oui-navbar-menu_toggle` is open if the attribute `aria-expanded` is `true`, of the `.oui-navbar-toggler` button.
 
 ## Mixins
 
@@ -149,12 +183,9 @@ Define the base styles for a navbar.
 ```less
 #oui > .navbar(
   @height: Number,
-  @padding: Number,
   @font-size: Number,
   @font-color: Color,
-  @font-color_active: Color,
   @background-color: Color,
-  @background-color_hover: Color,
   @z-index: Number,
   @brand-color: Color,
   @brand-padding: Number
@@ -171,9 +202,10 @@ Define the base styles of a backdrop for a navbar.
 
 ```less
 #oui > .navbar-backdrop(
-  @height: Number,
+  @top: Number,
   @z-index: Number,
-  @opacity: Number
+  @opacity: Number,
+  @background-color: Color
 );
 ```
 
@@ -207,13 +239,9 @@ Define the base styles of a link for a navbar.
 ```less
 #oui > .navbar-link(
   @min-width: Number,
+  @min-height: Number,
   @line-height: Number,
-  @padding: Number,
-  @font-size: Number,
-  @font-color: Color,
-  @font-color_active: Color,
-  @background-color: Color,
-  @background-color_hover: Color
+  @padding: Number
 );
 ```
 
@@ -227,12 +255,10 @@ Define the variant styles of a link for a navbar.
 
 ```less
 #oui > .navbar-link_variant(
-  @width: Number,
-  @font-size: Number,
-  @font-color: Color,
-  @font-color_active: Color,
   @background-color: Color,
-  @background-color_hover: Color
+  @font-color: Color,
+  @font-size: Number,
+  @font-weight: Number
 );
 ```
 
@@ -246,24 +272,27 @@ Define the styles of a link with an left icon for a navbar.
 
 ```less
 #oui > .navbar-link_icon(
-    @height: Number,
-    @icon-size: Number,
-    @icon-spacing: Number
+  @icon-line-height: Number,
+  @icon-size: Number,
+  @icon-spacing: Number,
+  @icon-color: Color
 );
 ```
 
-### .navbar-link_arrow
+### .navbar-link_menu
 
-Define the styles of a link with a right arrow for a navbar.
+Define the styles of a link with an arrow for Menus.
 
 ```less
-#oui > .navbar-link_arrow();
+#oui > .navbar-link_menu();
 ```
 
 ```less
-#oui > .navbar-link_arrow(
-    @padding: Number,
-    @arrow-color: Color
+#oui > .navbar-link_menu(
+  @arrow-color: Color,
+  @arrow-padding: Number,
+  @arrow-size: Number,
+  @arrow-spacing: Number
 );
 ```
 
@@ -278,19 +307,21 @@ Define the base styles of a menu for a navbar.
 ```less
 #oui > .navbar-menu(
   @width: Number,
-  @height: Number,
   @padding: Number,
   @background-color: Color,
-  @background-color_hover: Color,
+  @background-color_active: Color,
   @border-bottom: Border,
   @box-shadow: Shadow,
   @font-color: Color,
   @font-size: Number,
-  @font-size_small: Number,
   @z-index: Number,
+  @header-background-color: Color,
+  @header-border-bottom: Border,
+  @header-padding: Number,
+  @title-line-height: Number,
   @title-font-color: Color,
   @title-font-size: Number,
-  @title-line-height: Number,
+  @title-font-weight: Number,
   @back-color: Color,
   @back-padding: Number
 );
@@ -307,7 +338,8 @@ Define the styles of a menu for a navbar with `position: fixed`.
 ```less
 #oui > .navbar-menu_fixed(
   @width: Number,
-  @height: Number
+  @height: Number,
+  @box-shadow: Shadow
 );
 ```
 
@@ -321,12 +353,24 @@ Define the display animation of a menu for a navbar, with an opacity effect.
 #oui > .navbar-menu-animation_opacity();
 ```
 
+```less
+#oui > .navbar-menu-animation_opacity(
+  @opacity: Number
+);
+```
+
 ### .navbar-menu-animation_slide
 
 Define the display animation of a menu for a navbar, with a slide effect.
 
 ```less
 #oui > .navbar-menu-animation_slide();
+```
+
+```less
+#oui > .navbar-menu-animation_slide(
+  @origin: left|right
+);
 ```
 
 ### .navbar-toggler
@@ -339,12 +383,14 @@ Define the base styles of a toggler button for a navbar.
 
 ```less
 #oui > .navbar-toggler(
+  @line-height: Number,
+  @padding: Number,
+  @margin-right: Number,
   @background-color_active: Color,
-  @font-color: Color,
-  @font-color_active: Color,
-  @font-size: Number,
-  @hamburger-size: Number,
-  @hamburger-bar-size: Number
+  @hamburger-width: Number,
+  @hamburger-height: Number,
+  @hamburger-bar-size: Number,
+  @hamburger-bar-color: Color
 );
 ```
 
@@ -392,15 +438,18 @@ Inner elements:
 
 The provided modifiers are:
 
-| Class                        | Description                                                                 |
-| ---------------------------- | --------------------------------------------------------------------------- |
-| `oui-navbar_fixed`           | Make the navbar fixed on top                                                |
-| `oui-navbar_desktop-only`    | Make the navbar element displayed only on desktop (> 1024px)                |
-| `oui-navbar_mobile-only`     | Make the navbar element displayed only on mobile and tablet (<= 1024px)     |
-| `oui-navbar-list_end`        | Make the navbar list align to the right                                     |
-| `oui-navbar-link_active`     | Make the navbar link active                                                 |
-| `oui-navbar-link_secondary`  | Make the navbar link secondary                                              |
-| `oui-navbar-menu_right`      | Make the navbar menu positioning to the right                               |
-| `oui-navbar-menu_toggle`     | Make the navbar menu linked to the toggler                                  |
-| `oui-navbar-menu_fixed`      | Make the navbar menu with a position fixed, __for mobile and tablet only__  |
-| `oui-navbar-backdrop_active` | Make the navbar backdrop displayed                                          |
+| Class                          | Description                                                                 |
+| ------------------------------ | --------------------------------------------------------------------------- |
+| `oui-navbar_fixed`             | Make the navbar fixed on top                                                |
+| `oui-navbar_desktop-only`      | Make the navbar element displayed only on desktop (> 1024px)                |
+| `oui-navbar_mobile-only`       | Make the navbar element displayed only on mobile and tablet (<= 1024px)     |
+| `oui-navbar-list_end`          | Make the navbar list align to the right                                     |
+| `oui-navbar-link_active`       | Make the navbar link active                                                 |
+| `oui-navbar-link_primary`      | Make the navbar link primary                                                |
+| `oui-navbar-link_secondary`    | Make the navbar link secondary                                              |
+| `oui-navbar-link_icon`         | Make the navbar link with an icon on the left                               |
+| `oui-navbar-menu_right`        | Make the navbar menu positioning to the right                               |
+| `oui-navbar-menu_toggle`       | Make the navbar menu linked to the toggler                                  |
+| `oui-navbar-menu_fixed`        | Make the navbar menu with a position fixed, __for mobile and tablet only__  |
+| `oui-navbar-menu__item_active` | Make the navbar menu item active                                            |
+| `oui-navbar-backdrop_active`   | Make the navbar backdrop displayed                                          |

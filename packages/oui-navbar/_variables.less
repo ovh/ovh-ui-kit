@@ -1,50 +1,99 @@
 // Navbar
-@oui-navbar-font-size: rem-calc(16);
 @oui-navbar-height: rem-calc(44);
 @oui-navbar-line-height: 1.5;
-@oui-navbar-padding: 0;
+@oui-navbar-padding: 0 rem-calc(10);
+@oui-navbar-font-size: rem-calc(16);
+@oui-navbar-font-size_small: rem-calc(14);
+@oui-navbar-font-size_large: rem-calc(18);
 @oui-navbar-font-color: #fff;
-@oui-navbar-font-color_active: #70cee6;
 @oui-navbar-background-color: @oui-color-zodiac;
-@oui-navbar-background-color_hover: @oui-color-sapphire;
+@oui-navbar-background-color_active: @oui-color-rhino;
 @oui-navbar-z-index: 1000;
 
 // Navbar Brand
-@oui-navbar-brand-padding: 0 rem-calc(15);
-@oui-navbar-brand-color: #5a657b;
+@oui-navbar-brand-padding: 0 rem-calc(20);
+@oui-navbar-brand-color: @oui-navbar-font-color;
 
 // Navbar Menu
 @oui-navbar-menu-width: rem-calc(300);
-@oui-navbar-menu-padding: rem-calc(15);
+@oui-navbar-menu-padding: rem-calc(10) rem-calc(20);
 @oui-navbar-menu-background-color: #fff;
-@oui-navbar-menu-background-color_hover: #efefef;
-@oui-navbar-menu-box-shadow: 0 3px 5px 0 rgba(0,0,0,0.3);
+@oui-navbar-menu-background-color_active: @oui-color-foam;
+@oui-navbar-menu-border-bottom: solid 1px @oui-color-silver;
+@oui-navbar-menu-box-shadow: 0 rem-calc(4) rem-calc(6) 0 @oui-navbar-menu-box-shadow-color;
+@oui-navbar-menu-box-shadow_fixed: 0 rem-calc(14) rem-calc(15) 0 @oui-navbar-menu-box-shadow-color;
+@oui-navbar-menu-box-shadow-color: fade(darken(@oui-color-info-light, 50%), 25%);
 @oui-navbar-menu-font-size: rem-calc(16);
 @oui-navbar-menu-font-size_small: rem-calc(14);
 @oui-navbar-menu-font-color: @oui-color-zodiac;
-@oui-navbar-menu-border-bottom: solid 1px #d4d4d4;
 @oui-navbar-menu-z-index: 1001;
+@oui-navbar-menu-link-height: rem-calc(40);
+
+// Navbar Menu Header
+@oui-navbar-menu-header-padding: rem-calc(15) rem-calc(20);
+@oui-navbar-menu-header-background-color: #fafafa;
+@oui-navbar-menu-header-border-bottom: solid 1px @oui-color-nurse;
 
 // Navbar Menu Title
-@oui-navbar-menu-title-font-color: @oui-color-zodiac;
-@oui-navbar-menu-title-font-size: rem-calc(17);
 @oui-navbar-menu-title-line-height: 1.2;
+@oui-navbar-menu-title-font-color: @oui-color-zodiac;
+@oui-navbar-menu-title-font-size: rem-calc(20);
+@oui-navbar-menu-title-font-weight: 600;
 
 @oui-navbar-menu-back-padding: rem-calc(30);
 
 // Navbar Link
 @oui-navbar-link-min-width: @oui-navbar-height;
-@oui-navbar-link-height: @oui-navbar-height;
-@oui-navbar-link-line-height: @oui-navbar-line-height;
-@oui-navbar-link-padding-h: (@oui-navbar-link-height - (@oui-navbar-font-size * @oui-navbar-link-line-height)) / 2;
-@oui-navbar-link-padding-v: rem-calc(15);
+@oui-navbar-link-min-height: rem-calc(40);
+@oui-navbar-link-line-height: 1.2;
+@oui-navbar-link-padding-h: (@oui-navbar-link-min-height - (@oui-navbar-font-size * @oui-navbar-link-line-height)) / 2;
+@oui-navbar-link-padding-v: rem-calc(20);
 @oui-navbar-link-padding: @oui-navbar-link-padding-h @oui-navbar-link-padding-v;
-@oui-navbar-icon-size: rem-calc(20);
+@oui-navbar-link-font-color: #fff;
+@oui-navbar-link-font-color_active: @oui-color-turquoise;
+@oui-navbar-link-font-size: rem-calc(16);
+@oui-navbar-link-font-weight: 400;
+@oui-navbar-link-background-color: transparent;
+@oui-navbar-link-background-color_active: @oui-color-foam;
+
+// Navbar Link with Arrow
+@oui-navbar-arrow-color: @oui-color-zodiac;
+@oui-navbar-arrow-padding: (@oui-navbar-menu-back-padding + @oui-navbar-arrow-spacing);
+@oui-navbar-arrow-size: rem-calc(10);
+@oui-navbar-arrow-spacing: rem-calc(20);
+
+// Navbar Link Primary
+@oui-navbar-primary-font-color: #fff;
+@oui-navbar-primary-font-color_active: @oui-color-turquoise;
+@oui-navbar-primary-font-size: @oui-navbar-font-size_large;
+@oui-navbar-primary-font-weight: 600;
+
+// Navbar Link Secondary
+@oui-navbar-secondary-font-color: #dddedf;
+@oui-navbar-secondary-font-color_active: #fff;
+@oui-navbar-secondary-font-size: @oui-navbar-font-size_large;
+@oui-navbar-secondary-font-weight: 400;
+
+// Navbar Link Icon
+@oui-navbar-icon-line-height: .9;
+@oui-navbar-icon-size: rem-calc(30);
 @oui-navbar-icon-spacing: rem-calc(10);
-@oui-navbar-icon-bar-size: rem-calc(3);
-@oui-navbar-arrow-color: #666;
-@oui-navbar-secondary-font-color: @oui-color-dusty;
-@oui-navbar-secondary-font-size: rem-calc(14);
+@oui-navbar-icon-color: #bec6d3;
+@oui-navbar-icon-color_active: #fff;
+@oui-navbar-icon-background-color_active: transparent;
+
+// Navbar Toggler
+@oui-navbar-toggler-line-height: @oui-navbar-height;
+@oui-navbar-toggler-padding: 0 rem-calc(20);
+@oui-navbar-toggler-margin-right: -(rem-calc(20));
+@oui-navbar-toggler-background-color_active: @oui-navbar-background-color_active;
+
+// Navbar Toggler Hamburger
+@oui-navbar-hamburger-width: rem-calc(14);
+@oui-navbar-hamburger-height: rem-calc(12);
+@oui-navbar-hamburger-bar-size: rem-calc(2);
+@oui-navbar-hamburger-bar-color: #fff;
 
 // Navbar Backdrop
+@oui-navbar-backdrop-background-color: @oui-color-shuttle;
 @oui-navbar-backdrop-opacity: .5;
