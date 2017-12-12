@@ -63,6 +63,10 @@
     }
 
     &_icon {
+      #oui > .navbar-link_variant(
+        @font-size: @oui-navbar-icon-font-size,
+        @font-weight: @oui-navbar-icon-font-weight
+      );
       #oui > .navbar-link_icon();
     }
 
@@ -71,8 +75,8 @@
       #oui > .navbar-link_variant(
         @background-color: @oui-navbar-icon-background-color_active,
         @font-color: @oui-navbar-font-color,
-        @font-size: @oui-navbar-link-font-size,
-        @font-weight: @oui-navbar-link-font-weight
+        @font-size: @oui-navbar-icon-font-size,
+        @font-weight: @oui-navbar-icon-font-weight
       );
       #oui > .navbar-link_icon(
         @icon-color: @oui-navbar-icon-color_active
