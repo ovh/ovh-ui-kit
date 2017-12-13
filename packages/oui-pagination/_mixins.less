@@ -102,7 +102,7 @@
     padding: @oui-pagination-menu-item-padding;
     line-height: @oui-pagination-menu-item-line-height;
     font-size: @oui-pagination-menu-group-font-size;
-    color: @oui-color-dusty;
+    color: @oui-pagination-menu-group-color;
   }
 
   .pagination-menu-items-list() {
@@ -127,13 +127,14 @@
     &:disabled,
     &_disabled {
       color: @oui-color-dusty;
-      font-weight: @oui-font-semibold;
       cursor: not-allowed;
     }
 
     &:focus,
     &:hover {
-      background-color: @oui-color-concrete;
+      background-color: @oui-pagination-menu-item-background-hover;
+      color: #fff;
+      letter-spacing: rem-calc(.1);
     }
   }
 }
