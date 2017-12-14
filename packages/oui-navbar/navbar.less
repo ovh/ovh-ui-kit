@@ -19,6 +19,8 @@
     #oui > .navbar-link();
     #oui > .navbar-link_variant();
 
+    &:hover,
+    &:focus,
     &_active {
       #oui > .navbar-link_variant(
         @background-color: @oui-navbar-link-background-color_active,
@@ -34,6 +36,8 @@
       );
     }
 
+    &_primary:hover,
+    &_primary:focus,
     &_primary&_active,
     &_primary[aria-expanded="true"] {
       #oui > .navbar-link_variant(
@@ -52,6 +56,8 @@
       );
     }
 
+    &_secondary:hover,
+    &_secondary:focus,
     &_secondary&_active,
     &_secondary[aria-expanded="true"] {
       #oui > .navbar-link_variant(
@@ -70,10 +76,12 @@
       #oui > .navbar-link_icon();
     }
 
+    &_icon:hover,
+    &_icon:focus,
     &_icon&_active,
     &_icon[aria-expanded="true"] {
       #oui > .navbar-link_variant(
-        @background-color: @oui-navbar-icon-background-color_active,
+        @background-color: @oui-navbar-background-color_active,
         @font-color: @oui-navbar-font-color,
         @font-size: @oui-navbar-icon-font-size,
         @font-weight: @oui-navbar-icon-font-weight
@@ -117,6 +125,8 @@
     );
     #oui > .navbar-link_menu();
 
+    &:hover,
+    &:focus,
     &_active {
       #oui > .navbar-link_variant(
         @background-color: @oui-navbar-menu-background-color_active,

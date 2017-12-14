@@ -310,7 +310,6 @@ Define the base styles of a menu for a navbar.
   @padding: Number,
   @background-color: Color,
   @background-color_active: Color,
-  @border-bottom: Border,
   @box-shadow: Shadow,
   @font-color: Color,
   @font-size: Number,
@@ -323,7 +322,9 @@ Define the base styles of a menu for a navbar.
   @title-font-size: Number,
   @title-font-weight: Number,
   @back-color: Color,
-  @back-padding: Number
+  @back-padding: Number,
+  @item-padding: Number,
+  @item-border-bottom: Border
 );
 ```
 
