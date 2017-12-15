@@ -238,6 +238,7 @@
     @background-color_active: @oui-navbar-menu-background-color_active,
     @box-shadow: @oui-navbar-menu-box-shadow,
     @font-color: @oui-navbar-menu-font-color,
+    @font-color-active: @oui-navbar-menu-font-color_active,
     @font-size: @oui-navbar-menu-font-size_small,
     @z-index: @oui-navbar-menu-z-index,
     @header-background-color: @oui-navbar-menu-header-background-color,
@@ -290,7 +291,10 @@
 
       .oui-button { margin: 0; }
 
-      &_active { background-color: @background-color_active; }
+      &_active {
+        background-color: @background-color_active;
+        color: @font-color-active;
+      }
 
       &:last-child { border-bottom: none; }
     }

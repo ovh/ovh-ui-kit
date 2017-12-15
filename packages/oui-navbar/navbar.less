@@ -19,15 +19,6 @@
     #oui > .navbar-link();
     #oui > .navbar-link_variant();
 
-    &:hover,
-    &:focus,
-    &_active {
-      #oui > .navbar-link_variant(
-        @background-color: @oui-navbar-link-background-color_active,
-        @font-color: @oui-navbar-link-font-color
-      );
-    }
-
     &_primary {
       #oui > .navbar-link_variant(
         @font-color: @oui-navbar-primary-font-color,
@@ -130,7 +121,7 @@
     &_active {
       #oui > .navbar-link_variant(
         @background-color: @oui-navbar-menu-background-color_active,
-        @font-color: @oui-navbar-menu-font-color
+        @font-color: @oui-navbar-menu-font-color_active
       );
     }
   }
