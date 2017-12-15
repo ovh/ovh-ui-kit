@@ -1,0 +1,144 @@
+@import '../oui-button/_variables';
+@import './_variables';
+
+#oui {
+  .pagination-base(
+    @button-selector,
+    @button-link-selector,
+    @button-secondary-selector,
+    @button-group-selector
+  ) {
+    #oui > .base-font();
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: @oui-pagination-padding;
+    font-size: @oui-pagination-font-size;
+
+    /* stylelint-disable indentation */
+    .phone({
+      flex-direction: column-reverse;
+      justify-content: inherit;
+      align-items: center;
+    });
+    /* stylelint-enable indentation */
+
+    .@{button-selector}, .@{button-group-selector} {
+      margin-bottom: 0;
+    }
+
+    .@{button-link-selector} {
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: rem-calc(5);
+    }
+
+    &__progress {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+    }
+
+    &__progress-text {
+      color: @oui-pagination-progress-text-font-color;
+    }
+
+    &__text {
+      display: inline-block;
+    }
+
+    &__selector {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-left: rem-calc(20);
+
+      /* stylelint-disable indentation */
+      .phone({
+        margin-bottom: rem-calc(10);
+        margin-left: 0;
+      });
+      /* stylelint-enable indentation */
+
+      // Fix weird padding on Firefox <=56
+      .@{button-secondary-selector} {
+        padding-top: @oui-button-hollow-padding-base;
+        padding-bottom: @oui-button-hollow-padding-base;
+      }
+
+      > .@{button-selector} {
+        &:first-child {
+          margin-right: rem-calc(10);
+        }
+
+        &:last-child {
+          margin-left: rem-calc(10);
+        }
+      }
+    }
+
+    &__size-selector {
+      display: inline-block;
+    }
+
+    &__size-selector-text {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .pagination-button() {
+    &_selected,
+    &_selected:disabled {
+      background-color: @oui-pagination-button-selected-background;
+      color: @oui-pagination-button-selected-color;
+    }
+  }
+
+  .pagination-menu() {
+    #oui > .base-font();
+
+    padding: @oui-pagination-menu-padding;
+  }
+
+  .pagination-menu-group() {
+    padding: @oui-pagination-menu-item-padding;
+    line-height: @oui-pagination-menu-item-line-height;
+    font-size: @oui-pagination-menu-group-font-size;
+    color: @oui-pagination-menu-group-color;
+  }
+
+  .pagination-menu-items-list() {
+    overflow-y: auto;
+    width: 100%;
+    max-height: @oui-pagination-menu-items-list-max-height;
+  }
+
+  .pagination-menu-item() {
+    display: block;
+    width: 100%;
+    padding: @oui-pagination-menu-item-padding;
+    outline: none;
+    line-height: @oui-pagination-menu-item-line-height;
+    background: none;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    font-size: @oui-pagination-menu-item-font-size;
+    color: @oui-color-sapphire;
+
+    &:disabled,
+    &_disabled {
+      color: @oui-color-dusty;
+      cursor: not-allowed;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: @oui-pagination-menu-item-background-hover;
+      color: #fff;
+      letter-spacing: rem-calc(.1);
+    }
+  }
+}

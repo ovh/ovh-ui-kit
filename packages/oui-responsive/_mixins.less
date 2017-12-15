@@ -16,7 +16,7 @@
 }
 
 .responsive(@maxWidth; @rules) {
-  @media screen and (max-width: @maxWidth) {
+  @media screen and (max-width: (@maxWidth - 1px)) {
     @rules();
   }
 }
