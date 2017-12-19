@@ -107,8 +107,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
       <td class="oui-datagrid__cell">Aug 21, 1980</td>
       <td class="oui-datagrid__cell">
         <oui-action-menu aria-label="Server: actions" align="end" compact>
-          <oui-action-menu-item text="Details" aria-label="Ticket: details" on-click="$ctrl.showCurrentValueInPopup('Details')"></oui-action-menu-item>
-          <oui-action-menu-item text="Close" aria-label="Ticket: close" on-click="$ctrl.showCurrentValueInPopup('Close')"></oui-action-menu-item>
+          <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
+          <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
         </oui-action-menu>
       </td>
     </tr>
@@ -137,8 +137,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
       <td class="oui-datagrid__cell">Sep 27, 1974</td>
       <td class="oui-datagrid__cell">
         <oui-action-menu aria-label="Server: actions" align="end" compact>
-          <oui-action-menu-item text="Details" aria-label="Ticket: details" on-click="$ctrl.showCurrentValueInPopup('Details')"></oui-action-menu-item>
-          <oui-action-menu-item text="Close" aria-label="Ticket: close" on-click="$ctrl.showCurrentValueInPopup('Close')"></oui-action-menu-item>
+          <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
+          <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
         </oui-action-menu>
       </td>
     </tr>
@@ -204,8 +204,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
           <tr>
             <th class="oui-datagrid__header oui-datagrid__cell-sticky">
               <div class="oui-checkbox">
-                <input class="oui-checkbox__input" id="oui-checkbox1-global" name="oui-checkbox1-global" type="checkbox" checked="checked">
-                <label class="oui-checkbox__label-container" for="oui-checkbox1-global">
+                <input class="oui-checkbox__input" id="oui-checkbox2-global" name="oui-checkbox2-global" type="checkbox" checked="checked">
+                <label class="oui-checkbox__label-container" for="oui-checkbox2-global">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
                       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -231,8 +231,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
           <tr class="oui-datagrid__row">
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <div class="oui-checkbox">
-                <input class="oui-checkbox__input" id="oui-checkbox1-1" name="oui-checkbox1-1" type="checkbox" checked="checked">
-                <label class="oui-checkbox__label-container" for="oui-checkbox1-1">
+                <input class="oui-checkbox__input" id="oui-checkbox2-1" name="oui-checkbox2-1" type="checkbox" checked="checked">
+                <label class="oui-checkbox__label-container" for="oui-checkbox2-1">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
                       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -253,16 +253,16 @@ oui-datagrid is a package which provides styles for the datagrid component.
             <td class="oui-datagrid__cell">Aug 21, 1980</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details" on-click="$ctrl.showCurrentValueInPopup('Details')"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close" on-click="$ctrl.showCurrentValueInPopup('Close')"></oui-action-menu-item>
+                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
+                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
           <tr class="oui-datagrid__row">
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <div class="oui-checkbox">
-                <input class="oui-checkbox__input" id="oui-checkbox1-2" name="oui-checkbox1-2" type="checkbox" checked="checked">
-                <label class="oui-checkbox__label-container" for="oui-checkbox1-2">
+                <input class="oui-checkbox__input" id="oui-checkbox2-2" name="oui-checkbox2-2" type="checkbox" checked="checked">
+                <label class="oui-checkbox__label-container" for="oui-checkbox2-2">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
                       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -283,8 +283,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
             <td class="oui-datagrid__cell">Sep 27, 1974</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details" on-click="$ctrl.showCurrentValueInPopup('Details')"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close" on-click="$ctrl.showCurrentValueInPopup('Close')"></oui-action-menu-item>
+                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
+                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
@@ -306,8 +306,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
           <tr>
             <th class="oui-datagrid__header oui-datagrid__cell-sticky">
               <div class="oui-checkbox">
-                <input class="oui-checkbox__input" id="oui-checkbox1-global" name="oui-checkbox1-global" type="checkbox" checked="checked">
-                <label class="oui-checkbox__label-container" for="oui-checkbox1-global">
+                <input class="oui-checkbox__input" id="oui-checkbox3-global" name="oui-checkbox3-global" type="checkbox" checked="checked">
+                <label class="oui-checkbox__label-container" for="oui-checkbox3-global">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
                       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -332,8 +332,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
           <tr class="oui-datagrid__row">
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <div class="oui-checkbox">
-                <input class="oui-checkbox__input" id="oui-checkbox1-1" name="oui-checkbox1-1" type="checkbox" checked="checked">
-                <label class="oui-checkbox__label-container" for="oui-checkbox1-1">
+                <input class="oui-checkbox__input" id="oui-checkbox3-1" name="oui-checkbox3-1" type="checkbox" checked="checked">
+                <label class="oui-checkbox__label-container" for="oui-checkbox3-1">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
                       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -356,8 +356,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
           <tr class="oui-datagrid__row">
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <div class="oui-checkbox">
-                <input class="oui-checkbox__input" id="oui-checkbox1-2" name="oui-checkbox1-2" type="checkbox" checked="checked">
-                <label class="oui-checkbox__label-container" for="oui-checkbox1-2">
+                <input class="oui-checkbox__input" id="oui-checkbox3-2" name="oui-checkbox3-2" type="checkbox" checked="checked">
+                <label class="oui-checkbox__label-container" for="oui-checkbox3-2">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
                       <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
@@ -414,8 +414,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
             <td class="oui-datagrid__cell">Aug 21, 1980</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details" on-click="$ctrl.showCurrentValueInPopup('Details')"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close" on-click="$ctrl.showCurrentValueInPopup('Close')"></oui-action-menu-item>
+                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
+                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
@@ -429,8 +429,8 @@ oui-datagrid is a package which provides styles for the datagrid component.
             <td class="oui-datagrid__cell">Sep 27, 1974</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
               <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details" on-click="$ctrl.showCurrentValueInPopup('Details')"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close" on-click="$ctrl.showCurrentValueInPopup('Close')"></oui-action-menu-item>
+                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
+                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
