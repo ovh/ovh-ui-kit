@@ -1,0 +1,301 @@
+@import '../oui-animation/_mixins';
+@import '../oui-typography/_constants';
+@import './_variables';
+
+#oui {
+  .datagrid-base(
+    @width: @oui-datagrid-width,
+    @margin: @oui-datagrid-margin,
+    @font-size: @oui-datagrid-font-size
+  ) {
+    width: @width;
+    border: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: @margin;
+    text-align: left;
+    font-size: @font-size;
+  }
+
+  .datagrid-headers(
+    @header-selector,
+    @header-height: @oui-datagrid-header-height,
+    @background-color: @oui-datagrid-header-background-color
+  ) {
+    .@{header-selector} {
+      height: @header-height;
+      background-color: @background-color;
+    }
+  }
+
+  .datagrid-header(
+    @checkbox-selector
+    @font-color: @oui-datagrid-header-font-color,
+    @padding: @oui-datagrid-header-padding
+  ) {
+    #oui > .animate();
+
+    padding: @padding;
+    white-space: nowrap;
+    outline: none;
+    color: @font-color;
+    font-weight: @oui-font-regular;
+
+    .@{checkbox-selector} {
+      margin-bottom: 0;
+    }
+  }
+
+  .datagrid-header-sortable(
+    @datagrid-selector
+    @background-color-hover: @oui-datagrid-header-background-color-hover,
+    @font-color-hover: @oui-datagrid-header-font-color-hover,
+    @padding: @oui-datagrid-header-padding,
+    @arrow-size: @oui-datagrid-arrow-size
+  ) {
+    padding-right: ~"calc(@{arrow-size} * 3)";
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: @background-color-hover;
+      color: @font-color-hover;
+    }
+
+    #oui > .datagrid-arrow-asc(
+      @font-color: @oui-datagrid-header-font-color,
+      @font-weight: @oui-font-regular
+    );
+  }
+
+  .datagrid-header-arrow(
+    @arrow-color: @oui-datagrid-header-font-color-sorted,
+    @arrow-size: @oui-datagrid-arrow-size
+  ) {
+    display: inline-block;
+    width: ~"calc(@{arrow-size} * 2)";
+    height: @arrow-size;
+    margin: auto;
+    color: @arrow-color;
+    font-family: 'Oui Icons';
+    font-size: @arrow-size;
+    line-height: 1;
+    font-weight: @oui-font-regular;
+    text-align: center;
+  }
+
+  .datagrid-arrow-asc(
+    @font-color: @oui-datagrid-header-font-color-sorted,
+    @font-weight: @oui-font-semibold
+  ) {
+    font-weight: @font-weight;
+    color: @font-color;
+
+    &::after {
+      .datagrid-header-arrow();
+      opacity: 0;
+      content: @oui-icon-index-arrow-up;
+    }
+
+    &:hover::after {
+      #oui > .animate();
+
+      opacity: .5;
+    }
+
+    &:focus::after,
+    &:active::after {
+      #oui > .animate();
+
+      opacity: 1;
+    }
+  }
+
+  .datagrid-arrow-desc(
+    @font-color: @oui-datagrid-header-font-color-sorted,
+  ) {
+    font-weight: @oui-font-semibold;
+    color: @font-color;
+
+    &::after {
+      .datagrid-header-arrow();
+      opacity: 0;
+      content: @oui-icon-index-arrow-down;
+    }
+
+    &:hover::after {
+      #oui > .animate();
+
+      opacity: .5;
+    }
+
+    &:focus::after,
+    &:active::after {
+      #oui > .animate();
+
+      opacity: 1;
+    }
+  }
+
+  .datagrid-cell-sorted(
+  ) {
+    &.oui-datagrid__header {
+      &::after,
+      &:hover::after,
+      &:focus::after,
+      &:active::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .datagrid-row(
+    @cell-selector,
+    @background-color-odd: @oui-datagrid-row-background-color-odd,
+    @background-color-even: @oui-datagrid-row-background-color-even
+  ) {
+    #oui > .animate();
+
+    &:nth-child(odd) {
+      .@{cell-selector} {
+        background-color: @background-color-odd;
+      }
+    }
+
+    &:nth-child(even) {
+      .@{cell-selector} {
+        background-color: @background-color-even;
+      }
+    }
+  }
+
+  .datagrid-cell(
+    @selector,
+    @spinner-container-selector,
+    @form-elements,
+    @background-color: @oui-datagrid-cell-background-color,
+    @border-color: @oui-datagrid-cell-border-color,
+    @font-color: @oui-datagrid-cell-font-color,
+    @padding: @oui-datagrid-cell-padding,
+    @height: @oui-datagrid-cell-height
+  ) {
+    position: relative;
+    padding: @padding;
+    height: @height;
+    white-space: nowrap;
+    border-bottom: 1px solid @border-color;
+    outline: none;
+    color: @font-color;
+    cursor: default;
+
+    @{form-elements} {
+      margin-bottom: 0;
+    }
+
+    .@{spinner-container-selector} {
+      margin: 0 auto;
+    }
+  }
+
+  .datagrid-responsive-container() {
+    position: relative;
+
+    &_sticky-checkbox {
+      padding-left: @oui-datagrid-checkbox-column-width - rem-calc(1);
+    }
+
+    &_sticky-actions {
+      padding-right: @oui-datagrid-action-column-width - rem-calc(1);
+    }
+  }
+
+  .datagrid-stick-columns-container(
+    @headers-selector,
+    @row-selector,
+    @sticky-cell-selector,
+    @header-padding: @oui-datagrid-header-padding,
+    @cell-padding: @oui-datagrid-cell-padding
+  ) {
+    &::before {
+      #oui > .animate();
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      margin-left: -@oui-datagrid-action-column-width;
+      width: @oui-datagrid-action-column-width;
+      height: 100%;
+      border-left: 1px solid #e4e4e4;
+      box-shadow: -10px 0 10px -5px rgba(0,0,0,0.08);
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    &::after {
+      #oui > .animate();
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: @oui-datagrid-checkbox-column-width;
+      height: 100%;
+      border-right: 1px solid #e4e4e4;
+      box-shadow: 10px 0 10px -5px rgba(0,0,0,0.08);
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    &_scroll-begin::before {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    &_scroll-end::after {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .@{row-selector} {
+      .@{sticky-cell-selector} {
+        height: @oui-datagrid-cell-height;
+        padding: @cell-padding;
+      }
+    }
+
+    .@{headers-selector} {
+      .@{sticky-cell-selector} {
+        height: @oui-datagrid-header-height;
+        padding: @header-padding;
+      }
+    }
+
+    .@{sticky-cell-selector} {
+      position: absolute;
+      top: auto;
+
+      &:first-child {
+        left: 0;
+        width: @oui-datagrid-checkbox-column-width;
+      }
+
+      &:last-child {
+        right: 0;
+        width: @oui-datagrid-action-column-width;
+        text-align: center;
+      }
+    }
+  }
+
+  .datagrid-overflow-container() {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .datagrid-panel() {
+    &__pagination {
+      display: block;
+    }
+  }
+}

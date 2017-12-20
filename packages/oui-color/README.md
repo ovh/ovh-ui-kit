@@ -154,6 +154,16 @@
       </span>
     </div>
   </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-grey-1">
+      <span class="oui-color-badge__prop">@oui-color-grey-1</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#fafafa</code>
+      </span>
+    </div>
+  </div>
 </div>
 
 ## Univers colors

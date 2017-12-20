@@ -1,8 +1,12 @@
+@import '../oui-dropdown/_variables';
+
 // Action-Menu
 @oui-action-menu-background-color: #fff;
 @oui-action-menu-text-color: @oui-color-sapphire;
 @oui-action-menu-divider-color: @oui-color-silver;
 @oui-action-menu-padding: 4px 0;
+// We need to remove the border width otherwise the border is hidden
+@oui-action-menu-min-width: @oui-dropdown-max-width - @oui-dropdown-border-width * 2;
 
 // Action-Menu Item
 @oui-action-menu-item-active-background-color: @oui-color-pacific;
@@ -10,7 +14,7 @@
 
 // Action-Button
 @oui-action-button-size: rem-calc(36);
-@oui-action-button-background-color: transparent;
+@oui-action-button-background-color: #fff;
 @oui-action-button-background-border-color: #bbbdbf;
 @oui-action-button-activated-zone-background-color: #f2f2f2;
 @oui-action-button-activated-zone-background-border-color: #999999;
