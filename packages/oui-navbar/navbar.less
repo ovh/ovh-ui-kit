@@ -17,29 +17,87 @@
   // Navbar links
   &-link {
     #oui > .navbar-link();
+    #oui > .navbar-link_variant();
 
-    &[aria-expanded="true"] {
+    &:hover,
+    &:focus,
+    &_active {
       #oui > .navbar-link_variant(
-        @font-size: @oui-navbar-font-size,
-        @font-color: @oui-navbar-menu-font-color,
-        @background-color: @oui-navbar-menu-background-color,
-        @background-color_hover: @oui-navbar-menu-background-color
+        @background-color: @oui-navbar-background-color_active,
+        @font-color: @oui-navbar-font-color
+      );
+    }
+
+    &_primary {
+      #oui > .navbar-link_variant(
+        @font-color: @oui-navbar-primary-font-color,
+        @font-size: @oui-navbar-primary-font-size,
+        @font-weight: @oui-navbar-primary-font-weight
+      );
+    }
+
+    &_primary:hover,
+    &_primary:focus,
+    &_primary&_active,
+    &_primary[aria-expanded="true"] {
+      #oui > .navbar-link_variant(
+        @background-color: @oui-navbar-background-color_active,
+        @font-color: @oui-navbar-primary-font-color_active,
+        @font-size: @oui-navbar-primary-font-size,
+        @font-weight: @oui-navbar-primary-font-weight
       );
     }
 
     &_secondary {
       #oui > .navbar-link_variant(
-        @font-size: @oui-navbar-secondary-font-size,
         @font-color: @oui-navbar-secondary-font-color,
-        @background-color: @oui-navbar-background-color,
-        @background-color_hover: @oui-navbar-background-color_hover
+        @font-size: @oui-navbar-secondary-font-size,
+        @font-weight: @oui-navbar-secondary-font-weight
       );
     }
 
-    &_icon,
-    &_icon[aria-expanded="true"] {
+    &_secondary:hover,
+    &_secondary:focus,
+    &_secondary&_active,
+    &_secondary[aria-expanded="true"] {
+      #oui > .navbar-link_variant(
+        @background-color: @oui-navbar-background-color_active,
+        @font-color: @oui-navbar-secondary-font-color_active,
+        @font-size: @oui-navbar-secondary-font-size,
+        @font-weight: @oui-navbar-secondary-font-weight
+      );
+    }
+
+    &_icon {
+      #oui > .navbar-link_variant(
+        @font-size: @oui-navbar-icon-font-size,
+        @font-weight: @oui-navbar-icon-font-weight
+      );
       #oui > .navbar-link_icon();
     }
+
+    &_icon:hover,
+    &_icon:focus,
+    &_icon&_active,
+    &_icon[aria-expanded="true"] {
+      #oui > .navbar-link_variant(
+        @background-color: @oui-navbar-background-color_active,
+        @font-color: @oui-navbar-font-color,
+        @font-size: @oui-navbar-icon-font-size,
+        @font-weight: @oui-navbar-icon-font-weight
+      );
+      #oui > .navbar-link_icon(
+        @icon-color: @oui-navbar-icon-color_active
+      );
+    }
+  }
+
+  // Variant for links displayed in main navbar bar
+  & > &-list > &-list__item > &-link {
+    #oui > .navbar-link(
+      @line-height: @oui-navbar-height,
+      @padding: @oui-navbar-padding
+    );
   }
 
   // Navbar toggler, for collapsible menu
@@ -50,13 +108,6 @@
   &-menu {
     #oui > .navbar-menu();
     #oui > .navbar-menu-animation_opacity();
-
-    /* stylelint-disable indentation */
-    .tablet({
-      #oui > .navbar-menu_fixed();
-      #oui > .navbar-menu-animation_slide();
-    });
-    /* stylelint-enable indentation */
   }
 
   // Menu lists
@@ -65,41 +116,53 @@
       @flex-direction: column,
       @align-items: stretch
     );
-
-    /* stylelint-disable indentation */
-    .tablet({
-      #oui > .navbar-list(
-        @flex-direction: column,
-        @align-items: stretch,
-        @border-bottom: @oui-navbar-menu-border-bottom
-      );
-    });
-    /* stylelint-enable indentation */
   }
 
   // Menu links
   &-menu &-link {
     #oui > .navbar-link_variant(
-      @width: 100%,
-      @font-size: @oui-navbar-font-size,
-      @font-color: @oui-navbar-menu-font-color,
-      @background-color: @oui-navbar-menu-background-color,
-      @background-color_hover: @oui-navbar-menu-background-color_hover
+      @font-color: @oui-navbar-menu-font-color
     );
+    #oui > .navbar-link_menu();
 
-    &_secondary {
+    &:hover,
+    &:focus,
+    &_active {
       #oui > .navbar-link_variant(
-        @width: 100%,
-        @font-size: @oui-navbar-secondary-font-size,
-        @font-color: @oui-navbar-secondary-font-color,
-        @background-color: @oui-navbar-menu-background-color,
-        @background-color_hover: @oui-navbar-menu-background-color_hover
+        @background-color: @oui-navbar-menu-link-background-color_active,
+        @font-color: @oui-navbar-menu-link-font-color_active
       );
     }
+  }
 
-    &[aria-haspopup="true"] {
-      #oui > .navbar-link_arrow();
-    }
+  // Menu variant 'fixed', for mobile only
+  &-menu_fixed {
+    /* stylelint-disable indentation */
+    .tablet({
+      #oui > .navbar-menu_fixed();
+      #oui > .navbar-menu-animation_slide();
+    });
+    /* stylelint-enable indentation */
+  }
+
+  &-menu_fixed&-menu_right {
+    /* stylelint-disable indentation */
+    .tablet({
+      #oui > .navbar-menu-animation_slide(right);
+    });
+    /* stylelint-enable indentation */
+  }
+
+  &-menu_fixed &-list {
+    /* stylelint-disable indentation */
+    .tablet({
+      #oui > .navbar-list(
+        @flex-direction: column,
+        @align-items: stretch,
+        @is-menu-list: true
+      );
+    });
+    /* stylelint-enable indentation */
   }
 
   // Helper for responsive
