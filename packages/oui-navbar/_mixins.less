@@ -105,6 +105,11 @@
     padding: 0;
     list-style: none;
 
+    // Scroll for responsive
+    & when (@is-menu-list = true) {
+      overflow: auto;
+    }
+
     // List items
     &__item {
       display: block;
@@ -185,6 +190,7 @@
       padding: 0;
       font-size: 0;
       text-align: center;
+      white-space: nowrap;
     });
     /* stylelint-enable indentation */
 
@@ -346,8 +352,9 @@
     width: 100%; // For smaller screen than max-width
     min-width: 0;
     max-width: @width;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: @height;
     bottom: 0;
@@ -381,7 +388,7 @@
     opacity: 1;
     visibility: hidden; // For ARIA
     pointer-events: auto;
-    transition: transform 0.25s ease-out, visibility 0.25s;
+    transition: transform 0.25s ease-out, visibility 0.25s ease-out;
 
     & when (@origin = left) {
       transform: translateX(-100%);
@@ -394,7 +401,7 @@
     [aria-expanded="true"] ~ & {
       visibility: visible;
       transform: translateX(0);
-      transition: transform 0.25s ease-out, visibility 0;
+      transition: transform 0.25s ease-out;
     }
   }
 
@@ -450,7 +457,7 @@
       span:nth-child(2),
       span:nth-child(3) {
         width: (@hamburger-width * .75);
-        top: 40%;
+        top: 45%;
       }
 
       span:nth-child(4) { top: 85%; }
