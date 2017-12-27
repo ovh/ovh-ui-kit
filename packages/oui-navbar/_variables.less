@@ -8,7 +8,7 @@
 @oui-navbar-font-color: #fff;
 @oui-navbar-background-color: @oui-color-zodiac;
 @oui-navbar-background-color_active: @oui-color-rhino;
-@oui-navbar-z-index: 1050;
+@oui-navbar-z-index: 1030;
 
 // Navbar Brand
 @oui-navbar-brand-padding: 0 rem-calc(20);
@@ -24,8 +24,8 @@
 @oui-navbar-menu-box-shadow-color: fade(darken(@oui-color-info-light, 50%), 25%);
 @oui-navbar-menu-font-size: rem-calc(16);
 @oui-navbar-menu-font-size_small: rem-calc(14);
-@oui-navbar-menu-font-color: @oui-color-zodiac;
-@oui-navbar-menu-z-index: 1051;
+@oui-navbar-menu-font-color: @oui-color-sapphire;
+@oui-navbar-menu-z-index: @oui-navbar-z-index + 1;
 
 // Navbar Menu Header
 @oui-navbar-menu-header-padding: rem-calc(11) rem-calc(20) rem-calc(15) rem-calc(20);
@@ -34,7 +34,7 @@
 
 // Navbar Menu Title
 @oui-navbar-menu-title-line-height: 1.2;
-@oui-navbar-menu-title-font-color: @oui-color-zodiac;
+@oui-navbar-menu-title-font-color: @oui-navbar-menu-font-color;
 @oui-navbar-menu-title-font-size: rem-calc(20);
 @oui-navbar-menu-title-font-weight: 600;
 
