@@ -2,6 +2,8 @@
 
 #oui {
   .spinner-base() {
+    display: block;
+
     @keyframes scale {
       0% {
         opacity: 1;
@@ -44,7 +46,7 @@
   }
 
   .spinner-s(
-    @selector,
+    @selector: @oui-spinner-selector,
     @background-image: @oui-spinner-s-background-image,
     @size: @oui-spinner-s-size,
     @spacing: @oui-spinner-s-spacing,
@@ -65,7 +67,7 @@
   }
 
   .spinner-m(
-    @selector,
+    @selector: @oui-spinner-selector,
     @background-image: @oui-spinner-m-background-image,
     @size: @oui-spinner-m-size,
     @spacing: @oui-spinner-m-spacing,
@@ -86,7 +88,7 @@
   }
 
   .spinner-l(
-    @selector,
+    @selector: @oui-spinner-selector,
     @background-image: @oui-spinner-l-background-image,
     @size: @oui-spinner-l-size,
     @spacing: @oui-spinner-l-spacing,
@@ -111,11 +113,33 @@
     vertical-align: text-top;
   }
 
-  .spinner-center() {
+  .spinner-center(
+    @selector: @oui-spinner-selector
+  ) {
     text-align: center;
 
-    &__container {
+    .@{selector}__container {
       margin: auto;
+    }
+  }
+
+  .spinner-left(
+    @selector: @oui-spinner-selector
+  ) {
+    text-align: left;
+
+    .@{selector}__container {
+      margin-right: auto;
+    }
+  }
+
+  .spinner-right(
+    @selector: @oui-spinner-selector
+  ) {
+    text-align: right;
+
+    .@{selector}__container {
+      margin-left: auto;
     }
   }
 }

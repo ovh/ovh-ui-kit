@@ -1,19 +1,18 @@
 @import './_mixins';
 
 .oui-spinner {
-  @oui-selector: oui-spinner;
   #oui > .spinner-base();
 
   &_s {
-    #oui > .spinner-s(@oui-selector);
+    #oui > .spinner-s();
   }
 
   &_m {
-    #oui > .spinner-m(@oui-selector);
+    #oui > .spinner-m();
   }
 
   &_l {
-    #oui > .spinner-l(@oui-selector);
+    #oui > .spinner-l();
   }
 
   &_inline {
@@ -22,5 +21,13 @@
 
   &_center {
     #oui > .spinner-center();
+  }
+
+  &_left {
+    #oui > .spinner-left();
+  }
+
+  &_right {
+    #oui > .spinner-right();
   }
 }

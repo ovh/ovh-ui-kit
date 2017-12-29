@@ -118,6 +118,48 @@ Will stylize your spinner as an inlined one. Typically used for the small one.
 #oui > .spinner-inline();
 ```
 
+### .spinner-left
+
+Will align your spinner to the left.
+
+```less
+#oui > .spinner-left();
+```
+
+```less
+#oui > .spinner-left(
+  @selector: Class
+);
+```
+
+### .spinner-center
+
+Will align your spinner to the center.
+
+```less
+#oui > .spinner-center();
+```
+
+```less
+#oui > .spinner-center(
+  @selector: Class
+);
+```
+
+### .spinner-right
+
+Will align your spinner to the right.
+
+```less
+#oui > .spinner-right();
+```
+
+```less
+#oui > .spinner-right(
+  @selector: Class
+);
+```
+
 ## Classes
 
 ### Block
