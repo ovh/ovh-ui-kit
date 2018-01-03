@@ -14,6 +14,7 @@
     - `oui-checkbox`
     - `oui-radio`
 - New padding for `oui-button`
+- New markup for `oui-checkbox` (icon has been moved from container to label)
 
 #### oui-spinner
 - Rename `oui-loader` to `oui-spinner`
