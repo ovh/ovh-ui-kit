@@ -110,14 +110,6 @@ Will stylize your spinner as a large one.
 );
 ```
 
-### .spinner-inline
-
-Will stylize your spinner as an inlined one. Typically used for the small one.
-
-```less
-#oui > .spinner-inline();
-```
-
 ## Classes
 
 ### Block

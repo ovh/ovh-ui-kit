@@ -2,6 +2,8 @@
 
 #oui {
   .spinner-base() {
+    display: inline-block;
+
     @keyframes scale {
       0% {
         opacity: 1;
@@ -44,7 +46,7 @@
   }
 
   .spinner-s(
-    @selector,
+    @selector: @oui-spinner-selector,
     @background-image: @oui-spinner-s-background-image,
     @size: @oui-spinner-s-size,
     @spacing: @oui-spinner-s-spacing,
@@ -65,7 +67,7 @@
   }
 
   .spinner-m(
-    @selector,
+    @selector: @oui-spinner-selector,
     @background-image: @oui-spinner-m-background-image,
     @size: @oui-spinner-m-size,
     @spacing: @oui-spinner-m-spacing,
@@ -86,7 +88,7 @@
   }
 
   .spinner-l(
-    @selector,
+    @selector: @oui-spinner-selector,
     @background-image: @oui-spinner-l-background-image,
     @size: @oui-spinner-l-size,
     @spacing: @oui-spinner-l-spacing,
@@ -103,19 +105,6 @@
       height: @size;
       background-image: @background-image;
       animation: scale @speed-scale 0ms 1 linear, rotation @speed-rotation @speed-scale infinite linear;
-    }
-  }
-
-  .spinner-inline() {
-    display: inline-block;
-    vertical-align: text-top;
-  }
-
-  .spinner-center() {
-    text-align: center;
-
-    &__container {
-      margin: auto;
     }
   }
 }
