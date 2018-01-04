@@ -2,10 +2,10 @@
 
 ## v2.0.0
 
-### Breaking change
+### Breaking changes
 
 - Update `oui-navbar` styles and markup
-- New heigth for multiple components (40px):
+- New height for multiple components (40px):
     - `oui-button`
     - `oui-button-group`
     - `oui-input`
