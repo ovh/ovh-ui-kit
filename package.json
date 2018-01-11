@@ -9,7 +9,7 @@
     "build": "rimraf dist && npm run build:icons && npm run build:less",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
-    "preversion": "npm build",
+    "preversion": "npm run build && git add dist packages/oui-icons/_icons.less",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
