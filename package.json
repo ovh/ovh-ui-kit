@@ -5,12 +5,20 @@
   "license": "BSD-3-Clause",
   "scripts": {
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
-    "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons && node scripts/generate-icons-indexes.js",
-    "build": "rimraf dist && npm run build:icons && npm run build:less",
+    "build:icons-fonts": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons",
+    "build:icons-indexes": "node scripts/generate-icons-indexes.js",
+    "build:icons": "npm run build:icons-fonts && npm run build:icons-indexes",
+    "build": "rimraf dist && npm run build:icons && npm run build:less && npm run -s assume-unchanged:generated",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
-    "preversion": "npm build",
-    "postversion": "git push && git push --tags"
+    "preversion": "npm build && npm run -s no-assume-unchanged:generated",
+    "postversion": "npm run assume-unchanged:generated && git push && git push --tags",
+    "assume-unchanged:icons-indexes": "git update-index --assume-unchanged packages/oui-icons/_icons.less",
+    "assume-unchanged:icons-fonts": "cd dist && git ls-files -z | xargs -0 git update-index --assume-unchanged",
+    "assume-unchanged:generated": "npm run assume-unchanged:icons-indexes && npm run assume-unchanged:icons-fonts",
+    "no-assume-unchanged:icons-indexes": "git update-index --no-assume-unchanged packages/oui-icons/_icons.less",
+    "no-assume-unchanged:icons-fonts": "cd dist && git ls-files -z | xargs -0 git update-index --no-assume-unchanged",
+    "no-assume-unchanged:generated": "npm run no-assume-unchanged:icons-indexes && npm run no-assume-unchanged:icons-fonts"
   },
   "dependencies": {
     "less-plugin-remcalc": "^0.0.1"
