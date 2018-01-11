@@ -9,8 +9,15 @@
     "build": "rimraf dist && npm run build:icons && npm run build:less",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
-    "preversion": "npm build",
-    "postversion": "git push && git push --tags"
+    "preversion": "npm run no-assume-unchanged:generated && npm build",
+    "postversion": "npm run assume-unchanged:generated && git push && git push --tags",
+    "assume-unchanged:generated-icons-list": "git update-index --assume-unchanged packages/oui-icons/_icons.less",
+    "assume-unchanged:generated-icons-dist": "cd dist && git ls-files -z | xargs -0 git update-index --assume-unchanged",
+    "assume-unchanged:generated": "npm run assume-unchanged:generated-icons-list && npm run assume-unchanged:generated-icons-dist",
+    "no-assume-unchanged:generated-icons-list": "git update-index --no-assume-unchanged packages/oui-icons/_icons.less",
+    "no-assume-unchanged:generated-icons-dist": "cd dist && git ls-files -z | xargs -0 git update-index --no-assume-unchanged",
+    "no-assume-unchanged:generated": "npm run no-assume-unchanged:generated-icons-list && npm run no-assume-unchanged:generated-icons-dist",
+    "install": "npm run assume-unchanged:generated"
   },
   "dependencies": {
     "less-plugin-remcalc": "^0.0.1"
