@@ -9,8 +9,7 @@
     "build": "rimraf dist && npm run build:icons && npm run build:less",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
-    "preversion": "npm build",
-    "postversion": "git push && git push --tags"
+    "preversion": "npm run build"
   },
   "dependencies": {
     "less-plugin-remcalc": "^0.0.1"
