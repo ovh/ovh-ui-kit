@@ -7,6 +7,7 @@
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
     "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons && node scripts/generate-icons-indexes.js",
     "build": "rimraf dist && npm run build:icons && npm run build:less",
+    "test": "echo \"no tests for this project\"",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
     "preversion": "npm run build && git add dist packages/oui-icons/_icons.less",
