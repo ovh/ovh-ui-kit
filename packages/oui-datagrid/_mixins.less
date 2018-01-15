@@ -29,7 +29,7 @@
   }
 
   .datagrid-header(
-    @checkbox-selector
+    @checkbox-selector,
     @font-color: @oui-datagrid-header-font-color,
     @padding: @oui-datagrid-header-padding
   ) {
@@ -41,13 +41,17 @@
     color: @font-color;
     font-weight: @oui-font-regular;
 
+    &[role="button"] {
+      cursor: inherit;
+    }
+
     .@{checkbox-selector} {
       margin-bottom: 0;
     }
   }
 
   .datagrid-header-sortable(
-    @datagrid-selector
+    @datagrid-selector,
     @background-color-hover: @oui-datagrid-header-background-color-hover,
     @font-color-hover: @oui-datagrid-header-font-color-hover,
     @padding: @oui-datagrid-header-padding,
@@ -55,6 +59,10 @@
   ) {
     padding-right: ~"calc(@{arrow-size} * 3)";
     cursor: pointer;
+
+    &[role="button"] {
+      cursor: pointer;
+    }
 
     &:hover,
     &:focus {
