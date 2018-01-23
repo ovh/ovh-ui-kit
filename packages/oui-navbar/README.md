@@ -1,6 +1,6 @@
 # oui-navbar
 
-<component-status cx-design="none" ux="prototype"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-navbar is a package which provide styles for the navbar component.
 
@@ -22,10 +22,10 @@ oui-navbar is a package which provide styles for the navbar component.
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="">Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
+      <a class="oui-navbar-link" href="">Dolor sit amet</a>
     </li>
   </ul>
 </nav>
@@ -42,18 +42,18 @@ oui-navbar is a package which provide styles for the navbar component.
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="">Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
+      <a class="oui-navbar-link" href="">Dolor sit amet</a>
     </li>
   </ul>
   <ul class="oui-navbar-list oui-navbar-list_end">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_primary" href="">Consectetur</a>
+      <a class="oui-navbar-link" href="">Consectetur</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_primary" href="">Adipiscing elit</a>
+      <a class="oui-navbar-link" href="">Adipiscing elit</a>
     </li>
   </ul>
 </nav>
@@ -78,13 +78,10 @@ oui-navbar is a package which provide styles for the navbar component.
   </ul>
   <ul class="oui-navbar-list oui-navbar-list_end">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_icon" href="">
-        <span class="oui-icon oui-icon-help_circle" aria-hidden="true"></span>
-        Consectetur
-      </a>
+      <a class="oui-navbar-link oui-navbar-link_tertiary" href="">Consectetur</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_icon" href="">
+      <a class="oui-navbar-link oui-navbar-link_tertiary oui-navbar-link_icon" href="">
         <span class="oui-icon oui-icon-info_circle" aria-hidden="true"></span>
         Adipiscing elit
       </a>
@@ -102,13 +99,13 @@ oui-navbar is a package which provide styles for the navbar component.
   <a class="oui-navbar__brand" href="">
     <i class="oui-icon oui-icon-ovh"></i>
   </a>
-  <ul class="oui-navbar-list oui-navbar-list_end">
+  <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
       <a class="oui-navbar-link oui-navbar-link_primary" href="">Consectetur</a>
     </li>
     <li class="oui-navbar-list__item">
       <button class="oui-navbar-link oui-navbar-link_primary" type="button" aria-haspopup="true" aria-expanded="true">Adipiscing elit</button>
-      <div class="oui-navbar-menu oui-navbar-menu_right">
+      <div class="oui-navbar-menu">
         <ul class="oui-navbar-list">
           <li class="oui-navbar-list__item">
             <a class="oui-navbar-link" href="">Quisque posuere</a>
@@ -160,6 +157,7 @@ The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, 
       <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
     </li>
   </ul>
+  <div class="oui-navbar-backdrop" aria-hidden="true"></div>
 </nav>
 </div>
 ```
@@ -273,6 +271,22 @@ Define the styles of a link with an left icon for a navbar.
 ```less
 #oui > .navbar-link_icon(
   @icon-line-height: Number,
+  @icon-size: Number,
+  @icon-spacing: Number,
+  @icon-color: Color
+);
+```
+
+### .navbar-link_external
+
+Define the styles of a link with an icon 'external' for a navbar.
+
+```less
+#oui > .navbar-link_external();
+```
+
+```less
+#oui > .navbar-link_external(
   @icon-size: Number,
   @icon-spacing: Number,
   @icon-color: Color
@@ -448,6 +462,7 @@ The provided modifiers are:
 | `oui-navbar-link_active`       | Make the navbar link active                                                 |
 | `oui-navbar-link_primary`      | Make the navbar link primary                                                |
 | `oui-navbar-link_secondary`    | Make the navbar link secondary                                              |
+| `oui-navbar-link_tertiary`     | Make the navbar link tertiary                                               |
 | `oui-navbar-link_icon`         | Make the navbar link with an icon on the left                               |
 | `oui-navbar-menu_right`        | Make the navbar menu positioning to the right                               |
 | `oui-navbar-menu_toggle`       | Make the navbar menu linked to the toggler                                  |

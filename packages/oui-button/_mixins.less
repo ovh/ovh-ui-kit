@@ -37,7 +37,13 @@
       #oui > .animate();
 
       text-decoration: none;
-      outline: none;
+    }
+
+    &:focus {
+      outline-width: 1px;
+      outline-style: dotted;
+      outline-color: initial;
+      outline-offset: -2px;
     }
 
     &:disabled {
