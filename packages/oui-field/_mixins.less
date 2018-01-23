@@ -3,7 +3,8 @@
 
 #oui {
   .field-base(
-    @label-selector
+    @label-selector,
+    @form-controls: @oui-global-base-form-controls
   ) {
     display: flex;
     flex-direction: column;
@@ -15,6 +16,9 @@
       }
     }
 
+    /**
+     * &__content is kept only for backward compatibility.
+     */
     &__content {
       display: flex;
       align-items: center;
@@ -26,7 +30,10 @@
       /* stylelint-enable */
     }
 
-    &-control {
+    /**
+     * &-control is kept only for backward compatibility.
+     */
+    &-control, &__control {
       width: 100%;
 
       .make-control-sizes(@i: length(@oui-field-control-sizes)) when (@i > 0) {
@@ -49,7 +56,10 @@
       /* stylelint-enable */
     }
 
-    &-helper {
+    /**
+     * &-helper is kept only for backward compatibility.
+     */
+    &-helper, &__helper {
       margin: 0 0 @oui-field-helper-spacing @oui-field-helper-spacing;
       color: @oui-field-helper-color;
       text-align: justify;
@@ -65,11 +75,10 @@
       /* stylelint-enable */
     }
 
-    &_warning {
-      .@{label-selector} {
-        font-weight: @oui-font-semibold;
-        color: @oui-field-label-warning-font-color;
-      }
+    &__error {
+      font-size: .9em;
+      color: @oui-field-label-error-font-color;
+      margin: 0;
     }
 
     &_error {
