@@ -87,8 +87,10 @@
     @status: extract(@oui-input-status, @index);
     @status-font-color: "oui-color-@{status}-dark";
     @status-icon-color: "oui-color-@{status}-medium";
-    @status-border-color: "oui-color-@{status}-light";
+    @status-border-color: "oui-color-@{status}-medium";
     @status-background-color: "oui-color-@{status}-fade";
+    @status-box-shadow: "oui-input-shadow-@{status}";
+
 
     &_@{status}:not(:disabled),
     &_@{status}:not(:disabled):hover,
@@ -98,6 +100,7 @@
       background-color: @@status-background-color;
       color: @@status-font-color;
       font-weight: 400;
+      box-shadow: @@status-box-shadow;
     }
 
     &_@{status}:not(:disabled):focus {
