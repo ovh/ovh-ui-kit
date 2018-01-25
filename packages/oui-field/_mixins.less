@@ -4,14 +4,16 @@
 #oui {
   .field-base(
     @label-selector,
+    @icon-error-selector: @oui-field-error-icon-selector,
     @form-controls: @oui-global-base-form-controls
   ) {
     display: flex;
     flex-direction: column;
 
     .@{label-selector} {
+      font-size: @oui-field-label-font-size;
+
       &_focus {
-        font-weight: @oui-font-semibold;
         color: @oui-field-label-default-font-color;
       }
     }
@@ -28,6 +30,14 @@
         display: block;
       });
       /* stylelint-enable */
+    }
+
+    &-control {
+      margin-bottom: @oui-field-content-spacing;
+    }
+
+    &-helper {
+      margin: 0 0 @oui-field-content-spacing @oui-field-content-spacing;
     }
 
     /**
@@ -48,6 +58,21 @@
       }
       .make-control-sizes();
 
+      .controls(@index: length(@form-controls)) when(@index > 0) {
+        .controls(@index - 1);
+        @control: extract(@form-controls, @index);
+
+        > @{control} {
+          margin-bottom: @oui-field-control-spacing;
+        }
+      }
+      .controls();
+
+      // Specific cases
+      > oui-numeric > .oui-input-group {
+        margin-bottom: @oui-field-control-spacing;
+      }
+
       /* stylelint-disable indentation */
       .phone({
         width: 100%;
@@ -60,8 +85,8 @@
      * &-helper is kept only for backward compatibility.
      */
     &-helper, &__helper {
-      margin: 0 0 @oui-field-helper-spacing @oui-field-helper-spacing;
       color: @oui-field-helper-color;
+      font-size: @oui-field-helper-font-size;
       text-align: justify;
 
       &_top {
@@ -75,16 +100,18 @@
       /* stylelint-enable */
     }
 
+    /**
+     * Error message container.
+     */
     &__error {
-      font-size: .9em;
-      color: @oui-field-label-error-font-color;
-      margin: 0;
-    }
+      color: @oui-field-error-color;
+      font-size: @oui-field-error-font-size;
+      text-align: justify;
 
-    &_error {
-      .@{label-selector} {
-        font-weight: @oui-font-semibold;
-        color: @oui-field-label-error-font-color;
+      .@{oui-field-error-icon-selector} {
+        color: @oui-field-error-icon-color;
+        font-size: @oui-field-error-icon-font-size;
+        vertical-align: sub;
       }
     }
   }
