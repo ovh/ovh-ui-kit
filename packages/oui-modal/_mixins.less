@@ -3,13 +3,16 @@
 #oui {
   .modal-base(
     @button-selector,
+    @title-color: @oui-modal-title-color,
+    @body-color: @oui-modal-body-color,
     @body-padding: @oui-modal-body-padding,
     @body-padding-no-icon: @oui-modal-body-padding-no-icon,
     @close-button-width: @oui-modal-close-button-size,
     @close-button-height: @oui-modal-close-button-size,
     @close-button-color: @oui-modal-close-button-color,
     @close-button-font-size: @oui-modal-close-button-size,
-    @close-button-padding: @oui-modal-close-button-padding,
+    @close-button-padding-x: @oui-modal-close-button-padding-x,
+    @close-button-padding-y: @oui-modal-close-button-padding-y,
     @font-size: @oui-modal-font-size
   ) {
     border-radius: @oui-global-base-radius-medium;
@@ -18,7 +21,7 @@
 
     &__header {
       position: relative;
-      height: @close-button-height + @close-button-padding * 2;
+      height: @close-button-height + @close-button-padding-y * 2;
       border-top-right-radius: @oui-global-base-radius-medium;
       border-top-left-radius: @oui-global-base-radius-medium;
       background-color: #edefec;
@@ -33,7 +36,7 @@
       right: 0;
       min-width: @close-button-width;
       min-height: @close-button-height;
-      padding: @close-button-padding;
+      padding: @close-button-padding-y @close-button-padding-x;
       border: none;
       margin: 0;
       overflow: hidden;
@@ -60,6 +63,7 @@
     &__body {
       position: relative;
       padding: @body-padding;
+      color: @body-color;
 
       &_no-icon {
         padding: @body-padding-no-icon;
@@ -68,7 +72,7 @@
 
     &__title {
       margin-top: 0;
-      color: @oui-color-zodiac;
+      color: @title-color;
       font-size: rem-calc(21);
       line-height: rem-calc(22.4);
       letter-spacing: 0.01em;
@@ -76,7 +80,7 @@
     }
 
     &__text {
-      color: @oui-color-zodiac;
+      color: @body-color;
       font-size: rem-calc(16);
       line-height: rem-calc(22.4);
       letter-spacing: 0.01em;
@@ -90,7 +94,7 @@
     &__footer {
       display: flex;
       justify-content: flex-end;
-      padding: 0 36px 24px;
+      padding: @oui-modal-footer-padding;
       border-top: 0 none;
 
       .@{button-selector} {
@@ -98,13 +102,13 @@
       }
 
       .@{button-selector} + .@{button-selector} {
-        margin-left: rem-calc(5);
+        margin-left: @oui-modal-footer-button-spacing;
       }
     }
   }
 
   .modal-shadow() {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 14px 15px @oui-color-info-light;
   }
 
   .modal-icon-base(
