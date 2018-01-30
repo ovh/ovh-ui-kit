@@ -69,6 +69,31 @@ oui-input-group is a package which provide styles to group inputs together.
 </div>
 ```
 
+### Sizes
+
+```html:preview
+<div class="oui-input-group oui-input-group_xs">
+  <input class="oui-input" placeholder="XS">
+  <button class="oui-button oui-button_small-width" type="button">🔍</button>
+</div>
+<div class="oui-input-group oui-input-group_s">
+  <input class="oui-input" placeholder="S">
+  <button class="oui-button oui-button_small-width" type="button">🔍</button>
+</div>
+<div class="oui-input-group oui-input-group_m">
+  <input class="oui-input" placeholder="M">
+  <button class="oui-button" type="button">Find</button>
+</div>
+<div class="oui-input-group oui-input-group_l">
+  <input class="oui-input" placeholder="L">
+  <button class="oui-button" type="button">Find</button>
+</div>
+<div class="oui-input-group oui-input-group_xl">
+  <input class="oui-input" placeholder="XL">
+  <button class="oui-button" type="button">Find</button>
+</div>
+```
+
 ### Numeric
 
 ```html:preview

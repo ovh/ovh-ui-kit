@@ -29,20 +29,63 @@ Upon initial loading of the form, the text fields have a normal appearance.
 ### Size 1
 Use it for very short fields like postal code. Field content less than 8 characters.
 
+<div class="oui-field">
+  <label for="text" class="oui-field__label oui-label">VLAN ID</label>
+  <div class="oui-field__control oui-field-control_xs">
+    <input type="text" id="text-1" name="text-1" class="oui-input" value="2588" />
+  </div>
+  <div class="oui-field__helper">An input with oui-field-control_xs class</div>
+</div>
+
+<div class="oui-field">
+  <label for="text" class="oui-field__label oui-label">VLAN ID</label>
+  <div class="oui-field__control oui-field-control_xs">
+    <input type="text" id="text-1" name="text-1" class="oui-input" value="2588" />
+  </div>
+  <div class="oui-field__helper">An input with oui-field-control_xs class</div>
+</div>
+
+<div class="oui-field">
+  <label for="text" class="oui-field__label oui-label">VLAN ID</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_xs">
+      <input type="text" id="text-1" name="text-1" class="oui-input" value="2588" />
+    </div>
+    <div class="oui-field-helper">An input with oui-field-control_xs class</div>
+  </div>
+</div>
+
+
 ```html:preview
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">VLAN ID</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_1">
+    <div class="oui-field-control oui-field-control_xs">
       <input type="text" id="text-1" name="text-1" class="oui-input" value="2588" />
     </div>
-    <div class="oui-field-helper">An input with oui-field-control_1 class</div>
+    <div class="oui-field-helper">An input with oui-field-control_xs class</div>
+  </div>
+</div>
+<div class="oui-field"> 
+  <label for="text" class="oui-field__label oui-label">Postal Code</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_xs">
+       <input type="text" id="text" name="text" class="oui-input" value="A9A 9A9" />
+    </div>
   </div>
 </div>
 <div class="oui-field"> 
   <label for="text" class="oui-field__label oui-label">Postal Code</label>
   <div class="oui-field__content">
     <div class="oui-field-control oui-field-control_1">
+       <input type="text" id="text" name="text" class="oui-input" value="A9A 9A9" />
+    </div>
+  </div>
+</div>
+<div class="oui-field"> 
+  <label for="text" class="oui-field__label oui-label">Postal Code</label>
+  <div class="oui-field__content">
+    <div class="oui-field-control oui-field-control_2">
        <input type="text" id="text" name="text" class="oui-input" value="A9A 9A9" />
     </div>
   </div>
@@ -55,16 +98,16 @@ Use it for short fields like : amount, phone number. Field contents between 9 to
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Phone number</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_2">
+    <div class="oui-field-control oui-field-control_s">
       <input type="text" id="text" name="text" class="oui-input" value="123 456-7890" />
     </div>
-      <div class="oui-field-helper">An input with oui-field-control_2 class</div>
+      <div class="oui-field-helper">An input with oui-field-control_s class</div>
   </div>
 </div>
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Amount of RAM</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_2">
+    <div class="oui-field-control oui-field-control_s">
       <label class="oui-select">
         <select id="select-2" name="select-2" class="oui-select__input">
           <option value="Option 1">Choose...</option>
@@ -75,7 +118,7 @@ Use it for short fields like : amount, phone number. Field contents between 9 to
         <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
       </label>
     </div>
-    <div class="oui-field-helper">A select box with oui-field-control_2 class.</div>
+    <div class="oui-field-helper">A select box with oui-field-control_s class.</div>
   </div>
 </div>
 ```
@@ -86,7 +129,7 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
 <div class="oui-field">
   <label for="domain-3" class="oui-field__label oui-label">Domain Name</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_3">
+    <div class="oui-field-control oui-field-control_m">
       <div class="oui-input-group">
         <input class="oui-input" id="domain-3" name="domain-3" type="text" placeholder="Search">
         <button class="oui-button">Find</button>
@@ -97,10 +140,10 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
 <div class="oui-field">
   <label for="text" class="oui-field__label oui-label">Email</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_3">
+    <div class="oui-field-control oui-field-control_m">
       <input type="text" id="text" name="text" class="oui-input" value="" />
     </div>
-      <div class="oui-field-helper">An input with oui-field-control_3 class</div>
+      <div class="oui-field-helper">An input with oui-field-control_m class</div>
   </div>
 </div>
 ```
@@ -108,12 +151,12 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
 
 ```html:preview
 <div class="oui-field">
-  <label for="textarea-4" class="oui-field__label oui-label">Input size 4</label>
+  <label for="textarea-4" class="oui-field__label oui-label">Input size l</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_4">
+    <div class="oui-field-control oui-field-control_l">
       <textarea class="oui-textarea" id="textarea-4" name="textarea-4">Textarea text</textarea>
     </div>
-    <div class="oui-field-helper oui-field-helper_top">A textarea with oui-field-control_4 class</div>
+    <div class="oui-field-helper oui-field-helper_top">A textarea with oui-field-control_l class</div>
   </div>
 </div>
 ```
@@ -121,9 +164,9 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
 
 ```html:preview
 <div class="oui-field">
-  <label for="select-5" class="oui-field__label oui-label">Input size 5</label>
+  <label for="select-5" class="oui-field__label oui-label">Input size xl</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_5">
+    <div class="oui-field-control oui-field-control_xl">
       <label class="oui-select">
         <select id="select-5" name="select-5" class="oui-select__input">
           <option value="Option 1">Option 1</option>
@@ -133,20 +176,7 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
         <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
       </label>
     </div>
-    <div class="oui-field-helper">A select box with oui-field-control_5 class</div>
-  </div>
-</div>
-```
-### Size 6
-
-```html:preview
-<div class="oui-field">
-  <label for="textarea-6" class="oui-field__label oui-label">Input size 6</label>
-  <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_6">
-      <textarea class="oui-textarea" id="textarea-6" name="textarea-6">Textarea text</textarea>
-    </div>
-    <div class="oui-field-helper oui-field-helper_top">A textarea with oui-field-control_6 class</div>
+    <div class="oui-field-helper">A select box with oui-field-control_xl class</div>
   </div>
 </div>
 ```
@@ -155,18 +185,17 @@ Use it for fields like : email, username, password, IPv4. Fields contents betwee
 
 ```html:preview
 <div class="oui-field oui-field_error">
-  <label for="text" class="oui-field__label oui-label">Input size 3 with error</label>
+  <label for="text" class="oui-field__label oui-label">Input size m with error</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_3">
+    <div class="oui-field-control oui-field-control_m">
       <input type="text" id="text" name="text" class="oui-input oui-input_error" value="Input text" />
     </div>
-    <div class="oui-field-helper">An error input</div>
   </div>
 </div>
-<div class="oui-field oui-field_error">
-  <label for="text" class="oui-field__label oui-label">Input size 5 with error</label>
+<div class="oui-field oui-field-error">
+  <label for="text" class="oui-field__label oui-label">Input size xl with error</label>
   <div class="oui-field__content">
-    <div class="oui-field-control oui-field-control_5">
+    <div class="oui-field-control oui-field-control_xl">
       <label class="oui-select">
         <select id="select" name="select" class="oui-select__input">
           <option value="Option 1">Option 1</option>

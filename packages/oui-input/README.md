@@ -33,6 +33,16 @@ The field will be formatted at the output (when entered / modified) or displayed
 <input type="text" class="oui-input oui-input_inline" value="Inline input">
 ```
 
+### Sizes
+
+```html:preview
+<input type="text" class="oui-input oui-input_xs" value="XS">
+<input type="text" class="oui-input oui-input_s" value="S">
+<input type="text" class="oui-input oui-input_m" value="M">
+<input type="text" class="oui-input oui-input_l" value="L">
+<input type="text" class="oui-input oui-input_xl" value="XL">
+```
+
 ## Mixins
 
 ```less

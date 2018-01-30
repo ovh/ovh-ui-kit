@@ -4,6 +4,7 @@
 @import '../oui-icons/_mixins';
 @import '../oui-accessibility/_mixins';
 @import '../oui-animation/_mixins';
+@import '../oui-field/_mixins';
 @import './_variables';
 
 #oui {
@@ -26,6 +27,8 @@
     @padding: @oui-input-padding,
     @margin: @oui-input-margin
   ) {
+    #oui > .field-sizes();
+
     display: block;
     width: 100%;
     min-height: rem-calc(40);
@@ -53,6 +56,7 @@
 
     &:focus {
       #oui > .animate();
+      transition-property: border-color, box-shadow, background-color;
 
       border-color: @border-color-focus;
       outline: none;

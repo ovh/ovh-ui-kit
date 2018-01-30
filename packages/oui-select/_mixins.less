@@ -1,4 +1,5 @@
 @import '../oui/_settings';
+@import '../oui-field/_mixins';
 @import '../oui-color/_variables';
 @import './_variables';
 
@@ -15,6 +16,8 @@
     @padding: @oui-select-padding,
     @shadow: @oui-select-shadow
   ) {
+    #oui > .field-sizes();
+
     position: relative;
     display: block;
     vertical-align: top;
@@ -107,21 +110,26 @@
     }
   }
 
-  .select-status(@index: length(@oui-select-status)) when (@index > 0) {
-    .select-status(@index - 1);
+  .select-error() {
+    &_error {
+      .select-error-style();
+    }
+  }
 
+  .select-error-style(
     @select-selector: oui-select;
     @icon-selector: oui-icon;
-    @status: extract(@oui-select-status, @index);
+  ) {
+    @status: error;
     @status-font-color: "oui-color-@{status}-dark";
     @status-icon-color: "oui-color-@{status}-medium";
     @status-border-color: "oui-color-@{status}-light";
     @status-background-color: "oui-color-@{status}-fade";
 
-    &_@{status} .@{select-selector}__input,
-    &_@{status} .@{select-selector}__input:hover,
-    &_@{status} .@{select-selector}__input:active,
-    &_@{status} .@{select-selector}__input:focus {
+    .@{select-selector}__input,
+    .@{select-selector}__input:hover,
+    .@{select-selector}__input:active,
+    .@{select-selector}__input:focus {
       border-color: @@status-border-color;
       background-color: @@status-background-color;
       color: @@status-font-color;
@@ -136,7 +144,7 @@
       }
     }
 
-    &_@{status} .@{select-selector}__input:focus {
+    .@{select-selector}__input:focus {
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
     }
   }
