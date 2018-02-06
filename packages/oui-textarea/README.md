@@ -26,6 +26,16 @@ oui-textarea is a package which provides styles for the textarea component.
 <textarea class="oui-textarea oui-textarea_inline">Textarea inline</textarea>
 ```
 
+### Sizes
+
+```html:preview
+<textarea type="text" class="oui-input oui-input_xs" value="XS"></textarea>
+<textarea type="text" class="oui-input oui-input_s" value="S"></textarea>
+<textarea type="text" class="oui-input oui-input_m" value="M"></textarea>
+<textarea type="text" class="oui-input oui-input_l" value="L"></textarea>
+<textarea type="text" class="oui-input oui-input_xl" value="XL"></textarea>
+```
+
 ## Mixins
 
 ```less

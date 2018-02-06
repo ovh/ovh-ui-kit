@@ -1,3 +1,4 @@
+@import '../oui-field/_mixins';
 @import '../oui-input/_mixins';
 @import './_variables';
 
@@ -9,6 +10,8 @@
     @button-border-color_disabled: @oui-input-group-button-hollow-border-color_disabled,
     @button-padding: @oui-input-group-button-hollow-padding
   ) {
+    #oui > .field-sizes();
+
     display: table;
     display: flex;
     align-content: stretch;

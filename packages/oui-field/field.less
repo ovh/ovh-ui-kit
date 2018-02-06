@@ -1,7 +1,17 @@
 @import './_mixins';
+@import './_normalize';
 
 .oui-field {
+  @oui-selector: oui-field;
   @oui-label-selector: oui-label;
+  @oui-checkbox-selector: oui-checkbox;
+  @oui-select-selector: oui-select;
 
-  #oui > .field-base(@oui-label-selector);
+  #oui > .field-normalize();
+  #oui > .field-base(
+    @oui-selector,
+    @oui-label-selector,
+    @oui-checkbox-selector,
+    @oui-select-selector
+  );
 }

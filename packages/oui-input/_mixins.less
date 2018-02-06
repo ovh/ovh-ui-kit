@@ -4,6 +4,7 @@
 @import '../oui-icons/_mixins';
 @import '../oui-accessibility/_mixins';
 @import '../oui-animation/_mixins';
+@import '../oui-field/_mixins';
 @import './_variables';
 
 #oui {
@@ -26,6 +27,8 @@
     @padding: @oui-input-padding,
     @margin: @oui-input-margin
   ) {
+    #oui > .field-sizes();
+
     display: block;
     width: 100%;
     min-height: rem-calc(40);
@@ -53,6 +56,7 @@
 
     &:focus {
       #oui > .animate();
+      transition-property: border-color, box-shadow, background-color;
 
       border-color: @border-color-focus;
       outline: none;
@@ -87,8 +91,10 @@
     @status: extract(@oui-input-status, @index);
     @status-font-color: "oui-color-@{status}-dark";
     @status-icon-color: "oui-color-@{status}-medium";
-    @status-border-color: "oui-color-@{status}-light";
+    @status-border-color: "oui-color-@{status}-medium";
     @status-background-color: "oui-color-@{status}-fade";
+    @status-box-shadow: "oui-input-shadow-@{status}";
+
 
     &_@{status}:not(:disabled),
     &_@{status}:not(:disabled):hover,
@@ -98,6 +104,7 @@
       background-color: @@status-background-color;
       color: @@status-font-color;
       font-weight: 400;
+      box-shadow: @@status-box-shadow;
     }
 
     &_@{status}:not(:disabled):focus {

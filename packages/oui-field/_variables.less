@@ -1,15 +1,33 @@
 @import '../oui-color/_variables';
 
-@oui-field-label-default-font-color: #0090b1;
-@oui-field-label-warning-font-color: @oui-color-warning-medium;
-@oui-field-label-error-font-color: @oui-color-error-dark;
-@oui-field-label-font-weight: @oui-font-semibold;
-@oui-field-helper-color: @oui-color-dusty;
-@oui-field-helper-spacing: rem-calc(20);
+@oui-field-spacing: rem-calc(20);
+
+@oui-field-label-default-font-color: @oui-color-shuttle;
+@oui-field-label-font-size: rem-calc(16);
+
+@oui-field-helper-color: @oui-color-shuttle;
+@oui-field-helper-font-size: rem-calc(14);
+
+@oui-field-control-default-size: rem-calc(250);
 @oui-field-control-sizes:
-  1 rem-calc(100),
-  2 rem-calc(200),
-  3 rem-calc(300),
-  4 rem-calc(400),
-  5 rem-calc(500),
-  6 rem-calc(600);
+  xs rem-calc(75),
+  s rem-calc(150),
+  m rem-calc(250),
+  l rem-calc(350),
+  xl rem-calc(500);
+@oui-field-control-phone-sizes:
+  xs rem-calc(75),
+  s rem-calc(150),
+  m rem-calc(250),
+  l rem-calc(300),
+  xl rem-calc(300);
+@oui-field-control-spacing: rem-calc(6);
+
+@oui-field-error-color: @oui-color-error-dark;
+@oui-field-error-font-size: rem-calc(14);
+@oui-field-error-icon-selector: oui-icon-error;
+@oui-field-error-icon-color: @oui-color-error-medium;
+@oui-field-error-icon-font-size: rem-calc(14);
+
+// Backward compatibility with old field components
+@oui-field-content-spacing: rem-calc(20);
