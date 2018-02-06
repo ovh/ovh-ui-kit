@@ -151,20 +151,30 @@
     @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
     @background-color_active: @oui-button-dropdown-background-color_active,
     @border-color_active: @oui-button-dropdown-border-color_active,
-    @padding-right: @oui-button-dropdown-padding-right,
-    @padding-left: @oui-button-dropdown-padding-left
+    @padding: @oui-button-dropdown-padding
   ) {
-    padding-right: @padding-right;
-    padding-left: @padding-left;
+    padding-right: rem-calc(30) + @padding * 0.8;
+    padding-left: @padding;
 
     .@{icon-selector} {
-      width: @icon-size;
-      height: @icon-size;
-      margin-left: @oui-button-icon-right-icon-margin-right;
-      color: @icon-color;
-      font-size: @icon-size;
-      line-height: @icon-size;
+      position: absolute;
+      right: 0;
+      top: 1px;
+      bottom: 1px;
+      width: ~"calc(@{icon-size} * 2.5)";
+      height: auto;
+      margin: auto;
+      text-align: center;
       vertical-align: middle;
+      cursor: pointer;
+      pointer-events: none;
+
+      &::before {
+        display: inline-block;
+        margin-right: @padding * 1.5;
+        color: @oui-color-sapphire;
+        font-size: @icon-size;
+      }
     }
 
     &:active,
