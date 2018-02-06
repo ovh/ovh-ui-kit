@@ -14,6 +14,9 @@ oui-action-menu is a package which provide styles action buttons in a dropdown.
       <button class="oui-button oui-button_action-menu">Action 2</button>
     </div>
     <div role="menuitem" class="oui-action-menu__item">
+      <button class="oui-button oui-button_action-menu" disabled>Action 3 (disabled)</button>
+    </div>
+    <div role="menuitem" class="oui-action-menu__item">
       <button class="oui-button oui-button_action-menu">A veeeeeeery looooooooong action here</button>
     </div>
     <div role="separator" class="oui-action-menu__divider"></div>
