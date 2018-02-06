@@ -41,7 +41,9 @@
     &__brand {
       height: @height;
       line-height: @height;
-      display: block;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       padding: @brand-padding;
       overflow: hidden;
 
@@ -142,12 +144,15 @@
     @min-width: @oui-navbar-link-min-width,
     @min-height: @oui-navbar-link-min-height,
     @line-height: @oui-navbar-link-line-height,
+    @display: block,
     @padding: @oui-navbar-link-padding
   ) {
     min-width: @min-width;
     min-height: @min-height;
     line-height: @line-height;
-    display: block;
+    display: @display;
+    flex-direction: row;
+    align-items: center;
     padding: @padding;
     position: relative;
     text-decoration: none;
@@ -222,7 +227,7 @@
         background: @badge-background-color;
 
         /* stylelint-disable indentation */
-        .tablet({
+        .medium({
           top: 50%;
           transform: translate(50%, -50%);
         });
@@ -235,7 +240,7 @@
     }
 
     /* stylelint-disable indentation */
-    .tablet({
+    .medium({
       padding: 0;
       font-size: 0;
       text-align: center;
@@ -245,7 +250,7 @@
 
     .oui-icon {
       /* stylelint-disable indentation */
-      .tablet({
+      .medium({
         line-height: 1;
         margin: 0;
         vertical-align: middle;
@@ -331,8 +336,10 @@
     }
 
     &_toggle {
+      display: block;
+
       /* stylelint-disable indentation */
-      .desktop({
+      .tablet({
         display: none;
       });
       /* stylelint-enable indentation */
@@ -434,7 +441,6 @@
     width: 100%; // For smaller screen than max-width
     min-width: 0;
     max-width: @width;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     position: fixed;
