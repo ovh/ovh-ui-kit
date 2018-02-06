@@ -1,5 +1,6 @@
 @import './_variables';
 
+// Max width
 .phone(@rules) {
   .responsive(@oui-responsive-breakpoint-phone, @rules);
 }
@@ -8,15 +9,19 @@
   .responsive(@oui-responsive-breakpoint-tablet, @rules);
 }
 
-.desktop(@rules) {
-  @minWidth: (@oui-responsive-breakpoint-tablet + 1px);
-  @media screen and (min-width: @minWidth) {
-    @rules();
-  }
+.medium(@rules) {
+  .responsive(@oui-responsive-breakpoint-medium, @rules);
 }
 
 .responsive(@maxWidth; @rules) {
   @media screen and (max-width: (@maxWidth - 1px)) {
+    @rules();
+  }
+}
+
+// Min width
+.desktop(@rules) {
+  @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
     @rules();
   }
 }
