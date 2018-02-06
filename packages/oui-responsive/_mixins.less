@@ -9,7 +9,8 @@
 }
 
 .desktop(@rules) {
-  @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
+  @minWidth: (@oui-responsive-breakpoint-tablet + 1px);
+  @media screen and (min-width: @minWidth) {
     @rules();
   }
 }
