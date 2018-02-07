@@ -241,6 +241,14 @@ Actions grouped under a Dropdown button.  On click, a panel slides down to displ
 </button>
 ```
 
+### Icon alone
+
+```html:preview
+  <button type="button" class="oui-button oui-button_icon-alone">
+    <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
+  </button>
+```
+
 ## Mixins
 
 ```less
@@ -349,6 +357,23 @@ Define the base styles for a button with an icon.
   @icon-size_large: Number,
   @icon-color: Color,
   @icon-color_disabled: Color
+);
+```
+
+### .button-icon-alone
+
+Will stylize your button as an icon.
+
+```less
+#oui > .button-icon-alone();
+```
+
+```less
+#oui > .button-icon-alone(
+  @icon-selector: Class,
+  @min-width: number,
+  @padding-left: number,
+  @icon-font-size: number
 );
 ```
 
@@ -492,6 +517,7 @@ The provided modifiers are:
 | `oui-button_primary`      | Make the button looks like a primary button                   |
 | `oui-button_secondary`    | Make the button looks like a secondary button                 |
 | `oui-button_dropdown`     | Make the button looks like a dropdown button                  |
+| `oui-button_icon-alone`   | Make the button looks like an icon                            |
 | `oui-button_icon-right`   | Make the button looks like a button with an icon on the right |
 | `oui-button_icon-left`    | Make the button looks like a button with an icon on the left  |
 | `oui-button_link`         | Make the button looks like a link                             |
