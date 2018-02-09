@@ -93,6 +93,18 @@
     @icon-selector
   ) {
     position: relative;
+    padding: 0;
+    max-width: none;
+
+    &:focus, &:hover, &.active {
+      background-color: @oui-ui-select-choices-button-background-hover;
+      color: @oui-color-sapphire;
+      outline: none;
+    }
+
+    &:active {
+      background-color: @oui-ui-select-choices-button-background-pressed;
+    }
 
     &-inner {
       display: block;
@@ -110,47 +122,30 @@
       }
     }
 
-    .@{button-selector} {
-      padding: 0;
-      max-width: none;
+    .@{icon-selector} {
+      display: none;
+      position: absolute;
+      top: rem-calc(13);
+      right: 0;
+      width: @oui-ui-select-choices-icon-size;
+      height: auto;
+      margin-right: rem-calc(12);
+      text-align: center;
+      vertical-align: middle;
+      pointer-events: none;
 
-      &:focus, &:hover {
-        background-color: @oui-ui-select-choices-button-background-hover;
+      &::before {
+        margin-right: @oui-ui-select-choices-padding-x * 1.5;
         color: @oui-color-sapphire;
-        outline: none;
-      }
-
-      &:active {
-        background-color: @oui-ui-select-choices-button-background-pressed;
-      }
-
-      .@{icon-selector} {
-        display: none;
-        position: absolute;
-        top: rem-calc(13);
-        right: 0;
-        width: @oui-ui-select-choices-icon-size;
-        height: auto;
-        margin-right: rem-calc(12);
-        text-align: center;
-        vertical-align: middle;
-        pointer-events: none;
-
-        &::before {
-          margin-right: @oui-ui-select-choices-padding-x * 1.5;
-          color: @oui-color-sapphire;
-          font-size: @oui-ui-select-choices-icon-size;
-        }
+        font-size: @oui-ui-select-choices-icon-size;
       }
     }
 
     &.selected {
-      .@{button-selector} {
-        background-color: @oui-ui-select-choices-button-background-selected;
+      background-color: @oui-ui-select-choices-button-background-selected;
 
-        .@{icon-selector} {
-          display: block;
-        }
+      .@{icon-selector} {
+        display: block;
       }
     }
   }
