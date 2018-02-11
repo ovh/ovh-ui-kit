@@ -371,9 +371,14 @@ Will stylize your button as an icon.
 ```less
 #oui > .button-icon-alone(
   @icon-selector: Class,
+  @background: Color,
   @min-width: number,
   @padding-left: number,
-  @icon-font-size: number
+  @padding-right: number,
+  @margin-right: number,
+  @icon-font-size: number,
+  @icon-font-color: Color,
+  @icon-font-color_hover: Color
 );
 ```
 
