@@ -408,13 +408,13 @@
     &_@{status},
     &_@{status}:hover {
       .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label,
-        .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label:hover,
-        .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label:active,
-        .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label:focus,
-        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label,
-        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:hover,
-        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:active,
-        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:focus {
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label:hover,
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label:active,
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container .@{selector}__label:focus,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:hover,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:active,
+      .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:focus {
         color: @@status-font-color;
 
         &::before {
@@ -431,7 +431,7 @@
       }
 
       .@{selector}__input:not(:disabled):focus + .@{selector}__label-container .@{selector}__label,
-        .@{selector}__input:checked:not(:disabled):focus + .@{selector}__label-container .@{selector}__label {
+      .@{selector}__input:checked:not(:disabled):focus + .@{selector}__label-container .@{selector}__label {
         &::before {
           box-shadow: 0 0 3px 1px @@status-border-color;
         }
@@ -439,13 +439,13 @@
 
       &.@{selector}_thumbnail {
         .@{selector}__input:not(:disabled) + .@{selector}__label-container,
-          .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover,
-          .@{selector}__input:not(:disabled) + .@{selector}__label-container:active,
-          .@{selector}__input:not(:disabled) + .@{selector}__label-container:focus,
-          .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container,
-          .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover,
-          .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:active,
-          .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:focus {
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover,
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container:active,
+        .@{selector}__input:not(:disabled) + .@{selector}__label-container:focus,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:hover,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:active,
+        .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container:focus {
           border-color: @@status-border-color;
           background: @@status-background-color;
 
@@ -455,7 +455,7 @@
         }
 
         .@{selector}__input:not(:disabled):focus + .@{selector}__label-container,
-          .@{selector}__input:checked:not(:disabled):focus + .@{selector}__label-container {
+        .@{selector}__input:checked:not(:disabled):focus + .@{selector}__label-container {
           box-shadow: 0 0 3px 0 @@status-border-color;
         }
       }
