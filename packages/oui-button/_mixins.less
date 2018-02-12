@@ -227,6 +227,39 @@
     }
   }
 
+  .button-icon-alone(
+    @icon-selector,
+    @background: @oui-button-icon-alone-background,
+    @background: @oui-button-icon-alone-background,
+    @min-width: @oui-button-icon-alone-min-width,
+    @padding-left: @oui-button-icon-alone-padding-left,
+    @padding-right: @oui-button-icon-alone-padding-right,
+    @margin-right: @oui-button-icon-alone-margin-right,
+    @icon-font-size: @oui-button-icon-alone-icon-font-size,
+    @icon-font-color: @oui-button-icon-alone-font-color,
+    @icon-font-color_hover: @oui-button-icon-alone-font-color_hover
+  ) {
+
+    background: @background;
+    min-width: @min-width;
+    padding-left: @padding-left;
+    padding-right: @padding-right;
+    margin-right: @margin-right;
+
+    .@{icon-selector}{
+      color: @icon-font-color;
+    }
+
+    .@{icon-selector}:hover,
+    .@{icon-selector}:focus{
+      color: @icon-font-color_hover;
+    }
+
+    .@{icon-selector}::before {
+      font-size: @icon-font-size;
+    }
+  }
+
   .button-icon-right(
     @icon-selector,
     @icon-margin-left: @oui-button-icon-right-icon-margin-left,
