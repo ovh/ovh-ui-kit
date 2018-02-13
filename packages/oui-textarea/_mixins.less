@@ -1,15 +1,99 @@
 @import '../oui-input/_mixins';
+@import './_variables';
 
 #oui {
-  .textarea-base() {
-    #oui > .input-base();
+  .textarea-base(
+    @selector
+  ) {
+    #oui > .animate();
+    transition-property: border-color, box-shadow, background-color;
+
+    padding: 0;
+    margin: @oui-textarea-margin;
+    border-radius: @oui-textarea-border-radius;
+    box-shadow: @oui-textarea-box-shadow;
+    border: 1px solid @oui-textarea-border-color;
+
+    &__textarea {
+      display: block;
+      width: 100%;
+      resize: none;
+      outline: none;
+      padding: @oui-textarea-field-padding;
+      border: none;
+      background-color: transparent;
+      font-size: @oui-textarea-font-size;
+      line-height: @oui-textarea-line-height;
+      font-weight: @oui-textarea-font-weight;
+      color: @oui-textarea-color;
+
+      &::selection {
+        background: @oui-textarea-selection-background-color;
+        color: @oui-textarea-selection-font-color;
+      }
+    }
+
+    &__footer {
+      display: block;
+      padding: @oui-textarea-footer-padding;
+      border-top: 1px solid @oui-textarea-border-color;
+      text-align: right;
+      font-size: @oui-textarea-footer-font-size;
+      color: @oui-textarea-footer-color;
+    }
+
+    // Set this state when element is focused.
+    &_active {
+      border-color: @oui-textarea-border-color-focus;
+      background-color: @oui-textarea-background-color-focus;
+      box-shadow: @oui-textarea-shadow-focus;
+    }
+
+    &_error {
+      border-color: @oui-textarea-border-color-error;
+      background-color: @oui-textarea-background-color-error;
+      box-shadow: none;
+
+      .@{selector}__footer {
+        border-color: @oui-textarea-border-color-error;
+        color: @oui-textarea-footer-error-color;
+      }
+    }
+
+    &_disabled {
+      background-color: @oui-textarea-background-color-disabled;
+      border: none;
+      box-shadow: none;
+    }
+
+    &_readonly {
+      background-color: @oui-textarea-background-color-readonly;
+      border: none;
+      box-shadow: none;
+    }
+
+    &_xs {
+      .@{selector}__footer {
+        display: none;
+      }
+    }
   }
 
-  .textarea-status() {
+  .textarea-legacy-base() {
+    #oui > .input-base();
+
+    padding: @oui-textarea-field-padding;
+    font-size: @oui-textarea-font-size;
+    line-height: @oui-textarea-line-height;
+    font-weight: @oui-textarea-font-weight;
+    color: @oui-textarea-color;
+  }
+
+  .textarea-legacy-status() {
     #oui > .input-status();
   }
 
-  .textarea-inline() {
+  .textarea-legacy-inline() {
     display: inline-block;
     width: auto;
   }

@@ -3,12 +3,21 @@
 @import './_mixins';
 
 .oui-textarea {
+  @oui-textarea-selector: oui-textarea;
+
   #oui > .textarea-normalize();
-  #oui > .textarea-base();
-  #oui > .textarea-status();
+  #oui > .textarea-base(@oui-textarea-selector);
+  #oui > .field-sizes();
+}
+
+/** Legacy styling */
+textarea.oui-textarea {
+  #oui > .textarea-normalize();
+  #oui > .textarea-legacy-base();
+  #oui > .textarea-legacy-status();
   #oui > .field-sizes();
 
   &_inline {
-    #oui > .textarea-inline();
+    #oui > .textarea-legacy-inline();
   }
 }
