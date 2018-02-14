@@ -148,6 +148,7 @@
   .button-dropdown(
     @icon-selector,
     @icon-size: @oui-button-dropdown-icon-size,
+    @color_disabled: @oui-button-dropdown-color,
     @icon-color: @oui-button-dropdown-icon-color,
     @icon-color_active: @oui-button-dropdown-icon-color_active,
     @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
@@ -183,19 +184,24 @@
     &:focus {
       border-color: @border-color_active;
       background: @background-color_active;
-      box-shadow: @oui-button-dropdown-box-shadow_active;
+      box-shadow: none;
+      outline: none;
 
       .@{icon-selector} {
-        color: @icon-color_active;
+        &::before {
+          color: @icon-color_active;
+        }
       }
     }
 
-    &:focus {
-      box-shadow: @oui-button-dropdown-box-shadow_focus;
-    }
+    &:disabled {
+      color: @color_disabled;
 
-    &:disabled .@{icon-selector} {
-      color: @icon-color_disabled;
+      .@{icon-selector} {
+        &::before {
+          color: @icon-color_disabled;
+        }
+      }
     }
 
     &.open .@{icon-selector} {
