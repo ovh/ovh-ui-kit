@@ -18,6 +18,7 @@
     border-radius: @oui-global-base-radius-medium;
     border: none;
     font-size: @font-size;
+    background-color: @oui-modal-background-color;
 
     &__header {
       position: relative;
@@ -108,7 +109,11 @@
   }
 
   .modal-shadow() {
-    box-shadow: 0 14px 15px @oui-color-info-light;
+    box-shadow: @oui-modal-shadow;
+  }
+
+  .modal-backdrop() {
+    background-color: @oui-modal-backdrop-color;
   }
 
   .modal-icon-base(
