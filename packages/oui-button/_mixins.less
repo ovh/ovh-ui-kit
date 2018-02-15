@@ -133,57 +133,75 @@
     border-radius: 0;
     text-align: left;
     font-weight: @oui-font-regular;
+    background-color: @oui-button-action-menu-background-color;
+    color: @oui-button-action-menu-text-color;
 
     &:focus,
     &:hover {
       #oui > .animate();
 
       background-color: @oui-button-action-menu-background-color_active;
-      color: @oui-button-action-menu-text-color_active;
+      color: @oui-button-action-menu-text-color;
     }
   }
 
   .button-dropdown(
     @icon-selector,
     @icon-size: @oui-button-dropdown-icon-size,
+    @color_disabled: @oui-button-dropdown-color,
     @icon-color: @oui-button-dropdown-icon-color,
     @icon-color_active: @oui-button-dropdown-icon-color_active,
     @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
     @background-color_active: @oui-button-dropdown-background-color_active,
     @border-color_active: @oui-button-dropdown-border-color_active,
-    @padding-right: @oui-button-dropdown-padding-right,
-    @padding-left: @oui-button-dropdown-padding-left
+    @padding: @oui-button-dropdown-padding
   ) {
-    padding-right: @padding-right;
-    padding-left: @padding-left;
+    padding-right: rem-calc(30) + @padding * 0.8;
+    padding-left: @padding;
 
     .@{icon-selector} {
-      width: @icon-size;
-      height: @icon-size;
-      margin-left: @oui-button-icon-right-icon-margin-right;
-      color: @icon-color;
-      font-size: @icon-size;
-      line-height: @icon-size;
+      position: absolute;
+      right: 0;
+      top: 1px;
+      bottom: 1px;
+      width: ~"calc(@{icon-size} * 2.5)";
+      height: auto;
+      margin: auto;
+      text-align: center;
       vertical-align: middle;
+      cursor: pointer;
+      pointer-events: none;
+
+      &::before {
+        display: inline-block;
+        margin-right: @padding * 1.5;
+        color: @oui-color-sapphire;
+        font-size: @icon-size;
+      }
     }
 
     &:active,
     &:focus {
       border-color: @border-color_active;
       background: @background-color_active;
-      box-shadow: @oui-button-dropdown-box-shadow_active;
+      box-shadow: none;
+      outline: none;
 
       .@{icon-selector} {
-        color: @icon-color_active;
+        &::before {
+          color: @icon-color_active;
+        }
       }
     }
 
-    &:focus {
-      box-shadow: @oui-button-dropdown-box-shadow_focus;
-    }
+    &:disabled {
+      color: @color_disabled;
 
-    &:disabled .@{icon-selector} {
-      color: @icon-color_disabled;
+      .@{icon-selector} {
+        &::before {
+          color: @icon-color_disabled;
+        }
+      }
     }
 
     &.open .@{icon-selector} {

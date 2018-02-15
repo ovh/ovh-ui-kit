@@ -1,0 +1,17 @@
+@import './_mixins';
+@import './_normalize';
+
+.oui-ui-select-container {
+  @oui-button-selector: oui-button;
+  @oui-button-dropdown-selector: oui-button_dropdown;
+  @oui-icon-selector: oui-icon;
+  @oui-input-selector: oui-input;
+
+  #oui > .ui-select-normalize();
+  #oui > .ui-select-container-base(
+    @oui-button-selector,
+    @oui-button-dropdown-selector,
+    @oui-icon-selector,
+    @oui-input-selector
+  );
+}
