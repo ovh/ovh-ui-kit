@@ -111,11 +111,12 @@
     @outer-circle-background-color: @oui-radio-outer-circle-background-color,
     @outer-circle-background-color-disabled: @oui-radio-outer-circle-background-color-disabled,
     @outer-circle-border-color-hover: @oui-radio-outer-circle-border-color-hover,
-    @outer-circle-border-color-input-checked-hover: @oui-radio-outer-circle-border-color-input-checked-hover,
+    @outer-circle-border-color-hover-input-checked: @oui-radio-outer-circle-border-color-hover-input-checked,
     @outer-circle-border-color-active: @oui-radio-outer-circle-border-color-active,
     @inner-circle-background-color: @oui-radio-inner-circle-background-color,
     @inner-circle-background-color-active: @oui-radio-inner-circle-background-color-active,
     @inner-circle-background-color-input-checked-disabled: @oui-radio-inner-circle-background-color-input-checked-disabled,
+    @box-shadow_focus: @oui-radio-box-shadow_focus,
     @spacing: 0,
     @outer-circle-size: @oui-radio-outer-circle-size,
     @outer-circle-top: @oui-radio-outer-circle-top,
@@ -198,7 +199,7 @@
     &__input:focus {
       ~ .@{selector}__label-container .@{selector}__label::before,
       &:checked ~ .@{selector}__label-container .@{selector}__label::before {
-        box-shadow: 0 0 3px 1px rgba(102, 199, 214, 0.6);
+        box-shadow: @box-shadow_focus;
         border-color: @outer-circle-border-color-active;
       }
 
@@ -238,15 +239,15 @@
       background-color: @inner-circle-background-color-input-checked-disabled;
     }
 
-    &:hover:not(:active) > &__input:not(:disabled) ~ .@{selector}__label-container .@{selector}__label::before {
+    &__input:not(:disabled) ~ .@{selector}__label-container:hover .@{selector}__label::before {
       border-color: @outer-circle-border-color-hover;
     }
 
-    &:hover:not(:active) &__input:checked:not(:disabled) ~ .@{selector}__label-container .@{selector}__label::before {
-      border-color: @outer-circle-border-color-input-checked-hover;
+    &__input:not(:disabled):checked ~ .@{selector}__label-container:not(:active):hover .@{selector}__label::before {
+      border-color: @outer-circle-border-color-hover-input-checked;
     }
 
-    &:active > &__input:not(:disabled) ~ .@{selector}__label-container .@{selector}__label {
+    &__input:not(:disabled) ~ .@{selector}__label-container:active .@{selector}__label {
       &::before {
         border-color: @outer-circle-border-color-active;
       }
@@ -273,6 +274,7 @@
     @background-checked_disabled: @oui-thumbnail-background-checked_disabled,
     @box-shadow_focus: @oui-thumbnail-box-shadow_focus,
     @border-size: @oui-thumbnail-border-size,
+    @border-size-checked: @oui-thumbnail-border-size-checked,
     @padding: @oui-thumbnail-padding,
     @label-padding-left: @oui-radio-padding-left,
     @outer-circle-size: @oui-radio-outer-circle-size,
@@ -287,7 +289,7 @@
       @outer-circle-size,
       @inner-circle-size,
       @label-padding-left,
-      false
+      true
     );
     .radio-position(
       @selector,
@@ -298,6 +300,8 @@
     );
 
     .@{selector}__label-container {
+      justify-content: start;
+
       #oui > .thumbnail-base(
         @border-color,
         @background,
@@ -307,9 +311,7 @@
     }
 
     .@{selector}__description {
-      padding-top: rem-calc(12);
-      border-top: rem-calc(1) solid #cbd2d7;
-      margin-top: rem-calc(11);
+      padding-top: rem-calc(3);
     }
 
     .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover {
@@ -321,10 +323,23 @@
     }
 
     .@{selector}__input:checked + .@{selector}__label-container {
+      box-shadow: 0 4px 6px 1px @oui-color-info-fade;
+      padding: calc(@padding - @border-size-checked / 2);
+    }
+
+    .@{selector}__input:not(:disabled):checked + .@{selector}__label-container {
       #oui > .thumbnail-base-color(
         @border-color-checked,
         @background-checked,
-        @border-size
+        @border-size-checked
+      )
+    }
+
+    .@{selector}__input:not(:disabled):checked + .@{selector}__label-container:hover {
+      #oui > .thumbnail-base-color(
+        @border-color-checked_hover,
+        @background-checked_hover,
+        @border-size-checked
       )
     }
 
@@ -340,7 +355,7 @@
       #oui > .thumbnail-base-color(
         @border-color-checked_disabled,
         @background-checked_disabled,
-        @border-size
+        @border-size-checked
       )
     }
 
@@ -415,18 +430,12 @@
       .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:hover,
       .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:active,
       .@{selector}__input:checked:not(:disabled) + .@{selector}__label-container .@{selector}__label:focus {
-        color: @@status-font-color;
-
         &::before {
           border-color: @@status-icon-color;
         }
 
         &::after {
           background: @@status-icon-color;
-        }
-
-        + .@{selector}__description {
-          color: @@status-icon-color;
         }
       }
 

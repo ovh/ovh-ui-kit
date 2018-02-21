@@ -264,7 +264,7 @@
 <div class="oui-radio oui-radio_error">
   <input class="oui-radio__input" type="radio" name="oui-radio-6-2" value="oui-radio-6-2" id="oui-radio-6-2" checked="checked" />
   <label class="oui-radio__label-container" for="oui-radio-6-2">
-    <span class="oui-radio__label">Error [Unchecked]</span>
+    <span class="oui-radio__label">Error [Checked]</span>
   </label>
 </div>
 
