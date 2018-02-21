@@ -1,0 +1,19 @@
+@import '../oui-typography/_mixins';
+
+#oui {
+  .select-picker-normalize() {
+    &__label-container {
+      font-weight: inherit;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        box-sizing: border-box;
+      }
+    }
+
+    &__label {
+      #oui > .base-font();
+    }
+  }
+}

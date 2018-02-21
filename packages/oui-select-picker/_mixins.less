@@ -1,0 +1,137 @@
+@import '../oui-radio/_mixins';
+@import '../oui-thumbnail/_mixins';
+@import './_variables';
+
+#oui {
+  .select-picker(
+    @selector
+  ) {
+    #oui > .radio(
+      @selector
+    );
+
+    #oui > .radio-thumbnail(
+      @selector
+    );
+
+    &__value-container {
+      padding-top: @oui-select-picker-value-padding;
+      border-top: rem-calc(1) solid @oui-select-picker-value-border-color;
+      margin-top: rem-calc(10);
+    }
+
+    &__value {
+      color: @oui-select-picker-label-color;
+      display: inline-block;
+      opacity: 0.5;
+      padding-bottom: @oui-select-picker-value-padding;
+      padding-top: @oui-select-picker-value-padding;
+      width: 100%;
+    }
+
+    .oui-ui-select-container .ui-select-match {
+      margin-bottom: 0;
+      text-align: left;
+      width: 100%;
+    }
+
+    .oui-ui-select-container .ui-select-choices {
+      min-width: 100%;
+    }
+
+    &__input:checked ~ .@{selector}__label-container,
+    &__input:disabled ~ .@{selector}__label-container {
+      .@{selector}__value {
+        opacity: 1;
+      }
+    }
+
+    &__input:disabled ~ .@{selector}__label-container {
+      .@{selector}__value-container {
+        border-top-color: @oui-select-picker-value-border-color-disabled;
+      }
+      .@{selector}__value {
+        color: @oui-select-picker-label-color-disabled;
+      }
+    }
+
+    &__input:not(:disabled) ~ .@{selector}__label-container {
+      .ui-select-match {
+        #oui > .thumbnail-base-color(
+          @oui-select-picker-value-border-color,
+          @oui-select-picker-value-background-color,
+          rem-calc(1)
+        );
+
+        & > span,
+        & > i {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &__input:checked ~ .@{selector}__label-container,
+    .oui-ui-select-container.oui-ui-select-container_open {
+      .ui-select-match {
+        background-color: #fff;
+        border-color: @oui-select-picker-value-border-color-checked;
+
+        & > span,
+        & > i {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // stylelint-disable max-nesting-depth
+  .select-picker-status(@index: length(@oui-select-picker-status)) when (@index > 0) {
+    .select-picker-status(@index - 1);
+
+    @selector: oui-select-picker;
+    @status: extract(@oui-select-picker-status, @index);
+    @status-font-color: "oui-color-@{status}-dark";
+    @status-icon-color: "oui-color-@{status}-medium";
+    @status-border-color: "oui-color-@{status}-light";
+    @status-background-color: "oui-color-@{status}-fade";
+
+    &_@{status} {
+      .@{selector}__input:not(:disabled) + .@{selector}__label-container {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+          border-color: @@status-border-color;
+          background: @@status-background-color;
+
+          .@{selector}__label {
+            &::before {
+              border-color: @@status-icon-color;
+            }
+
+            &::after {
+              background: @@status-icon-color;
+            }
+          }
+        }
+
+        .@{selector}__value-container {
+          border-top-color: @@status-border-color;
+        }
+
+        .ui-select-match {
+          background-color: @@status-background-color;
+          border-color: @@status-border-color;
+        }
+      }
+
+      .@{selector}__input:not(:disabled):focus + .@{selector}__label-container .@{selector}__label,
+      .@{selector}__input:checked:not(:disabled):focus + .@{selector}__label-container .@{selector}__label {
+        &::before {
+          box-shadow: 0 0 3px 1px @@status-border-color;
+        }
+      }
+    }
+  }
+  // stylelint-enable max-nesting-depth
+}

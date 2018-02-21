@@ -1,0 +1,10 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-select-picker {
+  @oui-select-picker-selector: oui-select-picker;
+
+  #oui > .select-picker-normalize();
+  #oui > .select-picker(@oui-select-picker-selector);
+  #oui > .select-picker-status();
+}
