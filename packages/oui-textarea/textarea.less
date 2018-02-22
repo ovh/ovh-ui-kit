@@ -7,6 +7,7 @@
 
   #oui > .textarea-normalize();
   #oui > .textarea-base(@oui-textarea-selector);
+  #oui > .textarea-error(@oui-textarea-selector);
   #oui > .field-sizes();
 }
 
@@ -14,8 +15,11 @@
 textarea.oui-textarea {
   #oui > .textarea-normalize();
   #oui > .textarea-legacy-base();
-  #oui > .textarea-legacy-status();
   #oui > .field-sizes();
+
+  &_error {
+    #oui > .textarea-legacy-error();
+  }
 
   &_inline {
     #oui > .textarea-legacy-inline();
