@@ -255,6 +255,59 @@
         background-color: @inner-circle-background-color-active;
       }
     }
+
+    &_toggle {
+      &:first-of-type .@{selector}__label_toggle {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:last-of-type .@{selector}__label_toggle {
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    &__label_toggle {
+      height:rem-calc(40);
+      display: inline-block;
+      background-color: #FFFFFF;
+      color: @oui-color-sapphire;
+      padding: 1rem 2rem 0rem;
+      border: 1px solid @oui-color-dusty;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__input_toggle {
+      #oui > .visually-hidden();
+    }
+
+    &__input_toggle:hover ~ .@{selector}__label-container_toggle .@{selector}__label_toggle {
+      background-color: @oui-color-concrete;
+    }
+
+    &__input_toggle:checked ~ .@{selector}__label-container_toggle .@{selector}__label_toggle {
+      background-color: @oui-color-sapphire;
+      color: #FFFFFF;
+      cursor: default;
+    }
+
+    &__input_toggle:not(:checked) ~ .@{selector}__label-container_toggle .@{selector}__label_toggle {
+      box-shadow: inset 2px 3px 1px 0 @oui-color-nurse;
+    }
+
+    &__input_toggle:disabled:checked ~ .@{selector}__label-container_toggle .@{selector}__label_toggle {
+      background-color: #DDDEDF;
+      color: @oui-color-dusty;
+      cursor: default;
+    }
+
+    &__input_toggle:disabled ~ .@{selector}__label-container_toggle .@{selector}__label_toggle {
+      cursor: default;
+      background-color: @oui-color-concrete;
+      color: @oui-color-silver;
+    }
   }
 
   .radio-thumbnail (
