@@ -1,0 +1,80 @@
+@import './_normalize';
+
+.oui-radio-toggle-group {
+  display: flex;
+  max-width: rem-calc(300);
+}
+
+.oui-radio-toggle {
+
+  #oui > .radio-toggle-normalize();
+
+  flex: 1;
+
+  &__label {
+    line-height: 1.2;
+    font-size: @oui-radio-label-font-size;
+  }
+
+  &__label {
+    width: 100%;
+    text-align: center;
+    height: rem-calc(40);
+    display: inline-block;
+    background-color: @oui-color-white;
+    color: @oui-color-sapphire;
+    padding: rem-calc(10) rem-calc(20) rem-calc(0);
+    border: 1px solid @oui-color-dusty;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &:first-of-type &__label {
+    border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
+    border-left-width: 1px;
+    border-right-width: 0px;
+  }
+
+  &:last-of-type &__label {
+    border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
+    border-right-width: 1px;
+    border-left-width: 0px;
+  }
+
+  &__label-container {
+    width: 100%;
+  }
+
+  &__input {
+    #oui > .visually-hidden();
+  }
+
+  &__input:hover ~ &__label-container &__label {
+    background-color: @oui-color-concrete;
+  }
+
+  &__input:checked ~ &__label-container &__label {
+    background-color: @oui-color-sapphire;
+    color: @oui-color-white;
+    cursor: default;
+  }
+
+  &__input:not(:checked) ~ &__label-container &__label {
+    box-shadow: inset 0px 3px 1px 0 @oui-color-nurse;
+  }
+
+  &__input:disabled:checked ~ &__label-container &__label {
+    background-color: @oui-color-ironlight;
+    color: @oui-color-dusty;
+    cursor: default;
+  }
+
+  &__input:disabled ~ &__label-container &__label {
+    cursor: default;
+    background-color: @oui-color-concrete;
+    color: @oui-color-silver;
+  }
+}
+
