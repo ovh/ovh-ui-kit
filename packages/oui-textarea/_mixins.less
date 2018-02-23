@@ -54,9 +54,7 @@
 
     // Set this state when element is focused.
     &_active {
-      border-color: @oui-textarea-border-color-focus;
-      background-color: @oui-textarea-background-color-focus;
-      box-shadow: @oui-textarea-shadow-focus;
+      .textarea-focus-style();
     }
 
     &_disabled {
@@ -86,6 +84,15 @@
     }
   }
 
+  .textarea-focus-style() {
+    #oui > .animate();
+
+    border-color: @oui-textarea-border-color-focus;
+    outline: none;
+    background-color: @oui-textarea-background-color-focus;
+    box-shadow: @oui-textarea-shadow-focus;
+  }
+
   .textarea-error-style(
     @selector
   ) {
@@ -105,6 +112,20 @@
     line-height: @oui-textarea-line-height;
     font-weight: @oui-textarea-font-weight;
     color: @oui-textarea-color;
+
+    &::selection {
+      background: @oui-textarea-selection-background-color;
+      color: @oui-textarea-selection-font-color;
+    }
+
+    &::-moz-selection {
+      background: @oui-textarea-selection-background-color;
+      color: @oui-textarea-selection-font-color;
+    }
+
+    &:focus {
+      .textarea-focus-style();
+    }
   }
 
   .textarea-legacy-error() {
