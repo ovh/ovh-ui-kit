@@ -12,6 +12,12 @@ oui-textarea is a package which provides styles for the textarea component.
 
 ## Usage
 
+### Native
+
+```html:preview
+<textarea class="oui-textarea">Textarea text</textarea>
+```
+
 ### Basic
 
 ```html:preview
