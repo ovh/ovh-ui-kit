@@ -108,6 +108,10 @@
       user-select: none;
     }
 
+    &__description:not(:last-child) {
+      margin-bottom: rem-calc(5);
+    }
+
     &__input {
       #oui > .visually-hidden();
     }
@@ -229,6 +233,7 @@
     @background-checked_disabled: @oui-thumbnail-background-checked_disabled,
     @box-shadow_focus: @oui-thumbnail-box-shadow_focus,
     @border-size: @oui-thumbnail-border-size,
+    @border-size-checked: @oui-thumbnail-border-size-checked,
     @padding: @oui-thumbnail-padding
   ) {
     .checkbox-size(
@@ -240,6 +245,10 @@
     );
 
     .@{checkbox-selector}__label-container {
+      position: relative;
+      justify-content: start;
+      height: 100%;
+
       #oui > .thumbnail-base(
         @border-color,
         @background,
@@ -255,8 +264,7 @@
       margin-top: rem-calc(6);
     }
 
-    .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover,
-    .@{checkbox-selector}__input:checked:not(:disabled) + .@{checkbox-selector}__label-container:hover {
+    .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover {
       #oui > .thumbnail-base-color(
         @border-color_hover,
         @background_hover,
@@ -265,10 +273,23 @@
     }
 
     .@{checkbox-selector}__input:checked + .@{checkbox-selector}__label-container {
+      box-shadow: 0 4px 6px 1px @oui-color-info-fade;
+      padding: calc(@padding - @border-size-checked / 2);
+    }
+
+    .@{checkbox-selector}__input:not(:disabled):checked + .@{checkbox-selector}__label-container {
       #oui > .thumbnail-base-color(
         @border-color-checked,
         @background-checked,
-        @border-size
+        @border-size-checked
+      )
+    }
+
+    .@{checkbox-selector}__input:not(:disabled):checked + .@{checkbox-selector}__label-container:hover {
+      #oui > .thumbnail-base-color(
+        @border-color-checked_hover,
+        @background-checked_hover,
+        @border-size-checked
       )
     }
 
@@ -284,11 +305,11 @@
       #oui > .thumbnail-base-color(
         @border-color-checked_disabled,
         @background-checked_disabled,
-        @border-size
+        @border-size-checked
       )
     }
 
-    .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container {
+    .@{checkbox-selector}__input:not(:disabled):focus + .@{checkbox-selector}__label-container .@{checkbox-selector}__label::before {
       box-shadow: @box-shadow_focus;
     }
   }
