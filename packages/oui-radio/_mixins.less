@@ -151,6 +151,8 @@
 
     &__label {
       position: relative;
+      font-weight: @oui-font-semibold;
+      margin-bottom: rem-calc(5);
     }
 
     &,
@@ -182,14 +184,18 @@
     }
 
     &__label,
-    &__description {
+    &__description,
+    &__section {
       display: inline-block;
       width: 100%;
       color: @label-color;
     }
 
-    &__label {
-      font-weight: @oui-font-semibold;
+    &__description,
+    &__section {
+      &:not(:last-child) {
+        margin-bottom: rem-calc(5);
+      }
     }
 
     &__input {
@@ -300,7 +306,9 @@
     );
 
     .@{selector}__label-container {
+      position: relative;
       justify-content: start;
+      height: 100%;
 
       #oui > .thumbnail-base(
         @border-color,
@@ -310,8 +318,17 @@
       );
     }
 
-    .@{selector}__description {
-      padding-top: rem-calc(3);
+    .@{selector}__section {
+      padding-top: rem-calc(9);
+      border-top: rem-calc(1) solid @border-color;
+      margin-top: rem-calc(4);
+    }
+
+    &.@{selector}_m .@{selector}__description {
+      padding-top: rem-calc(12);
+      padding-left: 0;
+      border-top: 1px solid @oui-color-silver;
+      margin-top: rem-calc(6);
     }
 
     .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover {
@@ -348,7 +365,11 @@
         @border-color_disabled,
         @background_disabled,
         @border-size
-      )
+      );
+
+      .@{selector}__section {
+        border-top-color: @oui-select-picker-value-border-color-disabled;
+      }
     }
 
     .@{selector}__input:checked:disabled + .@{selector}__label-container {
@@ -458,7 +479,8 @@
           border-color: @@status-border-color;
           background: @@status-background-color;
 
-          .@{selector}__description {
+          .@{selector}__description,
+          .@{selector}__section {
             border-color: @@status-border-color;
           }
         }

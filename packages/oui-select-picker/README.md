@@ -17,7 +17,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
   <input class="oui-select-picker__input" type="radio" name="oui-select-picker-1-1" value="oui-select-picker-1-1" id="oui-select-picker-1-1" checked />
   <label class="oui-select-picker__label-container" for="oui-select-picker-1-1">
     <span class="oui-select-picker__label">Checked</span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -27,7 +27,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
   <input class="oui-select-picker__input" type="radio" name="oui-select-picker-1-2" value="oui-select-picker-1-2" id="oui-select-picker-1-2" />
   <label class="oui-select-picker__label-container" for="oui-select-picker-1-2">
     <span class="oui-select-picker__label">Unchecked</span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -37,7 +37,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
   <input class="oui-select-picker__input" type="radio" name="oui-select-picker-1-3" value="oui-select-picker-1-3" id="oui-select-picker-1-3" checked disabled />
   <label class="oui-select-picker__label-container" for="oui-select-picker-1-3">
     <span class="oui-select-picker__label">Disabled [Checked]</span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -47,7 +47,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
   <input class="oui-select-picker__input" type="radio" name="oui-select-picker-1-4" value="oui-select-picker-1-4" id="oui-select-picker-1-4" disabled />
   <label class="oui-select-picker__label-container" for="oui-select-picker-1-4">
     <span class="oui-select-picker__label">Disabled [Unchecked]</span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -64,7 +64,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
     <span class="oui-select__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -90,7 +90,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
     <span class="oui-select__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -103,7 +103,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
     <span class="oui-select__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -117,7 +117,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
   <input class="oui-select-picker__input" type="radio" name="oui-select-picker-3-1" value="oui-select-picker-3-1" id="oui-select-picker-3-1" />
   <label class="oui-select-picker__label-container" for="oui-select-picker-3-1">
     <span class="oui-select-picker__label">Error [Unchecked]</span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -127,7 +127,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
   <input class="oui-select-picker__input" type="radio" name="oui-select-picker-3-2" value="oui-select-picker-3-2" id="oui-select-picker-3-2" checked />
   <label class="oui-select-picker__label-container" for="oui-select-picker-3-2">
     <span class="oui-select-picker__label">Error [Checked]</span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -140,7 +140,7 @@ oui-select-picker is a package which provides styles for the select-picker compo
     <span class="oui-select__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque est ipsum, condimentum ornare condimentum quis, ultrices sit amet augue. Phasellus mollis dui quis nunc ultrices tempus. Praesent dignissim, felis in ornare euismod, augue elit mattis nibh, a tincidunt nunc enim et nulla.
     </span>
-    <span class="oui-select-picker__value-container">
+    <span class="oui-select-picker__value-container oui-select-picker__section">
       <span class="oui-select-picker__value">Value</span>
     </span>
   </label>
@@ -191,10 +191,11 @@ Inner elements:
 | --------------------- | ---------------------------------------- |
 | __input[type=radio]__ | `oui-select-picker__input`               |
 | __label__             | `oui-select-picker__label-container`     |
-| __span__              | `oui-oui-select-picker__label`           |
-| __span__              | `oui-oui-select-picker__description`     |
-| __span__              | `oui-oui-select-picker__value-container` |
-| __span__              | `oui-oui-select-picker__value`           |
+| __span__              | `oui-select-picker__label`               |
+| __span__              | `oui-select-picker__description`         |
+| __span__              | `oui-select-picker__section`             |
+| __span__              | `oui-select-picker__value-container`     |
+| __span__              | `oui-select-picker__value`               |
 
 ### Modifier
 
