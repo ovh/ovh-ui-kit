@@ -1,14 +1,21 @@
 @import '../oui-checkbox/_mixins';
 @import '../oui-responsive/_mixins';
 @import '../oui-select/_mixins';
+@import '../oui-ui-select/_mixins';
+@import '../oui-textarea/_mixins';
 @import './_variables';
 
 #oui {
   .field-base(
     @selector,
+    @button-selector,
     @label-selector,
+    @input-group-selector,
     @checkbox-selector,
     @select-selector,
+    @ui-select-selector,
+    @textarea-selector,
+    @custom-component-selector,
     @icon-error-selector: @oui-field-error-icon-selector,
     @form-controls: @oui-global-base-form-controls
   ) {
@@ -51,21 +58,24 @@
      */
     &-control, &__control {
       width: @oui-field-control-default-size;
+      margin-bottom: @oui-field-control-spacing;
       .field-sizes();
 
+      // Native form controls
       .controls(@index: length(@form-controls)) when(@index > 0) {
         .controls(@index - 1);
         @control: extract(@form-controls, @index);
 
         > @{control} {
-          margin-bottom: @oui-field-control-spacing;
+          margin-bottom: 0;
         }
       }
       .controls();
 
       // Specific cases
-      > oui-numeric > .oui-input-group {
-        margin-bottom: @oui-field-control-spacing;
+      > oui-numeric > .@{input-group-selector},
+      > oui-select > .@{ui-select-selector} {
+        margin-bottom: 0;
       }
     }
 
@@ -117,6 +127,16 @@
 
       .@{select-selector} {
         #oui > .select-error-style();
+      }
+
+      // Custom components specificities
+      .@{ui-select-selector} {
+        #oui > .ui-select-container-error-style();
+      }
+
+      .@{textarea-selector} {
+        background-color: pink;
+        #oui > .textarea-error-style(@textarea-selector);
       }
     }
   }

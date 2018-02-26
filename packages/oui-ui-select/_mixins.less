@@ -1,3 +1,4 @@
+@import '../oui-button/_mixins';
 @import './_variables';
 
 #oui {
@@ -8,6 +9,7 @@
     @input-selector
   ) {
     position: relative;
+    margin: @oui-ui-select-margin;
 
     &.oui-ui-select-container_open {
       .ui-select-choices {
@@ -20,7 +22,7 @@
     }
 
     .@{button-dropdown-selector} {
-      margin: @oui-ui-select-button-dropdown-margin;
+      text-align: left;
       max-width: @oui-ui-select-button-dropdown-max-width;
     }
 
@@ -43,6 +45,14 @@
       outline: 0;
       left: 0;
       top: 0;
+    }
+  }
+
+  .ui-select-container-error-style(
+    @button-selector: @oui-ui-select-button-dropdown-selector
+  ) {
+    .@{button-selector} {
+      #oui > .button-dropdown-error();
     }
   }
 

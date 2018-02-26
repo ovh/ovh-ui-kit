@@ -209,6 +209,18 @@
     }
   }
 
+  .button-dropdown-error() {
+    background-color: @oui-button-error-background-color;
+    border: 1px @oui-button-error-border-color solid;
+    color: @oui-button-error-text-color;
+
+    .oui-icon {
+      &::before {
+        color: @oui-button-error-text-color;
+      }
+    }
+  }
+
   .button-icon-base(
     @icon-selector,
     @icon-size: @oui-button-icon-icon-size,
