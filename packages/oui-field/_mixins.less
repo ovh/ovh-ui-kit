@@ -2,6 +2,7 @@
 @import '../oui-responsive/_mixins';
 @import '../oui-select/_mixins';
 @import '../oui-ui-select/_mixins';
+@import '../oui-textarea/_mixins';
 @import './_variables';
 
 #oui {
@@ -13,6 +14,7 @@
     @checkbox-selector,
     @select-selector,
     @ui-select-selector,
+    @textarea-selector,
     @custom-component-selector,
     @icon-error-selector: @oui-field-error-icon-selector,
     @form-controls: @oui-global-base-form-controls
@@ -130,6 +132,11 @@
       // Custom components specificities
       .@{ui-select-selector} {
         #oui > .ui-select-container-error-style();
+      }
+
+      .@{textarea-selector} {
+        background-color: pink;
+        #oui > .textarea-error-style(@textarea-selector);
       }
     }
   }
