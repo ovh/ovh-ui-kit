@@ -11,8 +11,16 @@
     "test": "echo \"no tests for this project\"",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
-    "version": "npm run build && git add dist packages/oui-icons/_icons.less packages/oui/_version.less",
-    "postversion": "git push && git push --tags"
+    "commit": "npm-scripts-config commit",
+    "commitmsg": "npm-scripts-config commitmsg",
+    "version": "npm run build && git add dist packages/oui-icons/_icons.less packages/oui/_version.less && npm-scripts-config version",
+    "postversion": "git push && git push --tags",
+    "preview-changelog": "npm-scripts-config preview-changelog"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "less-plugin-remcalc": "^0.0.1"
@@ -23,6 +31,8 @@
     "icon-font-generator": "^1.1.1",
     "less": "^2.7.2",
     "mkdirp": "^0.5.1",
+    "npm-scripts-config": "^0.0.1",
+    "npm-scripts-conventional-changelog": "^0.1.0",
     "rimraf": "^2.5.4",
     "stylefmt": "^6.0.0",
     "stylelint": "^8.4.0"

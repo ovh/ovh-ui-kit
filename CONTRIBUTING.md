@@ -80,4 +80,4 @@ For those using npm instead of yarn here is a list of equivalences: <https://yar
 
 ## Commits
 
-All commits in this project must follow this specific message convention: <https://gist.github.com/stephenparish/9941e89d80e2bc58a153>
+All commits in this project must follow this specific message convention: <https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit>
