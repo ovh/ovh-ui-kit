@@ -15,25 +15,21 @@
     );
 
     &__picture-container {
-      background-color: #fff;
-      border-radius: 50%;
       display: block;
-      font-size: rem-calc(30);
       max-width: @oui-select-picker-padding * 2;
-      padding: rem-calc(5);
       position: absolute;
       right: @oui-select-picker-padding;
       text-align: center;
       top: @oui-select-picker-padding / 2;
-      width: 12%;
+      width: 10%;
 
       .@{selector}__picture {
-        display: block;
+        display: inline-block;
         max-width: 100%;
       }
 
       & + .@{selector}__label {
-        padding-right: ~"calc(12% + 1rem)";
+        padding-right: ~"calc(10% + 1rem)";
 
         & + .@{selector}__section {
           margin-top: rem-calc(14);
@@ -70,6 +66,10 @@
     &__input:disabled ~ .@{selector}__label-container {
       .@{selector}__value {
         color: @oui-select-picker-label-color-disabled;
+      }
+      .@{selector}__picture-container {
+        opacity: 0.3;
+        filter: grayscale(0.6);
       }
     }
 
