@@ -46,16 +46,6 @@
       width: 100%;
     }
 
-    .oui-ui-select-container .ui-select-match {
-      margin-bottom: 0;
-      text-align: left;
-      width: 100%;
-    }
-
-    .oui-ui-select-container .ui-select-choices {
-      min-width: 100%;
-    }
-
     &__input:checked ~ .@{selector}__label-container,
     &__input:disabled ~ .@{selector}__label-container {
       .@{selector}__value {
@@ -98,6 +88,27 @@
         & > i {
           opacity: 1;
         }
+      }
+    }
+
+    // sub components exceptions
+    .oui-select,
+    .oui-ui-select-container {
+      margin-bottom: 0;
+    }
+
+    .oui-select > .oui-icon {
+      background-color: inherit;
+    }
+
+    .oui-ui-select-container {
+      .ui-select-match {
+        margin-bottom: 0;
+        text-align: left;
+        width: 100%;
+      }
+      .ui-select-choices {
+        min-width: 100%;
       }
     }
   }
