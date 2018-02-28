@@ -1,6 +1,6 @@
 # oui-select-picker
 
-<component-status cx-design="complete" ux="rc"></component-status>
+<component-status cx-design="complete" ux="beta"></component-status>
 
 oui-select-picker is a package which provides styles for the select-picker component.
 
