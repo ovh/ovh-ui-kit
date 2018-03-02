@@ -2,7 +2,7 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-## Main colors
+## General colors
 
 <div class="container-fluid row">
   <div class="col-xs-12 col-sm-3 col-md-2">
@@ -166,7 +166,7 @@
   </div>
 </div>
 
-## Univers colors
+## Product colors
 
 <div class="container-fluid row">
   <div class="col-xs-12 col-sm-3 col-md-2">
@@ -260,7 +260,7 @@
   </div>
 </div>
 
-## Alert colors
+## Message colors
 
 <div class="container-fluid row">
   <div class="col-xs-12 col-sm-3 col-md-2">
