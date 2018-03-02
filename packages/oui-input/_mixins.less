@@ -12,6 +12,7 @@
     @background-color: @oui-input-background-color,
     @border-color: @oui-input-border-color,
     @font-color: @oui-input-font-color,
+    @border-color-hover: @oui-input-border-color-hover,
     @background-color-focus: @oui-input-background-color-focus,
     @border-color-focus: @oui-input-border-color-focus,
     @background-color-disabled: @oui-input-background-color-disabled,
@@ -52,6 +53,10 @@
     &::-moz-selection {
       background: @selection-background-color;
       color: @selection-font-color;
+    }
+
+    &:hover {
+      border-color: @border-color-hover;
     }
 
     &:focus {

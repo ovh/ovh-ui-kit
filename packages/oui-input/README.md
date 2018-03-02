@@ -59,12 +59,24 @@ Define the base styles for an input.
 
 ```less
 #oui > .input(
-  @font-color: Color;
-  @font-size: Number;
-  @font-weight: Number;
-  @padding: Number;
-  @margin: Number;
-  @border-color: Color
+  @background-color: Color,
+  @border-color: Color,
+  @font-color: Color,
+  @border-color-hover: Color,
+  @background-color-focus: Color,
+  @border-color-focus: Color,
+  @background-color-disabled: Color,
+  @border-color-disabled: Color,
+  @font-color-disabled: Color,
+  @background-color-read-only: Color,
+  @border-color-read-only: Color,
+  @font-color-read-only: Color,
+  @selection-background-color: Color,
+  @selection-font-color: Color,
+  @font-size: Number,
+  @font-weight: Number,
+  @padding: Number,
+  @margin: Number
 );
 ```
 
