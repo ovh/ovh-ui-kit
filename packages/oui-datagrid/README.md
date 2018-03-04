@@ -2,8 +2,6 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-datagrid is a package which provides styles for the datagrid component.
-
 ## Installation
 
 ```less

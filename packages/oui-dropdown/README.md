@@ -2,7 +2,6 @@
 
 <component-status cx-design="partial" ux="prototype"></component-status>
 
-oui-dropdown is a package which provides styles for dropdown menus.
 
 ## Installation
 
@@ -12,4 +11,4 @@ oui-dropdown is a package which provides styles for dropdown menus.
 
 ## Usage
 
-See <a href="#!/oui-angular/dropdown">ovh-ui-angular dropdown component</a>.
+See <a href="#!/oui-angular/dropdown">Dropdown component</a>.

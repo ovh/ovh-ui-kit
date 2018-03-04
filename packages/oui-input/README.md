@@ -2,8 +2,6 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-input is a package which provides styles for the input component.
-
 ## Installation
 
 ```less
@@ -42,78 +40,3 @@ The field will be formatted at the output (when entered / modified) or displayed
 <input type="text" class="oui-input oui-input_l" value="L">
 <input type="text" class="oui-input oui-input_xl" value="XL">
 ```
-
-## Mixins
-
-```less
-  @import 'oui-input/_mixins';
-```
-
-### .input-base
-
-Define the base styles for an input.
-
-```less
-#oui > .input-base();
-```
-
-```less
-#oui > .input(
-  @background-color: Color,
-  @border-color: Color,
-  @font-color: Color,
-  @border-color-hover: Color,
-  @background-color-focus: Color,
-  @border-color-focus: Color,
-  @background-color-disabled: Color,
-  @border-color-disabled: Color,
-  @font-color-disabled: Color,
-  @background-color-read-only: Color,
-  @border-color-read-only: Color,
-  @font-color-read-only: Color,
-  @selection-background-color: Color,
-  @selection-font-color: Color,
-  @font-size: Number,
-  @font-weight: Number,
-  @padding: Number,
-  @margin: Number
-);
-```
-
-### .input-status
-
-Define the styles for input warning and input error.
-
-```less
-#oui > .input-status();
-```
-
-```less
-#oui > .input-status(
-  status: Class[]
-);
-```
-
-### .input-inline
-
-`.oui-input` don't give you an inline element by default. If you want an inlined input, you can use this mixin.
-
-```less
-#oui > .input-inline();
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-input` (top-level element).
-
-### Modifier
-
-The provided modifiers are:
-
-| Class                 | Description                                 |
-| --------------------- | ------------------------------------------- |
-| `oui-input_warning`   | Make the input looks like one in warning    |
-| `oui-input_error`     | Make the input looks like one in error      |
-| `oui-input_inline`    | Make the input inlined                      |

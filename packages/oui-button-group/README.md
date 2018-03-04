@@ -1,8 +1,6 @@
-# oui-input-group
+# oui-button-group
 
 <component-status cx-design="complete" ux="prototype"></component-status>
-
-oui-button-group is a package which provide styles to group buttons together.
 
 ## Installation
 
@@ -40,20 +38,4 @@ Guidelines :
     <button class="oui-button oui-button_primary">Button 2</button>
   </div>
 </div>
-```
-
-## Mixins
-
-```less
-  @import 'oui-button-group/_mixins';
-```
-
-### .button-group-base
-
-Define the base styles for an input-group.
-
-```less
-#oui > .button-group-base(
-  @oui-button-selector
-);
 ```

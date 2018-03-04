@@ -2,8 +2,6 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-back-button is a package which provide styles for the back-button component.
-
 ## Installation
 
 ```less
@@ -11,7 +9,6 @@ oui-back-button is a package which provide styles for the back-button component.
 ```
 
 ## Usage
-
 
 ```html:preview
 <div class="oui-back-button">
@@ -24,28 +21,4 @@ oui-back-button is a package which provide styles for the back-button component.
 ```
 
 
-## Mixins
 
-```less
-@import 'oui-back-button/_mixins';
-```
-
-### .back-button-base
-
-Define the base styles for a back-button.
-
-```less
-#oui > .back-button-base();
-```
-
-```less
-#oui > .button-base(
-  @margin-bottom: Number
-);
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-back-button` (top-level element).

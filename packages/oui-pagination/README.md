@@ -2,8 +2,6 @@
 
 <component-status cx-design="partial" ux="prototype"></component-status>
 
-oui-pagination is a package which provide styles for the pagination component.
-
 ## Installation
 
 ```less

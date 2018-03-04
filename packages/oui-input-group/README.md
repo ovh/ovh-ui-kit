@@ -4,7 +4,6 @@
 
 > **Important:** This component is broken on IE9, IE10 and IE11
 
-oui-input-group is a package which provide styles to group inputs together.
 
 ## Installation
 
@@ -117,80 +116,3 @@ oui-input-group is a package which provide styles to group inputs together.
   </button>
 </div>
 ```
-
-## Mixins
-
-```less
-  @import 'oui-input-group/_mixins';
-```
-
-### .input-group-base
-
-Define the base styles for an input-group.
-
-```less
-#oui > .input-group-base(
-  @oui-input-selector,
-  @oui-button-selector
-);
-```
-
-```less
-#oui > .input-group-base(
-  @button-background-color: Color,
-  @button-padding: Number
-);
-```
-
-### .input-group-button
-
-Define the base styles for an input-group with a button.
-
-```less
-#oui > .input-group-button(
-  @oui-input-selector,
-  @oui-button-selector,
-  @oui-icon-selector
-);
-```
-
-```less
-#oui > .input-group-button();
-```
-
-### .input-group-inline
-
-`.oui-input-group` don't give you an inline element by default. If you want an inlined input group, you can use this mixin.
-
-```less
-#oui > .input-group-inline();
-```
-
-### .input-group-numeric
-
-Define the base styles for an input-group for a numeric field.
-
-```less
-.input-group-numeric(
-  @icon-selector: Class,
-  @input-selector: Class,
-  @width: Number,
-  @icon-size: Number
-)
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-input-group` (top-level element).
-
-### Modifier
-
-The provided modifiers are:
-
-| Class                       | Description                                         |
-| --------------------------- | --------------------------------------------------- |
-| `oui-input-group_button`    | Make the button inside group appear inside input    |
-| `oui-input-group_inline`    | Make the input group inlined                        |
-| `oui-input-group_numeric`   | Make the input group styled like a numeric field    |

@@ -4,6 +4,14 @@
 
 oui-action-menu is a package which provide styles action buttons in a dropdown.
 
+## Installation
+
+```less
+  @import 'oui-action-menu/action-menu';
+```
+
+## Usage
+
 ```html:preview
 <div style="border: 1px #BDBDBD solid; width: 250px" class="oui-doc-preview-only-keep-children">
   <div role="menu" class="oui-action-menu">

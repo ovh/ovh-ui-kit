@@ -2,12 +2,10 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-field is a package which provides styles for form fields.
-
 ## Installation
 
 ```less
-  @import 'oui-form/form';
+  @import 'oui-field/field';
 ```
 
 ## Rules

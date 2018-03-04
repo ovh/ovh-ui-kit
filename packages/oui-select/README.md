@@ -2,8 +2,6 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-select is a package which provides styles for the select component.
-
 ## Installation
 
 ```less
@@ -103,65 +101,3 @@ oui-select is a package which provides styles for the select component.
   <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
 </label>
 ```
-
-## Mixins
-
-```less
-  @import 'oui-select/_mixins';
-```
-
-### .select
-
-Define the base styles for a select.
-
-```less
-  #oui > .select();
-```
-
-```less
-  #oui > .select(
-    @border-color: Color,
-    @font-color: Color,
-    @font-size: Number,
-    @font-weight: Number,
-    @icon-size: Number,
-    @icon-position-right: Number,
-    @padding: Number
-  );
-```
-
-### .select-status
-
-Define the styles for select warning and select error.
-
-```less
-#oui > .select-status();
-```
-
-```less
-#oui > .select-status(
-  @icon-selector: Class
-);
-```
-
-### .select-inline
-
-`.oui-select` don't give you an inline element by default. If you want an inlined input, you can use this mixin.
-
-```less
-#oui > .select-inline();
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-select` (top-level element).
-
-### Modifier
-
-The provided modifiers are:
-
-| Class                  | Description                                 |
-| ---------------------- | ------------------------------------------- |
-| `oui-select_inline`    | Make the select inlined                     |
