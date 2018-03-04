@@ -2,8 +2,6 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-label is a package which provides styles for the label component.
-
 ## Installation
 
 ```less
@@ -30,33 +28,3 @@ The label can be found over its related input field. However, these labels are p
   <i class="oui-icon oui-icon-chevron-down"></i>
 </div>
 ```
-
-## Mixins
-
-```less
-  @import 'oui-label/_mixins';
-```
-
-### .label-base
-
-Define the base styles for an label.
-
-```less
-#oui > .label();
-```
-
-```less
-#oui > .label(
-  @font-color: Color,
-  @font-size: Number,
-  @font-weight: Number,
-  @padding: Number,
-  @margin: Number
-);
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-label` (top-level element).

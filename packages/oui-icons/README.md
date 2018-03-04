@@ -2,8 +2,6 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-icons is a package which provide styles for the icons.
-
 ## Installation
 
 ```less
@@ -29,55 +27,6 @@ oui-icons is a package which provide styles for the icons.
 <i class="oui-icon oui-icon-success_circle oui-icon_bicolor"></i>
 <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor"></i>
 ```
-
-## Mixins
-
-```less
-@import 'oui-icons/_mixins';
-```
-
-### .icon
-
-Define the base styles for an icon.
-
-```less
-#oui > .icon();
-```
-
-```less
-#oui > .icon (
-  @icon-size: Number,
-  @icon-color: Color,
-  @spacing: Number,
-  @padding: Number
-);
-```
-
-### .icon-circle
-
-Define the base styles for a circled icon.
-
-```less
-#oui > .icon-circle(
-  @icon-size: Number
-);
-```
-
-### .icon-bicolor
-
-Will stylize your icon as a bicolor one.
-
-```less
-#oui > .icon-bicolor(
-  @icon-char-color: Color
-);
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-icon` (top-level element).
 
 ## Available icons
 

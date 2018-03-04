@@ -6,8 +6,6 @@
 
 > As CX requirements this progress tracker is on one line and can't take too much item and too long labels
 
-oui-progress-tracker is a package which provide styles for the progress-tracker component.
-
 ## Installation
 
 ```less
@@ -50,38 +48,3 @@ oui-progress-tracker is a package which provide styles for the progress-tracker 
   </li>
 </ul>
 ```
-
-## Mixins
-
-```less
-@import 'oui-progress-tracker/_mixins';
-```
-
-### .progress-tracker
-
-Define the base styles for a progress-tracker.
-
-```less
-#oui > .progress-tracker();
-```
-
-```less
-#oui > .progress-tracker(
-  @selector: Class,
-  @font-color: Color,
-  @font-color-active: Color,
-  @font-color-complete: Color,
-  @font-size: Number,
-  @item-max-width: Number,
-  @item-padding: Number,
-  @container-background-color: Color,
-  @container-height: Number,
-  @container-margin: Number
-);
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-progress-tracker` (top-level element).

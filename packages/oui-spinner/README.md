@@ -2,8 +2,6 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-oui-spinner is a package which provide styles for the spinner component.
-
 ## Installation
 
 ```less
@@ -44,74 +42,3 @@ Guideline: Use large format when loading a whole page.
   </div>
 </div>
 ```
-
-## Mixins
-
-```less
-@import 'oui-spinner/_mixins';
-```
-
-### .spinner-base
-
-Define the base styles for a spinner.
-
-```less
-#oui > .spinner-base();
-```
-
-### .spinner-s
-
-Will stylize your spinner as a small one.
-
-```less
-#oui > .spinner-s();
-```
-
-```less
-#oui > .spinner-s(
-  @selector: Class,
-  @size: Number,
-  @spacing: Number,
-  @speed: Number (ms)
-);
-```
-
-### .spinner-m
-
-Will stylize your spinner as a medium one.
-
-```less
-#oui > .spinner-m();
-```
-
-```less
-#oui > .spinner-m(
-  @selector: Class,
-  @size: Number,
-  @spacing: Number,
-  @speed: Number (ms)
-);
-```
-
-### .spinner-l
-
-Will stylize your spinner as a large one.
-
-```less
-#oui > .spinner-l();
-```
-
-```less
-#oui > .spinner-l(
-  @selector: Class,
-  @size: Number,
-  @spacing: Number,
-  @speed: Number (ms)
-);
-```
-
-## Classes
-
-### Block
-
-The block class is `oui-spinner` (top-level element).
