@@ -1,3 +1,15 @@
+<a name="2.5.0"></a>
+# [2.5.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.4.1...v2.5.0) (2018-03-05)
+
+
+### Bug Fixes
+
+* **ouiTextarea:** add resize handle to textarea ([f52fd53](https://github.com/ovh-ux/ovh-ui-kit/commit/f52fd53))
+* access package version from less files ([4572eaa](https://github.com/ovh-ux/ovh-ui-kit/commit/4572eaa))
+* version number as string ([ee112a9](https://github.com/ovh-ux/ovh-ui-kit/commit/ee112a9))
+
+
+
 <a name="2.4.0"></a>
 # [2.4.0]
 
