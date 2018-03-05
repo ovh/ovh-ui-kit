@@ -6,28 +6,4 @@
   #oui > .dropdown-base(
     @dropdown-selector: @oui-dropdown-selector
   );
-
-  // Variant for oui-criteria-adder
-  &_criteria-adder {
-    display: inline-block;
-
-    .oui-button[oui-dropdown-trigger] .oui-icon {
-      line-height: rem-calc(24);
-      display: block;
-
-      &::before {
-        width: auto;
-        height: auto;
-        line-height: 1;
-        display: inline-block;
-        vertical-align: middle;
-        font-size: @oui-button-icon-icon-size_large;
-      }
-    }
-
-    form {
-      padding: rem-calc(20);
-      padding-bottom: 0;
-    }
-  }
 }
