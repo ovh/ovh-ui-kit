@@ -3,13 +3,16 @@
 
   oui-dropdown { display: inline-block; }
 
-  .oui-button[oui-dropdown-trigger] .oui-icon {
+  .oui-dropdown > .oui-button .oui-icon {
     height: rem-calc(24);
     display: flex; // For a better vertical centering
     flex-direction: row;
     align-items: center;
 
-    &::before {
+    &:last-child { display: none;}
+
+    &::before,
+    &::after {
       width: auto;
       height: auto;
       line-height: 1;
