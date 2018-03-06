@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>iconnew/20px/display/search copy 4</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Dual-list" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-589.000000, -4607.000000)">
-        <g id="Group-18-Copy-3" transform="translate(257.000000, 4597.000000)" fill="#113F6D">
-            <g id="Search-Bar-Copy-4" transform="translate(5.000000, 0.000000)">
-                <g id="Group">
-                    <g id="iconnew/20px/display/search" transform="translate(327.526027, 10.000000)">
-                        <path d="M8.5,15 C12.084,15 15,12.084 15,8.5 C15,4.916 12.084,2 8.5,2 C4.916,2 2,4.916 2,8.5 C2,12.084 4.916,15 8.5,15 M19.7241349,19.69 C19.5271336,19.896 19.2641318,20 19.00013,20 C18.7521283,20 18.5041266,19.908 18.3111253,19.724 L13.6310932,15.265 C12.2040835,16.349 10.4300714,17 8.50005815,17 C3.80602604,17 0,13.194 0,8.5 C0,3.806 3.80602604,0 8.50005815,0 C13.1940903,0 17.0001163,3.806 17.0001163,8.5 C17.0001163,10.542 16.2781114,12.416 15.0781031,13.882 L19.6891347,18.276 C20.0901374,18.657 20.1041375,19.29 19.7241349,19.69 M4,9 C3.724,9 3.5,8.776 3.5,8.5 C3.5,5.743 5.743,3.5 8.5,3.5 C8.776,3.5 9,3.724 9,4 C9,4.276 8.776,4.5 8.5,4.5 C6.294,4.5 4.5,6.294 4.5,8.5 C4.5,8.776 4.276,9 4,9" id="Page-1"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><style>.cls-1{fill:#231f20;}</style></defs><title>icon-display-filters</title><path class="cls-1" d="M13.13,30.4a1.66,1.66,0,0,1-.61-.12,1.58,1.58,0,0,1-1-1.46V17.67L.36,4.19A1.58,1.58,0,0,1,.15,2.51,1.6,1.6,0,0,1,1.6,1.6H30.4a1.61,1.61,0,0,1,1.45.9,1.58,1.58,0,0,1-.21,1.68L20.49,17.67v5.45A1.58,1.58,0,0,1,20,24.24l-5.75,5.7A1.64,1.64,0,0,1,13.13,30.4ZM5,4.76l9.39,11.35a1.52,1.52,0,0,1,.36,1V25l2.56-2.53V17.11a1.57,1.57,0,0,1,.36-1L27,4.76Z"/></svg>
