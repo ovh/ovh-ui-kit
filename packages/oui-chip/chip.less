@@ -1,0 +1,63 @@
+@import './_normalize';
+@import './_variables';
+
+.oui-chip {
+  #oui > .chip-normalize();
+  #oui > .text-ellipsis();
+
+  max-width: 100%;
+  line-height: @oui-chip-height;
+  display: inline-block;
+  padding: @oui-chip-padding;
+  position: relative;
+  font-size: @oui-chip-font-size;
+  color: @oui-chip-font-color;
+  border-radius: @oui-chip-border-radius;
+  background-color: @oui-chip-background-color;
+
+  &_closable { padding-right: @oui-chip-height; }
+
+  &_full-width { width: 100%; }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: rem-calc(5) rem-calc(8);
+    background-color: @oui-chip-container-background-color;
+  }
+
+  &__container & { margin: rem-calc(5) rem-calc(2); }
+
+  &__close {
+    width: @oui-chip-height;
+    height: @oui-chip-height;
+    padding: 0;
+    display: flex; // For a better vertical centering
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: inherit;
+    text-align: center;
+    font-size: @oui-chip-close-icon-size;
+    border: none;
+    background: none;
+
+    &:focus {
+      outline-width: 1px;
+      outline-style: dotted;
+      outline-color: initial;
+      outline-offset: -2px;
+    }
+
+    .oui-icon {
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+}
