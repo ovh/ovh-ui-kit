@@ -18,6 +18,16 @@
     }
   }
 
+  // Switch icon when dropdown is active
+  .oui-dropdown_active > .oui-button .oui-icon {
+    &:first-child { display: none;}
+    &:last-child { display: flex;}
+  }
+
+  .oui-field {
+    margin-bottom: rem-calc(8);
+  }
+
   form {
     padding: rem-calc(20);
     padding-bottom: 0;
