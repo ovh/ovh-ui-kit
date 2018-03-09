@@ -3045,11 +3045,16 @@ normalize-selector@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/normalize-selector/-/normalize-selector-0.2.0.tgz#d0b145eb691189c63a78d201dc4fdb1293ef0c03"
 
-npm-scripts-config@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/npm-scripts-config/-/npm-scripts-config-0.0.1.tgz#a302cf0615d3c2bf0005c20866a854817ab3b1d5"
+npm-module-path@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/npm-module-path/-/npm-module-path-2.0.2.tgz#671c4f48a5662790b5ed9fa0091c55ed27f85218"
+
+npm-scripts-config@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/npm-scripts-config/-/npm-scripts-config-0.0.2.tgz#55a6614cb98a8056ced3a8c68a56365287c613ad"
   dependencies:
     exec-sh "^0.2.1"
+    npm-module-path "^2.0.2"
     rc-config-loader "^2.0.1"
 
 npm-scripts-conventional-changelog@^0.1.0:
