@@ -23,7 +23,8 @@
     }
   },
   "dependencies": {
-    "less-plugin-remcalc": "^0.0.1"
+    "less-plugin-remcalc": "^0.0.1",
+    "flatpickr": "^4.3.2"
   },
   "devDependencies": {
     "chalk": "^2.3.1",
