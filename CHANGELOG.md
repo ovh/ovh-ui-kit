@@ -1,3 +1,21 @@
+<a name="2.6.0"></a>
+# [2.6.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.5.0...v2.6.0) (2018-03-13)
+
+
+### Bug Fixes
+
+* **oui-radio-toggle-group:** fix font weight ([c3c853f](https://github.com/ovh-ux/ovh-ui-kit/commit/c3c853f))
+* **radio-toggle-group:** remove x-offset for box-shadow ([61a72ef](https://github.com/ovh-ux/ovh-ui-kit/commit/61a72ef))
+
+
+### Features
+
+* **color:** add new colors ([021c115](https://github.com/ovh-ux/ovh-ui-kit/commit/021c115))
+* **oui-chip:** add chip component style ([7464667](https://github.com/ovh-ux/ovh-ui-kit/commit/7464667))
+* **oui-modal:** add loader to modal styles ([3f9275b](https://github.com/ovh-ux/ovh-ui-kit/commit/3f9275b))
+
+
+
 <a name="2.5.0"></a>
 # [2.5.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.4.1...v2.5.0) (2018-03-05)
 
