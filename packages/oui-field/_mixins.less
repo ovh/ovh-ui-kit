@@ -1,8 +1,9 @@
 @import '../oui-checkbox/_mixins';
+@import '../oui-input/_mixins';
 @import '../oui-responsive/_mixins';
 @import '../oui-select/_mixins';
-@import '../oui-ui-select/_mixins';
 @import '../oui-textarea/_mixins';
+@import '../oui-ui-select/_mixins';
 @import './_variables';
 
 #oui {
@@ -118,6 +119,10 @@
     &_error {
       .@{selector}__error {
         display: block;
+      }
+
+      .oui-input {
+        #oui > .input-error-style();
       }
 
       .@{checkbox-selector},

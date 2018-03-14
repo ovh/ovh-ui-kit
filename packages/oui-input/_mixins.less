@@ -90,47 +90,44 @@
     }
   }
 
-  .input-status(@index: length(@oui-input-status)) when (@index > 0) {
-    .input-status(@index - 1);
-
-    @status: extract(@oui-input-status, @index);
-    @status-font-color: "oui-color-@{status}-dark";
-    @status-icon-color: "oui-color-@{status}-medium";
-    @status-border-color: "oui-color-@{status}-medium";
-    @status-background-color: "oui-color-@{status}-fade";
-    @status-box-shadow: "oui-input-shadow-@{status}";
-
-    &_@{status}:not(:disabled),
-    &_@{status}:not(:disabled):hover,
-    &_@{status}:not(:disabled):active,
-    &_@{status}:not(:disabled):focus {
-      border-color: @@status-border-color;
-      background-color: @@status-background-color;
-      color: @@status-font-color;
-      font-weight: 400;
-      box-shadow: @@status-box-shadow;
+  .input-status() {
+    &_error {
+      .input-error-style();
     }
 
-    &_@{status}:not(:disabled):focus {
+    &-group_button .oui-input.oui-input_error:focus ~ .oui-button,
+    &-group_button .oui-input.oui-input_error ~ .oui-button:hover,
+    &-group_button .oui-input.oui-input_error ~ .oui-button:focus {
+      .oui-icon {
+        color: @oui-color-error-dark;
+      }
+    }
+  }
+
+  .input-error-style() {
+    &:not(:disabled),
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
+      border-color: @oui-color-error-medium;
+      background-color: @oui-color-error-fade;
+      color: @oui-color-error-dark;
+      font-weight: 400;
+      box-shadow: @oui-input-shadow-error;
+    }
+
+    &:not(:disabled):focus {
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
     }
 
-    &_@{status}::selection {
-      background: @@status-font-color;
+    &::selection {
+      background: @oui-color-error-dark;
       color: #fff;
     }
 
-    &_@{status}::-moz-selection {
-      background: @@status-font-color;
+    &::-moz-selection {
+      background: @oui-color-error-dark;
       color: #fff;
-    }
-
-    &-group_button .oui-input.oui-input_@{status}:focus ~ .oui-button,
-    &-group_button .oui-input.oui-input_@{status} ~ .oui-button:hover,
-    &-group_button .oui-input.oui-input_@{status} ~ .oui-button:focus {
-      .oui-icon {
-        color: @@status-font-color;
-      }
     }
   }
 
