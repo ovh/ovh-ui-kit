@@ -1,3 +1,13 @@
+<a name="2.6.2"></a>
+## [2.6.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.6.1...v2.6.2) (2018-03-16)
+
+
+### Bug Fixes
+
+* **oui-modal:** display modal loader over all elements ([3617414](https://github.com/ovh-ux/ovh-ui-kit/commit/3617414))
+
+
+
 <a name="2.6.1"></a>
 ## [2.6.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.6.0...v2.6.1) (2018-03-15)
 
