@@ -119,4 +119,11 @@ There are 5 different sizes. The default size is `m`.
     <input type="text" id="text-9" name="text-9" class="oui-input" value="xl" />
   </div>
 </div>
+
+<div class="oui-field">
+  <label for="text-10" class="oui-field__label oui-label">Label</label>
+  <div class="oui-field__control oui-field__control_auto">
+    <input type="text" id="text-10" name="text-10" class="oui-input" value="auto" />
+  </div>
+</div>
 ```
