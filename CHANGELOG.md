@@ -1,3 +1,13 @@
+<a name="2.7.1"></a>
+## [2.7.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.7.0...v2.7.1) (2018-03-19)
+
+
+### Features
+
+* **oui-field:** add auto size for field ([744278c](https://github.com/ovh-ux/ovh-ui-kit/commit/744278c))
+
+
+
 <a name="2.7.0"></a>
 # [2.7.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.6.2...v2.7.0) (2018-03-16)
 
