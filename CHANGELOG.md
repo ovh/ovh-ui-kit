@@ -1,3 +1,19 @@
+<a name="2.8.0"></a>
+# [2.8.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.7.1...v2.8.0) (2018-03-22)
+
+
+### Bug Fixes
+
+* **less:** fix import path ([8a9c59a](https://github.com/ovh-ux/ovh-ui-kit/commit/8a9c59a))
+* **oui-back-button:** fix arrow color to be the same as a link ([c294082](https://github.com/ovh-ux/ovh-ui-kit/commit/c294082))
+
+
+### Features
+
+* **oui-calendar:** add styles for oui-calendar component ([f47e34a](https://github.com/ovh-ux/ovh-ui-kit/commit/f47e34a))
+
+
+
 <a name="2.7.1"></a>
 ## [2.7.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.7.0...v2.7.1) (2018-03-19)
 
