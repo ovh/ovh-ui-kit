@@ -1,9 +1,12 @@
-![Project statuc alpha](https://img.shields.io/badge/status-alpha-blue.svg) [![Github tag](https://img.shields.io/github/tag/ovh-ux/ovh-ui-kit.svg)]() ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg) [![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux)
+[![NPM](https://nodei.co/npm/ovh-ui-kit.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/ovh-ui-kit/)
+
+![Project status stable](https://img.shields.io/badge/status-stable-blue.svg)
+![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)
+[![Chat on gitter](https://img.shields.io/gitter/room/ovh/ux.svg)](https://gitter.im/ovh/ux)
 
 # OVH UI (Less)
 
 A css theme implemented for the OVH brand.
-
 
 ## Installation
 
@@ -65,37 +68,10 @@ the `rem-base` to `10px` otherwise components proportions will not be respected.
 @import "~ovh-ui-kit/packages/oui/stylekit.less";
 ```
 
-## Publish a new version
-
-When publishing a new version npm or yarn will execute some common tasks:
-
-1. Build the project (if the build fail, publish is aborted)
-2. Change the version inside the `package.json` to the new version
-3. Commit the new `package.json`
-4. Create a new tag like `v<version>`
-5. Changes and tags are pushed to the remote server
-
-### npm
-
-```bash
-npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
-```
-
-### yarn
-
-```bash
-yarn version --new-version <version>
-```
-
 ## Documentation
 
 Documentation is available from the `packages/` folder, every package is self-documented throught a `README.md` file.
 
-## Browser Support
+## License
 
-- Chrome (last 2 versions)
-- Safari (last 2 versions)
-- Firefox (last 2 versions)
-- Opera (last 2 versions)
-- Edge (last 2 versions)
-- Internet Explorer (10 only)
+See [https://github.com/ovh-ux/ovh-ui-kit/blob/master/LICENSE](https://github.com/ovh-ux/ovh-ui-kit/blob/master/LICENSE)

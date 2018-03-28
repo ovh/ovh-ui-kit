@@ -1,6 +1,6 @@
 # oui-action-menu
 
-<component-status cx-design="complete" ux="prototype"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-action-menu is a package which provide styles action buttons in a dropdown.
 
@@ -13,7 +13,7 @@ oui-action-menu is a package which provide styles action buttons in a dropdown.
 ## Usage
 
 ```html:preview
-<div style="border: 1px #BDBDBD solid; width: 250px" class="oui-doc-preview-only-keep-children">
+<div style="border: 1px #BDBDBD solid; width: 300px" class="oui-doc-preview-only-keep-children">
   <div role="menu" class="oui-action-menu">
     <div role="menuitem" class="oui-action-menu__item">
       <button class="oui-button oui-button_action-menu">Action 1</button>
