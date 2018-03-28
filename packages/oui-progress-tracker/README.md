@@ -2,8 +2,6 @@
 
 <component-status cx-design="partial" ux="rc"></component-status>
 
-> **Important:** This component is broken on IE9 (flex)
-
 > As CX requirements this progress tracker is on one line and can't take too much item and too long labels
 
 ## Installation
