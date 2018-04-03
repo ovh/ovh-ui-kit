@@ -15,4 +15,20 @@
 
     margin: 0;
   }
+
+  &__control-wrapper {
+    position: relative;
+
+    // Fix positionning
+    .flatpickr-calendar {
+      left: 0 !important;
+
+      &.arrowTop { top: 100% !important; }
+
+      &.arrowBottom {
+        top: auto !important;
+        bottom: 100% !important;
+      }
+    }
+  }
 }
