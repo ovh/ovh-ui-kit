@@ -211,6 +211,7 @@
     @selector,
     @checkbox-selector,
     @font-color: @oui-list-steps-font-color,
+    @icon-font-color: @oui-list-steps-icon-font-color,
     @icon-color: @oui-list-steps-icon-color,
     @font-color-disabled: @oui-list-steps-disabled-font-color,
     @icon-color-disabled: @oui-list-steps-disabled-icon-color,
@@ -262,6 +263,7 @@
 
       .@{selector}__header::before {
         display: inline-block;
+        color: @icon-font-color;
         padding: 0;
         margin: 0 @icon-spacing 0 ~"calc(-@{icon-size} - @{icon-spacing})";
         text-align: center;
@@ -297,7 +299,7 @@
       }
 
       .@{selector}__header::before {
-        border-color: fade(@icon-color, 60%);
+        border-color: fade(@icon-color-disabled, 60%);
         background: @icon-color-disabled;
         color: @font-color-disabled;
       }
