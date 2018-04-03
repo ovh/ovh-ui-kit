@@ -1,4 +1,5 @@
 @import "./_normalize";
+@import "./_variables";
 
 .oui-calendar {
   display: block;
@@ -6,6 +7,12 @@
   position: relative;
 
   &__control {
+    #oui > .input-base(
+      @background-color-read-only: @oui-input-background-color,
+      @border-color-read-only: @oui-input-border-color,
+      @font-color-read-only: @oui-input-font-color
+    );
+
     margin: 0;
   }
 }
