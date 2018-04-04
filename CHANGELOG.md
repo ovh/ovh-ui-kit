@@ -1,3 +1,15 @@
+<a name="2.10.0"></a>
+# [2.10.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.9.0...v2.10.0) (2018-04-04)
+
+
+### Bug Fixes
+
+* **oui-datagrid:** add width to criteria adder ([76b6011](https://github.com/ovh-ux/ovh-ui-kit/commit/76b6011))
+* **oui-select-picker:** fix section color text when component is disabled ([6b4d1b5](https://github.com/ovh-ux/ovh-ui-kit/commit/6b4d1b5))
+* **oui-select-picker:** fix select button width ([9b2854d](https://github.com/ovh-ux/ovh-ui-kit/commit/9b2854d))
+
+
+
 <a name="2.9.0"></a>
 # [2.9.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.8.0...v2.9.0) (2018-03-28)
 
