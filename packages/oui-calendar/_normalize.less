@@ -18,7 +18,6 @@
     &::before,
     &::after {
       margin: 0;
-      left: 50%;
       transform: translateX(-50%);
     }
 
@@ -37,6 +36,11 @@
 
       &::before { border-top-color: @oui-calendar-border-color; }
     }
+
+    &.rightMost:before,
+    &.rightMost:after { transform: translateX(50%); }
+
+    &.inline { box-shadow: none; }
   }
 
   // Header
