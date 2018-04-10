@@ -10,7 +10,13 @@
 }
 
 .oui-link {
+  @oui-icon-selector: oui-icon;
+
   #oui > .link();
+
+  &_icon {
+    #oui > .link-icon(@oui-icon-selector);
+  }
 }
 
 .oui-horizontal-line {
