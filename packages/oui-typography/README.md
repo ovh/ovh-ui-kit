@@ -93,6 +93,15 @@ oui-typography is a package which provides tools as constants and mixins for man
 </div>
 ```
 
+```html:preview
+<div>
+  <a href="#" class="oui-link oui-link_icon">
+    The quick brown fox jumps over the lazy dog
+    <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+  </a>
+</div>
+```
+
 ### Horizontal line
 
 ```html:preview

@@ -69,6 +69,23 @@
     }
   }
 
+  .link-icon(
+    @icon-selector,
+    @icon-size: @oui-link-icon-icon-size,
+    @icon-margin-left: @oui-link-icon-margin-left
+  ) {
+    .@{icon-selector} {
+      margin-left: @icon-margin-left;
+    }
+
+    .@{icon-selector}::before {
+      width: @icon-size;
+      height: @icon-size;
+      font-size: @icon-size;
+      line-height: @icon-size;
+    }
+  }
+
   .text-ellipsis() {
     overflow: hidden;
     white-space: nowrap;
