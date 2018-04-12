@@ -52,6 +52,8 @@
     border-bottom: @oui-calendar-header-border-bottom;
   }
 
+  &-months &-month { height: auto; }
+
   // Header icons
   &-months &-prev-month,
   &-months &-next-month {
@@ -61,9 +63,9 @@
     margin: 0 @oui-calendar-icon-spacing;
     padding: 0;
     font-size: @oui-calendar-icon-size;
+    color: @oui-calendar-icon-color;
 
-    &,
-    &:hover { color: @oui-calendar-icon-color; }
+    &:hover { color: @oui-calendar-icon-color_hover; }
 
     svg {
       width: @oui-calendar-icon-size;
@@ -71,13 +73,10 @@
       fill: inherit !important;
     }
 
-    .oui-icon { font-size: inherit; }
-  }
-
-  // Header title
-  &-months &-month {
-    height: auto;
-    color: @oui-calendar-font-color;
+    .oui-icon {
+      font-size: inherit;
+      color: inherit;
+    }
   }
 
   &-current-month {
@@ -85,6 +84,7 @@
     height: auto;
     padding: 0;
     position: static;
+    color: @oui-calendar-font-color;
     font-size: inherit;
     font-weight: inherit;
 
@@ -119,7 +119,7 @@
     line-height: 1;
     font-size: inherit;
     font-weight: inherit;
-    color: #b3b3b3;
+    color: @oui-calendar-cell-font-color_disabled;
   }
 
   &-weekwrapper &-weeks { box-shadow: 1px 0 0 @oui-calendar-separator-color; }

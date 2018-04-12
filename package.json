@@ -38,6 +38,6 @@
     "stylelint": "^8.4.0"
   },
   "peerDependencies": {
-    "flatpickr": "~4.4.3"
+    "flatpickr": "4.4.4"
   }
 }
