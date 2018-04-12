@@ -70,19 +70,19 @@
       text-decoration: none;
     }
 
+    &:read-only {
+      border-color: @border-color-read-only;
+      box-shadow: none;
+      background-color: @background-color-read-only;
+      color: @font-color-read-only;
+    }
+
     &:disabled {
       border-color: @border-color-disabled;
       background-color: @background-color-disabled;
       box-shadow: none;
       color: @font-color-disabled;
       cursor: not-allowed;
-    }
-
-    &:read-only {
-      border-color: @border-color-read-only;
-      box-shadow: none;
-      background-color: @background-color-read-only;
-      color: @font-color-read-only;
     }
 
     &::placeholder {

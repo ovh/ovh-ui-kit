@@ -1,11 +1,41 @@
 @import "./_normalize";
+@import "./_variables";
 
 .oui-calendar {
   display: block;
   margin: @oui-input-margin;
   position: relative;
 
+  &_inline { display: inline-block; }
+
   &__control {
+    #oui > .input-base(
+      @background-color-read-only: @oui-input-background-color,
+      @border-color-read-only: @oui-input-border-color,
+      @font-color-read-only: @oui-input-font-color
+    );
+
     margin: 0;
+  }
+
+  &__control-wrapper {
+    position: relative;
+
+    // Fix positionning
+    .flatpickr-calendar {
+      left: 0 !important;
+
+      &.rightMost {
+        left: auto !important;
+        right: 0 !important;
+      }
+
+      &.arrowTop { top: 100% !important; }
+
+      &.arrowBottom {
+        top: auto !important;
+        bottom: 100% !important;
+      }
+    }
   }
 }
