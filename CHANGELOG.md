@@ -1,3 +1,30 @@
+<a name="2.11.0"></a>
+# [2.11.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.10.0...v2.11.0) (2018-04-16)
+
+
+### Bug Fixes
+
+* **oui-calendar:** append calendar to control wrapper ([fa09b12](https://github.com/ovh-ux/ovh-ui-kit/commit/fa09b12))
+* **oui-calendar:** fix rightMost arrow ([0e9cdfe](https://github.com/ovh-ux/ovh-ui-kit/commit/0e9cdfe))
+* **oui-select-picker:** add missing focus style on select ([#188](https://github.com/ovh-ux/ovh-ui-kit/issues/188)) ([77bae6f](https://github.com/ovh-ux/ovh-ui-kit/commit/77bae6f))
+* **oui-typography:** fix font color ([2dfc4df](https://github.com/ovh-ux/ovh-ui-kit/commit/2dfc4df))
+
+
+### Features
+
+* **oui-calendar:** add inline style ([c9565d6](https://github.com/ovh-ux/ovh-ui-kit/commit/c9565d6))
+* **oui-calendar:** update calendar style to specs ([46dd4c1](https://github.com/ovh-ux/ovh-ui-kit/commit/46dd4c1))
+* add oui-stepper styles ([96e7b4d](https://github.com/ovh-ux/ovh-ui-kit/commit/96e7b4d))
+* add styles for oui-stepper component ([b9157b8](https://github.com/ovh-ux/ovh-ui-kit/commit/b9157b8))
+* **oui-list:** list-complete pointer-events: none on body ([7987a10](https://github.com/ovh-ux/ovh-ui-kit/commit/7987a10))
+* **oui-list:** remove outline on header ([ba3154c](https://github.com/ovh-ux/ovh-ui-kit/commit/ba3154c))
+* **oui-list:** update headers color ([ab29dc2](https://github.com/ovh-ux/ovh-ui-kit/commit/ab29dc2))
+* **oui-popover:** add new Popover component styles ([e5a8d9d](https://github.com/ovh-ux/ovh-ui-kit/commit/e5a8d9d))
+* **oui-status:** add new oui-status ([13851df](https://github.com/ovh-ux/ovh-ui-kit/commit/13851df))
+* **oui-typography:** add modifier to icon link ([a81d32d](https://github.com/ovh-ux/ovh-ui-kit/commit/a81d32d))
+
+
+
 <a name="2.10.0"></a>
 # [2.10.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.9.0...v2.10.0) (2018-04-04)
 
