@@ -75,6 +75,21 @@
         & > i {
           opacity: 0.5;
         }
+
+        &:focus {
+          background-color: #fff;
+          border-color: @oui-select-picker-value-border-color-checked;
+        }
+
+        &:focus > span,
+        &:focus > i {
+          opacity: 1;
+        }
+
+        &:hover {
+          background-color: #fff;
+          border-color: @oui-select-picker-value-border-color;
+        }
       }
     }
 
@@ -83,6 +98,10 @@
       .ui-select-match {
         background-color: #fff;
         border-color: @oui-select-picker-value-border-color-checked;
+
+        &:hover {
+          border-color: @oui-select-picker-value-border-color-checked;
+        }
 
         & > span,
         & > i {
