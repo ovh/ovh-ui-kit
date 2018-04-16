@@ -180,6 +180,50 @@
     /* stylelint-enable indentation */
   }
 
+  &-notification {
+    display: flex;
+    padding: @oui-notification-padding;
+
+    &__icon {
+      margin: @oui-notification-icon-margin;
+    }
+
+    &__icon .oui-icon {
+      font-size: @oui-notification-icon-font-size;
+
+      &.oui-icon-info_circle {
+        color: @oui-notification-info-icon-color;
+      }
+
+      &.oui-icon-success_circle {
+        color: @oui-notification-success-icon-color;
+      }
+
+      &.oui-icon-warning_circle {
+        color: @oui-notification-warning-icon-color;
+      }
+
+      &.oui-icon-error_circle {
+        color: @oui-notification-error-icon-color;
+      }
+    }
+
+    &__date {
+      padding: 0.5rem 0;
+    }
+
+    &__description {
+      line-height: 2rem;
+      max-height: 8rem;
+      overflow: hidden;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      font-weight: @oui-notification-title-weight;
+    }
+  }
+
   // Helper for responsive
   #oui > .navbar-helpers();
 }
