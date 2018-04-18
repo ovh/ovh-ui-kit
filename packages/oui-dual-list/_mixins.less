@@ -1,0 +1,55 @@
+@import '../oui-animation/_mixins';
+@import '../oui-typography/_constants';
+@import './_variables';
+
+.flexbox() {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-wrap(@wrap: wrap) {
+    -webkit-flex-wrap: @wrap;
+    -moz-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+}
+
+.flex-direction(@direction: row) {
+    -webkit-flex-direction: @direction;
+    -moz-flex-direction: @direction;
+    -ms-flex-direction: @direction;
+    flex-direction: @direction;
+}
+
+.justify-content(@justify: center) {
+    -webkit-justify-content: @justify;
+    -moz-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+    -ms-flex-pack: @justify;
+}
+
+.align-content(@align: center) {
+    -webkit-align-content: @align;
+    -moz-align-content: @align;
+    -ms-align-content: @align;
+    align-content: @align;
+}
+
+.align-items(@align: center) {
+    -webkit-align-items: @align;
+    -moz-align-items: @align;
+    -ms-align-items: @align;
+    align-items: @align;
+}
+
+.transform(@transforms) {
+    -moz-transform: @transforms;
+    -o-transform: @transforms;
+    -ms-transform: @transforms;
+    -webkit-transform: @transforms;
+    transform: @transforms;
+}
