@@ -12,7 +12,7 @@
     margin: @oui-ui-select-margin;
 
     &.oui-ui-select-container_open {
-      .ui-select-choices {
+      .ui-select-choices-container {
         display: block;
       }
     }
@@ -27,8 +27,8 @@
       text-align: left;
     }
 
-    .ui-select-choices {
-      .ui-select-choices-base(
+    .ui-select-choices-container {
+      .ui-select-choices-container-base(
         @button-selector,
         @icon-selector
       );
@@ -57,46 +57,52 @@
     }
   }
 
-  .ui-select-choices-base(
+  .ui-select-choices-container-base(
     @button-selector,
     @icon-selector
   ) {
     display: none;
-    height: auto;
-    max-height: @oui-ui-select-max-height;
     max-width: @oui-ui-select-max-width;
-    overflow-x: hidden;
     margin-top: -1px;
     margin-bottom: 0;
+    background-color: #fff;
 
     // Dropdown
     position: absolute;
     z-index: 1000;
-    float: left;
     min-width: @oui-ui-select-min-width;
-    padding: 4px 0;
-    list-style: none;
-    text-align: left;
-    background-color: #fff;
     border: 1px solid @oui-color-silver;
     border-radius: 0;
     box-shadow: 0 4px 6px 0 @oui-color-info-fade;
     background-clip: padding-box;
 
-    .ui-select-choices-group-label {
-      padding: rem-calc(4) rem-calc(20);
-      font-size: @oui-ui-select-choices-group-font-size;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      font-smoothing: antialiased;
-      color: @oui-color-sapphire;
-    }
+    .ui-select-choices {
+      width: 100%;
+      max-height: @oui-ui-select-max-height;
+      overflow-x: hidden;
+      overflow-y: auto;
+      list-style: none;
+      float: left;
+      text-align: left;
+      margin: 0;
+      padding: 4px 0;
+      background-color: #fff;
 
-    .ui-select-choices-row {
-      .ui-select-choices-row-base(
-        @button-selector,
-        @icon-selector
-      );
+      .ui-select-choices-group-label {
+        padding: rem-calc(4) rem-calc(20);
+        font-size: @oui-ui-select-choices-group-font-size;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        color: @oui-color-sapphire;
+      }
+
+      .ui-select-choices-row {
+        .ui-select-choices-row-base(
+          @button-selector,
+          @icon-selector
+        );
+      }
     }
   }
 
