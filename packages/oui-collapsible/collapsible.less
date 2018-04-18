@@ -8,12 +8,16 @@
   margin: rem-calc(4px);
   font-size: rem-calc(16);
 
-  &__toggle-icon::before {
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    font-size: rem-calc(13);
-    right: rem-calc(14);
-    height: rem-calc(10);
-    line-height: rem-calc(10);
+  &__toggle-icon {
+    color: inherit;
+
+    &::before {
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: rem-calc(13);
+      right: rem-calc(14);
+      height: rem-calc(10);
+      line-height: rem-calc(10);
+    }
   }
 
   &__header {
