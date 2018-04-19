@@ -44,7 +44,12 @@
 
 ```html:preview
 <div class="oui-textarea oui-textarea_disabled">
-  <textarea class="oui-textarea__textarea">Textarea text</textarea>
+  <textarea class="oui-textarea__textarea" disabled>Textarea text</textarea>
+</div>
+
+<div class="oui-textarea oui-textarea_disabled">
+  <textarea class="oui-textarea__textarea" disabled>Textarea text</textarea>
+  <div class="oui-textarea__footer">xxx/yyy characters</div>
 </div>
 ```
 
