@@ -26,11 +26,51 @@
   </div>
 
   <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-iron">
+      <span class="oui-color-badge__prop">@oui-color-iron</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#cfd0d2</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-ironlight">
+      <span class="oui-color-badge__prop">@oui-color-ironlight</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#dddedf</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
     <div class="oui-color-badge oui-color-badge_oui-color-concrete">
       <span class="oui-color-badge__prop">@oui-color-concrete</span>
       <span class="oui-color-badge__prop">-</span>
       <span class="oui-color-badge__prop">
         <code>#f2f2f2</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-alabaster">
+      <span class="oui-color-badge__prop">@oui-color-alabaster</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#fafafa</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-affair">
+      <span class="oui-color-badge__prop">@oui-color-affair</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#884994</code>
       </span>
     </div>
   </div>
@@ -76,6 +116,16 @@
   </div>
 
   <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-nurse2">
+      <span class="oui-color-badge__prop">@oui-color-nurse2</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#e1e3df</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
     <div class="oui-color-badge oui-color-badge_oui-color-gothic">
       <span class="oui-color-badge__prop">@oui-color-gothic</span>
       <span class="oui-color-badge__prop">-</span>
@@ -86,11 +136,31 @@
   </div>
 
   <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-polar">
+      <span class="oui-color-badge__prop">@oui-color-polar</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#f5fcfd</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
     <div class="oui-color-badge oui-color-badge_oui-color-foam">
       <span class="oui-color-badge__prop">@oui-color-foam</span>
       <span class="oui-color-badge__prop">-</span>
       <span class="oui-color-badge__prop">
         <code>#e0f6fd</code>
+      </span>
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="oui-color-badge oui-color-badge_oui-color-charlotte">
+      <span class="oui-color-badge__prop">@oui-color-charlotte</span>
+      <span class="oui-color-badge__prop">-</span>
+      <span class="oui-color-badge__prop">
+        <code>#c6eff9</code>
       </span>
     </div>
   </div>
