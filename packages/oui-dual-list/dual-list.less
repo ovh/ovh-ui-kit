@@ -38,7 +38,7 @@
     min-height: rem-calc(40px);
   }
 
-  &__toggle-icons {
+  &__toggle-buttons {
     margin-left: auto;
     border: none;
     background-color: inherit;
@@ -57,26 +57,32 @@
     padding: 0;
     border-radius: 0 0 rem-calc(3px) rem-calc(3px);
     min-height: 0;
+  }
 
-    &_body {
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
+  &__content-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 
-      & > .oui-dual-list__filter > form {
-        margin: 0;
-      }
-    }
-
-    &_list {
-      list-style: none;
-      padding: 0;
-      overflow: auto;
+    & > .oui-dual-list__filter > form {
       margin: 0;
+    }
+  }
 
-      @media screen and (min-width: @oui-responsive-breakpoint-phone) {
-        padding: 0 @oui-dual-list-left-padding;
-      }
+  &__content-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    p {
+      color: @oui-color-dual-list-empty-label;
+    }
+  }
+
+  &__target > &__content {
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      display: flex;
     }
   }
 
@@ -121,33 +127,27 @@
     }
   }
 
-  &__remove-all {
+  &__remove-all-link {
     @media screen and (min-width: @oui-responsive-breakpoint-phone) {
       padding: rem-calc(5px) @oui-dual-list-left-padding;
       margin-left: auto;
     }
   }
 
-  &__add-all {
+  &__add-all-link {
     @media screen and (min-width: @oui-responsive-breakpoint-phone) {
       padding-left: @oui-dual-list-left-padding + @oui-dual-list-left-padding;
     }
   }
 
-  &__target > &__content {
+  &__list {
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+    margin: 0;
+
     @media screen and (min-width: @oui-responsive-breakpoint-phone) {
-      display: flex;
-    }
-  }
-
-  &__content_empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-
-    p {
-      color: @oui-color-dual-list-empty-label;
+      padding: 0 @oui-dual-list-left-padding;
     }
   }
 
@@ -161,7 +161,7 @@
       margin-bottom: rem-calc(5px);
     }
 
-    &_title {
+    &_text {
       display: block;
       width: 85%;
     }
