@@ -17,6 +17,7 @@
 <i class="oui-icon oui-icon-info_circle"></i>
 <i class="oui-icon oui-icon-success_circle"></i>
 <i class="oui-icon oui-icon-warning_circle"></i>
+<i class="oui-icon oui-icon-filter"></i>
 ```
 
 ### Bicolor
@@ -78,6 +79,13 @@
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-warning_circle" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-warning_circle" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-filter" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-filter" aria-hidden="true"></i>`
   </div>
 </div>
 
@@ -190,6 +198,27 @@
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-copy-success" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-copy-success" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-clock-wait" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui--clock-wait" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-shape-dot" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-shape-dot" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-shape-circle" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-shape-circle" aria-hidden="true"></i>`
   </div>
 </div>
 
