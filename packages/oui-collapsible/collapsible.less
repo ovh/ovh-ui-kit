@@ -1,0 +1,9 @@
+@import './_normalize';
+@import './_mixins';
+
+.oui-collapsible {
+  @oui-collapsible-selector: oui-collapsible;
+
+  #oui > .collapsible-normalize();
+  #oui > .collapsible(@oui-collapsible-selector);
+}

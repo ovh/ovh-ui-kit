@@ -1,0 +1,98 @@
+@import './_variables';
+
+#oui {
+  .collapsible(
+    @selector,
+    @header-height: @oui-collapsible-header-height,
+    @inactive-color: @oui-collapsible-inactive-background-color,
+    @active-color: @oui-collapsible-active-color,
+    @label-color: @oui-collapsible-label-color,
+    @icon-color: @oui-collapsible-icon-color
+  ) {
+    color: #000;
+    font-size: rem-calc(16);
+    margin: rem-calc(4px);
+
+    &__header {
+      display: flex;
+      height: @header-height;
+      align-items: center;
+      background-color: @inactive-color;
+      border: 1px solid @inactive-color;
+      border-radius: @oui-global-base-radius;
+      font-weight: @oui-font-semibold;
+      padding: 0 rem-calc(15);
+      cursor: pointer;
+
+      &:hover {
+        background-color: @active-color;
+        border-color: @active-color;
+      }
+
+      &:active, &:focus {
+        outline: none;
+      }
+
+      &-text {
+        flex-grow: 1;
+        color: @label-color;
+      }
+    }
+
+    &__toggle-button {
+      border: none;
+      padding: 0;
+      background-color: inherit;
+
+      &:active, &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &__toggle-icon {
+      font-size: rem-calc(13);
+      line-height: 2;
+      vertical-align: middle;
+      color: @icon-color;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__body {
+      padding: 0 rem-calc(15);
+      overflow: hidden;
+      max-height: 0;
+      border-color: @inactive-color;
+      border-style: solid;
+      border-width: 0 1px 1px 1px;
+      border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
+      transition: all 0.2s ease-out;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_open {
+      .@{selector}__header {
+        border-radius: @oui-global-base-radius @oui-global-base-radius 0 0;
+        background-color: @active-color;
+        border: 1px solid @active-color;
+
+        &:hover {
+          background-color: @inactive-color;
+          border-color: @inactive-color;
+        }
+      }
+
+      .@{selector}__toggle-icon {
+        transform: rotate(-180deg);
+      }
+
+      .@{selector}__body {
+        max-height: unset;
+        padding: rem-calc(15);
+        border-color: @active-color;
+      }
+    }
+  }
+}
