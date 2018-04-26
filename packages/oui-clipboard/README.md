@@ -13,8 +13,8 @@
 ### Basic
 
 ```html:preview
-<div class="oui-clipboard__input-container">
-    <input class="oui-clipboard__input text-truncate" type="text" readonly>
+<div class="oui-clipboard__container">
+    <input class="oui-clipboard__input text-truncate" type="text" value="copy this to clipboard" readonly>
     <span class="oui-clipboard__icon"><i class="oui-icon oui-icon-copy-normal aria-hidden="true"></i></span>
 </div>
 ```
