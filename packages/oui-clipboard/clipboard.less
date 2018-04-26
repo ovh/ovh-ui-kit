@@ -11,7 +11,7 @@
     padding: @oui-clipboard-input_padding;
     width: 100%;
 
-    background-color: @oui-clipboard-hover-background-color;
+    background-color: @oui-color-white;
     font-family: @oui-global-base-font-family;
     font-weight: @oui-font-regular;
     color: @oui-clipboard-color;
@@ -22,11 +22,13 @@
   }
 
   &__input:hover {
+    box-shadow: @clipboard-active-box-shadow;
     background-color: @oui-clipboard-hover-background-color;
     border: 1px solid @oui-clipboard-active-border-color;
   }
 
   &__input:active {
+    box-shadow: @clipboard-active-box-shadow;      
     border: 1px solid @oui-clipboard-active-border-color;
   }
 
