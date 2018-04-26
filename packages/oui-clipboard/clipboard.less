@@ -16,19 +16,20 @@
     font-weight: @oui-font-regular;
     color: @oui-clipboard-color;
 
-    border: 1px solid @clipboard-border-color;
+    border: 1px solid @oui-clipboard-border-color;
     border-radius: @oui-global-base-radius-medium;
+    box-shadow: @oui-clipboard-box-shadow;
     cursor: pointer;
   }
 
   &__input:hover {
-    box-shadow: @clipboard-active-box-shadow;
+    box-shadow: @oui-clipboard-active-box-shadow;
     background-color: @oui-clipboard-hover-background-color;
     border: 1px solid @oui-clipboard-active-border-color;
   }
 
   &__input:active {
-    box-shadow: @clipboard-active-box-shadow;      
+    box-shadow: @oui-clipboard-active-box-shadow;      
     border: 1px solid @oui-clipboard-active-border-color;
   }
 
