@@ -1,0 +1,49 @@
+@import './_variables';
+
+.oui-clipboard {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    padding: @oui-clipboard-input_padding;
+    width: 100%;
+
+    background-color: @oui-clipboard-hover-background-color;
+    font-family: @oui-global-base-font-family;
+    font-weight: @oui-font-regular;
+    color: @oui-clipboard-color;
+
+    border: 1px solid @clipboard-border-color;
+    border-radius: @oui-global-base-radius-medium;
+    cursor: pointer;
+  }
+
+  &__input:hover {
+    background-color: @oui-clipboard-hover-background-color;
+    border: 1px solid @oui-clipboard-active-border-color;
+  }
+
+  &__input:active {
+    border: 1px solid @oui-clipboard-active-border-color;
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: rem-calc(12);
+    top: rem-calc(9);
+    .oui-icon {
+      color: @oui-clipboard-icon-color;
+      font-size: 1.6rem;
+    }
+    .oui-icon-copy-error {
+      color: @oui-clipboard-icon-error-color;
+    }
+  }
+}
