@@ -24,12 +24,15 @@
       color: @oui-action-menu-text-color;
 
       &:hover, &:focus {
-        background-color: @oui-action-menu-item-active-background-color;
-        color: @oui-action-menu-item-active-text-color;
+        &:not(:disabled) {
+          background-color: @oui-action-menu-item-active-background-color;
+          color: @oui-action-menu-item-active-text-color;
+        }
       }
 
-      &[disabled] {
+      &:disabled {
         color: @oui-color-dusty;
+        cursor: auto; // override not-allowed from oui-button
       }
     }
 
