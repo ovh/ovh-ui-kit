@@ -189,11 +189,19 @@
       background: none;
       border: 0;
       padding: 0;
+
+      .oui-icon {
+        color: @oui-notification-action-active-font-color;
+        font-size: @oui-notification-action-icon-font-size;
+      }
     }
 
-    &__action .oui-icon {
-      color: @oui-navbar-menu-font-color;
-      font-size: @oui-notification-icon-font-size;
+    & > &__action {
+      visibility: hidden;
+    }
+
+    &:hover > &__action {
+      visibility: visible;
     }
 
     &__content {
