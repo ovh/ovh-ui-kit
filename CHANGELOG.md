@@ -1,3 +1,21 @@
+<a name="2.12.0"></a>
+# [2.12.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.11.0...v2.12.0) (2018-04-26)
+
+
+### Bug Fixes
+
+* **oui-select:** fix dropdown min-width ([3b3153e](https://github.com/ovh-ux/ovh-ui-kit/commit/3b3153e))
+* **oui-textarea:** fix disable state in fieldset ([64c3505](https://github.com/ovh-ux/ovh-ui-kit/commit/64c3505))
+
+
+### Features
+
+* **oui-color:** new colors addition ([0b18a32](https://github.com/ovh-ux/ovh-ui-kit/commit/0b18a32))
+* **oui-field:** add class container for label popover ([fc8495e](https://github.com/ovh-ux/ovh-ui-kit/commit/fc8495e))
+* **oui-progress-tracker:** progress-tracker component addition ([8b48ede](https://github.com/ovh-ux/ovh-ui-kit/commit/8b48ede))
+
+
+
 <a name="2.11.0"></a>
 # [2.11.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.10.0...v2.11.0) (2018-04-16)
 
