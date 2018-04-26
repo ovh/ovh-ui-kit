@@ -61,11 +61,7 @@
       padding: 0 rem-calc(15);
       overflow: hidden;
       max-height: 0;
-      border-color: @inactive-color;
-      border-style: solid;
-      border-width: 0 1px 1px 1px;
-      border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
-      transition: all 0.2s ease-out;
+      transition: padding 0.2s ease-out, max-height 0.2s ease-out;
 
       > :last-child {
         margin-bottom: 0;
@@ -91,7 +87,9 @@
       .@{selector}__body {
         max-height: none;
         padding: rem-calc(15);
-        border-color: @active-color;
+        border: 1px solid @active-color;
+        border-top-width: 0;
+        border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
       }
     }
   }
