@@ -18,11 +18,15 @@
     <div class="oui-collapsible__header-text">
       Title
     </div>    
-    <button type="button" class="oui-collapsible__toggle-button" aria-pressed="false" aria-label="Action">
+    <button type="button" 
+      class="oui-collapsible__toggle-button" 
+      aria-expanded="false"
+      aria-controls="collapsible-1"
+      aria-label="Action">
       <i class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></i>
     </button>
   </div>
-  <div class="oui-collapsible__body">
+  <div id="collapsible-1" class="oui-collapsible__body">
     Collapsible body
   </div>
 </div>
@@ -36,11 +40,15 @@
     <div class="oui-collapsible__header-text">
       Title
     </div>    
-    <button type="button" class="oui-collapsible__toggle-button" aria-pressed="true" aria-label="Action">
+    <button type="button" 
+      class="oui-collapsible__toggle-button" 
+      aria-expanded="true" 
+      aria-controls="collapsible-2"
+      aria-label="Action">
       <i class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></i>
     </button>
   </div>
-  <div class="oui-collapsible__body">
+  <div id="collapsible-2" class="oui-collapsible__body">
       Collapsible body
   </div>
 </div>
