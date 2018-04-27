@@ -1,9 +1,145 @@
+@import './_variables';
 @import './_normalize';
-@import './_mixins';
 
 .oui-progress-tracker {
-  @oui-progress-tracker-selector: oui-progress-tracker;
-
   #oui > .progress-tracker-normalize();
-  #oui > .progress-tracker(@oui-progress-tracker-selector);
+
+  margin: @oui-progress-tracker-container-margin;
+  counter-reset: oui-progress-tracker;
+  font-size: @oui-progress-tracker-font-size;
+  font-weight: @oui-font-regular;
+
+  &__steps {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__step {
+    position: relative;
+    flex: 1 1 0%;
+    cursor: default;
+    pointer-events: initial;
+
+    &_disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+  }
+
+  &__step {
+    #oui > .text-ellipsis();
+
+    &:not(:last-child)::after {
+      content: "";
+      height: rem-calc(4);
+      margin: 0 @oui-progress-tracker-connector-spacing;
+      position: absolute;
+      top: rem-calc(13);
+      left: @oui-progress-tracker-label-icon-size;
+      right: 0;
+      background-color: @oui-progress-tracker-background-color;
+    }
+  }
+
+  &__status {
+    padding-right: rem-calc(30);
+    margin-top: ~"calc(@{oui-progress-tracker-label-icon-size} + @{oui-progress-tracker-label-icon-spacing})";
+    display: block;
+    text-align: left;
+    color: @oui-progress-tracker-label-color;
+
+    &::before {
+      content: counter(oui-progress-tracker);
+      counter-increment: oui-progress-tracker;
+      width: @oui-progress-tracker-label-icon-size;
+      height: @oui-progress-tracker-label-icon-size;
+      line-height: @oui-progress-tracker-label-icon-size;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      color: @oui-progress-tracker-label-color;
+      border-radius: 50%;
+      background-color: @oui-progress-tracker-background-color;
+    }
+  }
+
+  &__label {
+    #oui > .text-ellipsis();
+
+    display: block;
+  }
+
+  &__step_complete {
+    .oui-progress-tracker__status {
+      color: @oui-progress-tracker-label-color-complete;
+      font-weight: @oui-font-semibold;
+    }
+
+    .oui-progress-tracker__status::before {
+      content: @oui-icon-index-check_line;
+      font-family: "Oui Icons";
+      color: @oui-progress-tracker-font-color-complete;
+      font-weight: @oui-font-semibold;
+      background-color: @oui-progress-tracker-background-color-complete;
+    }
+
+    &:not(:last-child)::after {
+      background-color: @oui-progress-tracker-background-color-complete;
+    }
+  }
+
+  &__step_active &__status {
+    color: @oui-progress-tracker-label-color-active;
+    font-weight: @oui-font-semibold;
+
+    &::before {
+      color: @oui-progress-tracker-font-color-active;
+      font-weight: @oui-font-semibold;
+      background-color: @oui-progress-tracker-background-color-active;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    &__steps { position: relative; }
+
+    &__step {
+      display: flex;
+      align-items: center;
+      position: static;
+      overflow: visible;
+
+      &:not(:last-child)::after {
+        flex: 1;
+        position: static;
+      }
+
+      &:last-child {
+        flex: 0;
+
+        &::after { display: none; }
+      }
+    }
+
+    &__label { display: none; }
+
+    &__step_active &__label {
+      display: block;
+      text-align: center;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    &__status {
+      padding-right: 0;
+      margin-top: 0;
+      flex: 0;
+
+      &::before { position: static; }
+    }
+  }
 }

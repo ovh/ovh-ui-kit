@@ -14,39 +14,37 @@
 
 ```html:preview
 <div class="oui-progress-tracker">
-  <ul class="oui-progress-tracker__step_container">
+  <ol class="oui-progress-tracker__steps">
     <li class="oui-progress-tracker__step oui-progress-tracker__step_complete">
-      <a class="oui-progress-tracker__status" href="#"></a>
+      <a class="oui-progress-tracker__status" href="#">
+        <span class="oui-progress-tracker__label">Choix du produit</span>
+      </a>
     </li>
     <li class="oui-progress-tracker__step oui-progress-tracker__step_complete">
-      <a class="oui-progress-tracker__status" href="#"></a>
+      <a class="oui-progress-tracker__status" href="#">
+        <span class="oui-progress-tracker__label">Configuration du produit</span>
+      </a>
     </li>
     <li class="oui-progress-tracker__step oui-progress-tracker__step_active">
-      <a class="oui-progress-tracker__status" href="#"></a>
+      <a class="oui-progress-tracker__status" href="#">
+        <span class="oui-progress-tracker__label">Ajout de produits complémentaires</span>
+      </a>
     </li>
     <li class="oui-progress-tracker__step">
-      <span class="oui-progress-tracker__status"></span>
+      <span class="oui-progress-tracker__status">
+        <span class="oui-progress-tracker__label">Options du produit</span>
+      </span>
     </li>
     <li class="oui-progress-tracker__step">
-      <span class="oui-progress-tracker__status"></span>
+      <span class="oui-progress-tracker__status">
+        <span class="oui-progress-tracker__label">Connexion</span>
+      </span>
     </li>
     <li class="oui-progress-tracker__step oui-progress-tracker__step_disabled">
-      <span class="oui-progress-tracker__status"></span>
+      <span class="oui-progress-tracker__status">
+        <span class="oui-progress-tracker__label">Paiement</span>
+      </span>
     </li>
-  </ul>
-  <ul class="oui-progress-tracker__label_container">
-    <li class="oui-progress-tracker__label oui-progress-tracker__label_complete">
-      <a href="#">Choix du produit</a>
-    </li>
-    <li class="oui-progress-tracker__label oui-progress-tracker__label_complete">
-      <a href="#">Configuration du produit</a>
-    </li>
-    <li class="oui-progress-tracker__label oui-progress-tracker__label_active">
-      <a href="#">Ajout de produits complémentaires</a>
-    </li>
-    <li class="oui-progress-tracker__label">Options du produit</li>
-    <li class="oui-progress-tracker__label">Connexion</li>
-    <li class="oui-progress-tracker__label oui-progress-tracker__label_disabled">Paiement</li>
-  </ul>
+  </ol>
 </div>
 ```
