@@ -188,11 +188,15 @@
     &__action {
       background: none;
       border: 0;
-      padding: 0;
+      padding: 0.4rem 1rem;
 
       .oui-icon {
-        color: @oui-notification-action-active-font-color;
+        color: @oui-notification-action-font-color;
         font-size: @oui-notification-action-icon-font-size;
+      }
+
+      &:hover > .oui-icon {
+        color: @oui-notification-action-font-color-hover;
       }
     }
 
@@ -207,6 +211,8 @@
     &__content {
       color: @oui-navbar-menu-font-color;
       flex: 1;
+      overflow-wrap: break-word;
+      overflow: hidden;
 
       &:hover, &:focus {
         color: @oui-navbar-menu-font-color;
