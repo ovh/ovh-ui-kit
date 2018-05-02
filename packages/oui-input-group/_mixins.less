@@ -251,13 +251,17 @@
     @button-padding-x: @oui-input-group-search-button-padding-x,
   ) {
     position: relative;
+    display: inline-flex;
+
     &_container {
       width: 100%;
     }
+
     .@{input-selector} {
       cursor: pointer;
       background-color: @oui-color-white;
       border-radius: @oui-global-base-radius-medium;
+      margin: 0;
 
       &:read-only {
         border-color: @oui-input-border-color;
@@ -287,6 +291,7 @@
       text-align: center;
       z-index: 2; // Avoid to be hidden by inputs
       right: 1.2rem;
+      margin: 0;
 
       &,
       &:hover,

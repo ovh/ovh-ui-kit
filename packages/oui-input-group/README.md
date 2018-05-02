@@ -116,3 +116,17 @@
   </button>
 </div>
 ```
+
+### Clipboard
+
+```html:preview
+<div class="oui-input-group oui-input-group_clipboard">
+    <div data-oui-tooltip="Copy this clipboard" class="oui-input-group_clipboard_container">
+        <input class="oui-input text-truncate"
+            type="text"
+            value="Copy this text"
+            readonly>
+        <button class="oui-button"><i class="oui-icon oui-icon-copy-normal" aria-hidden="true"></i></button>
+    </div>
+</div>
+```
