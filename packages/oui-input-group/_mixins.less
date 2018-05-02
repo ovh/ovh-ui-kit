@@ -242,4 +242,64 @@
       font-size: inherit;
     }
   }
+
+  .input-group-clipboard(
+    @input-selector,
+    @button-selector,
+    @icon-selector,
+    @oui-clipboard-color: @oui-color-sapphire,
+    @button-padding-x: @oui-input-group-search-button-padding-x,
+  ) {
+    position: relative;
+    &_container {
+      width: 100%;
+    }
+    .@{input-selector} {
+      cursor: pointer;
+      background-color: @oui-color-white;
+      border-radius: @oui-global-base-radius-medium;
+
+      &:read-only {
+        border-color: @oui-input-border-color;
+        box-shadow: @oui-input-shadow;
+        background-color: @oui-color-white;
+        color: @oui-clipboard-color;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: @oui-input-border-color-focus;
+        box-shadow: @oui-input-shadow-focus;
+        background-color: @oui-input-background-color-focus;
+      }
+    }
+
+    .@{button-selector} {
+      width: auto;
+      min-width: 0;
+      display: flex; // For a better vertical centering
+      flex-direction: row;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      padding: 0 @oui-input-group-search-button-padding-x;
+      text-align: center;
+      z-index: 2; // Avoid to be hidden by inputs
+      right: 1.2rem;
+
+      &,
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background: transparent;
+      }
+    }
+
+    .@{icon-selector} {
+      display: block;
+      color: inherit;
+      font-size: inherit;
+    }
+  }
 }
