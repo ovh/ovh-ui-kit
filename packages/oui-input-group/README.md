@@ -121,7 +121,7 @@
 
 ```html:preview
 <div class="oui-input-group oui-input-group_clipboard">
-    <div data-oui-tooltip="Copy this clipboard" class="oui-input-group_clipboard_container">
+    <div oui-tooltip="Copy this clipboard" class="oui-input-group_clipboard_container">
         <input class="oui-input text-truncate"
             type="text"
             value="Copy this text"
