@@ -87,27 +87,7 @@
   }
 
   &__filter {
-    position: relative;
     padding: rem-calc(10px) @oui-dual-list-left-padding;
-
-    & > input {
-      background: @oui-color-dual-list-background;
-      border: 1px solid @oui-color-dual-list-header-background;
-      box-shadow: inset rem-calc(2px) rem-calc(2px) 1px #e9ebe7;
-      border-radius: rem-calc(3px);
-      width: 100%;
-      padding-right: 3rem;
-      height: rem-calc(40px);
-      padding-left: rem-calc(10px);
-    }
-
-    & > .oui-icon {
-      position: absolute;
-      right: @oui-dual-list-left-padding + rem-calc(10px);
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-    }
   }
 
   &__add-all-link, &__remove-all-link {
@@ -161,7 +141,7 @@
       margin-bottom: rem-calc(5px);
     }
 
-    &_text {
+    &-text {
       display: block;
       width: 85%;
     }
@@ -175,7 +155,7 @@
       top: 0;
       bottom: 0;
 
-      & i {
+      & .oui-icon {
         font-size: @oui-dual-list-icon-size;
       }
     }
