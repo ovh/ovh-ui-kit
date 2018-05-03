@@ -1,0 +1,223 @@
+@import "./_normalize";
+@import "./_variables";
+@import "./_mixins";
+@import "../oui/_settings";
+@import "../oui-modal/_mixins";
+@import "../oui-responsive/_variables";
+
+.oui-modal-on-boarding {
+  #oui > .modal-on-boarding-normalize();
+  #oui > .oui-modal-on-boarding-default-theme();
+
+  display: flex;
+  flex-direction: column;
+  height: rem-calc(515);
+  margin: auto;
+  max-width: ~"calc(100% - 50px)";
+  position: relative;
+  width: rem-calc(370);
+
+  &__loader {
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: @oui-global-base-radius-medium;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  &__header {
+    border-top-left-radius: @oui-global-base-radius-medium;
+    border-top-right-radius: @oui-global-base-radius-medium;
+    height: rem-calc(40);
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+
+    .oui-modal__close-button {
+      top: 5px;
+      right: 5px;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+    border-top-left-radius: @oui-global-base-radius-medium;
+    border-top-right-radius: @oui-global-base-radius-medium;
+    flex: 1 1 auto;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__footer {
+    background-color: #fff;
+    border-bottom-left-radius: @oui-global-base-radius-medium;
+    border-bottom-right-radius: @oui-global-base-radius-medium;
+    min-height: rem-calc(20);
+  }
+
+  &__content {
+    background-color: #fff;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+
+    &-prev,
+    &-next {
+      background: rgba(17, 63, 109, 0.5);
+      border: 0 none;
+      border-radius: 50%;
+      color: #fff;
+      height: rem-calc(@oui-modal-on-boarding-button-size);
+      margin-top: -(rem-calc(@oui-modal-on-boarding-button-size / 2));
+      position: absolute;
+      top: 50%;
+      transition: background .3s ease-out;
+      width: rem-calc(@oui-modal-on-boarding-button-size);
+
+      &:not(:disabled) {
+        :active, &:focus, &:hover {
+          background-color: rgba(17, 63, 109, 0.75);
+        }
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    &-prev {
+      left: 0;
+      margin-left: -(rem-calc(@oui-modal-on-boarding-button-size / 2));
+      padding-left: rem-calc(4);
+      text-align: left;
+    }
+
+    &-next {
+      margin-right: -(rem-calc(@oui-modal-on-boarding-button-size / 2));
+      padding-right: rem-calc(4);
+      right: 0;
+      text-align: right;
+    }
+
+    &-panel {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      transition: left .8s ease-in-out;
+      width: 100%;
+
+      &.active,
+      &.next,
+      &.prev {
+        display: flex;
+      }
+
+      &.next,
+      &.prev {
+        position: absolute;
+        top: 0;
+      }
+
+      &.active {
+        left: 0;
+
+        &.left {
+          left: -100%;
+        }
+
+        &.right {
+          left: 100%;
+        }
+      }
+
+      &.next {
+        left: 100%;
+
+        &.left {
+          left: 0;
+        }
+      }
+
+      &.prev {
+        left: -100%;
+
+        &.right {
+          left: 0;
+        }
+      }
+
+      .oui-modal-on-boarding__content-container {
+        padding: rem-calc(20) rem-calc(20) 0;
+      }
+
+      > :first-child {
+        padding-top: rem-calc(40);
+      }
+    }
+  }
+
+  &__indicators {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    height: rem-calc(50);
+    justify-content: center;
+
+    button {
+      background-color: transparent;
+      border: 0 none;
+      border-radius: 50%;
+      margin: 0 rem-calc(2);
+      outline: none;
+      overflow: hidden;
+
+      &::before {
+        background-color: #fff;
+        border-radius: 50%;
+        content: "";
+        display: block;
+      }
+
+      &.active {
+        padding: rem-calc(3);
+
+        &::before {
+          height: rem-calc(10);
+          width: rem-calc(10);
+        }
+      }
+
+      &:not(.active) {
+        padding: rem-calc(4);
+
+        &::before {
+          height: rem-calc(8);
+          opacity: .5;
+          width: rem-calc(8);
+        }
+      }
+    }
+  }
+
+  &.touchDevice {
+    .oui-modal-on-boarding__content-prev,
+    .oui-modal-on-boarding__content-next {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: (@oui-responsive-breakpoint-tablet - 1)) and (orientation: landscape) {
+  .oui-modal-on-boarding.touchDevice {
+    height: 85vh;
+    max-height: 100%;
+    width: 515px;
+  }
+}
