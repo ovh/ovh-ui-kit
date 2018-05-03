@@ -1,3 +1,24 @@
+<a name="2.13.0"></a>
+# [2.13.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.12.0...v2.13.0) (2018-05-03)
+
+
+### Bug Fixes
+
+* **oui-action-menu:** fix disabled cursor on action menu ([88ed9a2](https://github.com/ovh-ux/ovh-ui-kit/commit/88ed9a2))
+* **oui-button:** remove not-allowed cursor ([9c074d3](https://github.com/ovh-ux/ovh-ui-kit/commit/9c074d3))
+* **oui-input:** remove not-allowed cursor ([4411a87](https://github.com/ovh-ux/ovh-ui-kit/commit/4411a87))
+* **oui-pagination:** remove not-allowed cursor ([2e5a3e6](https://github.com/ovh-ux/ovh-ui-kit/commit/2e5a3e6))
+* **oui-select:** remove not-allowed cursor ([f42af60](https://github.com/ovh-ux/ovh-ui-kit/commit/f42af60))
+* **oui-stepper:** remove not-allowed cursor ([be4571d](https://github.com/ovh-ux/ovh-ui-kit/commit/be4571d))
+* **oui-textarea:** fix slow resizing ([03c015b](https://github.com/ovh-ux/ovh-ui-kit/commit/03c015b))
+
+
+### Features
+
+* **oui-icons:** add shape circle and dot icon ([3caf10c](https://github.com/ovh-ux/ovh-ui-kit/commit/3caf10c))
+
+
+
 <a name="2.12.0"></a>
 # [2.12.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.11.0...v2.12.0) (2018-04-26)
 
