@@ -28,15 +28,13 @@
   }
 
   &__step {
-    #oui > .text-ellipsis();
-
     &:not(:last-child)::after {
       content: "";
       height: rem-calc(4);
       margin: 0 @oui-progress-tracker-connector-spacing;
       position: absolute;
       top: rem-calc(13);
-      left: @oui-progress-tracker-label-icon-size;
+      left: @oui-progress-tracker-icon-height;
       right: 0;
       background-color: @oui-progress-tracker-background-color;
     }
@@ -44,7 +42,7 @@
 
   &__status {
     padding-right: rem-calc(30);
-    margin-top: ~"calc(@{oui-progress-tracker-label-icon-size} + @{oui-progress-tracker-label-icon-spacing})";
+    margin-top: ~"calc(@{oui-progress-tracker-icon-height} + @{oui-progress-tracker-icon-spacing})";
     display: block;
     text-align: left;
     color: @oui-progress-tracker-label-color;
@@ -52,25 +50,31 @@
     &::before {
       content: counter(oui-progress-tracker);
       counter-increment: oui-progress-tracker;
-      width: @oui-progress-tracker-label-icon-size;
-      height: @oui-progress-tracker-label-icon-size;
-      line-height: @oui-progress-tracker-label-icon-size;
+      width: @oui-progress-tracker-icon-height;
+      height: @oui-progress-tracker-icon-height;
+      line-height: @oui-progress-tracker-icon-height;
       display: block;
       position: absolute;
       left: 0;
       top: 0;
       text-align: center;
-      color: @oui-progress-tracker-label-color;
+      font-size: @oui-progress-tracker-icon-size;
+      font-weight: @oui-font-semibold;
+      color: @oui-progress-tracker-font-color;
       border-radius: 50%;
       background-color: @oui-progress-tracker-background-color;
     }
   }
 
   &__label {
-    #oui > .text-ellipsis();
-
+    line-height: @oui-progress-tracker-label-line-height;
+    max-height: ~"calc(@{oui-progress-tracker-font-size} * @{oui-progress-tracker-label-line-height} * 2)";
+    overflow: hidden;
     display: block;
     margin-top: rem-calc(10);
+    word-break: break-work;
+    hyphens: auto;
+    font-weight: @oui-font-semibold;
   }
 
   &__step_complete {
@@ -83,7 +87,7 @@
       content: @oui-icon-index-check_line;
       font-family: "Oui Icons";
       color: @oui-progress-tracker-font-color-complete;
-      font-weight: @oui-font-semibold;
+      font-size: @oui-progress-tracker-icon-size_success;
       background-color: @oui-progress-tracker-background-color-complete;
     }
 
@@ -109,6 +113,8 @@
     &__steps { position: relative; }
 
     &__step {
+      #oui > .text-ellipsis();
+
       display: flex;
       align-items: center;
       position: static;
@@ -126,7 +132,11 @@
       }
     }
 
-    &__label { display: none; }
+    &__label {
+      #oui > .text-ellipsis();
+
+      display: none;
+    }
 
     &__step_active &__label {
       display: block;
