@@ -1,0 +1,40 @@
+@import './_normalize';
+@import './_variables';
+
+.oui-dashboard-tile {
+  @oui-dashboard-tile-selector: oui-dashboard-tile;
+
+  #oui > .dashboard-tile-normalize();
+
+  padding: rem-calc(10) rem-calc(15);
+  background-color: #FFF;
+  border: 1px solid @oui-dashboard-tile-border-color;
+  box-shadow: 0 rem-calc(4px) rem-calc(6px) rgba(0, 0, 0, 0.06);
+  border-radius: @oui-global-base-radius;
+  height: 100%;
+
+  &__header {
+    font-weight: @oui-font-semibold;
+  }
+
+  &__item-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    padding: rem-calc(8) 0;
+    flex: 1 1 auto;
+    &-title {
+      #oui .base-font();
+      margin-bottom: rem-calc(4);
+    }
+  }
+
+  &__divider {
+    display: block;
+    height: rem-calc(1);
+    margin: rem-calc(4) 0;
+    background-color: @oui-color-silver;
+  }
+}
