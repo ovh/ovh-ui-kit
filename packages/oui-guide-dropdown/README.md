@@ -1,4 +1,4 @@
-# oui-guide
+# oui-guide-dropdown
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
@@ -7,12 +7,12 @@ oui-guide is a package which provides styles for dropdown and uses action items 
 ## Installation
 
 ```less
-  @import 'oui-button-guide/button-guide';
+  @import 'oui-guide-dropdown/guide-dropdown';
 ```
 ## Usage
 
 ```html:preview
-<div style="border: 1px #BDBDBD solid; width: 300px" class="oui-doc-preview-only-keep-children">
+<div style="border: 1px #BDBDBD solid; width: 300px; margin-bottom: 20px;" class="oui-doc-preview-only-keep-children">
 <div class="oui-guide">
     <div class="oui-guide__body">
         <div role="menu" class="oui-action-menu">
