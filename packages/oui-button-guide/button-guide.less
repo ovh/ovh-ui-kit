@@ -1,37 +1,33 @@
 @import "./_variables";
 
 .oui-guide {
-  // .oui-dropdown__content  {
+  .oui-action-menu__item {
+    .oui-button_action-menu {
+      &:hover {
+        .oui-icon-external_link {
+          visibility: visible;
+        }
+      }
+      .oui-icon-external_link {
+        visibility: hidden;
+      }
+    }
+  }
+  .oui-guide__footer {
     .oui-action-menu__item {
       .oui-button_action-menu {
-        &:hover {
-          .oui-icon-external_link {
-            visibility: visible;
-          }
-        }
-        .oui-icon-external_link {
-          visibility: hidden;
-        }
-      }
-    }
-    .oui-guide__footer {
-      .oui-action-menu__item {
-        .oui-button_action-menu {
-          text-align: center;
-          font-weight: @oui-font-semibold;
-          text-transform: capitalize;
-        }
-      }
-      &-button {
         text-align: center;
-        padding-top: @oui-guide-footer-button-top-padding;
-
-        button {
-          width: @oui-guide-footer-button-width;
-        }
+        font-weight: @oui-font-semibold;
+        text-transform: capitalize;
       }
     }
-  // }
+    .oui-button_secondary {
+      text-align: center;
+      padding-top: @oui-guide-footer-button-top-padding;
+      width: @oui-guide-footer-button-width;
+      margin: @oui-guide-footer-button-margin;
+    }
+  }
 
   .oui-guide__body {
     max-height: 70vh;
@@ -45,7 +41,7 @@
     &_bottom {
       margin-top: @oui-guide-dropdown-content-margin;
 
-      &:before, &:after {
+      &::before, &::after {
         right: @oui-guide-move-right;
       }
     }
@@ -76,7 +72,7 @@
       display: block;
       font-weight: @oui-font-semibold;
       text-decoration: none !important;
-      color: #113f6d;
+      color: @oui-color-sapphire;
     }
   }
 }
