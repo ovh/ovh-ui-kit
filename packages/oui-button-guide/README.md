@@ -2,7 +2,7 @@
 
 <component-status cx-design="complete" ux="rc"></component-status>
 
-oui-guide is a package which provide styles action buttons in a dropdown and uses action items.
+oui-guide is a package which provides styles for dropdown and uses action items and oui buttons.
 
 ## Installation
 
