@@ -6,7 +6,7 @@
 
   #oui > .dashboard-tile-normalize();
 
-  padding: rem-calc(10) rem-calc(15);
+  padding: rem-calc(10) @oui-dashboard-tile-item-side-spacing;
   background-color: #FFF;
   border: 1px solid @oui-dashboard-tile-border-color;
   box-shadow: 0 rem-calc(4px) rem-calc(6px) rgba(0, 0, 0, 0.06);
@@ -36,5 +36,43 @@
     height: rem-calc(1);
     margin: rem-calc(4) 0;
     background-color: @oui-color-silver;
+  }
+
+  &__icon {
+    font-size: rem-calc(18);
+    line-height: 1.5;
+  }
+
+  &__button {
+    margin: 0;
+    padding-left: @oui-dashboard-tile-item-side-spacing;
+    padding-right: @oui-dashboard-tile-item-side-spacing;
+    margin: 0 0-@oui-dashboard-tile-item-side-spacing;
+    box-sizing: content-box;
+    font-weight: @oui-font-semibold;
+    text-align: left;
+    text-decoration: none;
+
+    &.oui-button_full-width.oui-button_icon-right {
+      .oui-icon {
+        &::before {
+          right: @oui-dashboard-tile-item-side-spacing;
+        }
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: @oui-color-concrete;
+    }
+  }
+
+  &__button.oui-button_link {
+    &,
+    &:hover,
+    &:focus { text-decoration: none; }
+  }
+
+  .oui-button {
+    margin-bottom: 0;
   }
 }
