@@ -19,12 +19,16 @@
 
   &__item-container {
     display: flex;
-    align-items: center;
+    & > *:first-child {
+      flex: 1 1 auto;
+    }
+    .oui-action-menu-button {
+      margin-top: rem-calc(12);
+    }
   }
 
   &__item {
     padding: rem-calc(8) 0;
-    flex: 1 1 auto;
     &-title {
       #oui .base-font();
       margin-bottom: rem-calc(4);
