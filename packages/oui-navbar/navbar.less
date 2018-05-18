@@ -180,6 +180,83 @@
     /* stylelint-enable indentation */
   }
 
+  &-notification {
+    align-items: flex-start;
+    display: flex;
+    padding: @oui-notification-padding;
+
+    &__action {
+      background: none;
+      border: 0;
+      padding: 0.4rem 1rem;
+
+      .oui-icon {
+        color: @oui-notification-action-font-color;
+        font-size: @oui-notification-action-icon-font-size;
+      }
+
+      &:hover > .oui-icon {
+        color: @oui-notification-action-font-color-hover;
+      }
+    }
+
+    & > &__action {
+      visibility: hidden;
+    }
+
+    &:hover > &__action {
+      visibility: visible;
+    }
+
+    &__content {
+      color: @oui-navbar-menu-font-color;
+      flex: 1;
+      overflow-wrap: break-word;
+      overflow: hidden;
+
+      &:hover, &:focus {
+        color: @oui-navbar-menu-font-color;
+        text-decoration: none;
+      }
+    }
+
+    &__icon {
+      font-size: @oui-notification-icon-font-size;
+      margin: @oui-notification-icon-margin;
+
+      &.oui-icon-info_circle {
+        color: @oui-notification-info-icon-color;
+      }
+
+      &.oui-icon-success_circle {
+        color: @oui-notification-success-icon-color;
+      }
+
+      &.oui-icon-warning_circle {
+        color: @oui-notification-warning-icon-color;
+      }
+
+      &.oui-icon-error_circle {
+        color: @oui-notification-error-icon-color;
+      }
+    }
+
+    &__time {
+      padding: 0 0 0 0.5rem;
+    }
+
+    &__description {
+      line-height: 2rem;
+      max-height: 8rem;
+      overflow: hidden;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      font-weight: @oui-notification-title-weight;
+    }
+  }
+
   // Helper for responsive
   #oui > .navbar-helpers();
 }
