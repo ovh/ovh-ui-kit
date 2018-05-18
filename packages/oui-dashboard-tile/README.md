@@ -12,33 +12,34 @@
 
 ```html:preview
 <div class="oui-dashboard-tile">
-  <h5 class="oui-header_5 oui-dashboard-tile__header">Information</h5>
-  <div class="oui-dashboard-tile__divider"></div>
-  <div class="oui-dashboard-tile__item">
-    <div class="oui-dashboard-tile__item-title">
-      Status
-    </div>
-    <button class="oui-button oui-button_secondary">
-      Active
-    </button>
+  <h5 class="oui-header_5 oui-dashboard-tile__header oui-dashboard-tile__header-bordered">Information</h5>
+  <div class="oui-dashboard-tile__item-container oui-dashboard-tile__item-container-bordered">
+    <div class="oui-dashboard-tile__item">
+      <div class="oui-dashboard-tile__item-title">
+        Status
+      </div>
+      <button class="oui-button oui-button_secondary">
+        Active
+      </button>
+    </div>  
   </div>
-  <div class="oui-dashboard-tile__divider"></div>
-  <div class="oui-dashboard-tile__item">
-    <div class="oui-dashboard-tile__item-title">
-      6 Front-ends
-    </div>
-    <div>
-      <span class="oui-status oui-status_success">2 of 6 active</span>
-    </div>
-    <div>
-      <span class="oui-status oui-status_warning">3 of 6 with warnings</span>
-    </div>
-    <div>
-      <span class="oui-status oui-status_error">1 of 6 with errors</span>
+  <div class="oui-dashboard-tile__item-container oui-dashboard-tile__item-container-bordered">
+    <div class="oui-dashboard-tile__item">
+      <div class="oui-dashboard-tile__item-title">
+        6 Front-ends
+      </div>
+      <div>
+        <span class="oui-status oui-status_success">2 of 6 active</span>
+      </div>
+      <div>
+        <span class="oui-status oui-status_warning">3 of 6 with warnings</span>
+      </div>
+      <div>
+        <span class="oui-status oui-status_error">1 of 6 with errors</span>
+      </div>
     </div>
   </div>
-  <div class="oui-dashboard-tile__divider"></div>
-  <div class="oui-dashboard-tile__item-container">
+  <div class="oui-dashboard-tile__item-container oui-dashboard-tile__item-container-bordered">
     <div class="oui-dashboard-tile__item">
       <div class="oui-dashboard-tile__item-title">
         Main Domain
@@ -57,12 +58,11 @@
       </svg>
     </button>
   </div>
-  <div class="oui-dashboard-tile__divider"></div>
-  <div class="oui-dashboard-tile__item">
-    <div class="oui-dashboard-tile__item-title">
-      IPv4
-    </div>
-    <div>
+  <div class="oui-dashboard-tile__item-container">
+    <div class="oui-dashboard-tile__item">
+      <div class="oui-dashboard-tile__item-title">
+        IPv4
+      </div>
       37.59.16.168
     </div>
   </div>
@@ -73,43 +73,52 @@
 
 ```html:preview
 <div class="oui-dashboard-tile">
-  <h5 class="oui-header_5 oui-dashboard-tile__header">Shortcuts</h5>
-  <div class="oui-dashboard-tile__divider"></div>
-  <button type="button" class="oui-dashboard-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
-    Associate a domain name
-    <i class="oui-icon oui-icon-chevron-right" aria-label="Button 1"></i>
-  </button>
-  <button type="button" class="oui-dashboard-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
-    Execute a diagnostic
-    <i class="oui-icon oui-icon-chevron-right" aria-label="Button 1"></i>
-  </button>
-  <div class="oui-dashboard-tile__divider"></div>
-  <div class="oui-dashboard-tile__item">
-    <div class="oui-dashboard-tile__item-title">
-      Associated Sharepoint service
-    </div>
-    <div>
+  <h5 class="oui-header_5 oui-dashboard-tile__header oui-dashboard-tile__header-bordered">Shortcuts</h5>
+  <div class="oui-dashboard-tile__item-container">
+    <div class="oui-dashboard-tile__item">
       <a href="#" class="oui-link">
-        sharepoint-fg5643-1
+        Associate a domain name
       </a>
     </div>
   </div>
-  <div class="oui-dashboard-tile__item">
-    <div class="oui-dashboard-tile__item-title">
-      Checking URL
-    </div>
-    <div>
-      <a href="#" class="oui-link oui-link_icon">
-        https://mysp.ovh.net
-        <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+  <div class="oui-dashboard-tile__item-container oui-dashboard-tile__item-container-bordered">
+    <div class="oui-dashboard-tile__item">
+      <a href="#" class="oui-link">
+        Execute a diagnostic
       </a>
     </div>
   </div>
-  <div class="oui-dashboard-tile__divider"></div>
-  <div class="oui-dashboard-tile__item">
-    <a href="#" class="oui-link">
-      Migrate to Exchange 2016
-    </a>
+  <div class="oui-dashboard-tile__item-container">
+    <div class="oui-dashboard-tile__item">
+      <div class="oui-dashboard-tile__item-title">
+        Associated Sharepoint service
+      </div>
+      <div>
+        <a href="#" class="oui-link">
+          sharepoint-fg5643-1
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="oui-dashboard-tile__item-container oui-dashboard-tile__item-container-bordered">
+    <div class="oui-dashboard-tile__item">
+      <div class="oui-dashboard-tile__item-title">
+        Checking URL
+      </div>
+      <div>
+        <a href="#" class="oui-link oui-link_icon">
+          https://mysp.ovh.net
+          <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="oui-dashboard-tile__item-container">
+    <div class="oui-dashboard-tile__item">
+      <a href="#" class="oui-link">
+        Migrate to Exchange 2016
+      </a>
+    </div>
   </div>
 </div>
 ```
