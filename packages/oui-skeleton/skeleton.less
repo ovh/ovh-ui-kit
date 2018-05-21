@@ -1,37 +1,62 @@
 @import './_variables';
+@import './_mixins';
 
 .oui-skeleton {
-    &__loader {
-      position: relative;
+
+  &_auto {
+    #oui > .skeleton_auto();
+  }
+
+  &_xs {
+    #oui > .skeleton_xs();
+  }
+
+  &_s {
+    #oui > .skeleton_s();
+  }
+  
+  &_m {
+    #oui > .skeleton_m();
+  }
+
+  &_l {
+    #oui > .skeleton_l();
+  }
+
+  &_xl {
+    #oui > .skeleton_xl();
+  }
+
+  &__loader {
+    position: relative;
+    display: block;
+
+    &:before {
+      content: "\00a0";
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
       display: block;
-  
-      &:before {
-        content: "\00a0";
-      }
-  
-      &:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: @oui-skeleton-height;
-        background-color: @oui-skeleton-background-color;
-        background-image: @oui-skeleton-background-image;        
-        background-position: @oui-skeleton-background-position;
-        background-repeat: repeat-y;
-        background-size: @oui-skeleton-background-size;
-        transform: translateY(-50%);
-        animation: skeleton linear 2s infinite;
-        border-radius: @oui-skeleton-border-radius;
-      }
-  
-      @keyframes skeleton {
-        to {
-            background-position: @oui-skeleton-keyframes-background-position;
-        }
+      width: 100%;
+      height: @oui-skeleton-height;
+      background-color: @oui-skeleton-background-color;
+      background-image: @oui-skeleton-background-image;        
+      background-position: @oui-skeleton-background-position;
+      background-repeat: repeat-y;
+      background-size: @oui-skeleton-background-size;
+      transform: translateY(-50%);
+      animation: skeleton linear 2s infinite;
+      border-radius: @oui-skeleton-border-radius;
+    }
+
+    @keyframes skeleton {
+      to {
+          background-position: @oui-skeleton-keyframes-background-position;
       }
     }
   }
-  
+}

@@ -14,7 +14,9 @@ oui-skeleton is a package which provides styles for the skeleton component.
 
 
 ```html:preview
-<div class="oui-skeleton">
-    <span class="oui-skeleton__loader" style="width: 30%"></span>
+<div class="oui-doc-preview-only-keep-children" style="width: 45%;">
+    <div class="oui-skeleton">
+        <span class="oui-skeleton__loader"></span>
+    </div>
 </div>
 ```
