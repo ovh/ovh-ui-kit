@@ -31,11 +31,11 @@
     position: relative;
     display: block;
 
-    &:before {
+    &::before {
       content: "\00a0";
     }
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -55,7 +55,7 @@
 
     @keyframes skeleton {
       to {
-          background-position: @oui-skeleton-keyframes-background-position;
+        background-position: @oui-skeleton-keyframes-background-position;
       }
     }
   }
