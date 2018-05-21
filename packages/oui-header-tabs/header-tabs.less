@@ -9,7 +9,7 @@
   &__tab {
     position: relative;
     padding: 0;
-    font-weight: 400;
+    font-weight: @oui-font-regular;
     transition: all 1000ms ease-in;
 
     a {
@@ -17,7 +17,7 @@
       padding: rem-calc(11px) rem-calc(24px);
       color: @oui-color-sapphire;
       text-decoration: none;
-      font-family: SourceSansPro-Regular;
+      font-family: base-font();
       font-size: rem-calc(16px);
     }
 
@@ -35,7 +35,7 @@
     &_active {
       a {
         color: @oui-color-sapphire;
-        font-weight: 700;
+        font-weight: @oui-font-bold;
       }
 
       &::after { 
