@@ -1,56 +1,14 @@
 #oui {
-
-  .skeleton_auto(
-    @selector: @oui-skeleton-selector,
-    @width: @oui-skeleton-width-auto,
-  ) {
-    .@{selector}__loader {
-      width: @width;
+  .skeleton-sizes() {
+    .make-loader-sizes(@i: 1) when (@i <= length(@oui-skeleton-sizes)) {
+      .make-loader-sizes(@i + 1);
+      @pair: extract(@oui-skeleton-sizes, @i);
+      @key: extract(@pair, 1);
+      @value: extract(@pair, 2);
+      &_@{key} &__loader {
+        width: @value;
+      }
     }
-  }
-
-  .skeleton_xs(
-    @selector: @oui-skeleton-selector,
-    @width: @oui-skeleton-width-xs,    
-  ) {
-    .@{selector}__loader {
-      width: @width;
-    }
-  }
-
-  .skeleton_s(
-    @selector: @oui-skeleton-selector,
-    @width: @oui-skeleton-width-s,
-  ) {
-    .@{selector}__loader {
-      width: @width;
-    }
-  }
-
-  .skeleton_m(
-    @selector: @oui-skeleton-selector,
-    @width: @oui-skeleton-width-m,    
-  ) {
-    .@{selector}__loader {
-      width: @width;
-    }
-  }
-
-  .skeleton_l(
-    @selector: @oui-skeleton-selector,
-    @width: @oui-skeleton-width-l,
-  ) {
-    .@{selector}__loader {
-      width: @width;
-    }
-  }
-
-  .skeleton_xl(
-    @selector: @oui-skeleton-selector,
-    @width: @oui-skeleton-width-xl,
-  ) {
-    .@{selector}__loader {
-      width: @width;
-    }
+    .make-loader-sizes();
   }
 }
