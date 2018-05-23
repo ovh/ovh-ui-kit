@@ -253,7 +253,7 @@
     position: relative;
     display: inline-flex;
 
-    &_container {
+    &-container {
       width: 100%;
     }
 
@@ -265,15 +265,15 @@
 
       &:read-only {
         border-color: @oui-input-border-color;
-        box-shadow: @oui-input-shadow;
-        background-color: @oui-color-white;
+        box-shadow: none;
+        background-color
         color: @oui-clipboard-color;
       }
 
       &:hover,
       &:focus {
         border-color: @oui-input-border-color-focus;
-        box-shadow: @oui-input-shadow-focus;
+        box-shadow: none;
         background-color: @oui-input-background-color-focus;
       }
     }
