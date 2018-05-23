@@ -1,3 +1,13 @@
+<a name="2.14.0"></a>
+# [2.14.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.13.1...v2.14.0) (2018-05-23)
+
+
+### Features
+
+* **oui-navbar:** add style of notifications ([#189](https://github.com/ovh-ux/ovh-ui-kit/issues/189)) ([2c777fe](https://github.com/ovh-ux/ovh-ui-kit/commit/2c777fe))
+
+
+
 <a name="2.13.1"></a>
 ## [2.13.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.13.0...v2.13.1) (2018-05-16)
 
