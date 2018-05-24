@@ -1,12 +1,88 @@
-@import './_mixins';
+@import "../oui-accessibility/_mixins";
+@import "../oui-animation/_mixins";
+@import "../oui-color/_variables";
+@import "./_mixins";
+@import "./_variables";
 
 .oui-switch {
-  @oui-switch-selector: oui-switch;
-  @oui-icon-selector: oui-icon;
+  display: block;
+  line-height: 0;
+  vertical-align: middle;
 
-  #oui > .switch(@oui-switch-selector, @oui-icon-selector);
-
-  &_square {
-    #oui > .switch-square(@oui-switch-selector);
+  &__label-container {
+    height: @oui-switch-height;
+    margin-bottom: rem-calc(5);
+    position: relative;
+    width: @oui-switch-width;
   }
+
+  &__checkbox {
+    #oui > .visually-hidden();
+
+    &:checked {
+      ~ .oui-switch__slider {
+        background-color: @oui-color-info-dark;
+      }
+
+      ~ .oui-switch__slider::before {
+        transform: translateX(@oui-switch-width - @oui-switch-height);
+      }
+    }
+
+    &:disabled {
+      ~ .oui-switch__slider {
+        background-color: @oui-color-ironlight;
+        cursor: default;
+
+        &::before {
+          background-color: @oui-color-concrete;
+        }
+      }
+    }
+
+    &:focus ~ .oui-switch__slider {
+      box-shadow: inset 0 1px 1px 0 rgba(63, 81, 103, .2), 0 0 3px 1px rgba(0, 0, 0, .15);
+    }
+  }
+
+  &__slider {
+    #oui > .animate();
+
+    background-color: @oui-color-nurse;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-radius: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+    box-shadow: inset 0 1px 1px 0 rgba(63, 81, 103, .2);
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &::before {
+      #oui > .animate();
+
+      background-color: @oui-color-white;
+      border-radius: 50%;
+      bottom: ~"calc(@{oui-switch-border-width} - 1px)";
+      box-shadow: 0 1px 2px 0 @oui-color-silver;
+      content: "";
+      height: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+      left: ~"calc(@{oui-switch-border-width} - 1px)";
+      position: absolute;
+      width: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+      z-index: 1;
+    }
+  }
+
+  &_inline {
+    display: inline-block;
+
+    .oui-switch__label-container {
+      margin-bottom: 0;
+    }
+  }
+
+  #oui > .switch-square();
+  #oui > .switch-error();
 }
