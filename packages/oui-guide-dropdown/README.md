@@ -15,32 +15,30 @@ oui-guide is a package which provides styles for dropdown and uses action items 
 <div style="border: 1px #BDBDBD solid; width: 300px; margin-bottom: 20px;" class="oui-doc-preview-only-keep-children">
 <div class="oui-guide">
     <div class="oui-guide__body">
-        <div role="menu" class="oui-action-menu">
-            <div role="menuitem" class="oui-action-menu__item">
-                <a href="#" class="oui-button oui-button_action-menu">
-                    Action 1
+        <div role="menuitem" class="oui-action-menu__item">
+            <a href="#" class="oui-button oui-button_action-menu">
+                Action 1
+            <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div role="menuitem" class="oui-action-menu__item">
+          <a href="#" class="oui-button oui-button_action-menu">
+            Action 2
+            <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div role="menuitem" class="oui-action-menu__item">
+            <a href="#" class="oui-button oui-button_action-menu">
+                A veeeeeeery looooooooong action here
                 <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div role="menuitem" class="oui-action-menu__item">
-              <a href="#" class="oui-button oui-button_action-menu">
-                Action 2
-                <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
-              </a>
-            </div>
-            <div role="menuitem" class="oui-action-menu__item">
-                <a href="#" class="oui-button oui-button_action-menu">
-                    A veeeeeeery looooooooong action here
-                    <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div role="separator" class="oui-action-menu__divider"></div>
-            <div role="menuitem" class="oui-action-menu__item">
-              <a href="#" class="oui-button oui-button_action-menu">
-                About us
-                <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
-              </a>
-            </div>
+            </a>
+        </div>
+        <div role="separator" class="oui-action-menu__divider"></div>
+        <div role="menuitem" class="oui-action-menu__item">
+          <a href="#" class="oui-button oui-button_action-menu">
+            About us
+            <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+          </a>
         </div>
     </div>
 
