@@ -36,8 +36,5 @@
     "rimraf": "^2.5.4",
     "stylefmt": "^6.0.0",
     "stylelint": "^8.4.0"
-  },
-  "peerDependencies": {
-    "flatpickr": "4.5.0"
   }
 }
