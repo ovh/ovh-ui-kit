@@ -14,12 +14,13 @@
 
     &::after {
       content: "";
+      width: 100%;
+      height: @oui-skeleton-height;
       position: absolute;
       top: 50%;
       left: 0;
       display: block;
-      width: 100%;
-      height: @oui-skeleton-height;
+      border-radius: @oui-skeleton-border-radius;
       background-color: @oui-skeleton-background-color;
       background-image: @oui-skeleton-background-image;
       background-position: @oui-skeleton-background-position;
@@ -27,7 +28,6 @@
       background-size: @oui-skeleton-background-size;
       transform: translateY(-50%);
       animation: skeleton linear 2s infinite;
-      border-radius: @oui-skeleton-border-radius;
     }
 
     @keyframes skeleton {
