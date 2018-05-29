@@ -5,20 +5,22 @@
   display: block;
 
   &__loader {
+    min-height: @oui-skeleton-height;
     position: relative;
     display: block;
 
     &::before {
       content: "\00a0";
+      font-size: inherit;
     }
 
     &::after {
       content: "";
-      width: 100%;
       height: @oui-skeleton-height;
       position: absolute;
       top: 50%;
       left: 0;
+      right: 0;
       display: block;
       border-radius: @oui-skeleton-border-radius;
       background-color: @oui-skeleton-background-color;
