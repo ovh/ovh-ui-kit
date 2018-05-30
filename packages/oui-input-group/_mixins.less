@@ -251,31 +251,17 @@
     @button-padding-x: @oui-input-group-search-button-padding-x,
   ) {
     position: relative;
-    display: inline-flex;
 
     &-container {
       width: 100%;
     }
 
     .@{input-selector} {
+      #oui > .text-ellipsis();
+
       cursor: pointer;
-      background-color: @oui-color-white;
-      border-radius: rem-calc(3);
       margin: 0;
-
-      &:read-only {
-        border-color: @oui-input-border-color;
-        box-shadow: none;
-        background-color
-        color: @oui-clipboard-color;
-      }
-
-      &:hover,
-      &:focus {
-        border-color: @oui-input-border-color-focus;
-        box-shadow: none;
-        background-color: @oui-input-background-color-focus;
-      }
+      color: @oui-clipboard-color;
     }
 
     .@{button-selector} {
