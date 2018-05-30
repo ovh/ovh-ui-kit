@@ -1,60 +1,83 @@
-@import './_mixins';
 @import './_normalize';
+@import './_variables';
+@import '../oui-animation/_variables';
 
 @oui-progress-modifiers: info, success, warning, error;
 
 .oui-progress {
   #oui > .progress-normalize();
-  #oui > .progress-base();
+  @oui-progress-selector: oui-progress;
 
-  .oui-progress-modifiers(@i: length(@oui-progress-modifiers)) when (@i > 0) {
-    .oui-progress-modifiers(@i - 1);
-    @current-modifier: extract(@oui-progress-modifiers, @i);
-    @background-color: "oui-progress-@{current-modifier}-background-color";
-    @foreground-color: "oui-progress-@{current-modifier}-foreground-color";
+  display: flex;
+  flex-direction: column;
+  margin: @oui-progress-margin;
 
-    &_@{current-modifier} {
-      #oui > .progress(
-        @@background-color,
-        @@foreground-color,
-        @oui-progress-height
-      );
-    }
+  &__bar-container {
+    position: relative;
+    height: @oui-progress-height;
+    border-radius: (@oui-progress-height / 2);
+    background-color: @oui-progress-background-color;
+    margin-bottom: @oui-progress-bar-text-spacing;
   }
-  .oui-progress-modifiers();
 
   &__bar {
-    #oui > .progress-bar-base(@oui-progress-height);
+    height: @oui-progress-height;
+    transition: width @oui-animation-default-timing @oui-animation-default;
+    border-radius: (@oui-progress-height / 2);
 
     .oui-progress-bar-modifiers(@i: length(@oui-progress-modifiers)) when (@i > 0) {
       .oui-progress-bar-modifiers(@i - 1);
       @current-modifier: extract(@oui-progress-modifiers, @i);
       @background-color: "oui-progress-@{current-modifier}-foreground-color";
-      @text-color: "oui-progress-@{current-modifier}-text-color";
 
       &_@{current-modifier} {
-        #oui > .progress-bar(
-          @background-color: @@background-color,
-          @text-color: @@text-color
-        );
+        background-color: @@background-color;
       }
     }
     .oui-progress-bar-modifiers();
-
-    &_text-left {
-      #oui > .progress-bar-text-left();
-    }
   }
 
   &__label {
-    #oui > .progress-bar-label();
+    position: relative;
+    font-size: @oui-progress-bar-text-font-size;
+    font-weight: @oui-progress-bar-text-font-weight;
+    white-space: nowrap;
+    text-align: right;
+    color: @oui-progress-bar-text-color;
   }
 
   &__threshold {
-    #oui > .progress-bar-threshold();
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    height: @oui-progress-height;
+    width: 1px;
+    transition: left @oui-animation-default-timing @oui-animation-default;
+    background-color: #fff;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: @oui-progress-height;
+      width: 1px;
+      left: -1px;
+      background-color: rgba(100, 100, 100, .3);
+    }
   }
 
-  &_indeterminate {
-    #oui > .progress-indeterminate();
+  &_compact {
+    flex-direction: row;
+    align-items: center;
+
+    .@{oui-progress-selector}__bar-container, .@{oui-progress-selector}__bar {
+      height: @oui-progress-compact-size;
+      width: @oui-progress-compact-size;
+      margin: 0;
+      border-radius: (@oui-progress-compact-size / 2);
+    }
+
+    .@{oui-progress-selector}__label {
+      margin-left: @oui-progress-bar-text-spacing;
+    }
   }
 }

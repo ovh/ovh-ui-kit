@@ -1,24 +1,17 @@
 // Progress
-@oui-progress-height: 23px;
+@oui-progress-height: rem-calc(12px);
+@oui-progress-compact-size: rem-calc(16px);
 @oui-progress-margin: rem-calc(10) 0;
-@oui-progress-bar-text-spacing: rem-calc(12);
-@oui-progress-bar-text-font-size: rem-calc(16);
-@oui-progress-bar-text-font-weight: 600;
+@oui-progress-background-color: @oui-color-concrete;
 
-// Text colors
-@oui-progress-info-text-color: @oui-color-info-dark;
-@oui-progress-success-text-color: #57710e;
-@oui-progress-warning-text-color: #8a5300;
-@oui-progress-error-text-color: #fff;
+// Text
+@oui-progress-bar-text-font-size: rem-calc(14px);
+@oui-progress-bar-text-font-weight: 400;
+@oui-progress-bar-text-color: @oui-color-shuttle;
+@oui-progress-bar-text-spacing: rem-calc(5);
 
 // Progress foreground colors
 @oui-progress-info-foreground-color: @oui-color-info-medium;
 @oui-progress-success-foreground-color: @oui-color-success-medium;
-@oui-progress-warning-foreground-color: #e2cd4d;
+@oui-progress-warning-foreground-color: @oui-color-warning-light;
 @oui-progress-error-foreground-color: @oui-color-error-medium;
-
-// Progress background colors
-@oui-progress-info-background-color: lighten(@oui-progress-info-foreground-color, 25%);
-@oui-progress-success-background-color: #e0eac2;
-@oui-progress-warning-background-color: #fbefa0;
-@oui-progress-error-background-color: lighten(@oui-progress-error-foreground-color, 25%);
