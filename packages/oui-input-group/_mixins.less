@@ -246,22 +246,35 @@
   .input-group-clipboard(
     @input-selector,
     @button-selector,
-    @icon-selector,
-    @oui-clipboard-color: @oui-color-sapphire,
-    @button-padding-x: @oui-input-group-search-button-padding-x,
+    @icon-selector
   ) {
+    display: block;
     position: relative;
-
-    &-container {
-      width: 100%;
-    }
 
     .@{input-selector} {
       #oui > .text-ellipsis();
 
       cursor: pointer;
       margin: 0;
-      color: @oui-clipboard-color;
+      color: @oui-input-font-color;
+      box-shadow: @oui-input-shadow;
+      border-color: @oui-input-border-color;
+      background-color: @oui-input-background-color;
+
+      &:hover {
+        border-color: @oui-input-border-color-hover;
+      }
+
+      &:focus {
+        #oui > .animate();
+        transition-property: border-color, box-shadow, background-color;
+
+        border-color: @oui-input-border-color-focus;
+        outline: none;
+        box-shadow: @oui-input-shadow-focus;
+        background-color: @oui-input-background-color-focus;
+        text-decoration: none;
+      }
     }
 
     .@{button-selector} {
