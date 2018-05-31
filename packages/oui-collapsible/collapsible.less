@@ -3,65 +3,51 @@
 
 .oui-collapsible {
   #oui > .collapsible-normalize();
-  @oui-collapsible-selector: oui-collapsible;
 
-  font-size: rem-calc(16);
+  display: block;
   margin: rem-calc(4px);
+  font-size: rem-calc(16);
 
-  &__toggle-icon {
-    &:before {
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: rem-calc(13);
-      right: rem-calc(14);
-      height: rem-calc(10);
-      line-height: rem-calc(10);
-    }
+  &__toggle-icon::before {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: rem-calc(13);
+    right: rem-calc(14);
+    height: rem-calc(10);
+    line-height: rem-calc(10);
   }
 
-  &__header-button {
+  &__header {
     text-align: left;
     height: @oui-collapsible-header-height;
     margin: 0;
     padding: @oui-collapsible-header-padding;
     background-color: @oui-collapsible-inactive-color;
-    &:hover {
-      background-color: @oui-collapsible-active-color;
-    }
+
+    &:hover { background-color: @oui-collapsible-active-color; }
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    transition: height .2s ease-out;
   }
 
   &__body {
-    padding: 0 rem-calc(15);
-    overflow: hidden;
-    max-height: 0;
-    transition: padding 0.2s ease-out, max-height 0.2s ease-out, border 0.2s ease-out;
-    border: 0 solid @oui-collapsible-active-color;
-
-    > :last-child {
-      margin-bottom: 0;
-    }
+    padding: rem-calc(15);
+    border: 1px solid @oui-collapsible-active-color;
+    border-top: none;
+    border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
   }
 
-  &_open {
-    .@{oui-collapsible-selector}__header-button {
-      background-color: @oui-collapsible-active-color;
-      border-radius: @oui-global-base-radius @oui-global-base-radius 0 0;
-      &:hover {
-        background-color: @oui-collapsible-inactive-color;
-      }
-    }
+  &__header[aria-expanded="true"] {
+    background-color: @oui-collapsible-active-color;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
-    .@{oui-collapsible-selector}__toggle-icon {
-      &:before {
-        transform: rotate(-180deg);
-      }
-    }
-
-    .@{oui-collapsible-selector}__body {
-      max-height: none;
-      padding: rem-calc(15);
-      border: 1px solid @oui-collapsible-active-color;
-      border-top-width: 0;
-      border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
-    }
+    &:hover { background-color: @oui-collapsible-inactive-color; }
   }
+
+  &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
+
+  // Priority over ngStyle's height
+  &__header[aria-expanded="false"] ~ &__wrapper { height: 0 !important; }
 }

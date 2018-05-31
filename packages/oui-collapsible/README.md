@@ -1,6 +1,6 @@
 # oui-collapsible
 
-<component-status cx-design="complete" ux="complete"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 ## Installation
 
@@ -14,15 +14,17 @@
 
 ```html:preview
 <div class="oui-collapsible">
-  <button class="oui-button oui-button_full-width oui-collapsible__header-button"
+  <button class="oui-button oui-button_full-width oui-collapsible__header"
     aria-label="Action"
     aria-expanded="false"
     aria-controls="collapsible-1">
     Title
     <i class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></i>
   </button>
-  <div id="collapsible-1" class="oui-collapsible__body">
-    Collapsible body
+  <div class="oui-collapsible__wrapper">
+    <div class="oui-collapsible__body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate rhoncus vitae ut justo. Ut dignissim varius est in consequat. Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu. In et elit ipsum.
+    </div>
   </div>
 </div>
 ```
@@ -30,16 +32,18 @@
 ### Expanded
 
 ```html:preview
-<div class="oui-collapsible oui-collapsible_open">
-  <button class="oui-button oui-button_full-width oui-collapsible__header-button"
+<div class="oui-collapsible">
+  <button class="oui-button oui-button_full-width oui-collapsible__header"
     aria-label="Action"
     aria-expanded="true"
     aria-controls="collapsible-2">
     Title
     <i class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></i>
   </button>
-  <div id="collapsible-2" class="oui-collapsible__body">
-      Collapsible body
+  <div class="oui-collapsible__wrapper">
+    <div class="oui-collapsible__body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate rhoncus vitae ut justo. Ut dignissim varius est in consequat. Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu. In et elit ipsum.
+    </div>
   </div>
 </div>
 ```
