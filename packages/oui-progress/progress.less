@@ -44,6 +44,7 @@
     white-space: nowrap;
     text-align: right;
     color: @oui-progress-bar-text-color;
+    transition: width @oui-animation-default-timing @oui-animation-default;
   }
 
   &__threshold {
@@ -78,6 +79,11 @@
 
     .@{oui-progress-selector}__label {
       margin-left: @oui-progress-bar-text-spacing;
+      font-size: @oui-progress-bar-compact-text-font-size;
+    }
+
+    .@{oui-progress-selector}__threshold {
+      display: none;
     }
   }
 }
