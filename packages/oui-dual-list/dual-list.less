@@ -1,0 +1,189 @@
+@import './_normalize';
+@import './_mixins';
+
+// dual list
+.oui-dual-list {
+  background: @oui-color-dual-list-background;
+  border: 1px solid @oui-color-dual-list-header-background;
+  border-radius: rem-calc(3px);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+
+  @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  &__source {
+    border-right: 1px solid @oui-color-dual-list-header-background;
+  }
+
+  &__source, &__target {
+    display: flex;
+    flex-direction: column;
+    min-height: 4rem;
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    background: @oui-color-dual-list-header-background;
+    padding: rem-calc(10px);
+    min-height: rem-calc(40px);
+  }
+
+  &__toggle-buttons {
+    margin-left: auto;
+    border: none;
+    background-color: inherit;
+    .oui-icon {
+      font-size: @oui-dual-list-icon-size;
+    }
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0;
+    border-radius: 0 0 rem-calc(3px) rem-calc(3px);
+    min-height: 0;
+  }
+
+  &__content-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+
+    & > .oui-dual-list__filter > form {
+      margin: 0;
+    }
+  }
+
+  &__content-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+
+    p {
+      color: @oui-color-dual-list-empty-label;
+    }
+  }
+
+  &__target > &__content {
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      display: flex;
+    }
+  }
+
+  &__filter {
+    padding: rem-calc(10px) @oui-dual-list-left-padding;
+  }
+
+  &__add-all-link, &__remove-all-link {
+    padding-left: @oui-dual-list-left-padding;
+    text-decoration: underline;
+    color: @oui-color-dual-list-link;
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover, &:active {
+      color: @oui-color-dual-list-link;
+    }
+
+    & button {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &__remove-all-link {
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      padding: rem-calc(5px) @oui-dual-list-left-padding;
+      margin-left: auto;
+    }
+  }
+
+  &__add-all-link {
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      padding-left: @oui-dual-list-left-padding + @oui-dual-list-left-padding;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+    margin: 0;
+
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      padding: 0 @oui-dual-list-left-padding;
+    }
+  }
+
+  &__item {
+    padding: rem-calc(6px) @oui-dual-list-right-padding;
+    margin-bottom: rem-calc(2px);
+    background-color: @oui-color-dual-list-background;
+    position: relative;
+
+    @media screen and (min-width: @oui-responsive-breakpoint-phone) {
+      margin-bottom: rem-calc(5px);
+    }
+
+    &-text {
+      display: block;
+      width: 85%;
+    }
+
+    &-add-icon, &-remove-icon, &-loading-icon, &-add-label {
+      position: absolute;
+      right: @oui-dual-list-left-padding;
+      margin-top: auto;
+      margin-bottom: auto;
+      height: rem-calc(20px);
+      top: 0;
+      bottom: 0;
+
+      & .oui-icon {
+        font-size: @oui-dual-list-icon-size;
+      }
+    }
+
+    &:hover {
+      background-color: @oui-color-dual-list-hover;
+      border-radius: rem-calc(3px);
+      cursor: pointer;
+    }
+
+    &-add-label {
+      display: none;
+      padding-right: rem-calc(10px);
+      color: @oui-color-dual-list-add-label;
+      right: @oui-dual-list-left-padding + rem-calc(10px);
+      height: rem-calc(25px);
+    }
+
+    &:hover &-add-label {
+      display: block;
+    }
+
+    &:first-child {
+      margin-top: rem-calc(10px);
+    }
+  }
+
+  &__target &__item {
+    background-color: @oui-color-dual-list-hover;
+  }
+}
