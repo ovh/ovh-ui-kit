@@ -1,0 +1,53 @@
+@import './_normalize';
+@import './_variables';
+
+.oui-collapsible {
+  #oui > .collapsible-normalize();
+
+  display: block;
+  margin: rem-calc(4px);
+  font-size: rem-calc(16);
+
+  &__toggle-icon::before {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: rem-calc(13);
+    right: rem-calc(14);
+    height: rem-calc(10);
+    line-height: rem-calc(10);
+  }
+
+  &__header {
+    text-align: left;
+    height: @oui-collapsible-header-height;
+    margin: 0;
+    padding: @oui-collapsible-header-padding;
+    background-color: @oui-collapsible-inactive-color;
+
+    &:hover { background-color: @oui-collapsible-active-color; }
+  }
+
+  &__wrapper {
+    overflow: hidden;
+    transition: height .2s ease-out;
+  }
+
+  &__body {
+    padding: rem-calc(15);
+    border: 1px solid @oui-collapsible-active-color;
+    border-top: none;
+    border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
+  }
+
+  &__header[aria-expanded="true"] {
+    background-color: @oui-collapsible-active-color;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    &:hover { background-color: @oui-collapsible-inactive-color; }
+  }
+
+  &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
+
+  // Priority over ngStyle's height
+  &__header[aria-expanded="false"] ~ &__wrapper { height: 0 !important; }
+}
