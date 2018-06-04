@@ -1,0 +1,14 @@
+#oui {
+  .skeleton-sizes() {
+    .make-loader-sizes(@i: 1) when (@i <= length(@oui-skeleton-sizes)) {
+      .make-loader-sizes(@i + 1);
+      @pair: extract(@oui-skeleton-sizes, @i);
+      @key: extract(@pair, 1);
+      @value: extract(@pair, 2);
+      &_@{key} {
+        width: @value;
+      }
+    }
+    .make-loader-sizes();
+  }
+}

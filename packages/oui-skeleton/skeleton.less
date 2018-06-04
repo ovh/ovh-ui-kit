@@ -1,0 +1,39 @@
+@import './_variables';
+@import './_mixins';
+
+.oui-skeleton {
+  min-height: @oui-skeleton-height;
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "\00a0";
+    font-size: inherit;
+  }
+
+  &__loader {
+    height: @oui-skeleton-height;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: block;
+    border-radius: @oui-skeleton-border-radius;
+    background-color: @oui-skeleton-background-color;
+    background-image: @oui-skeleton-background-image;
+    background-position: @oui-skeleton-background-position;
+    background-repeat: repeat-y;
+    background-size: @oui-skeleton-background-size;
+    transform: translateY(-50%);
+    animation: skeleton linear 2s infinite;
+  }
+
+  // Sizes
+  #oui > .skeleton-sizes();
+
+  @keyframes skeleton {
+    to {
+      background-position: @oui-skeleton-keyframes-background-position;
+    }
+  }
+}
