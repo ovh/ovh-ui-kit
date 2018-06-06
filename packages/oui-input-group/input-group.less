@@ -1,5 +1,7 @@
 @import './_mixins';
 
+oui-clipboard { display: block; }
+
 .oui-input-group {
   @oui-input-selector: oui-input;
   @oui-button-selector: oui-button;
@@ -22,4 +24,60 @@
   &_search {
     #oui > .input-group-search(@oui-input-selector, @oui-button-selector, @oui-icon-selector);
   }
+
+  &_clipboard {
+    display: block;
+    position: relative;
+
+    .oui-input {
+      #oui > .text-ellipsis();
+
+      cursor: pointer;
+      margin: 0;
+      padding-right: @oui-input-group-button-min-width;
+      color: @oui-input-font-color;
+      box-shadow: @oui-input-shadow;
+      border-color: @oui-input-border-color;
+      background-color: @oui-input-background-color;
+
+      &:hover {
+        border-color: @oui-input-border-color-hover;
+      }
+
+      &:focus {
+        #oui > .animate();
+        transition-property: border-color, box-shadow, background-color;
+
+        border-color: @oui-input-border-color-focus;
+        outline: none;
+        box-shadow: @oui-input-shadow-focus;
+        background-color: @oui-input-background-color-focus;
+        text-decoration: none;
+      }
+    }
+
+    .oui-button {
+      &,
+      &:hover,
+      &:focus {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        min-width: @oui-input-group-button-min-width;
+        width: auto;
+        border-color: transparent;
+        background: transparent;
+        box-shadow: none;
+        z-index: 2; // Avoid to be hidden by inputs
+      }
+    }
+
+    .oui-icon {
+      display: block;
+      color: inherit;
+      font-size: inherit;
+    }
+  }
+
 }
