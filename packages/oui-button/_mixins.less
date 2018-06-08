@@ -127,26 +127,59 @@
   }
 
   .button-action-menu() {
-    display: block;
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-    text-align: left;
-    font-weight: @oui-font-regular;
-    background-color: @oui-button-action-menu-background-color;
-    color: @oui-button-action-menu-text-color;
+    min-width: @oui-action-button-size;
+    width: @oui-action-button-size;
+    height: @oui-action-button-size;
+    padding: 0;
+    overflow: visible;
+    border: 1px solid @oui-action-button-border-color;
+    border-radius: 50%;
+    background-color: @oui-action-button-background-color;
 
-    &:focus,
-    &:hover {
+    circle {
       #oui > .animate();
 
-      background-color: @oui-button-action-menu-background-color_active;
-      color: @oui-button-action-menu-text-color;
+      fill: @oui-action-button-foreground-color;
+    }
+
+    &[aria-expanded="true"] {
+      border-color: @oui-action-button-border-color_active;
+      background-color: @oui-action-button-background-color_active;
+    }
+
+    &:hover {
+      border-color: @oui-action-button-border-color_hover;
+      background-color: @oui-action-button-background-color_hover;
+
+      circle {
+        fill: @oui-action-button-foreground-color_hover;
+        transform-origin: center;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 3px 1px fade(@oui-color-pacific, 60%);
+    }
+
+    &:active {
+      box-shadow: inset 1px 1px 4px 0 fade(#000, 33%);
+    }
+
+    &:disabled {
+      cursor: default;
+      box-shadow: none;
+      border-color: @oui-action-button-border-color_disabled;
+      background-color: @oui-action-button-background-color_disabled  ;
+
+      circle {
+        fill: @oui-action-button-foreground-color_disabled;
+      }
     }
   }
 
   .button-dropdown(
-    @icon-selector,
+    @icon-selector: oui-icon,
     @icon-size: @oui-button-dropdown-icon-size,
     @color_disabled: @oui-button-dropdown-color,
     @icon-color: @oui-button-dropdown-icon-color,
@@ -185,7 +218,6 @@
       border-color: @border-color_active;
       background: @background-color_active;
       box-shadow: none;
-      outline: none;
 
       .@{icon-selector} {
         &::before {
@@ -222,7 +254,7 @@
   }
 
   .button-icon-base(
-    @icon-selector,
+    @icon-selector: oui-icon,
     @icon-size: @oui-button-icon-icon-size,
     @icon-size_large: @oui-button-icon-icon-size_large,
     @icon-color: @oui-button-icon-icon-color,
@@ -258,7 +290,7 @@
   }
 
   .button-icon-alone(
-    @icon-selector,
+    @icon-selector: oui-icon,
     @background: @oui-button-icon-alone-background,
     @background: @oui-button-icon-alone-background,
     @min-width: @oui-button-icon-alone-min-width,
@@ -291,7 +323,7 @@
   }
 
   .button-icon-right(
-    @icon-selector,
+    @icon-selector: oui-icon,
     @icon-margin-left: @oui-button-icon-right-icon-margin-left,
     @padding-right: @oui-button-icon-padding-right
   ) {
@@ -307,7 +339,7 @@
   }
 
   .button-icon-left(
-    @icon-selector,
+    @icon-selector: oui-icon,
     @icon-margin-right: @oui-button-icon-right-icon-margin-right,
     @padding-left: @oui-button-icon-padding-left
   ) {
@@ -324,7 +356,7 @@
   }
 
   .button-link (
-    @icon-selector,
+    @icon-selector: oui-icon,
     @icon-color: @oui-button-link-icon-color,
     @font-color: @oui-button-link-font-color,
     @font-color_hover: @oui-button-link-font-color_hover,
@@ -375,7 +407,7 @@
   }
 
   .button-full-width-icon-right (
-    @icon-selector,
+    @icon-selector: oui-icon,
     @padding-right: @oui-button-icon-padding-right
   ) {
     .@{icon-selector}::before {
@@ -384,7 +416,7 @@
   }
 
   .button-full-width-icon-left (
-    @icon-selector,
+    @icon-selector: oui-icon,
     @padding-left: @oui-button-icon-padding-left
   ) {
     .@{icon-selector}::before {
