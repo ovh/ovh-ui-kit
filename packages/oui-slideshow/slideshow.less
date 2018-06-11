@@ -5,9 +5,9 @@
 @import "../oui-modal/_mixins";
 @import "../oui-responsive/_variables";
 
-.oui-modal-on-boarding {
-  #oui > .modal-on-boarding-normalize();
-  #oui > .oui-modal-on-boarding-default-theme();
+.oui-slideshow {
+  #oui > .onboarding-normalize();
+  #oui > .oui-slideshow-default-theme();
 
   display: flex;
   flex-direction: column;
@@ -66,101 +66,44 @@
     position: relative;
     height: 100%;
     z-index: 1;
+  }
 
-    &-prev,
-    &-next {
-      background: rgba(17, 63, 109, 0.5);
-      border: 0 none;
-      border-radius: 50%;
-      color: #fff;
-      height: rem-calc(@oui-modal-on-boarding-button-size);
-      margin-top: -(rem-calc(@oui-modal-on-boarding-button-size / 2));
-      position: absolute;
-      top: 50%;
-      transition: background .3s ease-out;
-      width: rem-calc(@oui-modal-on-boarding-button-size);
+  &__prev-button,
+  &__next-button {
+    background: rgba(17, 63, 109, 0.5);
+    border: 0 none;
+    border-radius: 50%;
+    color: #fff;
+    height: rem-calc(@oui-slideshow-button-size);
+    margin-top: -(rem-calc(@oui-slideshow-button-size / 2));
+    position: absolute;
+    top: 50%;
+    transition: background .3s ease-out;
+    width: rem-calc(@oui-slideshow-button-size);
 
-      &:not(:disabled) {
-        :active, &:focus, &:hover {
-          background-color: rgba(17, 63, 109, 0.75);
-        }
-      }
-
-      &:disabled {
-        opacity: 0.5;
+    &:not(:disabled) {
+      :active, &:focus, &:hover {
+        background-color: rgba(17, 63, 109, 0.75);
       }
     }
 
-    &-prev {
-      left: 0;
-      margin-left: -(rem-calc(@oui-modal-on-boarding-button-size / 2));
-      padding-left: rem-calc(4);
-      text-align: left;
+    &:disabled {
+      opacity: 0.5;
     }
+  }
 
-    &-next {
-      margin-right: -(rem-calc(@oui-modal-on-boarding-button-size / 2));
-      padding-right: rem-calc(4);
-      right: 0;
-      text-align: right;
-    }
+  &__prev-button {
+    left: 0;
+    margin-left: -(rem-calc(@oui-slideshow-button-size / 2));
+    padding-left: rem-calc(4);
+    text-align: left;
+  }
 
-    &-panel {
-      display: none;
-      flex-direction: column;
-      height: 100%;
-      position: relative;
-      transition: left .8s ease-in-out;
-      width: 100%;
-
-      &.active,
-      &.next,
-      &.prev {
-        display: flex;
-      }
-
-      &.next,
-      &.prev {
-        position: absolute;
-        top: 0;
-      }
-
-      &.active {
-        left: 0;
-
-        &.left {
-          left: -100%;
-        }
-
-        &.right {
-          left: 100%;
-        }
-      }
-
-      &.next {
-        left: 100%;
-
-        &.left {
-          left: 0;
-        }
-      }
-
-      &.prev {
-        left: -100%;
-
-        &.right {
-          left: 0;
-        }
-      }
-
-      .oui-modal-on-boarding__content-container {
-        padding: rem-calc(20) rem-calc(20) 0;
-      }
-
-      > :first-child {
-        padding-top: rem-calc(40);
-      }
-    }
+  &__next-button {
+    margin-right: -(rem-calc(@oui-slideshow-button-size / 2));
+    padding-right: rem-calc(4);
+    right: 0;
+    text-align: right;
   }
 
   &__indicators {
@@ -207,17 +150,74 @@
   }
 
   &.touchDevice {
-    .oui-modal-on-boarding__content-prev,
-    .oui-modal-on-boarding__content-next {
+    .oui-slideshow__prev-button,
+    .oui-slideshow__next-button {
       display: none;
     }
   }
 }
 
 @media (max-width: (@oui-responsive-breakpoint-tablet - 1)) and (orientation: landscape) {
-  .oui-modal-on-boarding.touchDevice {
+  .oui-slideshow.touchDevice {
     height: 85vh;
     max-height: 100%;
     width: 515px;
+  }
+}
+
+.oui-slideshow-panel {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: left .8s ease-in-out;
+  width: 100%;
+
+  &.active,
+  &.next,
+  &.prev {
+    display: flex;
+  }
+
+  &.next,
+  &.prev {
+    position: absolute;
+    top: 0;
+  }
+
+  &.active {
+    left: 0;
+
+    &.left {
+      left: -100%;
+    }
+
+    &.right {
+      left: 100%;
+    }
+  }
+
+  &.next {
+    left: 100%;
+
+    &.left {
+      left: 0;
+    }
+  }
+
+  &.prev {
+    left: -100%;
+
+    &.right {
+      left: 0;
+    }
+  }
+
+  .oui-slideshow-panel__container {
+    padding: rem-calc(20) rem-calc(20) 0;
+  }
+
+  > :first-child {
+    padding-top: rem-calc(40);
   }
 }
