@@ -246,7 +246,7 @@
       }
     }
 
-    &__placeholder {
+    &-placeholder {
       background-color: @oui-notification-placeholder-color;
       height: @oui-navbar-menu-placeholder-height;
 
@@ -254,17 +254,19 @@
         background-color: @oui-notification-placeholder-color;
       }
 
-      &-content {
+      &__content {
         color: @oui-notification-placeholder-font-color;
         display: flex;
         margin: auto;
-        &-title {
-          font-size: 1.6rem;
-          font-weight: @oui-notification-title-weight;
-        }
-        &-description {
-          font-size: 1.4rem;
-        }
+      }
+
+      &__title {
+        font-size: 1.6rem;
+        font-weight: @oui-notification-title-weight;
+      }
+
+      &__description {
+        font-size: 1.4rem;
       }
     }
 
