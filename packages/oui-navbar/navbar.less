@@ -222,6 +222,7 @@
 
     &__icon {
       font-size: @oui-notification-icon-font-size;
+      max-height: @oui-notification-icon-font-size;
       margin: @oui-notification-icon-margin;
 
       &.oui-icon-info_circle {
@@ -239,6 +240,34 @@
       &.oui-icon-error_circle {
         color: @oui-notification-error-icon-color;
       }
+
+      &.oui-icon-clock-wait {
+        color: @oui-color-pacific;
+      }
+    }
+
+    &-placeholder {
+      background-color: @oui-notification-placeholder-color;
+      height: @oui-navbar-menu-placeholder-height;
+
+      &:hover {
+        background-color: @oui-notification-placeholder-color;
+      }
+
+      &__content {
+        color: @oui-notification-placeholder-font-color;
+        display: flex;
+        margin: auto;
+      }
+
+      &__title {
+        font-size: 1.6rem;
+        font-weight: @oui-notification-title-weight;
+      }
+
+      &__description {
+        font-size: 1.4rem;
+      }
     }
 
     &__time {
@@ -246,6 +275,7 @@
     }
 
     &__description {
+      font-size: 1.4rem;
       line-height: 2rem;
       max-height: 8rem;
       overflow: hidden;
