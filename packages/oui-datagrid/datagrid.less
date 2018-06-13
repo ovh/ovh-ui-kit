@@ -76,6 +76,53 @@
   }
 }
 
+.oui-datagrid-parameters {
+  display: inline-block;
+
+  &__button {
+    margin: 0;
+    padding: rem-calc(6) 0;
+    width: rem-calc(36);
+
+    .oui-icon {
+      line-height: rem-calc(26);
+      color: @oui-color-sapphire;
+
+      &:hover {
+        color: @oui-color-sapphire;
+      }
+    }
+  }
+
+  &__body {
+    padding: 0 rem-calc(18) rem-calc(4) rem-calc(18);
+  }
+
+  &__headers {
+    display: flex;
+    line-height: rem-calc(40);
+    font-size: rem-calc(14);
+    color: @oui-color-dusty;
+  }
+
+  &__column {
+    display: flex;
+    white-space: nowrap;
+  }
+
+  &__column-column {
+    flex: 1;
+
+    &:not(:last-child) {
+      padding-right: rem-calc(18);
+    }
+  }
+
+  &__order-column {
+    text-align: right;
+  }
+}
+
 .oui-datagrid-topbar {
   display: block;
 

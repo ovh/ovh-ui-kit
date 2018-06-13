@@ -153,6 +153,13 @@
 </div>
 
 <div class="oui-icon-badge">
+  <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-gear" aria-hidden="true"></i></div>
+  <div class="oui-icon-badge__code">
+    `<i class="oui-icon oui-icon-gear" aria-hidden="true"></i>`
+  </div>
+</div>
+
+<div class="oui-icon-badge">
   <div class="oui-icon-badge__preview"><i class="oui-icon oui-icon-error" aria-hidden="true"></i></div>
   <div class="oui-icon-badge__code">
     `<i class="oui-icon oui-icon-error" aria-hidden="true"></i>`
