@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>icons</title>
+    <style>
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .preview {
+            width: 100px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .preview .inner {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #f5f5f5;
+            -webkit-border-radius: 3px 3px 0 0;
+            -moz-border-radius: 3px 3px 0 0;
+            border-radius: 3px 3px 0 0;
+        }
+
+        .preview .inner i {
+            line-height: 85px;
+            font-size: 40px;
+            color: #333;
+        }
+
+        .label {
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+            font-size: 10px;
+            font-family: Monaco, monospace;
+            color: #666;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background: #ddd;
+            -webkit-border-radius: 0 0 3px 3px;
+            -moz-border-radius: 0 0 3px 3px;
+            border-radius: 0 0 3px 3px;
+            color: #666;
+        }
+
+        @font-face {
+    font-family: "icons";
+    src: url("./icons.eot?7bbe4a84c2a13b553aa033b494c58ca1?#iefix") format("embedded-opentype"),
+url("./icons.woff2?7bbe4a84c2a13b553aa033b494c58ca1") format("woff2"),
+url("./icons.woff?7bbe4a84c2a13b553aa033b494c58ca1") format("woff"),
+url("./icons.ttf?7bbe4a84c2a13b553aa033b494c58ca1") format("truetype"),
+url("./icons.svg?7bbe4a84c2a13b553aa033b494c58ca1#icons") format("svg");
+}
+
+i {
+    line-height: 1;
+}
+
+i:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    vertical-align: top;
+}
+
+.oui-icon-add:before {
+    content: "\f101";
+}
+.oui-icon-arrow-down:before {
+    content: "\f102";
+}
+.oui-icon-arrow-up:before {
+    content: "\f103";
+}
+.oui-icon-broken-chain:before {
+    content: "\f104";
+}
+.oui-icon-chat_line:before {
+    content: "\f105";
+}
+.oui-icon-check-circle_line:before {
+    content: "\f106";
+}
+.oui-icon-check_line:before {
+    content: "\f107";
+}
+.oui-icon-checkbox-checked:before {
+    content: "\f108";
+}
+.oui-icon-checkbox-checkmark:before {
+    content: "\f109";
+}
+.oui-icon-checkbox-indeterminate:before {
+    content: "\f10a";
+}
+.oui-icon-checkbox-unchecked:before {
+    content: "\f10b";
+}
+.oui-icon-chevron-down:before {
+    content: "\f10c";
+}
+.oui-icon-chevron-down_line:before {
+    content: "\f10d";
+}
+.oui-icon-chevron-left:before {
+    content: "\f10e";
+}
+.oui-icon-chevron-left_line:before {
+    content: "\f10f";
+}
+.oui-icon-chevron-right:before {
+    content: "\f110";
+}
+.oui-icon-chevron-right_line:before {
+    content: "\f111";
+}
+.oui-icon-chevron-up:before {
+    content: "\f112";
+}
+.oui-icon-chevron-up_line:before {
+    content: "\f113";
+}
+.oui-icon-clock-wait:before {
+    content: "\f114";
+}
+.oui-icon-close:before {
+    content: "\f115";
+}
+.oui-icon-close_thin:before {
+    content: "\f116";
+}
+.oui-icon-copy-error:before {
+    content: "\f117";
+}
+.oui-icon-copy-normal:before {
+    content: "\f118";
+}
+.oui-icon-copy-success:before {
+    content: "\f119";
+}
+.oui-icon-counter_line:before {
+    content: "\f11a";
+}
+.oui-icon-error:before {
+    content: "\f11b";
+}
+.oui-icon-error_circle:before {
+    content: "\f11c";
+}
+.oui-icon-external_link:before {
+    content: "\f11d";
+}
+.oui-icon-eye-blocked:before {
+    content: "\f11e";
+}
+.oui-icon-eye:before {
+    content: "\f11f";
+}
+.oui-icon-filter:before {
+    content: "\f120";
+}
+.oui-icon-filter_full:before {
+    content: "\f121";
+}
+.oui-icon-gear:before {
+    content: "\f122";
+}
+.oui-icon-gear_line:before {
+    content: "\f123";
+}
+.oui-icon-help_circle:before {
+    content: "\f124";
+}
+.oui-icon-info_circle:before {
+    content: "\f125";
+}
+.oui-icon-ovh:before {
+    content: "\f126";
+}
+.oui-icon-padlock-close:before {
+    content: "\f127";
+}
+.oui-icon-page_line:before {
+    content: "\f128";
+}
+.oui-icon-paperplane_line:before {
+    content: "\f129";
+}
+.oui-icon-pdf_line:before {
+    content: "\f12a";
+}
+.oui-icon-pen_line:before {
+    content: "\f12b";
+}
+.oui-icon-power_line:before {
+    content: "\f12c";
+}
+.oui-icon-printer_line:before {
+    content: "\f12d";
+}
+.oui-icon-remove:before {
+    content: "\f12e";
+}
+.oui-icon-search:before {
+    content: "\f12f";
+}
+.oui-icon-shape-circle:before {
+    content: "\f130";
+}
+.oui-icon-shape-dot:before {
+    content: "\f131";
+}
+.oui-icon-success:before {
+    content: "\f132";
+}
+.oui-icon-success_circle:before {
+    content: "\f133";
+}
+.oui-icon-trash_line:before {
+    content: "\f134";
+}
+.oui-icon-user_line:before {
+    content: "\f135";
+}
+.oui-icon-warning_circle:before {
+    content: "\f136";
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>icons</h1>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-add"></i>
+            </span>
+            <br>
+            <span class='label'>add</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-arrow-down"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-down</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-arrow-up"></i>
+            </span>
+            <br>
+            <span class='label'>arrow-up</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-broken-chain"></i>
+            </span>
+            <br>
+            <span class='label'>broken-chain</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chat_line"></i>
+            </span>
+            <br>
+            <span class='label'>chat_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-check-circle_line"></i>
+            </span>
+            <br>
+            <span class='label'>check-circle_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-check_line"></i>
+            </span>
+            <br>
+            <span class='label'>check_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-checkbox-checked"></i>
+            </span>
+            <br>
+            <span class='label'>checkbox-checked</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-checkbox-checkmark"></i>
+            </span>
+            <br>
+            <span class='label'>checkbox-checkmark</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-checkbox-indeterminate"></i>
+            </span>
+            <br>
+            <span class='label'>checkbox-indeterminate</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-checkbox-unchecked"></i>
+            </span>
+            <br>
+            <span class='label'>checkbox-unchecked</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-down"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-down</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-down_line"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-down_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-left"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-left</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-left_line"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-left_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-right"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-right</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-right_line"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-right_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-up"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-up</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-chevron-up_line"></i>
+            </span>
+            <br>
+            <span class='label'>chevron-up_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-clock-wait"></i>
+            </span>
+            <br>
+            <span class='label'>clock-wait</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-close"></i>
+            </span>
+            <br>
+            <span class='label'>close</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-close_thin"></i>
+            </span>
+            <br>
+            <span class='label'>close_thin</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-copy-error"></i>
+            </span>
+            <br>
+            <span class='label'>copy-error</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-copy-normal"></i>
+            </span>
+            <br>
+            <span class='label'>copy-normal</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-copy-success"></i>
+            </span>
+            <br>
+            <span class='label'>copy-success</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-counter_line"></i>
+            </span>
+            <br>
+            <span class='label'>counter_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-error"></i>
+            </span>
+            <br>
+            <span class='label'>error</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-error_circle"></i>
+            </span>
+            <br>
+            <span class='label'>error_circle</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-external_link"></i>
+            </span>
+            <br>
+            <span class='label'>external_link</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-eye-blocked"></i>
+            </span>
+            <br>
+            <span class='label'>eye-blocked</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-eye"></i>
+            </span>
+            <br>
+            <span class='label'>eye</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-filter"></i>
+            </span>
+            <br>
+            <span class='label'>filter</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-filter_full"></i>
+            </span>
+            <br>
+            <span class='label'>filter_full</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-gear"></i>
+            </span>
+            <br>
+            <span class='label'>gear</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-gear_line"></i>
+            </span>
+            <br>
+            <span class='label'>gear_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-help_circle"></i>
+            </span>
+            <br>
+            <span class='label'>help_circle</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-info_circle"></i>
+            </span>
+            <br>
+            <span class='label'>info_circle</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-ovh"></i>
+            </span>
+            <br>
+            <span class='label'>ovh</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-padlock-close"></i>
+            </span>
+            <br>
+            <span class='label'>padlock-close</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-page_line"></i>
+            </span>
+            <br>
+            <span class='label'>page_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-paperplane_line"></i>
+            </span>
+            <br>
+            <span class='label'>paperplane_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-pdf_line"></i>
+            </span>
+            <br>
+            <span class='label'>pdf_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-pen_line"></i>
+            </span>
+            <br>
+            <span class='label'>pen_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-power_line"></i>
+            </span>
+            <br>
+            <span class='label'>power_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-printer_line"></i>
+            </span>
+            <br>
+            <span class='label'>printer_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-remove"></i>
+            </span>
+            <br>
+            <span class='label'>remove</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-search"></i>
+            </span>
+            <br>
+            <span class='label'>search</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-shape-circle"></i>
+            </span>
+            <br>
+            <span class='label'>shape-circle</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-shape-dot"></i>
+            </span>
+            <br>
+            <span class='label'>shape-dot</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-success"></i>
+            </span>
+            <br>
+            <span class='label'>success</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-success_circle"></i>
+            </span>
+            <br>
+            <span class='label'>success_circle</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-trash_line"></i>
+            </span>
+            <br>
+            <span class='label'>trash_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-user_line"></i>
+            </span>
+            <br>
+            <span class='label'>user_line</span>
+        </div>
+
+
+        <div class="preview">
+            <span class="inner">
+                <i class="oui-icon-warning_circle"></i>
+            </span>
+            <br>
+            <span class='label'>warning_circle</span>
+        </div>
+
+
+</body>
+</html>
