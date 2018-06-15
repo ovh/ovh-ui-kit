@@ -1,6 +1,5 @@
-@import "./_variables";
-@import "./_normalize";
-@import "../oui-responsive/_variables";
+@import './_variables';
+@import './_normalize';
 
 .oui-page-header {
   #oui > .page-header-normalize();
@@ -12,12 +11,8 @@
     display: flex;
     flex-wrap: nowrap;
 
-    @media screen and (max-width: @oui-responsive-breakpoint-medium) {
+    @media (max-width: 1280px) {
       padding: @oui-page-header-spacing-y @oui-page-header-spacing-side_s;
-    }
-
-    @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
-      padding: @oui-page-header-spacing-y;
     }
   }
 
