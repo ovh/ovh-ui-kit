@@ -1,0 +1,117 @@
+@import './_normalize';
+@import './_variables';
+
+.oui-tile {
+  #oui > .tile-normalize();
+
+  padding: @oui-tile-padding;
+  background-color: @oui-tile-background-color;
+  border: 1px solid @oui-tile-border-color;
+  border-radius: @oui-tile-border-radius;
+  box-shadow: @oui-tile-box-shadow;
+
+  &__title {
+    font-weight: @oui-font-semibold;
+    color: @oui-tile-title-color;
+  }
+
+  &__legend {
+    color: @oui-tile-title-color;
+  }
+
+  &__button {
+    margin: 0;
+    padding-left: @oui-tile-item-side-spacing;
+    padding-right: @oui-tile-item-side-spacing;
+    margin: 0 -@oui-tile-item-side-spacing;
+    box-sizing: content-box;
+    font-weight: @oui-font-semibold;
+    text-align: left;
+    text-decoration: none;
+
+    &.oui-button_full-width.oui-button_icon-right {
+      .oui-icon {
+        &::before {
+          right: @oui-tile-item-side-spacing;
+        }
+      }
+    }
+
+    &:hover, &:focus {
+      background-color: @oui-tile-background-hover;
+    }
+  }
+
+  .oui-icon {
+    font-size: initial;
+  }
+
+  &__button.oui-button_link {
+    &,
+    &:hover,
+    &:focus { text-decoration: none; }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    border-top: 1px solid @oui-tile-item-border-color;
+    padding: @oui-tile-item-top-spacing 0;
+
+    &:last-child {
+      border-bottom: 1px solid @oui-tile-item-border-color;
+    }
+
+    &_button {
+      padding: 0;
+    }
+  }
+
+  &__definition {
+    margin: 0;
+    flex: 1;
+  }
+
+  &__term {
+    color: @oui-tile-definition-term-color;
+    font-size: @oui-tile-definition-term-font-size;
+    font-weight: @oui-font-regular;
+  }
+
+  &__description {
+    color: @oui-tile-definition-description-color;
+    font-size: @oui-tile-definition-description-font-size;
+    margin-left: 0;
+    word-break: break-all;
+
+    &_vertical-sub {
+      vertical-align: sub;
+    }
+  }
+
+  &__extra {
+    font-weight: @oui-font-regular;
+  }
+
+  &__body {
+    &_list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__top-bordered {
+    &::before {
+      content: "";
+      display: block;
+      margin: 0 @oui-tile-padding;
+      height: 1px;
+      background-color: @oui-tile-item-border-color;
+    }
+  }
+
+  &__body-content {
+    padding: 0 @oui-tile-padding;
+  }
+}
