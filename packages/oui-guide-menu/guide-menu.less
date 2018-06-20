@@ -1,0 +1,42 @@
+@import './_normalize';
+@import './_variables';
+
+.oui-guide-menu {
+  #oui > .guide-menu-normalize();
+
+  display: inline-block;
+
+  .oui-guide-button {
+    color: @oui-guide-button-font-color;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    white-space: nowrap;
+
+    &__icon {
+      vertical-align: middle;
+    }
+
+    &__text {
+      margin-left: 10px;
+      font-size: @oui-guide-button-font-size;
+      font-weight: 600;
+    }
+  }
+
+  @media only screen and (max-width: @oui-responsive-breakpoint-phone - 1) {
+    .oui-guide-button {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 100%;
+      width: rem-calc(36);
+      height: rem-calc(36);
+
+      &__text {
+        display: none;
+      }
+    }
+  }
+}

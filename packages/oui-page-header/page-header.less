@@ -11,8 +11,12 @@
     display: flex;
     flex-wrap: nowrap;
 
-    @media (max-width: 1280px) {
+    @media (max-width: @oui-responsive-breakpoint-medium) {
       padding: @oui-page-header-spacing-y @oui-page-header-spacing-side_s;
+    }
+
+    @media only screen and (max-width: @oui-responsive-breakpoint-phone - 1) {
+      padding: @oui-page-header-spacing-y;
     }
   }
 
