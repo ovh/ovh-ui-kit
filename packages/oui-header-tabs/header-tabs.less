@@ -12,8 +12,6 @@
   &__container {
     display: flex;
     flex-wrap: nowrap;
-    list-style: none;
-    margin: 0 44px;
     // overflow-x: auto;
     // overflow-y: hidden;
     overflow: hidden;
@@ -44,6 +42,7 @@
     padding: rem-calc(4) 0;
   }
 
+  &__container,
   &__dropdown-container {
     list-style: none;
     margin: 0;
@@ -62,6 +61,7 @@
       display: block;
       font-size: rem-calc(16);
       margin: 0;
+      padding: rem-calc(10) rem-calc(30);
 
       .oui-icon {
         color: inherit;
@@ -74,7 +74,6 @@
       border: 0 none;
       border-radius: inherit;
       font-weight: normal;
-      padding: rem-calc(10) rem-calc(30);
       transition: none;
 
       .oui-icon {
@@ -89,28 +88,18 @@
       }
     }
 
-    &_dropdown_active .oui-button_dropdown {
-      border-bottom: 4px solid;
-      padding-bottom: ~"calc(1rem - 4px)";
-    }
-
     :not(.oui-header-tabs__dropdown-container) > & {
       & > a {
-        padding: rem-calc(10) rem-calc(30);
         white-space: nowrap;
       }
 
       &_active > a {
         border-bottom: 4px solid;
-        padding-bottom: ~"calc(1rem - 4px)";
+        padding-bottom: rem-calc(6);
       }
     }
 
     .oui-header-tabs__dropdown-container > & {
-      & > a {
-        padding: rem-calc(8) rem-calc(20);
-      }
-
       & > a:hover,
       & > a:focus,
       & > a:active,
