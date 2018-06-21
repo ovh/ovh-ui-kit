@@ -1,3 +1,27 @@
+<a name="2.16.0"></a>
+# [2.16.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.15.0...v2.16.0) (2018-06-21)
+
+
+### Bug Fixes
+
+* **oui-slideshow:** fix naming ([#218](https://github.com/ovh-ux/ovh-ui-kit/issues/218)) ([4003593](https://github.com/ovh-ux/ovh-ui-kit/commit/4003593))
+
+
+### Features
+
+* **oui-clipboard:** add oui-clipboard component ([#200](https://github.com/ovh-ux/ovh-ui-kit/issues/200)) ([a178d10](https://github.com/ovh-ux/ovh-ui-kit/commit/a178d10))
+* **oui-collapsible:** add oui-collapsible component ([#197](https://github.com/ovh-ux/ovh-ui-kit/issues/197)) ([bc69a51](https://github.com/ovh-ux/ovh-ui-kit/commit/bc69a51))
+* **oui-datagrid:** add styles for datagrid parameters ([#214](https://github.com/ovh-ux/ovh-ui-kit/issues/214)) ([ce134d2](https://github.com/ovh-ux/ovh-ui-kit/commit/ce134d2))
+* **oui-guide-menu:** create component ([#220](https://github.com/ovh-ux/ovh-ui-kit/issues/220)) ([0146236](https://github.com/ovh-ux/ovh-ui-kit/commit/0146236))
+* **oui-header-tabs:** add oui-header-tabs feature ([#221](https://github.com/ovh-ux/ovh-ui-kit/issues/221)) ([90d5574](https://github.com/ovh-ux/ovh-ui-kit/commit/90d5574))
+* **oui-navbar:** add placeholder for notification ([#216](https://github.com/ovh-ux/ovh-ui-kit/issues/216)) ([41eae99](https://github.com/ovh-ux/ovh-ui-kit/commit/41eae99))
+* **oui-page-header:** create page-header component ([#219](https://github.com/ovh-ux/ovh-ui-kit/issues/219)) ([0192151](https://github.com/ovh-ux/ovh-ui-kit/commit/0192151))
+* **oui-skeleton:** add oui-skeleton component ([#209](https://github.com/ovh-ux/ovh-ui-kit/issues/209)) ([b385bd9](https://github.com/ovh-ux/ovh-ui-kit/commit/b385bd9))
+* **oui-slideshow:** add slideshow component ([#208](https://github.com/ovh-ux/ovh-ui-kit/issues/208)) ([9f3bcec](https://github.com/ovh-ux/ovh-ui-kit/commit/9f3bcec))
+* **oui-tile:** create oui-tile component ([#217](https://github.com/ovh-ux/ovh-ui-kit/issues/217)) ([c06ab7c](https://github.com/ovh-ux/ovh-ui-kit/commit/c06ab7c))
+
+
+
 <a name="2.15.0"></a>
 # [2.15.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.14.0...v2.15.0) (2018-05-23)
 
