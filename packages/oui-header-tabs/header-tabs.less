@@ -62,7 +62,6 @@
       display: block;
       font-size: rem-calc(16);
       margin: 0;
-      padding: rem-calc(10) rem-calc(30);
 
       .oui-icon {
         color: inherit;
@@ -75,6 +74,7 @@
       border: 0 none;
       border-radius: inherit;
       font-weight: normal;
+      padding: rem-calc(10) rem-calc(30);
       transition: none;
 
       .oui-icon {
@@ -96,6 +96,7 @@
 
     :not(.oui-header-tabs__dropdown-container) > & {
       & > a {
+        padding: rem-calc(10) rem-calc(30);
         white-space: nowrap;
       }
 
@@ -106,6 +107,10 @@
     }
 
     .oui-header-tabs__dropdown-container > & {
+      & > a {
+        padding: rem-calc(8) rem-calc(20);
+      }
+
       & > a:hover,
       & > a:focus,
       & > a:active,
