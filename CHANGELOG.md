@@ -1,13 +1,3 @@
-<a name="2.16.1"></a>
-## [2.16.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.0...v2.16.1) (2018-06-27)
-
-
-### Bug Fixes
-
-* **oui-page-header:** fix new styles responsive detection ([#225](https://github.com/ovh-ux/ovh-ui-kit/issues/225)) ([b2a711a](https://github.com/ovh-ux/ovh-ui-kit/commit/b2a711a))
-
-
-
 <a name="2.16.0"></a>
 # [2.16.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.15.0...v2.16.0) (2018-06-21)
 
