@@ -1,5 +1,6 @@
 @import './_normalize';
 @import './_variables';
+@import "../oui-responsive/_variables";
 
 .oui-guide-button {
   color: @oui-guide-button-font-color;
@@ -21,7 +22,7 @@
     font-weight: 600;
   }
 
-  @media only screen and (max-width: @oui-responsive-breakpoint-phone - 1) {
+  @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
     background: rgba(255, 255, 255, 0.5);
     border-radius: 100%;
     width: rem-calc(36);
