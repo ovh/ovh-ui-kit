@@ -273,11 +273,18 @@ oui-step-form {
 .oui-horizontal-line_thin {
   border-top-width: 1px;
 }
+abbr[title],
+abbr[oui-tooltip],
+abbr[data-oui-tooltip] {
+  border-bottom: dashed 1px #00a2bf;
+  text-decoration: none;
+  cursor: help;
+}
 @font-face {
   font-family: 'Oui Icons';
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.eot?#iefix&v=2.16.1") format("embedded-opentype"), url("../../dist/icons/icons.woff?v=2.16.1") format("woff"), url("../../dist/icons/icons.woff2?v=2.16.1") format("woff2"), url("../../dist/icons/icons.ttf?v=2.16.1") format("truetype"), url("../../dist/icons/icons.svg?#icons&v=2.16.1") format("svg");
+  src: url("../../dist/icons/icons.eot?#iefix&v=2.16.0") format("embedded-opentype"), url("../../dist/icons/icons.woff?v=2.16.0") format("woff"), url("../../dist/icons/icons.woff2?v=2.16.0") format("woff2"), url("../../dist/icons/icons.ttf?v=2.16.0") format("truetype"), url("../../dist/icons/icons.svg?#icons&v=2.16.0") format("svg");
 }
 .oui-icon-badge {
   display: table;
@@ -9212,6 +9219,9 @@ oui-guide-menu-divider {
 .oui-tile__legend {
   color: #3f5167;
 }
+.oui-tile__loader {
+  text-align: center;
+}
 .oui-tile__button {
   margin: 0;
   padding-left: 1.5rem;
@@ -9335,17 +9345,19 @@ oui-guide-menu-divider {
   position: static;
 }
 .oui-header-tabs__item > a {
+  color: #113f6d;
   text-decoration: none;
 }
 .oui-header-tabs__item > a,
+.oui-header-tabs__item > span,
 .oui-header-tabs__item .oui-button_dropdown {
   background-color: transparent;
-  color: #113f6d;
   display: block;
   font-size: 1rem;
   margin: 0;
 }
 .oui-header-tabs__item > a .oui-icon,
+.oui-header-tabs__item > span .oui-icon,
 .oui-header-tabs__item .oui-button_dropdown .oui-icon {
   color: inherit;
   font-size: 0.75rem;
@@ -9358,6 +9370,10 @@ oui-guide-menu-divider {
   padding: 0.625rem 1.875rem;
   transition: none;
 }
+.oui-header-tabs__item .oui-button_dropdown:active,
+.oui-header-tabs__item .oui-button_dropdown:focus {
+  background-color: transparent;
+}
 .oui-header-tabs__item .oui-button_dropdown .oui-icon {
   overflow: hidden;
   position: static;
@@ -9367,11 +9383,15 @@ oui-guide-menu-divider {
 .oui-header-tabs__item .oui-button_dropdown .oui-icon::before {
   margin-right: 0;
 }
-.oui-header-tabs__item_dropdown_active .oui-button_dropdown {
+.oui-header-tabs__item_disabled > span {
+  color: #999999;
+}
+.oui-header-tabs__item_active .oui-button_dropdown {
   border-bottom: 4px solid;
   padding-bottom: calc(1rem - 4px);
 }
-:not(.oui-header-tabs__dropdown-container) > .oui-header-tabs__item > a {
+:not(.oui-header-tabs__dropdown-container) > .oui-header-tabs__item > a,
+:not(.oui-header-tabs__dropdown-container) > .oui-header-tabs__item > span {
   padding: 0.625rem 1.875rem;
   white-space: nowrap;
 }
@@ -9379,7 +9399,8 @@ oui-guide-menu-divider {
   border-bottom: 4px solid;
   padding-bottom: calc(1rem - 4px);
 }
-.oui-header-tabs__dropdown-container > .oui-header-tabs__item > a {
+.oui-header-tabs__dropdown-container > .oui-header-tabs__item > a,
+.oui-header-tabs__dropdown-container > .oui-header-tabs__item > span {
   padding: 0.5rem 1.25rem;
 }
 .oui-header-tabs__dropdown-container > .oui-header-tabs__item > a:hover,
