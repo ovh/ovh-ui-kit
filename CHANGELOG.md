@@ -4,23 +4,11 @@
 
 ### Bug Fixes
 
-* **oui-page-header:** fix new styles responsive detection ([#225](https://github.com/ovh-ux/ovh-ui-kit/issues/225)) ([2228ced](https://github.com/ovh-ux/ovh-ui-kit/commit/2228ced))
-* **oui-slideshow:** fix naming ([#218](https://github.com/ovh-ux/ovh-ui-kit/issues/218)) ([5f2d10d](https://github.com/ovh-ux/ovh-ui-kit/commit/5f2d10d))
 * **oui-tile:** fix normalize for height sizing ([#235](https://github.com/ovh-ux/ovh-ui-kit/issues/235)) ([2875b17](https://github.com/ovh-ux/ovh-ui-kit/commit/2875b17))
 
 
 ### Features
 
-* **oui-clipboard:** add oui-clipboard component ([#200](https://github.com/ovh-ux/ovh-ui-kit/issues/200)) ([0b310e9](https://github.com/ovh-ux/ovh-ui-kit/commit/0b310e9))
-* **oui-collapsible:** add oui-collapsible component ([#197](https://github.com/ovh-ux/ovh-ui-kit/issues/197)) ([41970f7](https://github.com/ovh-ux/ovh-ui-kit/commit/41970f7))
-* **oui-datagrid:** add styles for datagrid parameters ([#214](https://github.com/ovh-ux/ovh-ui-kit/issues/214)) ([4f0eefd](https://github.com/ovh-ux/ovh-ui-kit/commit/4f0eefd))
-* **oui-guide-menu:** create component ([#220](https://github.com/ovh-ux/ovh-ui-kit/issues/220)) ([4dc5d99](https://github.com/ovh-ux/ovh-ui-kit/commit/4dc5d99))
-* **oui-header-tabs:** add oui-header-tabs feature ([#221](https://github.com/ovh-ux/ovh-ui-kit/issues/221)) ([2c3d289](https://github.com/ovh-ux/ovh-ui-kit/commit/2c3d289))
-* **oui-navbar:** add placeholder for notification ([#216](https://github.com/ovh-ux/ovh-ui-kit/issues/216)) ([0e07f2d](https://github.com/ovh-ux/ovh-ui-kit/commit/0e07f2d))
-* **oui-page-header:** create page-header component ([#219](https://github.com/ovh-ux/ovh-ui-kit/issues/219)) ([2bd7a2b](https://github.com/ovh-ux/ovh-ui-kit/commit/2bd7a2b))
-* **oui-skeleton:** add oui-skeleton component ([#209](https://github.com/ovh-ux/ovh-ui-kit/issues/209)) ([3295e4f](https://github.com/ovh-ux/ovh-ui-kit/commit/3295e4f))
-* **oui-slideshow:** add slideshow component ([#208](https://github.com/ovh-ux/ovh-ui-kit/issues/208)) ([e9f010f](https://github.com/ovh-ux/ovh-ui-kit/commit/e9f010f))
-* **oui-tile:** create oui-tile component ([#217](https://github.com/ovh-ux/ovh-ui-kit/issues/217)) ([f5e7fde](https://github.com/ovh-ux/ovh-ui-kit/commit/f5e7fde))
 * **oui-typography:** add abbr style from specs ([#231](https://github.com/ovh-ux/ovh-ui-kit/issues/231)) ([ae43999](https://github.com/ovh-ux/ovh-ui-kit/commit/ae43999))
 
 
