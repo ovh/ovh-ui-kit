@@ -112,6 +112,14 @@ oui-typography is a package which provides tools as constants and mixins for man
 <hr class="oui-horizontal-line oui-horizontal-line_dark">
 ```
 
+### Abreviations and Acronyms
+
+```html:preview
+<p>Praesent in congue purus, at <abbr title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">elementum sem</abbr>. Curabitur porta eros volutpat, sodales justo eu, congue metus.</p>
+
+<p>Praesent in congue purus, at elementum sem. <abbr oui-tooltip="Lorem ipsum dolor sit amet, consectetur adipiscing elit">Curabitur porta</abbr> eros volutpat, sodales justo eu, congue metus.</p>
+```
+
 ## Constants
 
 | Constant                | Value | Preview                                                 |
