@@ -1,7 +1,11 @@
 @import '../oui-typography/_mixins';
 
 oui-tile {
-  #oui > .base-font();
-
   display: block;
+}
+
+#oui {
+  .tile-normalize() {
+    #oui > .base-font();
+  }
 }
