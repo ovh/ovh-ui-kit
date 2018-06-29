@@ -1,3 +1,18 @@
+<a name="2.16.2"></a>
+## [2.16.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.1...v2.16.2) (2018-06-29)
+
+
+### Bug Fixes
+
+* **oui-tile:** fix normalize for height sizing ([#235](https://github.com/ovh-ux/ovh-ui-kit/issues/235)) ([2875b17](https://github.com/ovh-ux/ovh-ui-kit/commit/2875b17))
+
+
+### Features
+
+* **oui-typography:** add abbr style from specs ([#231](https://github.com/ovh-ux/ovh-ui-kit/issues/231)) ([ae43999](https://github.com/ovh-ux/ovh-ui-kit/commit/ae43999))
+
+
+
 <a name="2.16.1"></a>
 ## [2.16.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.0...v2.16.1) (2018-06-27)
 
