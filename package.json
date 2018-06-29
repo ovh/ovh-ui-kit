@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit",
-  "version": "2.16.1",
+  "version": "2.16.2",
   "description": "A LESS stylekit for the OVH brand.",
   "license": "BSD-3-Clause",
   "scripts": {
