@@ -1,3 +1,14 @@
+<a name="2.16.3"></a>
+## [2.16.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.2...v2.16.3) (2018-07-02)
+
+
+### Bug Fixes
+
+* fix deprecated mixins and variables ([4ea91b9](https://github.com/ovh-ux/ovh-ui-kit/commit/4ea91b9))
+* **oui-dropdown:** fix min-width ([6575195](https://github.com/ovh-ux/ovh-ui-kit/commit/6575195))
+
+
+
 <a name="2.16.2"></a>
 ## [2.16.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.1...v2.16.2) (2018-06-29)
 

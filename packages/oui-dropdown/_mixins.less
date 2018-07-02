@@ -1,0 +1,107 @@
+@import './_variables';
+
+#oui {
+  // Deprecated: Support only for old use
+  .dropdown-base(
+    @dropdown-selector
+  ) {
+    &_active {
+      .@{dropdown-selector}__content {
+        display: block;
+      }
+    }
+
+    &__content {
+      display: none;
+      z-index: @oui-dropdown-zindex;
+      max-width: @oui-dropdown-max-width;
+      text-align: initial;
+      background-color: @oui-dropdown-background-color;
+      border: @oui-dropdown-border-width @oui-dropdown-border-color solid;
+      box-shadow: 0 4px 6px 0 @oui-dropdown-shadow-color;
+    }
+
+    &__content_arrow {
+      // stylelint-disable max-nesting-depth
+      &[x-placement^="top"] {
+        margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-margin;
+
+        .@{dropdown-selector}__arrow {
+          margin: 0 @oui-dropdown-arrow-margin;
+          top: 100%;
+          border-top-color: @oui-dropdown-border-color;
+
+          &::before {
+            left: 0;
+            top: 100%;
+            border-top-color: @oui-dropdown-border-color;
+          }
+
+          &::after {
+            left: @oui-dropdown-arrow-diff-size;
+            top: 100%;
+            border-top-color: @oui-dropdown-background-color;
+          }
+        }
+      }
+
+      &[x-placement^="bottom"] {
+        margin-top: @oui-dropdown-arrow-size + @oui-dropdown-margin;
+
+        .@{dropdown-selector}__arrow {
+          margin: 0 @oui-dropdown-arrow-margin;
+          bottom: 100%;
+          border-bottom-color: @oui-dropdown-border-color;
+
+          &::before {
+            left: 0;
+            bottom: 100%;
+            border-bottom-color: @oui-dropdown-border-color;
+          }
+
+          &::after {
+            left: @oui-dropdown-arrow-diff-size;
+            bottom: 100%;
+            border-bottom-color: @oui-dropdown-background-color;
+          }
+        }
+      }
+
+      &[x-placement^="bottom"], &[x-placement^="top"] {
+        &[x-placement$="start"] {
+          .@{dropdown-selector}__arrow {
+            left: 0;
+          }
+        }
+
+        &[x-placement$="end"] {
+          .@{dropdown-selector}__arrow {
+            left: ~"calc(100% - 2 * (@{oui-dropdown-arrow-size} + @{oui-dropdown-arrow-margin}))";
+          }
+        }
+      }
+
+      .@{dropdown-selector}__arrow {
+        position: absolute;
+        width: @oui-dropdown-arrow-size * 2;
+
+        &::before {
+          position: absolute;
+          content: " ";
+          width: 0;
+          height: 0;
+          border: @oui-dropdown-arrow-size transparent solid;
+        }
+
+        &::after {
+          position: absolute;
+          content: " ";
+          width: 0;
+          height: 0;
+          border: @oui-dropdown-arrow-inner-size transparent solid;
+        }
+      }
+      // stylelint-enable max-nesting-depth
+    }
+  }
+}
