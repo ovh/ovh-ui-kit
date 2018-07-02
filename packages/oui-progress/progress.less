@@ -8,32 +8,60 @@
 
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  position: relative;
   margin: @oui-progress-margin;
 
-  &__container {
-    position: relative;
+  // Background bar
+  &::before {
+    content: " ";
     height: @oui-progress-height;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     border-radius: (@oui-progress-height / 2);
     background-color: @oui-progress-background-color;
-    margin-bottom: @oui-progress-bar-text-spacing;
+    z-index: 0;
   }
 
   &__bar {
-    height: @oui-progress-height;
-    transition: width @oui-animation-default-timing @oui-animation-default;
-    border-radius: (@oui-progress-height / 2);
+    text-align: right;
 
-    &_info { background-color: @oui-progress-info-foreground-color; }
+    // Foreground bar
+    &::before {
+      content: " ";
+      width: 100%;
+      height: @oui-progress-height;
+      display: block;
+      position: relative;
+      margin-bottom: @oui-progress-bar-text-spacing;
+      border-top-left-radius: (@oui-progress-height / 2);
+      border-bottom-left-radius: (@oui-progress-height / 2);
+      transition: width @oui-animation-default-timing @oui-animation-default;
+    }
 
-    &_success { background-color: @oui-progress-success-foreground-color; }
+    & ~ &::before {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
 
-    &_warning { background-color: @oui-progress-warning-foreground-color; }
+    &:last-child::before {
+      border-top-right-radius: (@oui-progress-height / 2);
+      border-bottom-right-radius: (@oui-progress-height / 2);
+    }
 
-    &_error { background-color: @oui-progress-error-foreground-color; }
+    &_info::before { background-color: @oui-progress-info-foreground-color; }
+
+    &_success::before { background-color: @oui-progress-success-foreground-color; }
+
+    &_warning::before { background-color: @oui-progress-warning-foreground-color; }
+
+    &_error::before { background-color: @oui-progress-error-foreground-color; }
   }
 
-  &__text {
+  &__label {
     position: relative;
     font-size: @oui-progress-bar-text-font-size;
     font-weight: @oui-progress-bar-text-font-weight;
@@ -66,15 +94,23 @@
     flex-direction: row;
     align-items: center;
 
-    .@{oui-progress-selector}__container,
+    &::before { display: none; }
+
     .@{oui-progress-selector}__bar {
-      height: @oui-progress-compact-size;
-      width: @oui-progress-compact-size;
-      margin: 0;
-      border-radius: (@oui-progress-compact-size / 2);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &::before {
+        height: @oui-progress-compact-size;
+        width: @oui-progress-compact-size;
+        display: inline-block;
+        margin: 0;
+        border-radius: (@oui-progress-compact-size / 2);
+      }
     }
 
-    .@{oui-progress-selector}__text {
+    .@{oui-progress-selector}__label {
       margin-left: @oui-progress-bar-text-spacing;
       font-size: @oui-progress-bar-compact-text-font-size;
     }
@@ -84,11 +120,6 @@
     }
   }
 
-  // Deprecated: Support only for old use
-  &_indeterminate {
-    // #oui > .progress-indeterminate();
-  }
-
   // Native progress support
   progress& {
     overflow: hidden;
@@ -96,6 +127,7 @@
     border-radius: (@oui-progress-height / 2);
     background-color: @oui-progress-background-color;
 
+    &::before { display: none; }
     &::-webkit-progress-bar { background-color: @oui-progress-background-color; }
 
     &::-webkit-progress-value { border-radius: (@oui-progress-height / 2); }
