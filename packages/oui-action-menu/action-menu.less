@@ -2,11 +2,6 @@
 @import './_normalize';
 @import './_variables';
 
-// Deprecated: Support only for old use
-.oui-action-menu {
-  &:extend(.oui-dropdown-menu all);
-}
-
 .oui-action-button {
   #oui > .button-hollow();
 
@@ -58,5 +53,18 @@
     circle {
       fill: @oui-action-button-foreground-color_disabled;
     }
+  }
+}
+
+
+
+
+
+// Deprecated: Support only for old use
+.oui-action-menu {
+  &:extend(.oui-dropdown-menu all);
+
+  &-button {
+    &:extend(.oui-action-button all);
   }
 }
