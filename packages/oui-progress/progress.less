@@ -2,17 +2,16 @@
 @import './_variables';
 @import '../oui-animation/_variables';
 
-@oui-progress-modifiers: info, success, warning, error;
-
 .oui-progress {
   #oui > .progress-normalize();
   @oui-progress-selector: oui-progress;
 
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: @oui-progress-margin;
 
-  &__bar-container {
+  &__container {
     position: relative;
     height: @oui-progress-height;
     border-radius: (@oui-progress-height / 2);
@@ -25,19 +24,16 @@
     transition: width @oui-animation-default-timing @oui-animation-default;
     border-radius: (@oui-progress-height / 2);
 
-    .oui-progress-bar-modifiers(@i: length(@oui-progress-modifiers)) when (@i > 0) {
-      .oui-progress-bar-modifiers(@i - 1);
-      @current-modifier: extract(@oui-progress-modifiers, @i);
-      @background-color: "oui-progress-@{current-modifier}-foreground-color";
+    &_info { background-color: @oui-progress-info-foreground-color; }
 
-      &_@{current-modifier} {
-        background-color: @@background-color;
-      }
-    }
-    .oui-progress-bar-modifiers();
+    &_success { background-color: @oui-progress-success-foreground-color; }
+
+    &_warning { background-color: @oui-progress-warning-foreground-color; }
+
+    &_error { background-color: @oui-progress-error-foreground-color; }
   }
 
-  &__label {
+  &__text {
     position: relative;
     font-size: @oui-progress-bar-text-font-size;
     font-weight: @oui-progress-bar-text-font-weight;
@@ -70,20 +66,72 @@
     flex-direction: row;
     align-items: center;
 
-    .@{oui-progress-selector}__bar-container, .@{oui-progress-selector}__bar {
+    .@{oui-progress-selector}__container,
+    .@{oui-progress-selector}__bar {
       height: @oui-progress-compact-size;
       width: @oui-progress-compact-size;
       margin: 0;
       border-radius: (@oui-progress-compact-size / 2);
     }
 
-    .@{oui-progress-selector}__label {
+    .@{oui-progress-selector}__text {
       margin-left: @oui-progress-bar-text-spacing;
       font-size: @oui-progress-bar-compact-text-font-size;
     }
 
     .@{oui-progress-selector}__threshold {
       display: none;
+    }
+  }
+
+  // Deprecated: Support only for old use
+  &_indeterminate {
+    // #oui > .progress-indeterminate();
+  }
+
+  // Native progress support
+  progress& {
+    overflow: hidden;
+    border: none;
+    border-radius: (@oui-progress-height / 2);
+    background-color: @oui-progress-background-color;
+
+    &::-webkit-progress-bar { background-color: @oui-progress-background-color; }
+
+    &::-webkit-progress-value { border-radius: (@oui-progress-height / 2); }
+    &::-moz-progress-bar { border-radius: (@oui-progress-height / 2); }
+    &::-ms-fill { border-radius: (@oui-progress-height / 2); }
+
+    &_info {
+      color: @oui-progress-info-foreground-color;
+
+      &::-webkit-progress-value { background-color: @oui-progress-info-foreground-color; }
+      &::-moz-progress-bar { background-color: @oui-progress-info-foreground-color; }
+      &::-ms-fill { background-color: @oui-progress-info-foreground-color; }
+    }
+
+    &_success {
+      color: @oui-progress-success-foreground-color;
+
+      &::-webkit-progress-value { background-color: @oui-progress-success-foreground-color; }
+      &::-moz-progress-bar { background-color: @oui-progress-success-foreground-color; }
+      &::-ms-fill { background-color: @oui-progress-success-foreground-color; }
+    }
+
+    &_warning {
+      color: @oui-progress-warning-foreground-color;
+
+      &::-webkit-progress-value { background-color: @oui-progress-warning-foreground-color; }
+      &::-moz-progress-bar { background-color: @oui-progress-warning-foreground-color; }
+      &::-ms-fill { background-color: @oui-progress-warning-foreground-color; }
+    }
+
+    &_error {
+      color: @oui-progress-error-foreground-color;
+
+      &::-webkit-progress-value { background-color: @oui-progress-error-foreground-color; }
+      &::-moz-progress-bar { background-color: @oui-progress-error-foreground-color; }
+      &::-ms-fill { background-color: @oui-progress-error-foreground-color; }
     }
   }
 }
