@@ -284,7 +284,7 @@ abbr[data-oui-tooltip] {
   font-family: 'Oui Icons';
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.eot?#iefix&v=2.16.2") format("embedded-opentype"), url("../../dist/icons/icons.woff?v=2.16.2") format("woff"), url("../../dist/icons/icons.woff2?v=2.16.2") format("woff2"), url("../../dist/icons/icons.ttf?v=2.16.2") format("truetype"), url("../../dist/icons/icons.svg?#icons&v=2.16.2") format("svg");
+  src: url("../../dist/icons/icons.eot?#iefix&v=2.16.3") format("embedded-opentype"), url("../../dist/icons/icons.woff?v=2.16.3") format("woff"), url("../../dist/icons/icons.woff2?v=2.16.3") format("woff2"), url("../../dist/icons/icons.ttf?v=2.16.3") format("truetype"), url("../../dist/icons/icons.svg?#icons&v=2.16.3") format("svg");
 }
 .oui-icon-badge {
   display: table;
@@ -7255,14 +7255,14 @@ oui-dropdown-divider {
   font-smoothing: antialiased;
 }
 .oui-dropdown__trigger {
-  max-width: 300px;
+  max-width: 18.75rem;
   margin: 0;
   vertical-align: middle;
 }
 .oui-dropdown-menu,
 .oui-action-menu {
-  min-width: 100%;
-  max-width: 300px;
+  min-width: 8.75rem;
+  max-width: 18.75rem;
   display: none;
   margin: 0;
   position: relative;
@@ -7453,7 +7453,8 @@ oui-action-menu-item,
 oui-action-menu-divider {
   display: block;
 }
-.oui-action-button {
+.oui-action-button,
+.oui-action-menu-button {
   padding: 0.438rem 1.25rem;
   border: 1px solid #bdbec0;
   min-width: 2.25rem;
@@ -7466,54 +7467,68 @@ oui-action-menu-divider {
   background-color: #fff;
 }
 .oui-action-button:hover,
-.oui-action-button:focus {
+.oui-action-button:focus,
+.oui-action-menu-button:hover,
+.oui-action-menu-button:focus {
   background-color: #f2f2f2;
   border-color: #999999;
 }
-.oui-action-button:focus {
+.oui-action-button:focus,
+.oui-action-menu-button:focus {
   box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
 }
-.oui-action-button:active {
+.oui-action-button:active,
+.oui-action-menu-button:active {
   box-shadow: inset 2px 2px 1px 0 rgba(187, 189, 191, 0.3);
 }
 .oui-action-button:disabled,
-.oui-action-button:disabled:active {
+.oui-action-button:disabled:active,
+.oui-action-menu-button:disabled,
+.oui-action-menu-button:disabled:active {
   color: #bbbdbf;
   border-color: #f2f2f2;
   background-color: #f2f2f2;
   cursor: auto;
 }
-.oui-action-button circle {
+.oui-action-button circle,
+.oui-action-menu-button circle {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #00a2bf;
 }
-.oui-action-button[aria-expanded="true"] {
+.oui-action-button[aria-expanded="true"],
+.oui-action-menu-button[aria-expanded="true"] {
   border-color: #999999;
   background-color: #f2f2f2;
 }
-.oui-action-button:hover {
+.oui-action-button:hover,
+.oui-action-menu-button:hover {
   border-color: #00a2bf;
   background-color: #00a2bf;
 }
-.oui-action-button:hover circle {
+.oui-action-button:hover circle,
+.oui-action-menu-button:hover circle {
   fill: #fff;
   transform-origin: center;
 }
-.oui-action-button:focus {
+.oui-action-button:focus,
+.oui-action-menu-button:focus {
   outline: none;
   box-shadow: 0 0 3px 1px rgba(0, 162, 191, 0.6);
 }
-.oui-action-button:active {
+.oui-action-button:active,
+.oui-action-menu-button:active {
   box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 0.33);
 }
-.oui-action-button:disabled {
+.oui-action-button:disabled,
+.oui-action-menu-button:disabled {
   cursor: default;
   box-shadow: none;
   border-color: #f2f2f2;
   background-color: #f2f2f2;
 }
-.oui-action-button:disabled circle {
+.oui-action-button:disabled circle,
+.oui-action-menu-button:disabled circle {
   fill: #bbbdbf;
 }
 oui-guide-menu {
