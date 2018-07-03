@@ -28,6 +28,7 @@
 
   &__bar {
     text-align: right;
+    transition: width @oui-animation-default-timing @oui-animation-default;
 
     // Foreground bar
     &::before {
@@ -37,17 +38,14 @@
       display: block;
       position: relative;
       margin-bottom: @oui-progress-bar-text-spacing;
+    }
+
+    &:first-of-type::before {
       border-top-left-radius: (@oui-progress-height / 2);
       border-bottom-left-radius: (@oui-progress-height / 2);
-      transition: width @oui-animation-default-timing @oui-animation-default;
     }
 
-    & ~ &::before {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    &:last-child::before {
+    &:last-of-type::before {
       border-top-right-radius: (@oui-progress-height / 2);
       border-bottom-right-radius: (@oui-progress-height / 2);
     }
@@ -68,11 +66,10 @@
     white-space: nowrap;
     text-align: right;
     color: @oui-progress-bar-text-color;
-    transition: width @oui-animation-default-timing @oui-animation-default;
   }
 
   &__threshold {
-    display: inline-block;
+    display: block;
     position: absolute;
     z-index: 1;
     height: @oui-progress-height;
