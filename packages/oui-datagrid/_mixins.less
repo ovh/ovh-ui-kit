@@ -173,6 +173,26 @@
         background-color: @background-color-even;
       }
     }
+
+    &_sub {
+      &:nth-child(odd) {
+        .@{cell-selector} {
+          background-color: #f7f7f7;
+        }
+      }
+
+      &:nth-child(even) {
+        .@{cell-selector} {
+          background-color: #f7f7f7;
+        }
+      }
+    }
+
+    &_expanded {
+      .oui-datagrid__expand-button {
+        #oui > .datagrid-cell-expand-button(true);
+      }
+    }
   }
 
   .datagrid-cell(
@@ -199,6 +219,23 @@
 
     .@{spinner-container-selector} {
       margin: 0 auto;
+    }
+
+    &_expand-button {
+      position: relative;
+      padding-right: 40px;
+    }
+  }
+
+  .datagrid-cell-expand-button(@expanded: false) {
+    #oui > .animate();
+
+    position: absolute;
+    right: 0;
+    padding: 0;
+
+    & when (@expanded = true) {
+      transform: rotateZ(180deg);
     }
   }
 
