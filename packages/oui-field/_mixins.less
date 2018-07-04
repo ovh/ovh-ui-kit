@@ -2,6 +2,7 @@
 @import '../oui-input/_mixins';
 @import '../oui-responsive/_mixins';
 @import '../oui-select/_mixins';
+@import '../oui-switch/_mixins';
 @import '../oui-textarea/_mixins';
 @import '../oui-ui-select/_mixins';
 @import './_variables';
@@ -15,6 +16,7 @@
     @checkbox-selector,
     @select-selector,
     @ui-select-selector,
+    @switch-selector,
     @textarea-selector,
     @custom-component-selector,
     @icon-error-selector: @oui-field-error-icon-selector,
@@ -81,7 +83,8 @@
 
       // Specific cases
       > oui-numeric > .@{input-group-selector},
-      > oui-select > .@{ui-select-selector} {
+      > oui-select > .@{ui-select-selector},
+      > oui-switch > .@{switch-selector}__label-container {
         margin-bottom: 0;
       }
     }
@@ -143,6 +146,10 @@
       // Custom components specificities
       .@{ui-select-selector} {
         #oui > .ui-select-container-error-style();
+      }
+
+      .@{switch-selector} {
+        #oui > .switch-error-style();
       }
 
       .@{textarea-selector} {
