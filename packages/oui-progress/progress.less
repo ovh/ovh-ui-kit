@@ -121,6 +121,7 @@
 
   // Native progress support
   progress& {
+    height: @oui-progress-height;
     overflow: hidden;
     border: none;
     border-radius: (@oui-progress-height / 2);
@@ -131,7 +132,10 @@
 
     &::-webkit-progress-value { border-radius: (@oui-progress-height / 2); }
     &::-moz-progress-bar { border-radius: (@oui-progress-height / 2); }
-    &::-ms-fill { border-radius: (@oui-progress-height / 2); }
+    &::-ms-fill {
+      border: none;
+      border-radius: (@oui-progress-height / 2);
+    }
 
     &_info {
       color: @oui-progress-info-foreground-color;
