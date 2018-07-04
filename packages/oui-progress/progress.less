@@ -38,11 +38,13 @@
       display: block;
       position: relative;
       margin-bottom: @oui-progress-bar-text-spacing;
-    }
-
-    &:first-of-type::before {
       border-top-left-radius: (@oui-progress-height / 2);
       border-bottom-left-radius: (@oui-progress-height / 2);
+    }
+
+    & ~ &::before {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
     }
 
     &:last-of-type::before {
