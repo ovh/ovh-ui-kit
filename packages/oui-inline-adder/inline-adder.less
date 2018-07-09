@@ -1,68 +1,77 @@
-@import './_normalize';
+@import "./_normalize";
+@import "../oui-color/_constants";
+@import '../oui-responsive/_variables';
 
 .oui-inline-adder {
   @oui-inline-adder-selector: oui-inline-adder;
   #oui > .inline-adder-normalize();
 
+  display: block;
+
   &__item {
-    display: flex;
-    flex-direction: row;
     background-color: @oui-color-white;
     border: 1px solid @oui-color-ironlight;
-    box-shadow: 0 rem-calc(4px) rem-calc(6px) 0 rgba(0,0,0,0.06);
-    margin-bottom: rem-calc(20px);
-  }
-
-  &__actions-container {
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .06);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 0 0 rem-calc(60);
-    background-color: @oui-color-concrete;
+    margin-bottom: rem-calc(20);
   }
 
-  &__actions-button {
-    margin: 0;
-    padding: rem-calc(4) 0;
-    & .oui-icon::before {
-      width: rem-calc(18);
-      height: rem-calc(20);
-      font-size: rem-calc(18);
-      line-height: rem-calc(18);
-      margin-top: rem-calc(4);
+  &__rows {
+    flex-grow: 1;
+
+    & > * {
+      display: block;
+
+      &:not(:first-child) {
+        border-top: 1px solid @oui-color-silver;
+      }
     }
   }
 
-  &__rows_container {
+  &__actions {
+    align-items: center;
+    background-color: @oui-color-concrete;
     display: flex;
-    flex-direction: column;
-    flex:1;
+    justify-content: center;
+    padding: 10px;
 
-    > :not(:first-child) {
-      border-top: 1px solid @oui-color-silver;
+    &-button {
+      margin: 0;
+      min-width: rem-calc(40);
+      padding: rem-calc(4) 0;
+
+      & > .oui-icon::before {
+        display: inline;
+        font-size: rem-calc(18);
+      }
     }
   }
 
   &__row {
     display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
-    padding: rem-calc(10px);
-
-    &:not(:nth-child(1)) {
-      border-top: 1px solid @oui-color-silver;
-    }
+    flex-wrap: nowrap;
+    padding: 10px 20px 10px 10px;
   }
 
   &__cell {
-    padding: 1rem 1rem 0 1rem;
-    &_auto-grow {
+    padding: 10px 0 20px 10px;
+
+    &:only-child,
+    &_extended {
       flex: 1 1 auto;
+    }
+
+    .oui-field,
+    .oui-field__control,
+    .oui-input,
+    .oui-input-group,
+    .oui-select,
+    .oui-ui-select-container {
+      margin-bottom: 0;
     }
   }
 
-  @media screen and (max-width: @oui-responsive-breakpoint-phone) {
+  @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
     &__row {
       flex-direction: column;
     }
