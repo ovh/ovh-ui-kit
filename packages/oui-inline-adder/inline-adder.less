@@ -1,0 +1,79 @@
+@import "./_normalize";
+@import "../oui-color/_constants";
+@import '../oui-responsive/_variables';
+
+.oui-inline-adder {
+  @oui-inline-adder-selector: oui-inline-adder;
+  #oui > .inline-adder-normalize();
+
+  display: block;
+
+  &__item {
+    background-color: @oui-color-white;
+    border: 1px solid @oui-color-ironlight;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .06);
+    display: flex;
+    margin-bottom: rem-calc(20);
+  }
+
+  &__rows {
+    flex-grow: 1;
+
+    & > * {
+      display: block;
+
+      &:not(:first-child) {
+        border-top: 1px solid @oui-color-silver;
+      }
+    }
+  }
+
+  &__actions {
+    align-items: center;
+    background-color: @oui-color-concrete;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    &-button {
+      margin: 0;
+      min-width: rem-calc(40);
+      padding: rem-calc(4) 0;
+
+      & > .oui-icon::before {
+        display: inline;
+        font-size: rem-calc(18);
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 10px 20px 10px 10px;
+  }
+
+  &__cell {
+    padding: 10px 0 20px 10px;
+
+    &:only-child,
+    &_extended {
+      flex: 1 1 auto;
+    }
+
+    .oui-field,
+    .oui-field__control,
+    .oui-input,
+    .oui-input-group,
+    .oui-select,
+    .oui-ui-select-container {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
+    &__row {
+      flex-direction: column;
+    }
+  }
+}
