@@ -511,7 +511,7 @@
     &__action {
       background: none;
       border: 0;
-      padding: 0.4rem 1rem;
+      padding: rem-calc(4) rem-calc(10);
 
       .oui-icon {
         color: @oui-notification-action-font-color;
@@ -584,30 +584,34 @@
       }
 
       &__title {
-        font-size: 1.6rem;
+        font-size: rem-calc(16);
         font-weight: @oui-notification-title-weight;
       }
 
       &__description {
-        font-size: 1.4rem;
+        font-size: rem-calc(14);
       }
     }
 
     &__time {
-      padding: 0 0 0 0.5rem;
+      padding: 0 0 0 rem-calc(5);
     }
 
     &__description {
-      font-size: 1.4rem;
-      line-height: 2rem;
-      max-height: 8rem;
+      font-size: rem-calc(14);
+      line-height: rem-calc(20);
+      max-height: rem-calc(80);
       overflow: hidden;
     }
 
     &__title {
-      font-size: 1.6rem;
+      font-size: rem-calc(16);
       font-weight: @oui-notification-title-weight;
     }
+  }
+
+  &-menu &-list {
+    display: block;
   }
 
   // Helper for responsive
