@@ -5,6 +5,7 @@
 .oui-navbar {
   #oui > .navbar-normalize();
 
+  min-height: @oui-navbar-height;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -17,7 +18,6 @@
   font-size: @oui-navbar-font-size;
   color: @oui-navbar-font-color;
   background-color: @oui-navbar-background-color;
-  z-index: @oui-navbar-z-index;
 
   // variant 'fixed'
   &_fixed {
@@ -25,6 +25,7 @@
     top:0;
     left: 0;
     right: 0;
+    z-index: @oui-navbar-z-index;
   }
 
   // Header/Brand
@@ -190,7 +191,9 @@
   }
 
   // Variant for links displayed in main navbar bar
-  & > &-list > &-list__item > &-link {
+  & > &-list > &-list__item > &-link,
+  & > &-list > oui-navbar-main > &-list__item > &-link,
+  & > &-list > oui-navbar-aside > &-list__item > &-link {
     #oui > .navbar-link(
       @line-height: @oui-navbar-height,
       @display: flex,
@@ -286,6 +289,7 @@
     top: 100%;
     left: 0;
     padding: @oui-navbar-menu-padding;
+    text-align: left;
     color: @oui-navbar-menu-font-color;
     background-color: @oui-navbar-menu-background-color;
     box-shadow: @oui-navbar-menu-box-shadow;
@@ -295,7 +299,8 @@
     pointer-events: none;
     transform: translateY(-10%);
 
-    [aria-expanded="true"] ~ & {
+    [aria-expanded="true"] ~ &,
+    [aria-expanded="true"] ~ &__wrapper > & {
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
@@ -314,6 +319,7 @@
     }
 
     // Variant 'right' for Menus
+    &_end,
     &_right {
       left: auto;
       right: 0;
@@ -372,6 +378,7 @@
       display: block;
       position: relative;
       padding: @oui-navbar-menu-header-padding;
+      text-align: left;
       color: @oui-navbar-menu-font-color;
       border-bottom: @oui-navbar-menu-header-border-bottom;
       background: @oui-navbar-menu-header-background-color;
@@ -460,7 +467,8 @@
   }
 
   // Menu variant 'fixed', for mobile only
-  &-menu_fixed {
+  &-menu_fixed,
+  &-menu__wrapper > &-menu_fixed {
     /* stylelint-disable indentation */
     .tablet({
       #oui > .navbar-menu-animation_slide();
@@ -482,12 +490,25 @@
     /* stylelint-enable indentation */
   }
 
-  &-menu_fixed&-menu_right {
+  &-menu_notifications,
+  &-menu__wrapper > &-menu_notifications {
     /* stylelint-disable indentation */
     .tablet({
-      #oui > .navbar-menu-animation_slide(right);
+      max-width: @oui-navbar-menu-width_large;
     });
     /* stylelint-enable indentation */
+  }
+
+  &-menu_fixed&-menu,
+  &-menu__wrapper > &-menu_fixed&-menu {
+    &_end,
+    &_right {
+      /* stylelint-disable indentation */
+      .tablet({
+        #oui > .navbar-menu-animation_slide(right);
+      });
+      /* stylelint-enable indentation */
+    }
   }
 
   &-menu_fixed &-list {
@@ -524,7 +545,11 @@
     }
 
     & > &__action {
-      visibility: hidden;
+      /* stylelint-disable indentation */
+      .desktop({
+        visibility: hidden;
+      });
+      /* stylelint-enable indentation */
     }
 
     &:hover > &__action {
@@ -536,6 +561,7 @@
       flex: 1;
       overflow-wrap: break-word;
       overflow: hidden;
+      text-align: left;
 
       &:hover, &:focus {
         color: @oui-navbar-menu-font-color;
