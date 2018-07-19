@@ -316,6 +316,14 @@
 
     &_notifications {
       width: @oui-navbar-menu-width_large;
+
+      > .oui-navbar-list {
+        overflow: auto;
+
+        .desktop({
+          max-height: rem-calc(400);
+        });
+      }
     }
 
     // Variant 'right' for Menus
