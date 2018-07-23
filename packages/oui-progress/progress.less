@@ -37,7 +37,6 @@
       height: @oui-progress-height;
       display: block;
       position: relative;
-      margin-bottom: @oui-progress-bar-text-spacing;
       border-top-left-radius: (@oui-progress-height / 2);
       border-bottom-left-radius: (@oui-progress-height / 2);
     }
@@ -62,6 +61,8 @@
   }
 
   &__label {
+    margin-top: @oui-progress-bar-text-spacing;
+    display: block;
     position: relative;
     font-size: @oui-progress-bar-text-font-size;
     font-weight: @oui-progress-bar-text-font-weight;

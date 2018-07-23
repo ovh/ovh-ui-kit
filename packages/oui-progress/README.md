@@ -26,25 +26,25 @@ oui-progress is a package which provide styles for the progress component.
 ```html:preview
 <div class="oui-progress">
   <div class="oui-progress__bar oui-progress__bar_info" role="progressbar" style="width: 1%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label" style="width: 1%;">1%</span>
+    <span class="oui-progress__label">1%</span>
   </div>
 </div>
 
 <div class="oui-progress">
   <div class="oui-progress__bar oui-progress__bar_success" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label" style="width: 10%;">10%</span>
+    <span class="oui-progress__label">10%</span>
   </div>
 </div>
 
 <div class="oui-progress">
   <div class="oui-progress__bar oui-progress__bar_warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label" style="width: 75%;">75%</span>
+    <span class="oui-progress__label">75%</span>
   </div>
 </div>
 
 <div class="oui-progress">
   <div class="oui-progress__bar oui-progress__bar_error" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label" style="width: 90%;">90%</span>
+    <span class="oui-progress__label">90%</span>
   </div>
 </div>
 ```
