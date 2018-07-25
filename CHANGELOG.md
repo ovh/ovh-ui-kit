@@ -1,3 +1,26 @@
+<a name="2.17.0"></a>
+# [2.17.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.3...v2.17.0) (2018-07-25)
+
+
+### Bug Fixes
+
+* **oui-input-group:** fix clipboard tooltips in datagrids ([#240](https://github.com/ovh-ux/ovh-ui-kit/issues/240)) ([4563a37](https://github.com/ovh-ux/ovh-ui-kit/commit/4563a37))
+* enable woff2 loading ([#244](https://github.com/ovh-ux/ovh-ui-kit/issues/244)) ([799a7c9](https://github.com/ovh-ux/ovh-ui-kit/commit/799a7c9))
+* **oui-input-group:** fix oui-numeric width ([f874a07](https://github.com/ovh-ux/ovh-ui-kit/commit/f874a07))
+* **oui-popover:** update style to specs ([#241](https://github.com/ovh-ux/ovh-ui-kit/issues/241)) ([782c586](https://github.com/ovh-ux/ovh-ui-kit/commit/782c586))
+* **oui-tile:** add normalize for custom tags ([3db430c](https://github.com/ovh-ux/ovh-ui-kit/commit/3db430c))
+
+
+### Features
+
+* **oui-navbar:** add new components ([#246](https://github.com/ovh-ux/ovh-ui-kit/issues/246)) ([606cc23](https://github.com/ovh-ux/ovh-ui-kit/commit/606cc23))
+* **oui-progress:** update for oui-progress component ([#213](https://github.com/ovh-ux/ovh-ui-kit/issues/213)) ([a87aa21](https://github.com/ovh-ux/ovh-ui-kit/commit/a87aa21))
+* **oui-switch:** add oui-switch component ([#211](https://github.com/ovh-ux/ovh-ui-kit/issues/211)) ([bdd7b52](https://github.com/ovh-ux/ovh-ui-kit/commit/bdd7b52))
+* **oui-tile:** add disabled on oui-tile-button ([#247](https://github.com/ovh-ux/ovh-ui-kit/issues/247)) ([b23eaff](https://github.com/ovh-ux/ovh-ui-kit/commit/b23eaff))
+* **oui-tile:** handle icon for external link in tile button ([#245](https://github.com/ovh-ux/ovh-ui-kit/issues/245)) ([a2c2d09](https://github.com/ovh-ux/ovh-ui-kit/commit/a2c2d09))
+
+
+
 <a name="2.16.3"></a>
 ## [2.16.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.2...v2.16.3) (2018-07-02)
 
