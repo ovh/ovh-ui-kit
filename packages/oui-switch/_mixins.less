@@ -1,125 +1,45 @@
-@import '../oui/_settings';
-@import '../oui-accessibility/_mixins';
-@import '../oui-animation/_mixins';
-@import './_variables';
+@import "../oui/_settings";
+@import "./_variables";
 
 #oui {
-  .switch(
-    @switch-selector,
-    @icon-selector,
-    @background-color-on: @oui-switch-background-color-on,
-    @background-color-off: @oui-switch-background-color-off,
-    @slider-color: @oui-switch-slider-color,
-    @icon-color: @oui-switch-icon-color,
-    @width: @oui-switch-width,
-    @height: @oui-switch-height,
-    @icon-size: @oui-switch-icon-size,
-    @border-width: @oui-switch-border-width
-  ) {
-    position: relative;
-    display: inline-block;
-    width: @width;
-    height: @height;
-
-    &__checkbox {
-      #oui > .visually-hidden();
-
-      &:focus ~ .oui-switch__slider {
-        box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .25), 0 0 3px 1px rgba(0, 0, 0, 0.15);
-      }
-
-      &:checked {
-        ~ .@{switch-selector}__slider {
-          background-color: @background-color-on;
-        }
-
-        ~ .@{switch-selector}__slider::before {
-          background-color: @slider-color;
-          transform: translateX(30px);
-        }
-
-        ~ .@{icon-selector}:nth-last-child(2) {
-          #oui > .animate();
-
-          transform: scale(1);
-        }
-
-        ~ .@{icon-selector}:last-child {
-          #oui > .animate();
-
-          transform: scale(0);
-        }
-      }
-    }
-
-    &__slider {
-      #oui > .animate();
-
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      border-radius: ~"calc(@{height} - @{border-width} * 2)";
-      background-color: @background-color-off;
-      box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .25);
-      cursor: pointer;
-
-      &::before {
-        #oui > .animate();
-
-        content: "";
-        position: absolute;
-        width: ~"calc(@{height} - @{border-width} * 2)";
-        height: ~"calc(@{height} - @{border-width} * 2)";
-        bottom: @border-width;
-        left: @border-width;
-        z-index: 2;
-        border-radius: 50%;
-        background-color: @slider-color;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .25);
-      }
-    }
-
-    .@{icon-selector} {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      z-index: 1;
-      display: block;
-      width: ~"calc(@{height} - @{border-width} * 2)";
-      height: @icon-size;
-      padding: 0;
-      margin: auto 0;
-      font-size: @icon-size;
-      text-align: center;
-      transform-origin: center;
-      pointer-events: none;
-
-      &:nth-last-child(2) {
-        #oui > .animate();
-
-        left: ~"calc(@{border-width} * 2)";
-        color: @icon-color;
-        transform: scale(0);
-      }
-
-      &:last-child {
-        #oui > .animate();
-
-        right: ~"calc(@{border-width} * 2)";
-        color: @icon-color;
-        transform: scale(1);
-      }
-    }
-  }
-
-  .switch-square(
-    @switch-selector
+  .switch-square-style(
+    @switch-selector: oui-switch;
   ) {
     .@{switch-selector}__slider,
     .@{switch-selector}__slider::before {
       border-radius: @oui-global-base-radius;
+    }
+  }
+
+  .switch-error-style(
+    @switch-selector: oui-switch;
+  ) {
+    @status: error;
+    @status-border-color: "oui-color-@{status}-medium";
+    @status-font-color: "oui-color-@{status}-medium";
+    @status-fill-color: "oui-color-@{status}-fade";
+
+    .@{switch-selector}__checkbox:not(:disabled) + .@{switch-selector}__slider,
+    .@{switch-selector}__checkbox:checked + .@{switch-selector}__slider {
+      background-color: @@status-fill-color;
+      border-color: @@status-border-color;
+    }
+
+    .@{switch-selector}__checkbox:not(:disabled) + .@{switch-selector}__slider::before,
+    .@{switch-selector}__checkbox:checked + .@{switch-selector}__slider::before {
+      box-shadow: 0 1px 2px 0 rgba(227, 105, 71, 1);
+    }
+  }
+
+  .switch-error() {
+    &_error {
+      .switch-error-style();
+    }
+  }
+
+  .switch-square() {
+    &_square {
+      .switch-square-style();
     }
   }
 }

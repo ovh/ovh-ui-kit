@@ -35,19 +35,20 @@
 
     &.oui-button_full-width.oui-button_icon-right {
       .oui-icon {
-        &::before {
+        &:not(.oui-icon-external_link)::before {
           right: @oui-tile-item-side-spacing;
         }
       }
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: @oui-tile-background-hover;
     }
-  }
 
-  .oui-icon {
-    font-size: initial;
+    &:disabled {
+      background: none;
+    }
   }
 
   &__button.oui-button_link {

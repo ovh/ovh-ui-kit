@@ -1,6 +1,6 @@
 # oui-progress
 
-<component-status cx-design="partial" ux="prototype"></component-status>
+<component-status cx-design="complete" ux="rc"></component-status>
 
 oui-progress is a package which provide styles for the progress component.
 
@@ -24,24 +24,27 @@ oui-progress is a package which provide styles for the progress component.
 ### Advanced
 
 ```html:preview
-<div class="oui-progress oui-progress_info">
-  <div class="oui-progress__bar oui-progress__bar_info" role="progressbar" style="width: 1%" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">
+<div class="oui-progress">
+  <div class="oui-progress__bar oui-progress__bar_info" role="progressbar" style="width: 1%;" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100">
     <span class="oui-progress__label">1%</span>
   </div>
 </div>
-<div class="oui-progress oui-progress_success">
-  <div class="oui-progress__bar oui-progress__bar_success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+
+<div class="oui-progress">
+  <div class="oui-progress__bar oui-progress__bar_success" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
     <span class="oui-progress__label">10%</span>
   </div>
 </div>
-<div class="oui-progress oui-progress_warning">
-  <div class="oui-progress__bar oui-progress__bar_warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label">60%</span>
+
+<div class="oui-progress">
+  <div class="oui-progress__bar oui-progress__bar_warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">75%</span>
   </div>
 </div>
-<div class="oui-progress oui-progress_error">
-  <div class="oui-progress__bar oui-progress__bar_error" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label">100%</span>
+
+<div class="oui-progress">
+  <div class="oui-progress__bar oui-progress__bar_error" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">90%</span>
   </div>
 </div>
 ```
@@ -68,6 +71,7 @@ oui-progress is a package which provide styles for the progress component.
     <span class="oui-progress__label">Progression: 80%</span>
   </div>
 </div>
+
 <div class="oui-progress oui-progress_info">
   <div class="oui-progress__threshold" style="left: 25%"></div>
   <div class="oui-progress__threshold" style="left: 50%"></div>
@@ -81,19 +85,30 @@ oui-progress is a package which provide styles for the progress component.
 </div>
 ```
 
-### Label alignment
+### Compact mode
 
 ```html:preview
-<div class="oui-progress oui-progress_info">
-  <div class="oui-progress__bar oui-progress__bar_success oui-progress__bar_text-left" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-    <span class="oui-progress__label">Progression: 30%</span>
+<div class="oui-progress oui-progress_compact">
+  <div class="oui-progress__bar oui-progress__bar_info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">10 out of 50 complete</span>
   </div>
 </div>
-```
 
-### Indeterminate
+<div class="oui-progress oui-progress_compact">
+  <div class="oui-progress__bar oui-progress__bar_success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">10 instances up</span>
+  </div>
+</div>
 
-```html:preview
-<progress class="oui-progress oui-progress_info oui-progress_indeterminate"></progress>
-<div class="oui-progress oui-progress_warning oui-progress_indeterminate" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+<div class="oui-progress oui-progress_compact">
+  <div class="oui-progress__bar oui-progress__bar_warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">75% of storage being used</span>
+  </div>
+</div>
+
+<div class="oui-progress oui-progress_compact">
+  <div class="oui-progress__bar oui-progress__bar_error" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+    <span class="oui-progress__label">100% Quota utilized!</span>
+  </div>
+</div>
 ```

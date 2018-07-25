@@ -410,7 +410,7 @@
     @icon-selector: oui-icon,
     @padding-right: @oui-button-icon-padding-right
   ) {
-    .@{icon-selector}::before {
+    .@{icon-selector}::before:not(.oui-icon-external_link) {
       right: @padding-right;
     }
   }
