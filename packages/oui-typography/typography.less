@@ -1,5 +1,20 @@
+@import '../oui/_settings';
 @import '../oui-typography/_constants';
 @import './_mixins';
+
+body {
+  #oui > .base-font();
+
+  font-size: @oui-global-base-font-size;
+}
+
+abbr[title],
+abbr[oui-tooltip],
+abbr[data-oui-tooltip] {
+  border-bottom: dashed 1px @oui-color-pacific;
+  text-decoration: none;
+  cursor: help;
+}
 
 .oui-header {
   #oui > .headers();
@@ -29,12 +44,4 @@
   &_thin {
     #oui > .horizontal-line-thin();
   }
-}
-
-abbr[title],
-abbr[oui-tooltip],
-abbr[data-oui-tooltip] {
-  border-bottom: dashed 1px @oui-color-pacific;
-  text-decoration: none;
-  cursor: help;
 }
