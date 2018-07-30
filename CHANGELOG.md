@@ -1,3 +1,15 @@
+<a name="2.17.1"></a>
+## [2.17.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.17.0...v2.17.1) (2018-07-30)
+
+
+### Bug Fixes
+
+* **oui-button:** remove margin on button ([adc3158](https://github.com/ovh-ux/ovh-ui-kit/commit/adc3158))
+* **oui-input-group:** fix transition animation ([f3ef6bc](https://github.com/ovh-ux/ovh-ui-kit/commit/f3ef6bc))
+* **oui-typography:** fix base font style on body ([3c145c3](https://github.com/ovh-ux/ovh-ui-kit/commit/3c145c3))
+
+
+
 <a name="2.17.0"></a>
 # [2.17.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.16.3...v2.17.0) (2018-07-25)
 
