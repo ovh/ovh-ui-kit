@@ -299,6 +299,14 @@
     pointer-events: none;
     transform: translateY(-10%);
 
+    // Avoid being displayed on load
+    &__wrapper {
+      height: 0;
+      overflow: hidden;
+    }
+
+    [aria-expanded="true"] ~ &__wrapper { overflow: visible }
+
     [aria-expanded="true"] ~ &,
     [aria-expanded="true"] ~ &__wrapper > & {
       opacity: 1;
