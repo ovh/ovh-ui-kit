@@ -1,3 +1,20 @@
+<a name="2.17.2"></a>
+## [2.17.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.17.1...v2.17.2) (2018-08-01)
+
+
+### Bug Fixes
+
+* **oui-criteria-adder:** fix padding-bottom ([#252](https://github.com/ovh-ux/ovh-ui-kit/issues/252)) ([66716bd](https://github.com/ovh-ux/ovh-ui-kit/commit/66716bd))
+* **oui-datagrid:** add missing margin-bottom to extra-top ([#253](https://github.com/ovh-ux/ovh-ui-kit/issues/253)) ([f182283](https://github.com/ovh-ux/ovh-ui-kit/commit/f182283))
+* **oui-navbar:** fix navbar menu popup on load ([9087eb5](https://github.com/ovh-ux/ovh-ui-kit/commit/9087eb5))
+
+
+### Features
+
+* **oui-datagrid:** add compact variant ([f47b18e](https://github.com/ovh-ux/ovh-ui-kit/commit/f47b18e))
+
+
+
 <a name="2.17.1"></a>
 ## [2.17.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.17.0...v2.17.1) (2018-07-30)
 

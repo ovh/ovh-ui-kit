@@ -292,7 +292,7 @@ abbr[data-oui-tooltip] {
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.eot?#iefix&v=2.17.1") format("embedded-opentype"), url("../../dist/icons/icons.woff2?v=2.17.1") format("woff2"), url("../../dist/icons/icons.woff?v=2.17.1") format("woff"), url("../../dist/icons/icons.ttf?v=2.17.1") format("truetype"), url("../../dist/icons/icons.svg?#icons&v=2.17.1") format("svg");
+  src: url("../../dist/icons/icons.eot?#iefix&v=2.17.2") format("embedded-opentype"), url("../../dist/icons/icons.woff2?v=2.17.2") format("woff2"), url("../../dist/icons/icons.woff?v=2.17.2") format("woff"), url("../../dist/icons/icons.ttf?v=2.17.2") format("truetype"), url("../../dist/icons/icons.svg?#icons&v=2.17.2") format("svg");
 }
 .oui-icon-badge {
   display: table;
@@ -3622,7 +3622,6 @@ oui-button {
 .oui-tooltip__trigger.oui-link + .oui-tooltip {
   margin: 0.313rem 0;
 }
-oui-navbar,
 oui-navbar-link,
 oui-navbar-menu,
 oui-navbar-brand,
@@ -3632,6 +3631,7 @@ oui-navbar-dropdown-menu,
 oui-navbar-notification {
   display: block;
 }
+oui-navbar,
 oui-navbar-aside,
 oui-navbar-main {
   display: flex;
@@ -4121,6 +4121,13 @@ oui-navbar-main {
   visibility: hidden;
   pointer-events: none;
   transform: translateY(-10%);
+}
+.oui-navbar-menu__wrapper {
+  height: 0;
+  overflow: hidden;
+}
+[aria-expanded="true"] ~ .oui-navbar-menu__wrapper {
+  overflow: visible;
 }
 [aria-expanded="true"] ~ .oui-navbar-menu,
 [aria-expanded="true"] ~ .oui-navbar-menu__wrapper > .oui-navbar-menu {
@@ -5963,7 +5970,7 @@ select.oui-select__input::-ms-expand {
   opacity: 1;
 }
 .oui-datagrid__cell {
-  padding: 0.5rem 0.625rem 0.438rem;
+  padding: 0.313rem 0.625rem;
   height: 3.5rem;
   white-space: nowrap;
   border-bottom: 1px solid #e9ebe7;
@@ -5976,6 +5983,9 @@ select.oui-select__input::-ms-expand {
 }
 .oui-datagrid__cell .oui-spinner__container {
   margin: 0 auto;
+}
+.oui-datagrid_compact .oui-datagrid__cell {
+  height: auto;
 }
 .oui-datagrid-responsive-container {
   position: relative;
@@ -6025,7 +6035,7 @@ select.oui-select__input::-ms-expand {
 }
 .oui-datagrid-responsive-container__sticky-container .oui-datagrid__row .oui-datagrid__cell-sticky {
   height: 3.5rem;
-  padding: 0.5rem 0.625rem 0.438rem;
+  padding: 0.313rem 0.625rem;
 }
 .oui-datagrid-responsive-container__sticky-container .oui-datagrid__headers .oui-datagrid__cell-sticky {
   height: 2.75rem;
@@ -6109,6 +6119,9 @@ select.oui-select__input::-ms-expand {
 }
 .oui-datagrid-topbar__slot {
   flex: 1 0;
+}
+.oui-datagrid-topbar__slot oui-action-menu {
+  margin-bottom: 0.625rem;
 }
 .oui-modal {
   font-family: 'Source Sans Pro', sans-serif;
@@ -7993,7 +8006,6 @@ oui-guide-menu-divider {
 }
 .oui-criteria-adder form {
   padding: 1.25rem;
-  padding-bottom: 0;
 }
 .oui-chip {
   font-family: 'Source Sans Pro', sans-serif;
