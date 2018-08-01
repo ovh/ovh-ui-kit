@@ -54,6 +54,11 @@
       @form-elements: @oui-datagrid-form-elements
     );
   }
+
+  // Compact variant
+  &_compact &__cell {
+    height: auto;
+  }
 }
 
 .oui-datagrid-responsive-container {
@@ -156,5 +161,9 @@
 
   &__slot {
     flex: 1 0;
+
+    oui-action-menu {
+      margin-bottom: rem-calc(10);
+    }
   }
 }
