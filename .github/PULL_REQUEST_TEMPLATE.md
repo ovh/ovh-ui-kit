@@ -9,12 +9,12 @@
 ### Description of the Change
 
 <!-- required -->
-<!-- can be an aglomeration of commits bodies -->
+<!-- Can be a listing of commit descriptions -->
 
 ### Benefits
 
 <!-- optional -->
-<!-- What benefits will be realized by the code change? -->
+<!-- What benefits will be achieved by the code change? -->
 
 ### Possible Drawbacks
 

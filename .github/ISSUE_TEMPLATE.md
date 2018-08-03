@@ -1,26 +1,26 @@
 ### Description
 
 <!-- Required -->
-<!-- Description of the issue] -->
+<!-- Description of the issue -->
 
-### Steps to Reproduce
+### Steps to reproduce
 
 <!-- Required -->
 1. [First Step]
 2. [Second Step]
 3. [and so on...]
 
-**Expected behavior:**
+**Expected behavior**:
 
-<!-- What you expect to happen-->
+<!-- What did you expect to happen -->
 
-**Actual behavior:**
+**Actual behavior**:
 
 <!-- What actually happens -->
 
-**Reproduces how often:**
-<!-- What percentage of the time does it reproduce?-->
+**Frequency**:
+<!-- How often does the issue happen, on a scale from 1 (rare) to 5 (always)?-->
 
-### Additional Information
+### Additional information
 <!-- optional -->
-<!-- Any additional information, configuration or data that might be necessary to reproduce the issue. -->
+<!-- Any additional information, configuration or data that might be necessary to reproduce the issue -->

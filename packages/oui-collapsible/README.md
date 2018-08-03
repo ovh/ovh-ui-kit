@@ -19,7 +19,7 @@
     aria-expanded="false"
     aria-controls="collapsible-1">
     Title
-    <i class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></span>
   </button>
   <div class="oui-collapsible__wrapper">
     <div class="oui-collapsible__body">
@@ -38,7 +38,7 @@
     aria-expanded="true"
     aria-controls="collapsible-2">
     Title
-    <i class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></span>
   </button>
   <div class="oui-collapsible__wrapper">
     <div class="oui-collapsible__body">
