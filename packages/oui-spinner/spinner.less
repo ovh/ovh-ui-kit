@@ -1,17 +1,79 @@
-@import './_mixins';
+@import './_variables';
 
 .oui-spinner {
-  #oui > .spinner-base();
+  display: inline-block;
 
-  &_s {
-    #oui > .spinner-s();
+  @keyframes scale {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    1% {
+      opacity: 0.25;
+      transform: scale(0.65);
+    }
   }
 
-  &_m {
-    #oui > .spinner-m();
+  @keyframes rotation {
+    1% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
-  &_l {
-    #oui > .spinner-l();
+  &__container {
+    display: block;
+    position: relative;
+    box-sizing: content-box;
+    background: none;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // Variant "small"
+  &_s &__container {
+    width: @oui-spinner-s-size;
+    height: @oui-spinner-s-size;
+    padding: @oui-spinner-s-spacing;
+  }
+
+  &_s &__image {
+    background-image: @oui-spinner-s-background-image;
+    animation: scale @oui-spinner-s-speed-scale 0ms 1 linear, rotation @oui-spinner-s-speed-rotation @oui-spinner-s-speed-scale infinite linear;
+  }
+
+  // Variant "medium"
+  &_m &__container {
+    width: @oui-spinner-m-size;
+    height: @oui-spinner-m-size;
+    padding: @oui-spinner-m-spacing;
+  }
+
+  &_m &__image {
+    background-image: @oui-spinner-m-background-image;
+    animation: scale @oui-spinner-m-speed-scale 0ms 1 linear, rotation @oui-spinner-m-speed-rotation @oui-spinner-m-speed-scale infinite linear;
+  }
+
+  // Variant "large"
+  &_l &__container {
+    width: @oui-spinner-l-size;
+    height: @oui-spinner-l-size;
+    padding: @oui-spinner-l-spacing;
+  }
+
+  &_l &__image {
+    background-image: @oui-spinner-l-background-image;
+    animation: scale @oui-spinner-l-speed-scale 0ms 1 linear, rotation @oui-spinner-l-speed-rotation @oui-spinner-l-speed-scale infinite linear;
   }
 }
