@@ -25,6 +25,6 @@ The label can be found over its related input field. However, these labels are p
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down"></i>
+  <span class="oui-icon oui-icon-chevron-down"></span>
 </div>
 ```

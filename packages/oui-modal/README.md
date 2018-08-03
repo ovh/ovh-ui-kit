@@ -27,7 +27,7 @@ The modal disappears when a button is clicked.
       <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
     </div>
     <div class="oui-modal__body">
-      <i class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-help_circle oui-icon_bicolor" aria-hidden="true"></span>
       <div class="oui-modal__body-text">
         <h2 class="oui-modal__title">Confirmation</h2>
         
@@ -64,7 +64,7 @@ The dialog modal disappears when a button is clicked.
       <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
     </div>
     <div class="oui-modal__body">
-      <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></span>
       <div class="oui-modal__body-text">
         <h2 class="oui-modal__title">Warning</h2>
         <p class="oui-modal__text">The current order is not finished.</p>
@@ -98,7 +98,7 @@ It is possible to click outside the modal to close it or click X (equivalent to 
       <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Exit"></button>
     </div>
     <div class="oui-modal__body">
-      <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></span>
       <div class="oui-modal__body-text">
         <h2 class="oui-modal__title">The dynHost was successfully created</h2>
         <p class="oui-modal__text">In order to be able to update a DynHOST field from a software external to the client space, a DynHOST identifier is required.</p>
@@ -140,7 +140,7 @@ The no icon modal can contain a short form (4 to 5 inputs) in a single section.
           <option value="Option 2">Option 2</option>
           <option value="Option 3">Option 3</option>
         </select>
-        <i class="oui-icon oui-icon-chevron-down"></i>
+        <span class="oui-icon oui-icon-chevron-down"></span>
       </div>
     </div>
     <div class="oui-modal__footer">

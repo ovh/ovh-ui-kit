@@ -60,10 +60,10 @@
           <label class="oui-checkbox__label-container" for="oui-checkbox1-global">
             <span class="oui-checkbox__label">
               <span class="oui-checkbox__icon">
-                <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
               </span>
             </span>
           </label>
@@ -87,10 +87,10 @@
           <label class="oui-checkbox__label-container" for="oui-checkbox1-1">
             <span class="oui-checkbox__label">
               <span class="oui-checkbox__icon">
-                <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
               </span>
             </span>
           </label>
@@ -117,10 +117,10 @@
           <label class="oui-checkbox__label-container" for="oui-checkbox1-2">
             <span class="oui-checkbox__label">
               <span class="oui-checkbox__icon">
-                <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
               </span>
             </span>
           </label>
@@ -206,10 +206,10 @@
                 <label class="oui-checkbox__label-container" for="oui-checkbox2-global">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
-                      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                      <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
                     </span>
                   </span>
                 </label>
@@ -233,10 +233,10 @@
                 <label class="oui-checkbox__label-container" for="oui-checkbox2-1">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
-                      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                      <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
                     </span>
                   </span>
                 </label>
@@ -263,10 +263,10 @@
                 <label class="oui-checkbox__label-container" for="oui-checkbox2-2">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
-                      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                      <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
                     </span>
                   </span>
                 </label>
@@ -308,10 +308,10 @@
                 <label class="oui-checkbox__label-container" for="oui-checkbox3-global">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
-                      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                      <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
                     </span>
                   </span>
                 </label>
@@ -334,10 +334,10 @@
                 <label class="oui-checkbox__label-container" for="oui-checkbox3-1">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
-                      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                      <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
                     </span>
                   </span>
                 </label>
@@ -358,10 +358,10 @@
                 <label class="oui-checkbox__label-container" for="oui-checkbox3-2">
                   <span class="oui-checkbox__label">
                     <span class="oui-checkbox__icon">
-                      <i class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></i>
-                      <i class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></i>
+                      <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                      <span class="oui-icon oui-icon-checkbox-indeterminate" aria-hidden="true"></span>
                     </span>
                   </span>
                 </label>

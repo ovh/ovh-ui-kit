@@ -39,7 +39,7 @@
     <button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
       type="button"
       aria-label="Previous page">
-      <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
     </button>
     <div class="oui-button-group">
       <button class="oui-button oui-button_primary oui-button_small-width oui-pagination-button_selected" disabled="disabled">1</button>
@@ -55,12 +55,12 @@
           ng-change="$ctrl.setPageNumber(page)"
           ng-options="page as $ctrl.capitalize($ctrl.config.words.page) + ' ' + page + ' ' + $ctrl.config.words.of + ' ' + $ctrl.pageCount for page in $ctrl.pagesList">
       </select>
-      <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
     </div>
     <button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
       type="button"
       aria-label="Next page">
-        <i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
   </div>
 </div>
@@ -95,7 +95,7 @@
     <button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
       type="button"
       aria-label="Previous page">
-      <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
     </button>
     <oui-dropdown>
       <oui-dropdown-trigger text="{{'Page 1 of 6'}}"></oui-dropdown-trigger>
@@ -115,7 +115,7 @@
     <button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
       type="button"
       aria-label="Next page">
-        <i class="oui-icon oui-icon-chevron-right" aria-hidden="true"></i>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
   </div>
 </div>

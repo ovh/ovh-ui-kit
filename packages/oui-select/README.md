@@ -17,7 +17,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 
 <label class="oui-select">
@@ -26,7 +26,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 
 <label class="oui-select oui-select_error">
@@ -35,7 +35,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 ```
 
@@ -48,7 +48,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 ```
 
@@ -62,7 +62,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 <label class="oui-select oui-select_s">
   <select class="oui-select__input">
@@ -71,7 +71,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 <label class="oui-select oui-select_m">
   <select class="oui-select__input">
@@ -80,7 +80,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 <label class="oui-select oui-select_l">
   <select class="oui-select__input">
@@ -89,7 +89,7 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 <label class="oui-select oui-select_xl">
   <select class="oui-select__input">
@@ -98,6 +98,6 @@
     <option value="Option 2">Option 2</option>
     <option value="Option 3">Option 3</option>
   </select>
-  <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
 </label>
 ```

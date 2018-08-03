@@ -97,7 +97,7 @@ oui-typography is a package which provides tools as constants and mixins for man
 <div>
   <a href="#" class="oui-link oui-link_icon">
     The quick brown fox jumps over the lazy dog
-    <i class="oui-icon oui-icon-external_link" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
   </a>
 </div>
 ```
