@@ -5,15 +5,16 @@
 @import "./_variables";
 
 .oui-switch {
-  display: block;
   line-height: 0;
+  display: inline-block;
+  position: relative;
   vertical-align: middle;
 
   &__label-container {
-    height: @oui-switch-height;
-    margin-bottom: rem-calc(5);
-    position: relative;
     width: @oui-switch-width;
+    height: @oui-switch-height;
+    position: relative;
+    margin: 0;
   }
 
   &__checkbox {
