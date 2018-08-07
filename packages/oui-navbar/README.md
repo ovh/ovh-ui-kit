@@ -16,7 +16,7 @@
 <div style="margin-bottom: 15px" class="oui-doc-preview-only-keep-children">
 <nav class="oui-navbar" role="navigation">
   <a class="oui-navbar__brand" href="">
-    <i class="oui-icon oui-icon-ovh"></i>
+    <span class="oui-icon oui-icon-ovh"></span>
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
@@ -36,7 +36,7 @@
 <div style="margin-bottom: 15px" class="oui-doc-preview-only-keep-children">
 <nav class="oui-navbar" role="navigation">
   <a class="oui-navbar__brand" href="">
-    <i class="oui-icon oui-icon-ovh"></i>
+    <span class="oui-icon oui-icon-ovh"></span>
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
@@ -64,7 +64,7 @@
 <div style="margin-bottom: 15px" class="oui-doc-preview-only-keep-children">
 <nav class="oui-navbar" role="navigation">
   <a class="oui-navbar__brand" href="">
-    <i class="oui-icon oui-icon-ovh"></i>
+    <span class="oui-icon oui-icon-ovh"></span>
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
@@ -95,7 +95,7 @@
 <div style="height: 140px; margin-bottom: 15px" class="oui-doc-preview-only-keep-children">
 <nav class="oui-navbar" role="navigation">
   <a class="oui-navbar__brand" href="">
-    <i class="oui-icon oui-icon-ovh"></i>
+    <span class="oui-icon oui-icon-ovh"></span>
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
@@ -145,7 +145,7 @@ The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, 
     </ul>
   </div>
   <a class="oui-navbar__brand" href="">
-    <i class="oui-icon oui-icon-ovh"></i>
+    <span class="oui-icon oui-icon-ovh"></span>
   </a>
   <ul class="oui-navbar-list oui-navbar_desktop-only">
     <li class="oui-navbar-list__item">

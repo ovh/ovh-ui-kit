@@ -44,12 +44,12 @@ Tips are used together with a relative positionned component as the `oui-message
 ```html:preview
 <div class="oui-message oui-message_info" role="alert">
   <span class="oui-tip-top" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Info message with icon and tip top</p>
 </div>
 <div class="oui-message oui-message_info" role="alert">
   <span class="oui-tip-right" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Info message with icon, tip right and close button</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
@@ -69,12 +69,12 @@ Tips are used together with a relative positionned component as the `oui-message
 ```html:preview
 <div class="oui-message oui-message_success" role="alert">
   <span class="oui-tip-top" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Success message with icon and tip top</p>
 </div>
 <div class="oui-message oui-message_success" role="alert">
   <span class="oui-tip-right" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Success message with icon, tip right and close button</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
@@ -94,12 +94,12 @@ Tips are used together with a relative positionned component as the `oui-message
 ```html:preview
 <div class="oui-message oui-message_warning" role="alert">
   <span class="oui-tip-top" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Warning message with icon and tip top</p>
 </div>
 <div class="oui-message oui-message_warning" role="alert">
   <span class="oui-tip-right" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Warning message with icon, tip right and close button</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>
@@ -119,12 +119,12 @@ Tips are used together with a relative positionned component as the `oui-message
 ```html:preview
 <div class="oui-message oui-message_error" role="alert">
   <span class="oui-tip-top" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Error message with icon and tip top</p>
 </div>
 <div class="oui-message oui-message_error" role="alert">
   <span class="oui-tip-right" aria-hidden="true"></span>
-  <i class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></i>
+  <span class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Error message with icon, tip right and close button</p>
   <button class="oui-icon oui-icon-close oui-message__close-button" type="button" title="Close the alert"></button>
 </div>

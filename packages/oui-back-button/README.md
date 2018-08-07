@@ -14,7 +14,7 @@
 <div class="oui-back-button">
     <button type="button"
             class="oui-button oui-button_icon-alone">
-      <i class="oui-icon oui-icon-chevron-left" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
     </button>
     <h2 class="oui-back-button_title oui-header_2">Title</h2>
 </div>

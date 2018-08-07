@@ -55,7 +55,7 @@ Upon initial loading of the form, the fields have a normal appearance.
   </div>
   <div class="oui-field__error">
     <span role="alert">
-      <i class="oui-icon oui-icon-error" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-error" aria-hidden="true"></span>
       <span>This is not a valid IP range.</span>
     </span>
   </div>
@@ -72,7 +72,7 @@ Upon initial loading of the form, the fields have a normal appearance.
   </div>
   <div class="oui-field__error">
     <span role="alert">
-      <i class="oui-icon oui-icon-error" aria-hidden="true"></i>
+      <span class="oui-icon oui-icon-error" aria-hidden="true"></span>
       <span>This is not a valid IP range.</span>
     </span>
   </div>

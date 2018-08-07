@@ -47,14 +47,14 @@
 <div class="oui-input-group oui-input-group_button">
   <input class="oui-input" id="password" name="password" type="password" placeholder="Password with icon eye" />
   <button class="oui-button" id="togglePassword" type="button" aria-label="Show password">
-    <i class="oui-icon oui-icon-eye"></i>
+    <span class="oui-icon oui-icon-eye"></span>
   </button>
 </div>
 
 <div class="oui-input-group oui-input-group_button">
   <input class="oui-input oui-input_error" id="passwordError" name="passwordError" type="text" placeholder="Password Error with icon eye blocked" />
   <button class="oui-button" id="togglePasswordError" type="button" aria-label="Hide password">
-    <i class="oui-icon oui-icon-eye-blocked"></i>
+    <span class="oui-icon oui-icon-eye-blocked"></span>
   </button>
 </div>
 ```
@@ -98,21 +98,21 @@
 ```html:preview
 <div class="oui-input-group oui-input-group_numeric">
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
-    <i class="oui-icon oui-icon-remove" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-remove" aria-hidden="true"></span>
   </button>
   <input class="oui-input oui-input_number" type="number" value="0">
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
-    <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-add" aria-hidden="true"></span>
   </button>
 </div>
 
 <div class="oui-input-group oui-input-group_numeric">
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
-    <i class="oui-icon oui-icon-remove" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-remove" aria-hidden="true"></span>
   </button>
   <input class="oui-input oui-input_number" type="number" value="0" disabled>
   <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
-    <i class="oui-icon oui-icon-add" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-add" aria-hidden="true"></span>
   </button>
 </div>
 ```

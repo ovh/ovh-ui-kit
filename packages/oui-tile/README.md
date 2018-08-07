@@ -19,13 +19,13 @@
         <div class="oui-tile__item oui-tile__item_button">
             <button type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
                 Button 1
-                <i class="oui-icon oui-icon-chevron-right" aria-label="Button 1"></i>
+                <span class="oui-icon oui-icon-chevron-right" aria-label="Button 1"></span>
             </button>
         </div>
         <div class="oui-tile__item oui-tile__item_button">
             <button disabled type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
                 Button 2
-                <i class="oui-icon oui-icon-chevron-right" aria-label="Button 2"></i>
+                <span class="oui-icon oui-icon-chevron-right" aria-label="Button 2"></span>
             </button>
         </div>
     </div>

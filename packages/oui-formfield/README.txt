@@ -19,7 +19,7 @@ Upon initial loading of the form, the text fields have a normal appearance.
 
 * The validation is done when leaving the field and transforms the appearance of the field if it is in error.
 * The field label is becomes red (see Color)
-* The field has a colored outline and an error icon (X) to the right end.  
+* The field has a colored outline and an error icon (X) to the right end.
 * If the unit validation is successful when losing focus, the field returns to its normal appearance.
 
 #### Focusing a field with errors:
@@ -64,7 +64,7 @@ Upon initial loading of the form, the text fields have a normal appearance.
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
     <label for="select" class="oui-label">Label for Select</label>
   </div>
 </div>
@@ -76,7 +76,7 @@ Upon initial loading of the form, the text fields have a normal appearance.
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
     <label for="select-disabled" class="oui-label">Label for Select disabled</label>
   </div>
 </div>
@@ -88,7 +88,7 @@ Upon initial loading of the form, the text fields have a normal appearance.
       <option value="Option 2">Option 2</option>
       <option value="Option 3">Option 3</option>
     </select>
-    <i class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+    <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
     <label for="select-error" class="oui-label">Label for Select error</label>
   </div>
 </div>
