@@ -21,7 +21,8 @@
   &__control-wrapper {
     position: relative;
 
-    // Fix positionning
+    /* stylelint-disable declaration-no-important */
+    // Fix positionning (inline style)
     .flatpickr-calendar {
       left: 0 !important;
 
@@ -37,5 +38,6 @@
         bottom: 100% !important;
       }
     }
+    /* stylelint-enable */
   }
 }

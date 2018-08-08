@@ -48,6 +48,9 @@
 
   &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
 
-  // Priority over ngStyle's height
-  &__header[aria-expanded="false"] ~ &__wrapper { height: 0 !important; }
+  /* stylelint-disable declaration-no-important */
+  &__header[aria-expanded="false"] ~ &__wrapper {
+    height: 0 !important; // Priority over ngStyle's height
+  }
+  /* stylelint-enable */
 }
