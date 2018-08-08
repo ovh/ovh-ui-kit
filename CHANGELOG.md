@@ -1,3 +1,15 @@
+<a name="2.18.0"></a>
+# [2.18.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.17.2...v2.18.0) (2018-08-07)
+
+
+### Bug Fixes
+
+* add default style to custom tag ([3f6709d](https://github.com/ovh-ux/ovh-ui-kit/commit/3f6709d))
+* **oui-spinner:** fix deprecated mixins ([e8578aa](https://github.com/ovh-ux/ovh-ui-kit/commit/e8578aa))
+* **oui-switch:** fix switch layout ([b45f25b](https://github.com/ovh-ux/ovh-ui-kit/commit/b45f25b))
+
+
+
 <a name="2.17.2"></a>
 ## [2.17.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.17.1...v2.17.2) (2018-08-01)
 
