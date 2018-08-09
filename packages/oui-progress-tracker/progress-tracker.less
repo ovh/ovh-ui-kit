@@ -30,10 +30,10 @@
   &__step {
     &:not(:last-child)::after {
       content: "";
-      height: rem-calc(4);
+      height: .25rem;
       margin: 0 @oui-progress-tracker-connector-spacing;
       position: absolute;
-      top: rem-calc(13);
+      top: .8125rem;
       left: @oui-progress-tracker-icon-height;
       right: 0;
       background-color: @oui-progress-tracker-background-color;
@@ -41,7 +41,7 @@
   }
 
   &__status {
-    padding-right: rem-calc(30);
+    padding-right: 1.875rem;
     margin-top: ~"calc(@{oui-progress-tracker-icon-height} + @{oui-progress-tracker-icon-spacing})";
     display: block;
     text-align: left;
@@ -71,7 +71,7 @@
     max-height: ~"calc(@{oui-progress-tracker-font-size} * @{oui-progress-tracker-label-line-height} * 2)";
     overflow: hidden;
     display: block;
-    margin-top: rem-calc(10);
+    margin-top: .625rem;
     word-break: break-work;
     hyphens: auto;
     font-weight: @oui-font-semibold;
@@ -108,7 +108,7 @@
   }
 
   @media only screen and (max-width: 1280px) {
-    margin-bottom: rem-calc(52);
+    margin-bottom: 3.25rem;
 
     &__steps { position: relative; }
 

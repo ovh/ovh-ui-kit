@@ -5,8 +5,8 @@
   "license": "BSD-3-Clause",
   "scripts": {
     "build:version": "cross-var sed -e 's/${tmpl-npm-version}/$npm_package_version/' packages/oui/_version.tmpl.less > packages/oui/_version.less",
-    "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
-    "build:less-min": "lessc --remcalc --clean-css packages/oui/stylekit.less dist/oui.min.css",
+    "build:less": "lessc packages/oui/stylekit.less dist/oui.css",
+    "build:less-min": "lessc --clean-css packages/oui/stylekit.less dist/oui.min.css",
     "build:icons": "mkdirp dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
     "build:icons-generator": "icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons -t span",
     "build": "rimraf dist && npm run build:version && npm run build:icons && npm run build:less && npm run build:less-min",
@@ -24,14 +24,11 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "dependencies": {
-    "less-plugin-remcalc": "^0.0.1"
-  },
   "devDependencies": {
     "chalk": "^2.4.1",
     "cross-var": "^1.1.0",
     "icon-font-generator": "^2.1.9",
-    "less": "^2.7.2",
+    "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
     "mkdirp": "^0.5.1",
     "npm-scripts-config": "^0.0.2",

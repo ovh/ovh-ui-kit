@@ -28,15 +28,15 @@
       width: 100%;
       max-width: 100%;
       height: @oui-select-height;
-      min-height: rem-calc(36);
-      padding: 0 rem-calc(30) + @padding * 0.8 0 @padding;
+      min-height: 2.25rem;
+      padding: 0 1.875rem + @padding * 0.8 0 @padding;
       border: 1px solid @border-color;
       border-radius: @oui-global-base-radius;
       background: #ffffff;
       box-shadow: @shadow;
       color: @font-color;
       font-size: @font-size;
-      line-height: rem-calc(34);
+      line-height: 2.125rem;
       font-weight: @font-weight;
       cursor: pointer;
       -webkit-appearance: none;
@@ -44,7 +44,7 @@
       // Firefox adds a small padding before text so we need to remove it
       @-moz-document url-prefix() {
         padding-right: @padding * 1.5;
-        padding-left: calc(@padding - 0.4rem);
+        padding-left: ~"calc(@{padding} - .25rem)";
       }
 
       select&::-ms-expand {

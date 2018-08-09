@@ -152,7 +152,7 @@
     &__label {
       position: relative;
       font-weight: @oui-font-semibold;
-      margin-bottom: rem-calc(5);
+      margin-bottom: .3125rem;
     }
 
     &,
@@ -194,7 +194,7 @@
     &__description,
     &__section {
       &:not(:last-child) {
-        margin-bottom: rem-calc(5);
+        margin-bottom: .3125rem;
       }
     }
 
@@ -320,16 +320,16 @@
     }
 
     .@{selector}__section {
-      padding-top: rem-calc(9);
+      padding-top: .5625rem;
       border-top: 1px solid @border-color;
-      margin-top: rem-calc(4);
+      margin-top: .25rem;
     }
 
     &.@{selector}_m .@{selector}__description {
-      padding-top: rem-calc(12);
+      padding-top: .75rem;
       padding-left: 0;
       border-top: 1px solid @oui-color-silver;
-      margin-top: rem-calc(6);
+      margin-top: .375rem;
     }
 
     .@{selector}__input:not(:disabled) + .@{selector}__label-container:hover {
@@ -342,7 +342,7 @@
 
     .@{selector}__input:checked + .@{selector}__label-container {
       box-shadow: 0 4px 6px 1px @oui-color-info-fade;
-      padding: calc(@padding - @border-size-checked / 2);
+      padding: ~"calc(@{padding} - (@{border-size-checked} - @{oui-thumbnail-border-size}))";
     }
 
     .@{selector}__input:not(:disabled):checked + .@{selector}__label-container {

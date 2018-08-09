@@ -50,8 +50,7 @@
   &__cell {
     #oui > .datagrid-cell(
       @selector: @oui-selector,
-      @spinner-container-selector: @oui-spinner-container-selector,
-      @form-elements: @oui-datagrid-form-elements
+      @spinner-container-selector: @oui-spinner-container-selector
     );
   }
 
@@ -86,11 +85,11 @@
 
   &__button {
     margin: 0;
-    padding: rem-calc(6) 0;
-    width: rem-calc(36);
+    padding: .375rem 0;
+    width: 2.25rem;
 
     .oui-icon {
-      line-height: rem-calc(26);
+      line-height: 1.625rem;
       color: @oui-color-sapphire;
 
       &:hover {
@@ -100,13 +99,13 @@
   }
 
   &__body {
-    padding: 0 rem-calc(18) rem-calc(4) rem-calc(18);
+    padding: 0 1.125rem .25rem 1.125rem;
   }
 
   &__headers {
     display: flex;
-    line-height: rem-calc(40);
-    font-size: rem-calc(14);
+    line-height: 2.5rem;
+    font-size: .875rem;
     color: @oui-color-dusty;
   }
 
@@ -119,7 +118,7 @@
     flex: 1;
 
     &:not(:last-child) {
-      padding-right: rem-calc(18);
+      padding-right: 1.125rem;
     }
   }
 
@@ -138,32 +137,32 @@
     .oui-criteria-adder,
     .oui-search {
       display: inline-block;
-      margin-left: rem-calc(10);
+      margin-left: .625rem;
     }
 
     .oui-criteria-adder {
       &__button {
-        margin-bottom: rem-calc(10);
+        margin-bottom: .625rem;
       }
     }
 
     .oui-search {
       .oui-input-group_search {
-        margin-bottom: rem-calc(10);
+        margin-bottom: .625rem;
       }
     }
   }
 
   &__criteria {
     display: block;
-    margin-bottom: rem-calc(10);
+    margin-bottom: .625rem;
   }
 
   &__slot {
     flex: 1 0;
 
     oui-action-menu {
-      margin-bottom: rem-calc(10);
+      margin-bottom: .625rem;
     }
   }
 }
