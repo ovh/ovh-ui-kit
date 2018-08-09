@@ -6,8 +6,10 @@
   "scripts": {
     "build:version": "cross-var sed -e 's/${tmpl-npm-version}/$npm_package_version/' packages/oui/_version.tmpl.less > packages/oui/_version.less",
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
-    "build:icons": "mkdirp dist/icons && icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons && node scripts/generate-icons-indexes.js",
-    "build": "rimraf dist && npm run build:version && npm run build:icons && npm run build:less",
+    "build:less-min": "lessc --remcalc --clean-css packages/oui/stylekit.less dist/oui.min.css",
+    "build:icons": "mkdirp dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
+    "build:icons-generator": "icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons -t span",
+    "build": "rimraf dist && npm run build:version && npm run build:icons && npm run build:less && npm run build:less-min",
     "test": "echo \"no tests for this project\"",
     "fix": "stylefmt -r packages",
     "lint": "stylelint --syntax less 'packages/**/*.less'",
@@ -26,15 +28,16 @@
     "less-plugin-remcalc": "^0.0.1"
   },
   "devDependencies": {
-    "chalk": "^2.3.1",
+    "chalk": "^2.4.1",
     "cross-var": "^1.1.0",
-    "icon-font-generator": "^1.1.1",
+    "icon-font-generator": "^2.1.9",
     "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
     "mkdirp": "^0.5.1",
     "npm-scripts-config": "^0.0.2",
     "npm-scripts-conventional-changelog": "^0.1.0",
-    "rimraf": "^2.5.4",
-    "stylefmt": "^6.0.0",
-    "stylelint": "^8.4.0"
+    "rimraf": "^2.6.2",
+    "stylefmt": "^6.0.2",
+    "stylelint": "^9.4.0"
   }
 }

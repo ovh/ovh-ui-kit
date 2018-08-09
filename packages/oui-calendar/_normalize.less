@@ -1,8 +1,9 @@
 .flatpickr {
-  &-calendar,
-  &-days {
-    width: auto !important; // Fix too wide calendar
+  /* stylelint-disable declaration-no-important */
+  &-calendar {
+    width: auto !important; // Fix too wide calendar (inline style)
   }
+  /* stylelint-enable */
 
   // Container
   &-calendar {
@@ -37,8 +38,8 @@
       &::before { border-top-color: @oui-calendar-border-color; }
     }
 
-    &.rightMost:before,
-    &.rightMost:after { transform: translateX(50%); }
+    &.rightMost::before,
+    &.rightMost::after { transform: translateX(50%); }
 
     &.inline { box-shadow: none; }
   }
@@ -70,7 +71,7 @@
     svg {
       width: @oui-calendar-icon-size;
       height: @oui-calendar-icon-size;
-      fill: inherit !important;
+      fill: inherit;
     }
 
     .oui-icon {
@@ -125,7 +126,7 @@
   &-weekwrapper &-weeks { box-shadow: 1px 0 0 @oui-calendar-separator-color; }
 
   &-days {
-    width: ~"calc(@{oui-calendar-cell-width} * 7)" !important;
+    width: ~"calc(@{oui-calendar-cell-width} * 7)";
 
     .dayContainer {
       width: 100%;
