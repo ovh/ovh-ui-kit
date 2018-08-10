@@ -12,12 +12,6 @@ A css toolkit for the OVH brand.
 
 ## Installation
 
-### Dependencies
-
-These dependency will be installed automatically:
-
-- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
-
 ### Install with [npm](https://www.npmjs.com/)
 
 ```bash
