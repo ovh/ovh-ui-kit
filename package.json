@@ -8,7 +8,7 @@
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
     "build:less-min": "lessc --remcalc --clean-css packages/oui/stylekit.less dist/oui.min.css",
     "build:icons": "mkdirp dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
-    "build:icons-generator": "icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons -t span",
+    "build:icons-generator": "icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons -t span --types 'woff, woff2'",
     "build": "rimraf dist && npm run build:version && npm run build:icons && npm run build:less && npm run build:less-min",
     "test": "echo \"no tests for this project\"",
     "fix": "stylefmt -r packages",
