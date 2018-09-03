@@ -109,7 +109,7 @@
     }
 
     &__description:not(:last-child) {
-      margin-bottom: rem-calc(5);
+      margin-bottom: .3125rem;
     }
 
     &__input {
@@ -258,10 +258,10 @@
     }
 
     &.oui-checkbox_m .oui-checkbox__description {
-      padding-top: rem-calc(12);
+      padding-top: .75rem;
       padding-left: 0;
       border-top: 1px solid @oui-color-silver;
-      margin-top: rem-calc(6);
+      margin-top: .375rem;
     }
 
     .@{checkbox-selector}__input:not(:disabled) + .@{checkbox-selector}__label-container:hover {
@@ -274,7 +274,7 @@
 
     .@{checkbox-selector}__input:checked + .@{checkbox-selector}__label-container {
       box-shadow: 0 4px 6px 1px @oui-color-info-fade;
-      padding: calc(@padding - @border-size-checked / 2);
+      padding: ~"calc(@{padding} - (@{border-size-checked} - @{oui-thumbnail-border-size}))";
     }
 
     .@{checkbox-selector}__input:not(:disabled):checked + .@{checkbox-selector}__label-container {

@@ -10,11 +10,11 @@
 
   display: flex;
   flex-direction: column;
-  height: rem-calc(515);
+  height: 32.1875rem;
   margin: auto;
   max-width: ~"calc(100% - 50px)";
   position: relative;
-  width: rem-calc(370);
+  width: 23.125rem;
 
   &__loader {
     align-items: center;
@@ -33,7 +33,7 @@
   &__header {
     border-top-left-radius: @oui-global-base-radius-medium;
     border-top-right-radius: @oui-global-base-radius-medium;
-    height: rem-calc(40);
+    height: 2.5rem;
     position: absolute;
     width: 100%;
     z-index: 2;
@@ -57,7 +57,7 @@
     background-color: #fff;
     border-bottom-left-radius: @oui-global-base-radius-medium;
     border-bottom-right-radius: @oui-global-base-radius-medium;
-    min-height: rem-calc(20);
+    min-height: 1.25rem;
   }
 
   &__content {
@@ -73,12 +73,12 @@
     border: 0 none;
     border-radius: 50%;
     color: #fff;
-    height: rem-calc(@oui-slideshow-button-size);
-    margin-top: -(rem-calc(@oui-slideshow-button-size / 2));
+    height: @oui-slideshow-button-size;
+    margin-top: -(@oui-slideshow-button-size / 2);
     position: absolute;
     top: 50%;
     transition: background .3s ease-out;
-    width: rem-calc(@oui-slideshow-button-size);
+    width: @oui-slideshow-button-size;
 
     &:not(:disabled) {
       :active, &:focus, &:hover {
@@ -93,14 +93,14 @@
 
   &__prev-button {
     left: 0;
-    margin-left: -(rem-calc(@oui-slideshow-button-size / 2));
-    padding-left: rem-calc(4);
+    margin-left: -(@oui-slideshow-button-size / 2);
+    padding-left: .25rem;
     text-align: left;
   }
 
   &__next-button {
-    margin-right: -(rem-calc(@oui-slideshow-button-size / 2));
-    padding-right: rem-calc(4);
+    margin-right: -(@oui-slideshow-button-size / 2);
+    padding-right: .25rem;
     right: 0;
     text-align: right;
   }
@@ -109,14 +109,14 @@
     align-items: center;
     display: flex;
     flex-wrap: nowrap;
-    height: rem-calc(50);
+    height: 3.125rem;
     justify-content: center;
 
     button {
       background-color: transparent;
       border: 0 none;
       border-radius: 50%;
-      margin: 0 rem-calc(2);
+      margin: 0 .125rem;
       outline: none;
       overflow: hidden;
 
@@ -128,21 +128,21 @@
       }
 
       &.active {
-        padding: rem-calc(3);
+        padding: .1875rem;
 
         &::before {
-          height: rem-calc(10);
-          width: rem-calc(10);
+          height: .625rem;
+          width: .625rem;
         }
       }
 
       &:not(.active) {
-        padding: rem-calc(4);
+        padding: .25rem;
 
         &::before {
-          height: rem-calc(8);
+          height: .5rem;
           opacity: .5;
-          width: rem-calc(8);
+          width: .5rem;
         }
       }
     }
@@ -232,17 +232,17 @@
     }
 
     .oui-slideshow-panel__title {
-      font-size: rem-calc(36);
+      font-size: 2.25rem;
       letter-spacing: -.5px;
       line-height: 0.89;
       max-width: 100%;
     }
 
     .oui-slideshow-panel__text {
-      font-size: rem-calc(16);
+      font-size: 1rem;
       line-height: 1.13;
       max-width: 100%;
-      padding-bottom: rem-calc(20);
+      padding-bottom: 1.25rem;
     }
 
     .oui-slideshow-panel__action {
@@ -277,7 +277,7 @@
     }
 
     .oui-slideshow-panel__title + .oui-slideshow-panel__text {
-      padding-top: rem-calc(20);
+      padding-top: 1.25rem;
     }
   }
 }
@@ -339,10 +339,10 @@
   }
 
   .oui-slideshow-panel__container {
-    padding: rem-calc(20) rem-calc(20) 0;
+    padding: 1.25rem 1.25rem 0;
   }
 
   > :first-child {
-    padding-top: rem-calc(40);
+    padding-top: 2.5rem;
   }
 }

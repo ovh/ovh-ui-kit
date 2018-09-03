@@ -31,7 +31,7 @@
     .@{button-link-selector} {
       padding-left: 0;
       padding-right: 0;
-      margin-right: rem-calc(5);
+      margin-right: .3125rem;
     }
 
     &__progress {
@@ -52,11 +52,11 @@
     &__selector {
       display: flex;
       flex-wrap: nowrap;
-      margin-left: rem-calc(20);
+      margin-left: 1.25rem;
 
       /* stylelint-disable indentation */
       .phone({
-        margin-bottom: rem-calc(10);
+        margin-bottom: .625rem;
         margin-left: 0;
       });
       /* stylelint-enable indentation */
@@ -69,11 +69,11 @@
 
       > .@{button-selector} {
         &:first-child {
-          margin-right: rem-calc(10);
+          margin-right: .625rem;
         }
 
         &:last-child {
-          margin-left: rem-calc(10);
+          margin-left: .625rem;
         }
       }
     }
@@ -138,7 +138,7 @@
     &:hover {
       background-color: @oui-pagination-menu-item-background-hover;
       color: #fff;
-      letter-spacing: rem-calc(.1);
+      letter-spacing: 0.01em;
     }
   }
 }

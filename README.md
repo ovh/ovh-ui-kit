@@ -12,12 +12,6 @@ A css toolkit for the OVH brand.
 
 ## Installation
 
-### Dependencies
-
-These dependency will be installed automatically:
-
-- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
-
 ### Install with [npm](https://www.npmjs.com/)
 
 ```bash
@@ -43,9 +37,7 @@ bower install --save ovh-ui-kit
 #### Use in HTML file
 
 ```html
-    ...
-  <link rel="stylesheet" href="path/to/ovh-ui-kit/dist/oui.css">
-    ...
+<link rel="stylesheet" href="path/to/ovh-ui-kit/dist/oui.min.css">
 ```
 
 #### Use with [grunt](https://github.com/gruntjs/grunt) and [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)
@@ -65,27 +57,37 @@ bower install --save ovh-ui-kit
 Webpack provide the `~` prefix for package imports:
 
 ```less
-@import "~ovh-ui-kit/packages/oui/stylekit.less";
+@import "~ovh-ui-kit/packages/oui/stylekit";
 
 // or a-la-carte:
 
-@import "~ovh-ui-kit/packages/oui-button/button.less";
-@import "~ovh-ui-kit/packages/oui-radio/radio.less";
-@import "~ovh-ui-kit/packages/oui-formfield/formfield.less";
+@import "~ovh-ui-kit/packages/oui-button/button";
+@import "~ovh-ui-kit/packages/oui-radio/radio";
+@import "~ovh-ui-kit/packages/oui-formfield/formfield";
 ```
 
 #### Use with [bootstrap 3](https://github.com/twbs/bootstrap/tree/v3.3.7)
 
-For those who want to use **ovh-ui-kit** with **bootstrap** on the same project you need change
-the `rem-base` to `10px` otherwise components proportions will not be respected.
+Be careful when using **bootstrap** with **ovh-ui-kit**, you will need to load **ovh-ui-kit** after **bootstrap**. 
+Otherwise components proportions will not be respected.
+
+- Default font-size of **bootstrap** (10px) and **ovh-ui-kit** (16px) are differents.
+- All units of **ovh-ui-kit** are in `rem`
+
+For a better UI experience, you can use [ovh-ui-kit-bs](https://github.com/ovh-ux/ovh-ui-kit-bs) instead.
+
+##### HTML
+
+```html
+<link rel="stylesheet" href="path/to/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/ovh-ui-kit/dist/oui.css">
+```
+
+##### LESS
 
 ```less
 @import '~bootstrap/less/bootstrap';
-
-// Sets rem-base to 10px because bootstrap sets font-size: 10px on the html element.
-@rem-base: rem-base(10px);
-
-@import "~ovh-ui-kit/packages/oui/stylekit.less";
+@import "~ovh-ui-kit/packages/oui/stylekit";
 ```
 
 ## Develop

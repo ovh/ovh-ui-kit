@@ -2,22 +2,17 @@
   display: inline-block;
 
   &__submit {
-    margin-top: rem-calc(8);
+    margin-top: .5rem;
   }
-
-  oui-dropdown { display: inline-block; }
 
   .oui-dropdown {
     & > .oui-button .oui-icon {
-      height: rem-calc(24);
+      height: 1.5rem;
       display: flex; // For a better vertical centering
       flex-direction: row;
       align-items: center;
 
-      &:last-child { display: none;}
-
-      &::before,
-      &::after {
+      &::before {
         width: auto;
         height: auto;
         line-height: 1;
@@ -26,22 +21,16 @@
       }
     }
 
-    // Switch icon when dropdown is active
-    &_active > .oui-button .oui-icon {
-      &:first-child { display: none;}
-      &:last-child { display: flex;}
-    }
-
     &__content {
-      width: rem-calc(300);
+      width: 18.75rem;
     }
   }
 
   .oui-field {
-    margin-bottom: rem-calc(6);
+    margin-bottom: .375rem;
   }
 
   form {
-    padding: rem-calc(20);
+    padding: 1.25rem;
   }
 }

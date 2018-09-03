@@ -54,7 +54,7 @@
 
     .oui-icon {
       vertical-align: initial;
-      font-size: rem-calc(44);
+      font-size: 2.75rem;
       color: inherit;
     }
   }
@@ -62,7 +62,7 @@
   // Header/Title
   &__title {
     display: inline-block;
-    margin-left: rem-calc(15);
+    margin-left: .9375rem;
     font-size: @oui-navbar-brand-font-size;
     font-weight: @oui-font-light;
     color: @oui-navbar-brand-color;
@@ -183,7 +183,7 @@
 
     &_external .oui-icon {
       margin-left: @oui-navbar-external-spacing;
-      margin-top: -.3rem; // For a better centering
+      margin-top: -.2em; // For a better centering
       vertical-align: middle;
       font-size: @oui-navbar-external-size;
       color: @oui-navbar-external-color;
@@ -329,7 +329,7 @@
         overflow: auto;
 
         .desktop({
-          max-height: rem-calc(400);
+          max-height: 25rem;
         });
       }
     }
@@ -376,7 +376,7 @@
       // Gradient over items
       &::before {
         content: ' ';
-        height: rem-calc(36);
+        height: 2.25rem;
         position: absolute;
         bottom: 100%;
         left: 0;
@@ -544,7 +544,7 @@
     &__action {
       background: none;
       border: 0;
-      padding: rem-calc(4) rem-calc(10);
+      padding: .25rem .625rem;
 
       .oui-icon {
         color: @oui-notification-action-font-color;
@@ -622,28 +622,28 @@
       }
 
       &__title {
-        font-size: rem-calc(16);
+        font-size: 1rem;
         font-weight: @oui-notification-title-weight;
       }
 
       &__description {
-        font-size: rem-calc(14);
+        font-size: .875rem;
       }
     }
 
     &__time {
-      padding: 0 0 0 rem-calc(5);
+      padding: 0 0 0 .3125rem;
     }
 
     &__description {
-      font-size: rem-calc(14);
-      line-height: rem-calc(20);
-      max-height: rem-calc(80);
+      font-size: .875rem;
+      line-height: 1.25rem;
+      max-height: 5rem;
       overflow: hidden;
     }
 
     &__title {
-      font-size: rem-calc(16);
+      font-size: 1rem;
       font-weight: @oui-notification-title-weight;
     }
   }

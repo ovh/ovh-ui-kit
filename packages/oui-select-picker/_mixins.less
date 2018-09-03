@@ -20,7 +20,7 @@
       position: absolute;
       right: @oui-select-picker-padding;
       text-align: center;
-      top: @oui-select-picker-padding - rem-calc(5);
+      top: @oui-select-picker-padding - .3125rem;
       width: 10%;
 
       .@{selector}__picture {
@@ -29,10 +29,10 @@
       }
 
       & + .@{selector}__label {
-        padding-right: ~"calc(10% + 1rem)";
+        padding-right: ~"calc(10% + .625rem)";
 
         & + .@{selector}__section {
-          margin-top: rem-calc(14);
+          margin-top: .875rem;
         }
       }
     }

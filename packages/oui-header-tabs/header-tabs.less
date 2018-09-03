@@ -20,7 +20,7 @@
     padding: 0;
 
     & > .oui-header-tabs__item {
-      margin-left: rem-calc(4);
+      margin-left: .25rem;
 
       &:first-child {
         margin-left: 0;
@@ -32,7 +32,7 @@
     background-color: @oui-color-silver;
     display: block;
     height: 1px;
-    margin: rem-calc(4) 0;
+    margin: .25rem 0;
 
     &:first-child,
     &:last-child {
@@ -41,7 +41,7 @@
   }
 
   &__dropdown-container {
-    padding: rem-calc(4) 0;
+    padding: .25rem 0;
   }
 
   &__dropdown-container {
@@ -62,13 +62,13 @@
     .oui-button_dropdown {
       background-color: transparent;
       display: block;
-      font-size: rem-calc(16);
+      font-size: 1rem;
       margin: 0;
 
       .oui-icon {
         color: inherit;
-        font-size: rem-calc(12);
-        margin-left: rem-calc(10);
+        font-size: .75rem;
+        margin-left: .625rem;
       }
     }
 
@@ -76,7 +76,7 @@
       border: 0 none;
       border-radius: inherit;
       font-weight: normal;
-      padding: rem-calc(10) rem-calc(30);
+      padding: .625rem 1.875rem;
       transition: none;
 
       &:active,
@@ -102,26 +102,26 @@
 
     &_active .oui-button_dropdown {
       border-bottom: 4px solid;
-      padding-bottom: ~"calc(1rem - 4px)";
+      padding-bottom: ~"calc(.625rem - 4px)";
     }
 
     :not(.oui-header-tabs__dropdown-container) > & {
       & > a,
       & > span {
-        padding: rem-calc(10) rem-calc(30);
+        padding: .625rem 1.875rem;
         white-space: nowrap;
       }
 
       &_active > a {
         border-bottom: 4px solid;
-        padding-bottom: ~"calc(1rem - 4px)";
+        padding-bottom: ~"calc(.625rem - 4px)";
       }
     }
 
     .oui-header-tabs__dropdown-container > & {
       & > a,
       & > span {
-        padding: rem-calc(8) rem-calc(20);
+        padding: .5rem 1.25rem;
       }
 
       & > a:hover,
@@ -138,7 +138,7 @@
     border: 0 none;
     bottom: 0;
     color: @oui-color-sapphire;
-    font-size: rem-calc(10);
+    font-size: .625rem;
     position: absolute;
     top: 0;
     width: 44px;
@@ -156,7 +156,7 @@
   .oui-dropdown_active {
     .oui-button_dropdown {
       border-bottom: 4px solid;
-      padding-bottom: rem-calc(6);
+      padding-bottom: .375rem;
     }
   }
 }

@@ -26,8 +26,8 @@
     @close-button-padding: @oui-message-close-button-padding
   ) {
     position: relative;
-    max-width: rem-calc(1000);
-    min-height: rem-calc(50);
+    max-width: 62.5rem;
+    min-height: 3.125rem;
     padding: @padding;
     border: 2px solid @border-color;
     border-radius: @border-radius;
@@ -47,8 +47,8 @@
 
       cursor: pointer;
       position: absolute;
-      top: rem-calc(12);
-      right: rem-calc(12);
+      top: .75rem;
+      right: .75rem;
       min-width: @close-button-width;
       min-height: @close-button-height;
       overflow: hidden;
@@ -383,15 +383,15 @@
     text-align: center;
 
     & .@{oui-message-selector}__title {
-      max-width: rem-calc(600);
+      max-width: 37.5rem;
       margin: 0 auto;
-      margin-bottom: rem-calc(20);
+      margin-bottom: 1.25rem;
       color: @color;
       font-size: @title-font-size;
     }
 
     & .@{oui-message-selector}__body {
-      max-width: rem-calc(600);
+      max-width: 37.5rem;
       margin: 0 auto;
       color: @color;
       font-size: @body-font-size;
@@ -409,7 +409,7 @@
       box-sizing: content-box;
       width: @icon-width;
       height: @icon-height;
-      margin-bottom: rem-calc(30);
+      margin-bottom: 1.875rem;
       background-image: @background-image;
       background-repeat: no-repeat;
     }
