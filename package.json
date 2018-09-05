@@ -25,13 +25,13 @@
     }
   },
   "dependencies": {
-    "less-plugin-remcalc": "^0.0.1"
+    "less-plugin-remcalc": "^0.1.0"
   },
   "devDependencies": {
     "chalk": "^2.4.1",
     "cross-var": "^1.1.0",
     "icon-font-generator": "^2.1.9",
-    "less": "^2.7.2",
+    "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
     "mkdirp": "^0.5.1",
     "npm-scripts-config": "^0.0.2",
