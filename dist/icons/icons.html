@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>icons</title>
+
     <style>
 
         body {
@@ -28,7 +29,7 @@
             border-radius: 3px 3px 0 0;
         }
 
-        .preview .inner i {
+        .preview .inner span {
             line-height: 85px;
             font-size: 40px;
             color: #333;
@@ -51,192 +52,9 @@
             border-radius: 0 0 3px 3px;
             color: #666;
         }
-
-        @font-face {
-    font-family: "icons";
-    src: url("./icons.eot?df1a765f493b29a2512bd02ee924ba0d?#iefix") format("embedded-opentype"),
-url("./icons.woff2?df1a765f493b29a2512bd02ee924ba0d") format("woff2"),
-url("./icons.woff?df1a765f493b29a2512bd02ee924ba0d") format("woff"),
-url("./icons.ttf?df1a765f493b29a2512bd02ee924ba0d") format("truetype"),
-url("./icons.svg?df1a765f493b29a2512bd02ee924ba0d#icons") format("svg");
-}
-
-i {
-    line-height: 1;
-}
-
-i:before {
-    font-family: icons !important;
-    font-style: normal;
-    font-weight: normal !important;
-    vertical-align: top;
-}
-
-.oui-icon-add:before {
-    content: "\f101";
-}
-.oui-icon-arrow-down:before {
-    content: "\f102";
-}
-.oui-icon-arrow-up:before {
-    content: "\f103";
-}
-.oui-icon-broken-chain:before {
-    content: "\f104";
-}
-.oui-icon-chat_line:before {
-    content: "\f105";
-}
-.oui-icon-check-circle_line:before {
-    content: "\f106";
-}
-.oui-icon-check_line:before {
-    content: "\f107";
-}
-.oui-icon-checkbox-checked:before {
-    content: "\f108";
-}
-.oui-icon-checkbox-checkmark:before {
-    content: "\f109";
-}
-.oui-icon-checkbox-indeterminate:before {
-    content: "\f10a";
-}
-.oui-icon-checkbox-unchecked:before {
-    content: "\f10b";
-}
-.oui-icon-chevron-down:before {
-    content: "\f10c";
-}
-.oui-icon-chevron-down_line:before {
-    content: "\f10d";
-}
-.oui-icon-chevron-left:before {
-    content: "\f10e";
-}
-.oui-icon-chevron-left_line:before {
-    content: "\f10f";
-}
-.oui-icon-chevron-right:before {
-    content: "\f110";
-}
-.oui-icon-chevron-right_line:before {
-    content: "\f111";
-}
-.oui-icon-chevron-up:before {
-    content: "\f112";
-}
-.oui-icon-chevron-up_line:before {
-    content: "\f113";
-}
-.oui-icon-clock-wait:before {
-    content: "\f114";
-}
-.oui-icon-close:before {
-    content: "\f115";
-}
-.oui-icon-close_thin:before {
-    content: "\f116";
-}
-.oui-icon-copy-error:before {
-    content: "\f117";
-}
-.oui-icon-copy-normal:before {
-    content: "\f118";
-}
-.oui-icon-copy-success:before {
-    content: "\f119";
-}
-.oui-icon-counter_line:before {
-    content: "\f11a";
-}
-.oui-icon-error:before {
-    content: "\f11b";
-}
-.oui-icon-error_circle:before {
-    content: "\f11c";
-}
-.oui-icon-external_link:before {
-    content: "\f11d";
-}
-.oui-icon-eye-blocked:before {
-    content: "\f11e";
-}
-.oui-icon-eye:before {
-    content: "\f11f";
-}
-.oui-icon-filter:before {
-    content: "\f120";
-}
-.oui-icon-filter_full:before {
-    content: "\f121";
-}
-.oui-icon-gear:before {
-    content: "\f122";
-}
-.oui-icon-gear_line:before {
-    content: "\f123";
-}
-.oui-icon-help_circle:before {
-    content: "\f124";
-}
-.oui-icon-info_circle:before {
-    content: "\f125";
-}
-.oui-icon-ovh:before {
-    content: "\f126";
-}
-.oui-icon-padlock-close:before {
-    content: "\f127";
-}
-.oui-icon-page_line:before {
-    content: "\f128";
-}
-.oui-icon-paperplane_line:before {
-    content: "\f129";
-}
-.oui-icon-pdf_line:before {
-    content: "\f12a";
-}
-.oui-icon-pen_line:before {
-    content: "\f12b";
-}
-.oui-icon-power_line:before {
-    content: "\f12c";
-}
-.oui-icon-printer_line:before {
-    content: "\f12d";
-}
-.oui-icon-remove:before {
-    content: "\f12e";
-}
-.oui-icon-search:before {
-    content: "\f12f";
-}
-.oui-icon-shape-circle:before {
-    content: "\f130";
-}
-.oui-icon-shape-dot:before {
-    content: "\f131";
-}
-.oui-icon-success:before {
-    content: "\f132";
-}
-.oui-icon-success_circle:before {
-    content: "\f133";
-}
-.oui-icon-trash_line:before {
-    content: "\f134";
-}
-.oui-icon-user_line:before {
-    content: "\f135";
-}
-.oui-icon-warning_circle:before {
-    content: "\f136";
-}
-
-
     </style>
+
+    <link rel="stylesheet" type="text/css" href="icons.css" />
 </head>
 <body>
 
@@ -245,7 +63,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-add"></i>
+                <span class=" oui-icon-add"></span>
             </span>
             <br>
             <span class='label'>add</span>
@@ -254,7 +72,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-arrow-down"></i>
+                <span class=" oui-icon-arrow-down"></span>
             </span>
             <br>
             <span class='label'>arrow-down</span>
@@ -263,7 +81,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-arrow-up"></i>
+                <span class=" oui-icon-arrow-up"></span>
             </span>
             <br>
             <span class='label'>arrow-up</span>
@@ -272,7 +90,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-broken-chain"></i>
+                <span class=" oui-icon-broken-chain"></span>
             </span>
             <br>
             <span class='label'>broken-chain</span>
@@ -281,7 +99,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chat_line"></i>
+                <span class=" oui-icon-chat_line"></span>
             </span>
             <br>
             <span class='label'>chat_line</span>
@@ -290,7 +108,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-check-circle_line"></i>
+                <span class=" oui-icon-check-circle_line"></span>
             </span>
             <br>
             <span class='label'>check-circle_line</span>
@@ -299,7 +117,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-check_line"></i>
+                <span class=" oui-icon-check_line"></span>
             </span>
             <br>
             <span class='label'>check_line</span>
@@ -308,7 +126,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-checkbox-checked"></i>
+                <span class=" oui-icon-checkbox-checked"></span>
             </span>
             <br>
             <span class='label'>checkbox-checked</span>
@@ -317,7 +135,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-checkbox-checkmark"></i>
+                <span class=" oui-icon-checkbox-checkmark"></span>
             </span>
             <br>
             <span class='label'>checkbox-checkmark</span>
@@ -326,7 +144,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-checkbox-indeterminate"></i>
+                <span class=" oui-icon-checkbox-indeterminate"></span>
             </span>
             <br>
             <span class='label'>checkbox-indeterminate</span>
@@ -335,7 +153,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-checkbox-unchecked"></i>
+                <span class=" oui-icon-checkbox-unchecked"></span>
             </span>
             <br>
             <span class='label'>checkbox-unchecked</span>
@@ -344,7 +162,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-down"></i>
+                <span class=" oui-icon-chevron-down"></span>
             </span>
             <br>
             <span class='label'>chevron-down</span>
@@ -353,7 +171,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-down_line"></i>
+                <span class=" oui-icon-chevron-down_line"></span>
             </span>
             <br>
             <span class='label'>chevron-down_line</span>
@@ -362,7 +180,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-left"></i>
+                <span class=" oui-icon-chevron-left"></span>
             </span>
             <br>
             <span class='label'>chevron-left</span>
@@ -371,7 +189,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-left_line"></i>
+                <span class=" oui-icon-chevron-left_line"></span>
             </span>
             <br>
             <span class='label'>chevron-left_line</span>
@@ -380,7 +198,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-right"></i>
+                <span class=" oui-icon-chevron-right"></span>
             </span>
             <br>
             <span class='label'>chevron-right</span>
@@ -389,7 +207,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-right_line"></i>
+                <span class=" oui-icon-chevron-right_line"></span>
             </span>
             <br>
             <span class='label'>chevron-right_line</span>
@@ -398,7 +216,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-up"></i>
+                <span class=" oui-icon-chevron-up"></span>
             </span>
             <br>
             <span class='label'>chevron-up</span>
@@ -407,7 +225,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-chevron-up_line"></i>
+                <span class=" oui-icon-chevron-up_line"></span>
             </span>
             <br>
             <span class='label'>chevron-up_line</span>
@@ -416,7 +234,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-clock-wait"></i>
+                <span class=" oui-icon-clock-wait"></span>
             </span>
             <br>
             <span class='label'>clock-wait</span>
@@ -425,7 +243,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-close"></i>
+                <span class=" oui-icon-close"></span>
             </span>
             <br>
             <span class='label'>close</span>
@@ -434,7 +252,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-close_thin"></i>
+                <span class=" oui-icon-close_thin"></span>
             </span>
             <br>
             <span class='label'>close_thin</span>
@@ -443,7 +261,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-copy-error"></i>
+                <span class=" oui-icon-copy-error"></span>
             </span>
             <br>
             <span class='label'>copy-error</span>
@@ -452,7 +270,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-copy-normal"></i>
+                <span class=" oui-icon-copy-normal"></span>
             </span>
             <br>
             <span class='label'>copy-normal</span>
@@ -461,7 +279,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-copy-success"></i>
+                <span class=" oui-icon-copy-success"></span>
             </span>
             <br>
             <span class='label'>copy-success</span>
@@ -470,7 +288,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-counter_line"></i>
+                <span class=" oui-icon-counter_line"></span>
             </span>
             <br>
             <span class='label'>counter_line</span>
@@ -479,7 +297,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-error"></i>
+                <span class=" oui-icon-error"></span>
             </span>
             <br>
             <span class='label'>error</span>
@@ -488,7 +306,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-error_circle"></i>
+                <span class=" oui-icon-error_circle"></span>
             </span>
             <br>
             <span class='label'>error_circle</span>
@@ -497,7 +315,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-external_link"></i>
+                <span class=" oui-icon-external_link"></span>
             </span>
             <br>
             <span class='label'>external_link</span>
@@ -506,7 +324,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-eye-blocked"></i>
+                <span class=" oui-icon-eye-blocked"></span>
             </span>
             <br>
             <span class='label'>eye-blocked</span>
@@ -515,7 +333,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-eye"></i>
+                <span class=" oui-icon-eye"></span>
             </span>
             <br>
             <span class='label'>eye</span>
@@ -524,7 +342,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-filter"></i>
+                <span class=" oui-icon-filter"></span>
             </span>
             <br>
             <span class='label'>filter</span>
@@ -533,7 +351,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-filter_full"></i>
+                <span class=" oui-icon-filter_full"></span>
             </span>
             <br>
             <span class='label'>filter_full</span>
@@ -542,7 +360,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-gear"></i>
+                <span class=" oui-icon-gear"></span>
             </span>
             <br>
             <span class='label'>gear</span>
@@ -551,7 +369,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-gear_line"></i>
+                <span class=" oui-icon-gear_line"></span>
             </span>
             <br>
             <span class='label'>gear_line</span>
@@ -560,7 +378,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-help_circle"></i>
+                <span class=" oui-icon-help_circle"></span>
             </span>
             <br>
             <span class='label'>help_circle</span>
@@ -569,7 +387,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-info_circle"></i>
+                <span class=" oui-icon-info_circle"></span>
             </span>
             <br>
             <span class='label'>info_circle</span>
@@ -578,7 +396,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-ovh"></i>
+                <span class=" oui-icon-ovh"></span>
             </span>
             <br>
             <span class='label'>ovh</span>
@@ -587,7 +405,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-padlock-close"></i>
+                <span class=" oui-icon-padlock-close"></span>
             </span>
             <br>
             <span class='label'>padlock-close</span>
@@ -596,7 +414,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-page_line"></i>
+                <span class=" oui-icon-page_line"></span>
             </span>
             <br>
             <span class='label'>page_line</span>
@@ -605,7 +423,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-paperplane_line"></i>
+                <span class=" oui-icon-paperplane_line"></span>
             </span>
             <br>
             <span class='label'>paperplane_line</span>
@@ -614,7 +432,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-pdf_line"></i>
+                <span class=" oui-icon-pdf_line"></span>
             </span>
             <br>
             <span class='label'>pdf_line</span>
@@ -623,7 +441,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-pen_line"></i>
+                <span class=" oui-icon-pen_line"></span>
             </span>
             <br>
             <span class='label'>pen_line</span>
@@ -632,7 +450,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-power_line"></i>
+                <span class=" oui-icon-power_line"></span>
             </span>
             <br>
             <span class='label'>power_line</span>
@@ -641,7 +459,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-printer_line"></i>
+                <span class=" oui-icon-printer_line"></span>
             </span>
             <br>
             <span class='label'>printer_line</span>
@@ -650,7 +468,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-remove"></i>
+                <span class=" oui-icon-remove"></span>
             </span>
             <br>
             <span class='label'>remove</span>
@@ -659,7 +477,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-search"></i>
+                <span class=" oui-icon-search"></span>
             </span>
             <br>
             <span class='label'>search</span>
@@ -668,7 +486,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-shape-circle"></i>
+                <span class=" oui-icon-shape-circle"></span>
             </span>
             <br>
             <span class='label'>shape-circle</span>
@@ -677,7 +495,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-shape-dot"></i>
+                <span class=" oui-icon-shape-dot"></span>
             </span>
             <br>
             <span class='label'>shape-dot</span>
@@ -686,7 +504,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-success"></i>
+                <span class=" oui-icon-success"></span>
             </span>
             <br>
             <span class='label'>success</span>
@@ -695,7 +513,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-success_circle"></i>
+                <span class=" oui-icon-success_circle"></span>
             </span>
             <br>
             <span class='label'>success_circle</span>
@@ -704,7 +522,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-trash_line"></i>
+                <span class=" oui-icon-trash_line"></span>
             </span>
             <br>
             <span class='label'>trash_line</span>
@@ -713,7 +531,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-user_line"></i>
+                <span class=" oui-icon-user_line"></span>
             </span>
             <br>
             <span class='label'>user_line</span>
@@ -722,7 +540,7 @@ i:before {
 
         <div class="preview">
             <span class="inner">
-                <i class="oui-icon-warning_circle"></i>
+                <span class=" oui-icon-warning_circle"></span>
             </span>
             <br>
             <span class='label'>warning_circle</span>
