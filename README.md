@@ -40,19 +40,27 @@ bower install --save ovh-ui-kit
 
 ### Integration
 
-#### grunt (grunt-contrib-less)
+#### Use in HTML file
+
+```html
+    ...
+  <link rel="stylesheet" href="path/to/ovh-ui-kit/dist/oui.css">
+    ...
+```
+
+#### Use with [grunt](https://github.com/gruntjs/grunt) and [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)
 
 ```less
-@import "./node_modules/ovh-ui-kit/packages/oui/stylekit";
+@import "path/to/ovh-ui-kit/packages/oui/stylekit";
 
 // or you can import every component a-la-carte:
 
-@import "./node_modules/ovh-ui-kit/packages/oui-button/button";
-@import "./node_modules/ovh-ui-kit/packages/oui-radio/radio";
-@import "./node_modules/ovh-ui-kit/packages/oui-formfield/formfield";
+@import "path/to/ovh-ui-kit/packages/oui-button/button";
+@import "path/to/ovh-ui-kit/packages/oui-radio/radio";
+@import "path/to/ovh-ui-kit/packages/oui-formfield/formfield";
 ```
 
-#### webpack (less-loader)
+#### Use with [webpack](https://github.com/webpack/webpack) and [less-loader](https://github.com/webpack-contrib/less-loader)
 
 Webpack provide the `~` prefix for package imports:
 
@@ -66,7 +74,7 @@ Webpack provide the `~` prefix for package imports:
 @import "~ovh-ui-kit/packages/oui-formfield/formfield.less";
 ```
 
-#### bootstrap
+#### Use with [bootstrap 3](https://github.com/twbs/bootstrap/tree/v3.3.7)
 
 For those who want to use **ovh-ui-kit** with **bootstrap** on the same project you need change
 the `rem-base` to `10px` otherwise components proportions will not be respected.
@@ -79,6 +87,48 @@ the `rem-base` to `10px` otherwise components proportions will not be respected.
 
 @import "~ovh-ui-kit/packages/oui/stylekit.less";
 ```
+
+## Develop
+
+### Run in development mode
+
+1. Clone and install `ovh-ui-angular`
+
+```bash
+git clone https://github.com/ovh-ux/ovh-ui-angular.git
+cd ovh-ui-angular
+yarn install
+yarn link
+```
+
+2. Run `ovh-ui-angular` with [ovh-ui-kit-documentation](https://github.com/ovh-ux/ovh-ui-kit-documentation)
+
+```bash
+git clone https://github.com/ovh-ux/ovh-ui-kit-documentation.git
+cd ovh-ui-kit-documentation
+yarn install
+yarn link ovh-ui-kit
+yarn start
+```
+
+### Hot reload
+
+Once you have `yarn start`-ed the project, you can edit anything with an automatic browser refresh as a result.
+
+### Contributing
+
+You've developed a new cool feature? Fixed an annoying bug? We'd be happy
+to hear from you!
+
+see [CONTRIBUTING](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
+
+And read this [quick start](https://github.com/ovh-ux/ovh-ui-kit-documentation).
+
+## Related links
+
+ * Contribute: [https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
+ * Report bugs: [https://github.com/ovh-ux/ovh-ui-kit/issues](https://github.com/ovh-ux/ovh-ui-kit/issues)
+ * Get latest version: [https://github.com/ovh-ux/ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
 
 ## Documentation
 
