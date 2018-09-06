@@ -274,7 +274,7 @@
 
     .@{checkbox-selector}__input:checked + .@{checkbox-selector}__label-container {
       box-shadow: 0 4px 6px 1px @oui-color-info-fade;
-      padding: calc(@padding - @border-size-checked / 2);
+      padding: ~"calc(@{padding} - (@{border-size-checked} - @{oui-thumbnail-border-size}))";
     }
 
     .@{checkbox-selector}__input:not(:disabled):checked + .@{checkbox-selector}__label-container {

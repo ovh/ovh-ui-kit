@@ -178,7 +178,7 @@
   .datagrid-cell(
     @selector,
     @spinner-container-selector,
-    @form-elements,
+    @form-elements: @oui-datagrid-form-elements,
     @background-color: @oui-datagrid-cell-background-color,
     @border-color: @oui-datagrid-cell-border-color,
     @font-color: @oui-datagrid-cell-font-color,
@@ -192,10 +192,6 @@
     outline: none;
     color: @font-color;
     cursor: default;
-
-    @{form-elements} {
-      margin-bottom: 0;
-    }
 
     .@{spinner-container-selector} {
       margin: 0 auto;

@@ -342,7 +342,7 @@
 
     .@{selector}__input:checked + .@{selector}__label-container {
       box-shadow: 0 4px 6px 1px @oui-color-info-fade;
-      padding: calc(@padding - @border-size-checked / 2);
+      padding: ~"calc(@{padding} - (@{border-size-checked} - @{oui-thumbnail-border-size}))";
     }
 
     .@{selector}__input:not(:disabled):checked + .@{selector}__label-container {

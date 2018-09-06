@@ -14,22 +14,13 @@
       flex-direction: row;
       align-items: center;
 
-      &:last-child { display: none;}
-
-      &::before,
-      &::after {
+      &::before {
         width: auto;
         height: auto;
         line-height: 1;
         flex: 1;
         font-size: @oui-button-icon-icon-size_large;
       }
-    }
-
-    // Switch icon when dropdown is active
-    &_active > .oui-button .oui-icon {
-      &:first-child { display: none;}
-      &:last-child { display: flex;}
     }
 
     &__content {
