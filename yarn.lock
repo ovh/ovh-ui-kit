@@ -3101,9 +3101,9 @@ less-plugin-clean-css@^1.5.1:
   dependencies:
     clean-css "^3.0.1"
 
-less-plugin-remcalc@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/less-plugin-remcalc/-/less-plugin-remcalc-0.0.1.tgz#f6a52d0d340964935e07be0e7d6f752210ea53a7"
+less-plugin-remcalc@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/less-plugin-remcalc/-/less-plugin-remcalc-0.1.0.tgz#34bce158cd24d2a14efa8984e01b2b9d0420d4cc"
 
 less@^3.8.1:
   version "3.8.1"
