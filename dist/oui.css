@@ -42,84 +42,84 @@
   font-weight: 200;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-ExtraLight"), local("Source Sans Pro"), url("fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff2") format("woff2"), url("fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff") format("woff");
+  src: local("SourceSansPro-ExtraLight"), local("Source Sans Pro"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff2") format("woff2"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 200;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-ExtraLightIt"), local("Source Sans Pro"), url("fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff2") format("woff2"), url("fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff") format("woff");
+  src: local("SourceSansPro-ExtraLightIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff2") format("woff2"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Light"), local("Source Sans Pro"), url("fonts/source-sans-pro/light/SourceSansPro-Light.woff2") format("woff2"), url("fonts/source-sans-pro/light/SourceSansPro-Light.woff") format("woff");
+  src: local("SourceSansPro-Light"), local("Source Sans Pro"), url("./fonts/source-sans-pro/light/SourceSansPro-Light.woff2") format("woff2"), url("./fonts/source-sans-pro/light/SourceSansPro-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 300;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-LightIt"), local("Source Sans Pro"), url("fonts/source-sans-pro/light/SourceSansPro-LightIt.woff2") format("woff2"), url("fonts/source-sans-pro/light/SourceSansPro-LightIt.woff") format("woff");
+  src: local("SourceSansPro-LightIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/light/SourceSansPro-LightIt.woff2") format("woff2"), url("./fonts/source-sans-pro/light/SourceSansPro-LightIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Regular"), local("Source Sans Pro"), url("fonts/source-sans-pro/regular/SourceSansPro-Regular.woff2") format("woff2"), url("fonts/source-sans-pro/regular/SourceSansPro-Regular.woff") format("woff");
+  src: local("SourceSansPro-Regular"), local("Source Sans Pro"), url("./fonts/source-sans-pro/regular/SourceSansPro-Regular.woff2") format("woff2"), url("./fonts/source-sans-pro/regular/SourceSansPro-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-It"), local("Source Sans Pro"), url("fonts/source-sans-pro/regular/SourceSansPro-It.woff2") format("woff2"), url("fonts/source-sans-pro/regular/SourceSansPro-It.woff") format("woff");
+  src: local("SourceSansPro-It"), local("Source Sans Pro"), url("./fonts/source-sans-pro/regular/SourceSansPro-It.woff2") format("woff2"), url("./fonts/source-sans-pro/regular/SourceSansPro-It.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Semibold"), local("Source Sans Pro Semibold"), url("fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff2") format("woff2"), url("fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff") format("woff");
+  src: local("SourceSansPro-Semibold"), local("Source Sans Pro Semibold"), url("./fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff2") format("woff2"), url("./fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 600;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-SemiboldIt"), local("Source Sans Pro"), url("fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff2") format("woff2"), url("fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff") format("woff");
+  src: local("SourceSansPro-SemiboldIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff2") format("woff2"), url("./fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Bold"), local("Source Sans Pro Bold"), url("fonts/source-sans-pro/bold/SourceSansPro-Bold.woff2") format("woff2"), url("fonts/source-sans-pro/bold/SourceSansPro-Bold.woff") format("woff");
+  src: local("SourceSansPro-Bold"), local("Source Sans Pro Bold"), url("./fonts/source-sans-pro/bold/SourceSansPro-Bold.woff2") format("woff2"), url("./fonts/source-sans-pro/bold/SourceSansPro-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-BoldIt"), local("Source Sans Pro"), url("fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff2") format("woff2"), url("fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff") format("woff");
+  src: local("SourceSansPro-BoldIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff2") format("woff2"), url("./fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Black"), local("Source Sans Pro Black"), url("fonts/source-sans-pro/black/SourceSansPro-Black.woff2") format("woff2"), url("fonts/source-sans-pro/black/SourceSansPro-Black.woff") format("woff");
+  src: local("SourceSansPro-Black"), local("Source Sans Pro Black"), url("./fonts/source-sans-pro/black/SourceSansPro-Black.woff2") format("woff2"), url("./fonts/source-sans-pro/black/SourceSansPro-Black.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 900;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-BlackIt"), local("Source Sans Pro"), url("fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff2") format("woff2"), url("fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff") format("woff");
+  src: local("SourceSansPro-BlackIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff2") format("woff2"), url("./fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff") format("woff");
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -292,7 +292,7 @@ abbr[data-oui-tooltip] {
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.woff2?v=2.18.0") format("woff2"), url("../../dist/icons/icons.woff?v=2.18.0") format("woff");
+  src: url("../../dist/icons/icons.woff2?v=2.19.0") format("woff2"), url("../../dist/icons/icons.woff?v=2.19.0") format("woff");
 }
 .oui-icon-badge {
   display: table;
@@ -594,23 +594,6 @@ abbr[data-oui-tooltip] {
 .oui-icon_bicolor.oui-icon-warning_circle::after {
   width: 25%;
   height: 75%;
-}
-.oui-icon-filter_bicolor {
-  position: relative;
-  z-index: 1;
-}
-.oui-icon-filter_bicolor::after {
-  content: "\f121";
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1rem;
-  opacity: .5;
-  z-index: -1;
 }
 [x-placement|="top"] > .oui-tip[x-arrow],
 .oui-tip-top {
@@ -1917,7 +1900,7 @@ oui-form-actions {
 }
 .oui-radio_thumbnail .oui-radio__input:checked + .oui-radio__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-radio_thumbnail .oui-radio__input:not(:disabled):checked + .oui-radio__label-container {
   border: 2px solid #00a2bf;
@@ -1998,7 +1981,7 @@ oui-form-actions {
 }
 .oui-radio_thumbnail.oui-radio_m .oui-radio__input:checked + .oui-radio__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-radio_thumbnail.oui-radio_m .oui-radio__input:not(:disabled):checked + .oui-radio__label-container {
   border: 2px solid #00a2bf;
@@ -2096,7 +2079,7 @@ oui-form-actions {
 }
 .oui-radio_thumbnail-light .oui-radio__input:checked + .oui-radio__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-radio_thumbnail-light .oui-radio__input:not(:disabled):checked + .oui-radio__label-container {
   border: 2px solid #00a2bf;
@@ -2196,7 +2179,7 @@ oui-form-actions {
 }
 .oui-radio_thumbnail-light.oui-radio_m .oui-radio__input:checked + .oui-radio__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-radio_thumbnail-light.oui-radio_m .oui-radio__input:not(:disabled):checked + .oui-radio__label-container {
   border: 2px solid #00a2bf;
@@ -2471,7 +2454,7 @@ oui-form-actions {
 }
 .oui-select-picker .oui-select-picker__input:checked + .oui-select-picker__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-select-picker .oui-select-picker__input:not(:disabled):checked + .oui-select-picker__label-container {
   border: 2px solid #00a2bf;
@@ -2721,7 +2704,7 @@ oui-checkbox {
 }
 .oui-checkbox {
   min-width: 1rem;
-  margin: 0 0 0.625rem;
+  margin: 0;
 }
 .oui-checkbox__label-container {
   font-weight: inherit;
@@ -3117,7 +3100,7 @@ oui-checkbox {
 }
 .oui-checkbox_thumbnail .oui-checkbox__input:checked + .oui-checkbox__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-checkbox_thumbnail .oui-checkbox__input:not(:disabled):checked + .oui-checkbox__label-container {
   border: 2px solid #00a2bf;
@@ -3237,7 +3220,7 @@ oui-checkbox {
 }
 .oui-checkbox_thumbnail-light .oui-checkbox__input:checked + .oui-checkbox__label-container {
   box-shadow: 0 4px 6px 1px #dfeaf8;
-  padding: calc(0.25rem);
+  padding: calc(1.25rem - (2px - 1px));
 }
 .oui-checkbox_thumbnail-light .oui-checkbox__input:not(:disabled):checked + .oui-checkbox__label-container {
   border: 2px solid #00a2bf;
@@ -3361,7 +3344,7 @@ oui-checkbox {
   border: 0 none;
   margin: -0.313rem -0.375rem 0 1rem;
   background-color: transparent;
-  opacity: .6;
+  opacity: 0.6;
   color: #122844;
   font-size: 0.625rem;
   line-height: 0;
@@ -4684,10 +4667,10 @@ oui-navbar-main {
   text-decoration: none;
 }
 .oui-list_nav .oui-list__link:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: hsla(0, 0%, 100%, 0.5);
 }
 .oui-list_nav .oui-list__link:focus {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: hsla(0, 0%, 100%, 0.85);
 }
 .oui-list_nav .oui-list__item_current > .oui-list__link,
 .oui-list_nav .oui-list__item_current > .oui-list__link:active,
@@ -5414,7 +5397,7 @@ oui-clipboard {
 @-moz-document url-prefix() {
   .oui-select__input {
     padding-right: 1.125rem;
-    padding-left: calc(0.35rem);
+    padding-left: calc(0.75rem - 0.4rem);
   }
 }
 select.oui-select__input::-ms-expand {
@@ -5888,7 +5871,7 @@ select.oui-select__input::-ms-expand {
 .oui-datagrid__header_sortable-desc:hover::after {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: .5;
+  opacity: 0.5;
 }
 .oui-datagrid__header_sortable:focus::after,
 .oui-datagrid__header_sortable-asc:focus::after,
@@ -5921,7 +5904,7 @@ select.oui-select__input::-ms-expand {
 .oui-datagrid__header_sortable-asc:hover::after {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: .5;
+  opacity: 0.5;
 }
 .oui-datagrid__header_sortable-asc:focus::after,
 .oui-datagrid__header_sortable-asc:active::after {
@@ -5956,7 +5939,7 @@ select.oui-select__input::-ms-expand {
 .oui-datagrid__header_sortable-desc:hover::after {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: .5;
+  opacity: 0.5;
 }
 .oui-datagrid__header_sortable-desc:focus::after,
 .oui-datagrid__header_sortable-desc:active::after {
@@ -5978,9 +5961,6 @@ select.oui-select__input::-ms-expand {
   outline: none;
   color: #59697d;
   cursor: default;
-}
-.oui-datagrid__cell .oui-button, .oui-checkbox, .oui-radio {
-  margin-bottom: 0;
 }
 .oui-datagrid__cell .oui-spinner__container {
   margin: 0 auto;
@@ -7986,22 +7966,12 @@ oui-guide-menu-divider {
   flex-direction: row;
   align-items: center;
 }
-.oui-criteria-adder .oui-dropdown > .oui-button .oui-icon:last-child {
-  display: none;
-}
-.oui-criteria-adder .oui-dropdown > .oui-button .oui-icon::before,
-.oui-criteria-adder .oui-dropdown > .oui-button .oui-icon::after {
+.oui-criteria-adder .oui-dropdown > .oui-button .oui-icon::before {
   width: auto;
   height: auto;
   line-height: 1;
   flex: 1;
   font-size: 1.25rem;
-}
-.oui-criteria-adder .oui-dropdown_active > .oui-button .oui-icon:first-child {
-  display: none;
-}
-.oui-criteria-adder .oui-dropdown_active > .oui-button .oui-icon:last-child {
-  display: flex;
 }
 .oui-criteria-adder .oui-dropdown__content {
   width: 18.75rem;
@@ -8081,8 +8051,11 @@ oui-guide-menu-divider {
   color: inherit;
   font-size: inherit;
 }
-.flatpickr-calendar,
-.flatpickr-days {
+.flatpickr {
+  /* stylelint-disable declaration-no-important */
+  /* stylelint-enable */
+}
+.flatpickr-calendar {
   width: auto !important;
 }
 .flatpickr-calendar {
@@ -8124,8 +8097,8 @@ oui-guide-menu-divider {
 .flatpickr-calendar.arrowBottom::before {
   border-top-color: #bbbdbf;
 }
-.flatpickr-calendar.rightMost:before,
-.flatpickr-calendar.rightMost:after {
+.flatpickr-calendar.rightMost::before,
+.flatpickr-calendar.rightMost::after {
   transform: translateX(50%);
 }
 .flatpickr-calendar.inline {
@@ -8159,7 +8132,7 @@ oui-guide-menu-divider {
 .flatpickr-months .flatpickr-next-month svg {
   width: 0.75rem;
   height: 0.75rem;
-  fill: inherit !important;
+  fill: inherit;
 }
 .flatpickr-months .flatpickr-prev-month .oui-icon,
 .flatpickr-months .flatpickr-next-month .oui-icon {
@@ -8208,7 +8181,7 @@ oui-guide-menu-divider {
   box-shadow: 1px 0 0 #bbbdbf;
 }
 .flatpickr-days {
-  width: calc(2.813rem * 7) !important;
+  width: calc(2.813rem * 7);
 }
 .flatpickr-days .dayContainer {
   width: 100%;
@@ -8478,6 +8451,8 @@ oui-guide-menu-divider {
 }
 .oui-calendar__control-wrapper {
   position: relative;
+  /* stylelint-disable declaration-no-important */
+  /* stylelint-enable */
 }
 .oui-calendar__control-wrapper .flatpickr-calendar {
   left: 0 !important;
@@ -8844,6 +8819,8 @@ oui-step-form {
   display: block;
   margin: 0.25rem;
   font-size: 1rem;
+  /* stylelint-disable declaration-no-important */
+  /* stylelint-enable */
 }
 .oui-collapsible__toggle-icon::before {
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -9071,7 +9048,7 @@ oui-slideshow-panel {
 }
 .oui-slideshow__indicators button:not(.active)::before {
   height: 0.5rem;
-  opacity: .5;
+  opacity: 0.5;
   width: 0.5rem;
 }
 .oui-slideshow.touchDevice .oui-slideshow__prev-button,
@@ -9098,7 +9075,7 @@ oui-slideshow-panel {
   max-width: 60%;
   opacity: 0;
   text-align: center;
-  transition: opacity .5s, width .6s;
+  transition: opacity 0.5s, width 0.6s;
   transition-timing-function: ease-in;
   transition-delay: 0s;
   width: 30%;
@@ -9107,7 +9084,7 @@ oui-slideshow-panel {
 }
 .oui-slideshow_onboarding .oui-slideshow-panel.next .oui-slideshow-panel__picture,
 .oui-slideshow_onboarding .oui-slideshow-panel.prev .oui-slideshow-panel__picture {
-  transition-delay: .3s;
+  transition-delay: 0.3s;
 }
 .oui-slideshow_onboarding .oui-slideshow-panel.active.left .oui-slideshow-panel__picture,
 .oui-slideshow_onboarding .oui-slideshow-panel.active.right .oui-slideshow-panel__picture {

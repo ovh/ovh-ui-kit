@@ -1,3 +1,13 @@
+<a name="2.19.0"></a>
+# [2.19.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.18.0...v2.19.0) (2018-09-06)
+
+
+### Bug Fixes
+
+* fix for LESS v3 ([#264](https://github.com/ovh-ux/ovh-ui-kit/issues/264)) ([77e865e](https://github.com/ovh-ux/ovh-ui-kit/commit/77e865e))
+
+
+
 <a name="2.18.0"></a>
 # [2.18.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.17.2...v2.18.0) (2018-08-07)
 
