@@ -169,51 +169,51 @@ oui-sidebar is a package which provides styles for the sidebar component.
   <div class="oui-sidebar-menu">
     <ul class="oui-sidebar-list">
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link">
+        <button type="button" class="oui-sidebar-link">
           Category 1
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link">
+        <button type="button" class="oui-sidebar-link">
           Category 2
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
           Category 3
         </button>
         <div class="oui-sidebar-menu">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
-              <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+              <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
               </button>
             </div>
-            <span class="oui-sidebar-menu__breadcrumb">
+            <p class="oui-sidebar-menu__breadcrumb">
               Manager
-            </span>
-            <h3 class="oui-sidebar-menu__title">
+            </p>
+            <p class="oui-sidebar-menu__title">
               Category 3
-            </h3>
+            </p>
           </header>
           <ul class="oui-sidebar-list">
             <li class="oui-sidebar-list__item">
-              <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
                 Product 1
               </button>
               <div class="oui-sidebar-menu">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
-                    <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+                    <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                     </button>
                   </div>
-                  <span class="oui-sidebar-menu__breadcrumb">
+                  <p class="oui-sidebar-menu__breadcrumb">
                     Manager › Category 3
-                  </span>
-                  <h3 class="oui-sidebar-menu__title">
+                  </p>
+                  <p class="oui-sidebar-menu__title">
                     Product 1
-                  </h3>
+                  </p>
                 </header>
                 <ul class="oui-sidebar-list">
                   <li class="oui-sidebar-list__item">
@@ -263,41 +263,41 @@ oui-sidebar is a package which provides styles for the sidebar component.
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
+        <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
           Category 3
         </button>
         <div class="oui-sidebar-menu">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
-              <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+              <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
               </button>
             </div>
-            <span class="oui-sidebar-menu__breadcrumb">
+            <p class="oui-sidebar-menu__breadcrumb">
               Manager
-            </span>
-            <h3 class="oui-sidebar-menu__title">
+            </p>
+            <p class="oui-sidebar-menu__title">
               Category 3
-            </h3>
+            </p>
           </header>
           <ul class="oui-sidebar-list">
             <li class="oui-sidebar-list__item">
-              <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
                 Product 1
               </button>
               <div class="oui-sidebar-menu">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
-                    <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+                    <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                     </button>
                   </div>
-                  <span class="oui-sidebar-menu__breadcrumb">
+                  <p class="oui-sidebar-menu__breadcrumb">
                     Manager › Category 3
-                  </span>
-                  <h3 class="oui-sidebar-menu__title">
+                  </p>
+                  <p class="oui-sidebar-menu__title">
                     Product 1
-                  </h3>
+                  </p>
                 </header>
                 <ul class="oui-sidebar-list">
                   <li class="oui-sidebar-list__item">
@@ -348,43 +348,43 @@ oui-sidebar is a package which provides styles for the sidebar component.
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
+        <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
           Category 3
         </button>
         <!-- Level 1 -->
         <div class="oui-sidebar-menu">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
-              <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+              <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
               </button>
             </div>
-            <span class="oui-sidebar-menu__breadcrumb">
+            <p class="oui-sidebar-menu__breadcrumb">
               Manager
-            </span>
-            <h3 class="oui-sidebar-menu__title">
+            </p>
+            <p class="oui-sidebar-menu__title">
               Category 3
-            </h3>
+            </p>
           </header>
           <ul class="oui-sidebar-list">
             <li class="oui-sidebar-list__item">
-              <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
+              <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
                 Product 1
               </button>
               <!-- Level 2 -->
               <div class="oui-sidebar-menu">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
-                    <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+                    <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                     </button>
                   </div>
-                  <span class="oui-sidebar-menu__breadcrumb">
+                  <p class="oui-sidebar-menu__breadcrumb">
                     Manager › Category 3
-                  </span>
-                  <h3 class="oui-sidebar-menu__title">
+                  </p>
+                  <p class="oui-sidebar-menu__title">
                     Product 1
-                  </h3>
+                  </p>
                 </header>
                 <ul class="oui-sidebar-list">
                   <li class="oui-sidebar-list__item">
@@ -433,51 +433,51 @@ oui-sidebar is a package which provides styles for the sidebar component.
   <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
     <ul class="oui-sidebar-list">
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link">
+        <button type="button" class="oui-sidebar-link">
           Category 1
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link">
+        <button type="button" class="oui-sidebar-link">
           Category 2
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
           Category 3
         </button>
         <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
-              <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+              <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
               </button>
             </div>
-            <span class="oui-sidebar-menu__breadcrumb">
+            <p class="oui-sidebar-menu__breadcrumb">
               Manager
-            </span>
-            <h3 class="oui-sidebar-menu__title">
+            </p>
+            <p class="oui-sidebar-menu__title">
               Category 3
-            </h3>
+            </p>
           </header>
           <ul class="oui-sidebar-list">
             <li class="oui-sidebar-list__item">
-              <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
                 Product 1
               </button>
               <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
-                    <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+                    <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                     </button>
                   </div>
-                  <span class="oui-sidebar-menu__breadcrumb">
+                  <p class="oui-sidebar-menu__breadcrumb">
                     Manager › Category 3
-                  </span>
-                  <h3 class="oui-sidebar-menu__title">
+                  </p>
+                  <p class="oui-sidebar-menu__title">
                     Product 1
-                  </h3>
+                  </p>
                 </header>
                 <ul class="oui-sidebar-list">
                   <li class="oui-sidebar-list__item">
@@ -527,41 +527,41 @@ oui-sidebar is a package which provides styles for the sidebar component.
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
+        <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
           Category 3
         </button>
         <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
-              <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+              <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
               </button>
             </div>
-            <span class="oui-sidebar-menu__breadcrumb">
+            <p class="oui-sidebar-menu__breadcrumb">
               Manager
-            </span>
-            <h3 class="oui-sidebar-menu__title">
+            </p>
+            <p class="oui-sidebar-menu__title">
               Category 3
-            </h3>
+            </p>
           </header>
           <ul class="oui-sidebar-list">
             <li class="oui-sidebar-list__item">
-              <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
+              <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="false">
                 Product 1
               </button>
               <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
-                    <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+                    <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                     </button>
                   </div>
-                  <span class="oui-sidebar-menu__breadcrumb">
+                  <p class="oui-sidebar-menu__breadcrumb">
                     Manager › Category 3
-                  </span>
-                  <h3 class="oui-sidebar-menu__title">
+                  </p>
+                  <p class="oui-sidebar-menu__title">
                     Product 1
-                  </h3>
+                  </p>
                 </header>
                 <ul class="oui-sidebar-list">
                   <li class="oui-sidebar-list__item">
@@ -612,43 +612,43 @@ oui-sidebar is a package which provides styles for the sidebar component.
         </button>
       </li>
       <li class="oui-sidebar-list__item">
-        <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
+        <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
           Category 3
         </button>
         <!-- Level 1 -->
         <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
-              <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+              <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
               </button>
             </div>
             <span class="oui-sidebar-menu__breadcrumb">
               Manager
             </span>
-            <h3 class="oui-sidebar-menu__title">
+            <p class="oui-sidebar-menu__title">
               Category 3
-            </h3>
+            </p>
           </header>
           <ul class="oui-sidebar-list">
             <li class="oui-sidebar-list__item">
-              <button class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
+              <button type="button" class="oui-sidebar-link oui-sidebar-link_active" aria-haspopup="true" aria-expanded="true">
                 Product 1
               </button>
               <!-- Level 2 -->
               <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
-                    <button type="button" class="oui-button oui-button_link oui-button_icon-left">
+                    <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
                       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                     </button>
                   </div>
-                  <span class="oui-sidebar-menu__breadcrumb">
+                  <p class="oui-sidebar-menu__breadcrumb">
                     Manager › Category 3
-                  </span>
-                  <h3 class="oui-sidebar-menu__title">
+                  </p>
+                  <p class="oui-sidebar-menu__title">
                     Product 1
-                  </h3>
+                  </p>
                 </header>
                 <ul class="oui-sidebar-list">
                   <li class="oui-sidebar-list__item">
