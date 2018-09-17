@@ -1,3 +1,19 @@
+<a name="2.20.0"></a>
+# [2.20.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.19.0...v2.20.0) (2018-09-17)
+
+
+### Bug Fixes
+
+* **oui-dropdown:** fix overflow in datagrid ([#267](https://github.com/ovh-ux/ovh-ui-kit/issues/267)) ([12fa709](https://github.com/ovh-ux/ovh-ui-kit/commit/12fa709))
+* **oui-tile:** force normal word break for oui-paragraph ([#268](https://github.com/ovh-ux/ovh-ui-kit/issues/268)) ([8cf5fe9](https://github.com/ovh-ux/ovh-ui-kit/commit/8cf5fe9))
+
+
+### Features
+
+* **oui-sidebar:** add sidebar style ([#270](https://github.com/ovh-ux/ovh-ui-kit/issues/270)) ([b3d5053](https://github.com/ovh-ux/ovh-ui-kit/commit/b3d5053))
+
+
+
 <a name="2.19.0"></a>
 # [2.19.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.18.0...v2.19.0) (2018-09-06)
 
