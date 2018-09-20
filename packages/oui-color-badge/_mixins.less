@@ -7,29 +7,24 @@
     @border-color: @oui-color-badge-border-color,
     @palette-size: @oui-color-badge-palette-size,
     @prop-font-size: @oui-color-badge-prop-font-size,
-    @width: rem-calc(144),
-    @spacing: rem-calc(20) auto,
-    @padding: rem-calc(7)
+    @width: @oui-color-badge-palette-size,
+    @spacing: @oui-color-badge-spacing
   ) {
     position: relative;
     border: 1px solid @border-color;
+    display: inline-block;
     width: @width;
     max-width: 100%;
     margin: @spacing;
-    padding: @padding;
-    padding-top: @palette-size + 2 * @padding;
+    padding: 0;
     padding-bottom: rem-calc(12);
+    box-shadow: @oui-color-badge-box-shadow;
 
     &::before {
       display: block;
-      position: absolute;
-      top: @padding;
-      right: 0;
-      left: 0;
       content: '';
-      width: 90%;
+      width: 100%;
       height: @palette-size;
-      margin: auto;
     }
 
     &__prop {
