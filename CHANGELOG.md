@@ -1,3 +1,14 @@
+<a name="2.20.2"></a>
+## [2.20.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.20.1...v2.20.2) (2018-09-21)
+
+
+### Bug Fixes
+
+* **oui-box:** fix spacing ([926401b](https://github.com/ovh-ux/ovh-ui-kit/commit/926401b))
+* **oui-modal:** fix spacing ([b268129](https://github.com/ovh-ux/ovh-ui-kit/commit/b268129))
+
+
+
 <a name="2.20.1"></a>
 ## [2.20.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.20.0...v2.20.1) (2018-09-21)
 

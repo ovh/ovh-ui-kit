@@ -296,7 +296,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.woff2?v=2.20.1") format("woff2"), url("../../dist/icons/icons.woff?v=2.20.1") format("woff");
+  src: url("../../dist/icons/icons.woff2?v=2.20.2") format("woff2"), url("../../dist/icons/icons.woff?v=2.20.2") format("woff");
 }
 .oui-icon-badge {
   width: 9rem;
@@ -5717,6 +5717,7 @@ select.oui-select__input::-ms-expand {
   background: #f6f7f5;
   border: 2px solid #e1e4df;
   border-radius: 6px;
+  margin-bottom: 0.938rem;
   padding: 1.25rem;
 }
 .oui-box_light {
@@ -6354,6 +6355,7 @@ oui-modal {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
+  margin: 0.938rem 0;
   border-radius: 6px;
   border: none;
   font-size: 1rem;
