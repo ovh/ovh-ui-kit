@@ -1,9 +1,14 @@
 @import './_mixins';
 
 .oui-box {
-  #oui > .box-base();
+  background: @oui-box-background-color;
+  border: @oui-box-border-size solid @oui-box-border-color;
+  border-radius: @oui-global-base-radius-medium;
+  margin-bottom: @oui-box-spacing;
+  padding: @oui-box-padding;
 
   &_light {
-    #oui > .box-light();
+    background: @oui-box-light-background-color;
+    border: @oui-box-border-size solid @oui-box-light-border-color;
   }
 }
