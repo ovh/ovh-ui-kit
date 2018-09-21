@@ -5,6 +5,13 @@
   @oui-select-picker-selector: oui-select-picker;
 
   #oui > .select-picker-normalize();
-  #oui > .select-picker(@oui-select-picker-selector);
   #oui > .select-picker-status();
+
+  &_default {
+    #oui > .select-picker(@oui-select-picker-selector);
+  }
+
+  &_light {
+    #oui > .radio-thumbnail-light(@oui-select-picker-selector);
+  }
 }
