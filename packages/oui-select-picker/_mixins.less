@@ -6,6 +6,53 @@
   .select-picker(
     @selector
   ) {
+    #oui > .radio(
+      @selector
+    );
+
+    #oui > .radio-thumbnail(
+      @selector
+    );
+
+    &__picture-container {
+      display: block;
+      max-width: @oui-select-picker-padding * 2;
+      position: absolute;
+      right: @oui-select-picker-padding;
+      text-align: center;
+      top: @oui-select-picker-padding - rem-calc(5);
+      width: 10%;
+
+      .@{selector}__picture {
+        display: inline-block;
+        max-width: 100%;
+      }
+
+      & + .@{selector}__label {
+        padding-right: ~"calc(10% + 1rem)";
+
+        & + .@{selector}__section {
+          margin-top: rem-calc(14);
+        }
+      }
+    }
+
+    &__value {
+      color: @oui-select-picker-label-color;
+      display: inline-block;
+      opacity: 0.5;
+      padding-bottom: @oui-select-picker-value-padding;
+      padding-top: @oui-select-picker-value-padding;
+      width: 100%;
+    }
+
+    &__input:checked ~ .@{selector}__label-container,
+    &__input:disabled ~ .@{selector}__label-container {
+      .@{selector}__value {
+        opacity: 1;
+      }
+    }
+
     &__input:disabled ~ .@{selector}__label-container {
       .@{selector}__value {
         color: @oui-select-picker-label-color-disabled;
@@ -60,6 +107,29 @@
         & > i {
           opacity: 1;
         }
+      }
+    }
+
+    // sub components exceptions
+    .oui-select,
+    .oui-ui-select-container {
+      margin-bottom: 0;
+    }
+
+    .oui-select > .oui-icon {
+      background-color: inherit;
+    }
+
+    .oui-ui-select-container {
+      .ui-select-match {
+        margin-bottom: 0;
+        text-align: left;
+        width: 100%;
+      }
+
+      .ui-select-match,
+      .ui-select-choices {
+        min-width: 100%;
       }
     }
   }

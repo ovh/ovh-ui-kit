@@ -2,14 +2,6 @@
 
 #oui {
   .select-picker-normalize() {
-    #oui > .radio(
-      @oui-select-picker-selector
-    );
-
-    #oui > .radio-thumbnail(
-      @oui-select-picker-selector
-    );
-
     &__label-container {
       font-weight: inherit;
       cursor: pointer;
@@ -24,65 +16,15 @@
       #oui > .base-font();
     }
 
-    &__picture-container {
-      display: block;
-      max-width: @oui-select-picker-padding * 2;
-      position: absolute;
-      right: @oui-select-picker-padding;
-      text-align: center;
-      top: @oui-select-picker-padding - rem-calc(5);
-      width: 10%;
+    &__transclude-container {
+      height: @oui-select-picker-transclude-container-height;
 
-      .@{oui-select-picker-selector}__picture {
-        display: inline-block;
-        max-width: 100%;
-      }
-
-      & + .@{oui-select-picker-selector}__label {
-        padding-right: ~"calc(10% + 1rem)";
-
-        & + .@{oui-select-picker-selector}__section {
-          margin-top: rem-calc(14);
-        }
-      }
-    }
-
-    &__value {
-      color: @oui-select-picker-label-color;
-      display: inline-block;
-      opacity: 0.5;
-      padding-bottom: @oui-select-picker-value-padding;
-      padding-top: @oui-select-picker-value-padding;
-      width: 100%;
-    }
-
-    &__input:checked ~ .@{oui-select-picker-selector}__label-container,
-    &__input:disabled ~ .@{oui-select-picker-selector}__label-container {
-      .@{oui-select-picker-selector}__value {
-        opacity: 1;
-      }
-    }
-
-    // sub components exceptions
-    .oui-select,
-    .oui-ui-select-container {
-      margin-bottom: 0;
-    }
-
-    .oui-select > .oui-icon {
-      background-color: inherit;
-    }
-
-    .oui-ui-select-container {
-      .ui-select-match {
-        margin-bottom: 0;
-        text-align: left;
-        width: 100%;
-      }
-
-      .ui-select-match,
-      .ui-select-choices {
-        min-width: 100%;
+      img {
+        display: block;
+        height: @oui-select-picker-transclude-img-height;
+        max-width: @oui-select-picker-transclude-img-max-width;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
