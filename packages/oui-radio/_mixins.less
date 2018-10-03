@@ -1,10 +1,10 @@
 @import '../oui/_settings';
-@import '../oui-typography/_constants';
-@import '../oui-typography/_mixins';
-@import '../oui-color/_variables';
 @import '../oui-animation/_mixins';
 @import '../oui-accessibility/_mixins';
+@import '../oui-color/_variables';
 @import '../oui-thumbnail/_mixins';
+@import '../oui-typography/_constants';
+@import '../oui-typography/_mixins';
 @import './_variables';
 
 #oui {
@@ -369,7 +369,13 @@
       );
 
       .@{selector}__section {
-        border-top-color: @oui-select-picker-value-border-color-disabled;
+        border-top-color: @oui-color-charlotte;
+      }
+    }
+
+    .@{selector}__input:disabled:checked + .@{selector}__label-container {
+      .@{selector}__section {
+        border-top-color: @oui-color-turquoise;
       }
     }
 

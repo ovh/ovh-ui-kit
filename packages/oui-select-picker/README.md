@@ -202,6 +202,49 @@ oui-select-picker is a package which provides styles for the select-picker compo
 </div>
 ```
 
+## Light
+```html:preview
+<div class="oui-select-picker oui-select-picker_light">
+  <input class="oui-select-picker__input" type="radio" name="oui-select-picker-5-2" value="oui-select-picker-5-2" id="oui-select-picker-5-2">
+  <label class="oui-select-picker__label-container" for="oui-select-picker-5-2">
+    <span class="oui-select-picker__label">Unchecked</span>
+    <span class="oui-select-picker__value-container oui-select-picker__section">
+      <span class="oui-select-picker__value">Value</span>
+    </span>
+  </label>
+</div>
+
+<div class="oui-select-picker oui-select-picker_light">
+  <input class="oui-select-picker__input" type="radio" name="oui-select-picker-5-1" value="oui-select-picker-5-1" id="oui-select-picker-5-1" checked>
+  <label class="oui-select-picker__label-container" for="oui-select-picker-5-1">
+    <span class="oui-select-picker__label">Checked</span>
+    <span class="oui-select-picker__value-container oui-select-picker__section">
+      <span class="oui-select-picker__value">Value</span>
+    </span>
+  </label>
+</div>
+
+<div class="oui-select-picker oui-select-picker_light">
+  <input class="oui-select-picker__input" type="radio" name="oui-select-picker-5-3" value="oui-select-picker-5-3" id="oui-select-picker-5-3" checked disabled>
+  <label class="oui-select-picker__label-container" for="oui-select-picker-5-3">
+    <span class="oui-select-picker__label">Disabled [Checked]</span>
+    <span class="oui-select-picker__value-container oui-select-picker__section">
+      <span class="oui-select-picker__value">Value</span>
+    </span>
+  </label>
+</div>
+
+<div class="oui-select-picker oui-select-picker_light">
+  <input class="oui-select-picker__input" type="radio" name="oui-select-picker-5-4" value="oui-select-picker-5-4" id="oui-select-picker-5-4" disabled>
+  <label class="oui-select-picker__label-container" for="oui-select-picker-5-4">
+    <span class="oui-select-picker__label">Disabled [Unchecked]</span>
+    <span class="oui-select-picker__value-container oui-select-picker__section">
+      <span class="oui-select-picker__value">Value</span>
+    </span>
+  </label>
+</div>
+```
+
 ## Mixins
 
 ```less
