@@ -1,3 +1,18 @@
+<a name="2.21.0"></a>
+# [2.21.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.20.2...v2.21.0) (2018-10-03)
+
+
+### Bug Fixes
+
+* fix imports for standalone use ([#279](https://github.com/ovh-ux/ovh-ui-kit/issues/279)) ([e797b72](https://github.com/ovh-ux/ovh-ui-kit/commit/e797b72))
+
+
+### Features
+
+* **oui-select-picker:** add light variant ([#275](https://github.com/ovh-ux/ovh-ui-kit/issues/275)) ([d4719ae](https://github.com/ovh-ux/ovh-ui-kit/commit/d4719ae))
+
+
+
 <a name="2.20.2"></a>
 ## [2.20.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.20.1...v2.20.2) (2018-09-21)
 
