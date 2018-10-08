@@ -1,8 +1,8 @@
 @import '../oui-color/_constants';
 @import './_constants';
 
-// Typography - Header
-@oui-header-font-sizes:
+// Typography - Heading
+@oui-heading-font-sizes:
   rem-calc(46),
   rem-calc(36),
   rem-calc(32),
@@ -10,7 +10,7 @@
   rem-calc(20),
   rem-calc(18);
 
-@oui-header-font-weights:
+@oui-heading-font-weights:
   @oui-font-light,
   @oui-font-light,
   @oui-font-regular,
@@ -18,17 +18,24 @@
   @oui-font-semibold,
   @oui-font-semibold;
 
-@oui-header-margins:
-  0 0 0.33em,
-  0 0 0.33em,
-  0 0 0.33em,
-  0 0 0.33em,
-  0 0 0.33em,
-  0 0 0.33em;
+@oui-heading-margins:
+  0 0 rem-calc(15),
+  0 0 rem-calc(15),
+  0 0 rem-calc(15),
+  0 0 rem-calc(15),
+  0 0 rem-calc(15),
+  0 0 rem-calc(15);
 
 // Typography - Header underline
-@oui-header-border-width: 2px;
-@oui-header-border-color: #ddd;
+@oui-heading-border-width: 2px;
+@oui-heading-border-color: #ddd;
+
+// Deprecated: Support only for old use
+@oui-header-font-sizes: @oui-heading-font-sizes;
+@oui-header-font-weights: @oui-heading-font-weights;
+@oui-header-margins: @oui-heading-margins;
+@oui-header-border-width: @oui-heading-border-width;
+@oui-header-border-color: @oui-heading-border-color;
 
 // Typography - Link
 @oui-link-font-color: @oui-color-pacific;
@@ -51,5 +58,8 @@
 
 // Horizontal line - Thin
 @oui-horizontal-line-thin-width: 1px;
+
+// Paragraph
+@oui-paragraph-margin: 0 0 rem-calc(15);
 
 @oui-font-source-sans-pro-folder: "./fonts/source-sans-pro";

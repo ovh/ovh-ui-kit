@@ -11,6 +11,7 @@
 body {
   #oui > .base-font();
 
+  margin: 0;
   font-size: @oui-global-base-font-size;
 }
 
@@ -22,12 +23,15 @@ abbr[data-oui-tooltip] {
   cursor: help;
 }
 
-.oui-header {
+h,
+.oui-header_, // Deprecated: Support only for old use
+.oui-heading_ {
   #oui > .headers();
+}
 
-  &_1&_underline {
-    #oui > .header-underline();
-  }
+.oui-header_underline, // Deprecated: Support only for old use
+.oui-heading_underline {
+  border-bottom: @oui-header-border-width solid @oui-header-border-color;
 }
 
 a {
@@ -60,6 +64,8 @@ hr {
   }
 }
 
-p, .oui-paragraph {
+p,
+.oui-paragraph {
+  margin: @oui-paragraph-margin;
   word-break: normal;
 }
