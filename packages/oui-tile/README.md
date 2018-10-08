@@ -14,7 +14,7 @@
 
 ```html:preview
 <div class="oui-tile">
-    <h4 class="oui-header_4 oui-tile__title">Buttons</h4>
+    <h4 class="oui-heading_4 oui-tile__title">Buttons</h4>
     <div class="oui-tile__body">
         <div class="oui-tile__item oui-tile__item_button">
             <button type="button" class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width">
@@ -37,7 +37,7 @@
 
 ```html:preview
 <div class="oui-tile">
-    <h4 class="oui-header_4 oui-tile__title">List definition</h4>
+    <h4 class="oui-heading_4 oui-tile__title">List definition</h4>
     <p class="oui-tile__legend">Consectetur adipisicing elit.</p>
     <div class="oui-tile__body">
         <div class="oui-tile__item">
@@ -76,7 +76,7 @@
 
 ```html:preview
 <div class="oui-tile">
-    <h4 class="oui-header_4 oui-tile__title">List definition</h4>
+    <h4 class="oui-heading_4 oui-tile__title">List definition</h4>
     <div class="oui-tile__body">
         Custom content goes here
     </div>

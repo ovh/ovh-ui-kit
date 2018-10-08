@@ -18,20 +18,13 @@
   .headers(@index: length(@oui-header-font-sizes)) when(@index > 0) {
     .headers(@index - 1);
 
-    &_@{index} {
+    &@{index} {
       .base-font();
       font-size: extract(@oui-header-font-sizes, @index);
       font-weight: extract(@oui-header-font-weights, @index);
       margin: extract(@oui-header-margins, @index);
       color: inherit;
     }
-  }
-
-  .header-underline(
-    @border-width: @oui-header-border-width,
-    @border-color: @oui-header-border-color
-  ) {
-    border-bottom: @border-width solid @border-color;
   }
 
   .link(
@@ -115,5 +108,13 @@
     @width: @oui-horizontal-line-thin-width
   ) {
     border-top-width: @width;
+  }
+
+  // Deprecated: Support only for old use
+  .header-underline(
+    @border-width: @oui-header-border-width,
+    @border-color: @oui-header-border-color
+  ) {
+    border-bottom: @border-width solid @border-color;
   }
 }
