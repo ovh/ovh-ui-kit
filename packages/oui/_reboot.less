@@ -28,14 +28,12 @@ html {
   -webkit-text-size-adjust: 100%; // 4
   -ms-text-size-adjust: 100%; // 4
   -ms-overflow-style: scrollbar; // 5
-  -webkit-tap-highlight-color: rgba(#000, 0); // 6
+  -webkit-tap-highlight-color: transparent; // 6
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
+@-ms-viewport {
+	width: device-width;
 }
 
 // stylelint-disable selector-list-comma-newline-after
