@@ -9,12 +9,10 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
 }
-@at-root {
-  @-ms-viewport {
-    width: device-width;
-  }
+@-ms-viewport {
+  width: device-width;
 }
 article,
 aside,
@@ -592,7 +590,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.woff2?v=2.21.2") format("woff2"), url("../../dist/icons/icons.woff?v=2.21.2") format("woff");
+  src: url("../../dist/icons/icons.woff2?v=2.21.3") format("woff2"), url("../../dist/icons/icons.woff?v=2.21.3") format("woff");
 }
 .oui-icon-badge {
   width: 9rem;
