@@ -1,3 +1,13 @@
+<a name="2.21.3"></a>
+## [2.21.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.2...v2.21.3) (2018-10-11)
+
+
+### Bug Fixes
+
+* fix build error ([2387b80](https://github.com/ovh-ux/ovh-ui-kit/commit/2387b80))
+
+
+
 <a name="2.21.2"></a>
 ## [2.21.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.1...v2.21.2) (2018-10-10)
 
