@@ -1,3 +1,20 @@
+<a name="2.21.4"></a>
+## [2.21.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.3...v2.21.4) (2018-10-15)
+
+
+### Bug Fixes
+
+* add missing form controls ([#290](https://github.com/ovh-ux/ovh-ui-kit/issues/290)) ([c23f291](https://github.com/ovh-ux/ovh-ui-kit/commit/c23f291))
+* **oui-datagrid:** fix sticky columns ([#292](https://github.com/ovh-ux/ovh-ui-kit/issues/292)) ([6074cca](https://github.com/ovh-ux/ovh-ui-kit/commit/6074cca))
+* fix default style for custom tags ([#293](https://github.com/ovh-ux/ovh-ui-kit/issues/293)) ([2d21da9](https://github.com/ovh-ux/ovh-ui-kit/commit/2d21da9))
+
+
+### Performance Improvements
+
+* **oui-typography:** replace woff/woff2 fonts genereated from TTF instead of OTF ([#289](https://github.com/ovh-ux/ovh-ui-kit/issues/289)) ([8ab825e](https://github.com/ovh-ux/ovh-ui-kit/commit/8ab825e))
+
+
+
 <a name="2.21.3"></a>
 ## [2.21.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.2...v2.21.3) (2018-10-11)
 
