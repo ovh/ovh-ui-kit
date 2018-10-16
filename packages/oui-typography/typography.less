@@ -6,6 +6,7 @@ body {
   #oui > .base-font();
 }
 
+// Abbreviations
 abbr[title],
 abbr[oui-tooltip],
 abbr[data-oui-tooltip] {
@@ -14,6 +15,7 @@ abbr[data-oui-tooltip] {
   cursor: help;
 }
 
+// Headings
 h,
 .oui-header_, // Deprecated: Support only for old use
 .oui-heading_ {
@@ -22,39 +24,74 @@ h,
 
 .oui-header_underline, // Deprecated: Support only for old use
 .oui-heading_underline {
-  border-bottom: @oui-header-border-width solid @oui-header-border-color;
+  border-bottom: @oui-heading-border-width solid @oui-heading-border-color;
 }
 
-a {
-  #oui > .link();
-}
-
+// Links
+a,
 .oui-link {
-  @oui-icon-selector: oui-icon;
+  #oui > .base-font();
 
-  #oui > .link();
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: @oui-link-font-color;
+  text-decoration: oui-link-text-decoration;
+  line-height: inherit;
+  cursor: pointer;
+  -webkit-text-decoration-skip: objects;
 
-  &_icon {
-    #oui > .link-icon(@oui-icon-selector);
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: @oui-link-font-color_hover;
+  }
+
+  &:hover {
+    text-decoration: @oui-link-text-decoration_hover;
+  }
+
+  img {
+    border: none;
   }
 }
 
-hr {
-  #oui > .horizontal-line-base();
+.oui-link_icon .oui-icon {
+  margin-left: @oui-link-icon-margin-left;
+
+  &::before {
+    width: @oui-link-icon-icon-size;
+    height: @oui-link-icon-icon-size;
+    font-size: @oui-link-icon-icon-size;
+    line-height: @oui-link-icon-icon-size;
+  }
+}
+
+// Lines
+hr,
+.oui-horizontal-line {
+  margin: 0 auto;
+  margin-bottom: @oui-horizontal-line-margin-bottom;
+  border-top-style: @oui-horizontal-line-width;
+  border-top-color: @oui-horizontal-line-color;
+  border-top-width: @oui-horizontal-line-style;
 }
 
 .oui-horizontal-line {
-  #oui > .horizontal-line-base();
-
   &_dark {
-    #oui > .horizontal-line-dark();
+    border-top-color: @oui-horizontal-line-dark-color;
   }
 
   &_thin {
-    #oui > .horizontal-line-thin();
+    border-top-width: @oui-horizontal-line-thin-width;
   }
 }
 
+// Paragraphs
 p,
 .oui-paragraph {
   margin: @oui-paragraph-margin;
