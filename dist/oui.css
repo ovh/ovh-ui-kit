@@ -486,39 +486,7 @@ h6,
 .oui-heading_underline {
   border-bottom: 2px solid #ddd;
 }
-a {
-  font-family: 'Source Sans Pro', sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0.007em;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  padding: 0;
-  border: 0 none;
-  background-color: transparent;
-  color: #00a2bf;
-  text-decoration: none;
-  line-height: inherit;
-  cursor: pointer;
-  -webkit-text-decoration-skip: objects;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
-a:hover,
-a:focus {
-  color: #113f6d;
-}
-a:hover {
-  text-decoration: underline;
-}
-a img {
-  border-style: none;
-}
+a,
 .oui-link {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 1.5;
@@ -530,27 +498,33 @@ a img {
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   padding: 0;
-  border: 0 none;
+  border: none;
   background-color: transparent;
   color: #00a2bf;
-  text-decoration: none;
+  text-decoration: oui-link-text-decoration;
   line-height: inherit;
   cursor: pointer;
   -webkit-text-decoration-skip: objects;
 }
+a:active,
 .oui-link:active,
+a:hover,
 .oui-link:hover {
   outline-width: 0;
 }
+a:hover,
 .oui-link:hover,
+a:focus,
 .oui-link:focus {
   color: #113f6d;
 }
+a:hover,
 .oui-link:hover {
   text-decoration: underline;
 }
+a img,
 .oui-link img {
-  border-style: none;
+  border: none;
 }
 .oui-link_icon .oui-icon {
   margin-left: 0.313rem;
@@ -561,19 +535,13 @@ a img {
   font-size: 0.625rem;
   line-height: 0.625rem;
 }
-hr {
-  margin: 0;
-  margin-bottom: 0.625rem;
-  border-top-style: solid;
-  border-top-color: #e9ebe7;
-  border-top-width: 2px;
-}
+hr,
 .oui-horizontal-line {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 0.625rem;
-  border-top-style: solid;
+  border-top-style: 2px;
   border-top-color: #e9ebe7;
-  border-top-width: 2px;
+  border-top-width: solid;
 }
 .oui-horizontal-line_dark {
   border-top-color: #b6bdaf;
@@ -590,7 +558,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../../dist/icons/icons.woff2?v=2.21.4") format("woff2"), url("../../dist/icons/icons.woff?v=2.21.4") format("woff");
+  src: url("../../dist/icons/icons.woff2?v=2.21.5") format("woff2"), url("../../dist/icons/icons.woff?v=2.21.5") format("woff");
 }
 .oui-icon-badge {
   width: 9rem;
