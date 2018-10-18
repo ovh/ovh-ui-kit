@@ -4,7 +4,7 @@
   "description": "A LESS stylekit for the OVH brand.",
   "license": "BSD-3-Clause",
   "scripts": {
-    "build:version": "cross-var sed -e 's/${tmpl-npm-version}/$npm_package_version/' packages/oui/_version.tmpl.less > packages/oui/_version.less",
+    "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' packages/oui/_version.tmpl.less > packages/oui/_version.less",
     "build:less": "lessc --remcalc packages/oui/stylekit.less dist/oui.css",
     "build:less-min": "lessc --remcalc --clean-css packages/oui/stylekit.less dist/oui.min.css",
     "build:icons": "mkdirp dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "chalk": "^2.4.1",
-    "cross-var": "^1.1.0",
+    "cross-conf-env": "^1.1.2",
     "icon-font-generator": "^2.1.9",
     "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
@@ -38,6 +38,6 @@
     "npm-scripts-conventional-changelog": "^0.1.0",
     "rimraf": "^2.6.2",
     "stylefmt": "^6.0.2",
-    "stylelint": "^9.5.0"
+    "stylelint": "^9.6.0"
   }
 }
