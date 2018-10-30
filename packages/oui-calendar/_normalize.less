@@ -291,8 +291,14 @@
     justify-content: center;
 
     .numInputWrapper {
-      width: ~"calc(@{oui-calendar-cell-width} * 2)";
+      width: ~"calc(@{oui-calendar-cell-width} * 3)";
+      max-width: ~"calc(@{oui-calendar-cell-width} * 3)";
       height: 100%;
+      flex: auto;
+    }
+
+    & &-separator {
+      width: auto;
       flex: 1;
     }
   }
@@ -306,6 +312,7 @@
 
   &-time &-am-pm {
     width: @oui-calendar-cell-width;
+    max-width: @oui-calendar-cell-width;
     height: 100%;
     font-size: @oui-calendar-font-size;
     font-weight: @oui-calendar-font-weight;
