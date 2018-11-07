@@ -2,3 +2,34 @@
 @oui-animation-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
 @oui-animation-default: @oui-animation-fast-out-slow-in;
 @oui-animation-default-timing: 0.2s;
+@oui-animation-shake-default-coordinate: 1;
+@oui-animation-shake-default-angle: 3deg;
+
+@keyframes oui-shake {
+  from {
+    transform: scale3d(@oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(@oui-animation-shake-default-coordinate - 0.1, @oui-animation-shake-default-coordinate - 0.1, @oui-animation-shake-default-coordinate - 0.1) rotate3d(0, 0, @oui-animation-shake-default-coordinate, -@oui-animation-shake-default-angle);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(@oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1) rotate3d(0, 0,@oui-animation-shake-default-coordinate, @oui-animation-shake-default-angle);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(@oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1) rotate3d(0, 0, @oui-animation-shake-default-coordinate, -@oui-animation-shake-default-angle);
+  }
+
+  to {
+    transform: scale3d(@oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate);
+  }
+}
+
