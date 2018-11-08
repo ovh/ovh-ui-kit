@@ -1,3 +1,20 @@
+<a name="2.22.0"></a>
+# [2.22.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.5...v2.22.0) (2018-11-08)
+
+
+### Bug Fixes
+
+* **oui-status:** set border to none when it's used on a button element ([#303](https://github.com/ovh-ux/ovh-ui-kit/issues/303)) ([a407295](https://github.com/ovh-ux/ovh-ui-kit/commit/a407295))
+
+
+### Features
+
+* **oui-icons:** add icon shaking animation ([#304](https://github.com/ovh-ux/ovh-ui-kit/issues/304)) ([58dbf0f](https://github.com/ovh-ux/ovh-ui-kit/commit/58dbf0f))
+* **oui-inline-adder:** add inline-adder component ([#302](https://github.com/ovh-ux/ovh-ui-kit/issues/302)) ([15f362f](https://github.com/ovh-ux/ovh-ui-kit/commit/15f362f))
+* **oui-popover:** add animation on opening ([#300](https://github.com/ovh-ux/ovh-ui-kit/issues/300)) ([ab87ec2](https://github.com/ovh-ux/ovh-ui-kit/commit/ab87ec2))
+
+
+
 <a name="2.21.5"></a>
 ## [2.21.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.4...v2.21.5) (2018-10-18)
 
