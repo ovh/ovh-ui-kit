@@ -1,3 +1,4 @@
+@import '../oui-animation/_variables.less';
 @import './_normalize';
 @import './_mixins';
 
@@ -12,5 +13,11 @@
 
   &_bicolor {
     #oui > .icon-bicolor();
+  }
+
+  &_shake {
+      animation-name: oui-shake;
+      animation-duration: 1.5s;
+      animation-iteration-count: infinite;
   }
 }
