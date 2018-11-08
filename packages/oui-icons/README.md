@@ -335,3 +335,13 @@
     <div class="oui-icon-badge__code"><code>.oui-icon-close_thin</code></div>
   </div>
 </div>
+
+### Animated Icons
+
+<div class="row">
+  <div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-ovh oui-icon_shake" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon_animate__shake</code></div>
+  </div>
+</div>
+

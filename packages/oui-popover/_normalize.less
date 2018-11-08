@@ -1,5 +1,16 @@
 @import '../oui-typography/_mixins';
 
+oui-popover {
+  &,
+  &-trigger {
+    display: inline-block;
+  }
+
+  &-content {
+    display: block;
+  }
+}
+
 #oui {
   .popover-normalize() {
     #oui > .base-font();
