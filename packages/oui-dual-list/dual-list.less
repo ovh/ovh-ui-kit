@@ -60,7 +60,7 @@
 
   &__wrapper {
     height: @oui-dual-list-wrapper-height;
-    padding: @oui-dual-list-wrapper-padding;
+    padding: 0 @oui-dual-list-wrapper-gutter;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -68,9 +68,16 @@
     transition: height .2s ease-out;
   }
 
+  &__header[aria-expanded="false"] ~ &__wrapper {
+    .phone({
+      height: 0;
+    });
+  }
+
   &__body {
     flex: 1;
     overflow-y: auto;
+    margin: @oui-dual-list-search-margin;
 
     &_centered {
       display: flex;
@@ -79,7 +86,8 @@
     }
 
     .phone({
-      margin: @oui-dual-list-body-margin_responsive;
+      margin-left: -@oui-dual-list-wrapper-gutter;
+      margin-right: -@oui-dual-list-wrapper-gutter;
     });
   }
 
@@ -94,12 +102,21 @@
     text-align: right;
 
     .oui-button { padding: 0; }
+
+    .phone({
+      text-align: left;
+    })
   }
 
   &__search ~ &__body,
-  &__action:not(.ng-hide) + &__body { margin: @oui-dual-list-action-margin; }
+  &__action + &__body {
+    margin: @oui-dual-list-action-margin;
 
-  &__action.ng-hide + &__body{ margin: @oui-dual-list-search-margin }
+    .phone({
+      margin-left: -@oui-dual-list-wrapper-gutter;
+      margin-right: -@oui-dual-list-wrapper-gutter;
+    });
+  }
 
   &__loading,
   &__placeholder {
@@ -127,8 +144,7 @@
       display: flex;
       flex-direction: row;
       margin: @oui-dual-list-item-margin;
-      padding: 0;
-      padding-left: @oui-dual-list-item-padding-left;
+      padding: @oui-dual-list-item-padding;
       text-align: left;
       color: @oui-dual-list-item-font-color;
       font-size: @oui-dual-list-item-font-size;
@@ -147,6 +163,11 @@
 
       &:hover,
       &:focus { background: @oui-dual-list-item-background_hover; }
+
+      .phone({
+        padding: @oui-dual-list-item-padding_responsive;
+        border-radius: 0;
+      })
     }
 
     &__property {
@@ -159,7 +180,7 @@
       align-self: center;
 
       .oui-icon {
-        margin: 0 @oui-dual-list-icon-spacing;
+        margin-left: @oui-dual-list-icon-spacing;
         color: inherit;
         font-size: @oui-dual-list-icon-size;
       }
