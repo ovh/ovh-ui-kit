@@ -1,9 +1,12 @@
 @import '../oui-animation/_mixins';
+@import '../oui-typography/_mixins';
 @import './_normalize';
 @import './_variables';
 
 // Dual List
 .oui-dual-list {
+  #oui > .base-font();
+
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
