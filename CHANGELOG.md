@@ -1,3 +1,13 @@
+<a name="2.22.1"></a>
+## [2.22.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.22.0...v2.22.1) (2018-11-13)
+
+
+### Features
+
+* **oui-icons:** added domain-dns icon ([#308](https://github.com/ovh-ux/ovh-ui-kit/issues/308)) ([a7fecc1](https://github.com/ovh-ux/ovh-ui-kit/commit/a7fecc1))
+
+
+
 <a name="2.22.0"></a>
 # [2.22.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.21.5...v2.22.0) (2018-11-08)
 
