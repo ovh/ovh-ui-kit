@@ -183,6 +183,11 @@
     <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-remove" aria-hidden="true"></span></div>
     <div class="oui-icon-badge__code"><code>.oui-icon-remove</code></div>
   </div>
+
+  <div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-domain-dns" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-domain-dns</code></div>
+  </div>
 </div>
 
 ### Bicolor Icons
@@ -344,4 +349,3 @@
     <div class="oui-icon-badge__code"><code>.oui-icon_animate__shake</code></div>
   </div>
 </div>
-
