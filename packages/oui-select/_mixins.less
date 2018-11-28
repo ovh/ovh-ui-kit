@@ -11,7 +11,7 @@
     @font-size: @oui-select-font-size,
     @font-weight: @oui-select-font-weight,
     @icon-size: @oui-select-icon-size,
-    @icon-position-right: @oui-icon-position-right,
+    @icon-position-right: @oui-select-icon-position-right,
     @border-color: @oui-select-border-color,
     @spacing: @oui-select-spacing,
     @padding: @oui-select-padding,
@@ -42,12 +42,6 @@
       font-weight: @font-weight;
       cursor: pointer;
       -webkit-appearance: none;
-
-      // Firefox adds a small padding before text so we need to remove it
-      @-moz-document url-prefix() {
-        padding-right: @padding * 1.5;
-        padding-left: ~"calc(@{padding} - 0.4rem)";
-      }
 
       select&::-ms-expand {
         display: none;
