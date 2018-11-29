@@ -395,3 +395,13 @@
     </span>
   </div>
 </div>
+
+
+## Text color
+
+Text can be colored thanks to helper classes. The name of the classes is `oui-color-` followed by the name of the color.
+
+```html:preview
+<p class="oui-color-atlantis">This is atlantis</p>
+<p class="oui-color-pomegranate">This is pomegranate</p>
+```
