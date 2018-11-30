@@ -47,11 +47,9 @@
       display: flex;
       align-items: center;
 
-      /* stylelint-disable indentation */
       .tablet({
         display: block;
       });
-      /* stylelint-enable */
     }
 
     &-control {
@@ -101,11 +99,9 @@
         align-self: flex-start;
       }
 
-      /* stylelint-disable indentation */
       .tablet({
         margin-left: 0;
       });
-      /* stylelint-enable */
     }
 
     /**
@@ -172,7 +168,6 @@
     }
     .make-control-sizes();
 
-    /* stylelint-disable indentation */
     .phone({
       .make-control-phone-sizes(@i: 1) when (@i <= length(@oui-field-control-phone-sizes)) {
         .make-control-phone-sizes(@i + 1);
@@ -187,6 +182,5 @@
       }
       .make-control-phone-sizes();
     });
-    /* stylelint-enable */
   }
 }
