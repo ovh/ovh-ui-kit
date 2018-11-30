@@ -94,9 +94,13 @@
   }
 
   .navbar-link_icon(
-    @icon-line-height: @oui-navbar-icon-line-height,
     @icon-size: @oui-navbar-icon-size,
-    @icon-spacing: @oui-navbar-icon-spacing,
+    @ending-icon-size: @oui-navbar-ending-icon-size,
+    @icon-hasBadge-spacing: @oui-navbar-icon-spacing__hasBadge,
+    @icon-medium-hasBadge-spacing: @oui-navbar-icon-spacing__hasBadge-medium,
+    @heading-icon-spacing: @oui-navbar-heading-icon-spacing,
+    @ending-icon-spacing: @oui-navbar-ending-icon-spacing,
+    @ending-icon-top: @oui-navbar-ending-icon-top,
     @icon-color: @oui-navbar-icon-color,
     @badge-size: @oui-navbar-badge-size,
     @badge-padding: @oui-navbar-badge-padding,
@@ -107,64 +111,66 @@
     @badge-radius: @oui-navbar-badge-radius,
     @badge-background-color: @oui-navbar-badge-background-color
   ) {
-    .oui-icon {
-      width: @icon-size;
-      height: @icon-size;
-      line-height: @icon-line-height;
-      margin-right: @icon-spacing;
+    &__heading {
       position: relative;
-      font-size: @icon-size;
       color: @icon-color;
-      vertical-align: middle;
-
-      &__badge {
-        min-width: @badge-size;
-        height: @badge-size;
-        line-height: @badge-size;
-        padding: @badge-padding;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(50%);
-        display: block;
-        text-align: center;
-        color: #fff;
-        font-family: @oui-global-base-font-family;
-        font-weight: @badge-font-weight;
-        font-size: @badge-font-size;
-        border-radius: @badge-radius;
-        background: @badge-background-color;
-
-        /* stylelint-disable indentation */
-        .medium({
-          top: 50%;
-          transform: translate(50%, -50%);
-        });
-        /* stylelint-enable indentation */
-      }
+      font-size: @icon-size;
+      margin-right: @heading-icon-spacing;
     }
 
-    &[aria-haspopup]::after {
-      display: none;
+    &__ending {
+      position: relative;
+      color: @icon-color;
+      font-size: @ending-icon-size;
+      margin-left: @ending-icon-spacing;
+      top: @ending-icon-top;
     }
 
-    /* stylelint-disable indentation */
+    .oui-navbar-link_icon__hasBadge {
+      margin-right: @icon-hasBadge-spacing;
+
+      .medium({
+        margin-right: @icon-medium-hasBadge-spacing;
+      });
+    }
+
     .medium({
       padding: 0;
       font-size: 0;
       text-align: center;
       white-space: nowrap;
-    });
-    /* stylelint-enable indentation */
 
-    .oui-icon {
-      /* stylelint-disable indentation */
+      &__heading {
+        margin-right: 0;
+      }
+    });
+
+    &__badge {
+      min-width: @badge-size;
+      height: @badge-size;
+      line-height: @badge-size;
+      padding: @badge-padding;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(50%);
+      display: block;
+      text-align: center;
+      color: #fff;
+      font-family: @oui-global-base-font-family;
+      font-weight: @badge-font-weight;
+      font-size: @badge-font-size;
+      border-radius: @badge-radius;
+      background: @badge-background-color;
+
       .medium({
-        line-height: 1;
-        margin: 0;
-        vertical-align: middle;
+        top: 50%;
+        transform: translate(50%, -50%);
       });
-      /* stylelint-enable indentation */
+    }
+
+    &[aria-haspopup]::after {
+      display: none;
     }
   }
 
