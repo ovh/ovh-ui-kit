@@ -304,13 +304,11 @@
     z-index: -1;
 
     &_active {
-      /* stylelint-disable indentation */
       .tablet({
         opacity: @opacity;
         pointer-events: auto;
         z-index: @z-index;
       });
-      /* stylelint-enable indentation */
     }
   }
 
@@ -539,11 +537,9 @@
     margin-right: @margin-right;
     text-align: center;
 
-    /* stylelint-disable indentation */
     .tablet({
       display: flex;
     });
-    /* stylelint-enable indentation */
 
     &__hamburger {
       width: @hamburger-width;
@@ -606,19 +602,15 @@
   // Deprecated: Support only for old use
   .navbar-helpers() {
     &_desktop-only {
-      /* stylelint-disable indentation */
       .tablet({
         display: none !important;
       });
-      /* stylelint-enable indentation */
     }
 
     &_mobile-only {
-      /* stylelint-disable indentation */
       .desktop({
         display: none !important;
       });
-      /* stylelint-enable indentation */
     }
   }
 }

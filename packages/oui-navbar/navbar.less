@@ -82,13 +82,11 @@
     z-index: -1;
 
     &_active {
-      /* stylelint-disable indentation */
       .tablet({
         opacity: @oui-navbar-backdrop-opacity;
         pointer-events: auto;
         z-index: @oui-navbar-z-index;
       });
-      /* stylelint-enable indentation */
     }
   }
 
@@ -219,11 +217,9 @@
     margin-right: @oui-navbar-toggler-margin-right;
     text-align: center;
 
-    /* stylelint-disable indentation */
     .tablet({
       display: flex;
     });
-    /* stylelint-enable indentation */
 
     &__hamburger {
       width: @oui-navbar-hamburger-width;
@@ -482,7 +478,6 @@
   // Menu variant 'fixed', for mobile only
   &-menu_fixed,
   &-menu__wrapper > &-menu_fixed {
-    /* stylelint-disable indentation */
     .tablet({
       #oui > .navbar-menu-animation_slide();
 
@@ -500,32 +495,26 @@
         position: absolute;
       }
     });
-    /* stylelint-enable indentation */
   }
 
   &-menu_notifications,
   &-menu__wrapper > &-menu_notifications {
-    /* stylelint-disable indentation */
     .tablet({
       max-width: @oui-navbar-menu-width_large;
     });
-    /* stylelint-enable indentation */
   }
 
   &-menu_fixed&-menu,
   &-menu__wrapper > &-menu_fixed&-menu {
     &_end,
     &_right {
-      /* stylelint-disable indentation */
       .tablet({
         #oui > .navbar-menu-animation_slide(right);
       });
-      /* stylelint-enable indentation */
     }
   }
 
   &-menu_fixed &-list {
-    /* stylelint-disable indentation */
     .tablet({
       #oui > .navbar-list(
         @flex-direction: column,
@@ -534,7 +523,6 @@
         @is-menu-list: true
       );
     });
-    /* stylelint-enable indentation */
   }
 
   &-notification {
@@ -558,11 +546,9 @@
     }
 
     & > &__action {
-      /* stylelint-disable indentation */
       .desktop({
         visibility: hidden;
       });
-      /* stylelint-enable indentation */
     }
 
     &:hover > &__action {
@@ -655,18 +641,14 @@
 
   // Helper for responsive
   &_desktop-only {
-    /* stylelint-disable indentation */
     .tablet({
       display: none !important;
     });
-    /* stylelint-enable indentation */
   }
 
   &_mobile-only {
-    /* stylelint-disable indentation */
     .desktop({
       display: none !important;
     });
-    /* stylelint-enable indentation */
   }
 }
