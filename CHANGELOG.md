@@ -1,3 +1,13 @@
+<a name="2.22.2"></a>
+## [2.22.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.22.1...v2.22.2) (2018-12-03)
+
+
+### Bug Fixes
+
+* **oui-icons:** fix dist icons path ([#314](https://github.com/ovh-ux/ovh-ui-kit/issues/314)) ([e92802d](https://github.com/ovh-ux/ovh-ui-kit/commit/e92802d))
+
+
+
 <a name="2.22.1"></a>
 ## [2.22.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.22.0...v2.22.1) (2018-11-13)
 
