@@ -2,6 +2,7 @@
 @import './_variables';
 
 #oui {
+  // Deprecated: Support only for old use
   .ui-select-container-base(
     @button-selector,
     @button-dropdown-selector,
@@ -11,7 +12,7 @@
     position: relative;
     margin: @oui-ui-select-margin;
 
-    &.oui-ui-select-container_open {
+    &.ui-select-container_open {
       .ui-select-choices-container {
         display: block;
       }
@@ -49,6 +50,7 @@
     }
   }
 
+  // Deprecated: Support only for old use
   .ui-select-container-error-style(
     @button-selector: @oui-ui-select-button-dropdown-selector
   ) {
@@ -57,11 +59,13 @@
     }
   }
 
+  // Deprecated: Support only for old use
   .ui-select-choices-container-base(
     @button-selector,
     @icon-selector
   ) {
     display: none;
+    width: 100%;
     max-width: @oui-ui-select-max-width;
     margin-top: -1px;
     margin-bottom: 0;
@@ -106,6 +110,7 @@
     }
   }
 
+  // Deprecated: Support only for old use
   .ui-select-choices-row-base(
     @button-selector,
     @icon-selector
@@ -114,14 +119,16 @@
     padding: 0;
     max-width: none;
 
-    &:focus, &:hover, &.active {
-      background-color: @oui-ui-select-choices-button-background-hover;
-      color: @oui-color-sapphire;
-      outline: none;
-    }
+    &:not(:disabled) {
+      &:focus, &:hover, &.active {
+        background-color: @oui-ui-select-choices-button-background-hover;
+        color: @oui-color-sapphire;
+        outline: none;
+      }
 
-    &:active {
-      background-color: @oui-ui-select-choices-button-background-pressed;
+      &:active {
+        background-color: @oui-ui-select-choices-button-background-pressed;
+      }
     }
 
     &-inner {
