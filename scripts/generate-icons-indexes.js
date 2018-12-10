@@ -23,9 +23,10 @@ Object.keys(icons).forEach((key) => {
     iconsCodes.push(`@oui-icon-index-${index}: "${value}";`)
 });
 
-iconsIndexes.push(`;`);
+const lastIndex = iconsIndexes.length;
+iconsIndexes[lastIndex - 1] += ';';
 
-file.write(`\n// WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!\n\n`);
+file.write(`// WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!\n\n`);
 file.write(iconsIndexes.join(`\n`));
 file.write(iconsCodes.join(`\n`));
 file.write(`\n`);

@@ -1,3 +1,4 @@
+@import '../oui/_settings';
 @import '../oui-icons/_variables';
 @import '../oui-typography/_constants';
 @import './_variables';
@@ -27,9 +28,7 @@
       pointer-events: none;
       cursor: not-allowed;
     }
-  }
 
-  &__step {
     &:not(:last-child)::after {
       content: "";
       height: rem-calc(4);
@@ -87,7 +86,7 @@
 
     .oui-progress-tracker__status::before {
       content: @oui-icon-index-check_line;
-      font-family: "Oui Icons";
+      font-family: @oui-global-base-font-family-icon;
       color: @oui-progress-tracker-font-color-complete;
       font-size: @oui-progress-tracker-icon-size_success;
       background-color: @oui-progress-tracker-background-color-complete;

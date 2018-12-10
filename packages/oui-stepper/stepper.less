@@ -1,3 +1,4 @@
+@import '../oui/_settings';
 @import '../oui-icons/_variables';
 @import './_normalize';
 @import './_variables';
@@ -113,7 +114,7 @@
   &__container_complete {
     .oui-stepper__header::before {
       content: @oui-icon-index-success;
-      font-family: 'Oui Icons';
+      font-family: @oui-global-base-font-family-icon;
       font-weight: @oui-font-regular;
       color: @oui-stepper-step-icon-color_complete;
       background: @oui-stepper-step-icon-background_complete;

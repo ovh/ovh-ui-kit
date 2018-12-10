@@ -12,7 +12,7 @@
     flex-direction: row;
     margin-bottom: rem-calc(20);
     border: 1px solid @oui-color-ironlight;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .06);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.06);
     background-color: @oui-color-white;
   }
 
@@ -30,11 +30,9 @@
 
     & + & { border-top: 1px solid @oui-color-silver; }
 
-    /* stylelint-disable indentation */
     .phone({
       flex-direction: column;
     });
-    /* stylelint-enable indentation */
   }
 
   &__field {
@@ -43,11 +41,9 @@
     & + & {
       margin-left: rem-calc(10);
 
-      /* stylelint-disable indentation */
       .phone({
         margin-left: 0;
       });
-      /* stylelint-enable indentation */
     }
 
     &_adaptive {

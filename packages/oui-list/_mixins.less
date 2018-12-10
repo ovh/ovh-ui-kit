@@ -25,7 +25,6 @@
 
     &__header {
       display: block;
-
       padding: @header-padding;
       color: @title-color;
       font-weight: @oui-font-semibold;
@@ -49,7 +48,7 @@
     }
 
     &__item_current {
-      background-color: @link-active-background-color
+      background-color: @link-active-background-color;
     }
 
     &__text {
@@ -124,8 +123,7 @@
     .@{selector}__item,
     .@{selector}__sub-item,
     .@{selector}__link,
-    .@{selector}__text
-     {
+    .@{selector}__text {
       #oui > .text-ellipsis();
     }
 
@@ -173,11 +171,11 @@
     }
 
     .@{selector}__link:hover {
-      background-color: hsla(0, 0%, 100%, .5)
+      background-color: hsla(0, 0%, 100%, 0.5);
     }
 
     .@{selector}__link:focus {
-      background-color: hsla(0, 0%, 100%, .85)
+      background-color: hsla(0, 0%, 100%, 0.85);
     }
 
     .@{selector}__item_current > .@{selector}__link,
@@ -190,7 +188,7 @@
     }
   }
 
-  .list-separated (
+  .list-separated(
     @selector,
     @separator-color: @oui-list-separated-separator-color,
     @separator-size: @oui-list-separated-separator-size
@@ -204,7 +202,7 @@
     }
   }
 
-  .list-steps (
+  .list-steps(
     @selector,
     @checkbox-selector,
     @font-color: @oui-list-steps-font-color,
@@ -267,7 +265,6 @@
 
     .@{selector}__item,
     .@{selector}__item_disabled {
-
       .@{selector}__header {
         color: @font-color;
         line-height: 1.4;
@@ -314,7 +311,7 @@
         background-color: @icon-color-checked;
         color: @icon-color-checked;
         -webkit-text-stroke: 1px @icon-border-color-checked;
-        font-family: 'Oui Icons';
+        font-family: @oui-global-base-font-family-icon;
         font-size: @icon-check-size;
         font-weight: @oui-font-regular;
       }

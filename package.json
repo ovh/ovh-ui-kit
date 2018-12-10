@@ -11,8 +11,8 @@
     "build:icons-generator": "icon-font-generator packages/oui-icons/svg/*.svg -p oui-icon -o dist/icons -t span --types 'woff, woff2'",
     "build": "rimraf dist && npm run build:version && npm run build:icons && npm run build:less && npm run build:less-min",
     "test": "echo \"no tests for this project\"",
-    "fix": "stylefmt -r packages",
-    "lint": "stylelint --syntax less 'packages/**/*.less'",
+    "lint:css": "stylelint 'packages/**/*.less' --fix",
+    "lint": "yarn lint:css",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
     "version": "npm run build && git add dist packages/oui-icons/_icons.less packages/oui/_version.less && npm-scripts-config version",
@@ -37,7 +37,7 @@
     "npm-scripts-config": "^0.0.2",
     "npm-scripts-conventional-changelog": "^0.1.0",
     "rimraf": "^2.6.2",
-    "stylefmt": "^6.0.2",
-    "stylelint": "^9.6.0"
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0"
   }
 }
