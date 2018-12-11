@@ -4,7 +4,7 @@
 #oui {
   @oui-progress-height: rem-calc(24);
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-base(
     @height: @oui-progress-height,
     @margin: @oui-progress-margin
@@ -20,7 +20,7 @@
     appearance: none;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress(
     @background-color: @oui-progress-info-background-color,
     @foreground-color: @oui-progress-info-foreground-color,
@@ -52,7 +52,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-indeterminate() {
     .progress-bar-indeterminate();
 
@@ -65,7 +65,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-bar-base(
     @height: @oui-progress-height,
     @force-radius: false
@@ -90,7 +90,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-bar(
     @background-color: @oui-progress-info-foreground-color,
     @text-color: @oui-progress-info-text-color
@@ -99,12 +99,12 @@
     color: @text-color;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-bar-text-left() {
     text-align: left;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-bar-label() {
     display: inline-block;
     position: relative;
@@ -116,7 +116,7 @@
     white-space: nowrap;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-bar-threshold() {
     display: inline-block;
     position: absolute;
@@ -132,24 +132,25 @@
       height: @oui-progress-height;
       width: 1px;
       left: -1px;
-      background-color: rgba(100, 100, 100, .3);
+      background-color: rgba(100, 100, 100, 0.3);
     }
 
     font-size: @oui-progress-bar-text-font-size;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .progress-bar-indeterminate() {
-    background-image: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%);
+    background-image: linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%);
     background-size: @oui-progress-height * 2 @oui-progress-height, 100% 100%, 100% 100%;
     animation: animate-stripes 1s linear infinite;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   @keyframes animate-stripes {
     from {
       background-position-x: 0;
     }
+
     to {
       background-position-x: @oui-progress-height * 2;
     }

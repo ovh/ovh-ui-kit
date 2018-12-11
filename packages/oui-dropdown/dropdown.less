@@ -15,6 +15,53 @@
   }
 }
 
+// Dropdown option
+.oui-dropdown-option,
+.oui-button.oui-button_action-menu /* Deprecated: Support only for old use */ {
+  width: 100%;
+  line-height: @oui-dropdown-item-line-height;
+  display: block;
+  padding: @oui-dropdown-item-padding;
+  text-align: left;
+  font-size: @oui-dropdown-item-font-size;
+  font-weight: @oui-dropdown-item-font-weight;
+  color: @oui-dropdown-item-font-color;
+  border: none;
+  background-color: @oui-dropdown-item-background-color;
+
+  &,
+  &:focus,
+  &:hover {
+    #oui > .animate();
+
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-color: initial;
+    outline-offset: -2px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @oui-dropdown-item-background-color_active;
+    color: @oui-dropdown-item-font-color_active;
+  }
+
+  &:disabled {
+    background-color: @oui-dropdown-item-background-color;
+    color: @oui-dropdown-item-font-color_disabled;
+  }
+
+  .oui-icon {
+    padding: 0 rem-calc(5);
+    font-size: rem-calc(12);
+    color: inherit;
+  }
+}
+
 // Dropdown menu
 .oui-dropdown-menu {
   min-width: @oui-dropdown-menu-min-width;
@@ -29,7 +76,7 @@
   background-color: @oui-dropdown-menu-background-color;
   z-index: @oui-dropdown-menu-zindex;
 
-  // Item
+  /* Item */
   & > &__item:first-child,
   & > &__arrow + &__item {
     margin-top: @oui-dropdown-menu-spacing;
@@ -136,53 +183,6 @@
     &[x-placement$="end"] .oui-dropdown-menu__arrow {
       left: ~"calc(100% - 2 * (@{oui-dropdown-arrow-size} + @{oui-dropdown-arrow-margin}))";
     }
-  }
-}
-
-// Dropdown option
-.oui-button.oui-button_action-menu, // Deprecated: Support only for old use
-.oui-dropdown-option {
-  width: 100%;
-  line-height: @oui-dropdown-item-line-height;
-  display: block;
-  padding: @oui-dropdown-item-padding;
-  text-align: left;
-  font-size: @oui-dropdown-item-font-size;
-  font-weight: @oui-dropdown-item-font-weight;
-  color: @oui-dropdown-item-font-color;
-  border: none;
-  background-color: @oui-dropdown-item-background-color;
-
-  &,
-  &:focus,
-  &:hover {
-    #oui > .animate();
-
-    text-decoration: none;
-  }
-
-  &:focus {
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: initial;
-    outline-offset: -2px;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: @oui-dropdown-item-background-color_active;
-    color: @oui-dropdown-item-font-color_active;
-  }
-
-  &:disabled {
-    background-color: @oui-dropdown-item-background-color;
-    color: @oui-dropdown-item-font-color_disabled;
-  }
-
-  .oui-icon {
-    padding: 0 rem-calc(5);
-    font-size: rem-calc(12);
-    color: inherit;
   }
 }
 

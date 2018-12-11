@@ -18,15 +18,14 @@
     margin: @oui-pagination-margin;
     font-size: @oui-pagination-font-size;
 
-    /* stylelint-disable indentation */
     .phone({
       flex-direction: column-reverse;
       justify-content: inherit;
       align-items: center;
     });
-    /* stylelint-enable indentation */
 
-    .@{button-selector}, .@{button-group-selector} {
+    .@{button-selector},
+    .@{button-group-selector} {
       margin-bottom: 0;
     }
 
@@ -56,12 +55,10 @@
       flex-wrap: nowrap;
       margin-left: rem-calc(20);
 
-      /* stylelint-disable indentation */
       .phone({
         margin-bottom: rem-calc(10);
         margin-left: 0;
       });
-      /* stylelint-enable indentation */
 
       // Fix weird padding on Firefox <=56
       .@{button-secondary-selector} {
@@ -140,7 +137,7 @@
     &:hover {
       background-color: @oui-pagination-menu-item-background-hover;
       color: #fff;
-      letter-spacing: rem-calc(.1);
+      letter-spacing: rem-calc(0.1);
     }
   }
 }

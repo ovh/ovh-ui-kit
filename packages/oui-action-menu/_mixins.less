@@ -3,7 +3,7 @@
 @import './_variables';
 
 #oui {
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .action-menu-base() {
     padding: @oui-action-menu-padding;
     margin: 0;
@@ -12,10 +12,9 @@
     min-width: @oui-action-menu-min-width;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .action-menu-item-base(
-    @button-selector,
-    @icon-selector
+    @button-selector, @icon-selector
   ) {
     .@{button-selector} {
       overflow: visible;
@@ -25,7 +24,8 @@
       background-color: @oui-action-menu-background-color;
       color: @oui-action-menu-text-color;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         &:enabled {
           background-color: @oui-action-menu-item-active-background-color;
           color: @oui-action-menu-item-active-text-color;
@@ -44,7 +44,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .action-menu-item-divider-base() {
     display: block;
     height: 1px;
@@ -52,12 +52,13 @@
     background-color: @oui-action-menu-divider-color;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .action-menu-button(
     @action-menu-button-selector
   ) {
     #oui > .button-normalize();
     #oui > .animate();
+
     overflow: visible;
     width: @oui-action-button-size;
     height: @oui-action-button-size;
@@ -69,19 +70,8 @@
 
     &__foreground {
       #oui > .animate();
+
       fill: @oui-action-button-foreground-color;
-    }
-
-    &:hover {
-      outline: none;
-
-      background-color: @oui-action-button-hover-background-color;
-      border: none;
-
-      .@{action-menu-button-selector}__foreground {
-        fill: @oui-action-button-hover-foreground-color;
-        transform-origin: center;
-      }
     }
 
     &,
@@ -89,6 +79,17 @@
     &:focus {
       text-decoration: none;
       outline: none;
+    }
+
+    &:hover {
+      outline: none;
+      background-color: @oui-action-button-hover-background-color;
+      border: none;
+
+      .@{action-menu-button-selector}__foreground {
+        fill: @oui-action-button-hover-foreground-color;
+        transform-origin: center;
+      }
     }
 
     &:focus {
@@ -104,7 +105,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .action-menu-button_active(
     @action-menu-button-selector
   ) {

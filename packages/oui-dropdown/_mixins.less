@@ -1,7 +1,7 @@
 @import './_variables';
 
 #oui {
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .dropdown-base(
     @dropdown-selector
   ) {
@@ -22,7 +22,6 @@
     }
 
     &__content_arrow {
-      // stylelint-disable max-nesting-depth
       &[x-placement^="top"] {
         margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-margin;
 
@@ -67,7 +66,8 @@
         }
       }
 
-      &[x-placement^="bottom"], &[x-placement^="top"] {
+      &[x-placement^="bottom"],
+      &[x-placement^="top"] {
         &[x-placement$="start"] {
           .@{dropdown-selector}__arrow {
             left: 0;
@@ -101,7 +101,6 @@
           border: @oui-dropdown-arrow-inner-size transparent solid;
         }
       }
-      // stylelint-enable max-nesting-depth
     }
   }
 }

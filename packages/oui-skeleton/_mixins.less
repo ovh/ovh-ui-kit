@@ -5,6 +5,7 @@
       @pair: extract(@oui-skeleton-sizes, @i);
       @key: extract(@pair, 1);
       @value: extract(@pair, 2);
+
       &_@{key} {
         width: @value;
       }

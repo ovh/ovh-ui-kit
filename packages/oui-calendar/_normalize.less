@@ -1,15 +1,13 @@
 @import '../oui-typography/_mixins';
 
 .flatpickr {
-  /* stylelint-disable declaration-no-important */
-  &-calendar {
-    width: auto !important; // Fix too wide calendar (inline style)
-  }
-  /* stylelint-enable */
-
-  // Container
   &-calendar {
     #oui > .base-font();
+
+    /* Fix too wide calendar (inline style) */
+    /* stylelint-disable declaration-no-important */
+    width: auto !important;
+    /* stylelint-enable declaration-no-important */
 
     color: @oui-calendar-font-color;
     font-size: @oui-calendar-font-size;
@@ -17,7 +15,7 @@
     border: @oui-calendar-border;
     box-shadow: @oui-calendar-box-shadow;
 
-    // Top Arrow
+    /* Top Arrow */
     &::before,
     &::after {
       margin: 0;
@@ -113,11 +111,11 @@
     font-size: inherit;
     font-weight: inherit;
 
+    /* stylelint-disable no-descending-specificity */
     .numInputWrapper {
       margin-right: -@oui-calendar-title-arrow-width;
     }
-
-    span.cur-month:hover { background: none; }
+    /* stylelint-enable no-descending-specificity */
 
     span.cur-month,
     input.cur-year {
@@ -126,12 +124,16 @@
       font-weight: inherit;
     }
 
+    span.cur-month:hover { background: none; }
+
     input.cur-year {
       padding-left: rem-calc(5);
 
+      /* stylelint-disable no-descending-specificity */
       ~ span {
         margin-right: rem-calc(-14);
       }
+      /* stylelint-enable no-descending-specificity */
     }
   }
 
@@ -147,6 +149,7 @@
   &-weekwrapper &-weeks {
     width: @oui-calendar-cell-width;
     padding: 0;
+    box-shadow: 1px 0 0 @oui-calendar-separator-color;
   }
 
   &-weekwrapper &-weekday,
@@ -156,8 +159,6 @@
     font-weight: inherit;
     color: @oui-calendar-cell-font-color_disabled;
   }
-
-  &-weekwrapper &-weeks { box-shadow: 1px 0 0 @oui-calendar-separator-color; }
 
   &-days {
     width: ~"calc(@{oui-calendar-cell-width} * 7)";
@@ -183,13 +184,6 @@
     border-width: @oui-calendar-cell-border-width;
     border-radius: @oui-calendar-cell-border-radius;
 
-    &:focus {
-      outline-width: 1px;
-      outline-style: dotted;
-      outline-color: initial;
-      outline-offset: -2px;
-    }
-
     &,
     .rangeMode & { margin-top: rem-calc(8); }
 
@@ -199,6 +193,7 @@
       color: @oui-calendar-cell-font-color_disabled;
     }
 
+    /* stylelint-disable no-descending-specificity */
     &,
     &.prevMonthDay,
     &.nextMonthDay {
@@ -209,6 +204,14 @@
         border-color: @oui-calendar-cell-background-color_hover;
         background-color: @oui-calendar-cell-background-color_hover;
       }
+    }
+    /* stylelint-enable no-descending-specificity */
+
+    &:focus {
+      outline-width: 1px;
+      outline-style: dotted;
+      outline-color: initial;
+      outline-offset: -2px;
     }
 
     // Selection
@@ -265,6 +268,7 @@
       &.nextMonthDay.inRange { border-color: @oui-calendar-today-border-color; }
     }
 
+    /* stylelint-disable no-descending-specificity */
     // Disabled
     &.disabled,
     &.disabled:hover,
@@ -277,8 +281,9 @@
       color: @oui-calendar-cell-font-color_disabled;
       background: transparent;
 
-      &.today { border-color: @oui-calendar-today-border-color_disabled }
+      &.today { border-color: @oui-calendar-today-border-color_disabled; }
     }
+    /* stylelint-enable no-descending-specificity */
   }
 
   // Timepicker
@@ -290,12 +295,14 @@
     align-items: stretch;
     justify-content: center;
 
+    /* stylelint-disable no-descending-specificity */
     .numInputWrapper {
       width: ~"calc(@{oui-calendar-cell-width} * 3)";
       max-width: ~"calc(@{oui-calendar-cell-width} * 3)";
       height: 100%;
       flex: auto;
     }
+    /* stylelint-enable no-descending-specificity */
 
     & &-separator {
       width: auto;

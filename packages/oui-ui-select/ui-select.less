@@ -1,14 +1,14 @@
 @import './_mixins';
 @import './_normalize';
 @import './_variables';
-
 @import '../oui-button/_mixins';
 @import '../oui-input/_mixins';
 @import '../oui-dropdown/_variables';
 @import '../oui-typography/_constants';
 
-// Keep the templates classnames
-// Since they are used directly in the plugin
+/* Keep the templates classnames
+ * Since they are used directly in the plugin
+ */
 .oui-ui-select {
   position: relative;
   margin: @oui-ui-select-margin;
@@ -92,11 +92,15 @@
       color: @oui-dropdown-item-font-color_disabled;
     }
 
-    .oui-icon {
-      &::before {
-        color: @oui-color-sapphire;
-        font-size: @oui-ui-select-choices-icon-size;
-      }
+    .oui-icon::before {
+      color: @oui-color-sapphire;
+      font-size: @oui-ui-select-choices-icon-size;
+    }
+
+    &-inner {
+      line-height: @oui-dropdown-item-line-height;
+      flex: 1;
+      padding: @oui-dropdown-item-padding;
     }
 
     &_grouped .ui-select-choices-row-inner { padding-left: @oui-ui-select-choices-grouped-padding-left; }
@@ -105,12 +109,6 @@
       background-color: @oui-ui-select-choices-button-background-selected;
 
       .oui-icon { display: block; }
-    }
-
-    &-inner {
-      line-height: @oui-dropdown-item-line-height;
-      flex: 1;
-      padding: @oui-dropdown-item-padding;
     }
   }
 
@@ -128,9 +126,9 @@
     &:focus,
     &_focus {
       background-color: #f2f2f2;
-      border-color: #999999;
+      border-color: #999;
 
-      // To override reset style
+      /* To override reset style */
       &[tabindex="-1"] {
         outline-width: 1px;
         outline-style: dotted;
@@ -151,7 +149,7 @@
 
     margin: 0;
 
-    // To keep track of keydown
+    /* To keep track of keydown */
     &_hidden {
       opacity: 0;
       height: 0;

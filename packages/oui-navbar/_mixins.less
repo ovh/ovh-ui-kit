@@ -23,12 +23,12 @@
     padding: 0;
     list-style: none;
 
-    // Scroll for responsive
+    /* Scroll for responsive */
     & when (@is-menu-list = true) {
       overflow: auto;
     }
 
-    // List items
+    /* List items */
     &__item {
       display: block;
       border-bottom: @border-bottom;
@@ -42,7 +42,7 @@
       }
     }
 
-    // Variant 'end' for List, align 'right'
+    /* Variant 'end' for List, align 'right' */
     &_end {
       flex-grow: 1;
       justify-content: flex-end;
@@ -107,6 +107,17 @@
     @badge-radius: @oui-navbar-badge-radius,
     @badge-background-color: @oui-navbar-badge-background-color
   ) {
+    &[aria-haspopup]::after {
+      display: none;
+    }
+
+    .medium({
+      padding: 0;
+      font-size: 0;
+      text-align: center;
+      white-space: nowrap;
+    });
+
     .oui-icon {
       width: @icon-size;
       height: @icon-size;
@@ -116,6 +127,12 @@
       font-size: @icon-size;
       color: @icon-color;
       vertical-align: middle;
+
+      .medium({
+        line-height: 1;
+        margin: 0;
+        vertical-align: middle;
+      });
 
       &__badge {
         min-width: @badge-size;
@@ -135,36 +152,11 @@
         border-radius: @badge-radius;
         background: @badge-background-color;
 
-        /* stylelint-disable indentation */
         .medium({
           top: 50%;
           transform: translate(50%, -50%);
         });
-        /* stylelint-enable indentation */
       }
-    }
-
-    &[aria-haspopup]::after {
-      display: none;
-    }
-
-    /* stylelint-disable indentation */
-    .medium({
-      padding: 0;
-      font-size: 0;
-      text-align: center;
-      white-space: nowrap;
-    });
-    /* stylelint-enable indentation */
-
-    .oui-icon {
-      /* stylelint-disable indentation */
-      .medium({
-        line-height: 1;
-        margin: 0;
-        vertical-align: middle;
-      });
-      /* stylelint-enable indentation */
     }
   }
 
@@ -172,7 +164,7 @@
     @origin: left
   ) {
     opacity: 1;
-    visibility: hidden; // For ARIA
+    visibility: hidden; /* For ARIA */
     pointer-events: auto;
     transition: transform 0.25s ease-out, visibility 0.25s ease-out;
 
@@ -191,7 +183,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar(
     @height: @oui-navbar-height,
     @font-size: @oui-navbar-font-size,
@@ -206,7 +198,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-
     padding: 0;
     position: relative;
     user-select: none;
@@ -215,10 +206,10 @@
     background-color: @background-color;
     z-index: @z-index;
 
-    // variant 'fixed'
+    /* variant 'fixed' */
     &_fixed {
       position: fixed;
-      top:0;
+      top: 0;
       left: 0;
       right: 0;
     }
@@ -264,13 +255,13 @@
     }
   }
 
-  // Deprecated: Support only for old use
-  .navbar-menu_fixed (
+  /* Deprecated: Support only for old use */
+  .navbar-menu_fixed(
     @width: @oui-navbar-menu-width,
     @height: @oui-navbar-height,
     @box-shadow: @oui-navbar-menu-box-shadow_fixed
   ) {
-    width: 100%; // For smaller screen than max-width
+    width: 100%; /* For smaller screen than max-width */
     min-width: 0;
     max-width: @width;
     display: flex;
@@ -285,7 +276,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-backdrop(
     @top: @oui-navbar-height,
     @z-index: @oui-navbar-z-index,
@@ -304,17 +295,15 @@
     z-index: -1;
 
     &_active {
-      /* stylelint-disable indentation */
       .tablet({
         opacity: @opacity;
         pointer-events: auto;
         z-index: @z-index;
       });
-      /* stylelint-enable indentation */
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-link_external(
     @icon-size: @oui-navbar-external-size,
     @icon-spacing: @oui-navbar-external-spacing,
@@ -322,14 +311,14 @@
   ) {
     .oui-icon {
       margin-left: @icon-spacing;
-      margin-top: -.3rem; // For a better centering
+      margin-top: -0.3rem; /* For a better centering */
       vertical-align: middle;
       font-size: @icon-size;
       color: @icon-color;
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-link_menu(
     @arrow-color: @oui-navbar-arrow-color,
     @arrow-padding: @oui-navbar-arrow-padding,
@@ -345,7 +334,7 @@
     // Add arrow for button with popup
     &[aria-haspopup="true"]::after {
       content: @oui-icon-index-chevron-right;
-      font-family: 'Oui Icons';
+      font-family: @oui-global-base-font-family-icon;
       font-size: @arrow-size;
       color: @arrow-color;
       padding: 0;
@@ -356,7 +345,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-menu(
     @width: @oui-navbar-menu-width,
     @padding: @oui-navbar-menu-padding,
@@ -434,7 +423,7 @@
       color: @font-color;
       text-align: center;
 
-      // Gradient over items
+      /* Gradient over items */
       &::before {
         content: ' ';
         height: rem-calc(36);
@@ -495,12 +484,12 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-menu-animation_opacity(
     @opacity: 1
   ) {
     opacity: 0;
-    visibility: hidden; // For ARIA
+    visibility: hidden; /* For ARIA */
     pointer-events: none;
     transform: translateY(-10%);
 
@@ -513,7 +502,7 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-toggler(
     @line-height: @oui-navbar-toggler-line-height,
     @padding: @oui-navbar-toggler-padding,
@@ -539,11 +528,9 @@
     margin-right: @margin-right;
     text-align: center;
 
-    /* stylelint-disable indentation */
     .tablet({
       display: flex;
     });
-    /* stylelint-enable indentation */
 
     &__hamburger {
       width: @hamburger-width;
@@ -560,14 +547,14 @@
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        transition: .25s ease-out;
+        transition: 0.25s ease-out;
       }
 
       span:nth-child(1) { top: 0; }
 
       span:nth-child(2),
       span:nth-child(3) {
-        width: (@hamburger-width * .75);
+        width: (@hamburger-width * 0.75);
         margin-top: -@hamburger-bar-size / 2;
         top: 50%;
       }
@@ -603,22 +590,18 @@
     }
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .navbar-helpers() {
     &_desktop-only {
-      /* stylelint-disable indentation */
-      .tablet({
+      @media screen and (max-width: (@oui-responsive-breakpoint-tablet - 1px)) {
         display: none !important;
-      });
-      /* stylelint-enable indentation */
+      }
     }
 
     &_mobile-only {
-      /* stylelint-disable indentation */
-      .desktop({
+      @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
         display: none !important;
-      });
-      /* stylelint-enable indentation */
+      }
     }
   }
 }
