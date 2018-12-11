@@ -1,3 +1,23 @@
+<a name="2.23.0"></a>
+# [2.23.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.22.2...v2.23.0) (2018-12-11)
+
+
+### Bug Fixes
+
+* **oui-navbar:** fix line-height on navbar links ([#320](https://github.com/ovh-ux/ovh-ui-kit/issues/320)) ([dba752d](https://github.com/ovh-ux/ovh-ui-kit/commit/dba752d))
+* **oui-radio:** light background color ([#316](https://github.com/ovh-ux/ovh-ui-kit/issues/316)) ([3a23ba5](https://github.com/ovh-ux/ovh-ui-kit/commit/3a23ba5))
+
+
+### Features
+
+* **oui-autocomplete:** add oui-autocomplete directive ([#310](https://github.com/ovh-ux/ovh-ui-kit/issues/310)) ([84be6e1](https://github.com/ovh-ux/ovh-ui-kit/commit/84be6e1))
+* **oui-color:** add color helpers ([#313](https://github.com/ovh-ux/ovh-ui-kit/issues/313)) ([a144ee1](https://github.com/ovh-ux/ovh-ui-kit/commit/a144ee1))
+* **oui-dual-list:** add dual-list component ([#307](https://github.com/ovh-ux/ovh-ui-kit/issues/307)) ([9e03cb3](https://github.com/ovh-ux/ovh-ui-kit/commit/9e03cb3))
+* **oui-file:** add file component ([#312](https://github.com/ovh-ux/ovh-ui-kit/issues/312)) ([e31652e](https://github.com/ovh-ux/ovh-ui-kit/commit/e31652e))
+* **oui-tabs:** add tabs component ([#311](https://github.com/ovh-ux/ovh-ui-kit/issues/311)) ([7ef8d28](https://github.com/ovh-ux/ovh-ui-kit/commit/7ef8d28))
+
+
+
 <a name="2.22.2"></a>
 ## [2.22.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.22.1...v2.22.2) (2018-12-03)
 
