@@ -4,6 +4,7 @@
 @import './_variables';
 
 #oui {
+  // Deprecated: Support only for old use
   .color-badge-base(
     @border-color: @oui-color-badge-border-color,
     @palette-size: @oui-color-badge-palette-size,
@@ -42,6 +43,7 @@
     }
   }
 
+  // Deprecated: Support only for old use
   .color-badge-variant(
     @palette-size: @oui-color-badge-variant-palette-size
   ) {
@@ -57,12 +59,14 @@
     }
   }
 
+  // Deprecated: Support only for old use
   .color-badge-theme(@name, @color) {
     &_@{name}::before {
       background-color: @color;
     }
   }
 
+  // Deprecated: Support only for old use
   .color-badge-themes(@index: length(@oui-color-badge-themes)) when (@index > 0) {
     .color-badge-themes(@index - 1);
     @name: extract(@oui-color-badge-themes, @index);

@@ -1,17 +1,180 @@
 @import './_mixins';
 @import './_normalize';
+@import './_variables';
 
-.oui-ui-select-container {
-  @oui-button-selector: oui-button;
-  @oui-button-dropdown-selector: oui-button_dropdown;
-  @oui-icon-selector: oui-icon;
-  @oui-input-selector: oui-input;
+@import '../oui-button/_mixins';
+@import '../oui-input/_mixins';
+@import '../oui-dropdown/_variables';
+@import '../oui-typography/_constants';
 
-  #oui > .ui-select-normalize();
-  #oui > .ui-select-container-base(
-    @oui-button-selector,
-    @oui-button-dropdown-selector,
-    @oui-icon-selector,
-    @oui-input-selector
-  );
+// Keep the templates classnames
+// Since they are used directly in the plugin
+.oui-ui-select {
+  position: relative;
+  margin: @oui-ui-select-margin;
+
+  .ui-select-dropdown {
+    min-width: @oui-dropdown-menu-min-width;
+    width: 100%;
+    max-width: 100%;
+    display: none;
+    margin: 0;
+    position: absolute;
+    list-style: none;
+    text-align: initial;
+    box-shadow: @oui-dropdown-menu-box-shadow;
+    border: @oui-dropdown-menu-border-width @oui-dropdown-menu-border-color solid;
+    background-color: @oui-dropdown-menu-background-color;
+    z-index: @oui-dropdown-menu-zindex;
+  }
+
+  [aria-expanded="true"] ~ .ui-select-dropdown { display: block; }
+
+  &:not(.direction-up) .ui-select-dropdown { border-top: none; }
+
+  .ui-select-choices {
+    width: 100%;
+    max-height: @oui-ui-select-max-height;
+    margin: 0;
+    padding: @oui-dropdown-menu-spacing 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+
+    &-group-label {
+      padding: rem-calc(4) @oui-ui-select-choices-padding-x;
+      font-size: @oui-ui-select-choices-group-font-size;
+      color: @oui-color-sapphire;
+    }
+  }
+
+  .ui-select-choices-row {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    font-size: @oui-dropdown-item-font-size;
+    font-weight: @oui-dropdown-item-font-weight;
+    color: @oui-dropdown-item-font-color;
+    border: none;
+    background-color: @oui-dropdown-item-background-color;
+
+    .oui-icon {
+      flex: 0;
+      display: none;
+      margin-right: rem-calc(12);
+    }
+
+    &,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline-width: 1px;
+      outline-style: dotted;
+      outline-color: initial;
+      outline-offset: -2px;
+    }
+
+    &:hover,
+    &:focus,
+    &_active {
+      background-color: @oui-dropdown-item-background-color_active;
+      color: @oui-dropdown-item-font-color_active;
+    }
+
+    &:disabled {
+      background-color: @oui-dropdown-item-background-color;
+      color: @oui-dropdown-item-font-color_disabled;
+    }
+
+    .oui-icon {
+      &::before {
+        color: @oui-color-sapphire;
+        font-size: @oui-ui-select-choices-icon-size;
+      }
+    }
+
+    &_grouped .ui-select-choices-row-inner { padding-left: @oui-ui-select-choices-grouped-padding-left; }
+
+    &_selected {
+      background-color: @oui-ui-select-choices-button-background-selected;
+
+      .oui-icon { display: block; }
+    }
+
+    &-inner {
+      line-height: @oui-dropdown-item-line-height;
+      flex: 1;
+      padding: @oui-dropdown-item-padding;
+    }
+  }
+
+  .ui-select-match {
+    #oui > .button-normalize();
+    #oui > .button-base();
+    #oui > .button-hollow();
+    #oui > .button-dropdown();
+
+    max-width: 100%;
+    width: 100%;
+    height: @oui-ui-select-height;
+    text-align: left;
+
+    &:focus,
+    &_focus {
+      background-color: #f2f2f2;
+      border-color: #999999;
+
+      // To override reset style
+      &[tabindex="-1"] {
+        outline-width: 1px;
+        outline-style: dotted;
+        outline-color: initial;
+        outline-offset: -2px;
+      }
+    }
+
+    .oui-field_error & {
+      #oui > .button-dropdown-error();
+    }
+  }
+
+  .ui-select-search {
+    #oui > .input-normalize();
+    #oui > .input-base();
+    #oui > .input-status();
+
+    margin: 0;
+
+    // To keep track of keydown
+    &_hidden {
+      opacity: 0;
+      height: 0;
+      min-height: 0;
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+  }
+
+  .ui-select-highlight { font-weight: @oui-font-bold; }
+
+  .ui-select-offscreen {
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    outline: 0;
+    left: 0;
+    top: 0;
+  }
 }
