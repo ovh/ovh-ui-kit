@@ -558,7 +558,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("./dist/icons/icons.woff2?v=2.23.0") format("woff2"), url("./dist/icons/icons.woff?v=2.23.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.23.0") format("woff2"), url("./icons/icons.woff?v=2.23.0") format("woff");
 }
 .oui-icon-badge {
   width: 9rem;
