@@ -1,3 +1,14 @@
+<a name="2.23.1"></a>
+## [2.23.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.23.0...v2.23.1) (2018-12-14)
+
+
+### Bug Fixes
+
+* **oui-icon:** fix icon path ([33438e6](https://github.com/ovh-ux/ovh-ui-kit/commit/33438e6))
+* **oui-typography:** fix fonts folder ([89bc860](https://github.com/ovh-ux/ovh-ui-kit/commit/89bc860))
+
+
+
 <a name="2.23.0"></a>
 # [2.23.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.22.2...v2.23.0) (2018-12-11)
 
