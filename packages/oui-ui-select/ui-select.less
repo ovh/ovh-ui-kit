@@ -1,6 +1,7 @@
 @import './_mixins';
 @import './_normalize';
 @import './_variables';
+@import '../oui/_settings';
 @import '../oui-button/_mixins';
 @import '../oui-button/_variables';
 @import '../oui-input/_mixins';
@@ -155,8 +156,8 @@
 
       &:focus,
       &_focus {
-        background-color: #f2f2f2;
-        border-color: #999;
+        background-color: @oui-color-concrete;
+        border-color: @oui-color-dusty;
         outline-width: 1px;
         outline-style: dotted;
         outline-color: initial;
@@ -174,7 +175,7 @@
       width: auto !important; /* Override inline style */
       margin: 0;
       padding: 0;
-      letter-spacing: 0.007em;
+      letter-spacing: @oui-global-base-letter-spacing;
       font-weight: @oui-font-semibold;
       outline: none;
       border: none;
@@ -198,8 +199,8 @@
 
       &:focus,
       &_focus {
-        background-color: #f2f2f2;
-        border-color: #999;
+        background-color: @oui-color-concrete;
+        border-color: @oui-color-dusty;
 
         /* To override reset style */
         outline-width: 1px !important;
