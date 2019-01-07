@@ -152,7 +152,7 @@
       padding-top: @oui-ui-select-multiple-padding-y;
       padding-bottom: @oui-ui-select-multiple-padding-y;
       text-align: left;
-      white-space: initial;
+      white-space: normal;
 
       &:focus,
       &_focus {
@@ -162,6 +162,15 @@
         outline-style: dotted;
         outline-color: initial;
         outline-offset: -2px;
+      }
+
+      &_disabled,
+      &_disabled:hover,
+      &_disabled:focus {
+        color: @oui-button-hollow-font-color_disabled;
+        border-color: @oui-button-hollow-border-color_disabled;
+        background-color: @oui-button-hollow-background-color_disabled;
+        cursor: auto;
       }
 
       .oui-field_error & {
