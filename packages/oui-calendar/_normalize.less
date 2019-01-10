@@ -1,18 +1,17 @@
 @import '../oui-typography/_mixins';
+@import '../oui-button/_variables';
 
 .flatpickr {
   &-calendar {
     #oui > .base-font();
 
-    /* Fix too wide calendar (inline style) */
-    /* stylelint-disable declaration-no-important */
+    /* Fix calendar's width inline style */
     width: auto !important;
-    /* stylelint-enable declaration-no-important */
-
     color: @oui-calendar-font-color;
     font-size: @oui-calendar-font-size;
     font-weight: @oui-calendar-font-weight;
     border: @oui-calendar-border;
+    border-radius: @oui-calendar-border-radius;
     box-shadow: @oui-calendar-box-shadow;
 
     /* Top Arrow */
@@ -27,13 +26,13 @@
     &::after { border: @oui-dropdown-arrow-inner-size transparent solid; }
 
     &.arrowTop {
-      margin-top: @oui-dropdown-arrow-margin;
+      margin-top: @oui-dropdown-arrow-size + @oui-dropdown-margin;
 
       &::before { border-bottom-color: @oui-calendar-border-color; }
     }
 
     &.arrowBottom {
-      margin-bottom: @oui-dropdown-arrow-margin;
+      margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-margin;
 
       &::before { border-top-color: @oui-calendar-border-color; }
     }
@@ -41,7 +40,12 @@
     &.rightMost::before,
     &.rightMost::after { transform: translateX(50%); }
 
-    &.inline { box-shadow: none; }
+    &.inline {
+      top: auto;
+      box-shadow: none;
+    }
+
+    &.noCalendar { width: @oui-calendar-time-width !important; /* Override inline style */ }
 
     // Inputs
     .numInputWrapper {
@@ -289,8 +293,9 @@
   // Timepicker
   &-time {
     line-height: @oui-calendar-time-height;
-    max-height: @oui-calendar-time-height;
+    max-height: 100%;
     margin: 0 @oui-calendar-header-spacing;
+    padding: @oui-calendar-time-padding;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -304,6 +309,10 @@
     }
     /* stylelint-enable no-descending-specificity */
 
+    .numInput {
+      border-radius: @oui-calendar-cell-border-radius;
+    }
+
     & &-separator {
       width: auto;
       flex: 1;
@@ -312,7 +321,15 @@
 
   &-calendar.showTimeInput.hasTime &-time {
     height: @oui-calendar-time-height;
+    box-sizing: content-box;
     border: none;
+  }
+
+  &-calendar.inline.hasTime &-time {
+    height: @oui-calendar-time-height;
+    line-height: @oui-calendar-time-height;
+    padding: 0;
+    margin: 0;
   }
 
   &-calendar.showTimeInput.hasTime &-innerContainer + &-time { border-top: @oui-calendar-header-border-bottom; }
@@ -320,13 +337,14 @@
   &-time &-am-pm {
     width: @oui-calendar-cell-width;
     max-width: @oui-calendar-cell-width;
+    min-width: @oui-calendar-cell-width;
     height: 100%;
     font-size: @oui-calendar-font-size;
     font-weight: @oui-calendar-font-weight;
-    color: @oui-calendar-input-font-color;
-    background: @oui-calendar-input-background-color;
+    color: @oui-calendar-button-font-color;
+    background: @oui-calendar-button-background-color;
 
     &:hover,
-    &:focus { background-color: @oui-calendar-input-background-color_hover; }
+    &:focus { background-color: @oui-calendar-button-background-color_hover; }
   }
 }
