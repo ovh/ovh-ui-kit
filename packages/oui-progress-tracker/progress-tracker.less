@@ -98,6 +98,25 @@
     }
   }
 
+  &__step_error {
+    .oui-progress-tracker__status {
+      color: @oui-progress-tracker-label-color-error;
+      font-weight: @oui-progress-tracker-status-size_error;
+    }
+
+    .oui-progress-tracker__status::before {
+      content: @oui-progress-tracker-icon-error;
+      font-family: "Oui Icons";
+      color: @oui-progress-tracker-font-color-error;
+      font-size: @oui-progress-tracker-icon-size_error;
+      background-color: @oui-progress-tracker-background-color-error;
+    }
+
+    &:not(:last-child)::after {
+      background-color: @oui-progress-tracker-background-color-error;
+    }
+  }
+
   &__step_active &__status {
     color: @oui-progress-tracker-label-color-active;
     font-weight: @oui-font-semibold;
