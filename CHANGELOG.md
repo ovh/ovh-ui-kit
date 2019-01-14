@@ -1,3 +1,23 @@
+<a name="2.24.0"></a>
+# [2.24.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.23.1...v2.24.0) (2019-01-14)
+
+
+### Bug Fixes
+
+* **oui-message:** remove max-width ([583760c](https://github.com/ovh-ux/ovh-ui-kit/commit/583760c))
+* **oui-navbar:** center aside links ([#330](https://github.com/ovh-ux/ovh-ui-kit/issues/330)) ([429ae19](https://github.com/ovh-ux/ovh-ui-kit/commit/429ae19))
+* **oui-navbar:** fix dropdown link height ([#326](https://github.com/ovh-ux/ovh-ui-kit/issues/326)) ([82740cf](https://github.com/ovh-ux/ovh-ui-kit/commit/82740cf))
+
+
+### Features
+
+* **oui-password:** add password component ([#325](https://github.com/ovh-ux/ovh-ui-kit/issues/325)) ([5d2a3b0](https://github.com/ovh-ux/ovh-ui-kit/commit/5d2a3b0))
+* **oui-progress-tracker:** add error modifier ([#328](https://github.com/ovh-ux/ovh-ui-kit/issues/328)) ([70e7a66](https://github.com/ovh-ux/ovh-ui-kit/commit/70e7a66))
+* **oui-select:** add multiple selection ([#324](https://github.com/ovh-ux/ovh-ui-kit/issues/324)) ([e7871dd](https://github.com/ovh-ux/ovh-ui-kit/commit/e7871dd))
+* **oui-timepicker:** add timepicker component ([#327](https://github.com/ovh-ux/ovh-ui-kit/issues/327)) ([02c603c](https://github.com/ovh-ux/ovh-ui-kit/commit/02c603c))
+
+
+
 <a name="2.23.1"></a>
 ## [2.23.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.23.0...v2.23.1) (2018-12-14)
 
