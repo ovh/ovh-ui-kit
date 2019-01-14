@@ -49,8 +49,8 @@ oui-clipboard { display: block; }
 
       &:focus {
         #oui > .animate();
-        transition-property: border-color, box-shadow, background-color;
 
+        transition-property: border-color, box-shadow, background-color;
         border-color: @oui-input-border-color-focus;
         outline: none;
         box-shadow: @oui-input-shadow-focus;
@@ -74,7 +74,7 @@ oui-clipboard { display: block; }
         border-color: transparent;
         background: transparent;
         box-shadow: none;
-        z-index: 2; // Avoid to be hidden by inputs
+        z-index: 2; /* Avoid to be hidden by inputs */
       }
     }
 
@@ -84,5 +84,4 @@ oui-clipboard { display: block; }
       font-size: inherit;
     }
   }
-
 }

@@ -1,3 +1,4 @@
+@import '../oui/_settings';
 @import '../oui-animation/_mixins';
 @import '../oui-dropdown/_variables';
 @import '../oui-typography/_constants';
@@ -86,7 +87,7 @@
     height: @arrow-size;
     margin: auto;
     color: @arrow-color;
-    font-family: 'Oui Icons';
+    font-family: @oui-global-base-font-family-icon;
     font-size: @arrow-size;
     line-height: 1;
     font-weight: @oui-font-regular;
@@ -102,6 +103,7 @@
 
     &::after {
       .datagrid-header-arrow();
+
       opacity: 0;
       content: @oui-icon-index-arrow-up;
     }
@@ -109,7 +111,7 @@
     &:hover::after {
       #oui > .animate();
 
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &:focus::after,
@@ -128,6 +130,7 @@
 
     &::after {
       .datagrid-header-arrow();
+
       opacity: 0;
       content: @oui-icon-index-arrow-down;
     }
@@ -135,7 +138,7 @@
     &:hover::after {
       #oui > .animate();
 
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &:focus::after,
@@ -229,7 +232,7 @@
       width: @oui-datagrid-action-column-width;
       height: 100%;
       border-left: 1px solid #e4e4e4;
-      box-shadow: -10px 0 10px -5px rgba(0,0,0,0.08);
+      box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.08);
       pointer-events: none;
       opacity: 0;
     }
@@ -244,7 +247,7 @@
       width: @oui-datagrid-checkbox-column-width;
       height: 100%;
       border-right: 1px solid #e4e4e4;
-      box-shadow: 10px 0 10px -5px rgba(0,0,0,0.08);
+      box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.08);
       pointer-events: none;
       opacity: 0;
     }

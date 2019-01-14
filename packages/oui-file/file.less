@@ -19,7 +19,7 @@
   &__remove {
     width: @oui-file-icon-width;
     height: @oui-file-icon-width;
-    display: flex; // For a better vertical centering
+    display: flex; /* For a better vertical centering */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@
     text-align: center;
     border: none;
     background: none;
-    z-index: 1; // Avoid to be hidden by inputs
+    z-index: 1; /* Avoid to be hidden by inputs */
     cursor: pointer;
 
     &:focus {
@@ -107,8 +107,8 @@
 
     &:focus {
       #oui > .animate();
-      transition-property: border-color, box-shadow, background-color;
 
+      transition-property: border-color, box-shadow, background-color;
       border-color: @oui-input-border-color-focus;
       outline: none;
       box-shadow: @oui-input-shadow-focus;
@@ -147,6 +147,16 @@
 
   // Field Error
   &_error &__label {
+    &::-moz-selection {
+      background: @oui-color-error-dark;
+      color: #fff;
+    }
+
+    &::selection {
+      background: @oui-color-error-dark;
+      color: #fff;
+    }
+
     &:not(:disabled),
     &:not(:disabled):hover,
     &:not(:disabled):active,
@@ -160,16 +170,6 @@
 
     &:not(:disabled):focus {
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
-    }
-
-    &::selection {
-      background: @oui-color-error-dark;
-      color: #fff;
-    }
-
-    &::-moz-selection {
-      background: @oui-color-error-dark;
-      color: #fff;
     }
   }
 
@@ -197,7 +197,7 @@
     border: @oui-file-droparea-border_hover;
     background-color: @oui-file-droparea-background-color_hover;
 
-    .oui-button { opacity: .3; }
+    .oui-button { opacity: 0.3; }
 
     // Avoid text to interfer with "dragoover" event
     &::before {

@@ -21,9 +21,11 @@
     font-weight: @font-weight;
     letter-spacing: @letter-spacing;
     border-radius: @radius;
-    // Required to fix alignment when a button is beside of an
-    // inline-flex element, otherwise inline-flex are pushed to
-    // the bottom.
+
+    /* Required to fix alignment when a button is beside of an
+     * inline-flex element, otherwise inline-flex are pushed to
+     * the bottom.
+     */
     vertical-align: top;
     color: @font-color;
 
@@ -158,7 +160,7 @@
       cursor: default;
       box-shadow: none;
       border-color: @oui-action-button-border-color_disabled;
-      background-color: @oui-action-button-background-color_disabled  ;
+      background-color: @oui-action-button-background-color_disabled;
 
       circle {
         fill: @oui-action-button-foreground-color_disabled;
@@ -289,19 +291,18 @@
     @icon-font-color: @oui-button-icon-alone-font-color,
     @icon-font-color_hover: @oui-button-icon-alone-font-color_hover
   ) {
-
     background: @background;
     min-width: @min-width;
     padding-left: @padding-left;
     padding-right: @padding-right;
     margin-right: @margin-right;
 
-    .@{icon-selector}{
+    .@{icon-selector} {
       color: @icon-font-color;
     }
 
     .@{icon-selector}:hover,
-    .@{icon-selector}:focus{
+    .@{icon-selector}:focus {
       color: @icon-font-color_hover;
     }
 
@@ -343,7 +344,7 @@
     }
   }
 
-  .button-link (
+  .button-link(
     @icon-selector: oui-icon,
     @icon-color: @oui-button-link-icon-color,
     @font-color: @oui-button-link-font-color,
@@ -351,7 +352,7 @@
     @font-color_disabled: @oui-button-link-font-color_disabled,
     @font-weight: @oui-button-link-font-weight,
     @padding: @oui-button-link-padding
-  ){
+  ) {
     min-width: 0;
     padding: @padding;
     border: 0;
@@ -379,9 +380,9 @@
     }
   }
 
-  .button-full-width (
+  .button-full-width(
     @icon-selector
-  ){
+  ) {
     max-width: none;
     width: 100%;
     height: 100%;
@@ -394,7 +395,7 @@
     }
   }
 
-  .button-full-width-icon-right (
+  .button-full-width-icon-right(
     @icon-selector: oui-icon,
     @padding-right: @oui-button-icon-padding-right
   ) {
@@ -403,7 +404,7 @@
     }
   }
 
-  .button-full-width-icon-left (
+  .button-full-width-icon-left(
     @icon-selector: oui-icon,
     @padding-left: @oui-button-icon-padding-left
   ) {
@@ -412,7 +413,7 @@
     }
   }
 
-  .button-small-width (
+  .button-small-width(
     @min-width: @oui-button-small-width-min-width,
     @padding-left-right: @oui-button-small-width-padding-left-right
   ) {
@@ -421,13 +422,13 @@
     padding-right: @padding-left-right;
   }
 
-  .button-large-height (
+  .button-large-height(
     @min-height: @oui-button-large-height-min-height
   ) {
     min-height: @min-height;
   }
 
-  // Deprecated: Support only for old use
+  /* Deprecated: Support only for old use */
   .button-action-menu() {
     display: block;
     width: 100%;

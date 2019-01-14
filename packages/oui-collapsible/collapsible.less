@@ -32,7 +32,7 @@
 
   &__wrapper {
     overflow: hidden;
-    transition: height .2s ease-out;
+    transition: height 0.2s ease-out;
   }
 
   &__body {
@@ -52,9 +52,10 @@
 
   &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
 
-  /* stylelint-disable declaration-no-important */
   &__header[aria-expanded="false"] ~ &__wrapper {
-    height: 0 !important; // Priority over ngStyle's height
+    /* Priority over ngStyle's height */
+    /* stylelint-disable declaration-no-important */
+    height: 0 !important;
+    /* stylelint-enable declaration-no-important */
   }
-  /* stylelint-enable */
 }

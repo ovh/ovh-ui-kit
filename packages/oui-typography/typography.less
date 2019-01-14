@@ -15,14 +15,16 @@ abbr[data-oui-tooltip] {
   cursor: help;
 }
 
-// Headings
+/* Headings */
+/* stylelint-disable selector-type-no-unknown */
 h,
-.oui-header_, // Deprecated: Support only for old use
+.oui-header_, /* Deprecated: Support only for old use */
 .oui-heading_ {
   #oui > .headings();
 }
+/* stylelint-enable selector-type-no-unknown */
 
-.oui-header_underline, // Deprecated: Support only for old use
+.oui-header_underline, /* Deprecated: Support only for old use */
 .oui-heading_underline {
   border-bottom: @oui-heading-border-width solid @oui-heading-border-color;
 }

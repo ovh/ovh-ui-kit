@@ -11,13 +11,11 @@
   padding: @oui-chip-padding;
   position: relative;
   font-size: @oui-chip-font-size;
+  font-weight: @oui-chip-font-weight;
   color: @oui-chip-font-color;
+  border: none;
   border-radius: @oui-chip-border-radius;
   background-color: @oui-chip-background-color;
-
-  &_closable { padding-right: @oui-chip-height; }
-
-  &_full-width { width: 100%; }
 
   &__container {
     display: flex;
@@ -36,11 +34,8 @@
     width: @oui-chip-height;
     height: @oui-chip-height;
     padding: 0;
-    display: flex; // For a better vertical centering
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     position: absolute;
+    display: none;
     top: 0;
     right: 0;
     color: inherit;
@@ -61,4 +56,15 @@
       font-size: inherit;
     }
   }
+
+  &_closable { padding-right: @oui-chip-height; }
+
+  &_closable &__close {
+    display: flex; /* For a better vertical centering */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_full-width { width: 100%; }
 }

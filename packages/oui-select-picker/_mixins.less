@@ -14,6 +14,29 @@
       @selector
     );
 
+    /* sub components exceptions */
+    .oui-select,
+    .ui-select-container {
+      margin-bottom: 0;
+    }
+
+    .oui-select > .oui-icon {
+      background-color: inherit;
+    }
+
+    .ui-select-container {
+      .ui-select-match {
+        margin-bottom: 0;
+        text-align: left;
+        width: 100%;
+      }
+
+      .ui-select-match,
+      .ui-select-choices {
+        min-width: 100%;
+      }
+    }
+
     &__picture-container {
       display: block;
       max-width: @oui-select-picker-padding * 2;
@@ -57,6 +80,7 @@
       .@{selector}__value {
         color: @oui-select-picker-label-color-disabled;
       }
+
       .@{selector}__picture-container {
         opacity: 0.3;
         filter: grayscale(0.6);
@@ -109,32 +133,8 @@
         }
       }
     }
-
-    // sub components exceptions
-    .oui-select,
-    .ui-select-container {
-      margin-bottom: 0;
-    }
-
-    .oui-select > .oui-icon {
-      background-color: inherit;
-    }
-
-    .ui-select-container {
-      .ui-select-match {
-        margin-bottom: 0;
-        text-align: left;
-        width: 100%;
-      }
-
-      .ui-select-match,
-      .ui-select-choices {
-        min-width: 100%;
-      }
-    }
   }
 
-  // stylelint-disable max-nesting-depth
   .select-picker-status(@index: length(@oui-select-picker-status)) when (@index > 0) {
     .select-picker-status(@index - 1);
 
@@ -184,5 +184,4 @@
       }
     }
   }
-  // stylelint-enable max-nesting-depth
 }

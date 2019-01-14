@@ -5,7 +5,6 @@
 // Manually forked from Bootstrap 4 to update variables and port it to LESS.
 // https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss
 
-
 // Document
 //
 // 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
@@ -33,7 +32,7 @@ html {
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
 @-ms-viewport {
-	width: device-width;
+  width: device-width;
 }
 
 // stylelint-disable selector-list-comma-newline-after
@@ -146,7 +145,7 @@ dt {
 }
 
 dd {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   margin-left: 0; // Undo browser default
 }
 
@@ -182,8 +181,8 @@ sup {
   vertical-align: baseline;
 }
 
-sub { bottom: -.25em; }
-sup { top: -.5em; }
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
 
 //
 // Links
@@ -194,7 +193,7 @@ a {
   text-decoration: @oui-link-text-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.
 
-  &:hover{
+  &:hover {
     color: @oui-link-font-color_hover;
     text-decoration: @oui-link-text-decoration_hover;
   }
@@ -309,15 +308,6 @@ button {
   border-radius: 0;
 }
 
-// Work around a Firefox/IE bug where the transparent `button` background
-// results in a loss of the default `button` focus styles.
-//
-// Credit: https://github.com/suitcss/base/
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-
 input,
 button,
 select,
@@ -356,6 +346,15 @@ button::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
+}
+
+// Work around a Firefox/IE bug where the transparent `button` background
+// results in a loss of the default `button` focus styles.
+//
+// Credit: https://github.com/suitcss/base/
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 input[type="radio"],
@@ -402,7 +401,7 @@ legend {
   width: 100%;
   max-width: 100%; // 1
   padding: 0;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 1.5rem;
   line-height: inherit;
   color: inherit; // 2

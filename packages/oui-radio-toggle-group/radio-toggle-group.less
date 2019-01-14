@@ -67,16 +67,15 @@
     box-shadow: inset 0 3px 1px 0 @oui-color-nurse;
   }
 
-  &__input:disabled:checked ~ &__label-container &__label {
-    background-color: @oui-color-ironlight;
-    color: @oui-color-dusty;
-    cursor: default;
-  }
-
   &__input:disabled ~ &__label-container &__label {
     cursor: default;
     background-color: @oui-color-concrete;
     color: @oui-color-silver;
   }
-}
 
+  &__input:disabled:checked ~ &__label-container &__label {
+    background-color: @oui-color-ironlight;
+    color: @oui-color-dusty;
+    cursor: default;
+  }
+}

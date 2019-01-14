@@ -47,11 +47,9 @@
       display: flex;
       align-items: center;
 
-      /* stylelint-disable indentation */
       .tablet({
         display: block;
       });
-      /* stylelint-enable */
     }
 
     &-control {
@@ -65,7 +63,8 @@
     /**
      * &-control is kept only for backward compatibility.
      */
-    &-control, &__control {
+    &-control,
+    &__control {
       width: @oui-field-control-default-size;
       margin-bottom: @oui-field-control-spacing;
       .field-sizes();
@@ -92,7 +91,8 @@
     /**
      * &-helper is kept only for backward compatibility.
      */
-    &-helper, &__helper {
+    &-helper,
+    &__helper {
       color: @oui-field-helper-color;
       font-size: @oui-field-helper-font-size;
       text-align: justify;
@@ -101,11 +101,9 @@
         align-self: flex-start;
       }
 
-      /* stylelint-disable indentation */
       .tablet({
         margin-left: 0;
       });
-      /* stylelint-enable */
     }
 
     /**
@@ -160,28 +158,32 @@
       @pair: extract(@oui-field-control-sizes, @i);
       @key: extract(@pair, 1);
       @value: extract(@pair, 2);
-      &_@{key}, &_@{i} {
+
+      &_@{key},
+      &_@{i} {
         width: @value;
         min-width: @value;
       }
     }
+
+    .make-control-phone-sizes(@i: 1) when (@i <= length(@oui-field-control-phone-sizes)) {
+      .make-control-phone-sizes(@i + 1);
+      @pair: extract(@oui-field-control-phone-sizes, @i);
+      @key: extract(@pair, 1);
+      @value: extract(@pair, 2);
+
+      &_@{key},
+      &_@{i} {
+        width: auto;
+        min-width: 0;
+        max-width: @value;
+      }
+    }
+
     .make-control-sizes();
 
-    /* stylelint-disable indentation */
-    .phone({
-      .make-control-phone-sizes(@i: 1) when (@i <= length(@oui-field-control-phone-sizes)) {
-        .make-control-phone-sizes(@i + 1);
-        @pair: extract(@oui-field-control-phone-sizes, @i);
-        @key: extract(@pair, 1);
-        @value: extract(@pair, 2);
-        &_@{key}, &_@{i} {
-          width: auto;
-          min-width: 0;
-          max-width: @value;
-        }
-      }
+    @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
       .make-control-phone-sizes();
-    });
-    /* stylelint-enable */
+    }
   }
 }

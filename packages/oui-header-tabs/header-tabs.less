@@ -9,25 +9,6 @@
     position: relative;
   }
 
-  &__container {
-    display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    margin: 0 44px;
-    // overflow-x: auto;
-    // overflow-y: hidden;
-    overflow: hidden;
-    padding: 0;
-
-    & > .oui-header-tabs__item {
-      margin-left: rem-calc(4);
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
-  }
-
   &__divider {
     background-color: @oui-color-silver;
     display: block;
@@ -42,27 +23,12 @@
 
   &__dropdown-container {
     padding: rem-calc(4) 0;
-  }
-
-  &__dropdown-container {
     list-style: none;
     margin: 0;
   }
 
   &__item {
     position: static;
-
-    & > a {
-      color: @oui-color-sapphire;
-      text-decoration: none;
-
-      &:focus {
-        outline-width: 1px;
-        outline-style: dotted;
-        outline-color: initial;
-        outline-offset: -2px;
-      }
-    }
 
     & > a,
     & > span,
@@ -76,6 +42,18 @@
         color: inherit;
         font-size: rem-calc(12);
         margin-left: rem-calc(10);
+      }
+    }
+
+    & > a {
+      color: @oui-color-sapphire;
+      text-decoration: none;
+
+      &:focus {
+        outline-width: 1px;
+        outline-style: dotted;
+        outline-color: initial;
+        outline-offset: -2px;
       }
     }
 
@@ -107,10 +85,12 @@
       color: @oui-color-dusty;
     }
 
+    /* stylelint-disable no-descending-specificity */
     &_active .oui-button_dropdown {
       border-bottom: 4px solid;
       padding-bottom: ~"calc(1rem - 4px)";
     }
+    /* stylelint-enable no-descending-specificity */
 
     :not(.oui-header-tabs__dropdown-container) > & {
       & > a,
@@ -131,11 +111,28 @@
         padding: rem-calc(8) rem-calc(20);
       }
 
+      &_active > a,
       & > a:hover,
       & > a:focus,
-      & > a:active,
-      &_active > a {
+      & > a:active {
         background-color: @oui-color-foam;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0 44px;
+    overflow: hidden;
+    padding: 0;
+
+    & > .oui-header-tabs__item {
+      margin-left: rem-calc(4);
+
+      &:first-child {
+        margin-left: 0;
       }
     }
   }

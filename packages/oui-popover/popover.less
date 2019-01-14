@@ -1,3 +1,4 @@
+@import '../oui/_settings';
 @import '../oui-animation/_mixins';
 @import '../oui-button/_variables';
 @import '../oui-color/_variables';
@@ -17,7 +18,7 @@
   max-width: rem-calc(300);
   text-align: initial;
   opacity: 0;
-  visibility: hidden; // For ARIA
+  visibility: hidden; /* For ARIA */
   transition-property: opacity, visibility, z-index;
   transition-duration: @oui-popover-transition-duration;
   transition-timing-function: @oui-popover-transition-animation;
@@ -25,7 +26,23 @@
   user-select: none;
   pointer-events: none;
 
-  &[x-placement^="left"], &[x-placement^="right"] {
+  &__arrow {
+    background-color: @oui-popover-background-color;
+    position: absolute;
+
+    &::before,
+    &::after {
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+    }
+  }
+
+  &[x-placement^="left"],
+  &[x-placement^="right"] {
     .oui-popover__arrow {
       &::before {
         border-width: @oui-popover-arrow-size + @oui-popover-border-width;
@@ -39,7 +56,8 @@
     }
   }
 
-  &[x-placement^="bottom"], &[x-placement^="top"] {
+  &[x-placement^="bottom"],
+  &[x-placement^="top"] {
     .oui-popover__arrow {
       &::before {
         border-width: @oui-popover-arrow-size + @oui-popover-border-width;
@@ -125,21 +143,6 @@
     }
   }
 
-  &__arrow {
-    background-color: @oui-popover-background-color;
-    position: absolute;
-
-    &::before,
-    &::after {
-      border: solid transparent;
-      content: " ";
-      height: 0;
-      pointer-events: none;
-      position: absolute;
-      width: 0;
-    }
-  }
-
   &__content-container {
     :first-child {
       margin-top: 0;
@@ -182,7 +185,7 @@
     }
   }
 
-  &__help-button, // Deprecated: Support only for old use
+  &__help-button, /* Deprecated: Support only for old use */
   &-button {
     width: rem-calc(20);
     height: rem-calc(20);
@@ -198,7 +201,7 @@
 
     &::before {
       content: @oui-icon-index-help_circle;
-      font-family: 'Oui Icons';
+      font-family: @oui-global-base-font-family-icon;
       font-size: inherit;
     }
 
