@@ -1,0 +1,18 @@
+@import '@ovh/ui-kit.typography/less/_mixins';
+
+oui-popover {
+  &,
+  &-trigger {
+    display: inline-block;
+  }
+
+  &-content {
+    display: block;
+  }
+}
+
+#oui {
+  .popover-normalize() {
+    #oui > .base-font();
+  }
+}

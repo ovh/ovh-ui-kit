@@ -1,0 +1,15 @@
+@import '@ovh/ui-kit.typography/less/_mixins';
+
+oui-progress {
+  &,
+  &-bar,
+  &-threshold {
+    display: block;
+  }
+}
+
+#oui {
+  .progress-normalize() {
+    #oui > .base-font();
+  }
+}

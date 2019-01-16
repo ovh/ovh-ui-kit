@@ -1,0 +1,12 @@
+@import '@ovh/ui-kit.typography/less/_mixins';
+
+#oui {
+  .input-normalize() {
+    #oui > .base-font();
+
+    &::-ms-clear,
+    &::-ms-reveal {
+      display: none;
+    }
+  }
+}

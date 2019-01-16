@@ -1,0 +1,38 @@
+@import './_normalize';
+@import '@ovh/ui-kit.color/less/_variables';
+@import '@ovh/ui-kit.typography/less/_constants';
+
+.oui-status {
+
+  #oui > .status-normalize();
+
+  border: none;
+  border-radius: 50px;
+  color: @oui-color-sapphire;
+  display: inline-block;
+  font-size: rem-calc(16);
+  font-weight: @oui-font-regular;
+  line-height: 1.375;
+  max-width: rem-calc(200);
+  overflow: hidden;
+  padding: rem-calc(4) rem-calc(10);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  &_success {
+    background-color: @oui-color-success-fade;
+  }
+
+  &_info {
+    background-color: @oui-color-info-fade;
+  }
+
+  &_warning {
+    background-color: @oui-color-warning-fade;
+  }
+
+  &_error {
+    background-color: @oui-color-error-fade;
+  }
+}

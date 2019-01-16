@@ -1,0 +1,32 @@
+@import '@ovh/ui-kit.field/less/_mixins';
+@import './_normalize';
+@import './_mixins';
+
+.oui-textarea {
+  @oui-textarea-selector: oui-textarea;
+
+  #oui > .textarea-normalize();
+  #oui > .textarea-base(@oui-textarea-selector);
+  #oui > .textarea-error(@oui-textarea-selector);
+  #oui > .field-sizes();
+}
+
+/** Fieldset */
+:disabled .oui-textarea {
+  #oui > .textarea-disabled();
+}
+
+/** Legacy styling */
+textarea.oui-textarea {
+  #oui > .textarea-normalize();
+  #oui > .textarea-legacy-base();
+  #oui > .field-sizes();
+
+  &_error {
+    #oui > .textarea-legacy-error();
+  }
+
+  &_inline {
+    #oui > .textarea-legacy-inline();
+  }
+}

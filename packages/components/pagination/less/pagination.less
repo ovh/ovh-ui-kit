@@ -1,0 +1,37 @@
+@import "@ovh/ui-kit.button/less/_mixins";
+@import "./_mixins";
+@import "./_normalize";
+
+.oui-pagination {
+  @oui-button-selector: oui-button;
+  @oui-button-link-selector: oui-button_link;
+  @oui-button-secondary-selector: oui-button_secondary;
+  @oui-button-group-selector: oui-button-group;
+
+  #oui > .pagination-base(
+    @button-selector: @oui-button-selector,
+    @button-link-selector: @oui-button-link-selector,
+    @button-secondary-selector: @oui-button-secondary-selector,
+    @button-group-selector: @oui-button-group-selector
+  );
+}
+
+.oui-pagination-button {
+  #oui > .pagination-button();
+}
+
+.oui-pagination-menu {
+  #oui > .pagination-menu();
+
+  &__group {
+    #oui > .pagination-menu-group();
+  }
+
+  &__items-list {
+    #oui > .pagination-menu-items-list();
+  }
+
+  &__item {
+    #oui > .pagination-menu-item();
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@ovh/ui-kit.switch",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.js",
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "peerDependencies": {
+    "angular": ">=1.6.x"
+  }
+}

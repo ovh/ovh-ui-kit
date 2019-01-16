@@ -1,0 +1,14 @@
+{
+  "name": "@ovh/ui-kit.timepicker",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.js",
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "dependencies": {
+    "@ovh/ui-kit.calendar": "^1.0.0"
+  },
+  "peerDependencies": {
+    "angular": ">=1.6.x"
+  }
+}
