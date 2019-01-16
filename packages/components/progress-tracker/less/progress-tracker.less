@@ -1,0 +1,177 @@
+@import '@ovh/ui-kit.core/less/_settings';
+@import '@ovh/ui-kit.icons/less/_variables';
+@import '@ovh/ui-kit.typography/less/_constants';
+@import './_variables';
+@import './_normalize';
+
+.oui-progress-tracker {
+  #oui > .progress-tracker-normalize();
+
+  margin: @oui-progress-tracker-container-margin;
+  counter-reset: oui-progress-tracker;
+  font-size: @oui-progress-tracker-font-size;
+  font-weight: @oui-font-regular;
+
+  &__steps {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__step {
+    position: relative;
+    flex: 1 1 0%;
+    cursor: default;
+    pointer-events: initial;
+
+    &_disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      height: rem-calc(4);
+      margin: 0 @oui-progress-tracker-connector-spacing;
+      position: absolute;
+      top: rem-calc(13);
+      left: @oui-progress-tracker-icon-height;
+      right: 0;
+      background-color: @oui-progress-tracker-background-color;
+    }
+  }
+
+  &__status {
+    padding-right: rem-calc(30);
+    margin-top: ~"calc(@{oui-progress-tracker-icon-height} + @{oui-progress-tracker-icon-spacing})";
+    display: block;
+    text-align: left;
+    color: @oui-progress-tracker-label-color;
+
+    &::before {
+      content: counter(oui-progress-tracker);
+      counter-increment: oui-progress-tracker;
+      width: @oui-progress-tracker-icon-height;
+      height: @oui-progress-tracker-icon-height;
+      line-height: @oui-progress-tracker-icon-height;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      font-size: @oui-progress-tracker-icon-size;
+      font-weight: @oui-font-semibold;
+      color: @oui-progress-tracker-font-color;
+      border-radius: 50%;
+      background-color: @oui-progress-tracker-background-color;
+    }
+  }
+
+  &__label {
+    line-height: @oui-progress-tracker-label-line-height;
+    max-height: ~"calc(@{oui-progress-tracker-font-size} * @{oui-progress-tracker-label-line-height} * 2)";
+    overflow: hidden;
+    display: block;
+    margin-top: rem-calc(10);
+    word-break: break-work;
+    hyphens: auto;
+    font-weight: @oui-font-semibold;
+  }
+
+  // Status Complete/Success
+  &__step_complete &__status {
+    color: @oui-progress-tracker-label-color-complete;
+    font-weight: @oui-font-semibold;
+
+    &::before {
+      content: @oui-icon-index-check_line;
+      font-family: @oui-global-base-font-family-icon;
+      font-size: @oui-progress-tracker-icon-size_success;
+      color: @oui-progress-tracker-font-color-complete;
+      background-color: @oui-progress-tracker-background-color-complete;
+    }
+  }
+
+  &__step_complete:not(:last-child)::after {
+    background-color: @oui-progress-tracker-background-color-complete;
+  }
+
+  // Status Error
+  &__step_error &__status {
+    color: @oui-progress-tracker-label-color-error;
+    font-weight: @oui-progress-tracker-status-size_error;
+
+    &::before {
+      content: @oui-progress-tracker-icon-error;
+      font-family: @oui-global-base-font-family-icon;
+      font-size: @oui-progress-tracker-icon-size_error;
+      color: @oui-progress-tracker-font-color-error;
+      background-color: @oui-progress-tracker-background-color-error;
+    }
+  }
+
+  &__step_error:not(:last-child)::after {
+    background-color: @oui-progress-tracker-background-color-error;
+  }
+
+  // Status Active
+  &__step_active &__status {
+    color: @oui-progress-tracker-label-color-active;
+    font-weight: @oui-font-semibold;
+
+    &::before {
+      color: @oui-progress-tracker-font-color-active;
+      font-weight: @oui-font-semibold;
+      background-color: @oui-progress-tracker-background-color-active;
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    margin-bottom: rem-calc(52);
+
+    &__steps { position: relative; }
+
+    &__step {
+      #oui > .text-ellipsis();
+
+      display: flex;
+      align-items: center;
+      position: static;
+      overflow: visible;
+
+      &:not(:last-child)::after {
+        flex: 1;
+        position: static;
+      }
+
+      &:last-child {
+        flex: 0;
+
+        &::after { display: none; }
+      }
+    }
+
+    &__label {
+      #oui > .text-ellipsis();
+
+      display: none;
+    }
+
+    &__step_active &__label {
+      display: block;
+      text-align: center;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    &__status {
+      padding-right: 0;
+      margin-top: 0;
+      flex: 0;
+
+      &::before { position: static; }
+    }
+  }
+}
