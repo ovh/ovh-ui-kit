@@ -1,0 +1,91 @@
+@import "@ovh/ui-kit.accessibility/less/_mixins";
+@import "@ovh/ui-kit.animation/less/_mixins";
+@import "@ovh/ui-kit.color/less/_variables";
+@import "./_mixins";
+@import "./_normalize";
+@import "./_variables";
+
+.oui-switch {
+  line-height: 0;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  &__label-container {
+    width: @oui-switch-width;
+    height: @oui-switch-height;
+    display: block;
+    position: relative;
+    margin: 0;
+  }
+
+  &__slider {
+    #oui > .animate();
+
+    background-color: @oui-color-nurse;
+    bottom: 0;
+    border: 1px solid transparent;
+    border-radius: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+    box-shadow: inset 0 1px 1px 0 rgba(63, 81, 103, 0.2);
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    &::before {
+      #oui > .animate();
+
+      background-color: @oui-color-white;
+      border-radius: 50%;
+      bottom: ~"calc(@{oui-switch-border-width} - 1px)";
+      box-shadow: 0 1px 2px 0 @oui-color-silver;
+      content: "";
+      height: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+      left: ~"calc(@{oui-switch-border-width} - 1px)";
+      position: absolute;
+      width: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+      z-index: 1;
+    }
+  }
+
+  &__checkbox {
+    #oui > .visually-hidden();
+
+    &:checked {
+      ~ .oui-switch__slider {
+        background-color: @oui-color-info-dark;
+      }
+
+      ~ .oui-switch__slider::before {
+        transform: translateX(@oui-switch-width - @oui-switch-height);
+      }
+    }
+
+    &:disabled {
+      ~ .oui-switch__slider {
+        background-color: @oui-color-ironlight;
+        cursor: default;
+
+        &::before {
+          background-color: @oui-color-concrete;
+        }
+      }
+    }
+
+    &:focus ~ .oui-switch__slider {
+      box-shadow: inset 0 1px 1px 0 rgba(63, 81, 103, 0.2), 0 0 3px 1px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &_inline {
+    display: inline-block;
+
+    .oui-switch__label-container {
+      margin-bottom: 0;
+    }
+  }
+
+  #oui > .switch-square();
+  #oui > .switch-error();
+}

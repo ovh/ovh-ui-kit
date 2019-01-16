@@ -9,7 +9,7 @@ const log = console.log;
 log(chalk.yellow(`\nGenerating less variables from icons`));
 
 // init less file
-let file = fs.createWriteStream('packages/oui-icons/_icons.less');
+let file = fs.createWriteStream('packages/components/icons/less/_icons.less');
 
 log(chalk.blue(`Generated`), chalk.cyan(path.resolve(file.path)));
 

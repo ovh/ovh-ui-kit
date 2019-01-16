@@ -1,0 +1,247 @@
+@import './_mixins';
+@import './_normalize';
+@import './_variables';
+@import '@ovh/ui-kit.core/less/_settings';
+@import '@ovh/ui-kit.button/less/_mixins';
+@import '@ovh/ui-kit.button/less/_variables';
+@import '@ovh/ui-kit.input/less/_mixins';
+@import '@ovh/ui-kit.dropdown/less/_variables';
+@import '@ovh/ui-kit.typography/less/_constants';
+
+/* Keep the templates classnames
+ * Since they are used directly in the plugin
+ */
+.oui-ui-select {
+  position: relative;
+  margin: @oui-ui-select-margin;
+
+  /* Dropdown Menu */
+  .ui-select-dropdown {
+    min-width: @oui-dropdown-menu-min-width;
+    width: 100%;
+    max-width: 100%;
+    display: none;
+    margin: 0;
+    position: absolute;
+    list-style: none;
+    text-align: initial;
+    box-shadow: @oui-dropdown-menu-box-shadow;
+    border: @oui-dropdown-menu-border-width @oui-dropdown-menu-border-color solid;
+    background-color: @oui-dropdown-menu-background-color;
+    z-index: @oui-dropdown-menu-zindex;
+  }
+
+  [aria-expanded="true"] ~ .ui-select-dropdown { display: block; }
+
+  &:not(.direction-up) .ui-select-dropdown { border-top: none; }
+
+  .ui-select-choices {
+    width: 100%;
+    max-height: @oui-ui-select-max-height;
+    margin: 0;
+    padding: @oui-dropdown-menu-spacing 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+
+    &-group-label {
+      padding: rem-calc(4) @oui-ui-select-choices-padding-x;
+      font-size: @oui-ui-select-choices-group-font-size;
+      color: @oui-color-sapphire;
+    }
+  }
+
+  .ui-select-choices-row {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    font-size: @oui-dropdown-item-font-size;
+    font-weight: @oui-dropdown-item-font-weight;
+    color: @oui-dropdown-item-font-color;
+    border: none;
+    background-color: @oui-dropdown-item-background-color;
+
+    .oui-icon {
+      flex: 0;
+      display: none;
+      margin-right: rem-calc(12);
+
+      &::before {
+        color: @oui-color-sapphire;
+        font-size: @oui-ui-select-choices-icon-size;
+      }
+    }
+
+    &,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline-width: 1px;
+      outline-style: dotted;
+      outline-color: initial;
+      outline-offset: -2px;
+    }
+
+    &:hover,
+    &:focus,
+    &_active {
+      background-color: @oui-dropdown-item-background-color_active;
+      color: @oui-dropdown-item-font-color_active;
+    }
+
+    &:disabled {
+      background-color: @oui-dropdown-item-background-color;
+      color: @oui-dropdown-item-font-color_disabled;
+    }
+
+    &-inner {
+      line-height: @oui-dropdown-item-line-height;
+      flex: 1;
+      padding: @oui-dropdown-item-padding;
+    }
+
+    &_grouped .ui-select-choices-row-inner { padding-left: @oui-ui-select-choices-grouped-padding-left; }
+
+    &_selected {
+      background-color: @oui-ui-select-choices-button-background-selected;
+
+      .oui-icon { display: block; }
+    }
+  }
+
+  /* Helpers */
+  .ui-select-highlight { font-weight: @oui-font-bold; }
+
+  .ui-select-offscreen {
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+    outline: 0;
+    left: 0;
+    top: 0;
+  }
+
+  /* Variant 'multiple' */
+  &_multiple {
+    .ui-select-match,
+    .ui-select-match-items {
+      line-height: @oui-ui-select-multiple-line-height;
+    }
+
+    .ui-select-match-container {
+      #oui > .button-normalize();
+      #oui > .button-base();
+      #oui > .button-hollow();
+      #oui > .button-dropdown(@icon-selector: oui-icon-chevron-down);
+
+      max-width: 100%;
+      width: 100%;
+      min-height: @oui-ui-select-height;
+      line-height: @oui-ui-select-multiple-line-height;
+      padding-top: @oui-ui-select-multiple-padding-y;
+      padding-bottom: @oui-ui-select-multiple-padding-y;
+      text-align: left;
+      white-space: normal;
+
+      &:focus,
+      &_focus {
+        background-color: @oui-color-concrete;
+        border-color: @oui-color-dusty;
+        outline-width: 1px;
+        outline-style: dotted;
+        outline-color: initial;
+        outline-offset: -2px;
+      }
+
+      &_disabled,
+      &_disabled:hover,
+      &_disabled:focus {
+        color: @oui-button-hollow-font-color_disabled;
+        border-color: @oui-button-hollow-border-color_disabled;
+        background-color: @oui-button-hollow-background-color_disabled;
+        cursor: auto;
+      }
+
+      .oui-field_error & {
+        #oui > .button-dropdown-error();
+      }
+    }
+
+    .ui-select-match-item {
+      position: relative;
+      margin-right: rem-calc(5);
+      z-index: 1;
+    }
+
+    .ui-select-search {
+      width: auto !important; /* Override inline style */
+      height: @oui-ui-select-multiple-line-height;
+      line-height: @oui-ui-select-multiple-line-height;
+      margin: 0;
+      padding: 0;
+      letter-spacing: @oui-global-base-letter-spacing;
+      font-weight: @oui-font-semibold;
+      outline: none;
+      border: none;
+      background: none;
+
+      &::-ms-clear {
+        display: none;
+      }
+    }
+  }
+
+  /* Variant 'single' */
+  &_single {
+    .ui-select-match,
+    .ui-select-search { /* stylelint-disable-line */
+      #oui > .button-normalize();
+      #oui > .button-base();
+      #oui > .button-hollow();
+      #oui > .button-dropdown();
+
+      max-width: 100%;
+      width: 100%;
+      height: @oui-ui-select-height;
+      text-align: left;
+
+      &:focus,
+      &_focus {
+        background-color: @oui-color-concrete;
+        border-color: @oui-color-dusty;
+
+        /* To override reset style */
+        outline-width: 1px !important;
+        outline-style: dotted !important;
+        outline-color: initial !important;
+        outline-offset: -2px !important;
+      }
+
+      .oui-field_error & {
+        #oui > .button-dropdown-error();
+      }
+    }
+  }
+
+  /* To keep track of keydown */
+  .ui-select-search_hidden {
+    opacity: 0;
+    height: 0;
+    min-height: 0;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}

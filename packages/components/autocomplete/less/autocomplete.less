@@ -1,0 +1,31 @@
+@import "@ovh/ui-kit.color/less/_constants";
+@import "@ovh/ui-kit.dropdown/less/_variables";
+@import "@ovh/ui-kit.responsive/less/_mixins";
+@import '@ovh/ui-kit.typography/less/_constants';
+
+.oui-autocomplete {
+  &:extend(.oui-dropdown-menu all);
+
+  max-height: ~"calc(@{oui-dropdown-item-height} * 5 + @{oui-dropdown-menu-spacing} * 2)";
+  overflow-y: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .phone({
+    max-width: 100%;
+  });
+
+  &__option {
+    &:extend(.oui-dropdown-option all);
+
+    cursor: pointer;
+  }
+
+  &-highlight {
+    color: inherit;
+    font-weight: @oui-font-bold;
+    background: none;
+  }
+}

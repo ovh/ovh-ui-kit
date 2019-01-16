@@ -1,0 +1,97 @@
+@import '@ovh/ui-kit.core/less/_settings';
+@import '@ovh/ui-kit.color/less/_variables';
+@import '@ovh/ui-kit.typography/less/_constants';
+@import '@ovh/ui-kit.typography/less/_variables';
+
+/* Button */
+@oui-button-font-color: @oui-color-sapphire;
+@oui-button-font-size: rem-calc(16);
+@oui-button-font-weight: @oui-font-semibold;
+@oui-button-radius: @oui-global-base-radius;
+@oui-button-min-width: rem-calc(100);
+@oui-button-max-width: rem-calc(320);
+@oui-button-padding-base: rem-calc(10);
+@oui-button-padding: @oui-button-padding-base rem-calc(20);
+@oui-button-spacing: 0;
+
+/* Button - Filled */
+@oui-button-filled-background-color: @oui-color-turquoise;
+@oui-button-filled-background-color_hover: #34c4e2;
+@oui-button-filled-background-color_disabled: @oui-color-ironlight;
+@oui-button-filled-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
+@oui-button-filled-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
+@oui-button-filled-font-color_disabled: @oui-color-dusty;
+@oui-button-filled-padding-base: rem-calc(8);
+@oui-button-filled-padding: @oui-button-filled-padding-base rem-calc(20);
+
+/* Button - Hollow */
+@oui-button-hollow-background-color: #fff;
+@oui-button-hollow-background-color_hover: @oui-color-concrete;
+@oui-button-hollow-border-color: #bdbec0;
+@oui-button-hollow-border-color_hover: @oui-color-dusty;
+@oui-button-hollow-border-color_disabled: @oui-color-concrete;
+@oui-button-hollow-background-color_disabled: @oui-color-concrete;
+@oui-button-hollow-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
+@oui-button-hollow-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+@oui-button-hollow-font-color_disabled: @oui-color-silver;
+@oui-button-hollow-padding-base: rem-calc(7);
+@oui-button-hollow-padding: @oui-button-hollow-padding-base rem-calc(20);
+
+/* Button - Dropdown */
+@oui-button-dropdown-color: @oui-color-dusty;
+@oui-button-dropdown-icon-size: rem-calc(10);
+@oui-button-dropdown-icon-color: @oui-color-sapphire;
+@oui-button-dropdown-icon-color_active: @oui-color-sapphire;
+@oui-button-dropdown-icon-color_disabled: @oui-color-dusty;
+@oui-button-dropdown-background-color_active: @oui-color-concrete;
+@oui-button-dropdown-border-color_active: @oui-color-dusty;
+@oui-button-dropdown-padding: rem-calc(12);
+
+/* Button - Icon */
+@oui-button-icon-icon-size: rem-calc(10);
+@oui-button-icon-icon-size_large: rem-calc(20);
+@oui-button-icon-icon-color: @oui-color-sapphire;
+@oui-button-icon-icon-color_disabled: @oui-color-silver;
+@oui-button-icon-padding-right: rem-calc(10);
+@oui-button-icon-padding-left: rem-calc(10);
+
+/* Button - Icon Alone */
+@oui-button-icon-alone-background: transparent;
+@oui-button-icon-alone-font-color: @oui-link-font-color;
+@oui-button-icon-alone-min-width: rem-calc(20);
+@oui-button-icon-alone-padding-left: rem-calc(5);
+@oui-button-icon-alone-padding-right: 0;
+@oui-button-icon-alone-margin-right: rem-calc(15);
+@oui-button-icon-alone-icon-font-size: rem-calc(20);
+@oui-button-icon-alone-font-color_hover: @oui-link-font-color_hover;
+
+/* Button - Icon Right */
+@oui-button-icon-right-icon-margin-left: rem-calc(20);
+
+/* Button - Icon Left */
+@oui-button-icon-right-icon-margin-right: rem-calc(20);
+
+/* Button - Link */
+@oui-button-link-icon-color: @oui-color-sapphire;
+@oui-button-link-font-color: @oui-color-pacific;
+@oui-button-link-font-color_hover: @oui-color-sapphire;
+@oui-button-link-font-color_disabled: @oui-color-dusty;
+@oui-button-link-font-weight: @oui-font-regular;
+@oui-button-link-padding: rem-calc(8) rem-calc(20);
+
+/* Button - Small width */
+@oui-button-small-width-min-width: rem-calc(40);
+@oui-button-small-width-padding-left-right: rem-calc(5);
+
+/* Button - Large height */
+@oui-button-large-height-min-height: rem-calc(45);
+
+/* Button - Error style */
+@oui-button-error-background-color: @oui-color-error-fade;
+@oui-button-error-border-color: @oui-color-error-light;
+@oui-button-error-text-color: @oui-color-error-dark;
+
+/* Deprecated: Support only for old use */
+@oui-button-action-menu-background-color: #fff;
+@oui-button-action-menu-background-color_active: @oui-color-foam;
+@oui-button-action-menu-text-color: @oui-color-sapphire;
