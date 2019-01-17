@@ -1,7 +1,7 @@
-@import '@ovh/ui-kit.animation/less/_mixins';
-@import '@ovh/ui-kit.button/less/_mixins';
+@import (reference) '@ovh/ui-kit.animation/less/_mixins';
+@import (reference) '@ovh/ui-kit.button/less/_mixins';
+@import (reference) './_variables';
 @import './_normalize';
-@import './_variables';
 
 .oui-action-button {
   #oui > .button-hollow();
@@ -57,7 +57,7 @@
   }
 }
 
-/* Deprecated: Support only for old use */
+/* Deprecated: Still in use... */
 .oui-action-menu {
   &:extend(.oui-dropdown-menu all);
 

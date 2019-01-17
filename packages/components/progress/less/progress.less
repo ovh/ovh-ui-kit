@@ -1,9 +1,10 @@
+@import (reference) '@ovh/ui-kit.animation/less/_variables';
+@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) './_variables';
 @import './_normalize';
-@import './_variables';
-@import '@ovh/ui-kit.animation/less/_variables';
 
 .oui-progress {
-  #oui > .progress-normalize();
+  #oui > .base-font();
   @oui-progress-selector: oui-progress;
 
   width: 100%;

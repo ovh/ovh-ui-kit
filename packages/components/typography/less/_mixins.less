@@ -1,6 +1,5 @@
-@import '@ovh/ui-kit.core/less/_settings';
-@import '@ovh/ui-kit.color/less/_variables';
-@import './_variables';
+@import (reference) '@ovh/ui-kit.core/less/_settings';
+@import (reference) './_variables';
 
 #oui {
   .base-font() {
@@ -33,12 +32,6 @@
     }
   }
 
-  /* Deprecated: Support only for old use */
-  .headers(@index: length(@oui-heading-font-sizes)) {
-    .headings(@index);
-  }
-
-  /* Deprecated: Support only for old use */
   .link(
     @font-color: @oui-link-font-color,
     @font-color_hover: @oui-link-font-color_hover,
@@ -73,59 +66,5 @@
     img {
       border-style: none;
     }
-  }
-
-  /* Deprecated: Support only for old use */
-  .link-icon(
-    @icon-selector,
-    @icon-size: @oui-link-icon-icon-size,
-    @icon-margin-left: @oui-link-icon-margin-left
-  ) {
-    .@{icon-selector} {
-      margin-left: @icon-margin-left;
-    }
-
-    .@{icon-selector}::before {
-      width: @icon-size;
-      height: @icon-size;
-      font-size: @icon-size;
-      line-height: @icon-size;
-    }
-  }
-
-  /* Deprecated: Support only for old use */
-  .horizontal-line-base(
-    @margin-bottom: @oui-horizontal-line-margin-bottom;
-    @width: @oui-horizontal-line-width;
-    @color: @oui-horizontal-line-color;
-    @style: @oui-horizontal-line-style;
-  ) {
-    margin: 0 auto;
-    margin-bottom: @margin-bottom;
-    border-top-style: @style;
-    border-top-color: @color;
-    border-top-width: @width;
-  }
-
-  /* Deprecated: Support only for old use */
-  .horizontal-line-dark(
-    @color: @oui-horizontal-line-dark-color
-  ) {
-    border-top-color: @color;
-  }
-
-  /* Deprecated: Support only for old use */
-  .horizontal-line-thin(
-    @width: @oui-horizontal-line-thin-width
-  ) {
-    border-top-width: @width;
-  }
-
-  /* Deprecated: Support only for old use */
-  .header-underline(
-    @border-width: @oui-heading-border-width,
-    @border-color: @oui-heading-border-color
-  ) {
-    border-bottom: @border-width solid @border-color;
   }
 }

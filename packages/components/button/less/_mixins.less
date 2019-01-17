@@ -1,4 +1,4 @@
-@import './_variables';
+@import (reference) './_variables';
 
 #oui {
   .button-base(
@@ -120,54 +120,6 @@
     }
   }
 
-  .button-action-menu-compact() {
-    min-width: @oui-action-button-size;
-    width: @oui-action-button-size;
-    height: @oui-action-button-size;
-    padding: 0;
-    overflow: visible;
-    border: 1px solid @oui-action-button-border-color;
-    border-radius: 50%;
-    background-color: @oui-action-button-background-color;
-
-    circle { fill: @oui-action-button-foreground-color; }
-
-    &[aria-expanded="true"] {
-      border-color: @oui-action-button-border-color_active;
-      background-color: @oui-action-button-background-color_active;
-    }
-
-    &:hover {
-      border-color: @oui-action-button-border-color_hover;
-      background-color: @oui-action-button-background-color_hover;
-
-      circle {
-        fill: @oui-action-button-foreground-color_hover;
-        transform-origin: center;
-      }
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 3px 1px fade(@oui-color-pacific, 60%);
-    }
-
-    &:active {
-      box-shadow: inset 1px 1px 4px 0 fade(#000, 33%);
-    }
-
-    &:disabled {
-      cursor: default;
-      box-shadow: none;
-      border-color: @oui-action-button-border-color_disabled;
-      background-color: @oui-action-button-background-color_disabled;
-
-      circle {
-        fill: @oui-action-button-foreground-color_disabled;
-      }
-    }
-  }
-
   .button-dropdown(
     @icon-selector: oui-icon,
     @icon-size: @oui-button-dropdown-icon-size,
@@ -279,6 +231,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-icon-alone(
     @icon-selector: oui-icon,
     @background: @oui-button-icon-alone-background,
@@ -311,6 +264,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-icon-right(
     @icon-selector: oui-icon,
     @icon-margin-left: @oui-button-icon-right-icon-margin-left,
@@ -327,6 +281,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-icon-left(
     @icon-selector: oui-icon,
     @icon-margin-right: @oui-button-icon-right-icon-margin-right,
@@ -344,6 +299,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-link(
     @icon-selector: oui-icon,
     @icon-color: @oui-button-link-icon-color,
@@ -380,6 +336,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-full-width(
     @icon-selector
   ) {
@@ -395,6 +352,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-full-width-icon-right(
     @icon-selector: oui-icon,
     @padding-right: @oui-button-icon-padding-right
@@ -404,6 +362,7 @@
     }
   }
 
+  /* Deprecated: Used once */
   .button-full-width-icon-left(
     @icon-selector: oui-icon,
     @padding-left: @oui-button-icon-padding-left
@@ -413,6 +372,7 @@
     }
   }
 
+  /* Deprecated: Extend ? */
   .button-small-width(
     @min-width: @oui-button-small-width-min-width,
     @padding-left-right: @oui-button-small-width-padding-left-right
@@ -422,27 +382,10 @@
     padding-right: @padding-left-right;
   }
 
+  /* Deprecated: Used once */
   .button-large-height(
     @min-height: @oui-button-large-height-min-height
   ) {
     min-height: @min-height;
-  }
-
-  /* Deprecated: Support only for old use */
-  .button-action-menu() {
-    display: block;
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-    text-align: left;
-    font-weight: @oui-font-regular;
-    background-color: @oui-button-action-menu-background-color;
-    color: @oui-button-action-menu-text-color;
-
-    &:focus,
-    &:hover {
-      background-color: @oui-button-action-menu-background-color_active;
-      color: @oui-button-action-menu-text-color;
-    }
   }
 }

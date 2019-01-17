@@ -1,7 +1,7 @@
-@import '@ovh/ui-kit.core/less/_settings';
-@import '@ovh/ui-kit.color/less/_variables';
-@import '@ovh/ui-kit.typography/less/_constants';
-@import '@ovh/ui-kit.typography/less/_variables';
+@import (reference) '@ovh/ui-kit.core/less/_settings';
+@import (reference) '@ovh/ui-kit.color/less/_variables';
+@import (reference) '@ovh/ui-kit.typography/less/_constants';
+@import (reference) '@ovh/ui-kit.typography/less/_variables';
 
 /* Button */
 @oui-button-font-color: @oui-color-sapphire;
@@ -90,8 +90,3 @@
 @oui-button-error-background-color: @oui-color-error-fade;
 @oui-button-error-border-color: @oui-color-error-light;
 @oui-button-error-text-color: @oui-color-error-dark;
-
-/* Deprecated: Support only for old use */
-@oui-button-action-menu-background-color: #fff;
-@oui-button-action-menu-background-color_active: @oui-color-foam;
-@oui-button-action-menu-text-color: @oui-color-sapphire;

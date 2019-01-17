@@ -1,6 +1,6 @@
-@import '@ovh/ui-kit.core/less/_settings';
-@import '@ovh/ui-kit.typography/less/_constants';
-@import './_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_settings';
+@import (reference) '@ovh/ui-kit.typography/less/_constants';
+@import (reference) './_mixins';
 
 body {
   #oui > .base-font();
@@ -18,13 +18,11 @@ abbr[data-oui-tooltip] {
 /* Headings */
 /* stylelint-disable selector-type-no-unknown */
 h,
-.oui-header_, /* Deprecated: Support only for old use */
 .oui-heading_ {
   #oui > .headings();
 }
 /* stylelint-enable selector-type-no-unknown */
 
-.oui-header_underline, /* Deprecated: Support only for old use */
 .oui-heading_underline {
   border-bottom: @oui-heading-border-width solid @oui-heading-border-color;
 }
