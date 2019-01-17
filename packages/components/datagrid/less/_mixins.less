@@ -1,8 +1,8 @@
-@import '@ovh/ui-kit.core/less/_settings';
-@import '@ovh/ui-kit.animation/less/_mixins';
-@import '@ovh/ui-kit.dropdown/less/_variables';
-@import '@ovh/ui-kit.typography/less/_constants';
-@import './_variables';
+@import (reference) '@ovh/ui-kit.core/less/_settings';
+@import (reference) '@ovh/ui-kit.animation/less/_mixins';
+@import (reference) '@ovh/ui-kit.dropdown/less/_variables';
+@import (reference) '@ovh/ui-kit.typography/less/_constants';
+@import (reference) './_variables';
 
 #oui {
   .datagrid-base(
@@ -182,8 +182,6 @@
   .datagrid-cell(
     @selector,
     @spinner-container-selector,
-    @form-elements: @oui-datagrid-form-elements,
-    @background-color: @oui-datagrid-cell-background-color,
     @border-color: @oui-datagrid-cell-border-color,
     @font-color: @oui-datagrid-cell-font-color,
     @padding: @oui-datagrid-cell-padding,

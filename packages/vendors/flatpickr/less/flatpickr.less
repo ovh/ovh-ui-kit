@@ -1,5 +1,5 @@
-@import '@ovh/ui-kit.typography/less/_mixins';
-@import '@ovh/ui-kit.button/less/_variables';
+@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) '@ovh/ui-kit.button/less/_variables';
 
 .flatpickr {
   &-calendar {
@@ -26,13 +26,13 @@
     &::after { border: @oui-dropdown-arrow-inner-size transparent solid; }
 
     &.arrowTop {
-      margin-top: @oui-dropdown-arrow-size + @oui-dropdown-margin;
+      margin-top: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
 
       &::before { border-bottom-color: @oui-calendar-border-color; }
     }
 
     &.arrowBottom {
-      margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-margin;
+      margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
 
       &::before { border-top-color: @oui-calendar-border-color; }
     }

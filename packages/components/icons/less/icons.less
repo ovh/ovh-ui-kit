@@ -1,11 +1,19 @@
-@import '@ovh/ui-kit.animation/less/_variables';
-@import './_normalize';
-@import './_mixins';
+@import (reference) '@ovh/ui-kit.animation/less/_variables';
+@import (reference) './_mixins';
 
 .oui-icon {
-  #oui > .icon-normalize();
   #oui > .icon();
   #oui > .icon-type();
+
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
 
   &_circle {
     #oui > .icon-circle();
