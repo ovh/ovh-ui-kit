@@ -1,9 +1,10 @@
-@import './_mixins';
-@import './_normalize';
+@import '@ovh/ui-kit.typography/less/_mixins';
+@import './_variables';
 
 .oui-tooltip {
-  #oui > .tooltip-normalize();
   @link-selector: oui-link;
+
+  #oui > .base-font();
 
   min-width: @oui-tooltip-min-width;
   max-width: @oui-tooltip-max-width;

@@ -1,10 +1,10 @@
-@import '@ovh/ui-kit.core/less/_settings';
-@import '@ovh/ui-kit.animation/less/_mixins';
-@import '@ovh/ui-kit.button/less/_variables';
-@import '@ovh/ui-kit.color/less/_variables';
-@import '@ovh/ui-kit.icons/less/_icons';
+@import (reference) '@ovh/ui-kit.animation/less/_mixins';
+@import (reference) '@ovh/ui-kit.button/less/_variables';
+@import (reference) '@ovh/ui-kit.core/less/_settings';
+@import (reference) '@ovh/ui-kit.color/less/_variables';
+@import (reference) '@ovh/ui-kit.icons/less/_icons';
+@import (reference) './_variables';
 @import './_normalize';
-@import './_variables';
 
 .oui-popover {
   background-color: @oui-popover-background-color;
@@ -184,7 +184,6 @@
     }
   }
 
-  &__help-button, /* Deprecated: Support only for old use */
   &-button {
     width: rem-calc(20);
     height: rem-calc(20);

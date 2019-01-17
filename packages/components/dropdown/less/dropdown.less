@@ -1,7 +1,7 @@
-@import '@ovh/ui-kit.animation/less/_mixins';
-@import '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) '@ovh/ui-kit.animation/less/_mixins';
+@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) './_variables';
 @import './_normalize';
-@import './_variables';
 
 .oui-dropdown {
   #oui > .base-font();
@@ -16,8 +16,7 @@
 }
 
 // Dropdown option
-.oui-dropdown-option,
-.oui-button.oui-button_action-menu /* Deprecated: Support only for old use */ {
+.oui-dropdown-option {
   width: 100%;
   line-height: @oui-dropdown-item-line-height;
   display: block;
