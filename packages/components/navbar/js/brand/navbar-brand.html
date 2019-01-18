@@ -1,0 +1,16 @@
+<a class="oui-navbar__brand"
+    ng-attr-aria-label="{{::!!$ctrl.ariaLabel ? $ctrl.ariaLabel : null}}"
+    ng-attr-title="{{::!!$ctrl.ariaLabel ? $ctrl.ariaLabel : null}}"
+    ng-href="{{::$ctrl.href}}">
+    <img class="navbar-logo"
+        ng-if="!!$ctrl.iconSrc"
+        ng-attr-alt="{{::!!$ctrl.iconAlt ? $ctrl.iconAlt : null}}"
+        ng-class="::!!$ctrl.iconClass ? $ctrl.iconClass : null"
+        ng-src="{{::$ctrl.iconSrc}}">
+    <span ng-if="!$ctrl.iconSrc"
+        ng-class="::$ctrl.iconClass">
+    </span>
+    <span class="oui-navbar__title" ng-if="::$ctrl.heading"
+        ng-bind="::$ctrl.heading">
+    </span>
+</a>

@@ -1,0 +1,114 @@
+<oui-dropdown align="{{::$ctrl.align}}" arrow persistent>
+    <button type="button" class="oui-criteria-adder__button oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
+        oui-dropdown-trigger>
+        <span class="oui-icon oui-icon-filter" aria-hidden="true"></span>
+    </button>
+    <oui-dropdown-content>
+        <form name="{{::$ctrl.name}}" novalidate
+            ng-attr-id="{{::$ctrl.id}}"
+            ng-submit="$ctrl.onFormSubmit()">
+
+            <!-- Column field -->
+            <oui-field label="{{::$ctrl.translations.column_label}}">
+                <oui-select
+                    ng-attr-id="{{::$ctrl.id}}Column"
+                    name="{{::$ctrl.name}}Column"
+                    model="$ctrl.columnModel"
+                    ng-click="$event.stopPropagation()"
+                    items="$ctrl.properties"
+                    match="title"
+                    on-change="$ctrl.onColumnChange()">
+                    <span ng-bind="$item.title"></span>
+                </oui-select>
+            </oui-field>
+            <!-- /Column field -->
+
+            <!-- Operator field -->
+            <oui-field label="{{::$ctrl.translations.operator_label}}">
+                <oui-select
+                    ng-attr-id="{{::$ctrl.id}}Operator"
+                    name="{{::$ctrl.name}}Operator"
+                    model="$ctrl.operatorModel"
+                    ng-click="$event.stopPropagation()"
+                    items="$ctrl.selectableOperators"
+                    match="title">
+                    <span ng-bind="$item.title"></span>
+                </oui-select>
+            </oui-field>
+            <!-- /Operator field -->
+
+            <!-- Value field -->
+            <div ng-switch="$ctrl.columnModel.type">
+
+                <!-- String (Default) -->
+                <div ng-switch-default>
+                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                        <input class="oui-input" type="text" name="{{::$ctrl.name}}Value"
+                            ng-attr-id="{{::$ctrl.id}}Value"
+                            ng-model="$ctrl.valueModel['string']">
+                    </oui-field>
+                </div>
+                <!-- /String (Default) -->
+
+                <!-- Number -->
+                <div ng-switch-when="number">
+                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                        <input class="oui-input" type="number" name="{{::$ctrl.name}}Value"
+                            ng-attr-id="{{::$ctrl.id}}Value"
+                            ng-model="$ctrl.valueModel['number']">
+                    </oui-field>
+                </div>
+                <!-- /Number -->
+
+                <!-- Boolean -->
+                <div ng-switch-when="boolean">
+                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                        <oui-select
+                            name="{{::$ctrl.name}}Value"
+                            model="$ctrl.valueModel['boolean']"
+                            ng-click="$event.stopPropagation()"
+                            items="$ctrl.booleanChoices"
+                            match="name"
+                            data-align="start">
+                            <span ng-bind="$item.name"></span>
+                        </oui-select>
+                    </oui-field>
+                </div>
+                <!-- /Boolean -->
+
+                <!-- Options -->
+                <div ng-switch-when="options">
+                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                        <oui-select
+                            name="{{::$ctrl.name}}Value"
+                            model="$ctrl.valueModel['options']"
+                            ng-click="$event.stopPropagation()"
+                            items="$ctrl.optionsChoices"
+                            match="name"
+                            data-align="start">
+                            <span ng-bind="$item.name"></span>
+                        </oui-select>
+                    </oui-field>
+                </div>
+                <!-- /Options -->
+
+                <!-- Date -->
+                <div ng-switch-when="date">
+                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                        <oui-calendar
+                            name="{{::$ctrl.name}}Value"
+                            model="$ctrl.valueModel['date']">
+                        </oui-calendar>
+                    </oui-field>
+                </div>
+                <!-- /Date -->
+
+            </div>
+            <!-- /Value field -->
+
+            <button class="oui-criteria-adder__submit oui-button oui-button_primary oui-button_full-width" type="submit"
+                ng-bind="::$ctrl.translations.submit_label">
+            </button>
+        </form>
+    </oui-dropdown-content>
+</oui-dropdown>

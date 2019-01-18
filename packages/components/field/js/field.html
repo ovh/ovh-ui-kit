@@ -1,0 +1,36 @@
+<div class="oui-field"
+    ng-class="{ 'oui-field_error': $ctrl.isErrorVisible() }">
+    <label class="oui-field__label oui-label"
+        ng-attr-for="{{ ::$ctrl.for }}"
+        ng-if="::!!$ctrl.label && !$ctrl.labelPopover"
+        ng-bind="::$ctrl.label"></label>
+    <div class="oui-field__label-container"
+         ng-if="::!!$ctrl.label && !!$ctrl.labelPopover">
+        <label class="oui-field__label oui-label"
+               ng-attr-for="{{ ::$ctrl.for }}"
+               ng-bind="::$ctrl.label">
+        </label>
+        <oui-popover>
+            <button type="button" class="oui-popover-button" aria-label="Help" oui-popover-trigger></button>
+            <oui-popover-content>
+                <div class="oui-field__label-popover" id="{{:: $ctrl.popoverId }}"
+                     ng-bind-html=":: $ctrl.labelPopover"></div>
+            </oui-popover-content>
+        </oui-popover>
+    </div>
+    <div ng-class=":: 'oui-field__control oui-field__control_' + $ctrl.size" ng-transclude></div>
+    <div class="oui-field__error"
+        ng-if="$ctrl.isErrorVisible()">
+        <span ng-messages="$ctrl.getFirstError()" role="alert">
+            <span class="oui-icon oui-icon-error" aria-hidden="true"></span>
+            <span data-ng-repeat="errorKey in $ctrl.getMessagesOrder()"
+                  ng-message="{{ :: errorKey }}"
+                  ng-bind="$ctrl.getErrorMessage(errorKey)">
+            </span>
+        </span>
+    </div>
+    <div class="oui-field__helper"
+        ng-if="::!!$ctrl.helpText"
+        ng-bind="::$ctrl.helpText">
+    </div>
+</div>

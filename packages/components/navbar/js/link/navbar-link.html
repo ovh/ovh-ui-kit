@@ -1,0 +1,29 @@
+<a class="oui-navbar-link"
+    ng-if="::!!$ctrl.href"
+    ng-attr-aria-label="{{::!!$ctrl.label ? $ctrl.label : null}}"
+    ng-attr-title="{{::!!$ctrl.label ? $ctrl.label : null}}"
+    ng-class="{
+        'oui-navbar-link_active': $ctrl.name === $ctrl.navbarCtrl.activeLink,
+        'oui-navbar-link_primary': $ctrl.variant === 'primary',
+        'oui-navbar-link_secondary': $ctrl.variant === 'secondary',
+        'oui-navbar-link_tertiary': $ctrl.variant === 'tertiary'
+    }"
+    ng-href="{{::$ctrl.href}}"
+    ng-bind-html="::$ctrl.text"
+    ng-click="$ctrl.onClick()">
+</a>
+<a class="oui-navbar-link"
+    ng-if="::!!$ctrl.state"
+    ng-attr-aria-label="{{::!!$ctrl.label ? $ctrl.label : null}}"
+    ng-attr-title="{{::!!$ctrl.label ? $ctrl.label : null}}"
+    ng-class="{
+        'oui-navbar-link_active': $ctrl.name === $ctrl.navbarCtrl.activeLink,
+        'oui-navbar-link_primary': $ctrl.variant === 'primary',
+        'oui-navbar-link_secondary': $ctrl.variant === 'secondary',
+        'oui-navbar-link_tertiary': $ctrl.variant === 'tertiary'
+    }"
+    ng-bind-html="::$ctrl.text"
+    ui-sref="{{::$ctrl.getFullSref()}}"
+    ui-sref-active="oui-navbar-link_active"
+    ng-click="$ctrl.onClick()">
+</a>

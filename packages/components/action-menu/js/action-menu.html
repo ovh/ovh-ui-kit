@@ -1,0 +1,24 @@
+<oui-dropdown class="oui-dropdown_action-menu"
+    align="{{::$ctrl.align}}"
+    arrow="::$ctrl.compact">
+    <oui-dropdown-trigger
+        ng-if="::!$ctrl.compact"
+        text="{{::$ctrl.text}}"
+        aria-label="{{::$ctrl.ariaLabel}}"
+        disabled="$ctrl.disabled">
+    </oui-dropdown-trigger>
+    <button class="oui-action-button"
+        ng-if="::!!$ctrl.compact"
+        ng-disabled="$ctrl.disabled"
+        aria-label="{{::($ctrl.ariaLabel || $ctrl.text)}}"
+        oui-dropdown-trigger>
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="-1 -1 74 74">
+            <circle cx="22.27" cy="36" r="4"></circle>
+            <circle cx="36.20" cy="36" r="4"></circle>
+            <circle cx="50.13" cy="36" r="4"></circle>
+        </svg>
+    </button>
+    <oui-dropdown-content class="oui-action-menu"
+        ng-transclude>
+    </oui-dropdown-content>
+</oui-dropdown>

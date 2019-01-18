@@ -1,0 +1,70 @@
+<form class="oui-stepper__container oui-stepper__container_form" novalidate
+    ng-attr-name="{{::$ctrl.name}}"
+    ng-attr-id="{{::$ctrl.id}}"
+    ng-class="{
+        'oui-stepper__container_disabled': ($ctrl.disabled || $ctrl.stepper.disabled),
+        'oui-stepper__container_complete': ($ctrl.valid && this[$ctrl.name].$valid && !$ctrl.stepper.focused && !$ctrl.stepper.disabled)
+    }"
+    ng-submit="$ctrl.onFormSubmit(this[$ctrl.name])">
+
+    <!-- Step Header -->
+    <header class="oui-stepper__header">
+        <span class="oui-stepper__title" ng-bind="::$ctrl.header"></span>
+        <span class="oui-stepper__label-optional"
+            ng-if="$ctrl.skippable"
+            ng-bind="::$ctrl.translations.optionalLabel">
+        </span>
+        <button class="oui-button oui-button_link" type="button"
+            ng-if="!$ctrl.stepper.focused && !$ctrl.stepper.disabled && this[$ctrl.name].$submitted"
+            ng-click="$ctrl.setFocus(this[$ctrl.name])"
+            ng-bind="::$ctrl.translations.modifyThisStep"></button>
+    </header>
+    <!-- /Step Header -->
+
+    <!-- Step Content -->
+    <fieldset class="oui-stepper__content"
+        ng-disabled="$ctrl.disabled || $ctrl.stepper.disabled || !$ctrl.stepper.focused"
+        ng-hide="$ctrl.stepper.disabled || $ctrl.disabled">
+        <legend class="oui-stepper__description" ng-bind="$ctrl.description"></legend>
+
+        <!-- Step Loader -->
+        <section class="oui-stepper__loader" ng-show="$ctrl.loading">
+            <oui-spinner size="s"></oui-spinner>
+            <span class="oui-stepper__label-loader"
+                ng-bind="$ctrl.loadingText">
+            </span>
+        </section>
+        <!-- /Step Loader -->
+
+        <section ng-show="!$ctrl.loading">
+            <div ng-transclude></div>
+        </section>
+
+        <!-- Step Footer -->
+        <footer class="oui-stepper__footer"
+            ng-if="$ctrl.navigation"
+            ng-show="!$ctrl.loading && $ctrl.stepper.focused">
+            <oui-button variant="primary" type="submit"
+                text="{{$ctrl.submitText || ($ctrl.stepper.last ? $ctrl.translations.submitButtonLabel : $ctrl.translations.nextButtonLabel)}}">
+            </oui-button>
+            <oui-button variant="link"
+                ng-if="::!$ctrl.cancelHref && !!$ctrl.onCancel"
+                text="{{::$ctrl.cancelText}}"
+                on-click="$ctrl.onCancel()">
+            </oui-button>
+            <a class="oui-button oui-button_link"
+                ng-if="::!!$ctrl.cancelHref"
+                ng-bind="::$ctrl.cancelText"
+                ng-href="{{::$ctrl.cancelHref}}">
+            </a>
+            <oui-button class="oui-stepper__skippable-link" type="submit"
+                variant="link" text="{{::$ctrl.translations.skipThisStep}}"
+                ng-if="$ctrl.skippable">
+            </oui-button>
+        </footer>
+        <!-- /Step Footer -->
+
+    </fieldset>
+    <!-- /Step Content -->
+
+</form>

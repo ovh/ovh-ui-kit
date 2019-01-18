@@ -1,0 +1,56 @@
+<input type="radio" class="oui-select-picker__input"
+    name="{{:: $ctrl.name }}"
+    ng-attr-aria-labelledby="{{:: $ctrl.id }}Label"
+    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + 'Description' || undefined }}"
+    ng-attr-id="{{:: $ctrl.id }}"
+    ng-change="$ctrl.onRadioModelChange({ modelValue: $ctrl.model })"
+    ng-disabled="$ctrl.disabled"
+    ng-model="$ctrl.model"
+    ng-required="$ctrl.required"
+    ng-value="$ctrl.selectedValue">
+<label class="oui-select-picker__label-container" for="{{:: $ctrl.id }}">
+    <span class="oui-select-picker__picture-container"
+        ng-if="$ctrl.picture">
+        <img class="oui-select-picker__picture" alt="" aria-hidden="true"
+            ng-if="$ctrl.isImgPath"
+            ng-src="{{ :: $ctrl.picture }}">
+        <span class="oui-select-picker__picture" aria-hidden="true"
+            ng-class=":: $ctrl.picture"
+            ng-if="!$ctrl.isImgPath"></span>
+    </span>
+    <span class="oui-select-picker__label">
+        <span id="{{:: $ctrl.id }}Label"
+                ng-bind="$ctrl.label">
+        </span>
+    </span>
+    <span class="oui-select-picker__description"
+        id="{{:: $ctrl.id }}Description"
+        ng-bind=":: $ctrl.description"
+        ng-if="$ctrl.description"></span>
+    <span class="oui-select-picker__value-container oui-select-picker__section"
+        ng-if="$ctrl.values.length === 1 && $ctrl.match">
+        <span class="oui-select-picker__value"
+            ng-bind=":: $ctrl.getFirstValueMatch($ctrl.match)">
+        </span>
+    </span>
+    <span class="oui-select-picker__value-container oui-select-picker__section"
+          ng-if="$ctrl.values.length > 1">
+        <oui-select name="{{:: $ctrl.name }}"
+            disabled="$ctrl.disabled"
+            items="$ctrl.values"
+            match="{{ $ctrl.match }}"
+            model="$ctrl.selectedValue"
+            on-change="$ctrl.onSelectModelChange({ modelValue: $ctrl.selectedValue })"
+            placeholder="{{:: $ctrl.placeholder || ' - ' }}"
+            data-align="end">
+            <span ng-if="$ctrl.match" ng-bind=":: $ctrl.$scope.$parent.getItemValue($item, $ctrl.match)"></span>
+            <span ng-if="!$ctrl.match" ng-bind=":: $item"></span>
+        </oui-select>
+    </span>
+    <span class="oui-select-picker__transclude-container"
+        ng-if="$ctrl.sectionTransclude"
+        ng-transclude="sectionSlot"></span>
+    <span class="oui-select-picker__transclude-container"
+        ng-if="$ctrl.deprecatedTransclude"
+        ng-transclude="deprecatedSlot"></span>
+</label>

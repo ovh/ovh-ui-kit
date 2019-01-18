@@ -1,0 +1,40 @@
+<div class="oui-modal__header">
+    <button class="oui-icon oui-icon-close_thin oui-modal__close-button"
+        type="button"
+        aria-label="Exit"
+        ng-click="$ctrl.onDismiss()">
+    </button>
+</div>
+<div class="oui-modal__body"
+    ng-class="{'oui-modal__body_no-icon': !$ctrl.type}">
+    <span class="oui-icon oui-icon_bicolor"
+        ng-if="!!$ctrl.type"
+        ng-class="'oui-icon-' + $ctrl.type + '_circle'"
+        aria-hidden="true">
+    </span>
+    <div class="oui-modal__loader"
+        ng-if="$ctrl.loading">
+        <oui-spinner></oui-spinner>
+    </div>
+    <h2 class="oui-modal__title"
+        ng-if="::!!$ctrl.heading"
+        ng-bind="::$ctrl.heading">
+    </h2>
+    <div ng-transclude></div>
+</div>
+<div class="oui-modal__footer">
+    <button class="oui-button oui-button_secondary"
+        type="button"
+        ng-if="$ctrl.secondaryLabel"
+        ng-bind="$ctrl.secondaryLabel"
+        ng-click="$ctrl.secondaryAction()"
+        ng-disabled="$ctrl.loading || $ctrl.secondaryDisabled">
+    </button>
+    <button class="oui-button oui-button_primary"
+        type="submit"
+        ng-if="$ctrl.primaryLabel"
+        ng-bind="$ctrl.primaryLabel"
+        ng-click="$ctrl.primaryAction()"
+        ng-disabled="$ctrl.loading || $ctrl.primaryDisabled">
+    </button>
+</div>

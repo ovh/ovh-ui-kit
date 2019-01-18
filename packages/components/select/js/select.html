@@ -1,0 +1,19 @@
+<ui-select class="oui-field__component"
+    ng-attr-name="{{::$ctrl.name}}"
+    ng-attr-title="{{::$ctrl.title}}"
+    ng-init="$ctrl.$select = $select"
+    ng-model="$ctrl.model"
+    ng-required="$ctrl.required && !$select.open"
+    ng-disabled="$ctrl.disabled"
+    close-on-select="{{!$ctrl.multiple}}"
+    on-select="$ctrl.onUiSelectChange($model)"
+    search-enabled="{{::!!$ctrl.searchable}}"
+    theme="oui-ui-select">
+    <ui-select-match placeholder="{{::$ctrl.placeholder}}">
+        <span ng-bind-html="$ctrl.getPropertyValue($item)"></span>
+    </ui-select-match>
+    <ui-select-choices repeat="$item in $ctrl.items | filter: $select.search track by $index"
+        ui-disable-choice="$ctrl.disableItems({ $item: $item })">
+        <span ng-bind-html="$ctrl.getPropertyValue($item) | highlight: $select.search"></span>
+    </ui-select-choices>
+</ui-select>
