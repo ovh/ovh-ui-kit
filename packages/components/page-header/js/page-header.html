@@ -1,0 +1,21 @@
+<header class="oui-page-header">
+    <div class="oui-page-header__container">
+        <div class="oui-page-header__content">
+            <h1 class="oui-page-header__title"
+                ng-bind="::$ctrl.heading">
+            </h1>
+            <h2 class="oui-page-header__description"
+                ng-if="::!!$ctrl.description"
+                ng-bind="::$ctrl.description">
+            </h2>
+        </div>
+        <div class="oui-page-header__guide"
+            ng-if="$ctrl.transcludeGuide"
+            ng-transclude="guide">
+        </div>
+    </div>
+    <div class="oui-page-header__tabs"
+        ng-if="$ctrl.transcludeTabs"
+        ng-transclude="tabs">
+    </div>
+</header>

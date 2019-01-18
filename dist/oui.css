@@ -10446,10 +10446,8 @@ oui-collapsible {
   height: 0 !important;
   /* stylelint-enable declaration-no-important */
 }
+.oui-skeleton,
 oui-skeleton {
-  display: block;
-}
-.oui-skeleton {
   min-height: 0.5rem;
   position: relative;
   display: block;
@@ -10497,6 +10495,7 @@ oui-skeleton {
     background-position: 200% 0;
   }
 }
+/* Web component */
 oui-slideshow,
 oui-slideshow-panel {
   display: flex;

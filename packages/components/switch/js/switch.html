@@ -1,0 +1,8 @@
+<label class="oui-switch__label-container">
+    <input class="oui-switch__checkbox" type="checkbox" id="{{:: $ctrl.id }}" name="{{:: $ctrl.name }}"
+           ng-change="$ctrl.onChange({ modelValue: $ctrl.model })"
+           ng-disabled="$ctrl.disabled"
+           ng-model="$ctrl.model"
+           ng-required="$ctrl.required">
+    <span class="oui-switch__slider" aria-hidden="true"></span>
+</label>

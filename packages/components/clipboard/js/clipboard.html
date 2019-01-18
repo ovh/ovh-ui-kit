@@ -1,0 +1,12 @@
+<input class="oui-clipboard__control oui-input"
+    type="text"
+    ng-attr-id="{{::$ctrl.id}}"
+    ng-attr-name="{{::$ctrl.name}}"
+    ng-click="$ctrl.onInputClick()"
+    ng-model="$ctrl.model"
+    oui-tooltip="{{$ctrl.tooltipText}}"
+    readonly>
+<button class="oui-clipboard__button oui-button"
+    ng-attr-aria-label="{{::$ctrl.translations.copyToClipboardLabel}}">
+    <span class="oui-icon oui-icon-copy-normal"></span>
+</button>

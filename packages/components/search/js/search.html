@@ -1,0 +1,29 @@
+<form class="oui-input-group oui-input-group_search" novalidate
+    ng-submit="$ctrl.onSearchSubmit($ctrl.model)">
+    <input autocomplete="off" class="oui-input" type="text"
+        oui-autocomplete="$ctrl.autocomplete"
+        oui-autocomplete-options="::$ctrl.autocompleteOptions"
+        oui-autocomplete-property="{{$ctrl.autocompleteProperty}}"
+        oui-autocomplete-on-select="$ctrl.autocompleteOnSelect({ value })"
+        ng-attr-aria-label="{{::$ctrl.ariaLabel}}"
+        ng-attr-id="{{::$ctrl.id}}"
+        ng-attr-name="{{::$ctrl.name}}"
+        ng-attr-placeholder="{{::$ctrl.placeholder}}"
+        ng-model="$ctrl.model"
+        ng-model-options="{ debounce: $ctrl.debounce }"
+        ng-maxlength="$ctrl.maxlength"
+        ng-minlength="$ctrl.minlength"
+        ng-change="$ctrl.onSearchChange()"
+        ng-disabled="$ctrl.disabled"
+        ng-keydown="$ctrl.onKeyDown($event)" />
+    <button class="oui-button" type="reset"
+        ng-click="$ctrl.onSearchReset()"
+        ng-show="$ctrl.model.length"
+        ng-disabled="$ctrl.disabled">
+        <span class="oui-icon oui-icon-close_thin"></span>
+    </button>
+    <button class="oui-button" type="submit"
+        ng-disabled="$ctrl.disabled">
+        <span class="oui-icon oui-icon-search"></span>
+    </button>
+</form>

@@ -1,0 +1,23 @@
+<oui-dropdown class="oui-dropdown_guide-menu" arrow
+    align="{{::$ctrl.align}}">
+    <button class="oui-guide-button oui-dropdown__trigger" oui-dropdown-trigger>
+        <span class="oui-guide-button__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 17.15" width="22px">
+                <polygon points="11.5 15.64 3.5 12.52 3.5 0.53 11.5 3.8 11.5 15.64" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.06"/>
+                <polygon points="11.54 3.8 19.54 0.53 19.54 12.52 11.54 15.64 11.54 3.8" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.06"/>
+                <line x1="13.44" y1="5.83" x2="17.58" y2="4.58" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.22"/>
+                <line x1="13.44" y1="8.78" x2="17.58" y2="7.54" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.22"/>
+                <line x1="13.44" y1="11.73" x2="17.58" y2="10.49" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.22"/>
+                <path d="M3.1,4.65H1.69A1.15,1.15,0,0,0,.5,5.75v9.79c0,.61.53,1.1,2.17,1.1H11.5" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.5,16.65h9.83c1.64,0,2.17-.49,2.17-1.1V5.75a1.15,1.15,0,0,0-1.19-1.1H19.5" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="5.31" y1="4.58" x2="9.58" y2="6.06" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.22"/>
+                <line x1="5.31" y1="7.54" x2="9.58" y2="9.01" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.22"/>
+                <line x1="5.31" y1="10.49" x2="9.58" y2="11.96" fill="none" stroke="#122844" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.22"/>
+            </svg>
+        </span>
+        <span class="oui-guide-button__text" ng-bind="::$ctrl.text"></span>
+    </button>
+    <oui-dropdown-content class="oui-guide-menu"
+        ng-transclude>
+    </oui-dropdown-content>
+</oui-dropdown>

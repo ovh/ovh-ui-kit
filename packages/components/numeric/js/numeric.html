@@ -1,0 +1,27 @@
+<button class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
+    type="button"
+    ng-disabled="$ctrl.disabled || $ctrl.model <= $ctrl.min"
+    ng-click="$ctrl.decrement()"
+    tabindex="-1"
+    aria-hidden="true">
+    <span class="oui-icon oui-icon-remove"></span>
+</button>
+<input class="oui-input oui-input_number"
+    type="number"
+    role="slider"
+    ng-attr-id="{{:: $ctrl.id }}"
+    ng-attr-name="{{:: $ctrl.name }}"
+    ng-attr-aria-valuemin="{{ $ctrl.min }}"
+    ng-attr-aria-valuemmax="{{ $ctrl.max }}"
+    ng-attr-aria-valuenow="{{ $ctrl.model }}"
+    ng-disabled="$ctrl.disabled"
+    ng-change="$ctrl.onInputChanged()"
+    ng-model="$ctrl.model">
+<button class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
+    type="button"
+    ng-disabled="$ctrl.disabled || $ctrl.model >= $ctrl.max"
+    ng-click="$ctrl.increment()"
+    tabindex="-1"
+    aria-hidden="true">
+    <span class="oui-icon oui-icon-add"></span>
+</button>

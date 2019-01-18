@@ -5,13 +5,15 @@
   "description": "A LESS stylekit for the OVH brand.",
   "license": "BSD-3-Clause",
   "workspaces": [
+    "packages/base",
     "packages/components/*",
+    "packages/docs",
     "packages/vendors/*"
   ],
   "scripts": {
-    "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' packages/components/_core/less/_version.tmpl.less > packages/components/_core/less/_version.less",
-    "build:less": "lessc --remcalc packages/core/less/_dist.less dist/oui.css",
-    "build:less-min": "lessc --remcalc --clean-css packages/core/less/_dist.less dist/oui.min.css",
+    "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' packages/base/less/_version.tmpl.less > packages/base/less/_version.less",
+    "build:less": "lessc --remcalc packages/base/less/_dist.less dist/oui.css",
+    "build:less-min": "lessc --remcalc --clean-css packages/base/less/_dist.less dist/oui.min.css",
     "build:fonts": "cpx \"packages/oui-typography/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"dist/fonts\"",
     "build:icons": "mkdirp dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
     "build:icons-generator": "icon-font-generator packages/components/icons/svg/*.svg -p oui-icon -o dist/icons -t span --types 'woff, woff2'",
@@ -21,7 +23,7 @@
     "lint": "yarn lint:css",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
-    "version": "npm run build && git add dist packages/oui-icons/_icons.less packages/components/_core/less/_version.less && npm-scripts-config version",
+    "version": "npm run build && git add dist packages/components/icons/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog"
   },

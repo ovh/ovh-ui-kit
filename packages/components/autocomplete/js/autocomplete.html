@@ -1,0 +1,13 @@
+<ul class="oui-autocomplete"
+    ng-attr-id="{{::$autocompleteCtrl.id}}"
+    ng-style="::{ 'width': $autocompleteCtrl.triggerWidth }"
+    ng-show="$autocompleteCtrl.isOpen && !!$autocompleteCtrl.datalist.length">
+    <li class="oui-autocomplete__item"
+        ng-repeat="option in $autocompleteCtrl.datalist | orderBy: $autocompleteCtrl.property">
+        <button type="button" class="oui-autocomplete__option"
+            role="menuitem"
+            ng-bind-html="$autocompleteCtrl.getProperty(option) | ouiAutocompleteHightlight: $autocompleteCtrl.query"
+            ng-click="$autocompleteCtrl.updateValue(option)">
+        </button>
+    </li>
+</ul>

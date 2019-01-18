@@ -1,0 +1,34 @@
+<div class="oui-slideshow-panel__picture-container"
+    ng-if="::$ctrl.picture">
+    <div class="oui-slideshow-panel__picture"
+        ng-style="{ 'background-image': 'url(' + $ctrl.picture + ')' }">
+    </div>
+</div>
+<div class="oui-slideshow-panel__container">
+    <div class="oui-slideshow-panel__title"
+        ng-bind="::$ctrl.heading"
+        ng-if="::$ctrl.heading">
+    </div>
+    <div class="oui-slideshow-panel__text"
+        ng-transclude>
+        {{::$ctrl.text}}
+    </div>
+    <div class="oui-slideshow-panel__action"
+        ng-if="::$ctrl.onClick || $ctrl.href">
+        <button type="button" class="oui-button oui-button_secondary"
+            ng-bind="::$ctrl.label"
+            ng-click="$ctrl.onClick()"
+            ng-if="::$ctrl.onClick && !$ctrl.href">
+        </button>
+        <a class="oui-button oui-button_secondary"
+            ng-attr-rel="{{ ::$ctrl.external ? 'noopener' : undefined }}"
+            ng-attr-target="{{ ::$ctrl.external ? '_blank' : undefined }}"
+            ng-href="{{ ::$ctrl.href }}"
+            ng-if="::$ctrl.href">
+            <span ng-bind="::$ctrl.label"></span>
+            <span class="oui-icon oui-icon-external_link" aria-hidden="true"
+                ng-if="::$ctrl.external">
+            </span>
+        </a>
+    </div>
+</div>

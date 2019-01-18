@@ -1,0 +1,19 @@
+<button class="oui-tabs-item__button"
+    ng-attr-aria-label="{{::$ctrl.ariaLabel}}"
+    ng-attr-aria-expanded="{{!$ctrl.isHidden}}"
+    ng-attr-aria-controls="{{::$ctrl.id}}"
+    ng-class="{ 'oui-tabs-item__button_checked': $ctrl.checked }"
+    ng-click="$ctrl.setActive()">
+    <span class="oui-icon oui-icon-success"
+        ng-if="::$ctrl.hasCheckmark">
+    </span>
+    <span class="oui-tabs-item__heading" role="heading"
+        ng-bind="::$ctrl.heading">
+    </span>
+    <span class="oui-icon oui-icon-chevron-down oui-tabs-item__toggle-icon" aria-hidden="true"></span>
+</button>
+<div class="oui-tabs-item__content" role="tabpanel"
+    ng-attr-id="{{::$ctrl.id}}"
+    ng-attr-aria-hidden="{{$ctrl.isHidden}}"
+    ng-transclude>
+</div>
