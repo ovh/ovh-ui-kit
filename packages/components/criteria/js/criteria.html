@@ -1,0 +1,25 @@
+<div class="oui-datagrid-topbar__actions">
+    <div class="oui-datagrid-topbar__slot"
+        ng-transclude>
+    </div>
+    <oui-search
+        ng-if="$ctrl.searchable"
+        model="$ctrl.searchText"
+        debounce="$ctrl.debounceDelay"
+        minlength="$ctrl.minLength"
+        on-change="$ctrl.onCriterionChange(modelValue)"
+        on-reset="$ctrl.onCriterionReset()"
+        on-submit="$ctrl.onCriterionSubmit(modelValue)">
+    </oui-search>
+    <oui-criteria-adder
+        ng-if="$ctrl.properties.length"
+        properties="$ctrl.properties"
+        placement="end">
+    </oui-criteria-adder>
+</div>
+<oui-chips class="oui-datagrid-topbar__criteria"
+    ng-if="$ctrl.criteria.length"
+    items="$ctrl.criteria"
+    on-remove="$ctrl.remove(removed)"
+    closable>
+</oui-chips>

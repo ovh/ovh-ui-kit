@@ -1,0 +1,22 @@
+<button
+  class="oui-button"
+  ng-attr-aria-label="{{::$ctrl.ariaLabel}}"
+  ng-attr-id="{{::$ctrl.id}}"
+  ng-attr-name="{{::$ctrl.name}}"
+  ng-attr-type="{{::$ctrl.type}}"
+  ng-class="::{
+    'oui-button_primary': $ctrl.variant === 'primary',
+    'oui-button_secondary': $ctrl.variant === 'secondary',
+    'oui-button_link': $ctrl.variant === 'link',
+    'oui-button_icon-left': $ctrl.variantNav === 'previous',
+    'oui-button_icon-right': $ctrl.variantNav === 'next'
+  }"
+  ng-click="$ctrl.onClick()"
+  ng-disabled="$ctrl.disabled"
+>
+  <span aria-hidden="true" class="oui-icon oui-icon_circle oui-icon-chevron-left"
+    ng-if="::$ctrl.variantNav === 'previous'"></span>
+  <span ng-transclude>{{$ctrl.text}}</span>
+  <span aria-hidden="true" class="oui-icon oui-icon_circle oui-icon-chevron-right"
+    ng-if="::$ctrl.variantNav === 'next'"></span>
+</button>

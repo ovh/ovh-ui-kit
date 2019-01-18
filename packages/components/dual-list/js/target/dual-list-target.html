@@ -1,0 +1,82 @@
+<!-- Header -->
+<header class="oui-dual-list__header">
+    <span class="oui-dual-list__heading" role="heading">
+        <span ng-bind="::$ctrl.heading"></span>
+        <span ng-if="!$ctrl.isLoading()">({{$ctrl.dualList.target.length}})</span>
+    </span>
+</header>
+<button class="oui-dual-list__header" type="button"
+    ng-click="$ctrl.toggle()"
+    aria-expanded="{{$ctrl.expanded}}"
+    aria-controls="{{::$ctrl.id}}">
+    <span class="oui-dual-list__heading" role="heading">
+        <span ng-bind="::$ctrl.heading"></span>
+        <span ng-if="!$ctrl.isLoading()">({{$ctrl.dualList.target.length}})</span>
+    </span>
+    <span class="oui-icon oui-icon-chevron-down oui-dual-list__toggle-icon"
+        aria-hidden="true"
+        ng-if="!$ctrl.isLoading()">
+    </span>
+    <oui-spinner size="s"
+        ng-if="$ctrl.isLoading()">
+    </oui-spinner>
+</button>
+<!-- /Header -->
+
+<section class="oui-dual-list__wrapper"
+    ng-attr-id="::$ctrl.id">
+
+    <!-- Search -->
+    <oui-search class="oui-dual-list__search"
+        ng-if="$ctrl.searchable"
+        arial-label="{{::$ctrl.translations.search}}"
+        placeholder="{{::$ctrl.translations.search}}"
+        model="$ctrl.searchQuery">
+    </oui-search>
+    <!-- /Search -->
+
+    <!-- Move All -->
+    <p class="oui-dual-list__action"
+        ng-if="$ctrl.dualList.target.length > 1"
+        ng-show="!$ctrl.isLoading()">
+        <oui-button variant="link"
+            on-click="$ctrl.dualList.moveAllToSource($ctrl.searchQuery)">
+            {{::$ctrl.translations.moveAll}}
+        </oui-button>
+    </p>
+    <!-- /Move All -->
+
+    <!-- Loading -->
+    <div class="oui-dual-list__body oui-dual-list__body_centered" ng-if="$ctrl.isLoading()">
+        <oui-spinner class="oui-dual-list__loading" size="m"></oui-spinner>
+    </div>
+    <!-- /Loading -->
+
+    <!-- Placeholder -->
+    <div class="oui-dual-list__body oui-dual-list__body_centered" ng-if="!$ctrl.isLoading() && !$ctrl.dualList.target.length">
+        <p class="oui-dual-list__placeholder" ng-bind="::$ctrl.placeholder"></p>
+    </div>
+    <!-- /Placeholder -->
+
+    <div class="oui-dual-list__body" ng-if="!$ctrl.isLoading() && $ctrl.dualList.target.length">
+        <ul class="oui-dual-list__items">
+
+            <!-- Item -->
+            <li class="oui-dual-list-item"
+                ng-repeat="item in $ctrl.dualList.target | filter:$ctrl.searchQuery | orderBy:$ctrl.dualList.property">
+                <button type="button" class="oui-dual-list-item__button"
+                    ng-attr-aria-label="{{::$ctrl.translations.move}} {{::$ctrl.dualList.getProperty(item)}}"
+                    ng-click="$ctrl.dualList.moveToSource(item)">
+                    <span class="oui-dual-list-item__property"
+                        ng-bind="::$ctrl.dualList.getProperty(item)">
+                    </span>
+                    <span class="oui-dual-list-item__icon">
+                        <span class="oui-icon oui-icon-close_thin" aria-hidden="true"></span>
+                    </span>
+                </button>
+            </li>
+            <!-- /Item -->
+
+        </ul>
+    </div>
+</section>

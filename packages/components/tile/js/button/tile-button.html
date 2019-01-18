@@ -1,0 +1,24 @@
+<button
+    ng-if="::!$ctrl.href || $ctrl.disabled"
+    type="button"
+    class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width"
+    ng-click="$ctrl.onClick()"
+    ng-attr-aria-label="{{ :: $ctrl.ariaLabel }}"
+    ng-disabled="$ctrl.disabled">
+    <span ng-transclude>{{ :: $ctrl.text }}</span>
+    <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
+</button>
+<a
+    ng-if="::!!$ctrl.href && !$ctrl.disabled"
+    class="oui-tile__button oui-button oui-button_link oui-button_icon-right oui-button_full-width"
+    ng-href="{{:: $ctrl.href }}"
+    ng-attr-rel="{{:: $ctrl.external ? 'noopener' : undefined }}"
+    ng-attr-target="{{:: $ctrl.external ? '_blank' : undefined }}"
+    ng-attr-aria-label="{{ :: $ctrl.ariaLabel }}">
+    <span ng-transclude>{{ :: $ctrl.text }}</span>
+    <span class="oui-icon oui-icon-external_link"
+          aria-hidden="true"
+          ng-if="::$ctrl.external"></span>
+    <span class="oui-icon oui-icon-chevron-right"
+          aria-hidden="true"></span>
+</a>

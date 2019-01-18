@@ -1,0 +1,10 @@
+<h4 class="oui-heading_4 oui-tile__title" ng-bind="::$ctrl.heading"></h4>
+<p class="oui-tile__legend" ng-if="!!$ctrl.description" ng-bind="::$ctrl.description"></p>
+<div class="oui-tile__body"
+    ng-if="!$ctrl.loading"
+    ng-transclude>
+</div>
+<div class="oui-tile__loader"
+    ng-if="$ctrl.loading">
+    <oui-spinner size="m"></oui-spinner>
+</div>

@@ -1,0 +1,11 @@
+<button type="button" id="{{::$dropdownTriggerCtrl.dropdown.id}}"
+    class="oui-button oui-button_dropdown oui-dropdown__trigger"
+    ng-attr-aria-label="{{::$dropdownTriggerCtrl.ariaLabel}}"
+    ng-click="!$dropdownTriggerCtrl.disabled && $dropdownTriggerCtrl.dropdown.onTriggerClick()"
+    ng-blur="$dropdownTriggerCtrl.dropdown.triggerBlurHandler"
+    ng-disabled="$dropdownTriggerCtrl.disabled"
+    aria-haspopup="true"
+    aria-expanded="false">
+    <span ng-bind="::$dropdownTriggerCtrl.text"></span>
+    <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
+</button>

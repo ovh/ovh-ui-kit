@@ -1,0 +1,415 @@
+{
+    "brand": {
+        "label": "OVH",
+        "iconClass": "oui-icon oui-icon-ovh",
+        "url": "#!/oui-angular/navbar"
+    },
+    "asideLinks": [
+        {
+            "name": "lang",
+            "title": "en-US",
+            "class": "oui-navbar-menu_language",
+            "headerTitle": "Language",
+            "subLinks": [
+                {
+                    "title": "de-DE",
+                    "click": "callback()"
+                },
+                {
+                    "title": "en-CA",
+                    "click": "callback()"
+                },
+                {
+                    "title": "en-EN",
+                    "click": "callback()"
+                },
+                {
+                    "title": "en-US",
+                    "click": "callback()",
+                    "isActive": true
+                },
+                {
+                    "title": "fr-CA",
+                    "click": "callback()"
+                },
+                {
+                    "title": "fr-FR",
+                    "click": "callback()"
+                }
+            ]
+        },
+        {
+            "name": "notifications",
+            "class": "navbar-notification__list",
+            "title": "<div class=\"oui-color-gothic\">Your</div><span>notifications</span>",
+            "headerTitle": "Your notifications",
+            "iconClass": "oui-icon oui-icon-info_circle",
+            "iconAnimated": true,
+            "subLinks": [
+              {
+                "subject": "Maecenas id ipsum suscipit",
+                "time": "10:10",
+                "level": "warning",
+                "url": "#/",
+                "description": "Maecenas id ipsum suscipit, efficitur lectus non, <strong>tempor ante</strong>.",
+                "isActive": true
+              }, {
+                "subject": "Vestibulum malesuada justo ac lectus tincidunt",
+                "time": "yesterday, 10:10",
+                "level": "info",
+                "url": "#/",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In fermentum faucibus ante, sed ullamcorper quam pretium ut. Donec et eros at nisi egestas scelerisque quis id erat. Cras suscipit diam id lorem congue aliquam. Integer ornare urna vel turpis blandit, mattis placerat est dictum. Etiam porta venenatis odio tristique condimentum."
+              }, {
+                "subject": "Duis placerat lacus at nibh fringil",
+                "time": "February 21",
+                "level": "success",
+                "url": "#/",
+                "description": "Duis placerat lacus at nibh fringilla, at ultrices nunc suscipit."
+              }, {
+                 "subject": "Mauris ipsum",
+                 "time": "February 22",
+                    "level": "error",
+                 "url": "#/",
+                 "description": "Nunc mattis tellus maximus nisl ullamcorper, nec <strong>blandit dolor</strong> varius. Morbi ut turpis elit. Fusce nec augue mi."
+              }, {
+                "subject": "Mauris ipsum",
+                "time": "February 22, 2017",
+                "level": "incident",
+                "url": "#/",
+                "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis."
+              }
+            ],
+            "limitTo": 10,
+            "footerTitle": "Maecenas facilisis",
+            "footerUrl": "#/"
+        },
+        {
+            "name": "libero",
+            "title": "<div class=\"oui-color-gothic\">Need</div><span>help</span>",
+            "headerTitle": "Need help",
+            "iconClass": "oui-icon oui-icon-help_circle",
+            "subLinks": [
+                {
+                    "title": "Donec",
+                    "url": "#!/oui-angular/navbar",
+                    "isExternal": true
+                },
+                {
+                    "name": "libero.sodales",
+                    "title": "Sodales",
+                    "url": "#!/oui-angular/navbar",
+                    "subLinks": [{
+                        "title": "Elementum",
+                        "url": "#!/oui-angular/navbar"
+                    }, {
+                        "name": "libero.sodales.venenatis",
+                        "title": "Venenatis",
+                        "url": "#!/oui-angular/navbar",
+                        "subLinks": [{
+                            "title": "Vitae varius metus",
+                            "url": "#!/oui-angular/navbar"
+                        }, {
+                            "title": "Orci varius natoque",
+                            "url": "#!/oui-angular/navbar"
+                        }]
+                    }]
+                },
+                {
+                    "title": "Mauris",
+                    "url": "#!/oui-angular/navbar"
+                },
+                {
+                    "title": "Vulputate",
+                    "url": "#!/oui-angular/navbar",
+                    "isExternal": true
+                }
+            ]
+        },
+        {
+            "name": "user",
+            "title": "<div class=\"oui-color-text_oui-color-gothic\">Hello Username</div><span>your account</span>",
+            "iconClass": "oui-icon oui-icon-info_circle",
+            "subLinks": [
+                {
+                    "name": "user.adipiscing",
+                    "title": "Adipiscing",
+                    "url": "#!/oui-angular/navbar",
+                    "subLinks": [{
+                        "title": "Maecenas",
+                        "url": "#!/oui-angular/navbar"
+                    }, {
+                        "title": "Curabitur",
+                        "url": "#!/oui-angular/navbar"
+                    }]
+                },
+                {
+                    "title": "Consectetur",
+                    "url": "#!/oui-angular/navbar"
+                },
+                {
+                    "name": "user.quam",
+                    "title": "Quam",
+                    "url": "#!/oui-angular/navbar",
+                    "subLinks": [{
+                        "title": "Efficitur",
+                        "url": "#!/oui-angular/navbar"
+                    }, {
+                        "title": "Molestie",
+                        "url": "#!/oui-angular/navbar"
+                    }]
+                }
+            ],
+            "nichandle": "ab1234-ovh",
+            "fullName": "Scelerisque Leo-nec"
+        }
+    ],
+    "mainLinks": [
+        {
+            "name": "lorem",
+            "label": "Lorem",
+            "title": "Lorem",
+            "url": "#!/oui-angular/navbar",
+            "isPrimary": true
+        },
+        {
+            "name": "ipsum",
+            "label": "Ipsum",
+            "title": "Ipsum",
+            "url": "#!/oui-angular/navbar",
+            "isPrimary": true,
+            "subLinks": [
+                {
+                    "name": "duis",
+                    "label": "Duis",
+                    "title": "Duis",
+                    "subLinks": [
+                        {
+                            "label": "Tempus",
+                            "title": "Tempus",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "label": "Vitae",
+                            "title": "Vitae",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "name": "duis.malesuada",
+                            "label": "Malesuada",
+                            "title": "Malesuada",
+                            "url": "#!/oui-angular/navbar",
+                            "subLinks": [
+                                {
+                                    "name": "malesuada.eu",
+                                    "label": "malesuada.eu",
+                                    "title": "malesuada.eu",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.fr",
+                                    "label": "malesuada.fr",
+                                    "title": "malesuada.fr",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.be",
+                                    "label": "malesuada.be",
+                                    "title": "malesuada.be",
+                                    "url": "#!/oui-angular/navbar"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pharetra",
+                            "label": "Pharetra",
+                            "title": "Pharetra",
+                            "url": "#!/oui-angular/navbar"
+                        }
+                    ]
+                },
+                {
+                    "name": "lacinia",
+                    "label": "Lacinia",
+                    "title": "Lacinia",
+                    "subLinks": [
+                        {
+                            "label": "Tempus",
+                            "title": "Tempus",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "label": "Vitae",
+                            "title": "Vitae",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "name": "lacinia.malesuada",
+                            "label": "Malesuada",
+                            "title": "Malesuada",
+                            "url": "#!/oui-angular/navbar",
+                            "subLinks": [
+                                {
+                                    "name": "malesuada.eu",
+                                    "label": "malesuada.eu",
+                                    "title": "malesuada.eu",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.fr",
+                                    "label": "malesuada.fr",
+                                    "title": "malesuada.fr",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.be",
+                                    "label": "malesuada.be",
+                                    "title": "malesuada.be",
+                                    "url": "#!/oui-angular/navbar"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pharetra",
+                            "label": "Pharetra",
+                            "title": "Pharetra",
+                            "url": "#!/oui-angular/navbar"
+                        }
+                    ]
+                },
+                {
+                    "name": "magna",
+                    "label": "Magna",
+                    "title": "Magna",
+                    "subLinks": [
+                        {
+                            "label": "Tempus",
+                            "title": "Tempus",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "label": "Vitae",
+                            "title": "Vitae",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "name": "magna.malesuada",
+                            "label": "Malesuada",
+                            "title": "Malesuada",
+                            "url": "#!/oui-angular/navbar",
+                            "subLinks": [
+                                {
+                                    "name": "malesuada.eu",
+                                    "label": "malesuada.eu",
+                                    "title": "malesuada.eu",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.fr",
+                                    "label": "malesuada.fr",
+                                    "title": "malesuada.fr",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.be",
+                                    "label": "malesuada.be",
+                                    "title": "malesuada.be",
+                                    "url": "#!/oui-angular/navbar"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pharetra",
+                            "label": "Pharetra",
+                            "title": "Pharetra",
+                            "url": "#!/oui-angular/navbar"
+                        }
+                    ]
+                },
+                {
+                    "name": "pellentesque",
+                    "label": "Pellentesque",
+                    "title": "Pellentesque",
+                    "subLinks": [
+                        {
+                            "label": "Tempus",
+                            "title": "Tempus",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "label": "Vitae",
+                            "title": "Vitae",
+                            "url": "#!/oui-angular/navbar"
+                        },
+                        {
+                            "name": "pellentesque.malesuada",
+                            "label": "Malesuada",
+                            "title": "Malesuada",
+                            "url": "#!/oui-angular/navbar",
+                            "subLinks": [
+                                {
+                                    "name": "malesuada.eu",
+                                    "label": "malesuada.eu",
+                                    "title": "malesuada.eu",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.fr",
+                                    "label": "malesuada.fr",
+                                    "title": "malesuada.fr",
+                                    "url": "#!/oui-angular/navbar"
+                                },
+                                {
+                                    "name": "malesuada.be",
+                                    "label": "malesuada.be",
+                                    "title": "malesuada.be",
+                                    "url": "#!/oui-angular/navbar"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "pharetra",
+                            "label": "Pharetra",
+                            "title": "Pharetra",
+                            "url": "#!/oui-angular/navbar"
+                        }
+                    ]
+                },
+                {
+                    "name": "empty",
+                    "label": "Not visible",
+                    "title": "Empty",
+                    "subLinks": []
+                }
+            ]
+        },
+        {
+            "name": "dolor",
+            "label": "Dolor",
+            "title": "Dolor",
+            "url": "#!/oui-angular/navbar",
+            "isPrimary": true
+        },
+        {
+            "name": "sit",
+            "label": "Sit",
+            "title": "Sit",
+            "url": "#!/oui-angular/navbar",
+            "isPrimary": false
+        },
+        {
+            "name": "amet",
+            "label": "Amet",
+            "title": "Amet",
+            "url": "#!/oui-angular/navbar",
+            "isPrimary": false
+        }
+    ],
+    "placeholderNotification": [{
+        "name": "notifications",
+        "class": "navbar-notification__list",
+        "title": "Notifications",
+        "iconClass": "oui-icon oui-icon-info_circle",
+        "subLinks": null,
+        "limitTo": 10
+    }]
+}

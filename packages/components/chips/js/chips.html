@@ -1,0 +1,13 @@
+<span class="oui-chip"
+    ng-repeat="item in $ctrl.items"
+    ng-class="::{
+        'oui-chip_closable': !!$ctrl.closable,
+        'oui-chip_full-width': !!$ctrl.stacked
+    }">
+    <span ng-bind="::(item.title || item.name)" title="{{::(item.title || item.name)}}"></span>
+    <button type="button" class="oui-chip__close"
+        ng-if="::!!$ctrl.closable"
+        ng-click="$ctrl.removeItem($index)">
+        <span class="oui-icon oui-icon-close_thin" aria-hidden="true"></span>
+    </button>
+</span>

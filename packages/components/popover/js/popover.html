@@ -1,0 +1,18 @@
+<div class="oui-popover">
+    <button type="button"
+        class="oui-icon oui-icon-close_thin oui-popover__close-button"
+        aria-label="Exit"
+        ng-click="$popoverCtrl.closePopover()">
+    </button>
+    <div class="oui-popover__content-container"
+        ng-if="::!$popoverCtrl.template"
+        ng-attr-id="{{:: $popoverCtrl.id }}"
+        ng-bind="$popoverCtrl.text || $popoverCtrl.title">
+    </div>
+    <div class="oui-popover__content-container"
+        ng-if="::!!$popoverCtrl.template"
+        ng-attr-id="{{:: $popoverCtrl.id }}"
+        ng-include="$popoverCtrl.template">
+    </div>
+    <div class="oui-popover__arrow" aria-hidden="true"></div>
+</div>

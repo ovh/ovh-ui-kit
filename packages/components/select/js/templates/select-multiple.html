@@ -1,0 +1,32 @@
+<div class="oui-ui-select oui-ui-select_multiple ui-select-container ui-select-multiple"
+    ng-class="{ 'ui-select-container_open': $select.open }">
+    <div class="ui-select-match-container"
+        aria-haspopup="true"
+        aria-expanded="{{$select.open}}"
+        aria-owns="ui-select-choices-{{ $select.generatedId }}"
+        ng-class="{
+            'ui-select-match-container_focus': $select.focus,
+            'ui-select-match-container_disabled': $select.disabled
+        }"
+        ng-click="$ctrl.onUiSelectClick()"
+        tabindex="-1">
+        <span class="ui-select-match"></span><!-- replaced by match-multiple.html -->
+        <input class="ui-select-search"
+            aria-label="{{$select.baseTitle}}"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            ng-class="{ 'ui-select-search_hidden': !$select.searchEnabled || !$select.open }"
+            ng-disabled="$select.disabled"
+            ng-model="$select.search"
+            placeholder="{{::$select.placeholder}}"
+            type="search">
+    </div>
+    <div class="ui-select-dropdown"
+        ng-show="$select.items.length > 0">
+        <div class="ui-select-header"></div><!-- replaced by header.html -->
+        <div class="ui-select-choices"></div><!-- replaced by choices.html -->
+        <div class="ui-select-footer"></div><!-- replaced by footer.html -->
+    </div>
+    <div class="ui-select-no-choice"></div><!-- replaced by no-choice.html -->
+</div>
