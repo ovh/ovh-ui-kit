@@ -1372,7 +1372,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("./icons/icons.woff2?v=2.24.0") format("woff2"), url("./icons/icons.woff?v=2.24.0") format("woff");
+  src: url("./icons/icons.woff2?v=3.0.0") format("woff2"), url("./icons/icons.woff?v=3.0.0") format("woff");
 }
 /* Deprecated: Still in use */
 .oui-icon-badge {

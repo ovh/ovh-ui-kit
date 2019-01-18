@@ -1,6 +1,28 @@
 {
   "name": "@ovh/ui-kit",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "license": "BSD-3-Clause",
-  "author": "OVH SAS"
+  "author": "OVH SAS",
+  "scripts": {
+    "build": "rimraf ../../dist && npm run build:version && npm run build:fonts && npm run build:icons && npm run build:less && npm run build:less-min",
+    "build:icons": "mkdirp ../../dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
+    "build:icons-generator": "icon-font-generator ../components/icons/svg/*.svg -p oui-icon -o ../../dist/icons -t span --types 'woff, woff2'",
+    "build:fonts": "cpx \"../components/typography/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"../../dist/fonts\"",
+    "build:less": "lessc --remcalc ./less/_dist.less ../../dist/oui.css",
+    "build:less-min": "lessc --remcalc --clean-css ./less/_dist.less ../../dist/oui.min.css",
+    "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' ./less/_version.tmpl.less > ./less/_version.less"
+  },
+  "dependencies": {
+    "less-plugin-remcalc": "^0.1.0"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.1",
+    "cpx": "^1.5.0",
+    "cross-conf-env": "^1.1.2",
+    "icon-font-generator": "^2.1.9",
+    "less": "^3.8.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2"
+  }
 }

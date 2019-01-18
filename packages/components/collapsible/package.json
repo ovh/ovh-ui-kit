@@ -1,6 +1,6 @@
 {
   "name": "@ovh/ui-kit.collapsible",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
   "main": "./src/index.js",
   "license": "BSD-3-Clause",

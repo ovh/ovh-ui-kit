@@ -3,13 +3,13 @@
 const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
-const icons = require('../dist/icons/icons.json');
+const icons = require('../../../dist/icons/icons.json');
 const log = console.log;
 
 log(chalk.yellow(`\nGenerating less variables from icons`));
 
 // init less file
-let file = fs.createWriteStream('packages/components/icons/less/_icons.less');
+let file = fs.createWriteStream('../components/icons/less/_icons.less');
 
 log(chalk.blue(`Generated`), chalk.cyan(path.resolve(file.path)));
 

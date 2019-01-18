@@ -11,18 +11,10 @@
     "packages/vendors/*"
   ],
   "scripts": {
-    "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' packages/base/less/_version.tmpl.less > packages/base/less/_version.less",
-    "build:less": "lessc --remcalc packages/base/less/_dist.less dist/oui.css",
-    "build:less-min": "lessc --remcalc --clean-css packages/base/less/_dist.less dist/oui.min.css",
-    "build:fonts": "cpx \"packages/oui-typography/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"dist/fonts\"",
-    "build:icons": "mkdirp dist/icons && npm run build:icons-generator && node scripts/generate-icons-indexes.js",
-    "build:icons-generator": "icon-font-generator packages/components/icons/svg/*.svg -p oui-icon -o dist/icons -t span --types 'woff, woff2'",
-    "build": "rimraf dist && npm run build:version && npm run build:fonts && npm run build:icons && npm run build:less && npm run build:less-min",
-    "test": "echo \"no tests for this project\"",
-    "lint:css": "stylelint 'packages/**/*.less' --fix",
-    "lint": "yarn lint:css",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
+    "lint": "yarn lint:css",
+    "lint:css": "stylelint 'packages/**/*.less' --fix",
     "version": "npm run build && git add dist packages/components/icons/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog"
@@ -36,16 +28,8 @@
     "less-plugin-remcalc": "^0.1.0"
   },
   "devDependencies": {
-    "chalk": "^2.4.1",
-    "cpx": "^1.5.0",
-    "cross-conf-env": "^1.1.2",
-    "icon-font-generator": "^2.1.9",
-    "less": "^3.8.1",
-    "less-plugin-clean-css": "^1.5.1",
-    "mkdirp": "^0.5.1",
     "npm-scripts-config": "^0.0.2",
     "npm-scripts-conventional-changelog": "^0.1.0",
-    "rimraf": "^2.6.2",
     "stylelint": "^9.6.0",
     "stylelint-config-standard": "^18.2.0"
   }
