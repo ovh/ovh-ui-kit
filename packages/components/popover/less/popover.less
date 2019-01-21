@@ -1,7 +1,6 @@
-@import (reference) '@ovh/ui-kit.animation/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_variables';
 @import (reference) '@ovh/ui-kit.button/less/_variables';
-@import (reference) '@ovh/ui-kit/less/_settings';
-@import (reference) '@ovh/ui-kit.color/less/_variables';
 @import (reference) '@ovh/ui-kit.icons/less/_icons';
 @import (reference) './_variables';
 @import './_normalize';
@@ -18,7 +17,7 @@
   max-width: rem-calc(300);
   text-align: initial;
   opacity: 0;
-  visibility: hidden; /* For ARIA */
+  visibility: hidden; // For ARIA
   transition-property: opacity, visibility, z-index;
   transition-duration: @oui-popover-transition-duration;
   transition-timing-function: @oui-popover-transition-animation;
