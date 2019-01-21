@@ -1,3 +1,13 @@
+<a name="2.24.1"></a>
+## [2.24.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.24.0...v2.24.1) (2019-01-21)
+
+
+### Bug Fixes
+
+* **oui-skeleton:** extend style on custom tag ([#333](https://github.com/ovh-ux/ovh-ui-kit/issues/333)) ([835d002](https://github.com/ovh-ux/ovh-ui-kit/commit/835d002))
+
+
+
 <a name="2.24.0"></a>
 # [2.24.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.23.1...v2.24.0) (2019-01-14)
 
