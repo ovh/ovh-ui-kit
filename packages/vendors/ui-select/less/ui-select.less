@@ -1,19 +1,18 @@
-@import (reference) '@ovh/ui-kit/less/_settings';
+@import (reference) '@ovh/ui-kit.core/less/_variables';
 @import (reference) '@ovh/ui-kit.button/less/_mixins';
 @import (reference) '@ovh/ui-kit.button/less/_variables';
 @import (reference) '@ovh/ui-kit.input/less/_mixins';
 @import (reference) '@ovh/ui-kit.dropdown/less/_variables';
-@import (reference) '@ovh/ui-kit.typography/less/_constants';
+@import (reference) '@ovh/ui-kit.core/less/_constants';
 @import (reference) './_variables';
 
-/* Keep the templates classnames
- * Since they are used directly in the plugin
- */
+// Keep the templates classnames
+// Since they are used directly in the plugin
 .oui-ui-select {
   position: relative;
   margin: @oui-ui-select-margin;
 
-  /* Dropdown Menu */
+  // Dropdown Menu
   .ui-select-dropdown {
     min-width: @oui-dropdown-menu-min-width;
     width: 100%;
@@ -113,7 +112,7 @@
     }
   }
 
-  /* Helpers */
+  // Helpers
   .ui-select-highlight { font-weight: @oui-font-bold; }
 
   .ui-select-offscreen {
@@ -130,7 +129,7 @@
     top: 0;
   }
 
-  /* Variant 'multiple' */
+  // Variant 'multiple'
   &_multiple {
     .ui-select-match,
     .ui-select-match-items {
@@ -183,7 +182,7 @@
     }
 
     .ui-select-search {
-      width: auto !important; /* Override inline style */
+      width: auto !important; // Override inline style
       height: @oui-ui-select-multiple-line-height;
       line-height: @oui-ui-select-multiple-line-height;
       margin: 0;
@@ -200,10 +199,10 @@
     }
   }
 
-  /* Variant 'single' */
+  // Variant 'single'
   &_single {
     .ui-select-match,
-    .ui-select-search { /* stylelint-disable-line */
+    .ui-select-search { // stylelint-disable-line
       #oui > .button-normalize();
       #oui > .button-base();
       #oui > .button-hollow();
@@ -219,7 +218,7 @@
         background-color: @oui-color-concrete;
         border-color: @oui-color-dusty;
 
-        /* To override reset style */
+        // To override reset style
         outline-width: 1px !important;
         outline-style: dotted !important;
         outline-color: initial !important;
@@ -232,7 +231,7 @@
     }
   }
 
-  /* To keep track of keydown */
+  // To keep track of keydown
   .ui-select-search_hidden {
     opacity: 0;
     height: 0;

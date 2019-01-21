@@ -1,7 +1,5 @@
-@import (reference) '@ovh/ui-kit/less/_settings';
-@import (reference) '@ovh/ui-kit.color/less/_variables';
+@import (reference) '@ovh/ui-kit.core/less/_variables';
 @import (reference) '@ovh/ui-kit.icons/less/_variables';
-@import (reference) '@ovh/ui-kit.responsive/less/_mixins';
 @import (reference) './_variables';
 
 .oui-sidebar {
@@ -79,12 +77,12 @@
   padding: 0;
   list-style: none;
 
-  /* Add max-height for collapsible list */
+  // Add max-height for collapsible list
   [aria-expanded] ~ .oui-sidebar-menu & { max-height: 35vh; }
 
   [aria-expanded] ~ .oui-sidebar-menu & & { max-height: none; }
 
-  /* List items */
+  // List items
   &__item {
     display: block;
     border-bottom: @oui-sidebar-menu-item-border-bottom;
@@ -107,7 +105,7 @@
   flex-direction: column;
   background-color: @oui-sidebar-menu-background-color;
 
-  /* Collapsible Menu */
+  // Collapsible Menu
   [aria-expanded] ~ & {
     height: 0;
     overflow: hidden;
@@ -121,13 +119,13 @@
     pointer-events: auto;
   }
 
-  /* Add a delay for visibility with animation property */
+  // Add a delay for visibility with animation property
   [aria-expanded="false"] ~ & {
     visibility: hidden;
     animation: @oui-sidebar-transition-delay delay-visibility;
   }
 
-  /* Menu Level 1 */
+  // Menu Level 1
   & & {
     width: 100%;
     display: block;
@@ -136,7 +134,7 @@
     .oui-sidebar-link { text-indent: rem-calc(10); }
   }
 
-  /* Menu Level 2 */
+  // Menu Level 2
   & & & {
     background-color: @oui-sidebar-menu-background-color_level-2;
 

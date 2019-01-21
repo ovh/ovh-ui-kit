@@ -1,4 +1,4 @@
-@import (reference) '@ovh/ui-kit.animation/less/_variables';
+@import (reference) '@ovh/ui-kit.core/less/_variables';
 @import (reference) './_mixins';
 
 .oui-icon {
@@ -29,6 +29,34 @@
     animation-iteration-count: infinite;
   }
 
-  /* Fix bad vertical alignment from this icon */
+  // Fix bad vertical alignment from this icon
   &-eye-blocked::before { margin-top: -0.1em; }
+}
+
+@keyframes oui-shake {
+  from {
+    transform: scale3d(@oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(@oui-animation-shake-default-coordinate - 0.1, @oui-animation-shake-default-coordinate - 0.1, @oui-animation-shake-default-coordinate - 0.1) rotate3d(0, 0, @oui-animation-shake-default-coordinate, -@oui-animation-shake-default-angle);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(@oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1) rotate3d(0, 0, @oui-animation-shake-default-coordinate, @oui-animation-shake-default-angle);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(@oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1, @oui-animation-shake-default-coordinate + 0.1) rotate3d(0, 0, @oui-animation-shake-default-coordinate, -@oui-animation-shake-default-angle);
+  }
+
+  to {
+    transform: scale3d(@oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate);
+  }
 }

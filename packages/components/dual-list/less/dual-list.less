@@ -1,9 +1,7 @@
-@import (reference) '@ovh/ui-kit.animation/less/_mixins';
-@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_mixins';
 @import (reference) './_variables';
 @import './_normalize';
 
-// Dual List
 .oui-dual-list {
   #oui > .base-font();
 
@@ -108,7 +106,7 @@
 
     .phone({
       text-align: left;
-    })
+    });
   }
 
   &__search ~ &__body,
@@ -170,7 +168,7 @@
       .phone({
         padding: @oui-dual-list-item-padding_responsive;
         border-radius: 0;
-      })
+      });
     }
 
     &__property {

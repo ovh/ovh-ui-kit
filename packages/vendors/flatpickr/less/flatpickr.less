@@ -1,11 +1,11 @@
-@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_mixins';
 @import (reference) '@ovh/ui-kit.button/less/_variables';
 
 .flatpickr {
   &-calendar {
     #oui > .base-font();
 
-    /* Fix calendar's width inline style */
+    // Fix calendar's width inline style
     width: auto !important;
     color: @oui-calendar-font-color;
     font-size: @oui-calendar-font-size;
@@ -14,7 +14,7 @@
     border-radius: @oui-calendar-border-radius;
     box-shadow: @oui-calendar-box-shadow;
 
-    /* Top Arrow */
+    // Top Arrow
     &::before,
     &::after {
       margin: 0;
@@ -45,7 +45,10 @@
       box-shadow: none;
     }
 
-    &.noCalendar { width: @oui-calendar-time-width !important; /* Override inline style */ }
+    &.noCalendar {
+      // Override inline style
+      width: @oui-calendar-time-width !important;
+    }
 
     // Inputs
     .numInputWrapper {
