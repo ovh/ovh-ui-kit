@@ -1,8 +1,8 @@
-@import (reference) '@ovh/ui-kit.animation/less/_mixins';
-@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_mixins';
 @import (reference) './_variables';
 @import './_normalize';
 
+// Dropdown
 .oui-dropdown {
   #oui > .base-font();
 
@@ -75,7 +75,7 @@
   background-color: @oui-dropdown-menu-background-color;
   z-index: @oui-dropdown-menu-zindex;
 
-  /* Item */
+  // Item
   & > &__item:first-child,
   & > &__arrow + &__item {
     margin-top: @oui-dropdown-menu-spacing;

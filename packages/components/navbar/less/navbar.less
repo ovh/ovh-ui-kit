@@ -1,6 +1,6 @@
-@import (reference) '@ovh/ui-kit/less/_settings';
+@import (reference) '@ovh/ui-kit.core/less/_variables';
 @import (reference) '@ovh/ui-kit.icons/less/_variables';
-@import (reference) '@ovh/ui-kit.responsive/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/responsive';
 @import (reference) './_mixins';
 @import './_normalize';
 
@@ -20,7 +20,7 @@
   color: @oui-navbar-font-color;
   background-color: @oui-navbar-background-color;
 
-  /* variant 'fixed' */
+  // variant 'fixed'
   &_fixed {
     position: fixed;
     top: 0;
@@ -182,7 +182,7 @@
 
     &_external .oui-icon {
       margin-left: @oui-navbar-external-spacing;
-      margin-top: -0.3rem; /* For a better centering */
+      margin-top: -0.3rem; // For a better centering
       vertical-align: middle;
       font-size: @oui-navbar-external-size;
       color: @oui-navbar-external-color;
@@ -292,11 +292,11 @@
     box-shadow: @oui-navbar-menu-box-shadow;
     z-index: @oui-navbar-menu-z-index;
     opacity: 0;
-    visibility: hidden; /* For ARIA */
+    visibility: hidden; // For ARIA
     pointer-events: none;
     transform: translateY(-10%);
 
-    /* Avoid being displayed on load */
+    // Avoid being displayed on load
     &__wrapper {
       height: 0;
       overflow: hidden;
@@ -370,7 +370,7 @@
       color: @oui-navbar-menu-font-color;
       text-align: center;
 
-      /* Gradient over items */
+      // Gradient over items
       &::before {
         content: ' ';
         height: rem-calc(36);
@@ -442,7 +442,7 @@
     display: block;
   }
 
-  /* Menu links */
+  // Menu links
   /* stylelint-disable no-descending-specificity */
   &-menu &-link {
     #oui > .navbar-link_variant(

@@ -1,9 +1,8 @@
-@import (reference) './_variables';
-@import (reference) '@ovh/ui-kit.animation/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_mixins';
 @import (reference) '@ovh/ui-kit.button/less/_mixins';
 @import (reference) '@ovh/ui-kit.input/less/_variables';
 @import (reference) '@ovh/ui-kit.input-group/less/_variables';
-@import (reference) '@ovh/ui-kit.typography/less/_mixins';
+@import (reference) './_variables';
 @import './_normalize';
 
 .oui-file {
@@ -19,7 +18,7 @@
   &__remove {
     width: @oui-file-icon-width;
     height: @oui-file-icon-width;
-    display: flex; /* For a better vertical centering */
+    display: flex; // For a better vertical centering
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -33,7 +32,7 @@
     text-align: center;
     border: none;
     background: none;
-    z-index: 1; /* Avoid to be hidden by inputs */
+    z-index: 1; // Avoid to be hidden by inputs
     cursor: pointer;
 
     &:focus {
