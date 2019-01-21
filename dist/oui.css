@@ -566,7 +566,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("./icons/icons.woff2?v=2.24.0") format("woff2"), url("./icons/icons.woff?v=2.24.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.24.1") format("woff2"), url("./icons/icons.woff?v=2.24.1") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -7035,8 +7035,8 @@ oui-tabs-item {
 .oui-progress-tracker__step_complete .oui-progress-tracker__status::before {
   content: "\f107";
   font-family: 'Oui Icons';
-  color: #fff;
   font-size: 1.125rem;
+  color: #fff;
   background-color: #b0ca67;
 }
 .oui-progress-tracker__step_complete:not(:last-child)::after {
@@ -7048,9 +7048,9 @@ oui-tabs-item {
 }
 .oui-progress-tracker__step_error .oui-progress-tracker__status::before {
   content: "\f115";
-  font-family: "Oui Icons";
-  color: #fff;
+  font-family: 'Oui Icons';
   font-size: 1.125rem;
+  color: #fff;
   background-color: #b04020;
 }
 .oui-progress-tracker__step_error:not(:last-child)::after {
@@ -10852,10 +10852,8 @@ oui-collapsible {
   height: 0 !important;
   /* stylelint-enable declaration-no-important */
 }
+.oui-skeleton,
 oui-skeleton {
-  display: block;
-}
-.oui-skeleton {
   min-height: 0.5rem;
   position: relative;
   display: block;
