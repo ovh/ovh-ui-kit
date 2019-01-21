@@ -1,6 +1,5 @@
 @import './_variables';
 @import './_mixins';
-@import './_normalize';
 
 .oui-skeleton {
   min-height: @oui-skeleton-height;
@@ -37,4 +36,8 @@
       background-position: @oui-skeleton-keyframes-background-position;
     }
   }
+}
+
+oui-skeleton {
+  &:extend(.oui-skeleton);
 }
