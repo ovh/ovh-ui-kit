@@ -1,4 +1,4 @@
-import { getAttribute, hasAttributeValue } from "@ovh/ui-kit.utils/js/component-utils";
+import { getAttribute, hasAttributeValue } from "@ovh/ui-kit.core/js/component-utils";
 
 const LABEL_SELECTOR = ".oui-field__label";
 const CUSTOM_ELEMENT_CLASS = "oui-field__component";

@@ -1,4 +1,4 @@
-import { addBooleanParameter } from "@ovh/ui-kit.utils/js/component-utils";
+import { addBooleanParameter } from "@ovh/ui-kit.core/js/component-utils";
 import get from "lodash/get";
 
 export default class {
