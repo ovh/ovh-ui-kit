@@ -1,0 +1,101 @@
+#oui {
+  // Accessibility
+  .visually-hidden() {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+    margin: -1px;
+    padding: 0;
+
+    &_focusable:active,
+    &_focusable:focus {
+      position: static;
+      height: auto;
+      width: auto;
+      margin: 0;
+      clip: auto;
+      overflow: visible;
+    }
+  }
+
+  // Animations
+  .animate-fast-out-slow-in(@duration: @oui-animation-default-timing) {
+    transition-duration: @duration;
+    transition-timing-function: @oui-animation-fast-out-slow-in;
+  }
+
+  .animate(@duration: @oui-animation-default-timing) {
+    transition-duration: @duration;
+    transition-timing-function: @oui-animation-default;
+  }
+
+  // Typography
+  .base-font() {
+    font-family: @oui-global-base-font-family;
+    line-height: @oui-global-base-line-height;
+    letter-spacing: @oui-global-base-letter-spacing;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .text-ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .headings(@index: length(@oui-heading-font-sizes)) when(@index > 0) {
+    .headings(@index - 1);
+
+    &@{index} {
+      .base-font();
+
+      font-size: extract(@oui-heading-font-sizes, @index);
+      font-weight: extract(@oui-heading-font-weights, @index);
+      margin: extract(@oui-heading-margins, @index);
+      color: inherit;
+    }
+  }
+
+  .link(
+    @font-color: @oui-link-font-color,
+    @font-color_hover: @oui-link-font-color_hover,
+    @text-decoration: @oui-link-text-decoration,
+    @text-decoration_hover: @oui-link-text-decoration_hover
+  ) {
+    .base-font();
+
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+    color: @font-color;
+    text-decoration: @text-decoration;
+    line-height: inherit;
+    cursor: pointer;
+    -webkit-text-decoration-skip: objects;
+
+    &:active,
+    &:hover {
+      outline-width: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: @font-color_hover;
+    }
+
+    &:hover {
+      text-decoration: @text-decoration_hover;
+    }
+
+    img {
+      border-style: none;
+    }
+  }
+}

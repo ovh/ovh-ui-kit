@@ -1,0 +1,36 @@
+{
+    "columns1": [{
+        "title": "First name",
+        "property": "firstName",
+        "sortable": "asc",
+        "searchable": true,
+        "filterable": true
+    },
+    {
+        "title": "Last name",
+        "property": "lastName",
+        "sortable": true,
+        "searchable": true,
+        "filterable": true
+    },
+    {
+        "title": "Phone",
+        "property": "phone",
+        "searchable": true,
+        "filterable": true
+    }],
+    "columns2": [{
+        "title": "First name",
+        "property": "firstName",
+        "sortable": "asc",
+        "searchable": true,
+        "filterable": true
+    },
+    {
+        "title": "Last name",
+        "property": "lastName",
+        "sortable": true,
+        "searchable": true,
+        "filterable": true
+    }]
+}

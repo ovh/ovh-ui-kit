@@ -1,0 +1,103 @@
+<header class="oui-navbar-menu__header"
+    ng-if="::!!$ctrl.headerTitle"
+    ng-class="::!!$ctrl.headerClass ? $ctrl.headerClass : null">
+    <div class="oui-navbar-menu__back"
+        ng-if="::!!$ctrl.backButton">
+        <button type="button" class="oui-button oui-button_link oui-button_icon-left"
+            ng-click="$ctrl.closeMenu($ctrl.menuName, true)"
+            oui-navbar-group="{{::$ctrl.menuName}}">
+            <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
+        </button>
+    </div>
+    <span class="oui-navbar-menu__breadcrumb"
+        ng-if="::!!$ctrl.headerBreadcrumb"
+        ng-bind="::$ctrl.headerBreadcrumb">
+    </span>
+    <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle"></h3>
+</header>
+<ul class="oui-navbar-list">
+    <li class="oui-navbar-list__item {{::!!menuLink.class ? menuLink.class : null}}"
+        ng-repeat="menuLink in ::$ctrl.menuLinks track by $index"
+        ng-class="::{ 'oui-navbar-menu__item_active': !!menuLink.isActive }"
+        ui-sref-active="oui-navbar-menu__item_active">
+
+        <!-- Link (href) -->
+        <a class="oui-navbar-link"
+            ng-if="::!!menuLink.url"
+            ng-attr-aria-label="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-attr-target="{{::!!menuLink.isExternal ? '_blank' : null}}"
+            ng-attr-title="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-class="::{
+                'oui-navbar_desktop-only': !!menuLink.subLinks,
+                'oui-navbar-link_external': !!menuLink.isExternal
+            }"
+            ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
+            ng-href="{{::menuLink.url}}"
+            oui-navbar-group="{{::$ctrl.menuName}}"
+            oui-navbar-group-last="::$last">
+            <span ng-bind="::menuLink.title"></span>
+            <span class="oui-icon oui-icon-external_link" aria-hidden="true"
+                ng-if="::!!menuLink.isExternal">
+            </span>
+        </a>
+        <!-- /Link (href) -->
+
+        <!-- Link (ui-sref) -->
+        <a class="oui-navbar-link"
+            ng-if="::!!menuLink.state"
+            ng-attr-aria-label="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-attr-title="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-class="::{
+                'oui-navbar_desktop-only': !!menuLink.subLinks
+            }"
+            ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
+            ng-bind="::menuLink.title"
+            ui-sref="{{::$ctrl.constructor.getFullSref(menuLink)}}"
+            oui-navbar-group="{{::$ctrl.menuName}}"
+            oui-navbar-group-last="::$last">
+        </a>
+        <!-- /Link (ui-sref) -->
+
+        <!-- Button (click) -->
+        <button class="oui-navbar-link" type="button"
+            ng-if="::(!menuLink.subLinks && !!menuLink.click && !menuLink.state  && !menuLink.url)"
+            ng-attr-aria-label="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-attr-title="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
+            ng-bind="::menuLink.title"
+            oui-navbar-group="{{::$ctrl.menuName}}"
+            oui-navbar-group-last="::$last">
+        </button>
+        <!-- /Button (click) -->
+
+        <!-- Button for Next Level -->
+        <button class="oui-navbar-link" type="button"
+            aria-haspopup="true" aria-expanded="{{!!$ctrl.navbarCtrl.navigation[menuLink.name]}}"
+            ng-if="::!!menuLink.subLinks && !!menuLink.subLinks.length"
+            ng-attr-aria-label="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-attr-title="{{::!!menuLink.label ? menuLink.label : null}}"
+            ng-class="::{
+                'oui-navbar_mobile-only': !!menuLink.url || !!menuLink.state
+            }"
+            ng-click="$ctrl.navbarCtrl.toggleMenu(menuLink.name, true)"
+            ng-bind="::menuLink.title"
+            oui-navbar-group="{{::$ctrl.menuName}}"
+            oui-navbar-group-last="::$last">
+        </button>
+        <!-- Button for Next Level -->
+
+        <!-- Menu for Next Level -->
+        <oui-navbar-menu class="oui-navbar_mobile-only"
+            ng-if="::!!menuLink.subLinks && !!menuLink.subLinks.length"
+            header-breadcrumb="{{::menuLink.headerBreadcrumb || $ctrl.getChildBreadcrumb()}}"
+            header-title="{{::menuLink.headerTitle || menuLink.title}}"
+            name="{{::menuLink.name}}"
+            links="::menuLink.subLinks"
+            align="{{::$ctrl.align}}"
+            fixed="::$ctrl.fixed"
+            back-button>
+        </oui-navbar-menu>
+        <!-- Menu for Next Level -->
+
+    </li>
+</ul>

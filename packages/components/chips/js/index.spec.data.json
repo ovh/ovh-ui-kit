@@ -1,0 +1,28 @@
+{
+    "items": [{
+        "title": "Lorem",
+        "foo": "bar"
+    }, {
+        "title": "Ipsum dolor",
+        "foo": "bar"
+    }, {
+        "title": "Sit amet",
+        "foo": "bar"
+    }, {
+        "title": "Consectetur adipiscing elit",
+        "foo": "bar"
+    }, {
+        "title": "Quisque sed massa quis turpis euismod commodo et lacus",
+        "foo": "bar"
+    }],
+
+    "criteria": [{
+        "name": "example.string",
+        "title": "Example String",
+        "type": "string"
+    }, {
+        "name": "example.number",
+        "title": "Example Number",
+        "type": "number"
+    }]
+}

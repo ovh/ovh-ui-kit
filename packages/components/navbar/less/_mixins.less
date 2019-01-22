@@ -1,8 +1,7 @@
-@import (reference) '@ovh/ui-kit.core/less/_settings';
-@import (reference) '@ovh/ui-kit.typography/less/_constants';
-@import (reference) '@ovh/ui-kit.animation/less/_mixins';
-@import (reference) '@ovh/ui-kit.color/less/_variables';
-@import (reference) '@ovh/ui-kit.responsive/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_constants';
+@import (reference) '@ovh/ui-kit.core/less/_mixins';
+@import (reference) '@ovh/ui-kit.core/less/_variables';
+@import (reference) '@ovh/ui-kit.core/less/responsive';
 @import (reference) './_variables';
 
 #oui {
@@ -23,12 +22,12 @@
     padding: 0;
     list-style: none;
 
-    /* Scroll for responsive */
+    //  Scroll for responsive
     & when (@is-menu-list = true) {
       overflow: auto;
     }
 
-    /* List items */
+    //  List items
     &__item {
       display: block;
       border-bottom: @border-bottom;
@@ -42,7 +41,7 @@
       }
     }
 
-    /* Variant 'end' for List, align 'right' */
+    //  Variant 'end' for List, align 'right'
     &_end {
       flex-grow: 1;
       justify-content: flex-end;
@@ -165,7 +164,7 @@
     @origin: left
   ) {
     opacity: 1;
-    visibility: hidden; /* For ARIA */
+    visibility: hidden; // For ARIA
     pointer-events: auto;
     transition: transform 0.25s ease-out, visibility 0.25s ease-out;
 

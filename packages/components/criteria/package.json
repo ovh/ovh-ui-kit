@@ -1,16 +1,16 @@
 {
   "name": "@ovh/ui-kit.criteria",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true,
-  "main": "./src/index.js",
+  "main": "./js/index.js",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
-    "@ovh/ui-kit.chips": "^1.0.0",
-    "@ovh/ui-kit.dropdown": "^1.0.0",
-    "@ovh/ui-kit.field": "^1.0.0",
-    "@ovh/ui-kit.search": "^1.0.0",
-    "@ovh/ui-kit.select": "^1.0.0"
+    "@ovh/ui-kit.chips": "^3.0.0",
+    "@ovh/ui-kit.dropdown": "^3.0.0",
+    "@ovh/ui-kit.field": "^3.0.0",
+    "@ovh/ui-kit.search": "^3.0.0",
+    "@ovh/ui-kit.select": "^3.0.0"
   },
   "peerDependencies": {
     "angular": ">=1.6.x"

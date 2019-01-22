@@ -1,0 +1,138 @@
+<!-- Controls -->
+<input type="hidden"
+    ng-attr-id="{{::$ctrl.id}}"
+    ng-attr-name="{{::$ctrl.name}}"
+    ng-disabled="$ctrl.disabled"
+    ng-required="$ctrl.required"
+    ng-model="$ctrl.model">
+<input class="oui-file__input" type="file"
+    ng-if="::!$ctrl.attachments"
+    ng-attr-id="{{::$ctrl.selectorId}}"
+    ng-attr-accept="{{::$ctrl.accept}}"
+    ng-attr-size="{{::$ctrl.size}}"
+    ng-disabled="$ctrl.disabled"
+    tabindex="-1">
+<input class="oui-file__input" type="file"
+    ng-if="::$ctrl.attachments"
+    ng-attr-id="{{::$ctrl.selectorId}}"
+    ng-attr-accept="{{::$ctrl.accept}}"
+    ng-attr-size="{{::$ctrl.size}}"
+    ng-disabled="$ctrl.disabled"
+    tabindex="-1"
+    multiple>
+<!-- /Controls -->
+
+<!-- Selector -->
+<div class="oui-file-selector"
+    ng-if="::!$ctrl.multiple && !$ctrl.droparea"
+    ng-class="{
+        'oui-file-selector_error': $ctrl.form && $ctrl.form[$ctrl.name].$invalid && ($ctrl.form[$ctrl.name].$touched || $ctrl.form.$submitted)
+    }">
+
+    <!-- Fake Selector -->
+    <div class="oui-file-selector__input">
+        <button class="oui-file-selector__label" type="button"
+            ng-blur="$ctrl.setInputTouched()"
+            ng-click="$ctrl.openFileSelector()"
+            ng-disabled="$ctrl.disabled">
+            <span class="oui-file-selector__placeholder"
+                ng-if="!$ctrl.model[0]"
+                ng-bind="::$ctrl.placeholder">
+            </span>
+            <span class="oui-file-ellipsis"
+                ng-class="::{ 'oui-file-ellipsis_no-extension': !$ctrl.model[0].infos.extension }"
+                ng-if="!!$ctrl.model[0]">
+                <span class="oui-file-ellipsis__name" ng-bind="$ctrl.model[0].infos.name"></span>
+                <span class="oui-file-ellipsis__extension" ng-bind="$ctrl.model[0].infos.extension"></span>
+                <span class="oui-file-ellipsis__size" ng-bind="$ctrl.model[0].infos.size"></span>
+            </span>
+        </button>
+        <button class="oui-file__remove" type="button"
+            ng-show="!!$ctrl.model[0]"
+            ng-click="$ctrl.resetFile()"
+            ng-disabled="$ctrl.disabled">
+            <span class="oui-icon oui-icon-close_thin"
+                aria-hidden="{{::$ctrl.translations.removeFile}}">
+            </span>
+        </button>
+    </div>
+    <!-- /Fake Selector -->
+
+    <button class="oui-file-selector__button" type="button"
+        ng-bind="::$ctrl.translations.fileSelector"
+        ng-click="$ctrl.openFileSelector()"
+        ng-disabled="$ctrl.disabled"
+        tabindex="-1">
+    </button>
+</div>
+<!-- /Selector -->
+
+<!-- Multiple -->
+<div class="oui-file-multiple"
+    ng-if="::$ctrl.multiple && !$ctrl.droparea">
+    <button type="button" class="oui-button oui-button_secondary"
+        ng-bind="::$ctrl.translations.filesSelector"
+        ng-click="$ctrl.openFileSelector()">
+    </button>
+</div>
+<!-- /Multiple -->
+
+<!-- Drop Area -->
+<div class="oui-file-droparea"
+    ng-if="::$ctrl.droparea"
+    ng-attr-id="{{::$ctrl.dropareaId}}">
+    <span ng-bind="::$ctrl.translations.dropArea"></span>
+    <oui-button variant="link"
+        on-click="$ctrl.openFileSelector()">
+        {{::$ctrl.translations.dropAreaSelector}}
+    </oui-button>
+</div>
+<!-- /Drop Area -->
+
+<!-- Attachments -->
+<div class="oui-file-attachments"
+    ng-if="::$ctrl.attachments">
+    <p class="oui-file-attachments__heading"
+        ng-if="$ctrl.model && $ctrl.model.length"
+        ng-bind="::$ctrl.translations.attachmentsHeading">
+    </p>
+    <ul class="oui-file-attachments__list"
+        ng-if="$ctrl.model && $ctrl.model.length">
+        <li class="oui-file-attachments__item"
+            ng-class="{
+                'oui-file-attachments__item_error': file.errors,
+                'oui-file-attachments__item_loading': file.loading
+            }"
+            ng-repeat="file in $ctrl.model track by $index">
+            <span class="oui-file-attachments__preview"
+                ng-if="$ctrl.preview">
+                <span class="oui-file-attachments__image"
+                    ng-if="file.preview"
+                    ng-style="{ 'background-image': file.preview }">
+                </span>
+                <span class="oui-icon oui-icon-eye-blocked" ng-if="!file.loading && !file.preview"></span>
+                <oui-spinner size="s" ng-if="file.loading"></oui-spinner>
+            </span>
+            <span class="oui-file-attachments__label">
+                <span class="oui-file-ellipsis"
+                    ng-class="::{ 'oui-file-ellipsis_no-extension': !file.infos.extension }">
+                    <span class="oui-file-ellipsis__name" ng-bind="file.infos.name"></span>
+                    <span class="oui-file-ellipsis__extension" ng-bind="file.infos.extension"></span>
+                    <span class="oui-file-ellipsis__size" ng-bind="file.infos.size"></span>
+                </span>
+                <span class="oui-file-attachments__error"
+                    ng-if="file.errors && file.errors.maxsize"
+                    ng-bind="::$ctrl.translations.maxsizeError">
+                </span>
+            </span>
+            <button class="oui-file__remove" type="button"
+                ng-click="$ctrl.removeFile(file)"
+                ng-disabled="$ctrl.disabled">
+                <span class="oui-icon oui-icon-close_thin"
+                    aria-hidden="{{::$ctrl.translations.removeFile}}">
+                </span>
+            </button>
+        </li>
+    </ul>
+</div>
+<!-- /Attachments -->

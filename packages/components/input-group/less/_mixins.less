@@ -53,7 +53,7 @@
 
     & > .@{input-selector} {
       flex: 2 1 auto;
-      z-index: 1; /* Set border priority on inputs */
+      z-index: 1; // Set border priority on inputs
 
       &_number {
         -moz-appearance: textfield;
@@ -118,7 +118,7 @@
         border-color: transparent;
         background: transparent;
         box-shadow: none;
-        z-index: 2; /* Avoid to be hidden by inputs */
+        z-index: 2; // Avoid to be hidden by inputs
       }
     }
 
@@ -164,9 +164,8 @@
     .@{input-selector} {
       text-align: center;
 
-      /* Two lines bellow are required by firefox otherwise the max-width
-       * defined at root of the mixin isn't applied correctly
-       */
+      // Two lines bellow are required by firefox otherwise the max-width
+      // defined at root of the mixin isn't applied correctly
       flex-shrink: 1;
       min-width: 1px;
     }
@@ -197,7 +196,7 @@
     .@{button-selector} {
       width: auto;
       min-width: 0;
-      display: flex; /* For a better vertical centering */
+      display: flex; // For a better vertical centering
       flex-direction: row;
       align-items: center;
       position: absolute;
@@ -205,7 +204,7 @@
       bottom: 0;
       padding: 0 @oui-input-group-search-button-padding-x;
       text-align: center;
-      z-index: 2; /* Avoid to be hidden by inputs */
+      z-index: 2; // Avoid to be hidden by inputs
 
       &[type="reset"] {
         right: @reset-right;

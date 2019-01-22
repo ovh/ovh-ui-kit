@@ -1,0 +1,17 @@
+<textarea class="oui-textarea__textarea"
+    ng-model="$ctrl.model"
+    ng-attr-id="{{::$ctrl.id}}"
+    ng-attr-name="{{::$ctrl.name}}"
+    ng-attr-placeholder="{{::$ctrl.placeholder}}"
+    ng-attr-rows="{{::$ctrl.rows}}"
+    ng-minlength="{{$ctrl.minlength}}"
+    ng-maxlength="{{$ctrl.maxlength}}"
+    ng-required="$ctrl.required"
+    ng-disabled="$ctrl.disabled"
+    ng-readonly="$ctrl.readonly"
+    ng-change="$ctrl.onTextareaChange()"
+    ng-focus="$ctrl.setFocus(true)"
+    ng-blur="$ctrl.setFocus(false)"></textarea>
+<div class="oui-textarea__footer"
+    ng-if="$ctrl.maxlength"
+    ng-bind="$ctrl.getMaxLengthText()"></div>

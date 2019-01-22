@@ -1,0 +1,39 @@
+<div class="oui-slideshow {{::$ctrl.themeClassname}}"
+     ng-class="{ 'oui-slideshow_is-illustrated': $ctrl.isIllustrated }">
+    <div class="oui-slideshow__header">
+        <button class="oui-icon oui-icon-close_thin oui-modal__close-button" type="button" aria-label="Close"
+                ng-click="$ctrl.closeOnBoarding()"
+                ng-if="!$ctrl.loading">
+        </button>
+    </div>
+    <div class="oui-slideshow__body">
+        <div class="oui-slideshow__loader"
+             ng-if="$ctrl.loading">
+            <oui-spinner></oui-spinner>
+        </div>
+        <button type="button" class="oui-icon oui-icon-chevron-left oui-slideshow__prev-button"
+                ng-click="$ctrl.prev()"
+                ng-disabled="$ctrl.loading || (!$ctrl.loop && $ctrl.currentIndex === 0)"
+                ng-if="($ctrl.loop && $ctrl.panels.length > 1) || $ctrl.currentIndex !== 0">
+        </button>
+        <div class="oui-slideshow__content" aria-live="polite"
+             ng-transclude>
+        </div>
+        <button type="button" class="oui-icon oui-icon-chevron-right oui-slideshow__next-button"
+                ng-click="$ctrl.next()"
+                ng-disabled="$ctrl.loading || (!$ctrl.loop && $ctrl.currentIndex === $ctrl.panels.length - 1)"
+                ng-if="($ctrl.loop && $ctrl.panels.length > 1) || $ctrl.currentIndex !== $ctrl.panels.length - 1">
+        </button>
+    </div>
+    <div class="oui-slideshow__footer">
+        <div class="oui-slideshow__indicators"
+             ng-if="$ctrl.panels.length > 1">
+            <button type="button" tabindex="-1" aria-label="{{ $index + 1 }}"
+                    ng-class="{ 'active': $ctrl.currentIndex === $index }"
+                    ng-click="$ctrl.slideTo($index)"
+                    ng-disabled="$ctrl.loading"
+                    ng-repeat="panel in $ctrl.panels track by $index">
+            </button>
+        </div>
+    </div>
+</div>

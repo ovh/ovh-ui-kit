@@ -1,0 +1,19 @@
+<div class="oui-header-tabs__item" role="listitem"
+    ui-sref-active="oui-header-tabs__item_active"
+    ng-class="{ 'oui-header-tabs__item_active': $ctrl.active, 'oui-header-tabs__item_disabled': $ctrl.disabled }">
+    <a ng-attr-rel="{{::$ctrl.linkRel}}"
+       ng-attr-target="{{::$ctrl.linkTarget}}"
+       ng-href="{{::$ctrl.href}}"
+       ng-if="!!$ctrl.href && !$ctrl.disabled">
+        <span ng-bind="::$ctrl.text"></span>
+        <span class="oui-icon oui-icon-external_link" aria-hidden="true"
+              ng-if="::$ctrl.external">
+        </span>
+    </a>
+    <a ng-bind="::$ctrl.text"
+       ng-if="!!$ctrl.state && !$ctrl.disabled"
+       ui-sref="{{::$ctrl.getFullSref()}}">
+    </a>
+    <span ng-bind="::$ctrl.text"
+          ng-if="!!$ctrl.disabled"></span>
+</div>

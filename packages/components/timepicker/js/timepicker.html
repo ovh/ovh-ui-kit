@@ -1,0 +1,16 @@
+<oui-calendar model="$ctrl.model"
+    id="{{::$ctrl.id}}"
+    name="{{::$ctrl.name}}"
+    options="$ctrl.options"
+    placeholder="{{::$ctrl.placeholder}}"
+    format="{{::$ctrl.format}}"
+    alt-format="{{::$ctrl.altFormat}}"
+    append-to-body="$ctrl.appendToBody"
+    inline="$ctrl.inline"
+    static="$ctrl.static"
+    disabled="$ctrl.disabled"
+    required="$ctrl.required"
+    on-change="$ctrl.onChange({ modelValue: dateStr })"
+    on-close="$ctrl.onClose({ modelValue: dateStr })"
+    on-open="$ctrl.onOpen({ modelValue: dateStr })">
+</oui-calendar>
