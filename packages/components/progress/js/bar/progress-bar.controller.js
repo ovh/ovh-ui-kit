@@ -1,4 +1,4 @@
-import { addDefaultParameter } from "@ovh/ui-kit.utils/js/component-utils";
+import { addDefaultParameter } from "@ovh/ui-kit.core/js/component-utils";
 import get from "lodash/get";
 export default class {
     constructor ($attrs, $element, $timeout) {

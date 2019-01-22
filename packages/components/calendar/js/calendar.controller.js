@@ -1,4 +1,4 @@
-import { addBooleanParameter, addDefaultParameter } from "@ovh/ui-kit.utils/js/component-utils";
+import { addBooleanParameter, addDefaultParameter } from "@ovh/ui-kit.core/js/component-utils";
 import Flatpickr from "flatpickr";
 import merge from "lodash/merge";
 
