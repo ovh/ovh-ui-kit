@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 2 versions", "ie >=  10"]
+      }
+    }],
+    "stage-2"
+  ],
+  "plugins": [
+    ["angularjs-annotate", { "explicitOnly" : true }],
+    "lodash",
+    "transform-runtime"
+  ],
+  "comments": false,
+  "env": {
+    "test": {
+      "plugins": [ "istanbul" ]
+    }
+  }
+}

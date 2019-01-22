@@ -1,4 +1,4 @@
-import { getAttribute, hasAttribute } from "@ovh/ui-kit.utils/js/component-utils";
+import { getAttribute, hasAttribute } from "@ovh/ui-kit.core/js/component-utils";
 
 const copyValueProperties = ["hidden", "title", "type", "type-options"];
 const searchableTypes = ["string"];

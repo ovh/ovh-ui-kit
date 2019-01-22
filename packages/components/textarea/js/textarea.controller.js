@@ -1,4 +1,4 @@
-import { addBooleanParameter } from "@ovh/ui-kit.utils/js/component-utils";
+import { addBooleanParameter } from "@ovh/ui-kit.core/js/component-utils";
 
 const rootClass = "oui-textarea";
 const disabledClass = "oui-textarea_disabled";

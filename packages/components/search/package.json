@@ -2,7 +2,7 @@
   "name": "@ovh/ui-kit.search",
   "version": "3.0.0",
   "private": true,
-  "main": "./src/index.js",
+  "main": "./js/index.js",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "peerDependencies": {
