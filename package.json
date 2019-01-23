@@ -15,7 +15,7 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint --fix ./packages",
     "lint:css": "stylelint 'packages/**/*.less' --fix",
-    "version": "npm run build && git add dist packages/components/icons/_icons.less packages/base/less/_version.less && npm-scripts-config version",
+    "version": "npm run build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog"
   },

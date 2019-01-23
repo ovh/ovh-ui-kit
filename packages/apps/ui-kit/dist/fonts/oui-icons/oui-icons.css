@@ -5,7 +5,7 @@ url("./icons.woff?1a78b82d80d7e440e5e246c30284c0db") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
-    font-family: icons !important;
+    font-family: oui-icons !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
