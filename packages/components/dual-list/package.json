@@ -1,14 +1,13 @@
 {
   "name": "@ovh/ui-kit.dual-list",
-  "version": "3.0.0",
   "private": true,
   "main": "./js/index.js",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
-    "@ovh/ui-kit.button": "^3.0.0",
-    "@ovh/ui-kit.search": "^3.0.0",
-    "@ovh/ui-kit.spinner": "^3.0.0"
+    "@ovh/ui-kit.button": "*",
+    "@ovh/ui-kit.search": "*",
+    "@ovh/ui-kit.spinner": "*"
   },
   "peerDependencies": {
     "angular": ">=1.6.x"
