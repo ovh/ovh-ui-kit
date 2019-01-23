@@ -282,91 +282,91 @@ template {
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/oui-icons/icons.woff2?v=3.0.0") format("woff2"), url("./fonts/oui-icons/icons.woff?v=3.0.0") format("woff");
+  src: url("../fonts/oui-icons/icons.woff2?v=3.0.0") format("woff2"), url("../fonts/oui-icons/icons.woff?v=3.0.0") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 200;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-ExtraLight"), local("Source Sans Pro"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff2") format("woff2"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff") format("woff");
+  src: local("SourceSansPro-ExtraLight"), local("Source Sans Pro"), url("../fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff2") format("woff2"), url("../fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLight.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 200;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-ExtraLightIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff2") format("woff2"), url("./fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff") format("woff");
+  src: local("SourceSansPro-ExtraLightIt"), local("Source Sans Pro"), url("../fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff2") format("woff2"), url("../fonts/source-sans-pro/extra-light/SourceSansPro-ExtraLightIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Light"), local("Source Sans Pro"), url("./fonts/source-sans-pro/light/SourceSansPro-Light.woff2") format("woff2"), url("./fonts/source-sans-pro/light/SourceSansPro-Light.woff") format("woff");
+  src: local("SourceSansPro-Light"), local("Source Sans Pro"), url("../fonts/source-sans-pro/light/SourceSansPro-Light.woff2") format("woff2"), url("../fonts/source-sans-pro/light/SourceSansPro-Light.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 300;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-LightIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/light/SourceSansPro-LightIt.woff2") format("woff2"), url("./fonts/source-sans-pro/light/SourceSansPro-LightIt.woff") format("woff");
+  src: local("SourceSansPro-LightIt"), local("Source Sans Pro"), url("../fonts/source-sans-pro/light/SourceSansPro-LightIt.woff2") format("woff2"), url("../fonts/source-sans-pro/light/SourceSansPro-LightIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Regular"), local("Source Sans Pro"), url("./fonts/source-sans-pro/regular/SourceSansPro-Regular.woff2") format("woff2"), url("./fonts/source-sans-pro/regular/SourceSansPro-Regular.woff") format("woff");
+  src: local("SourceSansPro-Regular"), local("Source Sans Pro"), url("../fonts/source-sans-pro/regular/SourceSansPro-Regular.woff2") format("woff2"), url("../fonts/source-sans-pro/regular/SourceSansPro-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-It"), local("Source Sans Pro"), url("./fonts/source-sans-pro/regular/SourceSansPro-It.woff2") format("woff2"), url("./fonts/source-sans-pro/regular/SourceSansPro-It.woff") format("woff");
+  src: local("SourceSansPro-It"), local("Source Sans Pro"), url("../fonts/source-sans-pro/regular/SourceSansPro-It.woff2") format("woff2"), url("../fonts/source-sans-pro/regular/SourceSansPro-It.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Semibold"), local("Source Sans Pro Semibold"), url("./fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff2") format("woff2"), url("./fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff") format("woff");
+  src: local("SourceSansPro-Semibold"), local("Source Sans Pro Semibold"), url("../fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff2") format("woff2"), url("../fonts/source-sans-pro/semibold/SourceSansPro-Semibold.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 600;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-SemiboldIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff2") format("woff2"), url("./fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff") format("woff");
+  src: local("SourceSansPro-SemiboldIt"), local("Source Sans Pro"), url("../fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff2") format("woff2"), url("../fonts/source-sans-pro/semibold/SourceSansPro-SemiboldIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Bold"), local("Source Sans Pro Bold"), url("./fonts/source-sans-pro/bold/SourceSansPro-Bold.woff2") format("woff2"), url("./fonts/source-sans-pro/bold/SourceSansPro-Bold.woff") format("woff");
+  src: local("SourceSansPro-Bold"), local("Source Sans Pro Bold"), url("../fonts/source-sans-pro/bold/SourceSansPro-Bold.woff2") format("woff2"), url("../fonts/source-sans-pro/bold/SourceSansPro-Bold.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 700;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-BoldIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff2") format("woff2"), url("./fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff") format("woff");
+  src: local("SourceSansPro-BoldIt"), local("Source Sans Pro"), url("../fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff2") format("woff2"), url("../fonts/source-sans-pro/bold/SourceSansPro-BoldIt.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  src: local("SourceSansPro-Black"), local("Source Sans Pro Black"), url("./fonts/source-sans-pro/black/SourceSansPro-Black.woff2") format("woff2"), url("./fonts/source-sans-pro/black/SourceSansPro-Black.woff") format("woff");
+  src: local("SourceSansPro-Black"), local("Source Sans Pro Black"), url("../fonts/source-sans-pro/black/SourceSansPro-Black.woff2") format("woff2"), url("../fonts/source-sans-pro/black/SourceSansPro-Black.woff") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
   font-weight: 900;
   font-style: italic;
   font-stretch: normal;
-  src: local("SourceSansPro-BlackIt"), local("Source Sans Pro"), url("./fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff2") format("woff2"), url("./fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff") format("woff");
+  src: local("SourceSansPro-BlackIt"), local("Source Sans Pro"), url("../fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff2") format("woff2"), url("../fonts/source-sans-pro/black/SourceSansPro-BlackIt.woff") format("woff");
 }
 body {
   font-family: 'Source Sans Pro', sans-serif;
