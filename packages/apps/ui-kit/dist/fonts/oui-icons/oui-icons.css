@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "icons";
-    src: url("./icons.woff2?24d6fb0ff4589498dc639ca01ff34cf0") format("woff2"),
-url("./icons.woff?24d6fb0ff4589498dc639ca01ff34cf0") format("woff");
+    font-family: "oui-icons";
+    src: url("./oui-icons.woff2?dab5589064d9c608ac407aa1e9cb64ad") format("woff2"),
+url("./oui-icons.woff?dab5589064d9c608ac407aa1e9cb64ad") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
-    font-family: icons !important;
+    font-family: oui-icons !important;
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;

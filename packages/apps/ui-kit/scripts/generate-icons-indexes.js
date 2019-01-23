@@ -3,7 +3,7 @@
 const chalk = require('chalk');
 const fs = require('fs');
 const path = require('path');
-const icons = require('../dist/icons/icons.json');
+const icons = require('../dist/fonts/oui-icons/oui-icons.json');
 const log = console.log;
 
 log(chalk.yellow(`\nGenerating less variables from icons`));
