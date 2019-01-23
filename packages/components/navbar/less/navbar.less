@@ -104,7 +104,7 @@
       #oui > .navbar-link_variant(
         @background-color: @oui-navbar-background-color_active,
         @font-color: @oui-navbar-font-color
-      );;;
+      );
     }
 
     &_primary {
@@ -112,7 +112,7 @@
         @font-color: @oui-navbar-primary-font-color,
         @font-size: @oui-navbar-primary-font-size,
         @font-weight: @oui-navbar-primary-font-weight
-      );;;
+      );
     }
 
     &_primary:hover,
@@ -124,7 +124,7 @@
         @font-color: @oui-navbar-primary-font-color_active,
         @font-size: @oui-navbar-primary-font-size,
         @font-weight: @oui-navbar-primary-font-weight
-      );;;
+      );
     }
 
     &_secondary {
@@ -132,7 +132,7 @@
         @font-color: @oui-navbar-secondary-font-color,
         @font-size: @oui-navbar-secondary-font-size,
         @font-weight: @oui-navbar-secondary-font-weight
-      );;;
+      );
     }
 
     &_secondary:hover,
@@ -144,14 +144,14 @@
         @font-color: @oui-navbar-secondary-font-color_active,
         @font-size: @oui-navbar-secondary-font-size,
         @font-weight: @oui-navbar-secondary-font-weight
-      );;;
+      );
     }
 
     &_tertiary {
       #oui > .navbar-link_variant(
         @font-size: @oui-navbar-icon-font-size,
         @font-weight: @oui-navbar-icon-font-weight
-      );;;
+      );
     }
 
     &_tertiary:hover,
@@ -163,7 +163,7 @@
         @font-color: @oui-navbar-font-color,
         @font-size: @oui-navbar-icon-font-size,
         @font-weight: @oui-navbar-icon-font-weight
-      );;;
+      );
     }
 
     &_icon {
@@ -176,7 +176,7 @@
     &_icon[aria-expanded="true"] {
       #oui > .navbar-link_icon(
         @icon-color: @oui-navbar-icon-color_active
-      );;;
+      );
     }
 
     &_external .oui-icon {
@@ -197,7 +197,7 @@
       @line-height: @oui-navbar-line-height,
       @display: flex,
       @padding: @oui-navbar-padding
-    );;;
+    );
   }
 
   // Navbar toggler, for collapsible menu
@@ -205,10 +205,10 @@
     #oui > .navbar-link(
       @line-height: @oui-navbar-toggler-line-height,
       @padding: @oui-navbar-toggler-padding
-    );;;
-    #oui      > .navbar-link_variant(
+    );
+    #oui              > .navbar-link_variant(
       @font-color: @oui-navbar-font-color
-    );;
+    );
 
     height: @oui-navbar-toggler-line-height;
     display: none;
@@ -436,7 +436,7 @@
     #oui > .navbar-list(
       @flex-direction: column,
       @align-items: stretch
-    );;
+    );
 
     display: block;
   }
@@ -446,7 +446,7 @@
   &-menu &-link {
     #oui > .navbar-link_variant(
       @font-color: @oui-navbar-menu-font-color
-    );;
+    );
 
     width: 100%;
 
@@ -456,7 +456,7 @@
       #oui > .navbar-link_variant(
         @background-color: @oui-navbar-menu-link-background-color_active,
         @font-color: @oui-navbar-menu-link-font-color_active
-      );;;
+      );
     }
 
     &[aria-haspopup="true"] {
@@ -524,7 +524,7 @@
         @flex-grow: 1,
         @align-items: stretch,
         @is-menu-list: true
-      );;;
+      );
     }
   }
 
