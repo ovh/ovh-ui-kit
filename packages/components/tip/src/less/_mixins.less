@@ -1,0 +1,133 @@
+@import (reference) '@ovh/ui-kit.core/src/less/_variables';
+@import (reference) './_variables';
+
+#oui {
+  .tip(
+    @size: @oui-tip-border-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    display: block;
+    padding: 0;
+    border: 0 none;
+    line-height: unset;
+    position: absolute;
+    box-sizing: border-box;
+
+    &::after,
+    &::before {
+      content: "  ";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+      pointer-events: none;
+    }
+
+    &::after {
+      border-width: @size;
+      border-color: rgba(255, 255, 255, 0);
+    }
+
+    &::before {
+      border-width: ~"calc(@{size} + 3px)";
+      border-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  .tip-top(
+    @size: @oui-tip-border-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    width: @size;
+    height: @size;
+    padding: 0 @oui-tip-size;
+    transform: translateX(-50%);
+    top: 100%;
+    left: 50%;
+
+    &::after,
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after { border-top-color: @background-color; }
+
+    &::before { border-top-color: @border-color; }
+  }
+
+  .tip-right(
+    @size: @oui-tip-border-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    width: @size;
+    height: @size;
+    padding: @oui-tip-size 0;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 100%;
+
+    &::after,
+    &::before {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after { border-right-color: @background-color; }
+
+    &::before { border-right-color: @border-color; }
+  }
+
+  .tip-bottom(
+    @size: @oui-tip-border-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    width: @size;
+    height: @size;
+    padding: 0 @oui-tip-size;
+    transform: translateX(-50%);
+    bottom: 100%;
+    left: 50%;
+
+    &::after,
+    &::before {
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after { border-bottom-color: @background-color; }
+
+    &::before { border-bottom-color: @border-color; }
+  }
+
+  .tip-left(
+    @size: @oui-tip-border-size,
+    @border-color: @oui-tip-border-color,
+    @background-color: @oui-tip-background-color
+  ) {
+    width: @size;
+    height: @size;
+    padding: @oui-tip-size 0;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 100%;
+
+    &::after,
+    &::before {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after { border-left-color: @background-color; }
+
+    &::before { border-left-color: @border-color; }
+  }
+}

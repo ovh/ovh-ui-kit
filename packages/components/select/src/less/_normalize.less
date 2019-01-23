@@ -1,0 +1,15 @@
+@import (reference) '@ovh/ui-kit.core/src/less/_mixins';
+
+oui-select {
+  display: block;
+}
+
+#oui {
+  .select-normalize() {
+    #oui > .base-font();
+
+    select {
+      #oui > .text-ellipsis();
+    }
+  }
+}
