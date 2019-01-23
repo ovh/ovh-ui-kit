@@ -1,12 +1,11 @@
 {
   "name": "@ovh/ui-kit.guide-menu",
-  "version": "3.0.0",
   "private": true,
   "main": "./js/index.js",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
-    "@ovh/ui-kit.dropdown": "^3.0.0"
+    "@ovh/ui-kit.dropdown": "*"
   },
   "peerDependencies": {
     "angular": ">=1.6.x"

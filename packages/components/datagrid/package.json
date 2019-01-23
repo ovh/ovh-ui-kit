@@ -1,15 +1,14 @@
 {
   "name": "@ovh/ui-kit.datagrid",
-  "version": "3.0.0",
   "private": true,
   "main": "./js/index.js",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
-    "@ovh/ui-kit.checkbox": "^3.0.0",
-    "@ovh/ui-kit.criteria": "^3.0.0",
-    "@ovh/ui-kit.pagination": "^3.0.0",
-    "@ovh/ui-kit.spinner": "^3.0.0",
+    "@ovh/ui-kit.checkbox": "*",
+    "@ovh/ui-kit.criteria": "*",
+    "@ovh/ui-kit.pagination": "*",
+    "@ovh/ui-kit.spinner": "*",
     "escape-string-regexp": "^1.0.5"
   },
   "peerDependencies": {

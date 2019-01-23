@@ -1,6 +1,5 @@
 {
   "name": "@ovh/ui-kit.calendar",
-  "version": "3.0.0",
   "private": true,
   "main": "./js/index.js",
   "license": "BSD-3-Clause",
