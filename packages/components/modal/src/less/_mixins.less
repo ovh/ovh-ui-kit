@@ -1,0 +1,142 @@
+@import (reference) '@ovh/ui-kit.core/src/less/_mixins';
+@import (reference) './_variables';
+
+#oui {
+  .modal-base(
+    @button-selector,
+    @title-color: @oui-modal-title-color,
+    @body-color: @oui-modal-body-color,
+    @body-padding: @oui-modal-body-padding,
+    @body-padding-no-icon: @oui-modal-body-padding-no-icon,
+    @close-button-width: @oui-modal-close-button-size,
+    @close-button-height: @oui-modal-close-button-size,
+    @close-button-color: @oui-modal-close-button-color,
+    @close-button-font-size: @oui-modal-close-button-size,
+    @close-button-padding-x: @oui-modal-close-button-padding-x,
+    @close-button-padding-y: @oui-modal-close-button-padding-y,
+    @font-size: @oui-modal-font-size
+  ) {
+    margin: @oui-modal-spacing;
+    border-radius: @oui-global-base-radius-medium;
+    border: none;
+    font-size: @font-size;
+    background-color: @oui-modal-background-color;
+
+    &__header {
+      position: relative;
+      height: @close-button-height + @close-button-padding-y * 2;
+      border-top-right-radius: @oui-global-base-radius-medium;
+      border-top-left-radius: @oui-global-base-radius-medium;
+      background-color: #edefec;
+    }
+
+    &__close-button {
+      #oui > .animate();
+
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: @close-button-width;
+      min-height: @close-button-height;
+      padding: @close-button-padding-y @close-button-padding-x;
+      border: none;
+      margin: 0;
+      background-color: transparent;
+      color: @close-button-color;
+      font-size: @close-button-font-size;
+      line-height: 1;
+      text-align: center;
+
+      &::before {
+        display: block;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        #oui > .animate();
+
+        outline: none;
+        opacity: 1;
+      }
+    }
+
+    &__body {
+      position: relative;
+      padding: @body-padding;
+      color: @body-color;
+
+      &_no-icon {
+        padding: @body-padding-no-icon;
+      }
+    }
+
+    &__title {
+      margin-top: 0;
+      color: @title-color;
+      font-size: rem-calc(21);
+      line-height: rem-calc(22.4);
+      letter-spacing: 0.01em;
+      font-weight: 600;
+    }
+
+    &__text {
+      color: @body-color;
+      font-size: rem-calc(16);
+      line-height: rem-calc(22.4);
+      letter-spacing: 0.01em;
+      font-weight: 400;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    &__loader {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: @oui-modal-loader-background-color;
+    }
+
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: @oui-modal-footer-padding;
+      border-top: 0 none;
+
+      .@{button-selector} {
+        margin-bottom: 0;
+      }
+
+      .@{button-selector} + .@{button-selector} {
+        margin-left: @oui-modal-footer-button-spacing;
+      }
+    }
+  }
+
+  .modal-shadow() {
+    box-shadow: @oui-modal-shadow;
+  }
+
+  .modal-backdrop() {
+    background-color: @oui-modal-backdrop-color;
+  }
+
+  .modal-icon-base(
+    @icon-selector ,
+    @icon-color
+  ) {
+    &__body > .@{icon-selector} {
+      position: absolute;
+      display: block;
+      top: @oui-modal-icon-position-top;
+      left: @oui-modal-icon-position-left;
+      color: @icon-color;
+      font-size: @oui-modal-icon-font-size;
+    }
+  }
+}
