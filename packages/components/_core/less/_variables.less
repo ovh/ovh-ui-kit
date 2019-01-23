@@ -1,6 +1,7 @@
-@import (reference) './_constants';
+@import './_constants';
+@import './_icons';
 
-// Global
+// Globals
 @oui-global-base-z-index: 0;
 @oui-global-base-font-family-fallback: sans-serif;
 @oui-global-base-font-family-icon: 'Oui Icons';
@@ -41,7 +42,14 @@
 @oui-color-secondary: @oui-color-turquoise;
 @oui-color-tertiary: @oui-color-pacific;
 
-// Typography - Heading
+// Icons
+@oui-icon-dist-folder: "../fonts/oui-icons";
+@oui-icon-spacing: 0;
+@oui-icon-size: rem-calc(24);
+@oui-icon-color: #333;
+@oui-icon-char-color: #fff;
+
+// Heading
 @oui-heading-border-width: 2px;
 @oui-heading-border-color: #ddd;
 @oui-heading-font-sizes:
@@ -68,7 +76,7 @@
   0 0 rem-calc(15),
   0 0 rem-calc(15);
 
-// Typography - Link
+// Link
 @oui-link-font-color: @oui-color-pacific;
 @oui-link-font-color_hover: @oui-color-sapphire;
 @oui-link-text-decoration: none;
@@ -76,7 +84,7 @@
 @oui-link-icon-icon-size: rem-calc(10);
 @oui-link-icon-margin-left: rem-calc(5);
 
-// Typography - Horizontal line
+// Horizontal line
 @oui-horizontal-line-margin-bottom: rem-calc(10);
 @oui-horizontal-line-width: 2px;
 @oui-horizontal-line-color: @oui-color-nurse;
@@ -84,8 +92,8 @@
 @oui-horizontal-line-dark-color: darken(@oui-color-nurse, 20%);
 @oui-horizontal-line-thin-width: 1px;
 
-// Typography - Paragraph
+// Paragraph
 @oui-paragraph-margin: 0 0 rem-calc(15);
 
-// Typography - Fonts
-@oui-font-source-sans-pro-folder: "./fonts/source-sans-pro";
+// Fonts
+@oui-font-source-sans-pro-folder: "../fonts/source-sans-pro";

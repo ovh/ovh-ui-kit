@@ -10,10 +10,37 @@
 @oui-navbar-background-color_active: @oui-color-rhino;
 @oui-navbar-z-index: 1030;
 
-// Navbar Brand
 @oui-navbar-brand-padding: 0 rem-calc(20);
 @oui-navbar-brand-color: @oui-navbar-font-color;
 @oui-navbar-brand-font-size: rem-calc(28);
+
+@oui-notification-info-icon-color: @oui-color-info-medium;
+@oui-notification-success-icon-color: @oui-color-success-medium;
+@oui-notification-warning-icon-color: @oui-color-warning-medium;
+@oui-notification-error-icon-color: @oui-color-error-medium;
+
+@oui-notification-action-icon-font-size: rem-calc(10);
+@oui-notification-action-font-color: @oui-color-silver;
+@oui-notification-action-font-color-hover: @oui-color-dusty;
+@oui-notification-icon-margin: rem-calc(3) rem-calc(10);
+@oui-notification-icon-font-size: rem-calc(20);
+@oui-notification-padding: rem-calc(7) rem-calc(10);
+@oui-notification-placeholder-color: @oui-color-concrete;
+@oui-notification-placeholder-font-color: @oui-color-dusty;
+@oui-notification-title-weight: @oui-font-semibold;
+
+@oui-navbar-toggler-line-height: @oui-navbar-height;
+@oui-navbar-toggler-padding: 0 rem-calc(20);
+@oui-navbar-toggler-margin-right: -(rem-calc(20));
+@oui-navbar-toggler-background-color_active: @oui-navbar-background-color_active;
+
+@oui-navbar-hamburger-width: rem-calc(14);
+@oui-navbar-hamburger-height: rem-calc(12);
+@oui-navbar-hamburger-bar-size: 2px;
+@oui-navbar-hamburger-bar-color: #fff;
+
+@oui-navbar-backdrop-background-color: @oui-color-shuttle;
+@oui-navbar-backdrop-opacity: 0.5;
 
 // Navbar Menu
 @oui-navbar-menu-width: rem-calc(300);
@@ -31,41 +58,20 @@
 @oui-navbar-menu-font-color: @oui-color-sapphire;
 @oui-navbar-menu-z-index: @oui-navbar-z-index + 1;
 
-// Navbar Menu Header
 @oui-navbar-menu-header-padding: rem-calc(11) rem-calc(20) rem-calc(15) rem-calc(20);
 @oui-navbar-menu-header-background-color: @oui-color-alabaster;
 @oui-navbar-menu-header-border-bottom: solid 1px @oui-color-nurse;
 
-// Navbar Menu Title
 @oui-navbar-menu-title-line-height: 1.2;
 @oui-navbar-menu-title-font-color: @oui-navbar-menu-font-color;
 @oui-navbar-menu-title-font-size: rem-calc(20);
 @oui-navbar-menu-title-font-weight: 600;
 
-// Navbar Menu Back Button
 @oui-navbar-menu-back-padding: rem-calc(30);
 
-// Navbar Menu Item
 @oui-navbar-menu-item-padding: rem-calc(10) rem-calc(20);
 @oui-navbar-menu-item-border-bottom: solid 1px @oui-color-silver;
 
-// Navbar Notification
-@oui-notification-info-icon-color: @oui-color-info-medium;
-@oui-notification-success-icon-color: @oui-color-success-medium;
-@oui-notification-warning-icon-color: @oui-color-warning-medium;
-@oui-notification-error-icon-color: @oui-color-error-medium;
-
-@oui-notification-action-icon-font-size: rem-calc(10);
-@oui-notification-action-font-color: @oui-color-silver;
-@oui-notification-action-font-color-hover: @oui-color-dusty;
-@oui-notification-icon-margin: rem-calc(3) rem-calc(10);
-@oui-notification-icon-font-size: rem-calc(20);
-@oui-notification-padding: rem-calc(7) rem-calc(10);
-@oui-notification-placeholder-color: @oui-color-concrete;
-@oui-notification-placeholder-font-color: @oui-color-dusty;
-@oui-notification-title-weight: @oui-font-semibold;
-
-// Navbar Menu Link
 @oui-navbar-menu-link-height: rem-calc(40);
 @oui-navbar-menu-link-font-color_active: @oui-navbar-menu-font-color;
 @oui-navbar-menu-link-background-color_active: @oui-color-foam;
@@ -83,25 +89,21 @@
 @oui-navbar-link-background-color: transparent;
 @oui-navbar-link-background-color_active: @oui-color-foam;
 
-// Navbar Link with Arrow
 @oui-navbar-arrow-color: @oui-color-zodiac;
 @oui-navbar-arrow-padding: (@oui-navbar-menu-back-padding + @oui-navbar-arrow-spacing);
 @oui-navbar-arrow-size: rem-calc(10);
 @oui-navbar-arrow-spacing: rem-calc(20);
 
-// Navbar Link Primary
 @oui-navbar-primary-font-color: #fff;
 @oui-navbar-primary-font-color_active: @oui-color-turquoise;
 @oui-navbar-primary-font-size: @oui-navbar-font-size_large;
 @oui-navbar-primary-font-weight: 600;
 
-// Navbar Link Secondary
 @oui-navbar-secondary-font-color: @oui-color-ironlight;
 @oui-navbar-secondary-font-color_active: #fff;
 @oui-navbar-secondary-font-size: @oui-navbar-font-size_large;
 @oui-navbar-secondary-font-weight: 400;
 
-// Navbar Link Icon
 @oui-navbar-icon-line-height: 1;
 @oui-navbar-icon-size: rem-calc(30);
 @oui-navbar-icon-spacing: rem-calc(10);
@@ -110,7 +112,6 @@
 @oui-navbar-icon-color: #bec6d3;
 @oui-navbar-icon-color_active: #fff;
 
-// Navbar Link Icon Badge
 @oui-navbar-badge-size: rem-calc(16);
 @oui-navbar-badge-padding: 0 rem-calc(5);
 @oui-navbar-badge-font-color: #fff;
@@ -120,23 +121,6 @@
 @oui-navbar-badge-radius: rem-calc(8);
 @oui-navbar-badge-background-color: #e85c58;
 
-// Navbar Link External
 @oui-navbar-external-color: @oui-color-gothic;
 @oui-navbar-external-size: rem-calc(14);
 @oui-navbar-external-spacing: rem-calc(5);
-
-// Navbar Toggler
-@oui-navbar-toggler-line-height: @oui-navbar-height;
-@oui-navbar-toggler-padding: 0 rem-calc(20);
-@oui-navbar-toggler-margin-right: -(rem-calc(20));
-@oui-navbar-toggler-background-color_active: @oui-navbar-background-color_active;
-
-// Navbar Toggler Hamburger
-@oui-navbar-hamburger-width: rem-calc(14);
-@oui-navbar-hamburger-height: rem-calc(12);
-@oui-navbar-hamburger-bar-size: 2px;
-@oui-navbar-hamburger-bar-color: #fff;
-
-// Navbar Backdrop
-@oui-navbar-backdrop-background-color: @oui-color-shuttle;
-@oui-navbar-backdrop-opacity: 0.5;
