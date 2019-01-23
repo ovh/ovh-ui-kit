@@ -9,14 +9,19 @@
   "main": "./dist/js/oui.min.js",
   "style": "./dist/css/oui.min.css",
   "scripts": {
-    "build": "npm run build:clean && npm run build:version && npm run build:fonts && npm run build:icons && npm run build:js && npm run build:less && npm run build:less-min",
+    "build": "npm run build:clean && npm run build:version && npm run build:fonts && npm run build:icons && npm run build:js && npm run build:less && npm run build:css",
     "build:clean": "rimraf ./dist",
     "build:fonts": "cpx \"../../components/_core/fonts/**/*.{eot,svg,ttf,woff,woff2}\" \"./dist/fonts\"",
     "build:icons": "mkdirp ./dist/icons && npm run build:icons-generator && node ./scripts/generate-icons-indexes.js",
-    "build:icons-generator": "icon-font-generator ../../components/icons/svg/*.svg -p oui-icon -o ./dist/icons -t span --types 'woff, woff2'",
+    "build:icons-generator": "icon-font-generator ../../components/_core/svg/icons/*.svg -p oui-icon -o ./dist/icons -t span --types 'woff, woff2'",
     "build:js": "webpack --progress --colors --config ./config/webpack.dist.config.js",
-    "build:less": "lessc --remcalc ./src/less/_dist.less ./dist/css/oui.css",
-    "build:less-min": "lessc --remcalc --clean-css ./src/less/_dist.less ./dist/css/oui.min.css",
+    "build:css": "npm run build:css-min && npm run build:css-debug",
+    "build:css-min": "lessc --remcalc --clean-css --source-map ./src/less/_dist.less ./dist/css/oui.min.css",
+    "build:css-debug": "lessc --remcalc ./src/less/_dist.less ./dist/css/oui.css",
+    "build:less": "npm run build:less-constants && npm run build:less-icons && npm run build:less-variables",
+    "build:less-constants": "lessc ./src/less/_constants.less ./dist/less/_constants.less",
+    "build:less-icons": "lessc ./src/less/_icons.less ./dist/less/_icons.less",
+    "build:less-variables": "lessc ./src/less/_variables.less ./dist/less/_variables.less",
     "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' ./src/less/_version.tmpl.less > ./src/less/_version.less"
   },
   "dependencies": {

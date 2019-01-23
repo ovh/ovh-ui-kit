@@ -279,6 +279,12 @@ template {
   display: none !important;
 }
 @font-face {
+  font-family: "Oui Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./icons/icons.woff2?v=3.0.0") format("woff2"), url("./icons/icons.woff?v=3.0.0") format("woff");
+}
+@font-face {
   font-family: "Source Sans Pro";
   font-weight: 200;
   font-style: normal;
@@ -696,6 +702,310 @@ p,
 }
 .oui-color-error-fade {
   color: #f5e0da;
+}
+.oui-icon {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: 'Oui Icons';
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+.oui-icon.oui-icon-add::before {
+  display: block;
+  content: "\f101";
+}
+.oui-icon.oui-icon-arrow-down::before {
+  display: block;
+  content: "\f102";
+}
+.oui-icon.oui-icon-arrow-up::before {
+  display: block;
+  content: "\f103";
+}
+.oui-icon.oui-icon-broken-chain::before {
+  display: block;
+  content: "\f104";
+}
+.oui-icon.oui-icon-chat_line::before {
+  display: block;
+  content: "\f105";
+}
+.oui-icon.oui-icon-check-circle_line::before {
+  display: block;
+  content: "\f106";
+}
+.oui-icon.oui-icon-check_line::before {
+  display: block;
+  content: "\f107";
+}
+.oui-icon.oui-icon-checkbox-checked::before {
+  display: block;
+  content: "\f108";
+}
+.oui-icon.oui-icon-checkbox-checkmark::before {
+  display: block;
+  content: "\f109";
+}
+.oui-icon.oui-icon-checkbox-indeterminate::before {
+  display: block;
+  content: "\f10a";
+}
+.oui-icon.oui-icon-checkbox-unchecked::before {
+  display: block;
+  content: "\f10b";
+}
+.oui-icon.oui-icon-chevron-down::before {
+  display: block;
+  content: "\f10c";
+}
+.oui-icon.oui-icon-chevron-down_line::before {
+  display: block;
+  content: "\f10d";
+}
+.oui-icon.oui-icon-chevron-left::before {
+  display: block;
+  content: "\f10e";
+}
+.oui-icon.oui-icon-chevron-left_line::before {
+  display: block;
+  content: "\f10f";
+}
+.oui-icon.oui-icon-chevron-right::before {
+  display: block;
+  content: "\f110";
+}
+.oui-icon.oui-icon-chevron-right_line::before {
+  display: block;
+  content: "\f111";
+}
+.oui-icon.oui-icon-chevron-up::before {
+  display: block;
+  content: "\f112";
+}
+.oui-icon.oui-icon-chevron-up_line::before {
+  display: block;
+  content: "\f113";
+}
+.oui-icon.oui-icon-clock-wait::before {
+  display: block;
+  content: "\f114";
+}
+.oui-icon.oui-icon-close::before {
+  display: block;
+  content: "\f115";
+}
+.oui-icon.oui-icon-close_thin::before {
+  display: block;
+  content: "\f116";
+}
+.oui-icon.oui-icon-copy-error::before {
+  display: block;
+  content: "\f117";
+}
+.oui-icon.oui-icon-copy-normal::before {
+  display: block;
+  content: "\f118";
+}
+.oui-icon.oui-icon-copy-success::before {
+  display: block;
+  content: "\f119";
+}
+.oui-icon.oui-icon-counter_line::before {
+  display: block;
+  content: "\f11a";
+}
+.oui-icon.oui-icon-domain-dns::before {
+  display: block;
+  content: "\f11b";
+}
+.oui-icon.oui-icon-error::before {
+  display: block;
+  content: "\f11c";
+}
+.oui-icon.oui-icon-error_circle::before {
+  display: block;
+  content: "\f11d";
+}
+.oui-icon.oui-icon-external_link::before {
+  display: block;
+  content: "\f11e";
+}
+.oui-icon.oui-icon-eye-blocked::before {
+  display: block;
+  content: "\f11f";
+}
+.oui-icon.oui-icon-eye::before {
+  display: block;
+  content: "\f120";
+}
+.oui-icon.oui-icon-filter::before {
+  display: block;
+  content: "\f121";
+}
+.oui-icon.oui-icon-filter_full::before {
+  display: block;
+  content: "\f122";
+}
+.oui-icon.oui-icon-gear::before {
+  display: block;
+  content: "\f123";
+}
+.oui-icon.oui-icon-gear_line::before {
+  display: block;
+  content: "\f124";
+}
+.oui-icon.oui-icon-help_circle::before {
+  display: block;
+  content: "\f125";
+}
+.oui-icon.oui-icon-info_circle::before {
+  display: block;
+  content: "\f126";
+}
+.oui-icon.oui-icon-ovh::before {
+  display: block;
+  content: "\f127";
+}
+.oui-icon.oui-icon-padlock-close::before {
+  display: block;
+  content: "\f128";
+}
+.oui-icon.oui-icon-page_line::before {
+  display: block;
+  content: "\f129";
+}
+.oui-icon.oui-icon-paperplane_line::before {
+  display: block;
+  content: "\f12a";
+}
+.oui-icon.oui-icon-pdf_line::before {
+  display: block;
+  content: "\f12b";
+}
+.oui-icon.oui-icon-pen_line::before {
+  display: block;
+  content: "\f12c";
+}
+.oui-icon.oui-icon-power_line::before {
+  display: block;
+  content: "\f12d";
+}
+.oui-icon.oui-icon-printer_line::before {
+  display: block;
+  content: "\f12e";
+}
+.oui-icon.oui-icon-remove::before {
+  display: block;
+  content: "\f12f";
+}
+.oui-icon.oui-icon-search::before {
+  display: block;
+  content: "\f130";
+}
+.oui-icon.oui-icon-shape-circle::before {
+  display: block;
+  content: "\f131";
+}
+.oui-icon.oui-icon-shape-dot::before {
+  display: block;
+  content: "\f132";
+}
+.oui-icon.oui-icon-success::before {
+  display: block;
+  content: "\f133";
+}
+.oui-icon.oui-icon-success_circle::before {
+  display: block;
+  content: "\f134";
+}
+.oui-icon.oui-icon-trash_line::before {
+  display: block;
+  content: "\f135";
+}
+.oui-icon.oui-icon-user_line::before {
+  display: block;
+  content: "\f136";
+}
+.oui-icon.oui-icon-warning_circle::before {
+  display: block;
+  content: "\f137";
+}
+.oui-icon_circle::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  font-size: calc(1.5rem / 2);
+  line-height: 2;
+  text-align: center;
+}
+.oui-icon_bicolor {
+  position: relative;
+  z-index: 1;
+}
+.oui-icon_bicolor::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: #fff;
+  border-radius: 50%;
+  z-index: -1;
+}
+.oui-icon_bicolor.oui-icon-warning_circle::after {
+  width: 25%;
+  height: 75%;
+}
+.oui-icon_shake {
+  animation-name: oui-shake;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.oui-icon-eye-blocked::before {
+  margin-top: -0.1em;
+}
+@keyframes oui-shake {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 .flatpickr-calendar {
   font-family: 'Source Sans Pro', sans-serif;
@@ -1497,316 +1807,6 @@ p,
   padding: 0;
   margin: 0;
   border: 0;
-}
-@font-face {
-  font-family: "Oui Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./icons/icons.woff2?v=3.0.0") format("woff2"), url("./icons/icons.woff?v=3.0.0") format("woff");
-}
-.oui-icon {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  font-family: 'Oui Icons';
-  font-size: 1.5rem;
-  line-height: 1;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-}
-.oui-icon.oui-icon-add::before {
-  display: block;
-  content: "\f101";
-}
-.oui-icon.oui-icon-arrow-down::before {
-  display: block;
-  content: "\f102";
-}
-.oui-icon.oui-icon-arrow-up::before {
-  display: block;
-  content: "\f103";
-}
-.oui-icon.oui-icon-broken-chain::before {
-  display: block;
-  content: "\f104";
-}
-.oui-icon.oui-icon-chat_line::before {
-  display: block;
-  content: "\f105";
-}
-.oui-icon.oui-icon-check-circle_line::before {
-  display: block;
-  content: "\f106";
-}
-.oui-icon.oui-icon-check_line::before {
-  display: block;
-  content: "\f107";
-}
-.oui-icon.oui-icon-checkbox-checked::before {
-  display: block;
-  content: "\f108";
-}
-.oui-icon.oui-icon-checkbox-checkmark::before {
-  display: block;
-  content: "\f109";
-}
-.oui-icon.oui-icon-checkbox-indeterminate::before {
-  display: block;
-  content: "\f10a";
-}
-.oui-icon.oui-icon-checkbox-unchecked::before {
-  display: block;
-  content: "\f10b";
-}
-.oui-icon.oui-icon-chevron-down::before {
-  display: block;
-  content: "\f10c";
-}
-.oui-icon.oui-icon-chevron-down_line::before {
-  display: block;
-  content: "\f10d";
-}
-.oui-icon.oui-icon-chevron-left::before {
-  display: block;
-  content: "\f10e";
-}
-.oui-icon.oui-icon-chevron-left_line::before {
-  display: block;
-  content: "\f10f";
-}
-.oui-icon.oui-icon-chevron-right::before {
-  display: block;
-  content: "\f110";
-}
-.oui-icon.oui-icon-chevron-right_line::before {
-  display: block;
-  content: "\f111";
-}
-.oui-icon.oui-icon-chevron-up::before {
-  display: block;
-  content: "\f112";
-}
-.oui-icon.oui-icon-chevron-up_line::before {
-  display: block;
-  content: "\f113";
-}
-.oui-icon.oui-icon-clock-wait::before {
-  display: block;
-  content: "\f114";
-}
-.oui-icon.oui-icon-close::before {
-  display: block;
-  content: "\f115";
-}
-.oui-icon.oui-icon-close_thin::before {
-  display: block;
-  content: "\f116";
-}
-.oui-icon.oui-icon-copy-error::before {
-  display: block;
-  content: "\f117";
-}
-.oui-icon.oui-icon-copy-normal::before {
-  display: block;
-  content: "\f118";
-}
-.oui-icon.oui-icon-copy-success::before {
-  display: block;
-  content: "\f119";
-}
-.oui-icon.oui-icon-counter_line::before {
-  display: block;
-  content: "\f11a";
-}
-.oui-icon.oui-icon-domain-dns::before {
-  display: block;
-  content: "\f11b";
-}
-.oui-icon.oui-icon-error::before {
-  display: block;
-  content: "\f11c";
-}
-.oui-icon.oui-icon-error_circle::before {
-  display: block;
-  content: "\f11d";
-}
-.oui-icon.oui-icon-external_link::before {
-  display: block;
-  content: "\f11e";
-}
-.oui-icon.oui-icon-eye-blocked::before {
-  display: block;
-  content: "\f11f";
-}
-.oui-icon.oui-icon-eye::before {
-  display: block;
-  content: "\f120";
-}
-.oui-icon.oui-icon-filter::before {
-  display: block;
-  content: "\f121";
-}
-.oui-icon.oui-icon-filter_full::before {
-  display: block;
-  content: "\f122";
-}
-.oui-icon.oui-icon-gear::before {
-  display: block;
-  content: "\f123";
-}
-.oui-icon.oui-icon-gear_line::before {
-  display: block;
-  content: "\f124";
-}
-.oui-icon.oui-icon-help_circle::before {
-  display: block;
-  content: "\f125";
-}
-.oui-icon.oui-icon-info_circle::before {
-  display: block;
-  content: "\f126";
-}
-.oui-icon.oui-icon-ovh::before {
-  display: block;
-  content: "\f127";
-}
-.oui-icon.oui-icon-padlock-close::before {
-  display: block;
-  content: "\f128";
-}
-.oui-icon.oui-icon-page_line::before {
-  display: block;
-  content: "\f129";
-}
-.oui-icon.oui-icon-paperplane_line::before {
-  display: block;
-  content: "\f12a";
-}
-.oui-icon.oui-icon-pdf_line::before {
-  display: block;
-  content: "\f12b";
-}
-.oui-icon.oui-icon-pen_line::before {
-  display: block;
-  content: "\f12c";
-}
-.oui-icon.oui-icon-power_line::before {
-  display: block;
-  content: "\f12d";
-}
-.oui-icon.oui-icon-printer_line::before {
-  display: block;
-  content: "\f12e";
-}
-.oui-icon.oui-icon-remove::before {
-  display: block;
-  content: "\f12f";
-}
-.oui-icon.oui-icon-search::before {
-  display: block;
-  content: "\f130";
-}
-.oui-icon.oui-icon-shape-circle::before {
-  display: block;
-  content: "\f131";
-}
-.oui-icon.oui-icon-shape-dot::before {
-  display: block;
-  content: "\f132";
-}
-.oui-icon.oui-icon-success::before {
-  display: block;
-  content: "\f133";
-}
-.oui-icon.oui-icon-success_circle::before {
-  display: block;
-  content: "\f134";
-}
-.oui-icon.oui-icon-trash_line::before {
-  display: block;
-  content: "\f135";
-}
-.oui-icon.oui-icon-user_line::before {
-  display: block;
-  content: "\f136";
-}
-.oui-icon.oui-icon-warning_circle::before {
-  display: block;
-  content: "\f137";
-}
-.oui-icon_circle::before {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 50%;
-  background: #333;
-  color: #fff;
-  font-size: calc(1.5rem / 2);
-  line-height: 2;
-  text-align: center;
-}
-.oui-icon_bicolor {
-  position: relative;
-  z-index: 1;
-}
-.oui-icon_bicolor::after {
-  content: "";
-  display: block;
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background: #fff;
-  border-radius: 50%;
-  z-index: -1;
-}
-.oui-icon_bicolor.oui-icon-warning_circle::after {
-  width: 25%;
-  height: 75%;
-}
-.oui-icon_shake {
-  animation-name: oui-shake;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-}
-.oui-icon-eye-blocked::before {
-  margin-top: -0.1em;
-}
-@keyframes oui-shake {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-  10%,
-  20% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-  }
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
-  40%,
-  60%,
-  80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
-  to {
-    transform: scale3d(1, 1, 1);
-  }
 }
 [x-placement|="top"] > .oui-tip[x-arrow],
 .oui-tip-top {

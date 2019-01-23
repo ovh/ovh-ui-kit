@@ -9,7 +9,7 @@ const log = console.log;
 log(chalk.yellow(`\nGenerating less variables from icons`));
 
 // init less file
-let file = fs.createWriteStream('../../components/icons/less/_icons.less');
+let file = fs.createWriteStream('../../components/_core/less/_icons.less');
 
 log(chalk.blue(`Generated`), chalk.cyan(path.resolve(file.path)));
 
@@ -26,7 +26,9 @@ Object.keys(icons).forEach((key) => {
 const lastIndex = iconsIndexes.length;
 iconsIndexes[lastIndex - 1] += ';';
 
-file.write(`// WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!\n\n`);
+file.write(`// Icons\n`);
+file.write(`//\n`);
+file.write(`// WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!\n`);
 file.write(iconsIndexes.join(`\n`));
 file.write(iconsCodes.join(`\n`));
 file.write(`\n`);
