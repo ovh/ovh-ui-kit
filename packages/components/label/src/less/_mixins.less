@@ -1,0 +1,20 @@
+@import (reference) '@ovh/ui-kit.core/src/less/_variables';
+@import (reference) '@ovh/ui-kit.core/src/less/_mixins';
+@import (reference) './_variables';
+
+#oui {
+  .label-base(
+    @font-color: @oui-label-font-color,
+    @font-size: @oui-label-font-size,
+    @font-weight: @oui-label-font-weight,
+    @padding: @oui-label-padding,
+    @margin: @oui-label-margin,
+  ) {
+    display: block;
+    padding: @padding;
+    margin: @margin;
+    color: @font-color;
+    font-size: @font-size;
+    font-weight: @font-weight;
+  }
+}

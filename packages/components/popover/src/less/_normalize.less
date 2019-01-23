@@ -1,0 +1,18 @@
+@import (reference) '@ovh/ui-kit.core/src/less/_mixins';
+
+oui-popover {
+  &,
+  &-trigger {
+    display: inline-block;
+  }
+
+  &-content {
+    display: block;
+  }
+}
+
+#oui {
+  .popover-normalize() {
+    #oui > .base-font();
+  }
+}

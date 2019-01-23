@@ -1,5 +1,6 @@
 {
   "name": "@ovh/ui-kit.core",
+  "version": "0.0.0",
   "private": true,
   "license": "BSD-3-Clause",
   "author": "OVH SAS"
