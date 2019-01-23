@@ -27,9 +27,7 @@ module.exports = function (config) {
             "packages/**/tests/index.js"
         ],
         preprocessors: {
-            // eslint-disable-next-line no-undef
             [require.resolve("angular")]: ["webpack", "sourcemap"],
-            // eslint-disable-next-line no-undef
             [require.resolve("angular-mocks")]: ["webpack", "sourcemap"],
             [require.resolve("angular-aria")]: ["webpack", "sourcemap"],
             [require.resolve("angular-sanitize")]: ["webpack", "sourcemap"],
