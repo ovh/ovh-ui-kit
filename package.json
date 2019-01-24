@@ -4,8 +4,8 @@
   "description": "A LESS stylekit for the OVH brand.",
   "license": "BSD-3-Clause",
   "workspaces": [
-    "packages/apps/*",
     "packages/components/*",
+    "packages/libs/*",
     "packages/vendors/*"
   ],
   "scripts": {
