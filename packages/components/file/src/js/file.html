@@ -1,18 +1,21 @@
 <!-- Controls -->
-<input type="hidden"
+<!-- Using [hidden] cause errors with ng 1.7.6, -->
+<!-- We use [text] hidden by css to avoid it -->
+<input class="oui-file__input oui-file__input_hidden" type="text"
+    autocomplete="off"
     ng-attr-id="{{::$ctrl.id}}"
     ng-attr-name="{{::$ctrl.name}}"
     ng-disabled="$ctrl.disabled"
     ng-required="$ctrl.required"
     ng-model="$ctrl.model">
-<input class="oui-file__input" type="file"
+<input class="oui-file__input oui-file__input_file" type="file"
     ng-if="::!$ctrl.attachments"
     ng-attr-id="{{::$ctrl.selectorId}}"
     ng-attr-accept="{{::$ctrl.accept}}"
     ng-attr-size="{{::$ctrl.size}}"
     ng-disabled="$ctrl.disabled"
     tabindex="-1">
-<input class="oui-file__input" type="file"
+<input class="oui-file__input oui-file__input_file" type="file"
     ng-if="::$ctrl.attachments"
     ng-attr-id="{{::$ctrl.selectorId}}"
     ng-attr-accept="{{::$ctrl.accept}}"

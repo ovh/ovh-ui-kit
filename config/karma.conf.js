@@ -3,7 +3,7 @@
 // we are also using it with karma-webpack
 //   https://github.com/webpack/karma-webpack
 
-const webpackConfig = require("../packages/apps/ui-kit/config/webpack.test.config");
+const webpackConfig = require("@ovh/ui-kit/config/webpack.test.config");
 
 module.exports = function (config) {
     config.set({
@@ -20,18 +20,18 @@ module.exports = function (config) {
             }
         },
         files: [
-            require.resolve("angular"), // eslint-disable-line no-undef
-            require.resolve("angular-mocks"), // eslint-disable-line no-undef
-            require.resolve("angular-aria"), // eslint-disable-line no-undef
-            require.resolve("angular-sanitize"), // eslint-disable-line no-undef
-            "packages/**/tests/index.js"
+            require.resolve("angular"),
+            require.resolve("angular-mocks"),
+            require.resolve("angular-aria"),
+            require.resolve("angular-sanitize"),
+            "packages/components/**/tests/index.js"
         ],
         preprocessors: {
             [require.resolve("angular")]: ["webpack", "sourcemap"],
             [require.resolve("angular-mocks")]: ["webpack", "sourcemap"],
             [require.resolve("angular-aria")]: ["webpack", "sourcemap"],
             [require.resolve("angular-sanitize")]: ["webpack", "sourcemap"],
-            "packages/**/tests/index.js": ["webpack", "sourcemap"]
+            "packages/components/**/tests/index.js": ["webpack", "sourcemap"]
         },
         webpack: webpackConfig,
         webpackMiddleware: {
