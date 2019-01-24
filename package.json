@@ -16,7 +16,9 @@
     "lint:js": "eslint ./packages",
     "version": "npm run build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
-    "preview-changelog": "npm-scripts-config preview-changelog"
+    "preview-changelog": "npm-scripts-config preview-changelog",
+    "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start config/karma.conf.js --reporters spec,coverage --single-run",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start config/karma.conf.js --watch"
   },
   "config": {
     "commitizen": {
@@ -27,6 +29,10 @@
     "less-plugin-remcalc": "^0.1.0"
   },
   "devDependencies": {
+    "angular": "^1.7.6",
+    "angular-aria": "^1.7.6",
+    "angular-mocks": "^1.7.6",
+    "angular-sanitize": "^1.7.6",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.0",
@@ -39,12 +45,22 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
     "eslint": "^4.3.0",
     "eslint-config-ovh": "^0.1.1",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "html-loader": "^0.5.5",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.32",
+    "karma-webpack": "^4.0.0-rc.2",
     "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
