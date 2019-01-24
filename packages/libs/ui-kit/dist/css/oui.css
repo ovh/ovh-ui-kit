@@ -282,7 +282,7 @@ template {
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/oui-icons/icons.woff2?v=3.0.0") format("woff2"), url("../fonts/oui-icons/icons.woff?v=3.0.0") format("woff");
+  src: url("../fonts/oui-icons/icons.woff2?v=3.0.0-alpha") format("woff2"), url("../fonts/oui-icons/icons.woff?v=3.0.0-alpha") format("woff");
 }
 @font-face {
   font-family: "Source Sans Pro";
