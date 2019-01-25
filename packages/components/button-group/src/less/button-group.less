@@ -1,0 +1,13 @@
+@import (reference) './_mixins';
+
+.oui-button-group {
+  @oui-button-selector: oui-button;
+  @oui-button-primary-selector: oui-button_primary;
+  @oui-button-secondary-selector: oui-button_secondary;
+
+  #oui > .button-group-base(
+    @button-selector: @oui-button-selector,
+    @button-primary-selector: @oui-button-primary-selector,
+    @button-secondary-selector: @oui-button-secondary-selector
+  );
+}

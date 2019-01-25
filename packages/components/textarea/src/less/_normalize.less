@@ -1,0 +1,13 @@
+@import (reference) '@ovh/ui-kit.input/src/less/_normalize';
+@import (reference) '@ovh/ui-kit.core/src/less/_mixins';
+
+oui-textarea {
+  display: block;
+}
+
+#oui {
+  .textarea-normalize() {
+    #oui > .base-font();
+    #oui > .input-normalize();
+  }
+}

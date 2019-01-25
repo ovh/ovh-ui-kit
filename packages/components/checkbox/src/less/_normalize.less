@@ -1,0 +1,20 @@
+@import (reference) '@ovh/ui-kit.core/src/less/_mixins';
+
+oui-checkbox {
+  display: block;
+}
+
+#oui {
+  .checkbox-normalize() {
+    &__label-container {
+      font-weight: inherit;
+    }
+
+    &__label,
+    &__description {
+      #oui > .base-font();
+
+      color: @oui-checkbox-font-color;
+    }
+  }
+}

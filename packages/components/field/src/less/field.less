@@ -1,0 +1,29 @@
+@import (reference) './_mixins';
+@import './_normalize';
+
+.oui-field {
+  @oui-selector: oui-field;
+  @oui-button-selector: oui-button;
+  @oui-label-selector: oui-label;
+  @oui-input-group-selector: oui-input-group;
+  @oui-checkbox-selector: oui-checkbox;
+  @oui-select-selector: oui-select;
+  @oui-ui-select-selector: ui-select-container;
+  @oui-switch-selector: oui-switch;
+  @oui-textarea-selector: oui-textarea;
+  @oui-custom-component-selector: oui-field__component;
+
+  #oui > .field-normalize();
+  #oui > .field-base(
+    @oui-selector,
+    @oui-button-selector,
+    @oui-label-selector,
+    @oui-input-group-selector,
+    @oui-checkbox-selector,
+    @oui-select-selector,
+    @oui-ui-select-selector,
+    @oui-switch-selector,
+    @oui-textarea-selector,
+    @oui-custom-component-selector
+  );;
+}
