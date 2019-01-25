@@ -9,7 +9,8 @@
   "main": "./dist/js/oui.min.js",
   "style": "./dist/css/oui.min.css",
   "scripts": {
-    "build": "run-s clean version css js fonts icons less",
+    "build": "run-s clean version css js fonts icons less copy",
+    "copy": "cpx \"./dist/**/*\" \"../../../dist\"",
     "clean": "rimraf ./dist",
     "css": "run-p \"css:*\"",
     "css:debug": "lessc --remcalc ./src/less/index.less ./dist/css/oui.css",
