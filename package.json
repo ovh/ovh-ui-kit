@@ -1,8 +1,8 @@
 {
   "name": "ovh-ui-kit",
-  "version": "2.24.0",
+  "version": "0.0.0",
   "private": true,
-  "description": "A LESS stylekit for the OVH brand.",
+  "description": "A set of maintainable components for the OVH ecosystem",
   "license": "BSD-3-Clause",
   "workspaces": [
     "packages/components/*",
@@ -10,6 +10,7 @@
     "packages/vendors/*"
   ],
   "scripts": {
+    "build": "lerna run build",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
     "lint": "npm run lint:js && npm run lint:css",
@@ -18,16 +19,13 @@
     "version": "npm run build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog",
-    "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start config/karma.conf.js --reporters spec,coverage --single-run",
-    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start config/karma.conf.js --watch"
+    "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start --reporters spec,coverage --single-run",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start --watch"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "less-plugin-remcalc": "^0.1.0"
   },
   "devDependencies": {
     "angular": "^1.7.6",
@@ -37,7 +35,6 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.0.0",
-    "babel-loader": "^7.1.5",
     "babel-plugin-angularjs-annotate": "^0.9.0",
     "babel-plugin-istanbul": "^5.0.1",
     "babel-plugin-lodash": "^3.3.4",
@@ -50,31 +47,21 @@
     "eslint": "^4.3.0",
     "eslint-config-ovh": "^0.1.1",
     "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
-    "html-loader": "^0.5.5",
-    "istanbul-instrumenter-loader": "^3.0.1",
     "jasmine-core": "^3.2.1",
     "karma": "^3.0.0",
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^1.1.2",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "^0.0.32",
-    "karma-webpack": "^4.0.0-rc.2",
+    "lerna": "^3.10.7",
     "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
     "less-plugin-remcalc": "^0.1.0",
     "lodash": "^4.17.11",
-    "lodash-webpack-plugin": "^0.11.5",
     "npm-scripts-config": "^0.0.2",
     "npm-scripts-conventional-changelog": "^0.1.0",
     "stylelint": "^9.9.0",
-    "stylelint-config-standard": "^18.2.0",
-    "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-middleware": "^3.3.0",
-    "webpack-hot-middleware": "^2.24.0",
-    "webpack-merge": "^4.1.4"
+    "stylelint-config-standard": "^18.2.0"
   }
 }
