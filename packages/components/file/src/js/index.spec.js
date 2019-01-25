@@ -6,8 +6,8 @@ describe("ouiFile", () => {
 
     const getAttachments = (element) => element[0].querySelector(".oui-file-attachments");
     const getDropArea = (element) => element[0].querySelector(".oui-file-droparea");
-    const getInputFile = (element) => element[0].querySelector("input[type='file']");
-    const getInputHidden = (element) => element[0].querySelector("input[type='hidden']");
+    const getInputFile = (element) => element[0].querySelector(".oui-file__input_file");
+    const getInputHidden = (element) => element[0].querySelector(".oui-file__input_hidden");
     const getMultipleSelector = (element) => element[0].querySelector(".oui-file-multiple");
     const getCustomSelector = (element) => element[0].querySelector(".oui-file-selector");
 
