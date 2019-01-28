@@ -17,6 +17,7 @@
     "lint:css": "stylelint 'packages/**/*.less'",
     "lint:js": "eslint ./packages",
     "version": "npm run build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
+    "prepare": "yarn build",
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog",
     "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start --reporters spec,coverage --single-run",
