@@ -3,7 +3,7 @@
 // we are also using it with karma-webpack
 //   https://github.com/webpack/karma-webpack
 
-const webpackConfig = require("@ovh/ui-kit/config/webpack.test.config");
+const webpackConfig = require("@ovh/ui-kit/.config/webpack.test.config");
 
 module.exports = function (config) {
     config.set({

@@ -3,12 +3,12 @@
 const chalk = require("chalk");
 const fs = require("fs");
 const path = require("path");
-const icons = require("../dist/fonts/oui-icons/oui-icons.json");
+const icons = require("../../dist/fonts/oui-icons/oui-icons.json");
 const log = console.log;
 
 log(chalk.yellow("\nGenerating less variables from icons"));
 
-// init less file
+// Init less file (relative path from /ui-kit, not this file)
 const file = fs.createWriteStream("../../components/_core/src/less/_icons.less");
 
 log(chalk.blue("Generated"), chalk.cyan(path.resolve(file.path)));
