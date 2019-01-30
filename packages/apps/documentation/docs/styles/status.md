@@ -1,12 +1,4 @@
-# oui-status
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-status/status';
-```
+# Status
 
 ## Usage
 

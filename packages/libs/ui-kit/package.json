@@ -23,6 +23,7 @@
     "less:constants": "lessc ./src/less/_constants.less ./dist/less/_constants.less",
     "less:icons": "lessc ./src/less/_icons.less ./dist/less/_icons.less",
     "less:variables": "lessc ./src/less/_variables.less ./dist/less/_variables.less",
+    "prepare": "yarn build",
     "version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' ./src/less/_version.tmpl.less > ./src/less/_version.less"
   },
   "dependencies": {

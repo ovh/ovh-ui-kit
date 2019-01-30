@@ -1,6 +1,4 @@
-# oui-progress
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Progress
 
 ## Usage
 

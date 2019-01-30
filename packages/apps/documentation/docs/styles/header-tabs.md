@@ -1,13 +1,4 @@
-# oui-header-tabs
-
-<component-status cx-design="complete" ux="rc"></component-status>
-oui-header-tabs is a package which provide styles for the header-tabs component.
-
-## Installation
-
-```less
-  @import "oui-header-tabs/header-tabs";
-```
+# Header-tabs
 
 ## Usage
 

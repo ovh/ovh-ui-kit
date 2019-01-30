@@ -1,15 +1,4 @@
-# oui-typography
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-oui-typography is a package which provides tools as constants and mixins for managing typography.
-
-## Installation
-
-```less
-@import 'oui-typography/_constants';
-@import 'oui-typography/_mixins';
-```
+# Typography
 
 ## Usage
 

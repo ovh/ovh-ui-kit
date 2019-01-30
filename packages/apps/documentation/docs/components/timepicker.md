@@ -1,7 +1,5 @@
 # Timepicker
 
-<component-status cx-design="partial" ux="beta"></component-status>
-
 ## Usage
 
 ### Basic

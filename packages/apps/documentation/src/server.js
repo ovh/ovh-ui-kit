@@ -34,8 +34,8 @@ app.use(webpackDevMiddleware(compiler, {
 
 const hotMiddleware = webpackHotMiddleware(compiler);
 
-compiler.plugin("compilation", (compilation) => {
-    compilation.plugin("html-webpack-plugin-after-emit", (data, cb) => {
+compiler.hooks.compilation.tap("compilation", (compilation) => {
+    compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync("compilation", (data, cb) => {
         hotMiddleware.publish({ action: "reload" });
         cb();
     });

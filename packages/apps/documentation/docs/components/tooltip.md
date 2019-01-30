@@ -1,7 +1,5 @@
 # Tooltip
 
-<component-status cx-design="complete" ux="complete"></component-status>
-
 ## Usage
 
 ### Using value of `oui-tooltip` attribute

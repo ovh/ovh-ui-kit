@@ -1,14 +1,4 @@
-# oui-sidebar
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-oui-sidebar is a package which provides styles for the sidebar component.
-
-## Installation
-
-```less
-  @import 'oui-sidebar/sidebar';
-```
+# Sidebar
 
 ## Usage
 

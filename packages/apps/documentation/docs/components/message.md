@@ -1,6 +1,4 @@
-# oui-message
-
-<component-status cx-design="complete" ux="complete"></component-status>
+# Message
 
 ## Usage
 

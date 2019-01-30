@@ -1,7 +1,5 @@
 # Tile
 
-<component-status cx-design="partial" ux="rc"></component-status>
-
 ## Usage
 
 ### Basic

@@ -1,4 +1,5 @@
-import introduction from "@ovh/ui-kit-documentation/docs/README.md";
+import decisions from "@ovh/ui-kit-documentation/docs/decisions.md";
+import introduction from "@ovh/ui-kit-documentation/docs/readme.md";
 
 export default function ($stateProvider) {
     "ngInject";
@@ -21,8 +22,13 @@ export default function ($stateProvider) {
             weight: 9000
         })
         .state("showcase.documentation.introduction", {
-            url: "/introduction",
+            url: "/readme",
             friendlyName: "Introduction",
             template: introduction
+        })
+        .state("showcase.documentation.decisions", {
+            url: "/decisions",
+            friendlyName: "Decisions",
+            template: decisions
         });
 }

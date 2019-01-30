@@ -1,7 +1,5 @@
 # Calendar
 
-<component-status cx-design="partial" ux="beta"></component-status>
-
 ## Usage
 
 **This component needs the CSS file of [flatpickr](https://github.com/flatpickr/flatpickr) to work in your project.**

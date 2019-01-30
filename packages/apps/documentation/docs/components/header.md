@@ -1,6 +1,4 @@
-# Page Header
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Header
 
 ## Usage
 

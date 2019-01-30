@@ -1,28 +1,31 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~flatpickr/dist/flatpickr.css";
-// @import "~@ovh/ui-kit/dist/css/oui.css";
+@import "~highlightjs/styles/vs.css";
+@import "~@ovh/ui-kit/dist/css/oui.css";
+@import "~@ovh/ui-kit/dist/less/_variables.less";
 
-// @rem-base: rem-base(16);
+@rem-base: rem-base(16);
 
-// @import "@ovh/ui-kit/src/less/index";
-// @import "./components/index";
+@import "./components/index";
 
-// // Documentation style
-// code, kbd,
-// pre, samp {
-//     font-size: 87.5%;
-//     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-// }
+// Documentation style
+code,
+kbd,
+pre,
+samp {
+  font-size: 87.5%;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
 
-// .oui-doc-code,
-// .oui-doc-preview {
-//     margin: 0 0 rem-calc(15);
-// }
+.oui-doc-code,
+.oui-doc-preview {
+  margin: 0 0 rem-calc(15);
+}
 
-// .oui-doc-code {
-//     &:extend(.oui-box);
-// }
+.oui-doc-code {
+  &:extend(.oui-box);
+}
 
-// .oui-doc-codespan {
-//     color: @oui-color-pomegranate;
-// }
+.oui-doc-codespan {
+  color: @oui-color-pomegranate;
+}

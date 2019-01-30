@@ -1,6 +1,4 @@
-# Search field
-
-<component-status cx-design="complete" ux="complete"></component-status>
+# Search
 
 ## Usage
 

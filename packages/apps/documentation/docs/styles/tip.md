@@ -1,22 +1,12 @@
-# oui-tip
+# Tip
 
-<component-status cx-design="partial" ux="prototype"></component-status>
-
-oui-tip is a package which provide styles for the `oui-tip` component.
+## Usage
 
 Tips are used together with a relative positionned component as the `oui-message`.
 
 > Tips are named depending on the element they are pointing.
 >
 > e.g. `oui-tip-top` will be on the top of an element.
-
-## Installation
-
-```less
-@import 'oui-tip/tip';
-```
-
-## Usage
 
 ### Default
 

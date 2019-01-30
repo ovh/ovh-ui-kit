@@ -1,6 +1,4 @@
-# Header tabs
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Header-tabs
 
 ## Usage
 

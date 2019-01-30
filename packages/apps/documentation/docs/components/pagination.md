@@ -1,7 +1,5 @@
 # Pagination
 
-<component-status cx-design="complete" ux="complete"></component-status>
-
 ## Usage
 
 ### A few pages
