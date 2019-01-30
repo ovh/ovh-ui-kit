@@ -7,16 +7,14 @@ module.exports = merge(baseConfig, {
     mode: "production",
     devtool: "source-map",
     externals: {
-        angular: "angular",
-        "angular-aria": "angular-aria",
-        "angular-sanitize": "angular-sanitize",
-        "bloodhound-js": "bloodhound-js",
-
-        // Must import minified version (https://github.com/zenorocha/clipboard.js/issues/570)
-        clipboard: "clipboard/dist/clipboard.min",
-        flatpickr: "flatpickr",
-        "popper.js": "popper.js",
-        "ui-select": "ui-select"
+        angular: "require('angular')",
+        "angular-aria": "require('angular-aria')",
+        "angular-sanitize": "require('angular-sanitize')",
+        "bloodhound-js": "require('bloodhound-js')",
+        clipboard: "require('clipboard')",
+        flatpickr: "require('flatpickr')",
+        "popper.js": "require('popper.js')",
+        "ui-select": "require('ui-select')"
     },
     output: {
         path: path.resolve(".", "dist", "js"),
