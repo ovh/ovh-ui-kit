@@ -1,12 +1,4 @@
-# oui-button-group
-
-<component-status cx-design="complete" ux="prototype"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-button-group/button-group';
-```
+# Button-group
 
 ## Usage
 Guidelines : 

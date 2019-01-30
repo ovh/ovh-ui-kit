@@ -1,7 +1,5 @@
 # Stepper
 
-<component-status cx-design="complete" ux="rc"></component-status>
-
 ## Usage
 
 ### Linear stepper

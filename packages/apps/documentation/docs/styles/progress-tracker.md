@@ -1,16 +1,8 @@
-# oui-progress-tracker
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-> As per guidelines, a maximum of 7 steps is recommended, while using the progress tracker.
-
-## Installation
-
-```less
-@import 'oui-progress-tracker/progress-tracker';
-```
+# Progress-tracker
 
 ## Usage
+
+> As per guidelines, a maximum of 7 steps is recommended, while using the progress tracker.
 
 ```html:preview
 <div class="oui-progress-tracker">

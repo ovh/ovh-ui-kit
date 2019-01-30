@@ -1,13 +1,4 @@
-# oui-page-header
-
-<component-status cx-design="complete" ux="rc"></component-status>
-oui-page-header is a package which provide styles for the page header component.
-
-## Installation
-
-```less
-  @import 'oui-page-header/page-header';
-```
+# Header
 
 ## Usage
 

@@ -1,12 +1,4 @@
-# oui-radio-toggle
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-radio-toggle-group/radio-toggle-group';
-```
+# Radio-toggle
 
 ## Usage
 

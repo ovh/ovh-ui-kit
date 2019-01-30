@@ -1,12 +1,4 @@
-# oui-back-button
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-back-button/back-button';
-```
+# Back-button
 
 ## Usage
 

@@ -1,14 +1,4 @@
-# oui-progress
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-oui-progress is a package which provide styles for the progress component.
-
-## Installation
-
-```less
-  @import 'oui-progress/progress';
-```
+# Progress
 
 ## Usage
 

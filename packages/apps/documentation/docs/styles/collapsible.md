@@ -1,12 +1,4 @@
-# oui-collapsible
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-collapsible/collapsible';
-```
+# Collapsible
 
 ## Usage
 

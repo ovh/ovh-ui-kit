@@ -1,12 +1,4 @@
-# oui-pagination
-
-<component-status cx-design="partial" ux="prototype"></component-status>
-
-## Installation
-
-```less
-@import 'oui-pagination/pagination';
-```
+# Pagination
 
 ## Usage
 

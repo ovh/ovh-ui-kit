@@ -1,12 +1,4 @@
-# oui-input
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-input/input';
-```
+# Input
 
 ## Usage
 Guideline : Any text box must be sized according to the expected length of the field in the database.

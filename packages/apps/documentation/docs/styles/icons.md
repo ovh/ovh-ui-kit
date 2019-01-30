@@ -1,12 +1,4 @@
-# oui-icons
-
-<component-status cx-design="partial" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-icons/icons';
-```
+# Icons
 
 ## Usage
 

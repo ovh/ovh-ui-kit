@@ -1,12 +1,4 @@
-# oui-button
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-button/button';
-```
+# Button
 
 ## Usage
 

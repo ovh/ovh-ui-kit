@@ -1,6 +1,4 @@
-# Action menu
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Action-menu
 
 ## Usage
 

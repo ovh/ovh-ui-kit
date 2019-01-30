@@ -1,13 +1,4 @@
-# oui-radio
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-
-## Installation
-
-```less
-@import 'oui-radio/radio';
-```
+# Radio
 
 ## Usage
 

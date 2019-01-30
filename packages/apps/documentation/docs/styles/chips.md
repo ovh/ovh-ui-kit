@@ -1,12 +1,4 @@
-# oui-chip
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-chip/chip';
-```
+# Chips
 
 ## Usage
 

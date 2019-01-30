@@ -1,7 +1,5 @@
 # Slideshow
 
-<component-status cx-design="none" ux="prototype"></component-status>
-
 ## Usage
 
 ### Basic

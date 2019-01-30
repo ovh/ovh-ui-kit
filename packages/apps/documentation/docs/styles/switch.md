@@ -1,15 +1,8 @@
-# oui-switch
-
-<component-status cx-design="partial" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import "oui-switch/switch";
-```
+# Switch
 
 ## Usage
-Guidelines : Switches Are for Instantaneous Actions. The switches do not require an action button to apply the changes.
+
+> Switches are for instantaneous actions. The switches do not require an action button to apply the changes.
 
 ### Default
 

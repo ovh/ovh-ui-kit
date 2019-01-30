@@ -1,12 +1,4 @@
-# oui-textarea
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-textarea/textarea';
-```
+# Textarea
 
 ## Usage
 

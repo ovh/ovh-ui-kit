@@ -1,7 +1,5 @@
 # Modal
 
-<component-status cx-design="complete" ux="complete"></component-status>
-
 ## Usage
 
 ```html:preview
