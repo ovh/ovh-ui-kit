@@ -5,6 +5,7 @@
   "description": "A set of maintainable components for the OVH ecosystem",
   "license": "BSD-3-Clause",
   "workspaces": [
+    "packages/apps/*",
     "packages/components/*",
     "packages/libs/*",
     "packages/vendors/*"

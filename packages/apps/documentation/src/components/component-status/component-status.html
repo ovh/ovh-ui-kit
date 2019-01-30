@@ -1,0 +1,15 @@
+<div class="oui-message oui-message_{{ $ctrl.getMessageType() }}" role="alert">
+  <div class="oui-message__body">
+    <a data-ng-href="{{ $ctrl.readmeUrl }}"><strong>Status</strong></a>
+    <ul>
+      <li>
+        <strong>CX Design</strong><span>:</span>
+        <span data-ng-bind="$ctrl.getCXDesignText()"></span>
+      </li>
+      <li>
+        <strong>UX</strong><span>:</span>
+        <span data-ng-bind="$ctrl.getUXText()"></span>
+      </li>
+    </ul>
+  </div>
+</div>

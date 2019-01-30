@@ -1,0 +1,48 @@
+<header class="oui-showcase__header">
+    <oui-navbar fixed
+        brand="{
+            title: 'OVH UIKit',
+            url: '#',
+            iconClass: 'oui-icon oui-icon-ovh'
+        }"
+        main-links="$ctrl.mainLinks">
+    </oui-navbar>
+</header>
+<div class="oui-showcase__content">
+    <nav class="oui-sidebar oui-showcase__sidenav" role="complementary">
+        <div class="oui-sidebar-menu">
+            <ul class="oui-sidebar-list">
+                <li class="oui-sidebar-list__item"
+                    ng-repeat="groupKey in $ctrl.secondLevelsChildren[$ctrl.currentSecondLevelStateName].groupsOrder track by $index"
+                    ui-sref-active="oui-sidebar-list__item_active">
+                    <span class="oui-sidebar-link"
+                        ng-if="groupKey === 'undefined'"
+                        ng-bind="$ctrl.secondLevelsChildren[$ctrl.currentSecondLevelStateName].name">
+                    </span>
+                    <span class="oui-sidebar-link"
+                        ng-if="groupKey !== 'undefined'"
+                        ng-bind="$ctrl.secondLevelsChildren[$ctrl.currentSecondLevelStateName].groups[groupKey].name || groupKey">
+                    </span>
+                    <div class="oui-sidebar-menu">
+                        <ul class="oui-sidebar-list">
+                            <li class="oui-sidebar-list__item"
+                                ng-repeat="child in $ctrl.secondLevelsChildren[$ctrl.currentSecondLevelStateName].children[groupKey] track by child.state">
+                                <a class="oui-sidebar-link"
+                                    ng-bind="child.name"
+                                    ui-sref="{{child.state}}"
+                                    ui-sref-active="oui-sidebar-link_active">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="oui-showcase__main">
+        <div class="oui-showcase__view"
+            autoscroll="true"
+            ui-view>
+        </ui-view>
+    </main>
+</div>
