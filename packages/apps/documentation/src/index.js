@@ -14,7 +14,6 @@ import "zxcvbn";
 
 import "@ovh/ui-kit"; // Why `import oui from "@ovh/ui-kit";` doesn't work ?
 
-import "highlightjs/styles/vs.css";
 import "./index.less";
 
 import Components from "./components";
