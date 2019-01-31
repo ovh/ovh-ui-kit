@@ -1,4 +1,4 @@
-import data from "./data/criteria.data.json";
+import data from "../data/criteria.data.json";
 
 export default class {
     $onInit () {

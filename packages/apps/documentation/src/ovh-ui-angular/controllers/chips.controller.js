@@ -1,4 +1,4 @@
-import data from "./data/chips.data.json";
+import data from "../data/chips.data.json";
 
 export default class {
     $onInit () {
