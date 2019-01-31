@@ -1,4 +1,4 @@
-import data from "./data/dual-list.data.json";
+import data from "../data/dual-list.data.json";
 
 export default class {
     constructor () {
