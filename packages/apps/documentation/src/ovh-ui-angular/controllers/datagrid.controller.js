@@ -2,7 +2,7 @@ import data from "@ovh/ui-kit.datagrid/src/js/index.spec.data.json";
 import find from "lodash/find";
 import get from "lodash/get";
 import map from "lodash/map";
-import metaData from "./data/datagrid.data.json";
+import metaData from "../data/datagrid.data.json";
 import noop from "lodash/noop";
 import pick from "lodash/pick";
 import servers from "@ovh/ui-kit.datagrid/src/js/servers.spec.data.json";

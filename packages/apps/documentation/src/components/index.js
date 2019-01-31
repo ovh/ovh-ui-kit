@@ -1,6 +1,6 @@
 import Showcase from "./showcase";
 
-const moduleName = "app.components";
+const moduleName = "documentation.components";
 
 angular
     .module(moduleName, [

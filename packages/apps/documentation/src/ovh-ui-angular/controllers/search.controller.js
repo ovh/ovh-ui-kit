@@ -1,4 +1,4 @@
-import data from "./data/autocomplete.data.json";
+import data from "../data/autocomplete.data.json";
 
 export default class {
     $onInit () {
