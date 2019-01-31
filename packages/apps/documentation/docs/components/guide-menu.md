@@ -1,6 +1,4 @@
-# oui-guide-menu
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Guide-menu
 
 ## Usage
 

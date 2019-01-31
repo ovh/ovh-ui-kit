@@ -1,7 +1,5 @@
 # Radio
 
-<component-status cx-design="complete" ux="complete"></component-status>
-
 ## Usage
 
 ### Basic

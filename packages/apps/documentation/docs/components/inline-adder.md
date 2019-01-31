@@ -1,6 +1,4 @@
-# Inline adder
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Inline-adder
 
 ## Usage
 

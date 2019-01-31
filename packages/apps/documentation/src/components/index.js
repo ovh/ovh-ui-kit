@@ -1,9 +1,10 @@
-import ComponentStatus from "./component-status";
 import Showcase from "./showcase";
 
-export default angular
-    .module("app.components", [
-        ComponentStatus,
+const moduleName = "app.components";
+
+angular
+    .module(moduleName, [
         Showcase
-    ])
-    .name;
+    ]);
+
+export default moduleName;

@@ -1,15 +1,4 @@
-# oui-input-group
-
-<component-status cx-design="partial" ux="prototype"></component-status>
-
-> **Important:** This component is broken on IE9, IE10 and IE11
-
-
-## Installation
-
-```less
-  @import 'oui-input-group/input-group';
-```
+# Input-group
 
 ## Usage
 

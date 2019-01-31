@@ -1,12 +1,4 @@
-# oui-modal
-
-<component-status cx-design="partial" ux="rc"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-modal/modal';
-```
+# Modal
 
 ## Usage
 

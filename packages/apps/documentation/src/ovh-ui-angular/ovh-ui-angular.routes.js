@@ -1,5 +1,4 @@
 import config from "./ovh-ui-angular.config.json";
-import introduction from "@ovh/ui-kit-documentation/docs/components/README.md";
 import templateUtils from "../utils/template-utils";
 
 const templates = templateUtils.loadAngularJSReadme();
@@ -12,7 +11,7 @@ export default function ($stateProvider) {
             url: "/components",
             friendlyName: "Components",
             groupName: "Getting started",
-            redirectTo: "showcase.components.introduction",
+            redirectTo: "showcase.components.readme",
             template: "<div ui-view></div>",
             weight: 9000,
             groups: {
@@ -33,11 +32,6 @@ export default function ($stateProvider) {
                     weight: 6000
                 }
             }
-        })
-        .state("showcase.components.introduction", {
-            url: "/introduction",
-            friendlyName: "Introduction",
-            template: introduction
         });
 
     templateUtils.addAngularJSComponentStates($stateProvider, templates, config);

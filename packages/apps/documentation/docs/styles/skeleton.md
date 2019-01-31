@@ -1,14 +1,4 @@
-# oui-skeleton
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-oui-skeleton is a package which provides styles for the skeleton component.
-
-## Installation
-
-```less
-  @import 'oui-skeleton/skeleton';
-```
+# Skeleton
 
 ## Usage
 

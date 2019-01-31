@@ -1,12 +1,4 @@
-# oui-label
-
-<component-status cx-design="complete" ux="rc"></component-status>
-
-## Installation
-
-```less
-@import 'oui-label/label';
-```
+# Label
 
 ## Usage
 *Guidelines:*

@@ -1,6 +1,4 @@
-# oui-password
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Password
 
 ## Usage
 

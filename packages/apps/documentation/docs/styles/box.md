@@ -1,12 +1,4 @@
-# oui-box
-
-<component-status cx-design="partial" ux="rc"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-box/box';
-```
+# Box
 
 ## Usage
 

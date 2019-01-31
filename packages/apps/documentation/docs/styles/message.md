@@ -1,18 +1,8 @@
-# oui-message
-
-<component-status cx-design="partial" ux="rc"></component-status>
-
-## Installation
-
-```less
-  @import 'oui-message/message';
-```
+# Message
 
 ## Usage
 
 ```html:preview
-
-
 <div class="oui-message oui-message_info" role="alert">
   <span class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></span>
   <p class="oui-message__body">Info message with close button</p>

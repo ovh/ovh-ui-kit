@@ -1,6 +1,4 @@
-# Select Picker
-
-<component-status cx-design="complete" ux="rc"></component-status>
+# Select-picker
 
 ## Usage
 
