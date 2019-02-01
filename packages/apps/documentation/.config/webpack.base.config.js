@@ -67,28 +67,20 @@ module.exports = {
             }, {
                 test: /\.js$/,
                 exclude,
-                use: [
-                    "babel-loader"
-                ]
+                use: "babel-loader"
             }, {
-                test: /\.css$/,
-                use: [
-                    "style-loader",
-                    "css-loader"
-                ]
-            }, {
-                test: /\.less$/,
+                test: /\.css|.less$/,
                 exclude,
                 use: [
-                    { loader: MiniCssExtractPlugin.loader, options: { publicPath: '../' } },
+                    { loader: MiniCssExtractPlugin.loader },
                     { loader: "css-loader", options: { sourceMap: true } },
-                    { loader: "less-loader", options: { sourceMap: true, plugins: [ RemcalcPlugin ] } },
                     { loader: "postcss-loader", options: {
                         sourceMap: true,
                         plugins: () => [
                             autoprefixer({ browsers: ["last 2 versions", "ie 11"] })
                         ]
-                    } }
+                    } },
+                    { loader: "less-loader", options: { sourceMap: true, plugins: [ RemcalcPlugin ] } }
                 ]
             }, {
                 test: /\.md$/,
@@ -100,22 +92,16 @@ module.exports = {
                 test: /\.(html|svg)$/,
                 exclude,
                 use: [
-                    {
-                        loader: "html-loader",
-                        options: {
-                            interpolate: true,
-                            minimize: true
-                        }
-                    }
+                    { loader: "html-loader", options: {
+                        interpolate: true,
+                        minimize: true
+                    } }
                 ]
             }, {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]'
-                    }
-                }]
+                use: [
+                    { loader: 'file-loader', options: { name: '[name].[ext]' } }
+                ]
             }
         ]
     }
