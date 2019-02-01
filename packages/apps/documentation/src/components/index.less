@@ -1,0 +1,201 @@
+@import "~@ovh/ui-kit/dist/less/_variables";
+@import "./_mixins";
+@import "./_variables";
+
+/* Showcase */
+ui-view,
+oui-showcase { display: block; }
+
+.oui-showcase {
+  &__header {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__content {
+    display: block;
+    padding-top: rem-calc(44);
+    position: relative;
+    z-index: 0;
+  }
+
+  &__sidenav {
+    position: fixed;
+    top: rem-calc(44);
+    bottom: 0;
+    left: 0;
+    width: rem-calc(300);
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 0;
+  }
+
+  &__main {
+    margin-left: rem-calc(300);
+    background: #fff;
+  }
+
+  &__view { padding: rem-calc(32); }
+
+  &__code { border-radius: 0; }
+
+  &__control {
+    display: none;
+    padding: 2px 6px;
+    border: 2px solid @oui-color-nurse;
+    border-radius: 3px;
+    background: transparent;
+    color: @oui-color-nurse;
+    font-size: rem-calc(14);
+    text-transform: uppercase;
+  }
+
+  &__navbar {
+    .oui-navbar__title {
+      &-icon {
+        vertical-align: top;
+        font-size: rem-calc(44);
+        color: inherit;
+      }
+
+      &-bold,
+      &-small {
+        display: inline-block;
+        font-size: rem-calc(28);
+        color: #fff;
+      }
+
+      &-bold {
+        margin-left: rem-calc(15);
+        font-weight: 600;
+      }
+
+      &-small {
+        margin-left: rem-calc(2);
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .oui-showcase {
+    &__control { display: block; }
+
+    &__navbar .oui-navbar__items,
+    &__sidenav {
+      max-height: 0;
+      transition: max-height 300ms ease-in-out;
+    }
+
+    &__navbar .oui-navbar__items.open,
+    &__sidenav.open {
+      max-height: 1200px;
+      transition: max-height 300ms ease-in-out;
+    }
+
+    &__navbar .oui-navbar__items {
+      margin: 0;
+
+      &:first-child { margin-top: 8px; }
+
+      &:last-child,
+      &:last-child:hover {
+        padding: 7px 7px 0;
+        border: 0 none;
+        background: none;
+      }
+    }
+
+    &__sidenav {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &__content { top: 0; }
+
+    &__main {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+/* Color badge */
+.oui-color-badge {
+  #oui > .color-badge-themes();
+
+  position: relative;
+  border: 1px solid @oui-color-badge-border-color;
+  display: inline-block;
+  width: @oui-color-badge-palette-size;
+  max-width: 100%;
+  margin: @oui-color-badge-spacing;
+  padding: 0;
+  padding-bottom: rem-calc(12);
+  box-shadow: @oui-color-badge-box-shadow;
+
+  &::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: @oui-color-badge-palette-size;
+  }
+
+  &__prop {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: @oui-color-badge-prop-font-size;
+    text-align: center;
+
+    &:first-child,
+    &:last-child {
+      margin: rem-calc(5) 0 0;
+    }
+  }
+
+  &_variant {
+    margin-top: rem-calc(50);
+    padding-top: rem-calc(22);
+
+    &::before {
+      border-radius: 50%;
+      width: @oui-color-badge-palette-size;
+      height: @oui-color-badge-palette-size;
+      top: rem-calc(-40);
+      left: rem-calc(42);
+    }
+  }
+
+  &_white::before {
+    border: solid 1px @oui-color-badge-palette-border-color;
+  }
+}
+
+/* Icon badge */
+.oui-icon-badge {
+  width: rem-calc(144);
+  display: inline-block;
+  border: 1px solid @oui-color-dusty;
+  margin: rem-calc(15);
+  padding: 0;
+  vertical-align: top;
+  background-color: #fff;
+  box-shadow: 0 rem-calc(4) rem-calc(6) rgba(0, 0, 0, 0.06);
+
+  &__preview {
+    height: rem-calc(144);
+    line-height: rem-calc(144);
+    background-color: @oui-color-iron;
+    text-align: center;
+  }
+
+  &__code {
+    padding: rem-calc(16);
+    font-size: rem-calc(12);
+    text-align: center;
+  }
+}

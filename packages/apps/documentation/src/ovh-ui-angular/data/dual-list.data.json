@@ -1,0 +1,65 @@
+{
+    "string": {
+        "source": ["Lorem"],
+        "target": ["Ipsum"]
+    },
+    "strings": {
+        "source": [
+            "Andrew",
+            "Red",
+            "Lila",
+            "Marie",
+            "Robert",
+            "Hope",
+            "Alexis",
+            "Madison",
+            "Vanessa"
+        ],
+        "target": [
+            "Kevin",
+            "Mark"
+        ]
+    },
+    "object": {
+        "source": [{ "name": "Lorem", "age": 15 }],
+        "target": [{ "name": "Ipsum", "age": 25 }]
+    },
+    "objects": {
+        "source" : [
+            { "name": "Andrew", "age": 15 },
+            { "name": "Red", "age": 25 },
+            { "name": "Lila", "age": 34 },
+            { "name": "Marie", "age": 12 },
+            { "name": "Robert", "age": 64 },
+            { "name": "Hope", "age": 15 },
+            { "name": "Alexis", "age": 25 },
+            { "name": "Madison", "age": 34 },
+            { "name": "Vanessa", "age": 12 }
+        ],
+        "target" : [
+            { "name": "Kevin", "age": 12 },
+            { "name": "Mark", "age": 64 }
+        ]
+    },
+    "nestedObject": {
+        "source": [{ "name": { "firstName": "Lorem" }, "age": 15 }],
+        "target": [{ "name": { "firstName": "Ipsum" }, "age": 25 }]
+    },
+    "nestedObjects" : {
+        "source": [
+            { "name": { "firstName": "Andrew" }, "age": 15 },
+            { "name": { "firstName": "Red" }, "age": 25 },
+            { "name": { "firstName": "Lila" }, "age": 34 },
+            { "name": { "firstName": "Marie" }, "age": 12 },
+            { "name": { "firstName": "Robert" }, "age": 64 },
+            { "name": { "firstName": "Hope" }, "age": 15 },
+            { "name": { "firstName": "Alexis" }, "age": 25 },
+            { "name": { "firstName": "Madison" }, "age": 34 },
+            { "name": { "firstName": "Vanessa" }, "age": 12 }
+        ],
+        "target" : [
+            { "name": { "firstName": "Kevin" }, "age": 12 },
+            { "name": { "firstName": "Mark" }, "age": 64 }
+        ]
+    }
+}
