@@ -1,11 +1,11 @@
 const formatter = require("eslint-friendly-formatter");
 const webpack = require("webpack");
+
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 
 const exclude = [/node_modules/, /dist/];
 
 module.exports = {
-    mode: "development",
     entry: {
         component: ["./src/js/index.js"]
     },
