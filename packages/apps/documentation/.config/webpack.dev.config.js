@@ -12,7 +12,7 @@ const config = cloneDeep(baseConfig);
 
 module.exports = merge(config, {
     mode: "development",
-    devtool: "source-map",
+    devtool: "inline-source-map",
     entry: {
         app: [
             client,

@@ -1,3 +1,7 @@
+// Styles
+import "../less/oui.less";
+
+// Components
 import ActionMenu from "@ovh/ui-kit.action-menu";
 import angular from "angular";
 import Autocomplete from "@ovh/ui-kit.autocomplete";

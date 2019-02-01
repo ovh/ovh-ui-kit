@@ -1,14 +1,14 @@
 const baseConfig = require("./webpack.base.config");
-const merge = require("webpack-merge");
 const path = require("path");
-const webpack = require("webpack");
+const merge = require("webpack-merge");
 
 module.exports = merge(baseConfig, {
-    mode: "production",
-    devtool: "source-map",
+    mode: "development",
+    devtool: "inline-source-map",
     output: {
         path: path.resolve(".", "dist", "js"),
-        filename: "oui.js"
+        filename: "oui.js",
+        chunkFilename: "[id].[chunkhash].js"
     },
     externals: {
         angular: "require('angular')",
@@ -20,10 +20,5 @@ module.exports = merge(baseConfig, {
         "popper.js": "require('popper.js')",
         "ui-select": "require('ui-select')"
     },
-    plugins: [
-        new webpack.optimize.ModuleConcatenationPlugin() // Enable scope hoisting
-    ],
-    performance: {
-        hints: false
-    }
+    watch: true
 });
