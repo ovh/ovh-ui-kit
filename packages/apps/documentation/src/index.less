@@ -1,15 +1,12 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~flatpickr/dist/flatpickr.css";
-@import "~highlightjs/styles/vs.css";
-@import (less) "~@ovh/ui-kit/dist/css/oui.css";
-@import (less) "~@ovh/ui-kit/dist/less/_variables.less";
-
-@rem-base: rem-base(16);
+@import (less) "bootstrap/dist/css/bootstrap-grid.min.css";
+@import (less) "flatpickr/dist/flatpickr.css";
+@import (less) "highlightjs/styles/vs.css";
+@import (less) "@ovh/ui-kit/dist/css/oui.css";
+@import "@ovh/ui-kit/dist/less/_variables.less";
 
 /*!
  * OVH UI Kit - Documentation
  */
-@import "./components/index";
 
 code,
 kbd,
@@ -31,3 +28,5 @@ samp {
 .oui-doc-codespan {
   color: @oui-color-pomegranate;
 }
+
+@import "./components/index";

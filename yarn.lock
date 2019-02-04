@@ -7103,7 +7103,7 @@ less-watch-compiler@^1.13.0:
     less "^3.8.1"
     shelljs ">= 0.4.0"
 
-less@^3.8.1:
+less@^3.8.1, less@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/less/-/less-3.9.0.tgz#b7511c43f37cf57dc87dffd9883ec121289b1474"
   integrity sha512-31CmtPEZraNUtuUREYjSqRkeETFdyEHSEPAGq4erDlUXtda7pzNmctdljdIagSb589d/qXGWiiP31R5JVf+v0w==
