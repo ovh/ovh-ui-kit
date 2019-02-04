@@ -80,7 +80,11 @@ module.exports = {
                             autoprefixer({ browsers: ["last 2 versions", "ie 11"] })
                         ]
                     } },
-                    { loader: "less-loader", options: { sourceMap: true, plugins: [ RemcalcPlugin ] } }
+                    { loader: "less-loader", options: {
+                        paths: [ path.resolve(rootPath, "node_modules") ], // Avoid using webpack resolver (@import "~...")
+                        plugins: [ RemcalcPlugin ],
+                        sourceMap: true
+                    } }
                 ]
             }, {
                 test: /\.md$/,
