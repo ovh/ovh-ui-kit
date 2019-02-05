@@ -81,7 +81,6 @@ module.exports = {
                         ]
                     } },
                     { loader: "less-loader", options: {
-                        paths: [ path.resolve(rootPath, "node_modules") ], // Avoid using webpack resolver (@import "~...")
                         plugins: [ RemcalcPlugin ],
                         sourceMap: true
                     } }
