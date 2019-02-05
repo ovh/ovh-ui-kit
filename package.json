@@ -21,8 +21,10 @@
     "postversion": "git push && git push --tags",
     "prepare": "lerna run prepare",
     "preview-changelog": "npm-scripts-config preview-changelog",
+    "start": "lerna run start --stream --scope=@ovh/ui-kit-documentation",
     "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start --reporters spec,coverage --single-run",
-    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start --watch"
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start --watch",
+    "watch": "lerna run watch --stream --scope=@ovh/ui-kit"
   },
   "config": {
     "commitizen": {
