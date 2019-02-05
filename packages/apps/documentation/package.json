@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "start": "cross-env NODE_ENV=dev babel-node ./src/server",
-    "build": "npm run clean && npm run webpack",
+    "build": "yarn clean && yarn webpack",
     "webpack": "cross-env NODE_ENV=production webpack --progress --color --hide-modules --config ./.config/webpack.dist.config.js"
   },
   "dependencies": {
