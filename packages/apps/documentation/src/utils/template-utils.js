@@ -1,69 +1,53 @@
 import capitalize from "lodash/capitalize";
+import toLower from "lodash/toLower";
 
 class TemplateUtils {
-    static loadLessReadme () {
-        const req = requireLess();
-        return loadAll(req);
-    }
+    static loadDocumentationStates (rootName) {
+        const req = require.context("@ovh/ui-kit-documentation/pages", true, /.*\.(html|md)$/);
+        const defaultName = "index";
+        const states = [];
 
-    static loadAngularJSReadme () {
-        const req = requireAngularJS();
-        return loadAll(req);
-    }
+        req.keys().forEach(file => {
+            const path = toLower(file).replace(/^.\/|(index|readme)?.(html|md)$/g, "");
+            const pathArray = path.split("/");
+            const url = `/${path}`;
+            const stateName = `${rootName}.${url}`;
 
-    static addLessComponentStates ($stateProvider, templates, config) {
-        Object.keys(templates).forEach(templateName => {
-            const templateConfig = {
-                url: `/${templateName}`,
-                friendlyName: capitalize(templateName),
-                ...config[templateName]
+            // TODO: Manage "readme"||"index" files as priority (eg. weight)
+            const level = pathArray.length - 1;
+            const fileName = pathArray.pop();
+            const groupName = pathArray.pop();
+            const friendlyName = capitalize(fileName || groupName || defaultName);
+
+            states[stateName] = {
+                template: req(file),
+                level,
+                fileName,
+                groupName,
+                friendlyName,
+                url
             };
-
-            // Create showcase route
-            $stateProvider.state(`showcase.styles.${templateName}`, {
-                ...templateConfig,
-                template: templates[templateName]
-            });
         });
+
+        console.log("files", states);
+        return states;
     }
 
-    static addAngularJSComponentStates ($stateProvider, templates, config) {
-        Object.keys(templates).forEach(templateName => {
-            const templateConfig = {
-                url: `/${templateName}`,
-                friendlyName: capitalize(templateName),
+    static addDocumentationStates ($stateProvider, states, config) {
+        Object.keys(states).forEach(templateName => {
+            const stateConfig = {
+                ...states[templateName],
                 ...config[templateName]
             };
 
-            if (templateConfig.controller) {
-                templateConfig.controllerAs = "$ctrl";
+            if (stateConfig.controller) {
+                stateConfig.controllerAs = "$ctrl";
             }
 
             // Create showcase route
-            $stateProvider.state(`showcase.components.${templateName}`, {
-                ...templateConfig,
-                template: templates[templateName]
-            });
+            $stateProvider.state(templateName, stateConfig);
         });
     }
-}
-
-function loadAll (req) {
-    const templates = [];
-    req.keys().forEach(file => {
-        // Get filename without extension from path
-        const filename = file.replace(/^.*[\\\/]/, "").replace(/.md/, "");
-        templates[filename] = req(file);
-    });
-    return templates;
-}
-
-function requireLess () {
-    return require.context("@ovh/ui-kit-documentation/docs/styles", true, /.*\.md$/);
-}
-
-function requireAngularJS () {
-    return require.context("@ovh/ui-kit-documentation/docs/components", true, /.*\.md$/);
 }
 
 export default TemplateUtils;

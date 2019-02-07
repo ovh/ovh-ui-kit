@@ -1,34 +1,34 @@
-import decisions from "@ovh/ui-kit-documentation/docs/decisions.md";
-import introduction from "@ovh/ui-kit-documentation/docs/readme.md";
+import config from "./index.config.json";
+import templateUtils from "./utils/template-utils";
 
-export default function ($stateProvider) {
+const rootName = "showcase";
+const states = templateUtils.loadDocumentationStates(rootName);
+
+export default function ($stateProvider, $urlRouterProvider) {
     "ngInject";
 
     $stateProvider
-        .state("root", {
-            url: "",
-            redirectTo: "showcase"
-        })
-        .state("showcase", {
-            redirectTo: "showcase.documentation",
+        .state(rootName, {
             template: "<oui-showcase></oui-showcase>"
-        })
-        .state("showcase.documentation", {
-            url: "/documentation",
-            friendlyName: "Documentation",
-            groupName: "Getting started",
-            redirectTo: "showcase.documentation.introduction",
-            template: "<div ui-view></div>",
-            weight: 9000
-        })
-        .state("showcase.documentation.introduction", {
-            url: "/readme",
-            friendlyName: "Introduction",
-            template: introduction
-        })
-        .state("showcase.documentation.decisions", {
-            url: "/decisions",
-            friendlyName: "Decisions",
-            template: decisions
         });
+
+    // $stateProvider
+    //     .state("showcase", {
+    //         redirectTo: "showcase.index",
+    //         template: "<oui-showcase></oui-showcase>"
+    //     })
+    //     .state("showcase.components", {
+    //         template: "<div ui-view></div>"
+    //     })
+    //     .state("showcase.styles", {
+    //         template: "<div ui-view></div>"
+    //     })
+    //     .state("root", {
+    //         url: "",
+    //         redirectTo: "showcase"
+    //     });
+
+    $urlRouterProvider.otherwise("/");
+
+    templateUtils.addDocumentationStates($stateProvider, states, config);
 }
