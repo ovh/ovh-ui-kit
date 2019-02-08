@@ -7,7 +7,7 @@ import ngSanitize from "angular-sanitize";
 import "@uirouter/angularjs";
 import "@ovh/ui-kit";
 
-import "./index.less";
+import "./styles/index.less";
 
 import Components from "./components";
 import Controllers from "./controllers";

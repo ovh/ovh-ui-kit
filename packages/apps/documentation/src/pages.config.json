@@ -1,0 +1,62 @@
+{
+    "showcase./readme": {
+        "friendlyName": "Getting started"
+    },
+    "showcase./components/readme": {
+        "friendlyName": "Introduction"
+    },
+    "showcase./components/autocomplete": {
+        "controller": "AutocompleteCtrl"
+    },
+    "showcase./components/calendar": {
+        "controller": "CalendarCtrl"
+    },
+    "showcase./components/checkbox": {
+        "controller": "ShowCurrentValueInPopupCtrl"
+    },
+    "showcase./components/chips": {
+        "controller": "ChipsCtrl"
+    },
+    "showcase./components/criteria": {
+        "controller": "CriteriaCtrl"
+    },
+    "showcase./components/datagrid": {
+        "controller": "DatagridCtrl"
+    },
+    "showcase./components/dual-list": {
+        "controller": "DualListCtrl"
+    },
+    "showcase./components/field": {
+        "controller": "FieldCtrl"
+    },
+    "showcase./components/inline-adder": {
+        "controller": "InlineAdderCtrl"
+    },
+    "showcase./components/navbar": {
+        "controller": "NavbarCtrl"
+    },
+    "showcase./components/pagination": {
+        "controller": "PaginationCtrl"
+    },
+    "showcase./components/password": {
+        "controller": "PasswordCtrl"
+    },
+    "showcase./components/progress": {
+        "controller": "ProgressCtrl"
+    },
+    "showcase./components/search": {
+        "controller": "SearchCtrl"
+    },
+    "showcase./components/select": {
+        "controller": "SelectCtrl"
+    },
+    "showcase./components/stepper": {
+        "controller": "StepperCtrl"
+    },
+    "showcase./components/timepicker": {
+        "controller": "TimepickerCtrl"
+    },
+    "showcase./styles/readme": {
+        "friendlyName": "Introduction"
+    }
+}

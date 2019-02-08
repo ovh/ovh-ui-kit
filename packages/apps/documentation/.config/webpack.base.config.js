@@ -1,18 +1,25 @@
 const autoprefixer = require("autoprefixer");
+const capitalize = require("lodash/capitalize");
 const formatter = require("eslint-friendly-formatter");
 const fs = require("fs");
+const merge = require("lodash/merge");
 const path = require("path");
 const template = require("lodash/template");
+const toLower = require("lodash/toLower");
 const webpack = require("webpack");
 
+const DirectoryTreePlugin =  require("directory-tree-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const LodashModuleReplacementPlugin = require("lodash-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemcalcPlugin = require("less-plugin-remcalc");
 
+const rootState = "showcase";
 const rootPath = path.join(__dirname, "..");
+const pagesConfig = require("../src/pages.config.json");
 const exclude = [/node_modules(?![\/\\](@ovh))/, /dist/];
 
+console.log(pagesConfig);
 
 module.exports = {
     context: rootPath,
@@ -35,13 +42,58 @@ module.exports = {
         new webpack.DefinePlugin({
             "process.env": process.env.NODE_ENV
         }),
+
         // Save bytes on Lodash
         new LodashModuleReplacementPlugin({
             shorthands: true,
             collections: true,
             paths: true
         }),
-        new webpack.optimize.ModuleConcatenationPlugin(), // Enable scope hoisting
+
+        // Enable scope hoisting
+        new webpack.optimize.ModuleConcatenationPlugin(),
+
+        // Create the directory tree from ./src/pages files
+        new DirectoryTreePlugin({
+            name: "src/pages",
+            dir: "./src/pages",
+            path: "./src/pages.data.json",
+            extensions: /\.html|\.md/,
+            enhance: (item, options) => {
+                const indexWeight = 100;
+                const fileWeight = 10;
+                const dirWeight = 1;
+
+                if (item.type === "file") {
+                    const path = toLower(item.path).replace(new RegExp(`^${options.name}\/|.(html|md)$`, "g"), "");
+
+                    item.title = capitalize(item.name.replace(/.(html|md)$/, ""));
+                    item.state = `${rootState}./${path}`;
+                    item.url = `/${path.replace(/(index|readme)?/, "")}`;
+                    item.weight = (item.name.search(/index|readme/) !== -1) ? indexWeight : fileWeight;
+
+                    // Add config from ./src/pages.config.json
+                    if (pagesConfig[item.state]) {
+                        console.log(item.state);
+                        merge(item, pagesConfig[item.state]);
+                    }
+                } else {
+                    item.title = capitalize(item.name);
+                    item.weight = dirWeight;
+                }
+
+                return item;
+            },
+            sort: (a, b) => {
+                // First sort by 'weight' (desc)
+                let sortIndex = b.weight - a.weight;
+
+                // If same weight, sort by 'name' (asc)
+                return (!sortIndex)
+                    ? a.name.localeCompare(b.name)
+                    : sortIndex;
+            }
+        }),
         new HtmlWebpackPlugin({
             inject: false,
             templateContent: (parameters) => {
@@ -50,6 +102,7 @@ module.exports = {
                 return fn({ assets: parameters.htmlWebpackPlugin.files });
             }
         }),
+
         new MiniCssExtractPlugin({
             filename: "[name]-[hash].css",
             allChunks: true

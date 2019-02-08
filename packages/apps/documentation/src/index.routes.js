@@ -1,34 +1,18 @@
-import config from "./index.config.json";
+import config from "./pages.config.json";
 import templateUtils from "./utils/template-utils";
 
-const rootName = "showcase";
-const states = templateUtils.loadDocumentationStates(rootName);
+const rootState = "showcase";
+const states = templateUtils.loadStates(rootState);
 
 export default function ($stateProvider, $urlRouterProvider) {
     "ngInject";
 
     $stateProvider
-        .state(rootName, {
+        .state(rootState, {
             template: "<oui-showcase></oui-showcase>"
         });
 
-    // $stateProvider
-    //     .state("showcase", {
-    //         redirectTo: "showcase.index",
-    //         template: "<oui-showcase></oui-showcase>"
-    //     })
-    //     .state("showcase.components", {
-    //         template: "<div ui-view></div>"
-    //     })
-    //     .state("showcase.styles", {
-    //         template: "<div ui-view></div>"
-    //     })
-    //     .state("root", {
-    //         url: "",
-    //         redirectTo: "showcase"
-    //     });
-
     $urlRouterProvider.otherwise("/");
 
-    templateUtils.addDocumentationStates($stateProvider, states, config);
+    templateUtils.addStates($stateProvider, states, config);
 }
