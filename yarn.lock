@@ -4172,6 +4172,18 @@ dir-glob@^2.2.1:
   dependencies:
     path-type "^3.0.0"
 
+directory-tree-webpack-plugin@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/directory-tree-webpack-plugin/-/directory-tree-webpack-plugin-1.0.0.tgz#54853fc25ae1ccaad41f7ff0765910e02e552811"
+  integrity sha512-A7/TsabGu2NffDjE3n28mhJqD8Y/smniR8A9H3PgkZZYZrgqYNkO+7jltqU7SNEQ+XVcvqf3cODKMlbU8sG4vw==
+  dependencies:
+    directory-tree "^2.0.0"
+
+directory-tree@^2.0.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.2.1.tgz#3d56ce8a82a6c9612ac0879c6b4ed9ea54e89bde"
+  integrity sha512-AWgnCDEKC2/oSAA/0Ae3RhXnMkvOZtNAVQu7wF2/qXF5Xm8LhjWnEXLV4Yza45SmWkNPvNlo4zWPhZjcVd4T5w==
+
 doctrine@1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/doctrine/-/doctrine-1.5.0.tgz#379dce730f6166f76cefa4e6707a159b02c5a6fa"
@@ -6018,7 +6030,7 @@ husky@^0.14.3:
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
 
-icon-font-generator@^2.1.9:
+icon-font-generator@^2.1.10:
   version "2.1.10"
   resolved "https://registry.yarnpkg.com/icon-font-generator/-/icon-font-generator-2.1.10.tgz#95d6d7f3c44dc68a5fbc37b2e1a9511487387eba"
   integrity sha512-p8iMm+eG9toP/nRt3K7u19NPgPkjOzJS+zdf/FG7TXH0SE7teiBQIzge2aDvQOZf4HYtCVswz0Do3/nEQHLAhA==

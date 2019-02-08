@@ -32,6 +32,7 @@
     "babel-loader": "^7.1.5",
     "cheerio": "^1.0.0-rc.2",
     "css-loader": "^1.0.0",
+    "directory-tree-webpack-plugin": "^1.0.0",
     "eslint-loader": "^2.1.1",
     "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",

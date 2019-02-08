@@ -1,30 +1,17 @@
-import capitalize from "lodash/capitalize";
 import toLower from "lodash/toLower";
 
 class TemplateUtils {
-    static loadDocumentationStates (rootName) {
-        const req = require.context("@ovh/ui-kit-documentation/pages", true, /.*\.(html|md)$/);
-        const defaultName = "index";
+    static loadStates (rootState) {
+        const req = require.context("@ovh/ui-kit-documentation/src/pages", true, /.*\.(html|md)$/);
         const states = [];
 
         req.keys().forEach(file => {
-            const path = toLower(file).replace(/^.\/|(index|readme)?.(html|md)$/g, "");
-            const pathArray = path.split("/");
-            const url = `/${path}`;
-            const stateName = `${rootName}.${url}`;
+            const path = toLower(file).replace(/^.\/|.(html|md)$/g, "");
+            const state = `${rootState}./${path}`;
+            const url = `/${path.replace(/(index|readme)?/, "")}`;
 
-            // TODO: Manage "readme"||"index" files as priority (eg. weight)
-            const level = pathArray.length - 1;
-            const fileName = pathArray.pop();
-            const groupName = pathArray.pop();
-            const friendlyName = capitalize(fileName || groupName || defaultName);
-
-            states[stateName] = {
+            states[state] = {
                 template: req(file),
-                level,
-                fileName,
-                groupName,
-                friendlyName,
                 url
             };
         });
@@ -33,7 +20,7 @@ class TemplateUtils {
         return states;
     }
 
-    static addDocumentationStates ($stateProvider, states, config) {
+    static addStates ($stateProvider, states, config) {
         Object.keys(states).forEach(templateName => {
             const stateConfig = {
                 ...states[templateName],
