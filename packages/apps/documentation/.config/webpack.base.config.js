@@ -19,8 +19,6 @@ const rootPath = path.join(__dirname, "..");
 const pagesConfig = require("../src/pages.config.json");
 const exclude = [/node_modules(?![\/\\](@ovh))/, /dist/];
 
-console.log(pagesConfig);
-
 module.exports = {
     context: rootPath,
     entry: {
@@ -63,22 +61,25 @@ module.exports = {
                 const indexWeight = 100;
                 const fileWeight = 10;
                 const dirWeight = 1;
+                const path = toLower(item.path).replace(new RegExp(`^${options.name}\/|.(html|md)$`, "g"), "");
 
                 if (item.type === "file") {
-                    const path = toLower(item.path).replace(new RegExp(`^${options.name}\/|.(html|md)$`, "g"), "");
-
-                    item.title = capitalize(item.name.replace(/.(html|md)$/, ""));
+                    // Files
+                    item.path = item.path.replace(options.name, ".");
                     item.state = `${rootState}./${path}`;
+                    item.title = capitalize(item.name.replace(/.(html|md)$/, ""));
                     item.url = `/${path.replace(/(index|readme)?/, "")}`;
                     item.weight = (item.name.search(/index|readme/) !== -1) ? indexWeight : fileWeight;
 
                     // Add config from ./src/pages.config.json
                     if (pagesConfig[item.state]) {
-                        console.log(item.state);
                         merge(item, pagesConfig[item.state]);
                     }
                 } else {
+                    // Directory
                     item.title = capitalize(item.name);
+                    item.state = `${rootState}./${path}/`;
+                    item.redirectTo = `${rootState}./${path}/readme`;
                     item.weight = dirWeight;
                 }
 
