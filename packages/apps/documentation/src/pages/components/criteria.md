@@ -8,7 +8,7 @@
 <oui-criteria
     model="$ctrl.basicModel"
     properties="$ctrl.inputValue">
-</oui-criteria-adder>
+</oui-criteria>
 ```
 
 ### With search field
