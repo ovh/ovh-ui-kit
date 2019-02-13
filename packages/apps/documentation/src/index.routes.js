@@ -1,8 +1,23 @@
-import config from "./pages.config.json";
-import templateUtils from "./utils/template-utils";
+import pages from "./pages.data.json";
 
 const rootState = "showcase";
-const states = templateUtils.loadStates(rootState);
+const req = require.context("@ovh/ui-kit-documentation/src/pages", true, /.*\.(html|md)$/);
+
+function loadDirectory ($stateProvider, items) {
+    items.forEach(item => {
+        // Load template
+        if (item.type === "file") {
+            item.template = req(item.path);
+        }
+
+        $stateProvider.state(item.state, item);
+
+        // Load children if directory
+        if (item.type === "directory") {
+            loadDirectory($stateProvider, item.children);
+        }
+    });
+}
 
 export default function ($stateProvider, $urlRouterProvider) {
     "ngInject";
@@ -14,5 +29,5 @@ export default function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
 
-    templateUtils.addStates($stateProvider, states, config);
+    loadDirectory($stateProvider, pages.children);
 }

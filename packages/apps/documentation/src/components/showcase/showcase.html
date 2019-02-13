@@ -11,80 +11,14 @@
                 state="{{::link.state}}"
                 text="{{::link.friendlyName || link.title}}"
                 variant="primary"
-                ng-repeat="link in $ctrl.navigation | filter:type:file">
+                ng-repeat="link in $ctrl.navigation | filter:state:'!'">
             </oui-navbar-link>
         </oui-navbar-main>
     </oui-navbar>
 </header>
 <div class="oui-showcase__content">
     <nav class="oui-sidebar oui-showcase__sidenav" role="complementary">
-
-        <!-- Level 0 (Root) -->
-        <div class="oui-sidebar-menu">
-            <ul class="oui-sidebar-list">
-                <li class="oui-sidebar-list__item"
-                    ng-repeat="lvl0 in $ctrl.$ctrl.navigation track by $index">
-                    <a class="oui-sidebar-link"
-                        ng-if="lvl0.type === 'file'"
-                        ng-bind="lvl0.friendlyName || lvl0.title"
-                        ui-sref="{{lvl0.state}}"
-                        ui-sref-active="oui-sidebar-link_active">
-                    </a>
-                    <span class="oui-sidebar-link"
-                        ng-if="lvl0.type === 'directory'"
-                        ng-bind="lvl0.friendlyName || lvl0.title"
-                        ui-sref-active="oui-sidebar-list__item_active">
-                    </span>
-
-                    <!-- Level 1 -->
-                    <div class="oui-sidebar-menu"
-                        ng-if="lvl0.type === 'directory'">
-                        <ul class="oui-sidebar-list">
-                            <li class="oui-sidebar-list__item"
-                                ng-repeat="lvl1 in lvl0.children track by $index">
-                                <a class="oui-sidebar-link"
-                                    ng-if="lvl1.type === 'file'"
-                                    ng-bind="lvl1.friendlyName || lvl1.title"
-                                    ui-sref="{{lvl1.state}}"
-                                    ui-sref-active="oui-sidebar-link_active">
-                                </a>
-                                <span class="oui-sidebar-link"
-                                    ng-if="lvl1.type === 'directory'"
-                                    ng-bind="lvl1.friendlyName || lvl1.title"
-                                    ui-sref-active="oui-sidebar-list__item_active">
-                                </span>
-
-                                <!-- Level 2 -->
-                                <div class="oui-sidebar-menu"
-                                    ng-if="lvl1.type === 'directory'">
-                                    <ul class="oui-sidebar-list">
-                                        <li class="oui-sidebar-list__item"
-                                            ng-repeat="lvl2 in lvl1.children track by $index">
-                                            <a class="oui-sidebar-link"
-                                                ng-if="lvl2.type === 'file'"
-                                                ng-bind="lvl2.friendlyName || lvl2.title"
-                                                ui-sref="{{lvl2.state}}"
-                                                ui-sref-active="oui-sidebar-link_active">
-                                            </a>
-                                            <span class="oui-sidebar-link"
-                                                ng-if="lvl2.type === 'directory'"
-                                                ng-bind="lvl2.friendlyName || lvl2.title"
-                                                ui-sref-active="oui-sidebar-list__item_active">
-                                            </span>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /Level 2 -->
-
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /Level 1 -->
-
-                </li>
-            </ul>
-        </div>
-        <!-- /Level 0 (Root) -->
+        <oui-sidebar-menu items="$ctrl.navigation"></oui-sidebar-menu>
     </nav>
     <main class="oui-showcase__main">
         <div class="oui-showcase__view" autoscroll="true" ui-view>
