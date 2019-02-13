@@ -1,3 +1,4 @@
+@import (reference) '~@ovh/ui-kit.core/src/less/_constants';
 @import (reference) '~@ovh/ui-kit.button/src/less/_mixins';
 @import (reference) './_mixins';
 @import './_normalize';
@@ -13,7 +14,7 @@
     @button-link-selector: @oui-button-link-selector,
     @button-secondary-selector: @oui-button-secondary-selector,
     @button-group-selector: @oui-button-group-selector
-  );;
+  );
 }
 
 .oui-pagination-button {
@@ -33,5 +34,20 @@
 
   &__item {
     #oui > .pagination-menu-item();
+  }
+}
+
+.oui-pagination-numeric {
+  font-weight: @oui-font-semibold;
+
+  &__input {
+    display: inline-block;
+    margin: 0;
+    text-align: right;
+    vertical-align: baseline;
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button { -webkit-appearance: none; }
   }
 }

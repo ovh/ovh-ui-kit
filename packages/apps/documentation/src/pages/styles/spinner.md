@@ -13,7 +13,7 @@ Guideline: Use the small format when loading a single item. (ex: link in the lef
 </div>
 ```
 
-### Medum spinner
+### Medium spinner
 Guideline: Use the medium format when loading a group or block. (ex: box, panel, zone of a page)
 
 ```html:preview
