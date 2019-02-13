@@ -1,5 +1,6 @@
 const autoprefixer = require("autoprefixer");
 const capitalize = require("lodash/capitalize");
+const filter = require("lodash/filter");
 const formatter = require("eslint-friendly-formatter");
 const fs = require("fs");
 const merge = require("lodash/merge");
@@ -61,14 +62,15 @@ module.exports = {
                 const indexWeight = 100;
                 const fileWeight = 10;
                 const dirWeight = 1;
-                const path = toLower(item.path).replace(new RegExp(`^${options.name}\/|.(html|md)$`, "g"), "");
+                const url = toLower(item.path).replace(new RegExp(`^${options.name}\/|.(html|md)$`, "g"), "");
+
+                item.path = item.path.replace(new RegExp(`^${options.name}`), ".");
 
                 if (item.type === "file") {
                     // Files
-                    item.path = item.path.replace(options.name, ".");
-                    item.state = `${rootState}./${path}`;
+                    item.state = `${rootState}./${url}`;
                     item.title = capitalize(item.name.replace(/.(html|md)$/, ""));
-                    item.url = `/${path.replace(/(index|readme)?/, "")}`;
+                    item.url = `/${url.replace(/(index|readme)?/, "")}`;
                     item.weight = (item.name.search(/index|readme/) !== -1) ? indexWeight : fileWeight;
 
                     // Add config from ./src/pages.config.json
@@ -78,9 +80,17 @@ module.exports = {
                 } else {
                     // Directory
                     item.title = capitalize(item.name);
-                    item.state = `${rootState}./${path}/`;
-                    item.redirectTo = `${rootState}./${path}/readme`;
+                    item.state = `${rootState}./${url}/`;
                     item.weight = dirWeight;
+
+                    // Add a redirection
+                    if (item.children.length) {
+                        // Check for index file or for the first file of the folder
+                        const indexFile = filter(item.children, (child) => child.name.search(/readme|index/) !== -1);
+                        const name = (indexFile.length ? indexFile[0].name : item.children[0].name).replace(/.(html|md)$/, "");
+
+                        item.redirectTo = `${rootState}./${url}/${name}`;
+                    }
                 }
 
                 return item;

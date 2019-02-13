@@ -4,6 +4,6 @@ const moduleName = "documentation.components.showcase";
 
 angular
     .module(moduleName, [])
-    .component("ouiShowcase", Showcase);
+    .component("docShowcase", Showcase);
 
 export default moduleName;

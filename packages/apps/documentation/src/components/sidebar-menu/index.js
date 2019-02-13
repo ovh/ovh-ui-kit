@@ -4,6 +4,6 @@ const moduleName = "documentation.components.sidebar-menu";
 
 angular
     .module(moduleName, [])
-    .component("ouiSidebarMenu", SidebarMenu);
+    .component("docSidebarMenu", SidebarMenu);
 
 export default moduleName;
