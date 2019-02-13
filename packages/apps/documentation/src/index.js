@@ -26,11 +26,6 @@ angular
         Components,
         Controllers
     ])
-    .config(Routes)
-    .run(($state) => {
-        "ngInject";
-
-        console.log("$state", $state.get());
-    });
+    .config(Routes);
 
 export default moduleName;

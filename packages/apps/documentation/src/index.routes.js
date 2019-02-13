@@ -5,8 +5,10 @@ const req = require.context("@ovh/ui-kit-documentation/src/pages", true, /.*\.(h
 
 function loadDirectory ($stateProvider, items) {
     items.forEach(item => {
-        // Load template
+        // Load state template
         if (item.type === "file") {
+            // Dynamic imports doesn't work
+            // This is a workaround using require.context
             item.template = req(item.path);
         }
 
@@ -24,7 +26,7 @@ export default function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state(rootState, {
-            template: "<oui-showcase></oui-showcase>"
+            template: "<doc-showcase></doc-showcase>"
         });
 
     $urlRouterProvider.otherwise("/");
