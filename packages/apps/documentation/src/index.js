@@ -7,14 +7,11 @@ import ngSanitize from "angular-sanitize";
 import "@uirouter/angularjs";
 import "@ovh/ui-kit";
 
-import "./index.less";
+import "./styles/index.less";
 
 import Components from "./components";
-import Controllers from "./ovh-ui-angular";
+import Controllers from "./controllers";
 import Routes from "./index.routes";
-
-import ComponentsRoutes from "./ovh-ui-angular/ovh-ui-angular.routes";
-import StylesRoutes from "./ovh-ui-kit/ovh-ui-kit.routes";
 /* eslint-enable sort-imports */
 
 const moduleName = "documentation";
@@ -30,7 +27,10 @@ angular
         Controllers
     ])
     .config(Routes)
-    .config(ComponentsRoutes)
-    .config(StylesRoutes);
+    .run(($state) => {
+        "ngInject";
+
+        console.log("$state", $state.get());
+    });
 
 export default moduleName;
