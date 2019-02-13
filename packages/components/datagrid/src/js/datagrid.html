@@ -65,6 +65,7 @@
                                 column="column"
                                 index="rowIndex">
                             </oui-datagrid-cell>
+                            <oui-skeleton ng-if="row && row.$promise && !$ctrl.hasProperty(row, column.name)"></oui-skeleton>
                         </td>
                         <td ng-if="$ctrl.hasActionMenu || $ctrl.customizable"
                             class="oui-datagrid__cell oui-datagrid__cell-sticky">

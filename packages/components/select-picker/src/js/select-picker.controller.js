@@ -27,7 +27,7 @@ export default class SelectPickerController {
         }
 
         if (this.picture) {
-            this.isImgPath = /^data:/.test(this.picture) || /\.(gif|png|jpg)$/.test(this.picture);
+            this.isImgPath = /^data:/.test(this.picture) || /\.(gif|png|jpg|svg)$/.test(this.picture);
         }
 
         if (this.values) {

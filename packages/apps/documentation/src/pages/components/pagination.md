@@ -2,6 +2,16 @@
 
 ## Usage
 
+### One page
+
+```html:preview
+<oui-pagination
+    current-offset="1"
+    page-size="100"
+    total-items="12">
+</oui-pagination>
+```
+
 ### A few pages
 
 ```html:preview
@@ -23,13 +33,14 @@
 </oui-pagination>
 ```
 
-### One page
+### Huge amount of pages
 
 ```html:preview
 <oui-pagination
-    current-offset="1"
-    page-size="100"
-    total-items="12">
+    current-offset="$ctrl.pagination3.offset"
+    page-size="$ctrl.pagination3.pageSize"
+    total-items="$ctrl.pagination3.totalItems"
+    on-change="$ctrl.onChange('pagination3', $event)">
 </oui-pagination>
 ```
 

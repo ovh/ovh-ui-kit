@@ -11,6 +11,12 @@ export default class {
             pageSize: 25,
             totalItems: 500
         };
+
+        this.pagination3 = {
+            offset: 1,
+            pageSize: 25,
+            totalItems: 5000000
+        };
     }
 
     onChange (pagination, $event) {

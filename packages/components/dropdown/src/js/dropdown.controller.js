@@ -145,12 +145,7 @@ export default class {
         this.popperElement.style.minWidth = `${this.getTriggerWidth()}px`;
 
         this.popper = new Popper(this.triggerElement, this.popperElement, {
-            placement,
-            modifiers: {
-                preventOverflow: {
-                    boundariesElement: this.$document[0].body
-                }
-            }
+            placement
         });
     }
 
