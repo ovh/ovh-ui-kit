@@ -14,7 +14,7 @@ export default {
         footerTemplate: "<?",
         footerTitle: "@?",
         footerHref: "@?",
-        align: "@?",
+        placement: "@?",
         fixed: "<?"
     },
     controller,

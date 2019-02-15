@@ -1,6 +1,6 @@
 export default {
     bindings: {
-        align: "@?"
+        placement: "@?"
     },
     controller: class {
         constructor ($element, $timeout) {
@@ -16,8 +16,8 @@ export default {
                     .addClass("oui-navbar-menu")
                     .addClass("oui-navbar-menu_fixed");
 
-                if (this.align) {
-                    this.$element.addClass(`oui-navbar-menu_${this.align}`);
+                if (this.placement) {
+                    this.$element.addClass(`oui-navbar-menu_${this.placement}`);
                 }
             });
         }

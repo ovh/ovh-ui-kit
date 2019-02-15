@@ -430,20 +430,17 @@ describe("ouiField", () => {
                     <oui-field>
                         <oui-radio
                             name="{{ $ctrl.name }}"
-                            text="HTTP"
                             model="$ctrl.protocol"
-                            value="'http'"></oui-radio>
+                            value="'http'">HTTP</oui-radio>
                         <oui-radio
                             name="{{ $ctrl.name }}"
-                            text="TCP"
                             model="$ctrl.protocol"
-                            value="'tcp'"></oui-radio>
+                            value="'tcp'">TCP</oui-radio>
                         <oui-radio
                             name="{{ $ctrl.name }}"
-                            text="UDP"
                             model="$ctrl.protocol"
                             value="'udp'"
-                            disabled></oui-radio>
+                            disabled>UDP</oui-radio>
                     </oui-field>
                 `, {
                     name
@@ -464,12 +461,10 @@ describe("ouiField", () => {
                     <oui-field>
                         <oui-checkbox
                             name="ssl"
-                            text="SSL"
-                            model="$ctrl.ssl"></oui-checkbox>
+                            model="$ctrl.ssl">SSL</oui-checkbox>
                         <oui-checkbox
                             name="hsts"
-                            text="HSTS"
-                            model="$ctrl.hsts"></oui-checkbox>
+                            model="$ctrl.hsts">HSTS</oui-checkbox>
                     </oui-field>
                     `);
 
@@ -493,8 +488,7 @@ describe("ouiField", () => {
                             data-title="Select the recovery OS"
                             placeholder="Select the recovery OS..."
                             items="$ctrl.list"
-                            match="label"
-                            data-align="start">
+                            match="label">
                             <span ng-bind="$item.label"></span>
                         </oui-select>
                     </oui-field>
@@ -524,8 +518,7 @@ describe("ouiField", () => {
                                 data-title="Select the recovery OS"
                                 placeholder="Select the recovery OS..."
                                 items="$ctrl.list"
-                                match="label"
-                                data-align="start">
+                                match="label">
                                 <span ng-bind="$item.label"></span>
                             </oui-select>
                         </oui-field>
@@ -557,8 +550,7 @@ describe("ouiField", () => {
                                 data-title="Select the recovery OS"
                                 placeholder="Select the recovery OS..."
                                 items="$ctrl.list"
-                                match="label"
-                                data-align="start">
+                                match="label">
                                 <span ng-bind="$item.label"></span>
                             </oui-select>
                         </oui-field>

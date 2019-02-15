@@ -1,4 +1,4 @@
-# Decisions
+# [WIP] Decisions
 
 1. Use two-way bindings with `ng-model` and one-way bindings for read-only components
 2. Add class to the root component element instead of using the deprecated directive `replace: true` attribute
@@ -11,12 +11,11 @@
 9. Components
     1. For now, keep component code as simple as possible
     2. Expose only form events that are really used
-    3. Use the `text` attribute for component inner text without html inside
-    4. Group together states that are exclusive in a single attribute
-    5. Be more restrictive on component attributes and signature
-    6. Return model value on change
-    7. Generate ids when label can not be wrapped around input and the id is missing but mandatory
-    8. Prefer `ng-bind` to `{{}}`
+    3. Group together states that are exclusive in a single attribute
+    4. Be more restrictive on component attributes and signature
+    5. Return model value on change
+    6. Generate ids when label can not be wrapped around input and the id is missing but mandatory
+    7. Prefer `ng-bind` to `{{}}`
 
 ## Use two-way bindings with `ng-model` and one-way bindings for read-only components
 

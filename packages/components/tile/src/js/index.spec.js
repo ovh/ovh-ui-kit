@@ -46,7 +46,7 @@ describe("ouiTile", () => {
             const text = "button text";
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button text="${text}"></oui-tile-button>
+                    <oui-tile-button>${text}</oui-tile-button>
                 </oui-tile>`);
 
             $timeout.flush();
@@ -60,7 +60,7 @@ describe("ouiTile", () => {
             const text = "button text";
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button text="${text}"></oui-tile-button>
+                    <oui-tile-button>${text}</oui-tile-button>
                 </oui-tile>`);
 
             const button = getTileButton(element);
@@ -82,7 +82,7 @@ describe("ouiTile", () => {
             const url = "http://my.url";
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button text="text" href="${url}"></oui-tile-button>
+                    <oui-tile-button href="${url}">text</oui-tile-button>
                 </oui-tile>`);
 
             const button = getTileButton(element);
@@ -94,7 +94,7 @@ describe("ouiTile", () => {
             const targetAttr = "_blank";
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button href="http://myurl.com" text="text" external></oui-tile-button>
+                    <oui-tile-button href="http://myurl.com" external>text</oui-tile-button>
                 </oui-tile>`);
 
             const button = getTileButton(element);
@@ -107,7 +107,7 @@ describe("ouiTile", () => {
             const clickSpy = jasmine.createSpy("click");
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button text="text" on-click="$ctrl.clickSpy()"></oui-tile-button>
+                    <oui-tile-button on-click="$ctrl.clickSpy()">text</oui-tile-button>
                 </oui-tile>`, {
                     clickSpy
                 });
@@ -119,7 +119,7 @@ describe("ouiTile", () => {
         it("should disable the button", () => {
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button text="text" disabled></oui-tile-button>
+                    <oui-tile-button disabled>text</oui-tile-button>
                 </oui-tile>`);
 
             expect(getTileButton(element).attr("disabled")).toBe("disabled");
@@ -128,7 +128,7 @@ describe("ouiTile", () => {
         it("should display a disabled button instead of a link", () => {
             const element = TestUtils.compileTemplate(
                 `<oui-tile>
-                    <oui-tile-button text="text" href="#" disabled></oui-tile-button>
+                    <oui-tile-button href="#" disabled>text</oui-tile-button>
                 </oui-tile>`);
 
             expect(getTileButton(element).attr("disabled")).toBe("disabled");
