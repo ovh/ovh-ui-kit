@@ -277,10 +277,6 @@ See <a href="#!/oui-angular/guide-menu">Guide menu component</a>.
 
 **Note**: `ui-router` is needed for the attributes `state` and `state-params`.
 
-#### Deprecated
-
-* `text`: Replaced by transclude value
-
 ### oui-dropdown-divider
 
 Add a separator for the dropdown menu

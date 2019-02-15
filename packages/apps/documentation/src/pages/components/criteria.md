@@ -70,12 +70,6 @@
 | `type`        | string    | Data type
 | `typeOptions` | object    | Specific options
 
-## Deprecated
-
-### Attributes
-
-* `align`: Replaced by `placement` attribute
-
 ## Configuration
 
 The pagination can be globally configured with a provider.

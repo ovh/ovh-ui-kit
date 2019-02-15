@@ -3,7 +3,6 @@ import template from "./button.html";
 
 export default {
     bindings: {
-        text: "@?", // Deprecated: Replaced by transclude value
         id: "@?",
         name: "@?",
         type: "@?",

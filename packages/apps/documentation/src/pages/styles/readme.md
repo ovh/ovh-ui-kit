@@ -30,12 +30,6 @@ npm install ovh-ui-kit
 yarn add ovh-ui-kit
 ```
 
-### Install with [bower](https://bower.io/) (deprecated)
-
-```bash
-bower install --save ovh-ui-kit
-```
-
 ## Usage
 
 ### Integration

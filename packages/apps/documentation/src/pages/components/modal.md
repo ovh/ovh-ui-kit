@@ -97,7 +97,3 @@
 | `secondary-action`    | function  | &         | no               | n/a                            | n/a       | cancellation callback
 | `secondary-disabled`  | boolean   | <?        | no               | `true`, `false`                | `false`   | disable the secondary button
 | `on-dismiss`          | function  | &         | no               | n/a                            | n/a       | dismiss callback
-
-#### Deprecated
-
-* `title`: Replaced by `heading` attribute

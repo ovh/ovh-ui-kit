@@ -17,13 +17,6 @@ export default class PopoverController {
     }
 
     $onInit () {
-        // Deprecated: Support for component `oui-popover`
-        // Check if directive is an attribute or a component
-        this.isComponent = angular.isUndefined(this.$attrs.ouiPopover);
-
-        // Deprecated: Support for `placement` attribute
-        this.placement = this.placement || this.$attrs.placement;
-
         this.id = `ouiPopover${this.$scope.$id}`;
         this.isPopoverOpen = false;
 
@@ -41,13 +34,6 @@ export default class PopoverController {
 
     setPopover () {
         this.$timeout(() => {
-            // Deprecated: Support for component `oui-popover-content`
-            if (this.isComponent) {
-                this.popperElement = this.$element[0].querySelector(".oui-popover");
-                this.arrowElement = this.$element[0].querySelector(".oui-popover__arrow");
-                return;
-            }
-
             // Support for attribute `oui-popover`
             // Create a new scope to compile the popover next to the trigger
             const popoverScope = angular.extend(this.$scope.$new(true), { $popoverCtrl: this });
@@ -65,13 +51,6 @@ export default class PopoverController {
 
     setTrigger () {
         this.$timeout(() => {
-            // Deprecated: Support for component `oui-popover-trigger`
-            if (this.isComponent) {
-                this.triggerElement = this.$element[0].querySelector(".oui-popover__trigger");
-                this.$triggerElement = angular.element(this.triggerElement);
-                return;
-            }
-
             // Support for attribute `oui-popover`
             this.triggerElement = this.$element[0];
             this.$triggerElement = angular.element(this.triggerElement);
@@ -108,12 +87,6 @@ export default class PopoverController {
 
         this.$document.on("keydown", evt => this.triggerKeyHandler(evt));
 
-        // Deprecated: Support for component `oui-popover-trigger`
-        if (this.isComponent && this.$triggerElement) {
-            this.$triggerElement.attr("aria-expanded", true);
-            return;
-        }
-
         // Support for attribute `oui-popover`
         this.$element.attr("aria-expanded", true);
     }
@@ -122,12 +95,6 @@ export default class PopoverController {
         this.isPopoverOpen = false;
 
         this.$document.off("keydown", evt => this.triggerKeyHandler(evt));
-
-        // Deprecated: Support for component `oui-popover-trigger`
-        if (this.isComponent && this.$triggerElement) {
-            this.$triggerElement.attr("aria-expanded", false);
-            return;
-        }
 
         // Support for attribute `oui-popover`
         this.$element.attr("aria-expanded", false);

@@ -14,7 +14,7 @@
     ng-attr-aria-labelledby="{{:: $ctrl.id }}-text"
     ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}">
     <span ng-class=":: $ctrl.radioToggleGroup ? 'oui-radio-toggle__label' : 'oui-radio__label'">
-        <span id="{{:: $ctrl.id }}-text" ng-transclude>{{$ctrl.text}}</span>
+        <span id="{{:: $ctrl.id }}-text" ng-transclude></span>
     </span>
     <span
         id="{{:: $ctrl.id }}-description"
