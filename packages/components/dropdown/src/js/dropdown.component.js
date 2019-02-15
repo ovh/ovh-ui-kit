@@ -3,7 +3,7 @@ import controller from "./dropdown.controller";
 export default {
     controller,
     bindings: {
-        align: "@?",
+        placement: "@?",
         arrow: "<?",
         persistent: "<?"
     }

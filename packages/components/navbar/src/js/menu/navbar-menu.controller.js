@@ -58,8 +58,8 @@ export default class {
                 this.$element.addClass("oui-navbar-menu_fixed");
             }
 
-            if (this.align) {
-                this.$element.addClass(`oui-navbar-menu_${this.align}`);
+            if (this.placement) {
+                this.$element.addClass(`oui-navbar-menu_${this.placement}`);
             }
 
             // Add "role" attribute for accessibility

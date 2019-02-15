@@ -93,7 +93,7 @@ describe("ouiDropdown", () => {
 
         it("should display the dropdown aligned with the left border", () => {
             const element = TestUtils.compileTemplate(`
-                <oui-dropdown align="start">
+                <oui-dropdown placement="start">
                   <button class="oui-button" oui-dropdown-trigger></button>
                   <div oui-dropdown-content>
                     <b>the menu</b>
@@ -114,7 +114,7 @@ describe("ouiDropdown", () => {
 
         it("should display the dropdown aligned with the right border", () => {
             const element = TestUtils.compileTemplate(`
-                <oui-dropdown align="end">
+                <oui-dropdown placement="end">
                   <button class="oui-button" oui-dropdown-trigger></button>
                   <div oui-dropdown-content>
                     <b>the menu</b>
@@ -139,7 +139,7 @@ describe("ouiDropdown", () => {
                     <oui-dropdown>
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
-                            <oui-dropdown-item text="Lorem ipsum"></oui-dropdown-item>
+                            <oui-dropdown-item>Lorem ipsum</oui-dropdown-item>
                         </oui-dropdown-content>
                     </oui-dropdown>
                 `);
@@ -154,7 +154,7 @@ describe("ouiDropdown", () => {
                     <oui-dropdown>
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
-                            <oui-dropdown-item text="Lorem ipsum" href="#" sticky></oui-dropdown-item>
+                            <oui-dropdown-item href="#" sticky>Lorem ipsum</oui-dropdown-item>
                         </oui-dropdown-content>
                     </oui-dropdown>
                 `);
@@ -169,7 +169,7 @@ describe("ouiDropdown", () => {
                     <oui-dropdown>
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
-                            <oui-dropdown-item text="Lorem ipsum"></oui-dropdown-item>
+                            <oui-dropdown-item>Lorem ipsum</oui-dropdown-item>
                         </oui-dropdown-content>
                     </oui-dropdown>
                 `);
@@ -184,8 +184,8 @@ describe("ouiDropdown", () => {
                     <oui-dropdown>
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
-                            <oui-dropdown-item text="Lorem ipsum" href="#"></oui-dropdown-item>
-                            <oui-dropdown-item text="Lorem ipsum" state="lorem"></oui-dropdown-item>
+                            <oui-dropdown-item href="#">Lorem ipsum</oui-dropdown-item>
+                            <oui-dropdown-item state="lorem">Lorem ipsum</oui-dropdown-item>
                         </oui-dropdown-content>
                     </oui-dropdown>
                 `);
@@ -201,7 +201,7 @@ describe("ouiDropdown", () => {
                     <oui-dropdown>
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
-                            <oui-dropdown-item text="Lorem ipsum" href="#" external></oui-dropdown-item>
+                            <oui-dropdown-item href="#" external>Lorem ipsum</oui-dropdown-item>
                         </oui-dropdown-content>
                     </oui-dropdown>
                 `);
@@ -220,9 +220,9 @@ describe("ouiDropdown", () => {
                     <oui-dropdown>
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
-                            <oui-dropdown-item text="Lorem ipsum" href="#" on-click="$ctrl.onLinkClick()"></oui-dropdown-item>
-                            <oui-dropdown-item text="Lorem ipsum" on-click="$ctrl.onButtonClick()"></oui-dropdown-item>
-                            <oui-dropdown-item text="Lorem ipsum" href="#"></oui-dropdown-item>
+                            <oui-dropdown-item href="#" on-click="$ctrl.onLinkClick()">Lorem ipsum</oui-dropdown-item>
+                            <oui-dropdown-item on-click="$ctrl.onButtonClick()">Lorem ipsum</oui-dropdown-item>
+                            <oui-dropdown-item href="#">Lorem ipsum</oui-dropdown-item>
                         </oui-dropdown-content>
                     </oui-dropdown>
                 `, {
@@ -247,8 +247,8 @@ describe("ouiDropdown", () => {
                         <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
                         <oui-dropdown-content>
                             <oui-dropdown-group label="Lorem ipsum">
-                                <oui-dropdown-item text="Action 1"></oui-dropdown-item>
-                                <oui-dropdown-item text="Action 2"></oui-dropdown-item>
+                                <oui-dropdown-item>Action 1</oui-dropdown-item>
+                                <oui-dropdown-item>Action 2</oui-dropdown-item>
                             </oui-dropdown-group>
                         </oui-dropdown-content>
                     </oui-dropdown>

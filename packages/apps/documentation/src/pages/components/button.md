@@ -12,15 +12,15 @@
 
 ```html:preview
 <p>
-  <oui-button variant="primary" text="Primary"></oui-button>
-  <oui-button variant="secondary" text="Secondary"></oui-button>
-  <oui-button variant="link" text="Link"></oui-button>
+  <oui-button variant="primary">Primary</oui-button>
+  <oui-button variant="secondary">Secondary</oui-button>
+  <oui-button variant="link">Link</oui-button>
 </p>
 
 <p>
-  <oui-button variant="primary" text="Primary" disabled></oui-button>
-  <oui-button variant="secondary" text="Secondary" disabled></oui-button>
-  <oui-button variant="link" text="Link" disabled></oui-button>
+  <oui-button variant="primary" disabled>Primary</oui-button>
+  <oui-button variant="secondary" disabled>Secondary</oui-button>
+  <oui-button variant="link" disabled>Link</oui-button>
 </p>
 ```
 

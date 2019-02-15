@@ -38,17 +38,17 @@
 ```html:preview
 <oui-header heading="My title" description="My subtitle">
     <oui-header-tabs>
-        <oui-header-tabs-item text="Home" href="/#"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Header" href="/#!/components/header" active></oui-header-tabs-item>
-        <oui-header-tabs-item text="Header Tabs" href="/#!/components/header-tabs"></oui-header-tabs-item>
+        <oui-header-tabs-item href="/#">Home</oui-header-tabs-item>
+        <oui-header-tabs-item href="/#!/components/header" active>Header</oui-header-tabs-item>
+        <oui-header-tabs-item href="/#!/components/header-tabs">Header Tabs</oui-header-tabs-item>
         <oui-header-tabs-dropdown text="Form">
-            <oui-header-tabs-item text="Field" href="/#!/components/field"></oui-header-tabs-item>
+            <oui-header-tabs-item href="/#!/components/field">Field</oui-header-tabs-item>
             <oui-header-tabs-divider></oui-header-tabs-divider>
-            <oui-header-tabs-item text="Checkbox" href="#!/components/checkbox"></oui-header-tabs-item>
-            <oui-header-tabs-item text="Radio" href="#!/components/radio-group"></oui-header-tabs-item>
+            <oui-header-tabs-item href="#!/components/checkbox">Checkbox</oui-header-tabs-item>
+            <oui-header-tabs-item href="#!/components/radio-group">Radio</oui-header-tabs-item>
         </oui-header-tabs-dropdown>
-        <oui-header-tabs-item text="Pagination" href="/#!/components/pagination"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Datagrid" href="/#!/components/datagrid"></oui-header-tabs-item>
+        <oui-header-tabs-item href="/#!/components/pagination">Pagination</oui-header-tabs-item>
+        <oui-header-tabs-item href="/#!/components/datagrid">Datagrid</oui-header-tabs-item>
     </oui-header-tabs>
 </oui-header>
 ```

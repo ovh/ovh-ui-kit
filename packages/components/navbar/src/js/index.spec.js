@@ -326,7 +326,7 @@ describe("ouiNavbar", () => {
                                 icon-badge="$ctrl.badge"
                                 icon-class="{{asideLink.icon}}">
                                 <oui-navbar-dropdown-menu
-                                    align="end"
+                                    placement="end"
                                     ng-bind="$ctrl.text">
                                 </oui-navbar-dropdown-menu>
                             </oui-navbar-dropdown>
@@ -398,7 +398,7 @@ describe("ouiNavbar", () => {
                                 <oui-navbar-menu
                                     name="{{$ctrl.name}}"
                                     links="$ctrl.subLinks"
-                                    align="end">
+                                    placement="end">
                                 </oui-navbar-menu>
                             </oui-navbar-dropdown>
                         <oui-navbar-aside>
@@ -670,10 +670,11 @@ describe("ouiNavbar", () => {
                 const navbar = testUtils.compileTemplate(
                     `<oui-navbar>
                         <oui-navbar-main>
-                            <oui-navbar-link name="name"
-                                             text="title"
-                                             href="url"
-                                             on-click="$ctrl.onClick()">
+                            <oui-navbar-link
+                                name="name"
+                                href="url"
+                                on-click="$ctrl.onClick()">
+                                title
                             </oui-navbar-link>
                         <oui-navbar-main>
                     </oui-navbar>`, {

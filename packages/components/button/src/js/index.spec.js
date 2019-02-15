@@ -26,7 +26,7 @@ describe("ouiButton", () => {
 
     describe("Component", () => {
         it('should display a button with value of attribute text, and is type="button" by default', () => {
-            const component = testUtils.compileTemplate('<oui-button text="foo"></oui-button>');
+            const component = testUtils.compileTemplate("<oui-button>foo</oui-button>");
             const button = component.find("button").eq(0);
 
             expect(button.text().trim()).toBe("foo");
@@ -56,7 +56,7 @@ describe("ouiButton", () => {
         });
 
         it("should have a primary next step button", () => {
-            const component = testUtils.compileTemplate('<oui-button text="foo" variant="primary" variant-nav="next"></oui-button>');
+            const component = testUtils.compileTemplate('<oui-button variant="primary" variant-nav="next">foo</oui-button>');
             const button = component.find("button").eq(0);
 
             expect(button.hasClass("oui-button_primary")).toBe(true);
@@ -64,7 +64,7 @@ describe("ouiButton", () => {
         });
 
         it("should have a disabled submit button", () => {
-            const component = testUtils.compileTemplate('<oui-button text="foo" type="submit" disabled></oui-button>');
+            const component = testUtils.compileTemplate('<oui-button type="submit" disabled>foo</oui-button>');
             const button = component.find("button").eq(0);
 
             expect(button.attr("disabled")).toBe("disabled");
@@ -72,7 +72,7 @@ describe("ouiButton", () => {
         });
 
         it("should call function of onClick attribute, when button is clicked", () => {
-            const component = testUtils.compileTemplate('<oui-button text="foo" on-click="$ctrl.onClickTest()"></oui-button>', {
+            const component = testUtils.compileTemplate('<oui-button on-click="$ctrl.onClickTest()">foo</oui-button>', {
                 onClickTest: jasmine.createSpy("onClick")
             });
 

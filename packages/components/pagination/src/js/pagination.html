@@ -1,6 +1,6 @@
 <div class="oui-pagination">
     <div class="oui-pagination__progress">
-        <oui-dropdown align="center" arrow>
+        <oui-dropdown placement="center" arrow>
             <button type="button"
                 class="oui-button oui-button_link"
                 oui-dropdown-trigger>
@@ -53,7 +53,7 @@
 
         <!-- Dropdown (> 5 && <= 100 pages) -->
         <oui-dropdown ng-if="$ctrl.pageCount > 5 && $ctrl.pageCount <= 100"
-            align="end">
+            placement="end">
             <button oui-dropdown-trigger
                 type="button"
                 ng-attr-aria-label="{{ $ctrl.translations.currentPageOfPageCount }}"

@@ -73,17 +73,17 @@
     {{$value|date:short}}
   </oui-column>
   <oui-action-menu
-      align="end"
+      placement="end"
       compact>
       <oui-action-menu-item
-          text="Action 1"
           on-click="$ctrl.action1Row = $row">
+          Action 1
       </oui-action-menu-item>
       <oui-action-menu-divider></oui-action-menu-divider>
       <oui-action-menu-item
-          text="External link"
           href="#"
           external>
+          External link
       </oui-action-menu-item>
   </oui-action-menu>
 </oui-datagrid>
@@ -113,8 +113,9 @@ Clicked row action 1: <span ng-if="$ctrl.action1Row">{{$ctrl.action1Row.lastName
   <oui-column title="'Selected'">
     <span>{{ $isSelected }}</span>
   </oui-column>
-  <oui-action-menu align="end" compact>
-      <oui-action-menu-item text="Some action" disabled="$isSelected" on-click="">
+  <oui-action-menu placement="end" compact>
+      <oui-action-menu-item disabled="$isSelected" on-click="">
+        Some action
       </oui-action-menu-item>
   </oui-action-menu>
   <extra-top>
@@ -150,17 +151,17 @@ Clicked row action 1: <span ng-if="$ctrl.action1Row">{{$ctrl.action1Row.lastName
     {{$value|date:short}}
   </oui-column>
   <oui-action-menu
-      align="end"
+      placement="end"
       compact>
       <oui-action-menu-item
-          text="Action 1"
           on-click="$ctrl.action1Row = $row">
+          Action 1
       </oui-action-menu-item>
       <oui-action-menu-divider></oui-action-menu-divider>
       <oui-action-menu-item
-          text="External link"
           href="#"
           external>
+          External link
       </oui-action-menu-item>
   </oui-action-menu>
 </oui-datagrid>
@@ -204,7 +205,7 @@ Using this attribute, a new column property `hidden` is available.
     sortable: true,
     hidden: !showParents
   }]"></oui-datagrid>
-<oui-checkbox text="Show parents" model="showParents"></oui-checkbox>
+<oui-checkbox model="showParents">Show parents</oui-checkbox>
 </div>
 ```
 
@@ -215,8 +216,8 @@ Using this attribute, a new column property `hidden` is available.
   page-size="5"
   columns="columns"></oui-datagrid>
 <oui-radio-toggle-group model="columns">
-  <oui-radio text="Arrangement 1" value="$ctrl.metaData.columns1"></oui-radio>
-  <oui-radio text="Arrangement 2" value="$ctrl.metaData.columns2"></oui-radio>
+  <oui-radio value="$ctrl.metaData.columns1">Arrangement 1</oui-radio>
+  <oui-radio value="$ctrl.metaData.columns2">Arrangement 2</oui-radio>
 </oui-radio-group>
 </div>
 ```
@@ -689,13 +690,15 @@ call `rows-loader` and then a `row-loader` call for each line.
     <oui-action-menu
       text="Actions"
       aria-label="Server: actions"
-      align="start">
+      placement="start">
       <oui-action-menu-item
-        text="Add person"
-        aria-label="Persons: add item"></oui-action-menu-item>
+        aria-label="Persons: add item">
+        Add person
+      </oui-action-menu-item>
       <oui-action-menu-item
-        text="Other action"
-        aria-label="Persons: other action"></oui-action-menu-item>
+        aria-label="Persons: other action">
+        Other action
+      </oui-action-menu-item>
     </oui-action-menu>
   </extra-top>
 </oui-datagrid>

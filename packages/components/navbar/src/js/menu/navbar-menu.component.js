@@ -12,7 +12,7 @@ export default {
         headerTitle: "@?",
         menuLinks: "<links",
         menuName: "@name",
-        align: "@?",
+        placement: "@?",
         fixed: "<?"
     },
     controller,

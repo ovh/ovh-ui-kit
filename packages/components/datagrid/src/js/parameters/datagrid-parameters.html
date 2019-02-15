@@ -1,4 +1,4 @@
-<oui-dropdown align="end" arrow persistent>
+<oui-dropdown placement="end" arrow persistent>
     <button type="button" class="oui-datagrid-parameters__button oui-button oui-button_icon-alone"
         oui-dropdown-trigger>
         <span class="oui-icon oui-icon-gear" aria-hidden="true"></span>
@@ -11,10 +11,12 @@
             <div class="oui-datagrid-parameters__column"
                 ng-repeat="column in $ctrl.customizedColumns track by $index">
                 <div class="oui-datagrid-parameters__column-column">
-                    <oui-checkbox text="{{column.title}}"
+                    <oui-checkbox
                         model="column.visible"
                         disabled="!column.name || column.preventCustomization"
-                        on-change="$ctrl.onColumnChange($index, modelValue)"></oui-checkbox>
+                        on-change="$ctrl.onColumnChange($index, modelValue)">
+                        {{column.title}}
+                    </oui-checkbox>
                 </div>
             </div>
         </div>

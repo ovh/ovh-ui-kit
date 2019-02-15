@@ -104,9 +104,9 @@
       <td class="oui-datagrid__cell">55-(821)413-9216</td>
       <td class="oui-datagrid__cell">Aug 21, 1980</td>
       <td class="oui-datagrid__cell">
-        <oui-action-menu aria-label="Server: actions" align="end" compact>
-          <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
-          <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
+        <oui-action-menu aria-label="Server: actions" placement="end" compact>
+          <oui-action-menu-item aria-label="Ticket: details">Details</oui-action-menu-item>
+          <oui-action-menu-item aria-label="Ticket: close">Close</oui-action-menu-item>
         </oui-action-menu>
       </td>
     </tr>
@@ -134,9 +134,9 @@
       <td class="oui-datagrid__cell">1-(512)242-1388</td>
       <td class="oui-datagrid__cell">Sep 27, 1974</td>
       <td class="oui-datagrid__cell">
-        <oui-action-menu aria-label="Server: actions" align="end" compact>
-          <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
-          <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
+        <oui-action-menu aria-label="Server: actions" placement="end" compact>
+          <oui-action-menu-item aria-label="Ticket: details">Details</oui-action-menu-item>
+          <oui-action-menu-item aria-label="Ticket: close">Close</oui-action-menu-item>
         </oui-action-menu>
       </td>
     </tr>
@@ -250,9 +250,9 @@
             <td class="oui-datagrid__cell">55-(821)413-9216</td>
             <td class="oui-datagrid__cell">Aug 21, 1980</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
-              <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
+              <oui-action-menu aria-label="Server: actions" placement="end" compact>
+                <oui-action-menu-item aria-label="Ticket: details">Details</oui-action-menu-item>
+                <oui-action-menu-item aria-label="Ticket: close">Close</oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
@@ -280,9 +280,9 @@
             <td class="oui-datagrid__cell">1-(512)242-1388</td>
             <td class="oui-datagrid__cell">Sep 27, 1974</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
-              <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
+              <oui-action-menu aria-label="Server: actions" placement="end" compact>
+                <oui-action-menu-item aria-label="Ticket: details">Details</oui-action-menu-item>
+                <oui-action-menu-item aria-label="Ticket: close">Close</oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
@@ -411,9 +411,9 @@
             <td class="oui-datagrid__cell">55-(821)413-9216</td>
             <td class="oui-datagrid__cell">Aug 21, 1980</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
-              <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
+              <oui-action-menu aria-label="Server: actions" placement="end" compact>
+                <oui-action-menu-item aria-label="Ticket: details">Details</oui-action-menu-item>
+                <oui-action-menu-item aria-label="Ticket: close">Close</oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>
@@ -426,9 +426,9 @@
             <td class="oui-datagrid__cell">1-(512)242-1388</td>
             <td class="oui-datagrid__cell">Sep 27, 1974</td>
             <td class="oui-datagrid__cell oui-datagrid__cell-sticky">
-              <oui-action-menu aria-label="Server: actions" align="end" compact>
-                <oui-action-menu-item text="Details" aria-label="Ticket: details"></oui-action-menu-item>
-                <oui-action-menu-item text="Close" aria-label="Ticket: close"></oui-action-menu-item>
+              <oui-action-menu aria-label="Server: actions" placement="end" compact>
+                <oui-action-menu-item aria-label="Ticket: details">Details</oui-action-menu-item>
+                <oui-action-menu-item aria-label="Ticket: close">Close</oui-action-menu-item>
               </oui-action-menu>
             </td>
           </tr>

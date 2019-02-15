@@ -6,7 +6,7 @@ export default {
     controller,
     bindings: {
         text: "@",
-        align: "@?",
+        placement: "@?",
         ariaLabel: "@?"
     },
     transclude: true
