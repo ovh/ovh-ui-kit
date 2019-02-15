@@ -124,10 +124,6 @@
 | `type`        | string    | @       | yes                 | `info`, `success`, `warning`, `error` | `info`        | type of the progress bar
 | `value`       | number    | <       | no                  | n/a                                   | n/a           | current value of progress bar
 
-#### Deprecated
-
-* `text`: Replaced by transclude value
-
 ### oui-progress-threshold
 
 | Attribute     | Type      | Binding | One-time binding    | Values                                | default       | Description

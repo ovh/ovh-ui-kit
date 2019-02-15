@@ -19,15 +19,15 @@
 <oui-page-header heading="My title" description="My subtitle">à
     <oui-guide-menu text="Guides">
         <oui-guide-menu-group label="Section 1">
-            <oui-guide-menu-item text="Guide 1 (link)" href="#"></oui-guide-menu-item>
-            <oui-guide-menu-item text="Guide 2 (button)" on-click="$ctrl.onActionClick()"></oui-guide-menu-item>
+            <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
+            <oui-guide-menu-item on-click="$ctrl.onActionClick()">Guide 2 (button)</oui-guide-menu-item>
         </oui-guide-menu-group>
         <oui-guide-menu-group label="Section 2">
-            <oui-guide-menu-item text="Guide 1 (link)" href="#"></oui-guide-menu-item>
-            <oui-guide-menu-item text="Guide 2 (button)" on-click="$ctrl.onActionClick()"></oui-guide-menu-item>
+            <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
+            <oui-guide-menu-item on-click="$ctrl.onActionClick()">Guide 2 (button)</oui-guide-menu-item>
         </oui-guide-menu-group>
         <oui-guide-menu-divider></oui-guide-menu-divider>
-        <oui-guide-menu-item text="External link" href="#" external></oui-guide-menu-item>
+        <oui-guide-menu-item href="#" external>External link</oui-guide-menu-item>
     </oui-guide-menu>
 </oui-page-header>
 ```

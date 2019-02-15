@@ -58,7 +58,3 @@
 | `aria-label`  | string    | @?        | yes               | n/a                               | n/a           | accessibility label
 | `disabled`    | boolean   | <?        | no                | `true`, `false`                   | `false`       | disabled flag
 | `on-click`    | function  | &?        | no                | n/a                               | n/a           | click handler
-
-#### Deprecated
-
-* `text`: Replaced by transclude value

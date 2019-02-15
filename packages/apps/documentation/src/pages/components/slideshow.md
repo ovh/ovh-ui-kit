@@ -97,7 +97,3 @@
 | `href`        | string    | @?        | yes               | n/a               | n/a       | href of the link
 | `external`    | boolean   | <?        | yes               | `true`, `false`   | `false`   | external link flag
 | `on-click`    | function  | &?        | no                | n/a               | n/a       | on-click handler
-
-#### Deprecated
-
-* `text`: Replaced by transclude value

@@ -11,7 +11,6 @@ export default {
         model: "=?",
         id: "@?",
         name: "@?",
-        text: "@?", // Deprecated: Replaced by transclude value
         description: "@?",
         disabled: "<?",
         required: "<?",

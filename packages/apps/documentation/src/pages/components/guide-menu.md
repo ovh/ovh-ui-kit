@@ -69,10 +69,6 @@
 | `external`    | boolean   | @?        | yes               | `true`, `false`           | `false`   | display external icon (link)
 | `on-click`    | function  | &?        | no                | n/a                       | n/a       | on-click handler (button)
 
-#### Deprecated
-
-* `text`: Replaced by transclude value
-
 ### oui-guide-menu-group
 
 | Attribute     | Type      | Binding   | One-time Binding  | Values                    | Default   | Description

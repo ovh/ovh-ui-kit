@@ -41,11 +41,6 @@ export default class {
                 .attr("ariaValuemax", this.maxValue)
                 .attr("role", "progressbar");
 
-            if (this.text) {
-                this.$element
-                    .attr("ariaValuetext", this.text);
-            }
-
             if (!this.compact) {
                 this.$element
                     .css("width", this.progressCtrl.getPercentageValue(this.value));

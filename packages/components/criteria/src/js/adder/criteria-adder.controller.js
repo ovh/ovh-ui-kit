@@ -127,12 +127,9 @@ export default class {
     }
 
     $onInit () {
-        // Deprecated: Support for `align` attribute
-        // Will become addDefaultParameter(this, "placement", "center");
-        this.placement = this.placement || this.$attrs.align || "center";
-
         addDefaultParameter(this, "id", `ouiCriteriaAdder${this.$scope.$id}`);
         addDefaultParameter(this, "name", `ouiCriteriaAdder${this.$scope.$id}`);
+        addDefaultParameter(this, "placement", "center");
 
         this.$timeout(() => {
             this.dropdownContent = this.$element[0];
