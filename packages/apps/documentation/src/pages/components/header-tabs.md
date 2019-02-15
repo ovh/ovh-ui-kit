@@ -7,10 +7,10 @@
 ```html:preview
 <oui-header-tabs>
     <oui-header-tabs-item text="Home" href="/#"></oui-header-tabs-item>
-    <oui-header-tabs-item text="Page Header" href="/#!/oui-angular/page-header"></oui-header-tabs-item>
-    <oui-header-tabs-item text="Header Tabs" href="/#!/oui-angular/header-tabs" active></oui-header-tabs-item>
-    <oui-header-tabs-item text="Pagination" href="/#!/oui-angular/pagination"></oui-header-tabs-item>
-    <oui-header-tabs-item text="Datagrid" href="/#!/oui-angular/datagrid"></oui-header-tabs-item>
+    <oui-header-tabs-item text="Header" href="/#!/components/header"></oui-header-tabs-item>
+    <oui-header-tabs-item text="Header Tabs" href="/#!/components/header-tabs" active></oui-header-tabs-item>
+    <oui-header-tabs-item text="Pagination" href="/#!/components/pagination"></oui-header-tabs-item>
+    <oui-header-tabs-item text="Datagrid" href="/#!/components/datagrid"></oui-header-tabs-item>
 </oui-header-tabs>
 ```
 
@@ -19,20 +19,20 @@
 <oui-header-tabs>
     <oui-header-tabs-item text="Home" href="/#"></oui-header-tabs-item>
     <oui-header-tabs-dropdown text="Form">
-        <oui-header-tabs-item text="Field" href="/#!/oui-angular/field"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Field" href="/#!/components/field"></oui-header-tabs-item>
         <oui-header-tabs-divider></oui-header-tabs-divider>
-        <oui-header-tabs-item text="Checkbox" href="#!/oui-angular/checkbox"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Radio" href="#!/oui-angular/radio-group"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Checkbox" href="#!/components/checkbox"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Radio" href="#!/components/radio-group"></oui-header-tabs-item>
         <oui-header-tabs-divider></oui-header-tabs-divider>
-        <oui-header-tabs-item text="Select" href="/#!/oui-angular/select"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Select Picker" href="/#!/oui-angular/select-picker"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Select" href="/#!/components/select"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Select Picker" href="/#!/components/select-picker"></oui-header-tabs-item>
     </oui-header-tabs-dropdown>
     <oui-header-tabs-dropdown text="Datagrid">
-        <oui-header-tabs-item text="Datagrid" href="/#!/oui-angular/datagrid"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Criteria Adder" href="#!/oui-angular/criteria-adder"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Datagrid" href="/#!/components/datagrid"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Criteria Adder" href="#!/components/criteria-adder"></oui-header-tabs-item>
     </oui-header-tabs-dropdown>
-    <oui-header-tabs-item text="Header Tabs" href="/#!/oui-angular/header-tabs" active></oui-header-tabs-item>
-    <oui-header-tabs-item text="Page Header" href="/#!/oui-angular/page-header"></oui-header-tabs-item>
+    <oui-header-tabs-item text="Header Tabs" href="/#!/components/header-tabs" active></oui-header-tabs-item>
+    <oui-header-tabs-item text="Header" href="/#!/components/header"></oui-header-tabs-item>
 </oui-header-tabs>
 ```
 
@@ -42,44 +42,44 @@
 <oui-header-tabs>
     <oui-header-tabs-item text="Home" href="/#" disabled></oui-header-tabs-item>
     <oui-header-tabs-dropdown text="Form">
-        <oui-header-tabs-item text="Field" href="/#!/oui-angular/field" disabled></oui-header-tabs-item>
+        <oui-header-tabs-item text="Field" href="/#!/components/field" disabled></oui-header-tabs-item>
         <oui-header-tabs-divider></oui-header-tabs-divider>
-        <oui-header-tabs-item text="Checkbox" href="#!/oui-angular/checkbox"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Radio" href="#!/oui-angular/radio-group" disabled></oui-header-tabs-item>
+        <oui-header-tabs-item text="Checkbox" href="#!/components/checkbox"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Radio" href="#!/components/radio-group" disabled></oui-header-tabs-item>
         <oui-header-tabs-divider></oui-header-tabs-divider>
-        <oui-header-tabs-item text="Select" href="/#!/oui-angular/select"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Select Picker" href="/#!/oui-angular/select-picker"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Select" href="/#!/components/select"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Select Picker" href="/#!/components/select-picker"></oui-header-tabs-item>
     </oui-header-tabs-dropdown>
     <oui-header-tabs-dropdown text="Datagrid">
-        <oui-header-tabs-item text="Datagrid" href="/#!/oui-angular/datagrid" disabled></oui-header-tabs-item>
-        <oui-header-tabs-item text="Criteria Adder" href="#!/oui-angular/criteria-adder" disabled></oui-header-tabs-item>
+        <oui-header-tabs-item text="Datagrid" href="/#!/components/datagrid" disabled></oui-header-tabs-item>
+        <oui-header-tabs-item text="Criteria Adder" href="#!/components/criteria-adder" disabled></oui-header-tabs-item>
     </oui-header-tabs-dropdown>
-    <oui-header-tabs-item text="Page Header" href="/#!/oui-angular/page-header"></oui-header-tabs-item>
-    <oui-header-tabs-item text="Header Tabs" href="/#!/oui-angular/header-tabs" active></oui-header-tabs-item>
+    <oui-header-tabs-item text="Header" href="/#!/components/header"></oui-header-tabs-item>
+    <oui-header-tabs-item text="Header Tabs" href="/#!/components/header-tabs" active></oui-header-tabs-item>
 </oui-header-tabs>
 ```
 
-### In Page Header
+### In Header
 
 ```html:preview
-<oui-page-header heading="Title" description="Description">
+<oui-header heading="Title" description="Description">
     <oui-header-tabs>
         <oui-header-tabs-item text="Home" href="/#"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Page Header" href="/#!/oui-angular/page-header"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Header Tabs" href="/#!/oui-angular/header-tabs" active></oui-header-tabs-item>
+        <oui-header-tabs-item text="Header" href="/#!/components/header"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Header Tabs" href="/#!/components/header-tabs" active></oui-header-tabs-item>
         <oui-header-tabs-dropdown text="Form">
-            <oui-header-tabs-item text="Field" href="/#!/oui-angular/field"></oui-header-tabs-item>
+            <oui-header-tabs-item text="Field" href="/#!/components/field"></oui-header-tabs-item>
             <oui-header-tabs-divider></oui-header-tabs-divider>
-            <oui-header-tabs-item text="Checkbox" href="#!/oui-angular/checkbox"></oui-header-tabs-item>
-            <oui-header-tabs-item text="Radio" href="#!/oui-angular/radio-group"></oui-header-tabs-item>
+            <oui-header-tabs-item text="Checkbox" href="#!/components/checkbox"></oui-header-tabs-item>
+            <oui-header-tabs-item text="Radio" href="#!/components/radio-group"></oui-header-tabs-item>
             <oui-header-tabs-divider></oui-header-tabs-divider>
-            <oui-header-tabs-item text="Select" href="/#!/oui-angular/select"></oui-header-tabs-item>
-            <oui-header-tabs-item text="Select Picker" href="/#!/oui-angular/select-picker"></oui-header-tabs-item>
+            <oui-header-tabs-item text="Select" href="/#!/components/select"></oui-header-tabs-item>
+            <oui-header-tabs-item text="Select Picker" href="/#!/components/select-picker"></oui-header-tabs-item>
         </oui-header-tabs-dropdown>
-        <oui-header-tabs-item text="Pagination" href="/#!/oui-angular/pagination"></oui-header-tabs-item>
-        <oui-header-tabs-item text="Datagrid" href="/#!/oui-angular/datagrid"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Pagination" href="/#!/components/pagination"></oui-header-tabs-item>
+        <oui-header-tabs-item text="Datagrid" href="/#!/components/datagrid"></oui-header-tabs-item>
     </oui-header-tabs>
-</oui-page-header>
+</oui-header>
 ```
 
 ## API

@@ -101,7 +101,7 @@
 <p>Praesent in congue purus, at <abbr title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">elementum sem</abbr>. Curabitur porta eros volutpat, sodales justo eu, congue metus.</p>
 ```
 
-**Note**: You can use also the [oui-tooltip](#!/oui-angular/tooltip) component to replace the native tooltip
+**Note**: You can use also the [oui-tooltip](#!/components/tooltip) component to replace the native tooltip
 
 ```html:preview
 <p>Praesent in congue purus, at elementum sem. <abbr title="Lorem ipsum dolor sit amet, consectetur adipiscing elit" oui-tooltip>Curabitur porta</abbr> eros volutpat, sodales justo eu, congue metus.</p>

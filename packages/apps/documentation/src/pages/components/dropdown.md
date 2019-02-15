@@ -208,7 +208,7 @@ Use `oui-dropdown-content` as a directive for custom content menu
 
 ### Action Menu
 
-See <a href="#!/oui-angular/action-menu">Action menu component</a>.
+See <a href="#!/components/action-menu">Action menu component</a>.
 
 ```html:preview
 <oui-action-menu compact>
@@ -222,7 +222,7 @@ See <a href="#!/oui-angular/action-menu">Action menu component</a>.
 
 ### Guide Menu
 
-See <a href="#!/oui-angular/guide-menu">Guide menu component</a>.
+See <a href="#!/components/guide-menu">Guide menu component</a>.
 
 ```html:preview
 <oui-guide-menu text="Guides">

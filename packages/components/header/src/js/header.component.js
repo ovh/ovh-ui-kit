@@ -1,5 +1,5 @@
-import controller from "./page-header.controller.js";
-import template from "./page-header.html";
+import controller from "./header.controller.js";
+import template from "./header.html";
 
 export default {
     template,
