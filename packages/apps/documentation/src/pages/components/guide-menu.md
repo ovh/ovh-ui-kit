@@ -30,10 +30,10 @@
 </oui-guide-menu>
 ```
 
-### In Page-header
+### In Header
 
 ```html:preview
-<oui-page-header heading="My title" description="My subtitle">à
+<oui-header heading="My title" description="My subtitle">à
     <oui-guide-menu text="Guides">
         <oui-guide-menu-group label="Section 1">
             <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
@@ -46,7 +46,7 @@
         <oui-guide-menu-divider></oui-guide-menu-divider>
         <oui-guide-menu-item href="#" external>External link</oui-guide-menu-item>
     </oui-guide-menu>
-</oui-page-header>
+</oui-header>
 ```
 
 ## API

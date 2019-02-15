@@ -41,7 +41,7 @@
 
 ### Autocomplete
 
-See [Autocomplete](#!/oui-angular/autocomplete) directive for more informations.
+See [Autocomplete](#!/components/autocomplete) directive for more informations.
 
 ```html:preview
 <oui-search
@@ -91,7 +91,7 @@ See [Autocomplete](#!/oui-angular/autocomplete) directive for more informations.
 
 ### `oui-autocomplete` attributes
 
-See [Autocomplete](#!/oui-angular/autocomplete) directive for more informations.
+See [Autocomplete](#!/components/autocomplete) directive for more informations.
 
 | Attribute                 | Type      | Binding   | One-time Binding  | Values            | Default   | Description
 | ----                      | ----      | ----      | ----              | ----              | ----      | ----

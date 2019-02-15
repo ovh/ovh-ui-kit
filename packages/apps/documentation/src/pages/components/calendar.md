@@ -27,7 +27,7 @@
 
 ### Required
 
-**Note**: See [Field example](#!/oui-angular/field) for error handling.
+**Note**: See [Field example](#!/components/field) for error handling.
 
 ```html:preview
 <oui-calendar model="$ctrl.requiredModel" required>
@@ -162,7 +162,7 @@ Use `mode` to set a different selection mode for the calendar
 
 ### Timepicker
 
-See <a href="#!/oui-angular/timepicker">Action menu component</a>.
+See <a href="#!/components/timepicker">Action menu component</a>.
 
 ```html:preview
 <oui-timepicker model="$ctrl.timepickerModel" placeholder="HH:MM"></oui-timepicker>

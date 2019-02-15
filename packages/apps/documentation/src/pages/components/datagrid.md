@@ -780,7 +780,7 @@ const typeOptions = {
 
 ### oui-action-menu
 
-Can be used as a column and will be sticked on side on smaller devices. Documentation about `oui-action-menu` can be found [here](#!/oui-angular/action-menu).
+Can be used as a column and will be sticked on side on smaller devices. Documentation about `oui-action-menu` can be found [here](#!/components/action-menu).
 
 ### ouiDatagridService
 

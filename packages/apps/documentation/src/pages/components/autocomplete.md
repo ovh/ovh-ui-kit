@@ -45,7 +45,7 @@ It will return the corresponding value from your array of suggestions.
 
 ### Search
 
-See [Search](#!/oui-angular/search)  component.
+See [Search](#!/components/search)  component.
 
 ```html:preview
 <oui-search
