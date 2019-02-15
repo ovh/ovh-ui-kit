@@ -21,7 +21,7 @@ export default class {
 
         addBooleanParameter(this, "arrow");
         addBooleanParameter(this, "persistent");
-        addDefaultParameter(this, "align", "start");
+        addDefaultParameter(this, "placement", "start");
 
         // Use internal id to map trigger and content with aria-label and aria-labelledby.
         this.id = `ouiDropdown${this.$scope.$id}`;
@@ -133,8 +133,8 @@ export default class {
     createPopper () {
         let placement = "bottom";
 
-        if (["start", "end"].indexOf(this.align) >= 0) {
-            placement += `-${this.align}`;
+        if (["start", "end"].indexOf(this.placement) >= 0) {
+            placement += `-${this.placement}`;
         }
 
         // Let Popper.js manage the arrow position when it's centered (default).

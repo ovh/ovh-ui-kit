@@ -1,4 +1,4 @@
-<oui-dropdown align="{{::$ctrl.align}}" arrow persistent>
+<oui-dropdown placement="{{::$ctrl.placement}}" arrow persistent>
     <button type="button" class="oui-criteria-adder__button oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
         oui-dropdown-trigger>
         <span class="oui-icon oui-icon-filter" aria-hidden="true"></span>
@@ -68,8 +68,7 @@
                             model="$ctrl.valueModel['boolean']"
                             ng-click="$event.stopPropagation()"
                             items="$ctrl.booleanChoices"
-                            match="name"
-                            data-align="start">
+                            match="name">
                             <span ng-bind="$item.name"></span>
                         </oui-select>
                     </oui-field>
@@ -84,8 +83,7 @@
                             model="$ctrl.valueModel['options']"
                             ng-click="$event.stopPropagation()"
                             items="$ctrl.optionsChoices"
-                            match="name"
-                            data-align="start">
+                            match="name">
                             <span ng-bind="$item.name"></span>
                         </oui-select>
                     </oui-field>

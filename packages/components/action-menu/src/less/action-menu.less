@@ -1,7 +1,6 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) '~@ovh/ui-kit.button/src/less/_mixins';
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-action-button {
   #oui > .button-hollow();
@@ -57,11 +56,11 @@
   }
 }
 
-/* Deprecated: Still in use... */
-.oui-action-menu {
-  &:extend(.oui-dropdown-menu all);
+oui-action-menu {
+  display: inline-block;
 
-  &-button {
-    &:extend(.oui-action-button all);
+  &-item,
+  &-divider {
+    display: block;
   }
 }

@@ -8,15 +8,7 @@ export default class {
         this.$window = $window;
     }
 
-    $onInit () {
-        // Deprecated: Support for 'title' attribute
-        if (!!this.$attrs.title && !this.$attrs.heading) {
-            this.heading = this.title;
-        }
-    }
-
     $postLink () {
-
         this.$element.addClass("oui-back-button");
 
         // Sometimes the digest cycle is done before dom manipulation,

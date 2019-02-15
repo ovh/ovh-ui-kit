@@ -71,7 +71,3 @@
 | `disabled`    | boolean                 | <?      | no                | `true`, `false`          | `false`    | disabled flag
 | `required`    | boolean                 | <?      | no                | `true`, `false`          | `false`    | required flag
 | `on-change`   | function                | &       | no                | n/a                      | n/a        | handler triggered when value has changed
-
-#### Deprecated
-
-* `text`: Replaced by transclude value

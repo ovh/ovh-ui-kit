@@ -7,8 +7,6 @@ export default {
     bindings: {
         id: "@?",
         name: "@?",
-        heading: "@?", // Deprecated: Replaced by transclude value
-        title: "@?", // Deprecated: Replaced by transclude value
         ariaLabel: "@?",
         href: "@?",
         state: "@?",

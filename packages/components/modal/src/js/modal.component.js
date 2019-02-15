@@ -6,7 +6,6 @@ export default {
     controller,
     bindings: {
         heading: "@?",
-        title: "@?", // Deprecated: Replaced by 'heading'
         type: "@?",
         loading: "<?",
         primaryLabel: "@?",

@@ -91,7 +91,7 @@
 | ----              | ----            | ----    | ----             | ----                      | ----       | ----
 | `text`            | string          | @       | yes              | n/a                       | n/a        | button label
 | `aria-label`      | string          | @?      | yes              | n/a                       | n/a        | accessibility label
-| `align`           | string          | @?      | yes              | `start`, `center`, `end`  | `center`   | menu alignment
+| `placement`       | string          | @?      | yes              | `start`, `center`, `end`  | `center`   | placement of the dropdown menu
 | `compact`         | boolean         | <?      | yes              | `true`, `false`           | `false`    | use the compact button
 | `disabled`        | boolean         | <?      | no               | `true`, `false`           | `false`    | disable flag
 
@@ -104,7 +104,3 @@
 | `disabled`        | boolean         | <?      | no               | `true`, `false`           | `false`    | disable (button)
 | `external`        | boolean         | @?      | yes              | `true`, `false`           | `false`    | display external icon (link)
 | `on-click`        | function        | &?      | no               | n/a                       | n/a        | on-click handler (button)
-
-#### Deprecated
-
-* `text`: Replaced by transclude value

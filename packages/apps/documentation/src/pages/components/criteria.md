@@ -55,7 +55,7 @@
 | ----          | ----      | ----      | ----              | ----                      | ----      | ----
 | `id`          | string    | @?        | yes               | n/a                       | n/a       | id attribute of the component
 | `name`        | string    | @         | yes               | n/a                       | n/a       | name attribute of the component
-| `placement`   | string    | @?        | yes               | `start`, `center`, `end`  | `center`  | modifier for the placement of the dropdown
+| `placement`   | string    | @?        | yes               | `start`, `center`, `end`  | `center`  | placement of the dropdown menu
 | `properties`  | array     | <         | no                | n/a                       | n/a       | array of objects with columns informations
 | `on-submit`   | function  | &         | no                | n/a                       | n/a       | handler triggered when form is submitted
 
@@ -69,12 +69,6 @@
 | `title`       | string    | Human readeable title for the property
 | `type`        | string    | Data type
 | `typeOptions` | object    | Specific options
-
-## Deprecated
-
-### Attributes
-
-* `align`: Replaced by `placement` attribute
 
 ## Configuration
 

@@ -1,7 +1,7 @@
 describe("ouiPageHeader", () => {
     let TestUtils;
 
-    beforeEach(angular.mock.module("oui.page-header"));
+    beforeEach(angular.mock.module("oui.header"));
     beforeEach(angular.mock.module("oui.test-utils"));
 
     beforeEach(inject((_TestUtils_) => {
@@ -9,23 +9,23 @@ describe("ouiPageHeader", () => {
     }));
 
     function getTitleElement (element) {
-        return element[0].querySelector(".oui-page-header__title");
+        return element[0].querySelector(".oui-header__title");
     }
 
     function getDescriptionElement (element) {
-        return element[0].querySelector(".oui-page-header__description");
+        return element[0].querySelector(".oui-header__description");
     }
 
     describe("Component", () => {
-        it("should display page-header with title only", () => {
-            const element = TestUtils.compileTemplate("<oui-page-header heading=\"title\"></oui-page-header>");
+        it("should display header with title only", () => {
+            const element = TestUtils.compileTemplate("<oui-header heading=\"title\"></oui-header>");
 
             const titleElement = getTitleElement(element);
             expect(angular.element(titleElement).html()).toBe("title");
         });
 
-        it("should display page-header with title and subtitle", () => {
-            const element = TestUtils.compileTemplate("<oui-page-header heading=\"title\" description=\"subtitle\"></oui-page-header>");
+        it("should display header with title and subtitle", () => {
+            const element = TestUtils.compileTemplate("<oui-header heading=\"title\" description=\"subtitle\"></oui-header>");
 
             const titleElement = getTitleElement(element);
             const subtitleElement = getDescriptionElement(element);

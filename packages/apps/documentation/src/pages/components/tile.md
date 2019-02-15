@@ -44,8 +44,8 @@
     <oui-tile-definition
         term="Term"
         description="This is a description">
-        <oui-action-menu data-compact align="end">
-            <oui-action-menu-item text="Action 1"></oui-action-menu-item>
+        <oui-action-menu data-compact placement="end">
+            <oui-action-menu-item>Action 1</oui-action-menu-item>
         </oui-action-menu>
     </oui-tile-definition>
 </oui-tile>
@@ -90,10 +90,6 @@
 | `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
 | `external`        | boolean   | <?        | yes               | `true`, `false`   | `false`   | open in new tab and display external icon
 | `on-click`        | funcion   | &         | no                | n/a               | n/a       | button action callback
-
-#### Deprecated
-
-* `text`: Replaced by transclude value
 
 ### oui-tile-definition
 

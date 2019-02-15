@@ -59,7 +59,7 @@ describe("ouiBackButton", () => {
 
         it("should have a title", () => {
             const title = "foo";
-            const element = compile(`<oui-back-button heading="${title}"></oui-back-button>`);
+            const element = compile(`<oui-back-button>${title}</oui-back-button>`);
 
             $timeout.flush();
 

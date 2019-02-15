@@ -37,12 +37,6 @@ npm install ovh-ui-angular
 yarn add ovh-ui-angular
 ```
 
-### Install with [bower](https://bower.io/) (deprecated)
-
-```bash
-bower install --save ovh-ui-angular
-```
-
 ## Usage
 
 ### Integration

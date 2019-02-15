@@ -13,11 +13,6 @@ export default class {
         addBooleanParameter(this, "loading");
         addBooleanParameter(this, "primaryDisabled");
         addBooleanParameter(this, "secondaryDisabled");
-
-        // Deprecated: Support for 'title' attribute
-        if (!!this.$attrs.title && !this.$attrs.heading) {
-            this.heading = this.title;
-        }
     }
 
     $postLink () {

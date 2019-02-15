@@ -14,7 +14,7 @@ describe("ouiHeaderTabs", () => {
         it("should display the header tabs with one item", () => {
             const element = TestUtils.compileTemplate(`
                 <oui-header-tabs>
-                    <oui-header-tabs-item text="Home" href="/#"></oui-header-tabs-item>
+                    <oui-header-tabs-item href="/#">Home</oui-header-tabs-item>
                 </oui-header-tabs>`
             );
 
@@ -29,7 +29,7 @@ describe("ouiHeaderTabs", () => {
         it("should display the header tabs with external link", () => {
             const element = TestUtils.compileTemplate(`
                 <oui-header-tabs>
-                    <oui-header-tabs-item text="External" href="/#" external></oui-header-tabs-item>
+                    <oui-header-tabs-item href="/#" external>External</oui-header-tabs-item>
                 </oui-header-tabs>`
             );
 
@@ -47,10 +47,10 @@ describe("ouiHeaderTabs", () => {
         it("should display the header tabs with disabled items", () => {
             const element = TestUtils.compileTemplate(`
                 <oui-header-tabs>
-                    <oui-header-tabs-item text="Disabled" disabled></oui-header-tabs-item>
+                    <oui-header-tabs-item disabled>Disabled</oui-header-tabs-item>
                     <oui-header-tabs-dropdown text="Dropdown">
-                        <oui-header-tabs-item text="Disabled 1" disabled></oui-header-tabs-item>
-                        <oui-header-tabs-item text="Disabled 2" disabled></oui-header-tabs-item>
+                        <oui-header-tabs-item disabled>Disabled 1</oui-header-tabs-item>
+                        <oui-header-tabs-item disabled>Disabled 2</oui-header-tabs-item>
                     </oui-header-tabs-dropdown>
                 </oui-header-tabs>`
             );
@@ -68,10 +68,10 @@ describe("ouiHeaderTabs", () => {
         it("should display the header tabs with active items", () => {
             const element = TestUtils.compileTemplate(`
                 <oui-header-tabs>
-                    <oui-header-tabs-item text="Active" active></oui-header-tabs-item>
+                    <oui-header-tabs-item active>Active</oui-header-tabs-item>
                     <oui-header-tabs-dropdown text="Dropdown">
-                        <oui-header-tabs-item text="Active 1" active></oui-header-tabs-item>
-                        <oui-header-tabs-item text="Active 2"></oui-header-tabs-item>
+                        <oui-header-tabs-item active>Active 1</oui-header-tabs-item>
+                        <oui-header-tabs-item>Active 2</oui-header-tabs-item>
                     </oui-header-tabs-dropdown>
                 </oui-header-tabs>`
             );
@@ -88,7 +88,7 @@ describe("ouiHeaderTabs", () => {
             const element = TestUtils.compileTemplate(`
                 <oui-header-tabs>
                     <oui-header-tabs-dropdown text="Dropdown">
-                        <oui-header-tabs-item text="Home" href="/#"></oui-header-tabs-item>
+                        <oui-header-tabs-item href="/#">Home</oui-header-tabs-item>
                     </oui-header-tabs-dropdown>
                 </oui-header-tabs>`
             );
@@ -107,9 +107,9 @@ describe("ouiHeaderTabs", () => {
             const element = TestUtils.compileTemplate(`
                 <oui-header-tabs>
                     <oui-header-tabs-dropdown text="Dropdown">
-                        <oui-header-tabs-item text="Item 1" href="/#"></oui-header-tabs-item>
+                        <oui-header-tabs-item href="/#">Item 1</oui-header-tabs-item>
                         <oui-header-tabs-divider></oui-header-tabs-divider>
-                        <oui-header-tabs-item text="Item 2" href="/#"></oui-header-tabs-item>
+                        <oui-header-tabs-item href="/#">Item 2</oui-header-tabs-item>
                     </oui-header-tabs-dropdown>
                 </oui-header-tabs>`
             );

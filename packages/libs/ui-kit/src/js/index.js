@@ -20,13 +20,13 @@ import Field from "@ovh/ui-kit.field";
 import File from "@ovh/ui-kit.file";
 import FormActions from "@ovh/ui-kit.form-actions";
 import GuideMenu from "@ovh/ui-kit.guide-menu";
+import Header from "@ovh/ui-kit.header";
 import HeaderTabs from "@ovh/ui-kit.header-tabs";
 import InlineAdder from "@ovh/ui-kit.inline-adder";
 import Message from "@ovh/ui-kit.message";
 import Modal from "@ovh/ui-kit.modal";
 import Navbar from "@ovh/ui-kit.navbar";
 import Numeric from "@ovh/ui-kit.numeric";
-import PageHeader from "@ovh/ui-kit.page-header";
 import Pagination from "@ovh/ui-kit.pagination";
 import Password from "@ovh/ui-kit.password";
 import Popover from "@ovh/ui-kit.popover";
@@ -67,13 +67,13 @@ angular
         File,
         FormActions,
         GuideMenu,
+        Header,
         HeaderTabs,
         InlineAdder,
         Message,
         Modal,
         Navbar,
         Numeric,
-        PageHeader,
         Pagination,
         Password,
         Popover,

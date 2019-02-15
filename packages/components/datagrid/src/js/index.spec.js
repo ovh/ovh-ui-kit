@@ -20,7 +20,7 @@ describe("ouiDatagrid", () => {
     const isSortableCell = element => element.hasClass("oui-datagrid__header_sortable");
     const isSortableAscCell = element => element.hasClass("oui-datagrid__header_sortable-asc");
     const isSortableDescCell = element => element.hasClass("oui-datagrid__header_sortable-desc");
-    const getActionMenu = element => angular.element(element[0].querySelectorAll("oui-action-menu"));
+    const getActionMenu = element => element.find("oui-action-menu");
     const isStickyCell = element => element.hasClass("oui-datagrid__cell-sticky");
     const getDatagridParameters = element => element.find("oui-datagrid-parameters");
     const getColumnsInDatagridParameters = element => angular.element(element[0].querySelectorAll("oui-datagrid-parameters .oui-datagrid-parameters__column"));
@@ -871,8 +871,8 @@ describe("ouiDatagrid", () => {
                             <oui-column property="firstName"></oui-column>
                             <oui-column property="lastName"></oui-column>
                             <oui-action-menu>
-                                <oui-action-menu-item text="Action 1"></oui-action-menu-item>
-                                <oui-action-menu-item text="Action 2"></oui-action-menu-item>
+                                <oui-action-menu-item>Action 1</oui-action-menu-item>
+                                <oui-action-menu-item>Action 2</oui-action-menu-item>
                             </oui-action-menu>
                         </oui-datagrid>
                     `, {
@@ -1154,8 +1154,8 @@ describe("ouiDatagrid", () => {
                         <oui-column property="lastName"></oui-column>
                         <oui-column>
                             <oui-action-menu>
-                                <oui-action-menu-item text="Action 1"></oui-action-menu-item>
-                                <oui-action-menu-item text="Action 2"></oui-action-menu-item>
+                                <oui-action-menu-item>Action 1</oui-action-menu-item>
+                                <oui-action-menu-item>Action 2</oui-action-menu-item>
                             </oui-action-menu>
                         </oui-column>
                     </oui-datagrid>
@@ -1276,8 +1276,8 @@ describe("ouiDatagrid", () => {
                         <oui-column property="firstName"></oui-column>
                         <oui-column property="lastName"></oui-column>
                         <oui-action-menu>
-                            <oui-action-menu-item text="Action 1"></oui-action-menu-item>
-                            <oui-action-menu-item text="Action 2"></oui-action-menu-item>
+                            <oui-action-menu-item>Action 1</oui-action-menu-item>
+                            <oui-action-menu-item>Action 2</oui-action-menu-item>
                         </oui-action-menu>
                     </oui-datagrid>
                 `, {
@@ -1307,8 +1307,8 @@ describe("ouiDatagrid", () => {
                                 <oui-column property="firstName"></oui-column>
                                 <oui-column property="lastName"></oui-column>
                                 <oui-action-menu>
-                                    <oui-action-menu-item text="Action 1"></oui-action-menu-item>
-                                    <oui-action-menu-item text="Action 2"></oui-action-menu-item>
+                                    <oui-action-menu-item>Action 1</oui-action-menu-item>
+                                    <oui-action-menu-item>Action 2</oui-action-menu-item>
                                 </oui-action-menu>
                             </oui-datagrid>
                         </div>
@@ -1352,8 +1352,8 @@ describe("ouiDatagrid", () => {
                                 data-sortable
                                 data-title="'Last name'"></oui-column>
                             <oui-action-menu>
-                                <oui-action-menu-item text="Action 1"></oui-action-menu-item>
-                                <oui-action-menu-item text="Action 2"></oui-action-menu-item>
+                                <oui-action-menu-item>Action 1</oui-action-menu-item>
+                                <oui-action-menu-item>Action 2</oui-action-menu-item>
                             </oui-action-menu>
                         </oui-datagrid>
                     `, {

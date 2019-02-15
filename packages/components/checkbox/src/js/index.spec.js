@@ -66,9 +66,9 @@ describe("ouiCheckbox", () => {
             });
         });
 
-        describe("text attribute", () => {
+        describe("transclude value", () => {
             it("should display a text inside the checkbox's text container", () => {
-                const element = TestUtils.compileTemplate("<oui-checkbox text=\"test\"></oui-checkbox>");
+                const element = TestUtils.compileTemplate("<oui-checkbox>test</oui-checkbox>");
 
                 const textContainerCheckboxElement = getCheckboxTextContainerElement(element);
                 expect(angular.element(textContainerCheckboxElement).html()).toBe("test");

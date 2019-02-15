@@ -6,7 +6,6 @@ export default {
     controller,
     bindings: {
         heading: "@?",
-        text: "@?", // Deprecated: Replaced by transclude value
         picture: "@?",
         onClick: "&?",
         href: "@?",

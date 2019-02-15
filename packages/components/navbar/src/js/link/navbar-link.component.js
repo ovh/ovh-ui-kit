@@ -7,7 +7,6 @@ export default {
     },
     bindings: {
         name: "@",
-        text: "@",
         href: "@?",
         state: "@?",
         stateParams: "<?",
@@ -16,5 +15,6 @@ export default {
         onClick: "&"
     },
     controller,
-    template
+    template,
+    transclude: true
 };
