@@ -34,7 +34,6 @@ export default class SelectPickerController {
         }
 
         this.sectionTransclude = this.$transclude.isSlotFilled("sectionSlot");
-        this.deprecatedTransclude = this.$transclude.isSlotFilled("deprecatedSlot");
     }
 
     $postLink () {

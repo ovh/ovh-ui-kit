@@ -47,17 +47,13 @@
                 </dd>
             </dl>
             <div class="oui-tile__actions">
-                <div class="oui-dropdown">
-                    <button class="oui-action-menu-button oui-dropdown__trigger"
-                        type="button"
-                        aria-haspopup="true" aria-expanded="true" aria-label="Baz: actions">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
-                            <circle class="oui-action-menu-button__foreground" cx="22.27" cy="36" r="4"></circle>
-                            <circle class="oui-action-menu-button__foreground" cx="36.20" cy="36" r="4"></circle>
-                            <circle class="oui-action-menu-button__foreground" cx="50.13" cy="36" r="4"></circle>
-                        </svg>
-                    </button>
-                </div>
+                <oui-action-menu compact placement="end">
+                    <oui-action-menu-item href="#">Action 1 (link)</oui-action-menu-item>
+                    <oui-action-menu-item on-click="$ctrl.onActionClick()">Action 2 (button)</oui-action-menu-item>
+                    <oui-action-menu-item disabled>Action 3 (disabled)</oui-action-menu-item>
+                    <oui-action-menu-divider></oui-action-menu-divider>
+                    <oui-action-menu-item href="#" external>External link</oui-action-menu-item>
+                </oui-action-menu>
             </div>
         </div>
     </div>

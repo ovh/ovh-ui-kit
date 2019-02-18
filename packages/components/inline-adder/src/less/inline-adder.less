@@ -2,6 +2,7 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
 @import (reference) '~@ovh/ui-kit.button/src/less/_mixins';
+@import (reference) '~@ovh/ui-kit.button/src/less/_variables';
 @import './_normalize';
 
 .oui-inline-adder {
@@ -66,8 +67,10 @@
     #oui > .button-base();
     #oui > .button-hollow();
     #oui > .button-icon-base(oui-icon);
-    #oui > .button-small-width();
 
+    min-width: @oui-button-small-width-min-width;
+    padding-left: @oui-button-small-width-padding-left-right;
+    padding-right: @oui-button-small-width-padding-left-right;
     width: rem-calc(40);
     height: rem-calc(40);
     display: flex;

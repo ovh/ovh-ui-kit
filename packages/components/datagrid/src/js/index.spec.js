@@ -20,7 +20,7 @@ describe("ouiDatagrid", () => {
     const isSortableCell = element => element.hasClass("oui-datagrid__header_sortable");
     const isSortableAscCell = element => element.hasClass("oui-datagrid__header_sortable-asc");
     const isSortableDescCell = element => element.hasClass("oui-datagrid__header_sortable-desc");
-    const getActionMenu = element => angular.element(element[0].querySelectorAll("oui-action-menu"));
+    const getActionMenu = element => element.find("oui-action-menu");
     const isStickyCell = element => element.hasClass("oui-datagrid__cell-sticky");
     const getDatagridParameters = element => element.find("oui-datagrid-parameters");
     const getColumnsInDatagridParameters = element => angular.element(element[0].querySelectorAll("oui-datagrid-parameters .oui-datagrid-parameters__column"));

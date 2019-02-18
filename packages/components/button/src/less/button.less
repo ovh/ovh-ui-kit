@@ -1,4 +1,5 @@
 @import (reference) './_mixins';
+@import (reference) './_variables';
 @import './_normalize';
 
 .oui-button {
@@ -30,11 +31,36 @@
   }
 
   &_link {
-    #oui > .button-link(@oui-icon-selector);
     #oui > .button-icon-base(
       @oui-icon-selector,
       @icon-color_disabled: @oui-button-link-font-color_disabled
     );
+
+    min-width: 0;
+    padding: @oui-button-link-padding;
+    border: 0;
+    background: none;
+    color: @oui-button-link-font-color;
+    font-weight: @oui-button-link-font-weight;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      background: none;
+      color: @oui-button-link-font-color_hover;
+      text-decoration: underline;
+    }
+
+    &:disabled,
+    &:disabled:active {
+      background: none;
+      color: @oui-button-link-font-color_disabled;
+      text-decoration: underline;
+    }
+
+    .oui-icon {
+      color: @oui-button-link-icon-color;
+    }
   }
 
   &_icon-only {
@@ -42,26 +68,73 @@
   }
 
   &_icon-alone {
-    #oui > .button-icon-alone(@oui-icon-selector);
+    background: @oui-button-icon-alone-background;
+    min-width: @oui-button-icon-alone-min-width;
+    padding-left: @oui-button-icon-alone-padding-left;
+    padding-right: @oui-button-icon-alone-padding-right;
+    margin-right: @oui-button-icon-alone-margin-right;
+
+    .oui-icon {
+      color: @oui-button-icon-alone-font-color;
+    }
+
+    .oui-icon:hover,
+    .oui-icon:focus {
+      color: @oui-button-icon-alone-font-color_hover;
+    }
+
+    .oui-icon::before {
+      font-size: @oui-button-icon-alone-icon-font-size;
+    }
   }
 
   &_icon-right {
-    #oui > .button-icon-right(@oui-icon-selector);
+    padding-right: @oui-button-icon-padding-right;
+
+    .oui-icon {
+      margin-left: @oui-button-icon-right-icon-margin-left;
+    }
+
+    .oui-icon_circle::before {
+      line-height: 2;
+    }
   }
 
   &_icon-left {
-    #oui > .button-icon-left(@oui-icon-selector);
+    padding-left: @oui-button-icon-padding-left;
+
+    .oui-icon {
+      margin-right: @oui-button-icon-right-icon-margin-right;
+    }
+
+    .oui-icon_circle::before {
+      line-height: 2;
+      text-indent: -2px;
+    }
   }
 
   &_full-width {
-    #oui > .button-full-width(@oui-icon-selector);
+    max-width: none;
+    width: 100%;
+    height: 100%;
+
+    .oui-icon::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
 
     &.@{oui-button-selector}_icon-left {
-      #oui > .button-full-width-icon-left(@oui-icon-selector);
+      .oui-icon::before {
+        left: @oui-button-icon-padding-left;
+      }
     }
 
     &.@{oui-button-selector}_icon-right {
-      #oui > .button-full-width-icon-right(@oui-icon-selector);
+      .oui-icon::before:not(.oui-icon-external_link) {
+        right: @oui-button-icon-padding-right;
+      }
     }
 
     .oui-icon-external_link {
@@ -70,10 +143,12 @@
   }
 
   &_small-width {
-    #oui > .button-small-width();
+    min-width: @oui-button-small-width-min-width;
+    padding-left: @oui-button-small-width-padding-left-right;
+    padding-right: @oui-button-small-width-padding-left-right;
   }
 
   &_large-height {
-    #oui > .button-large-height();
+    min-height: @oui-button-large-height-min-height;
   }
 }
