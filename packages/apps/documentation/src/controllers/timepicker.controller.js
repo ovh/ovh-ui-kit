@@ -1,13 +1,13 @@
 export default class {
-    onChange (modelValue) {
-        this.onChangeValue = modelValue;
-    }
+  onChange(modelValue) {
+    this.onChangeValue = modelValue;
+  }
 
-    onClose (modelValue) {
-        this.onCloseValue = modelValue;
-    }
+  onClose(modelValue) {
+    this.onCloseValue = modelValue;
+  }
 
-    onOpen (modelValue) {
-        this.onOpenValue = modelValue;
-    }
+  onOpen(modelValue) {
+    this.onOpenValue = modelValue;
+  }
 }

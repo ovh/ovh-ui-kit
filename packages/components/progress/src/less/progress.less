@@ -1,7 +1,6 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_variables';
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-progress {
   #oui > .base-font();
@@ -171,5 +170,13 @@
       &::-moz-progress-bar { background-color: @oui-progress-error-foreground-color; }
       &::-ms-fill { background-color: @oui-progress-error-foreground-color; }
     }
+  }
+}
+
+oui-progress {
+  &,
+  &-bar,
+  &-threshold {
+    display: block;
   }
 }

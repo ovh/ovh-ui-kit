@@ -1,6 +1,5 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) './_variables';
-@import './_normalize';
 
 // Dropdown
 .oui-dropdown {
@@ -205,5 +204,17 @@
 
   .oui-dropdown-menu > &:last-child {
     margin-bottom: @oui-dropdown-menu-spacing;
+  }
+}
+
+oui-dropdown {
+  display: inline-block;
+
+  &-trigger,
+  &-content,
+  &-group,
+  &-item,
+  &-divider {
+    display: block;
   }
 }

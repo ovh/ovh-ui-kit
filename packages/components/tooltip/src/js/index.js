@@ -1,10 +1,10 @@
-import angular from "angular";
-import Tooltip from "./tooltip.directive";
+import angular from 'angular';
+import Tooltip from './tooltip.directive';
 
-const moduleName = "oui.tooltip";
+const moduleName = 'oui.tooltip';
 
 angular
-    .module(moduleName, [])
-    .directive("ouiTooltip", Tooltip);
+  .module(moduleName, [])
+  .directive('ouiTooltip', Tooltip);
 
 export default moduleName;

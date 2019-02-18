@@ -1,10 +1,10 @@
-import controller from "./spinner.controller";
-import template from "./spinner.html";
+import controller from './spinner.controller';
+import template from './spinner.html';
 
 export default {
-    template,
-    controller,
-    bindings: {
-        size: "@?"
-    }
+  template,
+  controller,
+  bindings: {
+    size: '@?',
+  },
 };

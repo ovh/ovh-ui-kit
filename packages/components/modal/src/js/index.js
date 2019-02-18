@@ -1,11 +1,11 @@
-import angular from "angular";
-import Modal from "./modal.component.js";
-import Spinner from "@ovh/ui-kit.spinner";
+import angular from 'angular';
+import Spinner from '@ovh/ui-kit.spinner';
+import Modal from './modal.component';
 
-const moduleName = "oui.modal";
+const moduleName = 'oui.modal';
 
 angular
-    .module(moduleName, [Spinner])
-    .component("ouiModal", Modal);
+  .module(moduleName, [Spinner])
+  .component('ouiModal', Modal);
 
 export default moduleName;

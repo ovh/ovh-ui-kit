@@ -6,10 +6,15 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
+    "@ovh/ui-kit.core": "*",
+    "@ovh/ui-kit.dropdown": "*",
     "bloodhound-js": "^1.2.3",
     "popper.js": "^1.14.4"
   },
   "peerDependencies": {
     "angular": ">=1.6.x"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.11"
   }
 }

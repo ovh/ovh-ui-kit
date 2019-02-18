@@ -1,10 +1,10 @@
-import controller from "./sidebar-menu.controller";
-import template from "./sidebar-menu.html";
+import controller from './sidebar-menu.controller';
+import template from './sidebar-menu.html';
 
 export default {
-    bindings: {
-        items: "<"
-    },
-    template,
-    controller
+  bindings: {
+    items: '<',
+  },
+  template,
+  controller,
 };

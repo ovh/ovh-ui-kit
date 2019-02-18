@@ -1,10 +1,10 @@
-import controller from "./progress.controller";
+import controller from './progress.controller';
 
 export default {
-    controller,
-    bindings: {
-        compact: "<?",
-        minValue: "@?",
-        maxValue: "@?"
-    }
+  controller,
+  bindings: {
+    compact: '<?',
+    minValue: '@?',
+    maxValue: '@?',
+  },
 };

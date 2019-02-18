@@ -1,27 +1,27 @@
-import controller from "./search.controller";
-import template from "./search.html";
+import controller from './search.controller';
+import template from './search.html';
 
 export default {
-    bindings: {
-        model: "=",
-        id: "@?",
-        name: "@?",
-        placeholder: "@?",
-        ariaLabel: "@?",
+  bindings: {
+    model: '=',
+    id: '@?',
+    name: '@?',
+    placeholder: '@?',
+    ariaLabel: '@?',
 
-        debounce: "<?",
-        maxlength: "<?",
-        minlength: "<?",
-        disabled: "<?",
+    debounce: '<?',
+    maxlength: '<?',
+    minlength: '<?',
+    disabled: '<?',
 
-        onChange: "&",
-        onReset: "&",
-        onSubmit: "&",
+    onChange: '&',
+    onReset: '&',
+    onSubmit: '&',
 
-        autocomplete: "<?",
-        autocompleteProperty: "@?",
-        autocompleteOnSelect: "&"
-    },
-    controller,
-    template
+    autocomplete: '<?',
+    autocompleteProperty: '@?',
+    autocompleteOnSelect: '&',
+  },
+  controller,
+  template,
 };

@@ -1,10 +1,10 @@
-import angular from "angular";
-import Spinner from "./spinner.component.js";
+import angular from 'angular';
+import Spinner from './spinner.component';
 
-const moduleName = "oui.spinner";
+const moduleName = 'oui.spinner';
 
 angular
-    .module(moduleName, [])
-    .component("ouiSpinner", Spinner);
+  .module(moduleName, [])
+  .component('ouiSpinner', Spinner);
 
 export default moduleName;

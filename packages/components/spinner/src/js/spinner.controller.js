@@ -1,16 +1,16 @@
 export default class {
-    constructor ($element) {
-        "ngInject";
+  constructor($element) {
+    'ngInject';
 
-        this.$element = $element;
-    }
+    this.$element = $element;
+  }
 
-    $onInit () {
-        this.size = this.size || "m";
-    }
+  $onInit() {
+    this.size = this.size || 'm';
+  }
 
-    $postLink () {
-        // Add Classnames on root element
-        this.$element.addClass(`oui-spinner oui-spinner_${this.size}`);
-    }
+  $postLink() {
+    // Add Classnames on root element
+    this.$element.addClass(`oui-spinner oui-spinner_${this.size}`);
+  }
 }

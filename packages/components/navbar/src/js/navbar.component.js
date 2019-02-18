@@ -1,22 +1,22 @@
-import controller from "./navbar.controller";
-import template from "./navbar.html";
+import controller from './navbar.controller';
+import template from './navbar.html';
 
 export default {
-    bindings: {
-        brand: "<?",
-        activeLink: "@?",
-        mainLinks: "<?",
-        asideLinks: "<?",
-        togglerLinks: "<?",
+  bindings: {
+    brand: '<?',
+    activeLink: '@?',
+    mainLinks: '<?',
+    asideLinks: '<?',
+    togglerLinks: '<?',
 
-        fixed: "<?"
-    },
-    controller,
-    template,
-    transclude: {
-        asideSlot: "?ouiNavbarAside",
-        brandSlot: "?ouiNavbarBrand",
-        mainSlot: "?ouiNavbarMain",
-        togglerSlot: "?ouiNavbarToggler"
-    }
+    fixed: '<?',
+  },
+  controller,
+  template,
+  transclude: {
+    asideSlot: '?ouiNavbarAside',
+    brandSlot: '?ouiNavbarBrand',
+    mainSlot: '?ouiNavbarMain',
+    togglerSlot: '?ouiNavbarToggler',
+  },
 };

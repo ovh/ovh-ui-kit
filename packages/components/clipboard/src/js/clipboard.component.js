@@ -1,12 +1,12 @@
-import controller from "./clipboard.controller";
-import template from "./clipboard.html";
+import controller from './clipboard.controller';
+import template from './clipboard.html';
 
 export default {
-    template,
-    controller,
-    bindings: {
-        name: "@?",
-        id: "@?",
-        model: "="
-    }
+  template,
+  controller,
+  bindings: {
+    name: '@?',
+    id: '@?',
+    model: '=',
+  },
 };
