@@ -1,34 +1,36 @@
-import { addBooleanParameter, addDefaultParameter } from "@ovh/ui-kit.core/src/js/component-utils";
+import { addBooleanParameter, addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
+
 export default class {
-    constructor ($attrs, $element, $timeout) {
-        "ngInject";
-        this.$attrs = $attrs;
-        this.$element = $element;
-        this.$timeout = $timeout;
-    }
+  constructor($attrs, $element, $timeout) {
+    'ngInject';
 
-    $onInit () {
-        addBooleanParameter(this, "compact");
-        addDefaultParameter(this, "minValue", "0");
-        addDefaultParameter(this, "maxValue", "100");
-    }
+    this.$attrs = $attrs;
+    this.$element = $element;
+    this.$timeout = $timeout;
+  }
 
-    $postLink () {
-        this.$timeout(() => {
-            this.$element.addClass("oui-progress");
+  $onInit() {
+    addBooleanParameter(this, 'compact');
+    addDefaultParameter(this, 'minValue', '0');
+    addDefaultParameter(this, 'maxValue', '100');
+  }
 
-            if (this.compact) {
-                this.$element.addClass("oui-progress_compact");
-            }
-        });
-    }
+  $postLink() {
+    this.$timeout(() => {
+      this.$element.addClass('oui-progress');
 
-    getPercentageValue (value) {
-        const percent = 100;
-        const minValue = this.minValue;
-        const maxValue = Math.max(this.maxValue - this.minValue, minValue);
-        const currentValue = Math.max(value - this.minValue, minValue);
+      if (this.compact) {
+        this.$element.addClass('oui-progress_compact');
+      }
+    });
+  }
 
-        return `${(currentValue / maxValue) * percent}%`;
-    }
+  getPercentageValue(value) {
+    const percent = 100;
+    const { minValue } = this;
+    const maxValue = Math.max(this.maxValue - this.minValue, minValue);
+    const currentValue = Math.max(value - this.minValue, minValue);
+
+    return `${(currentValue / maxValue) * percent}%`;
+  }
 }

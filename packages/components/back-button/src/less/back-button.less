@@ -1,7 +1,20 @@
-@import (reference) './_mixins';
-@import './_normalize';
+@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
+@import (reference) './_variables';
 
 .oui-back-button {
-  #oui > .back-button-normalize();
-  #oui > .back-button-base();
+  #oui > .base-font();
+
+  margin-bottom: @oui-back-button-margin-bottom;
+
+  .oui-button_icon-alone {
+    top: rem-calc(7);
+  }
+
+  .oui-back-button_title {
+    display: inline;
+  }
+}
+
+oui-back-button {
+  display: block;
 }

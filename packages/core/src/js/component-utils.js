@@ -7,13 +7,13 @@
  * @param {Object} controller    the controller
  * @param {string} parameterName the lowerCamelCased attribute name
  */
-export function addBooleanParameter (controller, parameterName) {
-    const ctrl = controller;
-    if (ctrl.$attrs) {
-        if (angular.isDefined(ctrl.$attrs[parameterName]) && ctrl.$attrs[parameterName] === "") {
-            ctrl[parameterName] = true;
-        }
+export function addBooleanParameter(controller, parameterName) {
+  const ctrl = controller;
+  if (ctrl.$attrs) {
+    if (angular.isDefined(ctrl.$attrs[parameterName]) && ctrl.$attrs[parameterName] === '') {
+      ctrl[parameterName] = true;
     }
+  }
 }
 
 /**
@@ -26,14 +26,14 @@ export function addBooleanParameter (controller, parameterName) {
  * @param {string} parameterName the lowerCamelCased attribute name
  * @param {string} defaultValue  the default value
  */
-export function addDefaultParameter (controller, parameterName, defaultValue) {
-    const ctrl = controller;
-    if (ctrl.$attrs) {
-        if (!angular.isDefined(ctrl.$attrs[parameterName]) ||
-            (angular.isDefined(ctrl.$attrs[parameterName]) && ctrl.$attrs[parameterName].trim() === "")) {
-            ctrl[parameterName] = defaultValue;
-        }
+export function addDefaultParameter(controller, parameterName, defaultValue) {
+  const ctrl = controller;
+  if (ctrl.$attrs) {
+    if (!angular.isDefined(ctrl.$attrs[parameterName])
+            || (angular.isDefined(ctrl.$attrs[parameterName]) && ctrl.$attrs[parameterName].trim() === '')) {
+      ctrl[parameterName] = defaultValue;
     }
+  }
 }
 
 /**
@@ -42,9 +42,9 @@ export function addDefaultParameter (controller, parameterName, defaultValue) {
  * @param  {string}       attributeName  the attribute name
  * @return {Boolean}                     true if it exists
  */
-export function hasAttribute (element, attributeName) {
-    return element.getAttribute(attributeName) !== null ||
-        element.getAttribute(`data-${attributeName}`) !== null;
+export function hasAttribute(element, attributeName) {
+  return element.getAttribute(attributeName) !== null
+        || element.getAttribute(`data-${attributeName}`) !== null;
 }
 
 /**
@@ -53,9 +53,9 @@ export function hasAttribute (element, attributeName) {
  * @param  {string}       attributeName  the attribute name
  * @return {Boolean}                     true if it exists and have a value
  */
-export function hasAttributeValue (element, attributeName) {
-    const attribute = element.getAttribute(attributeName) || element.getAttribute(`data-${attributeName}`);
-    return attribute && attribute !== "";
+export function hasAttributeValue(element, attributeName) {
+  const attribute = element.getAttribute(attributeName) || element.getAttribute(`data-${attributeName}`);
+  return attribute && attribute !== '';
 }
 
 /**
@@ -64,14 +64,14 @@ export function hasAttributeValue (element, attributeName) {
  * @param  {string}       attributeName the attribute name
  * @return {string}                     the attribute value
  */
-export function getAttribute (element, attributeName) {
-    return element.getAttribute(attributeName) || element.getAttribute(`data-${attributeName}`);
+export function getAttribute(element, attributeName) {
+  return element.getAttribute(attributeName) || element.getAttribute(`data-${attributeName}`);
 }
 
 export default {
-    addBooleanParameter,
-    addDefaultParameter,
-    hasAttribute,
-    hasAttributeValue,
-    getAttribute
+  addBooleanParameter,
+  addDefaultParameter,
+  hasAttribute,
+  hasAttributeValue,
+  getAttribute,
 };

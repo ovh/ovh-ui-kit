@@ -3,5 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "license": "BSD-3-Clause",
-  "author": "OVH SAS"
+  "author": "OVH SAS",
+  "dependencies": {
+    "@ovh/ui-kit.core": "*"
+  }
 }

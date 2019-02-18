@@ -1,17 +1,17 @@
-import controller from "./popover.controller";
+import controller from './popover.controller';
 
 export default () => {
-    "ngInject";
+  'ngInject';
 
-    return {
-        restrict: "AE",
-        bindToController: {
-            text: "@ouiPopover",
-            title: "@?",
-            placement: "@?ouiPopoverPlacement",
-            template: "@?ouiPopoverTemplate"
-        },
-        controller,
-        controllerAs: "$popoverCtrl"
-    };
+  return {
+    restrict: 'AE',
+    bindToController: {
+      text: '@ouiPopover',
+      title: '@?',
+      placement: '@?ouiPopoverPlacement',
+      template: '@?ouiPopoverTemplate',
+    },
+    controller,
+    controllerAs: '$popoverCtrl',
+  };
 };

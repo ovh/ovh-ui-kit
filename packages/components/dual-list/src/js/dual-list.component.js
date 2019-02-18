@@ -1,13 +1,13 @@
-import controller from "./dual-list.controller";
+import controller from './dual-list.controller';
 
 export default {
-    controller,
-    bindings: {
-        source: "=",
-        target: "=",
-        property: "@?",
-        onAdd: "&",
-        onRemove: "&",
-        onChange: "&"
-    }
+  controller,
+  bindings: {
+    source: '=',
+    target: '=',
+    property: '@?',
+    onAdd: '&',
+    onRemove: '&',
+    onChange: '&',
+  },
 };

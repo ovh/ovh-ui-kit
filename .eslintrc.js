@@ -3,33 +3,31 @@ const isDistribution = process.env.NODE_ENV === "dist";
 module.exports = {
   "root": true,
   "parser": "babel-eslint",
-  "parserOptions": {
-    "sourceType": "module"
-  },
+  "extends": "airbnb-base",
   "env": {
     "browser": true,
     "node": true,
     "jasmine": true,
-    "es6": true
+    "es6": true,
+  },
+  "parserOptions": {
+    "sourceType": "module",
   },
   "globals": {
     "angular": true,
-    "inject": true
+    "inject": true,
   },
-  "extends": "ovh",
   "rules": {
-    "arrow-parens": 0,
-    "generator-star-spacing": 0,
-    "no-console": isDistribution ? 2 : 0,
-    "no-debugger": isDistribution ? 2 : 0,
-    "no-magic-numbers": ["error", { "ignore": [0, -1, 1] }]
+    'no-bitwise': ['error', { allow: ['~'] }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-unresolved': 0,
   },
   "overrides": {
     "files": "*.spec.js",
     "rules": {
-      "no-magic-numbers": false,
-      "no-underscore-dangle": false,
-      "no-empty-function": false
+      "no-magic-numbers": 0,
+      "no-underscore-dangle": 0,
+      "no-empty-function": 0,
     }
   }
 };

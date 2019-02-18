@@ -2,7 +2,6 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_variables';
 @import (reference) './_mixins';
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-switch {
   line-height: 0;
@@ -87,4 +86,8 @@
 
   #oui > .switch-square();
   #oui > .switch-error();
+}
+
+oui-switch {
+  &:extend(.oui-switch);
 }

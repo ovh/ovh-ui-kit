@@ -1,11 +1,11 @@
 export default class {
-    constructor ($element) {
-        "ngInject";
+  constructor($element) {
+    'ngInject';
 
-        this.$element = $element;
-    }
+    this.$element = $element;
+  }
 
-    $postLink () {
-        this.$element.addClass("oui-sidebar-menu");
-    }
+  $postLink() {
+    this.$element.addClass('oui-sidebar-menu');
+  }
 }

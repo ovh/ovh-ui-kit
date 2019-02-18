@@ -1,7 +1,8 @@
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-tabs {
+  display: block;
+
   &__tab {
     height: @oui-tabs-tab-height;
     margin-right: @oui-tabs-tab-spacing;
@@ -62,6 +63,8 @@
 }
 
 .oui-tabs-item {
+  display: block;
+
   & + & {
     .phone({
       margin-top: @oui-tabs-tab-spacing;
@@ -146,4 +149,12 @@
     > :first-child { margin-top: 0; }
     > :last-child { margin-bottom: 0; }
   }
+}
+
+oui-tabs {
+  &:extend(.oui-tabs);
+}
+
+oui-tabs-item {
+  &:extend(.oui-tabs-item);
 }

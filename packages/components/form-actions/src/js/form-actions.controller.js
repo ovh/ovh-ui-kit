@@ -1,24 +1,24 @@
 export default class {
-    constructor ($attrs, ouiFormActionsConfiguration) {
-        "ngInject";
+  constructor($attrs, ouiFormActionsConfiguration) {
+    'ngInject';
 
-        this.$attrs = $attrs;
-        this.config = ouiFormActionsConfiguration;
+    this.$attrs = $attrs;
+    this.config = ouiFormActionsConfiguration;
+  }
+
+  $onInit() {
+    this.processTranslations();
+  }
+
+  processTranslations() {
+    this.translations = Object.assign({}, this.config.translations);
+
+    if (angular.isUndefined(this.submitText)) {
+      this.submitText = this.translations.submit;
     }
 
-    $onInit () {
-        this.processTranslations();
+    if (angular.isUndefined(this.cancelText)) {
+      this.cancelText = this.translations.cancel;
     }
-
-    processTranslations () {
-        this.translations = Object.assign({}, this.config.translations);
-
-        if (angular.isUndefined(this.submitText)) {
-            this.submitText = this.translations.submit;
-        }
-
-        if (angular.isUndefined(this.cancelText)) {
-            this.cancelText = this.translations.cancel;
-        }
-    }
+  }
 }

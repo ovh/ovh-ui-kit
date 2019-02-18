@@ -1,5 +1,4 @@
 @import (reference) '~@ovh/ui-kit.input/src/less/_variables';
-@import './_normalize';
 
 .oui-timepicker {
   display: block;
@@ -11,4 +10,8 @@
     display: block;
     margin: 0;
   }
+}
+
+oui-timepicker {
+  &:extend(.oui-timepicker);
 }

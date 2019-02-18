@@ -1,6 +1,5 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-dual-list {
   #oui > .base-font();
@@ -209,4 +208,10 @@
 
   // Variant "target"
   &-target &-item__button { background: @oui-dual-list-item-background_hover; }
+}
+
+oui-dual-list {
+  &,
+  &-source,
+  &-target { display: block; }
 }

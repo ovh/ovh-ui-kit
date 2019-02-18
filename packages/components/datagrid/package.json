@@ -7,6 +7,7 @@
   "author": "OVH SAS",
   "dependencies": {
     "@ovh/ui-kit.checkbox": "*",
+    "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.criteria": "*",
     "@ovh/ui-kit.pagination": "*",
     "@ovh/ui-kit.spinner": "*",
@@ -15,5 +16,8 @@
   "peerDependencies": {
     "angular": ">=1.6.x",
     "angular-aria": ">=1.6.x"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.11"
   }
 }

@@ -1,10 +1,10 @@
-import angular from "angular";
-import Header from "./header.component";
+import angular from 'angular';
+import Header from './header.component';
 
-const moduleName = "oui.header";
+const moduleName = 'oui.header';
 
 angular
-    .module(moduleName, [])
-    .component("ouiHeader", Header);
+  .module(moduleName, [])
+  .component('ouiHeader', Header);
 
 export default moduleName;

@@ -1,9 +1,9 @@
-import pages from "../../pages.data.json";
+import pages from '../../pages.data.json';
 
 export default class ShowcaseController {
-    constructor () {
-        "ngInject";
+  constructor() {
+    'ngInject';
 
-        this.navigation = pages.children;
-    }
+    this.navigation = pages.children;
+  }
 }

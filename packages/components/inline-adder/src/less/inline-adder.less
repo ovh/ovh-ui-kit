@@ -3,7 +3,6 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
 @import (reference) '~@ovh/ui-kit.button/src/less/_mixins';
 @import (reference) '~@ovh/ui-kit.button/src/less/_variables';
-@import './_normalize';
 
 .oui-inline-adder {
   #oui > .base-font();
@@ -85,5 +84,13 @@
         font-size: inherit;
       }
     }
+  }
+}
+
+oui-inline-adder {
+  &,
+  &-row,
+  &-field {
+    display: block;
   }
 }

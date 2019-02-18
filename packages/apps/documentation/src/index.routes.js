@@ -1,35 +1,37 @@
-import pages from "./pages.data.json";
+import pages from './pages.data.json';
 
-const rootState = "showcase";
-const req = require.context("@ovh/ui-kit-documentation/src/pages", true, /.*\.(html|md)$/);
+const rootState = 'showcase';
+const req = require.context('@ovh/ui-kit-documentation/src/pages', true, /.*\.(html|md)$/);
 
-function loadDirectory ($stateProvider, items) {
-    items.forEach(item => {
-        // Load state template
-        if (item.type === "file") {
-            // Dynamic imports doesn't work
-            // This is a workaround using require.context
-            item.template = req(item.path);
-        }
+function loadDirectory($stateProvider, items) {
+  items.forEach((_item_) => {
+    const item = _item_;
 
-        $stateProvider.state(item.state, item);
+    // Load state template
+    if (item.type === 'file') {
+      // Dynamic imports doesn't work
+      // This is a workaround using require.context
+      item.template = req(item.path);
+    }
 
-        // Load children if directory
-        if (item.type === "directory") {
-            loadDirectory($stateProvider, item.children);
-        }
-    });
+    $stateProvider.state(item.state, item);
+
+    // Load children if directory
+    if (item.type === 'directory') {
+      loadDirectory($stateProvider, item.children);
+    }
+  });
 }
 
 export default function ($stateProvider, $urlRouterProvider) {
-    "ngInject";
+  'ngInject';
 
-    $stateProvider
-        .state(rootState, {
-            template: "<doc-showcase></doc-showcase>"
-        });
+  $stateProvider
+    .state(rootState, {
+      template: '<doc-showcase></doc-showcase>',
+    });
 
-    $urlRouterProvider.otherwise("/");
+  $urlRouterProvider.otherwise('/');
 
-    loadDirectory($stateProvider, pages.children);
+  loadDirectory($stateProvider, pages.children);
 }

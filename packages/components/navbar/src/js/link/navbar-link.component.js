@@ -1,20 +1,20 @@
-import controller from "./navbar-link.controller";
-import template from "./navbar-link.html";
+import controller from './navbar-link.controller';
+import template from './navbar-link.html';
 
 export default {
-    require: {
-        navbarCtrl: "^^ouiNavbar"
-    },
-    bindings: {
-        name: "@",
-        href: "@?",
-        state: "@?",
-        stateParams: "<?",
-        label: "@?ariaLabel",
-        variant: "@?",
-        onClick: "&"
-    },
-    controller,
-    template,
-    transclude: true
+  require: {
+    navbarCtrl: '^^ouiNavbar',
+  },
+  bindings: {
+    name: '@',
+    href: '@?',
+    state: '@?',
+    stateParams: '<?',
+    label: '@?ariaLabel',
+    variant: '@?',
+    onClick: '&',
+  },
+  controller,
+  template,
+  transclude: true,
 };
