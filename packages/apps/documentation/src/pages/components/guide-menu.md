@@ -33,7 +33,7 @@
 ### In Header
 
 ```html:preview
-<oui-header heading="My title" description="My subtitle">à
+<oui-header heading="My title" description="My subtitle">
     <oui-guide-menu text="Guides">
         <oui-guide-menu-group label="Section 1">
             <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
