@@ -4,5 +4,5 @@
     "indentation": [2, { "ignore": ["inside-parens"] }],
     "selector-type-no-unknown": [true, {  "ignore": ["custom-elements"] }]
   },
-  "ignoreFiles": ["dist/**/*.css"]
+  "ignoreFiles": ["packages/**/dist/**/*"]
 }
