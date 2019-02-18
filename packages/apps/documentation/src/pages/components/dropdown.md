@@ -49,7 +49,7 @@
 ### Alignment
 
 ```html:preview
-<oui-dropdown align="start">
+<oui-dropdown placement="start">
     <oui-dropdown-trigger text="Start"></oui-dropdown-trigger>
     <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
@@ -66,7 +66,7 @@
     </oui-dropdown-content>
 </oui-dropdown>
 
-<oui-dropdown align="center">
+<oui-dropdown placement="center">
     <oui-dropdown-trigger text="Center"></oui-dropdown-trigger>
     <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
@@ -83,7 +83,7 @@
     </oui-dropdown-content>
 </oui-dropdown>
 
-<oui-dropdown align="end">
+<oui-dropdown placement="end">
     <oui-dropdown-trigger text="End"></oui-dropdown-trigger>
     <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
@@ -104,7 +104,7 @@
 ### With arrow
 
 ```html:preview
-<oui-dropdown align="start" arrow>
+<oui-dropdown placement="start" arrow>
     <oui-dropdown-trigger text="Start"></oui-dropdown-trigger>
     <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
@@ -121,7 +121,7 @@
     </oui-dropdown-content>
 </oui-dropdown>
 
-<oui-dropdown align="center" arrow>
+<oui-dropdown placement="center" arrow>
     <oui-dropdown-trigger text="Center"></oui-dropdown-trigger>
     <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
@@ -138,7 +138,7 @@
     </oui-dropdown-content>
 </oui-dropdown>
 
-<oui-dropdown align="end" arrow>
+<oui-dropdown placement="end" arrow>
     <oui-dropdown-trigger text="End"></oui-dropdown-trigger>
     <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
@@ -208,7 +208,7 @@ Use `oui-dropdown-content` as a directive for custom content menu
 
 ### Action Menu
 
-See <a href="#!/oui-angular/action-menu">Action menu component</a>.
+See <a href="#!/components/action-menu">Action menu component</a>.
 
 ```html:preview
 <oui-action-menu compact>
@@ -222,7 +222,7 @@ See <a href="#!/oui-angular/action-menu">Action menu component</a>.
 
 ### Guide Menu
 
-See <a href="#!/oui-angular/guide-menu">Guide menu component</a>.
+See <a href="#!/components/guide-menu">Guide menu component</a>.
 
 ```html:preview
 <oui-guide-menu text="Guides">
@@ -239,7 +239,7 @@ See <a href="#!/oui-angular/guide-menu">Guide menu component</a>.
 
 | Attribute         | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
 | ----              | ----      | ----      | ----              | ----                      | ----      | ----
-| `align`           | string    | @?        | yes               | `start`, `center`, `end`  | `start`   | modifier for alignment
+| `palcement`       | string    | @?        | yes               | `start`, `center`, `end`  | `start`   | placement of the dropdown menu
 | `arrow`           | boolean   | <?        | no                | `true`, `false`           | `false`   | display the dropdown arrow
 | `persistent`      | boolean   | <?        | no                | `true`, `false`           | `false`   | prevent dropdown to close on click
 
@@ -276,10 +276,6 @@ See <a href="#!/oui-angular/guide-menu">Guide menu component</a>.
 | `on-click`        | function  | &         | no                | n/a                       | n/a       | callback on component click
 
 **Note**: `ui-router` is needed for the attributes `state` and `state-params`.
-
-#### Deprecated
-
-* `text`: Replaced by transclude value
 
 ### oui-dropdown-divider
 

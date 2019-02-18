@@ -162,10 +162,6 @@
 | `on-change`   | function  | &?        | no                | n/a               | n/a       | handler triggered when value has changed
 | `variant`     | string    | @?        | yes               | `default`, `light`| `default` | used in conjunction with `thumbnail`. Defines specific style for the thumbnail
 
-#### Deprecated
-
-* `text`: Replaced by transclude value
-
 ### oui-radio-group
 
 | Attribute     | Type      | Binding   | One-time Binding  | Values    | Default   | Description

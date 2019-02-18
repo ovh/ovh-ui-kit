@@ -7,11 +7,12 @@
   "workspaces": [
     "packages/apps/*",
     "packages/components/*",
+    "packages/core",
     "packages/libs/*",
     "packages/vendors/*"
   ],
   "scripts": {
-    "build": "lerna run build",
+    "build": "lerna run build --parallel",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
     "lint": "npm run lint:js && npm run lint:css",
@@ -19,12 +20,12 @@
     "lint:js": "eslint ./packages",
     "version": "npm run build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
-    "prepare": "lerna run prepare",
+    "prepare": "lerna run prepare --parallel",
     "preview-changelog": "npm-scripts-config preview-changelog",
-    "start": "lerna run start --stream --scope=@ovh/ui-kit-documentation",
+    "start": "lerna exec --scope @ovh/ui-kit-documentation -- yarn start",
     "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start --reporters spec,coverage --single-run",
     "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start --watch",
-    "watch": "lerna run watch --stream --scope=@ovh/ui-kit"
+    "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },
   "config": {
     "commitizen": {

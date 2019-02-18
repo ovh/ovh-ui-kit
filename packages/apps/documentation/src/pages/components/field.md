@@ -73,13 +73,11 @@
     <oui-field label="Server options">
         <oui-checkbox
             name="ssl"
-            text="SSL"
             model="$ctrl.ssl"
-            required></oui-checkbox>
+            required>SSL</oui-checkbox>
         <oui-checkbox
             name="hsts"
-            text="HSTS"
-            model="$ctrl.hsts"></oui-checkbox>
+            model="$ctrl.hsts">HSTS</oui-checkbox>
     </oui-field>
 </form>
 ```
@@ -103,20 +101,17 @@
     <oui-field label="Protocol">
         <oui-radio
             name="protocol"
-            text="HTTP"
             model="$ctrl.protocol"
-            value="'http'"></oui-radio>
+            value="'http'">HTTP</oui-radio>
         <oui-radio
             name="protocol"
-            text="TCP"
             model="$ctrl.protocol"
-            value="'tcp'"></oui-radio>
+            value="'tcp'">TCP</oui-radio>
         <oui-radio
             name="protocol"
-            text="UDP"
             model="$ctrl.protocol"
             value="'udp'"
-            disabled></oui-radio>
+            disabled>UDP</oui-radio>
     </oui-field>
 </form>
 ```

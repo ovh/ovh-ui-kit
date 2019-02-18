@@ -1,5 +1,5 @@
 <oui-dropdown class="oui-dropdown_action-menu"
-    align="{{::$ctrl.align}}"
+    placement="{{::$ctrl.placement}}"
     arrow="::$ctrl.compact">
     <oui-dropdown-trigger
         ng-if="::!$ctrl.compact"
@@ -18,7 +18,7 @@
             <circle cx="50.13" cy="36" r="4"></circle>
         </svg>
     </button>
-    <oui-dropdown-content class="oui-action-menu"
+    <oui-dropdown-content
         ng-transclude>
     </oui-dropdown-content>
 </oui-dropdown>

@@ -1,23 +1,23 @@
-@import (reference) './_variables';
+@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) "~@ovh/ui-kit.core/src/less/_variables";
-@import './_normalize';
+@import (reference) './_variables';
 
-.oui-page-header {
-  #oui > .page-header-normalize();
+.oui-header {
+  #oui > .base-font();
 
   background-color: @oui-color-nurse;
 
   &__container {
-    padding: @oui-page-header-spacing-y @oui-page-header-spacing-side_l;
+    padding: @oui-header-spacing-y @oui-header-spacing-side_l;
     display: flex;
     flex-wrap: nowrap;
 
     @media screen and (max-width: @oui-responsive-breakpoint-medium) {
-      padding: @oui-page-header-spacing-y @oui-page-header-spacing-side_s;
+      padding: @oui-header-spacing-y @oui-header-spacing-side_s;
     }
 
     @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
-      padding: @oui-page-header-spacing-y;
+      padding: @oui-header-spacing-y;
     }
   }
 
@@ -44,4 +44,8 @@
     font-size: rem-calc(16);
     font-weight: @oui-font-regular;
   }
+}
+
+oui-header {
+  &:extend(.oui-header);
 }

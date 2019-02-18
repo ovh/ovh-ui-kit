@@ -166,7 +166,3 @@
 | `on-blur`         | function  | &         | no                | n/a               | n/a       | called focus is lost
 | `on-focus`        | function  | &         | no                | n/a               | n/a       | called on focus
 | `on-change`       | function  | &         | no                | n/a               | n/a       | handler triggered when value has changed
-
-#### Deprecated
-
-* `data-align`: Unused

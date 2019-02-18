@@ -9,7 +9,6 @@ export default {
     template,
     controller,
     bindings: {
-        text: "@", // Deprecated: Replaced by transclude value
         value: "<",
         description: "@?",
         id: "@?",

@@ -77,6 +77,10 @@ module.exports = {
                     if (pagesConfig[item.state]) {
                         merge(item, pagesConfig[item.state]);
                     }
+
+                    if (item.controller && !item.controllerAs) {
+                        item.controllerAs = "$ctrl";
+                    }
                 } else {
                     // Directory
                     item.title = capitalize(item.name);

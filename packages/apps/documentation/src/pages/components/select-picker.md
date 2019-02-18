@@ -55,26 +55,6 @@
 </oui-select-picker>
 ```
 
-### Sections using `span`
-
-```html:preview
-<oui-select-picker label="Checked"
-    match="name"
-    description="Checked select picker">
-    <span class="oui-select-picker__section">Section 1</span>
-    <span class="oui-select-picker__section">Section 2</span>
-</oui-select-picker>
-<oui-select-picker label="Disabled"
-    match="name"
-    description="Disabled select picker"
-    disabled>
-    <span class="oui-select-picker__section">Section 1</span>
-    <span class="oui-select-picker__section">Section 2</span>
-</oui-select-picker>
-```
-
-**Note**: This use is **deprecated** and will be removed in the next major version
-
 ### On change
 
 ```html:preview
@@ -139,7 +119,3 @@
 | `required`    | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the field is required
 | `on-change`   | function  | &?        | no                | n/a               | n/a       | handler triggered when value has changed
 | `variant`     | string    | @?        | yes               | `default`, `light`| `default` | define specific style
-
-#### Deprecated
-
-* `text`: Replaced by `label` attribute

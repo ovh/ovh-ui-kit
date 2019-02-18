@@ -21,11 +21,6 @@ export default class SelectPickerController {
         addDefaultParameter(this, "variant", "default");
         addDefaultParameter(this, "id", `ouiSelectPicker${this.$scope.$id}`);
 
-        // Deprecated: Support for 'text' attribute
-        if (!!this.$attrs.text && !this.$attrs.label) {
-            this.label = this.text;
-        }
-
         if (this.picture) {
             this.isImgPath = /^data:/.test(this.picture) || /\.(gif|png|jpg|svg)$/.test(this.picture);
         }
@@ -39,7 +34,6 @@ export default class SelectPickerController {
         }
 
         this.sectionTransclude = this.$transclude.isSlotFilled("sectionSlot");
-        this.deprecatedTransclude = this.$transclude.isSlotFilled("deprecatedSlot");
     }
 
     $postLink () {

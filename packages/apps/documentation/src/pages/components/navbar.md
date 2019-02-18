@@ -26,11 +26,12 @@
     <oui-navbar-main>
         <oui-navbar-link
             name="{{mainLink.name}}"
-            text="{{mainLink.title}}"
             href="{{mainLink.url}}"
             variant="{{mainLink.isPrimary ? 'primary' : 'secondary'}}"
             aria-label="{{mainLink.label}}"
-            ng-repeat="mainLink in $ctrl.mainLinks track by $index"></oui-navbar-link>
+            ng-repeat="mainLink in $ctrl.mainLinks track by $index">
+            {{mainLink.title}}
+        </oui-navbar-link>
     </oui-navbar-main>
     <oui-navbar-aside>
         <oui-navbar-dropdown
@@ -55,14 +56,14 @@
                 footer-template="asideLink.footerTemplate"
                 footer-title="{{asideLink.footerTitle}}"
                 footer-href="{{asideLink.footerUrl}}"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-notification>
             <oui-navbar-menu ng-switch-when="user"
                 header-breadcrumb="{{asideLink.nichandle}}"
                 header-title="{{asideLink.fullName}}"
                 name="{{asideLink.name}}"
                 links="asideLink.subLinks"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-menu>
             <oui-navbar-menu ng-switch-default
                 header-class="oui-navbar_mobile-only"
@@ -70,7 +71,7 @@
                 header-title="{{asideLink.headerTitle}}"
                 name="{{asideLink.name}}"
                 links="asideLink.subLinks"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-menu>
         </oui-navbar-dropdown>
     </oui-navbar-aside>
@@ -264,11 +265,11 @@ This property is only available for root links of `main-links`.
     <oui-navbar-main>
         <oui-navbar-link
             name="{{mainLink.name}}"
-            text="{{mainLink.title}}"
             href="{{mainLink.url}}"
             variant="{{mainLink.isPrimary ? 'primary' : 'secondary'}}"
             aria-label="{{mainLink.label}}"
             ng-repeat="mainLink in $ctrl.mainLinks track by $index"></oui-navbar-link>
+            {{mainLink.title}}
     </oui-navbar-main>
 </oui-navbar>
 ```
@@ -393,14 +394,14 @@ This property is only available for root links of `aside-links`.
                 footer-template="asideLink.footerTemplate"
                 footer-title="{{asideLink.footerTitle}}"
                 footer-href="{{asideLink.footerUrl}}"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-notification>
             <oui-navbar-menu ng-switch-when="user"
                 header-breadcrumb="{{asideLink.nichandle}}"
                 header-title="{{asideLink.fullName}}"
                 name="{{asideLink.name}}"
                 links="asideLink.subLinks"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-menu>
             <oui-navbar-menu ng-switch-default
                 header-class="oui-navbar_mobile-only"
@@ -408,7 +409,7 @@ This property is only available for root links of `aside-links`.
                 header-title="{{asideLink.headerTitle}}"
                 name="{{asideLink.name}}"
                 links="asideLink.subLinks"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-menu>
         </oui-navbar-dropdown>
     </oui-navbar-aside>
@@ -464,8 +465,8 @@ subLinks = [];
 ```html:preview
 <div class="oui-doc-preview-only" style="margin-bottom: 15px;">
 <oui-radio-toggle-group id="xxxxx" model="$ctrl.placeholderNotification[0].subLinks">
-    <oui-radio text="Error in notification" value="null"></oui-radio>
-    <oui-radio text="No notification" value="[]" default></oui-radio>
+    <oui-radio value="null">Error in notification</oui-radio>
+    <oui-radio value="[]" default>No notification</oui-radio>
 </oui-radio-toggle-group>
 </div>
 <div class="oui-doc-preview-only-keep-children" style="margin-bottom: 15px;">
@@ -485,7 +486,7 @@ subLinks = [];
                 links="$ctrl.placeholderNotification[0].subLinks"
                 limit-to="$ctrl.placeholderNotification[0].limitTo"
                 header-title="{{$ctrl.placeholderNotification[0].headerTitle}}"
-                align="end"
+                placement="end"
                 fixed></oui-navbar-notification>
         </oui-navbar-dropdown>
     </oui-navbar-aside>
@@ -549,7 +550,7 @@ The property `name` **must be** `"user"`.
 | `text`                | string    | @         | yes               | n/a                                   | n/a       | text of the button
 | `aria-label`          | string    | @?        | yes               | n/a                                   | n/a       | accessibility label of the button
 | `icon-class`          | string    | @?        | yes               | n/a                                   | n/a       | classname of the button icon
-| `icon-animated`        | boolean   | <?        | no                | `true`, `false`                       | `false`   | defines if the menu item icon should be shaking 
+| `icon-animated`       | boolean   | <?        | no                | `true`, `false`                       | `false`   | defines if the menu item icon should be shaking 
 | `icon-badge`          | number    | <?        | no                | n/a                                   | n/a       | number on the badge of the button icon
 | `on-click`            | function  | &         | no                | n/a                                   | n/a       | click callback
 
@@ -562,7 +563,7 @@ The property `name` **must be** `"user"`.
 | `header-class`        | string    | @?        | yes               | n/a                                   | n/a       | classname of the header
 | `header-title`        | string    | @?        | yes               | n/a                                   | n/a       | text of the header title
 | `header-breadcrumb`   | string    | @?        | yes               | n/a                                   | n/a       | text of the header breadcrumb
-| `align`               | string    | @?        | yes               | `start`, `end`                        | `start`   | alignment of the menu to his trigger
+| `placement`           | string    | @?        | yes               | `start`, `end`                        | `start`   | placement of the menu to his trigger
 | `back-button`         | boolean   | <?        | yes               | `true`, `false`                       | `false`   | display a back button in the header title
 | `fixed`               | boolean   | <?        | yes               | `true`, `false`                       | `false`   | flag for responsive menu
 
@@ -578,7 +579,7 @@ The property `name` **must be** `"user"`.
 | `footer-template`     | string    | <?        | yes               | n/a                                   | n/a       | HTML template of the menu footer
 | `footer-title`        | string    | @?        | yes               | n/a                                   | n/a       | text of the footer link
 | `footer-href`         | string    | @?        | yes               | n/a                                   | n/a       | url of the footer link
-| `align`               | string    | @?        | yes               | `start`, `end`                        | `start`   | alignment of the menu to his trigger
+| `placement`           | string    | @?        | yes               | `start`, `end`                        | `start`   | placement of the menu to his trigger
 | `fixed`               | boolean   | <?        | yes               | `true`, `false`                       | `false`   | flag for responsive menu
 
 ### oui-navbar-toggler
@@ -592,7 +593,6 @@ The property `name` **must be** `"user"`.
 | Attribute             | Type      | Binding   | One-time Binding  | Values                                | Default   | Description
 | ----                  | ----      | ----      | ----              | ----                                  | ----      | ----
 | `name`                | string    | @         | yes               | n/a                                   | n/a       | group name of the link
-| `text`                | string    | @         | yes               | n/a                                   | n/a       | text of the link
 | `aria-label`          | string    | @?        | yes               | n/a                                   | n/a       | accessibility label of the link
 | `href`                | string    | @?        | yes               | n/a                                   | n/a       | href of the link
 | `state`               | string    | @?        | yes               | n/a                                   | n/a       | state of the link

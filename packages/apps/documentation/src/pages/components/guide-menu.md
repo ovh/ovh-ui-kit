@@ -5,7 +5,7 @@
 ### Default
 
 ```html:preview
-<oui-guide-menu text="Guides" align="start">
+<oui-guide-menu text="Guides" placement="start">
     <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
     <oui-guide-menu-item on-click="$ctrl.onActionClick()">Guide 2 (button)</oui-guide-menu-item>
     <oui-guide-menu-divider></oui-guide-menu-divider>
@@ -16,7 +16,7 @@
 ### Guide with sections
 
 ```html:preview
-<oui-guide-menu text="Guides" align="start">
+<oui-guide-menu text="Guides" placement="start">
     <oui-guide-menu-group label="Section 1">
         <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
         <oui-guide-menu-item on-click="$ctrl.onActionClick()">Guide 2 (button)</oui-guide-menu-item>
@@ -30,10 +30,10 @@
 </oui-guide-menu>
 ```
 
-### In Page-header
+### In Header
 
 ```html:preview
-<oui-page-header heading="My title" description="My subtitle">à
+<oui-header heading="My title" description="My subtitle">à
     <oui-guide-menu text="Guides">
         <oui-guide-menu-group label="Section 1">
             <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
@@ -46,7 +46,7 @@
         <oui-guide-menu-divider></oui-guide-menu-divider>
         <oui-guide-menu-item href="#" external>External link</oui-guide-menu-item>
     </oui-guide-menu>
-</oui-page-header>
+</oui-header>
 ```
 
 ## API
@@ -57,7 +57,7 @@
 | ----          | ----      | ----      | ----              | ----                      | ----      | ----
 | `text`        | string    | @         | yes               | n/a                       | n/a       | button guide text
 | `aria-label`  | string    | @?        | yes               | n/a                       | n/a       | accessibility label
-| `align`       | string    | @?        | yes               | `start`,`center`,`end`    | `end`     | menu alignment
+| `placement`   | string    | @?        | yes               | `start`,`center`,`end`    | `end`     | placement of the dropdown menu
 
 ### oui-guide-menu-item
 
@@ -68,10 +68,6 @@
 | `disabled`    | boolean   | <?        | no                | `true`, `false`           | `false`   | disable (button)
 | `external`    | boolean   | @?        | yes               | `true`, `false`           | `false`   | display external icon (link)
 | `on-click`    | function  | &?        | no                | n/a                       | n/a       | on-click handler (button)
-
-#### Deprecated
-
-* `text`: Replaced by transclude value
 
 ### oui-guide-menu-group
 

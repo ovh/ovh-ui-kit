@@ -5,14 +5,12 @@ export default {
     template,
     controller,
     transclude: {
-        sectionSlot: "?ouiSelectPickerSection",
-        deprecatedSlot: "?span" // Deprecated: Replaced by "oui-select-picker-section"
+        sectionSlot: "?ouiSelectPickerSection"
     },
     bindings: {
         model: "=?",
         id: "@?",
         name: "@?",
-        text: "@", // Deprecated: Replaced by "label"
         label: "@",
         description: "@?",
         placeholder: "@?",

@@ -27,8 +27,8 @@
 ```html:preview
 <oui-progress>
     <oui-progress-bar type="info"
-        value="$ctrl.progressData.value1"
-        text="Progress: {{$ctrl.progressData.value1}}%">
+        value="$ctrl.progressData.value1">
+        Progress: {{$ctrl.progressData.value1}}%
     </oui-progress-bar>
 </oui-progress>
 ```
@@ -38,8 +38,8 @@
 ```html:preview
 <oui-progress max-value="200">
     <oui-progress-bar type="success"
-        value="150"
-        text="Installing components: 150/200">
+        value="150">
+        Installing components: 150/200
     </oui-progress-bar>
 </oui-progress>
 ```
@@ -123,10 +123,6 @@
 | ----          | ----      | ----    | ----                | ----                                  | ----          | ----
 | `type`        | string    | @       | yes                 | `info`, `success`, `warning`, `error` | `info`        | type of the progress bar
 | `value`       | number    | <       | no                  | n/a                                   | n/a           | current value of progress bar
-
-#### Deprecated
-
-* `text`: Replaced by transclude value
 
 ### oui-progress-threshold
 

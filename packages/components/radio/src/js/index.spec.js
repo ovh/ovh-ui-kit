@@ -64,9 +64,9 @@ describe("ouiRadio", () => {
                 });
             });
 
-            describe("text attribute", () => {
+            describe("transclude value", () => {
                 it("should display a text inside the radio's text container", () => {
-                    const element = TestUtils.compileTemplate('<oui-radio text="test"></oui-radio>');
+                    const element = TestUtils.compileTemplate("<oui-radio>test</oui-radio>");
 
                     const textContainerRadioElement = getRadioTextContainerElement(element);
                     expect(angular.element(textContainerRadioElement).html()).toBe("test");

@@ -17,7 +17,7 @@
         ng-attr-aria-labelledby="{{:: $ctrl.id }}-text"
         ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}">
         <span class="oui-checkbox__label">
-            <span id="{{:: $ctrl.id }}-text" ng-transclude>{{$ctrl.text}}</span>
+            <span id="{{:: $ctrl.id }}-text" ng-transclude></span>
             <span class="oui-checkbox__icon">
                 <span class="oui-icon oui-icon-checkbox-unchecked"></span>
                 <span class="oui-icon oui-icon-checkbox-checked"></span>

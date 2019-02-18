@@ -9,9 +9,9 @@
             <oui-navbar-link
                 name="{{::link.name}}"
                 state="{{::link.state}}"
-                text="{{::link.friendlyName || link.title}}"
                 variant="primary"
                 ng-repeat="link in $ctrl.navigation | filter:state:'!'">
+                {{::link.friendlyName || link.title}}
             </oui-navbar-link>
         </oui-navbar-main>
     </oui-navbar>
