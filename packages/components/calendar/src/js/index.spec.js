@@ -1,3 +1,5 @@
+import "flatpickr/dist/l10n/fr.js";
+
 describe("ouiCalendar", () => {
     let $timeout;
     let testUtils;
