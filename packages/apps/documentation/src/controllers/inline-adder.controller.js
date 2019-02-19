@@ -1,13 +1,13 @@
 export default class {
-    onAdd (form) {
-        this.addedForm = form;
-    }
+  onAdd(form) {
+    this.addedForm = form;
+  }
 
-    onRemove (form) {
-        this.removedForm = form;
-    }
+  onRemove(form) {
+    this.removedForm = form;
+  }
 
-    onChange (forms) {
-        this.changedForms = forms;
-    }
+  onChange(forms) {
+    this.changedForms = forms;
+  }
 }

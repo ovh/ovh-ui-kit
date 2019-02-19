@@ -1,12 +1,12 @@
-import angular from "angular";
-import Tabs from "./tabs.component";
-import TabsItem from "./item/tabs-item.component";
+import angular from 'angular';
+import Tabs from './tabs.component';
+import TabsItem from './item/tabs-item.component';
 
-const moduleName = "oui.tabs";
+const moduleName = 'oui.tabs';
 
 angular
-    .module(moduleName, [])
-    .component("ouiTabs", Tabs)
-    .component("ouiTabsItem", TabsItem);
+  .module(moduleName, [])
+  .component('ouiTabs', Tabs)
+  .component('ouiTabsItem', TabsItem);
 
 export default moduleName;

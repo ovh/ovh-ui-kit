@@ -1,5 +1,4 @@
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-spinner {
   display: inline-block;
@@ -77,4 +76,8 @@
     background-image: @oui-spinner-l-background-image;
     animation: scale @oui-spinner-l-speed-scale 0ms 1 linear, rotation @oui-spinner-l-speed-rotation @oui-spinner-l-speed-scale infinite linear;
   }
+}
+
+oui-spinner {
+  &:extend(.oui-spinner);
 }

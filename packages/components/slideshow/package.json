@@ -6,6 +6,8 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
+    "@ovh/ui-kit.core": "*",
+    "@ovh/ui-kit.modal": "*",
     "@ovh/ui-kit.spinner": "*"
   },
   "peerDependencies": {

@@ -9,7 +9,7 @@ root = true
 
 # Change these settings to your own preference
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 # We recommend you to keep these unchanged
 end_of_line = lf
@@ -17,17 +17,9 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.js]
+[*.html]
 indent_style = space
 indent_size = 4
 
-[*.less]
-indent_style = space
-indent_size = 2
-
 [*.md]
 trim_trailing_whitespace = false
-
-[package.json]
-indent_style = space
-indent_size = 2

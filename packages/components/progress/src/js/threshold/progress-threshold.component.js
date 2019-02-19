@@ -1,11 +1,11 @@
-import controller from "./progress-threshold.controller";
+import controller from './progress-threshold.controller';
 
 export default {
-    controller,
-    bindings: {
-        value: "<"
-    },
-    require: {
-        progressCtrl: "^^ouiProgress"
-    }
+  controller,
+  bindings: {
+    value: '<',
+  },
+  require: {
+    progressCtrl: '^^ouiProgress',
+  },
 };

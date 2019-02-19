@@ -1,20 +1,20 @@
-import controller from "./checkbox.controller";
-import template from "./checkbox.html";
+import controller from './checkbox.controller';
+import template from './checkbox.html';
 
 export default {
-    template,
-    controller,
-    require: {
-        form: "?^^form"
-    },
-    bindings: {
-        model: "=?",
-        id: "@?",
-        name: "@?",
-        description: "@?",
-        disabled: "<?",
-        required: "<?",
-        onChange: "&"
-    },
-    transclude: true
+  template,
+  controller,
+  require: {
+    form: '?^^form',
+  },
+  bindings: {
+    model: '=?',
+    id: '@?',
+    name: '@?',
+    description: '@?',
+    disabled: '<?',
+    required: '<?',
+    onChange: '&',
+  },
+  transclude: true,
 };

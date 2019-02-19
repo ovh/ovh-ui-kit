@@ -6,6 +6,8 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
+    "@ovh/ui-kit.button": "*",
+    "@ovh/ui-kit.core": "*",
     "popper.js": "^1.14.4"
   },
   "peerDependencies": {

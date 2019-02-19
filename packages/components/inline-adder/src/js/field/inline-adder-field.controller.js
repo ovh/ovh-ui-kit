@@ -1,25 +1,25 @@
-import { addBooleanParameter } from "@ovh/ui-kit.core/src/js/component-utils";
+import { addBooleanParameter } from '@ovh/ui-kit.core/src/js/component-utils';
 
 export default class {
-    constructor ($attrs, $element, $timeout) {
-        "ngInject";
+  constructor($attrs, $element, $timeout) {
+    'ngInject';
 
-        this.$attrs = $attrs;
-        this.$element = $element;
-        this.$timeout = $timeout;
-    }
+    this.$attrs = $attrs;
+    this.$element = $element;
+    this.$timeout = $timeout;
+  }
 
-    $onInit () {
-        addBooleanParameter(this, "adaptive");
-    }
+  $onInit() {
+    addBooleanParameter(this, 'adaptive');
+  }
 
-    $postLink () {
-        this.$timeout(() => {
-            this.$element.addClass("oui-inline-adder__field");
+  $postLink() {
+    this.$timeout(() => {
+      this.$element.addClass('oui-inline-adder__field');
 
-            if (this.adaptive) {
-                this.$element.addClass("oui-inline-adder__field_adaptive");
-            }
-        });
-    }
+      if (this.adaptive) {
+        this.$element.addClass('oui-inline-adder__field_adaptive');
+      }
+    });
+  }
 }

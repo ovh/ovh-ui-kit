@@ -1,10 +1,10 @@
-import controller from "./dropdown.controller";
+import controller from './dropdown.controller';
 
 export default {
-    controller,
-    bindings: {
-        placement: "@?",
-        arrow: "<?",
-        persistent: "<?"
-    }
+  controller,
+  bindings: {
+    placement: '@?',
+    arrow: '<?',
+    persistent: '<?',
+  },
 };

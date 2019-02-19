@@ -1,14 +1,14 @@
-import controller from "./stepper.controller.js";
-import template from "./stepper.html";
+import controller from './stepper.controller';
+import template from './stepper.html';
 
 export default {
-    bindings: {
-        name: "@",
-        id: "@",
-        onInit: "&",
-        onFinish: "&"
-    },
-    controller,
-    template,
-    transclude: true
+  bindings: {
+    name: '@',
+    id: '@',
+    onInit: '&',
+    onFinish: '&',
+  },
+  controller,
+  template,
+  transclude: true,
 };

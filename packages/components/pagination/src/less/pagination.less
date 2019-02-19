@@ -1,7 +1,6 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_constants';
 @import (reference) '~@ovh/ui-kit.button/src/less/_mixins';
 @import (reference) './_mixins';
-@import './_normalize';
 
 .oui-pagination {
   @oui-button-selector: oui-button;
@@ -50,4 +49,8 @@
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button { -webkit-appearance: none; }
   }
+}
+
+oui-pagination {
+  display: block;
 }
