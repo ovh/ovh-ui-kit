@@ -43,39 +43,6 @@ describe('ouiMessage', () => {
 
         expect(getIcons(element, 'oui-icon-info_circle').length).toBe(1);
       });
-
-      it('should display close button', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="info"></oui-message>');
-
-        expect(getCloseButton(element)).toBeDefined();
-      });
-
-      it('should dismiss message when close button is clicked', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="info"></oui-message>');
-
-        getCloseButton(element).click();
-
-        expect(isMessageDisplayed(element)).toBe(false);
-      });
-
-      it('should assign binding value to aria-label attribute on close button', () => {
-        const closeButtonLabel = 'My label';
-        const element = TestUtils.compileTemplate(`<oui-message type="info" aria-close-button-label="${closeButtonLabel}"></oui-message>`);
-
-        expect(angular.element(getCloseButton(element)).attr('aria-label')).toBe(closeButtonLabel);
-      });
-
-
-      it('should raise on-dismissed event after close button is clicked', () => {
-        const onDismissedSpy = jasmine.createSpy('onDismissedSpy');
-        const element = TestUtils.compileTemplate('<oui-message type="info" on-dismissed="$ctrl.onDismissed()"></oui-message>', {
-          onDismissed: onDismissedSpy,
-        });
-
-        getCloseButton(element).click();
-
-        expect(onDismissedSpy).toHaveBeenCalled();
-      });
     });
 
     describe('when success type', () => {
@@ -84,15 +51,42 @@ describe('ouiMessage', () => {
 
         expect(getIcons(element, 'oui-icon-success_circle').length).toBe(1);
       });
+    });
 
-      it('should display close button', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="success"></oui-message>');
+    describe('when error type', () => {
+      it('should display error icon', () => {
+        const element = TestUtils.compileTemplate('<oui-message type="error"></oui-message>');
 
+        expect(getIcons(element, 'oui-icon-error_circle').length).toBe(1);
+      });
+    });
+
+    describe('when warning type', () => {
+      it('should display warning icon', () => {
+        const element = TestUtils.compileTemplate('<oui-message type="warning"></oui-message>');
+
+        expect(getIcons(element, 'oui-icon-warning_circle').length).toBe(1);
+      });
+    });
+
+    describe('when dismissable property is defined', () => {
+      it('should show the close button if no value', () => {
+        const element = TestUtils.compileTemplate('<oui-message dismissable></oui-message>');
         expect(getCloseButton(element)).toBeDefined();
       });
 
+      it('should show the close button if property is true', () => {
+        const element = TestUtils.compileTemplate('<oui-message dismissable="true"></oui-message>');
+        expect(getCloseButton(element)).toBeDefined();
+      });
+
+      it('should not show the close button if property is false', () => {
+        const element = TestUtils.compileTemplate('<oui-message dismissable="false"></oui-message>');
+        expect(getCloseButton(element)).not.toBeDefined();
+      });
+
       it('should dismiss message when close button is clicked', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="success"></oui-message>');
+        const element = TestUtils.compileTemplate('<oui-message dismissable></oui-message>');
 
         getCloseButton(element).click();
 
@@ -101,68 +95,20 @@ describe('ouiMessage', () => {
 
       it('should assign binding value to aria-label attribute on close button', () => {
         const closeButtonLabel = 'My label';
-        const element = TestUtils.compileTemplate(`<oui-message type="success" aria-close-button-label="${closeButtonLabel}"></oui-message>`);
+        const element = TestUtils.compileTemplate(`<oui-message aria-close-button-label="${closeButtonLabel}" dismissable></oui-message>`);
 
         expect(angular.element(getCloseButton(element)).attr('aria-label')).toBe(closeButtonLabel);
       });
 
-
       it('should raise on-dismissed event after close button is clicked', () => {
         const onDismissedSpy = jasmine.createSpy('onDismissedSpy');
-        const element = TestUtils.compileTemplate('<oui-message type="success" on-dismissed="$ctrl.onDismissed()"></oui-message>', {
+        const element = TestUtils.compileTemplate('<oui-message on-dismissed="$ctrl.onDismissed()" dismissable></oui-message>', {
           onDismissed: onDismissedSpy,
         });
 
         getCloseButton(element).click();
 
         expect(onDismissedSpy).toHaveBeenCalled();
-      });
-    });
-
-    describe('when error type', () => {
-      let element;
-      beforeEach(() => {
-        element = TestUtils.compileTemplate('<oui-message type="error"></oui-message>');
-      });
-
-      it('should display error icon', () => {
-        expect(getIcons(element, 'oui-icon-error_circle').length).toBe(1);
-      });
-
-      it('should not display close button', () => {
-        expect(getCloseButton(element)).not.toBeDefined();
-      });
-    });
-
-    describe('when warning type', () => {
-      let element;
-      beforeEach(() => {
-        element = TestUtils.compileTemplate('<oui-message type="warning"></oui-message>');
-      });
-
-      it('should display warning icon', () => {
-        expect(getIcons(element, 'oui-icon-warning_circle').length).toBe(1);
-      });
-
-      it('should not display close button', () => {
-        expect(getCloseButton(element)).not.toBeDefined();
-      });
-    });
-
-    describe('when dismissable property is defined', () => {
-      it('should show the close button if no value', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="error" dismissable></oui-message>');
-        expect(getCloseButton(element)).toBeDefined();
-      });
-
-      it('should show the close button if property is true', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="error" dismissable="true"></oui-message>');
-        expect(getCloseButton(element)).toBeDefined();
-      });
-
-      it('should not show the close button if property is false', () => {
-        const element = TestUtils.compileTemplate('<oui-message type="error" dismissable="false"></oui-message>');
-        expect(getCloseButton(element)).not.toBeDefined();
       });
     });
   });

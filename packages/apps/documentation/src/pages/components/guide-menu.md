@@ -5,7 +5,7 @@
 ### Default
 
 ```html:preview
-<oui-guide-menu text="Guides" placement="start">
+<oui-guide-menu text="Guides">
     <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
     <oui-guide-menu-item on-click="$ctrl.onActionClick()">Guide 2 (button)</oui-guide-menu-item>
     <oui-guide-menu-divider></oui-guide-menu-divider>
@@ -16,7 +16,7 @@
 ### Guide with sections
 
 ```html:preview
-<oui-guide-menu text="Guides" placement="start">
+<oui-guide-menu text="Guides">
     <oui-guide-menu-group label="Section 1">
         <oui-guide-menu-item href="#">Guide 1 (link)</oui-guide-menu-item>
         <oui-guide-menu-item on-click="$ctrl.onActionClick()">Guide 2 (button)</oui-guide-menu-item>
@@ -57,7 +57,7 @@
 | ----          | ----      | ----      | ----              | ----                      | ----      | ----
 | `text`        | string    | @         | yes               | n/a                       | n/a       | button guide text
 | `aria-label`  | string    | @?        | yes               | n/a                       | n/a       | accessibility label
-| `placement`   | string    | @?        | yes               | `start`,`center`,`end`    | `end`     | placement of the dropdown menu
+| `placement`   | string    | @?        | yes               | `start`, `center`, `end`  | `start`   | placement of the dropdown menu
 
 ### oui-guide-menu-item
 
