@@ -11,5 +11,8 @@
   },
   "peerDependencies": {
     "angular": ">=1.6.x"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.11"
   }
 }

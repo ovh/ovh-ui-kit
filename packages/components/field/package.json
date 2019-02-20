@@ -10,6 +10,7 @@
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.input": "*",
     "@ovh/ui-kit.popover": "*",
+    "@ovh/ui-kit.radio": "*",
     "@ovh/ui-kit.select": "*",
     "@ovh/ui-kit.switch": "*",
     "@ovh/ui-kit.textarea": "*"

@@ -4,12 +4,12 @@
         aria-label="Exit"
         ng-click="$popoverCtrl.closePopover()">
     </button>
-    <div class="oui-popover__content-container"
+    <div class="oui-popover__content"
         ng-if="::!$popoverCtrl.template"
         ng-attr-id="{{:: $popoverCtrl.id }}"
         ng-bind="$popoverCtrl.text || $popoverCtrl.title">
     </div>
-    <div class="oui-popover__content-container"
+    <div class="oui-popover__content"
         ng-if="::!!$popoverCtrl.template"
         ng-attr-id="{{:: $popoverCtrl.id }}"
         ng-include="$popoverCtrl.template">

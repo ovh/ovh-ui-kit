@@ -1,12 +1,11 @@
 <dl class="oui-tile__definition">
     <dt class="oui-tile__term">
         <span ng-bind="::$ctrl.term"></span>
-        <oui-popover ng-if="::!!$ctrl.termPopover">
-            <button type="button" class="oui-popover-button" aria-label="Help" oui-popover-trigger></button>
-            <oui-popover-content>
-                <div ng-bind=":: $ctrl.termPopover"></div>
-            </oui-popover-content>
-        </oui-popover>
+        <button type="button" class="oui-popover-button"
+            aria-label="Help"
+            ng-if="::!!$ctrl.termPopover"
+            oui-popover="{{::$ctrl.termPopover}}">
+        </button>
     </dt>
     <dd class="oui-tile__description" ng-transclude="descriptionSlot">
         <span ng-bind="::$ctrl.description"></span>
