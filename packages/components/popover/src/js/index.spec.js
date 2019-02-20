@@ -60,16 +60,33 @@ describe('ouiPopover', () => {
       });
 
       it('should create a popover, next to the trigger, with the content of the template', () => {
+        const foo = 'bar';
         const component = testUtils.compileTemplate(`<div>
-                    <button class="trigger" oui-popover="foo" oui-popover-template="popover.html"></button>
-                    <script type="text/ng-template" id="popover.html">foo</script>
-                    </div>`);
+            <button class="trigger" oui-popover oui-popover-template="popover.html"></button>
+            <script type="text/ng-template" id="popover.html">${foo}</script>
+            </div>`);
 
         $timeout.flush();
 
         const popover = angular.element(component[0].querySelector('.trigger')).next();
 
-        expect(popover.text().trim()).toBe('foo');
+        expect(popover.text().trim()).toBe(foo);
+      });
+
+      it('should extend the scope of the template', () => {
+        const foo = 'bar';
+        const component = testUtils.compileTemplate(`<div>
+          <button class="trigger" oui-popover oui-popover-template="popover.html" oui-popover-scope="$ctrl"></button>
+          <script type="text/ng-template" id="popover.html"><span ng-bind="$ctrl.foo"></span></script>
+          </div>`, {
+          foo,
+        });
+
+        $timeout.flush();
+
+        const popover = angular.element(component[0].querySelector('.trigger')).next();
+
+        expect(popover.text().trim()).toBe(foo);
       });
 
       it('should set aria-expanded when trigger is clicked', () => {
