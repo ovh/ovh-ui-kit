@@ -20,7 +20,7 @@
         ng-if="$ctrl.isErrorVisible()">
         <span ng-messages="$ctrl.getFirstError()" role="alert">
             <span class="oui-icon oui-icon-error" aria-hidden="true"></span>
-            <span data-ng-repeat="errorKey in $ctrl.getMessagesOrder()"
+            <span ng-repeat="errorKey in $ctrl.getMessagesOrder()"
                   ng-message="{{ :: errorKey }}"
                   ng-bind="$ctrl.getErrorMessage(errorKey)">
             </span>

@@ -44,7 +44,7 @@
     <oui-tile-definition
         term="Term"
         description="This is a description">
-        <oui-action-menu data-compact placement="end">
+        <oui-action-menu compact>
             <oui-action-menu-item>Action 1</oui-action-menu-item>
         </oui-action-menu>
     </oui-tile-definition>

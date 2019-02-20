@@ -12,7 +12,7 @@ export default class {
   $onInit() {
     addBooleanParameter(this, 'compact');
     addBooleanParameter(this, 'disabled');
-    addDefaultParameter(this, 'placement', this.compact ? 'center' : 'start');
+    addDefaultParameter(this, 'placement', (this.tile || this.datagrid) ? 'end' : 'start');
   }
 
   $postLink() {

@@ -10,7 +10,7 @@ export default class {
   }
 
   $onInit() {
-    addDefaultParameter(this, 'placement', 'end');
+    addDefaultParameter(this, 'placement', this.header ? 'end' : 'start');
   }
 
   $postLink() {

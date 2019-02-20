@@ -4,6 +4,10 @@ import template from './action-menu.html';
 export default {
   template,
   controller,
+  require: {
+    tile: '?^^ouiTile',
+    datagrid: '?^^ouiDatagrid',
+  },
   bindings: {
     text: '@',
     placement: '@?',
