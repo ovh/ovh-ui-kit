@@ -28,20 +28,20 @@ export default class {
 
     this.documentClickHandler = (evt) => {
       if ((evt && evt.type === 'click')
-                && (!evt.target || !evt.target.getAttribute || evt.target.getAttribute('type') !== 'submit')
-                && (this.triggerElement.contains(evt.target)
-                || (this.persistent && this.popperElement.contains(evt.target)))) {
+        && (!evt.target || !evt.target.getAttribute || evt.target.getAttribute('type') !== 'submit')
+        && (
+          this.triggerElement.contains(evt.target)
+          || (this.persistent && this.popperElement.contains(evt.target))
+        )
+      ) {
         return;
       }
-      this.triggerElement.focus();
       this.$scope.$apply(() => this.closeDropdown());
     };
 
     // Handle espace key press
     this.triggerKeyHandler = (evt) => {
-      if (evt
-                && evt.type === 'keydown'
-                && evt.which === KEY_ESCAPE) {
+      if (evt && evt.type === 'keydown' && evt.which === KEY_ESCAPE) {
         this.$scope.$apply(() => {
           this.closeDropdown();
         });
@@ -108,6 +108,7 @@ export default class {
     this.updatePopper();
 
     this.$document.on('click', this.documentClickHandler);
+    this.$document.on('keydown', evt => this.triggerKeyHandler(evt));
 
     // Update trigger
     if (this.triggerCtrl.afterOpen) {
