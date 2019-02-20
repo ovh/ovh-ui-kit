@@ -39,9 +39,6 @@
       }
     }
 
-    /**
-     * &__content is kept only for backward compatibility.
-     */
     &__content {
       display: flex;
       align-items: center;
@@ -51,18 +48,6 @@
       });
     }
 
-    &-control {
-      margin-bottom: @oui-field-content-spacing;
-    }
-
-    &-helper {
-      margin: 0 0 @oui-field-content-spacing @oui-field-content-spacing;
-    }
-
-    /**
-     * &-control is kept only for backward compatibility.
-     */
-    &-control,
     &__control {
       width: @oui-field-control-default-size;
       margin-bottom: @oui-field-control-spacing;
@@ -87,10 +72,6 @@
       }
     }
 
-    /**
-     * &-helper is kept only for backward compatibility.
-     */
-    &-helper,
     &__helper {
       color: @oui-field-helper-color;
       font-size: @oui-field-helper-font-size;
@@ -105,10 +86,6 @@
       });
     }
 
-    /**
-     * Error message container.
-     * &_error is kept only for backward compatibility.
-     */
     &__error {
       display: none;
       color: @oui-field-error-color;

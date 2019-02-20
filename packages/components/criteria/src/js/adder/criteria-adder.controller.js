@@ -25,7 +25,9 @@ export default class {
   onColumnChange() {
     this.resetValueModel();
     this.selectableOperators = this.filterSelectableOperators();
-    this.operatorModel = this.selectableOperators[0];
+
+    const [selectableOperators] = this.selectableOperators;
+    this.operatorModel = selectableOperators;
   }
 
   onFormSubmit() {
@@ -80,7 +82,9 @@ export default class {
       name: this.getBooleanLabel(value),
       value,
     }));
-    this.valueModel[this.columnModel.type] = this.booleanChoices[0];
+
+    const [booleanChoices] = this.booleanChoices;
+    this.valueModel[this.columnModel.type] = booleanChoices;
   }
 
   getOptionsLabel(value) {
@@ -101,7 +105,8 @@ export default class {
       }))
       .sort((a, b) => String(a.name).localeCompare(String(b.name)));
 
-    this.valueModel[this.columnModel.type] = this.optionsChoices[0];
+    const [optionsChoices] = this.optionsChoices;
+    this.valueModel[this.columnModel.type] = optionsChoices;
   }
 
   resetValueModel() {
@@ -132,16 +137,19 @@ export default class {
     addDefaultParameter(this, 'placement', 'center');
 
     this.$timeout(() => {
-      this.dropdownContent = this.$element[0];
+      const { 0: element } = this.$element;
+      this.dropdownContent = element;
     });
 
     // Auto select first column
     if (this.properties) {
-      this.columnModel = this.properties[0];
+      const [properties] = this.properties;
+      this.columnModel = properties;
     }
 
     this.selectableOperators = this.filterSelectableOperators();
-    this.operatorModel = this.selectableOperators[0];
+    const [selectableOperators] = this.selectableOperators;
+    this.operatorModel = selectableOperators;
 
     this.resetValueModel();
   }

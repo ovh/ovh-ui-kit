@@ -5,7 +5,6 @@ export default {
   controller,
   template,
   bindings: {
-    text: '@',
     href: '@?',
     state: '@?',
     stateParams: '<?',
@@ -13,4 +12,5 @@ export default {
     active: '<?',
     disabled: '<?',
   },
+  transclude: true,
 };

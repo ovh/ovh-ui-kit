@@ -17,7 +17,7 @@ export default class PopoverController {
   }
 
   $onInit() {
-    this.id = `ouiPopover${this.$scope.$id}`;
+    this.id = this.id || `ouiPopover${this.$scope.$id}`;
     this.isPopoverOpen = false;
 
     addDefaultParameter(this, 'placement', 'right');
@@ -34,7 +34,6 @@ export default class PopoverController {
 
   setPopover() {
     this.$timeout(() => {
-      // Support for attribute `oui-popover`
       // Create a new scope to compile the popover next to the trigger
       const popoverScope = angular.extend(this.$scope.$new(true), { $popoverCtrl: this });
       const popoverTemplate = this.$compile(template)(popoverScope);
@@ -44,22 +43,23 @@ export default class PopoverController {
         .removeAttr('title') // Remove title to avoid native tooltip
         .after(popoverTemplate);
 
-      this.popperElement = this.$element.next()[0];
+      const { 0: popover } = this.$element.next();
+      this.popperElement = popover;
       this.arrowElement = this.popperElement.querySelector('.oui-popover__arrow');
     });
   }
 
   setTrigger() {
     this.$timeout(() => {
-      // Support for attribute `oui-popover`
-      this.triggerElement = this.$element[0];
-      this.$triggerElement = angular.element(this.triggerElement);
+      const { 0: trigger } = this.$element;
+      this.triggerElement = trigger;
 
-      this.$triggerElement
+      this.$element
         .addClass('oui-popover__trigger')
         .attr({
           'aria-haspopup': true,
           'aria-expanded': false,
+          'aria-describedby': this.id,
         })
         .on('click', () => this.onTriggerClick());
     });
@@ -86,8 +86,6 @@ export default class PopoverController {
     this.updatePopper();
 
     this.$document.on('keydown', evt => this.triggerKeyHandler(evt));
-
-    // Support for attribute `oui-popover`
     this.$element.attr('aria-expanded', true);
   }
 
@@ -95,8 +93,6 @@ export default class PopoverController {
     this.isPopoverOpen = false;
 
     this.$document.off('keydown', evt => this.triggerKeyHandler(evt));
-
-    // Support for attribute `oui-popover`
     this.$element.attr('aria-expanded', false);
   }
 
