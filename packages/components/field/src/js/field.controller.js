@@ -64,7 +64,8 @@ export default class FieldController {
       // If the control is a checkbox or a radio, we skip this part
       // because we don't want to link the field label to the first checkbox/radio.
       if (this.ids.length === 1 && this.controlElements.length === 1) {
-        this.for = this.ids[0];
+        const [ids] = this.ids;
+        this.for = ids;
       }
 
       this.$ouiFieldElement = angular.element(this.$element[0].querySelector('.oui-field'));
@@ -99,7 +100,7 @@ export default class FieldController {
 
       // Handle Popover aria
       if (this.labelPopover) {
-        this.popoverId = `oui-field-popover-${this.$scope.$id}`;
+        this.popoverId = `ouiFieldPopover${this.$scope.$id}`;
         if (this.for) {
           const $ouiFieldInput = angular.element(this.$element[0].querySelector(`#${this.for}`));
           $ouiFieldInput.attr('aria-describedby', this.popoverId);

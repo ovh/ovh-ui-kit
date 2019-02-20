@@ -8,6 +8,7 @@ export default () => {
     bindToController: {
       text: '@ouiPopover',
       title: '@?',
+      id: '@ouiPopoverId',
       placement: '@?ouiPopoverPlacement',
       template: '@?ouiPopoverTemplate',
     },

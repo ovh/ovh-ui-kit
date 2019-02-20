@@ -25,6 +25,8 @@
 
 ### Using a template with `oui-popover-template` attribute
 
+<oui-message type="warning">This method use <code class="oui-doc-codespan">ngInclude</code> to add the template in a popover. The content of your template will be compiled with a <strong>new</strong> scope. See <a href="https://docs.angularjs.org/api/ng/directive/ngInclude">ngInclude</a>.</oui-message>
+
 ```html:preview
 <button type="button" 
     class="oui-button oui-button_primary" 
@@ -38,8 +40,6 @@
 <p><a href="#">The quick brown fox jumps over the lazy dog</a></p>
 </script>
 ```
-
-**Note**: This method use `ngInclude` to add the template in a popover. The content of your template will be compiled with a **new** scope. See [ngInclude](https://docs.angularjs.org/api/ng/directive/ngInclude).
 
 ### All directions
 
@@ -105,5 +105,6 @@
 | Attribute                 | Type      | Binding   | One-time Binding  | Values                                                                                        | Default           | Description
 | ----                      | ----      | ----      | ----              | ----                                                                                          | ----              | ----
 | `oui-popover`             | string    | @         | no                | n/a                                                                                           | `title` attribute | popover content
+| `oui-popover-id`          | string    | @?        | yes               | n/a                                                                                           | n/a               | popover content id
 | `oui-popover-template`    | string    | @?        | no                | n/a                                                                                           | n/a               | popover content template
 | `oui-popover-placement`   | string    | @?        | yes               | See [Popper placements](https://popper.js.org/popper-documentation.html#Popper.placements)    | `right`           | modifier for alignment

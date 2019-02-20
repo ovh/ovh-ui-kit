@@ -1,3 +1,5 @@
+import findIndex from 'lodash/findIndex';
+
 const checkScrollDelay = 800;
 
 export default class {
@@ -41,11 +43,11 @@ export default class {
   }
 
   scrollLeft() {
-    this.scroll('left');
+    this.scrollTo('left');
   }
 
   scrollRight() {
-    this.scroll('right');
+    this.scrollTo('right');
   }
 
   initialCheck() {
@@ -57,7 +59,7 @@ export default class {
     }
   }
 
-  scroll(direction) {
+  scrollTo(direction) {
     const itemToGo = this.findItemToGo(direction);
     this.scrollToItem(direction, itemToGo);
   }
@@ -85,18 +87,13 @@ export default class {
       itemGutter = tabsList[1].offsetLeft - (tabsList[0].offsetLeft + tabsList[0].offsetWidth);
     }
 
-    let itemToGo = tabsList[0];
-    for (const item of tabsList) {
+    const index = findIndex(tabsList, (item) => {
       const itemStart = item.offsetLeft - tabsOffset;
-      if (direction === 'right' && itemStart <= tabsEnd + tabsOffset + itemGutter) {
-        itemToGo = item;
-      } else if (direction === 'left' && itemStart < tabsStart) {
-        itemToGo = item;
-      } else {
-        break;
-      }
-    }
-    return itemToGo;
+      return !(direction === 'right' && itemStart <= tabsEnd + tabsOffset + itemGutter)
+        && !(direction === 'left' && itemStart < tabsStart);
+    });
+
+    return tabsList[Math.max(index - 1, 0)];
   }
 
   scrollToItem(direction, item) {

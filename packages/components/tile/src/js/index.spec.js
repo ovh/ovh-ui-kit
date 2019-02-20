@@ -185,12 +185,14 @@ describe('ouiTile', () => {
 
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-definition term-popover="${termPopover}"></oui-tile-button>
-                </oui-tile>`,
+          <oui-tile-definition term-popover="${termPopover}"></oui-tile-button>
+        </oui-tile>`,
       );
 
-      const popoverButton = angular.element(element[0].querySelector('.oui-popover-button'));
-      const popoverContent = angular.element(element[0].querySelector('oui-popover-content'));
+      $timeout.flush();
+
+      const popoverButton = angular.element(element[0].querySelector('.oui-popover__trigger'));
+      const popoverContent = angular.element(element[0].querySelector('.oui-popover__content'));
 
       expect(popoverButton).toBeDefined();
       expect(popoverContent.html()).toContain(termPopover);

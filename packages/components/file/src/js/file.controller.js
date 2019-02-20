@@ -1,6 +1,7 @@
 import { addBooleanParameter, addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
 import find from 'lodash/find';
 import isEmpty from 'lodash/isEmpty';
+import orderBy from 'lodash/orderBy';
 import remove from 'lodash/remove';
 
 export default class {
@@ -17,7 +18,7 @@ export default class {
     this.$window = $window;
 
     this.translations = ouiFileConfiguration.translations;
-    this.units = this.$filter('orderBy')(ouiFileConfiguration.units, '-size');
+    this.units = orderBy(this.$filter('orderBy')(ouiFileConfiguration.units, '-size'), 'size', 'desc');
   }
 
   checkFileValidity(_file_) {
@@ -134,18 +135,31 @@ export default class {
   }
 
   getFileSize(file) {
-    let size;
+    let fileSize;
 
-    // Get best extension for file size
-    for (const unit of this.units) {
-      size = Math.floor(file.size / unit.size);
-      if (size > 1) {
-        size = `(${size} ${unit.suffix})`;
-        break;
+    // Parse units dictionnary in desc order
+    // and break when the best units for file size is found
+    // (when above 1 or last of dictionnary)
+    let size = 0;
+    this.units.forEach((unit) => {
+      if (unit.size && angular.isNumber(unit.size)) {
+        const unitSize = Math.floor(file.size / unit.size);
+
+        // Should be the closest to 1
+        if (!size) {
+          size = Math.max(unitSize, size);
+        } else {
+          size = Math.min(unitSize, size);
+        }
+
+        // Update only if the right unit
+        if (size === unitSize) {
+          fileSize = `(${size} ${unit.suffix})`;
+        }
       }
-    }
+    });
 
-    return size;
+    return fileSize;
   }
 
   setInputTouched() {

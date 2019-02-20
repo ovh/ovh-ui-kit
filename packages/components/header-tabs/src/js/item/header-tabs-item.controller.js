@@ -1,5 +1,4 @@
 import { addBooleanParameter } from '@ovh/ui-kit.core/src/js/component-utils';
-import template from './header-tabs-item.html';
 
 export default class {
   constructor($attrs, $compile, $element, $scope, $timeout) {
@@ -21,12 +20,6 @@ export default class {
       this.linkTarget = '_blank';
       this.linkRel = 'noopener';
     }
-  }
-
-  $postLink() {
-    this.$compile(template)(this.$scope, (clone) => {
-      this.$element.replaceWith(clone);
-    });
   }
 
   // Return value of "ui-sref"

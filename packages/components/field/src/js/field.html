@@ -10,13 +10,10 @@
                ng-attr-for="{{ ::$ctrl.for }}"
                ng-bind="::$ctrl.label">
         </label>
-        <oui-popover>
-            <button type="button" class="oui-popover-button" aria-label="Help" oui-popover-trigger></button>
-            <oui-popover-content>
-                <div class="oui-field__label-popover" id="{{:: $ctrl.popoverId }}"
-                     ng-bind-html=":: $ctrl.labelPopover"></div>
-            </oui-popover-content>
-        </oui-popover>
+        <button type="button" class="oui-popover-button"
+            aria-label="Help"
+            oui-popover="{{::$ctrl.labelPopover}}"
+            oui-popover-id="{{::$ctrl.popoverId}}"></button>
     </div>
     <div ng-class=":: 'oui-field__control oui-field__control_' + $ctrl.size" ng-transclude></div>
     <div class="oui-field__error"

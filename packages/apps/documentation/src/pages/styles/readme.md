@@ -51,7 +51,7 @@ yarn add ovh-ui-kit
 
 @import "path/to/ovh-ui-kit/packages/oui-button/button";
 @import "path/to/ovh-ui-kit/packages/oui-radio/radio";
-@import "path/to/ovh-ui-kit/packages/oui-formfield/formfield";
+@import "path/to/ovh-ui-kit/packages/oui-field/field";
 ```
 
 #### Use with [webpack](https://github.com/webpack/webpack) and [less-loader](https://github.com/webpack-contrib/less-loader)
@@ -65,7 +65,7 @@ Webpack provide the `~` prefix for package imports:
 
 @import "~ovh-ui-kit/packages/oui-button/button.less";
 @import "~ovh-ui-kit/packages/oui-radio/radio.less";
-@import "~ovh-ui-kit/packages/oui-formfield/formfield.less";
+@import "~ovh-ui-kit/packages/oui-field/field.less";
 ```
 
 #### Use with [bootstrap 3](https://github.com/twbs/bootstrap/tree/v3.3.7)
