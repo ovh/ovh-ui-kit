@@ -25,18 +25,25 @@
 
 ### Using a template with `oui-popover-template` attribute
 
-<oui-message type="warning">This method use <code class="oui-doc-codespan">ngInclude</code> to add the template in a popover. The content of your template will be compiled with a <strong>new</strong> scope. See <a href="https://docs.angularjs.org/api/ng/directive/ngInclude">ngInclude</a>.</oui-message>
+<oui-message type="warning">
+    This method use <code class="oui-doc-codespan">ngInclude</code> to add the template in a popover and create an <strong>isolated</strong> scope.<br />
+    Use <code class="oui-doc-codespan">oui-popover-scope</code> to extend the isolated scope and <code class="oui-doc-codespan">$ctrl</code> to access thoses values.
+</oui-message>
 
 ```html:preview
-<button type="button" 
+<input type="text" class="oui-input oui-input_inline"
+  ng-init="$ctrl.awesome = 'awesome'"
+  ng-model="$ctrl.awesome">
+<button type="button"
     class="oui-button oui-button_primary" 
     oui-popover
+    oui-popover-scope="$ctrl"
     oui-popover-template="popover.html">
     Click to toggle popover
 </button>
 
 <script type="text/ng-template" id="popover.html">
-<p ng-init="$ctrl.awesome = 'awesome'">This is an <strong ng-bind="$ctrl.awesome"></strong> popover content.</p>
+<p>This is an <strong ng-bind="$ctrl.awesome"></strong> popover content.</p>
 <p><a href="#">The quick brown fox jumps over the lazy dog</a></p>
 </script>
 ```
@@ -106,5 +113,6 @@
 | ----                      | ----      | ----      | ----              | ----                                                                                          | ----              | ----
 | `oui-popover`             | string    | @         | no                | n/a                                                                                           | `title` attribute | popover content
 | `oui-popover-id`          | string    | @?        | yes               | n/a                                                                                           | n/a               | popover content id
-| `oui-popover-template`    | string    | @?        | no                | n/a                                                                                           | n/a               | popover content template
 | `oui-popover-placement`   | string    | @?        | yes               | See [Popper placements](https://popper.js.org/popper-documentation.html#Popper.placements)    | `right`           | modifier for alignment
+| `oui-popover-template`    | string    | @?        | no                | n/a                                                                                           | n/a               | id of the popover template
+| `oui-popover-scope`       | string    | <?        | no                | n/a                                                                                           | n/a               | scope of the popover template

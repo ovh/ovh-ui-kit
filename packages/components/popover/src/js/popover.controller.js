@@ -35,7 +35,10 @@ export default class PopoverController {
   setPopover() {
     this.$timeout(() => {
       // Create a new scope to compile the popover next to the trigger
-      const popoverScope = angular.extend(this.$scope.$new(true), { $popoverCtrl: this });
+      const popoverScope = angular.extend(this.$scope.$new(true), {
+        $popoverCtrl: this,
+        $ctrl: this.scope,
+      });
       const popoverTemplate = this.$compile(template)(popoverScope);
 
       // Add compiled template after $element
@@ -107,8 +110,15 @@ export default class PopoverController {
     this.popper = new Popper(this.triggerElement, this.popperElement, {
       placement: this.placement,
       modifiers: {
+        flip: {
+          boundariesElement: 'viewport',
+        },
+        keepTogether: {
+          enabled: true,
+        },
         preventOverflow: {
-          boundariesElement: this.$document[0].body,
+          boundariesElement: 'viewport',
+          escapeWithReference: true,
         },
       },
     });

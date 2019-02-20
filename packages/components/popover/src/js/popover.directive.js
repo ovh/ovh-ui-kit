@@ -10,6 +10,7 @@ export default () => {
       title: '@?',
       id: '@ouiPopoverId',
       placement: '@?ouiPopoverPlacement',
+      scope: '<?ouiPopoverScope',
       template: '@?ouiPopoverTemplate',
     },
     controller,
