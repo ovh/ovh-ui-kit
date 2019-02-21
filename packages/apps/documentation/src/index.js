@@ -1,4 +1,3 @@
-/* eslint-disable sort-imports */
 import angular from 'angular';
 import ngAria from 'angular-aria';
 import ngMessages from 'angular-messages';
@@ -12,7 +11,6 @@ import './styles/index.less';
 import Components from './components';
 import Controllers from './controllers';
 import Routes from './index.routes';
-/* eslint-enable sort-imports */
 
 const moduleName = 'documentation';
 
