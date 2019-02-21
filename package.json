@@ -39,7 +39,7 @@
     "angular-sanitize": "^1.7.7",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
-    "babel-eslint": "^10.0.1",
+    "babel-eslint": "^8.2.6",
     "babel-plugin-angularjs-annotate": "^0.10.0",
     "babel-plugin-istanbul": "^5.1.1",
     "babel-plugin-lodash": "^3.3.4",

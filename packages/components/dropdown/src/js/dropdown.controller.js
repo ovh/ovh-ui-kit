@@ -145,6 +145,18 @@ export default class {
 
     this.popper = new Popper(this.triggerElement, this.popperElement, {
       placement,
+      modifiers: {
+        flip: {
+          boundariesElement: 'viewport',
+        },
+        keepTogether: {
+          enabled: true,
+        },
+        preventOverflow: {
+          boundariesElement: 'viewport',
+          escapeWithReference: true,
+        },
+      },
     });
   }
 

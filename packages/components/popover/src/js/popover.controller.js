@@ -107,8 +107,15 @@ export default class PopoverController {
     this.popper = new Popper(this.triggerElement, this.popperElement, {
       placement: this.placement,
       modifiers: {
+        flip: {
+          boundariesElement: 'viewport',
+        },
+        keepTogether: {
+          enabled: true,
+        },
         preventOverflow: {
-          boundariesElement: this.$document[0].body,
+          boundariesElement: 'viewport',
+          escapeWithReference: true,
         },
       },
     });
