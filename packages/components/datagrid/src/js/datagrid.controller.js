@@ -377,8 +377,8 @@ export default class DatagridController {
   }
 
   static createEmptyRows(pageSize) {
-    return Array(...{ length: pageSize })
-      .map(() => undefined);
+    return Array(pageSize)
+      .fill(undefined);
   }
 
   static filterElements(elements, tagName) {

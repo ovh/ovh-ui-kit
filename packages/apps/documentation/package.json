@@ -28,8 +28,10 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
     "autoprefixer": "^9.4.8",
-    "babel-loader": "^7.1.5",
+    "babel-loader": "^8.0.5",
     "cheerio": "^1.0.0-rc.2",
     "css-loader": "^2.1.0",
     "directory-tree-webpack-plugin": "^1.0.0",
