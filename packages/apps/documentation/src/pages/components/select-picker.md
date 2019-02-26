@@ -114,8 +114,8 @@
 | `placeholder` | string    | @?        | no                | n/a               | n/a       | initial label text of the select
 | `picture`     | string    | @?        | no                | n/a               | n/a       | picture path or icon class
 | `match`       | string    | @         | no                | n/a               | n/a       | object property matched to label
+| `variant`     | string    | @?        | yes               | `default`, `light`| `default` | define specific style
 | `values`      | array     | <         | no                | n/a               | n/a       | value of the radio or values of the select
 | `disabled`    | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
 | `required`    | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the field is required
 | `on-change`   | function  | &?        | no                | n/a               | n/a       | handler triggered when value has changed
-| `variant`     | string    | @?        | yes               | `default`, `light`| `default` | define specific style
