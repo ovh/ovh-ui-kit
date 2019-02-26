@@ -101,14 +101,14 @@ describe('ouiMessage', () => {
       });
 
       it('should raise on-dismissed event after close button is clicked', () => {
-        const onDismissedSpy = jasmine.createSpy('onDismissedSpy');
-        const element = TestUtils.compileTemplate('<oui-message on-dismissed="$ctrl.onDismissed()" dismissable></oui-message>', {
-          onDismissed: onDismissedSpy,
+        const onDismissSpy = jasmine.createSpy('onDismissSpy');
+        const element = TestUtils.compileTemplate('<oui-message on-dismissed="$ctrl.onDismiss()" dismissable></oui-message>', {
+          onDismiss: onDismissSpy,
         });
 
         getCloseButton(element).click();
 
-        expect(onDismissedSpy).toHaveBeenCalled();
+        expect(onDismissSpy).toHaveBeenCalled();
       });
     });
   });

@@ -13,6 +13,6 @@ export default class {
 
   dismiss() {
     this.dismissed = true;
-    this.onDismissed();
+    this.onDismiss();
   }
 }
