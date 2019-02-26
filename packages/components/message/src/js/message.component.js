@@ -8,7 +8,7 @@ export default {
     type: '@',
     ariaCloseButtonLabel: '@?',
     dismissable: '<?',
-    onDismissed: '&',
+    onDismiss: '&',
   },
   transclude: true,
 };

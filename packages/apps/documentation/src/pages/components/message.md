@@ -33,4 +33,4 @@
 | `type`                    | string    | @         | yes               | `info`, `success`, `warning`, `error` | n/a       | message type
 | `aria-close-button-label` | string    | @?        | yes               | n/a                                   | n/a       | accessibility label for close button
 | `dismissable`             | boolean   | <?        | yes               | `true`, `false`                       | `false`   | dismissable flag for close button
-| `on-dismissed`            | function  | &?        | no                | n/a                                   | n/a       | dismissed handler
+| `on-dismiss`              | function  | &?        | no                | n/a                                   | n/a       | dismiss callback
