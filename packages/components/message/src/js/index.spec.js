@@ -100,9 +100,9 @@ describe('ouiMessage', () => {
         expect(angular.element(getCloseButton(element)).attr('aria-label')).toBe(closeButtonLabel);
       });
 
-      it('should raise on-dismissed event after close button is clicked', () => {
+      it('should raise on-dismiss event after close button is clicked', () => {
         const onDismissSpy = jasmine.createSpy('onDismissSpy');
-        const element = TestUtils.compileTemplate('<oui-message on-dismissed="$ctrl.onDismiss()" dismissable></oui-message>', {
+        const element = TestUtils.compileTemplate('<oui-message on-dismiss="$ctrl.onDismiss()" dismissable></oui-message>', {
           onDismiss: onDismissSpy,
         });
 
