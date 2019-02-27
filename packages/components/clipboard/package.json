@@ -6,7 +6,10 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
+    "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.core": "*",
+    "@ovh/ui-kit.input": "*",
+    "@ovh/ui-kit.input-group": "*",
     "clipboard": "^2.0.1"
   },
   "peerDependencies": {

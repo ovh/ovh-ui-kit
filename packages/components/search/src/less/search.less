@@ -1,0 +1,71 @@
+@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
+@import (reference) '~@ovh/ui-kit.input-group/src/less/input-group';
+@import (reference) './_variables';
+
+// Search
+.oui-search {
+  &:extend(.oui-input-group all);
+
+  position: relative;
+
+  .oui-input:first-child {
+    padding-right: @oui-input-group-search-padding-right;
+    border-radius: @oui-global-base-radius;
+
+    &:disabled {
+      color: @oui-color-shuttle;
+    }
+  }
+
+  .oui-button {
+    width: auto;
+    min-width: 0;
+    display: flex; // For a better vertical centering
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 0 @oui-input-group-search-button-padding-x;
+    text-align: center;
+    z-index: 2; // Avoid to be hidden by inputs
+
+    &[type="reset"] {
+      right: @oui-input-group-search-reset-right;
+      font-size: @oui-input-group-search-reset-icon-size;
+    }
+
+    &[type="submit"] {
+      right: @oui-input-group-search-submit-right;
+      font-size: @oui-input-group-search-submit-icon-size;
+    }
+
+    &,
+    &:hover,
+    &:focus {
+      color: @oui-color-sapphire;
+      border-color: transparent;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    &:disabled {
+      color: @oui-color-silver;
+      border-color: transparent;
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .oui-icon {
+    display: block;
+    color: inherit;
+    font-size: inherit;
+  }
+}
+
+oui-search {
+  // The component hasn't the root classname,
+  // No need to extend .oui-search
+  display: block;
+}

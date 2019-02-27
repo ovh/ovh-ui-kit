@@ -7,7 +7,9 @@
   "author": "OVH SAS",
   "dependencies": {
     "@ovh/ui-kit.autocomplete": "*",
-    "@ovh/ui-kit.core": "*"
+    "@ovh/ui-kit.button": "*",
+    "@ovh/ui-kit.core": "*",
+    "@ovh/ui-kit.input": "*"
   },
   "peerDependencies": {
     "angular": ">=1.6.x"

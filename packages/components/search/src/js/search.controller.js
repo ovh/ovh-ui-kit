@@ -1,7 +1,5 @@
 import { addBooleanParameter } from '@ovh/ui-kit.core/src/js/component-utils';
 
-const componentClass = 'oui-search';
-
 const escKeyCode = 27;
 
 export default class {
@@ -47,9 +45,9 @@ export default class {
     // Sometimes the digest cycle is done before dom manipulation,
     // So we use $timeout to force the $apply
     this.$timeout(() => this.$element
+      .addClass('oui-search'))
       .removeAttr('aria-label')
       .removeAttr('id')
-      .removeAttr('name')
-      .addClass(componentClass));
+      .removeAttr('name');
   }
 }

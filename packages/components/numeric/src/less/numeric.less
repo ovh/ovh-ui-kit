@@ -1,0 +1,27 @@
+@import (reference) '~@ovh/ui-kit.input-group/src/less/input-group';
+@import (reference) './_variables';
+
+// Numeric
+.oui-numeric {
+  &:extend(.oui-input-group all);
+
+  width: @oui-input-group-numeric-width;
+  max-width: @oui-input-group-numeric-width;
+
+  .oui-icon::before {
+    font-size: @oui-input-group-numeric-icon-size;
+  }
+
+  .oui-input {
+    text-align: center;
+
+    // Two lines bellow are required by firefox otherwise the max-width
+    // defined at root of the mixin isn't applied correctly
+    flex-shrink: 1;
+    min-width: 1px;
+  }
+}
+
+oui-numeric {
+  &:extend(.oui-numeric all);
+}

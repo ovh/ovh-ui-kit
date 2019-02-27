@@ -1,84 +1,118 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
-@import (reference) './_mixins';
-@import './_normalize';
+@import (reference) '~@ovh/ui-kit.field/src/less/_mixins';
+@import (reference) '~@ovh/ui-kit.input/src/less/_mixins';
+@import (reference) './_variables';
 
 .oui-input-group {
-  @oui-input-selector: oui-input;
-  @oui-button-selector: oui-button;
-  @oui-icon-selector: oui-icon;
+  #oui > .field-sizes();
 
-  #oui > .input-group-base(@oui-input-selector, @oui-button-selector);
+  display: flex;
+  align-content: stretch;
+  align-items: flex-end;
+  vertical-align: top;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 rem-calc(20);
 
-  &_button {
-    #oui > .input-group-button(@oui-input-selector, @oui-button-selector, @oui-icon-selector);
+  > .oui-button {
+    #oui > .button-hollow(
+      @background-color: @oui-input-group-button-hollow-background-color,
+      @border-color_disabled: @oui-input-group-button-hollow-border-color_disabled,
+      @padding: @oui-input-group-button-hollow-padding
+    );
   }
 
-  &_inline {
-    #oui > .input-group-inline();
-  }
+  > .oui-input {
+    flex: 2 1 auto;
+    z-index: 1; // Set border priority on inputs
 
-  &_numeric {
-    #oui > .input-group-numeric(@oui-icon-selector, @oui-input-selector);
-  }
+    &_number {
+      -moz-appearance: textfield;
 
-  &_search {
-    #oui > .input-group-search(@oui-input-selector, @oui-button-selector, @oui-icon-selector);
-  }
-
-  &_clipboard {
-    display: block;
-    position: relative;
-
-    .oui-input {
-      #oui > .text-ellipsis();
-
-      cursor: pointer;
-      margin: 0;
-      padding-right: @oui-input-group-button-min-width;
-      color: @oui-input-font-color;
-      box-shadow: @oui-input-shadow;
-      border-color: @oui-input-border-color;
-      background-color: @oui-input-background-color;
-
-      &:hover {
-        border-color: @oui-input-border-color-hover;
-      }
-
-      &:focus {
-        #oui > .animate();
-
-        transition-property: border-color, box-shadow, background-color;
-        border-color: @oui-input-border-color-focus;
-        outline: none;
-        box-shadow: @oui-input-shadow-focus;
-        background-color: @oui-input-background-color-focus;
-        text-decoration: none;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
     }
+  }
 
-    .oui-button {
-      transition: none;
+  > .oui-button,
+  > .oui-input {
+    display: table-cell;
+    border-radius: 0;
+    margin: 0;
 
-      &,
-      &:hover,
-      &:focus {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        min-width: @oui-input-group-button-min-width;
-        width: auto;
-        border-color: transparent;
-        background: transparent;
-        box-shadow: none;
-        z-index: 2; // Avoid to be hidden by inputs
-      }
+    &:first-child {
+      border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
     }
 
+    &:last-child {
+      border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
+    }
+  }
+
+  > .oui-button + .oui-input,
+  > .oui-button + .oui-button {
+    margin-left: -1px;
+  }
+
+  > .oui-input + .oui-input,
+  > .oui-input + .oui-button {
+    border-left: 0;
+  }
+}
+
+// Button variant
+/* stylelint-disable no-descending-specificity */
+.oui-input-group_button {
+  position: relative;
+
+  .oui-input,
+  .oui-input:first-child {
+    padding-right: @oui-input-group-button-min-width;
+    border-radius: @oui-global-base-radius;
+  }
+
+  .oui-icon {
+    color: @oui-color-silver;
+    font-size: rem-calc(20);
+    vertical-align: middle;
+  }
+
+  .oui-button,
+  .oui-button:hover,
+  .oui-button:focus {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-width: @oui-input-group-button-min-width;
+    width: auto;
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    z-index: 2; // Avoid to be hidden by inputs
+  }
+
+  .oui-button:focus {
     .oui-icon {
-      display: block;
-      color: inherit;
-      font-size: inherit;
+      color: @oui-input-group-button-color_hover;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
     }
   }
+
+  .oui-button:hover,
+  .oui-input:focus ~ .oui-button {
+    .oui-icon {
+      color: @oui-input-group-button-color_hover;
+    }
+  }
+}
+/* stylelint-enbale no-descending-specificity */
+
+// Inline variant
+.oui-input-group_inline {
+  display: inline-flex;
+  width: auto;
 }

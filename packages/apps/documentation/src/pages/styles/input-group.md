@@ -25,14 +25,6 @@
   <input class="oui-input" value="ovh.com" disabled>
 </div>
 
-<div class="oui-input-group">
-  <div class="oui-input-formfield">
-    <input type="text" id="text" name="text" class="oui-input" value="Input text" />
-    <label for="text" class="oui-label">Label for Input group</label>
-  </div>
-  <button class="oui-button">Go</button>
-</div>
-
 <div class="oui-input-group oui-input-group_button">
   <input class="oui-input" id="password" name="password" type="password" placeholder="Password with icon eye" />
   <button class="oui-button" id="togglePassword" type="button" aria-label="Show password">
@@ -79,29 +71,5 @@
 <div class="oui-input-group oui-input-group_xl">
   <input class="oui-input" placeholder="XL">
   <button class="oui-button" type="button">Find</button>
-</div>
-```
-
-### Numeric
-
-```html:preview
-<div class="oui-input-group oui-input-group_numeric">
-  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
-    <span class="oui-icon oui-icon-remove" aria-hidden="true"></span>
-  </button>
-  <input class="oui-input oui-input_number" type="number" value="0">
-  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button">
-    <span class="oui-icon oui-icon-add" aria-hidden="true"></span>
-  </button>
-</div>
-
-<div class="oui-input-group oui-input-group_numeric">
-  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
-    <span class="oui-icon oui-icon-remove" aria-hidden="true"></span>
-  </button>
-  <input class="oui-input oui-input_number" type="number" value="0" disabled>
-  <button class="oui-button oui-button_icon-only oui-button_small-width" type="button" disabled>
-    <span class="oui-icon oui-icon-add" aria-hidden="true"></span>
-  </button>
 </div>
 ```
