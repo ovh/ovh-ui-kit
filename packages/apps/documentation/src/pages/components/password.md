@@ -5,19 +5,25 @@
 ### Basic
 
 ```html:preview
-<oui-password model="$ctrl.modelBasic"></oui-password>
+<form name="form" novalidate>
+  <oui-password model="$ctrl.modelBasic"></oui-password>
+</form>
 ```
 
 ### Placeholder
 
 ```html:preview
-<oui-password model="$ctrl.modelPlaceholder" placeholder="Password"></oui-password>
+<form name="form" novalidate>
+  <oui-password model="$ctrl.modelPlaceholder" placeholder="Password"></oui-password>
+</form>
 ```
 
 ### Disabled
 
 ```html:preview
-<oui-password model="$ctrl.modelDisabled" disabled></oui-password>
+<form name="form" novalidate>
+  <oui-password model="$ctrl.modelDisabled" disabled></oui-password>
+</form>
 ```
 
 ### Form validation
@@ -66,15 +72,17 @@ The feedback of password strength can be overridden by adding your custom feedba
 It can also be globally changed with `ouiPasswordProvider` (see **Configuration** below).
 
 ```html:preview
-<oui-password model="$ctrl.modelCustomFeedback" on-change="$ctrl.getPasswordScore(modelValue)">
-    <oui-password-strength score="$ctrl.passwordScore" ng-switch="$ctrl.passwordScore">
-        <span ng-switch-when="4">Score 4: Etiam volutpat congue odio imperdiet tincidunt.</span>
-        <span ng-switch-when="3">Score 3: Suspendisse vehicula ut nisl non laoreet.</span>
-        <span ng-switch-when="2">Score 2: Curabitur malesuada mi lectus, eget pharetra erat malesuada sed.</span>
-        <span ng-switch-when="1">Score 1: Vestibulum pulvinar congue lacus sed ultricies.</span>
-        <span ng-switch-default="">Score 0: Lorem ipsum dolor sit amet.</span>
-    </oui-password-strength>
-</oui-password>
+<form name="form" novalidate>
+  <oui-password model="$ctrl.modelCustomFeedback" on-change="$ctrl.getPasswordScore(modelValue)">
+      <oui-password-strength score="$ctrl.passwordScore" ng-switch="$ctrl.passwordScore">
+          <span ng-switch-when="4">Score 4: Etiam volutpat congue odio imperdiet tincidunt.</span>
+          <span ng-switch-when="3">Score 3: Suspendisse vehicula ut nisl non laoreet.</span>
+          <span ng-switch-when="2">Score 2: Curabitur malesuada mi lectus, eget pharetra erat malesuada sed.</span>
+          <span ng-switch-when="1">Score 1: Vestibulum pulvinar congue lacus sed ultricies.</span>
+          <span ng-switch-default="">Score 0: Lorem ipsum dolor sit amet.</span>
+      </oui-password-strength>
+  </oui-password>
+</form>
 ```
 
 #### Score scale
