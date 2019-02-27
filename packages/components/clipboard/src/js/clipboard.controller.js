@@ -23,7 +23,7 @@ export default class {
   $postLink() {
     this.$timeout(() => {
       this.$element
-        .addClass('oui-input-group oui-input-group_clipboard')
+        .addClass('oui-clipboard')
         .removeAttr('id')
         .removeAttr('name');
     });

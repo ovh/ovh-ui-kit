@@ -67,8 +67,7 @@ export default class {
     // Sometimes the digest cycle is done before dom manipulation,
     // So we use $timeout to force the $apply
     this.$timeout(() => this.$element
-      .addClass('oui-input-group')
-      .addClass('oui-input-group_numeric')
+      .addClass('oui-numeric')
       .removeAttr('id')
       .removeAttr('name'));
   }
