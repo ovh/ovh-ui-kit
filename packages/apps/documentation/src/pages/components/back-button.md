@@ -31,5 +31,5 @@
 | `aria-label`              | string    | @?        | yes               | n/a    | n/a       | accessibility label of the button/link
 | `href`                    | string    | @?        | yes               | n/a    | n/a       | url of the return link
 | `state`                   | string    | @?        | yes               | n/a    | n/a       | state of the return link
-| `stateParams`             | object    | <?        | no                | n/a    | n/a       | state params of the return link
+| `state-params`            | object    | <?        | no                | n/a    | n/a       | state params of the return link
 | `on-click`                | function  | &?        | no                | n/a    | n/a       | callback on component click
