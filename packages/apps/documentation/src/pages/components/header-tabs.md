@@ -86,22 +86,22 @@
 
 ### oui-header-tabs-item
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values            | Default   | Description
-| ----          | ----      | ----      | ----              | ----              | ----      | ----
-| `href`        | string    | @?        | yes               | n/a               | n/a       | href of the menu item
-| `state`       | string    | @?        | yes               | n/a               | n/a       | state of the menu item
-| `stateParams` | object    | <?        | no                | n/a               | n/a       | state params of the menu item
-| `active`      | boolean   | <?        | no                | `true`, `false`   | `false`   | manual active flag
-| `disabled`    | boolean   | <?        | yes               | `true`, `false`   | `false`   | disabled flag
-| `external`    | boolean   | <?        | yes               | `true`, `false`   | `false`   | external link flag
+| Attribute       | Type      | Binding   | One-time Binding  | Values            | Default   | Description
+| ----            | ----      | ----      | ----              | ----              | ----      | ----
+| `href`          | string    | @?        | yes               | n/a               | n/a       | href of the menu item
+| `state`         | string    | @?        | yes               | n/a               | n/a       | state of the menu item
+| `state-params`  | object    | <?        | no                | n/a               | n/a       | state params of the menu item
+| `active`        | boolean   | <?        | no                | `true`, `false`   | `false`   | manual active flag
+| `disabled`      | boolean   | <?        | yes               | `true`, `false`   | `false`   | disabled flag
+| `external`      | boolean   | <?        | yes               | `true`, `false`   | `false`   | external link flag
 
 **Note**: `ui-router` is needed for the attributes `state` and `state-params`.
 
 ### oui-header-tabs-dropdown
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values            | Default   | Description
-| ----          | ----      | ----      | ----              | ----              | ----      | ----
-| `text`        | string    | @         | yes               | n/a               | n/a       | display the dropdown with this text
+| Attribute       | Type      | Binding   | One-time Binding  | Values            | Default   | Description
+| ----            | ----      | ----      | ----              | ----              | ----      | ----
+| `text`          | string    | @         | yes               | n/a               | n/a       | display the dropdown with this text
 
 ### oui-header-tabs-divider
 
