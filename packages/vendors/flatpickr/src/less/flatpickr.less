@@ -118,11 +118,11 @@
     font-size: inherit;
     font-weight: inherit;
 
-    /* stylelint-disable no-descending-specificity */
+    // stylelint-disable no-descending-specificity
     .numInputWrapper {
       margin-right: -@oui-calendar-title-arrow-width;
     }
-    /* stylelint-enable no-descending-specificity */
+    // stylelint-enable no-descending-specificity
 
     span.cur-month,
     input.cur-year {
@@ -136,11 +136,11 @@
     input.cur-year {
       padding-left: rem-calc(5);
 
-      /* stylelint-disable no-descending-specificity */
+      // stylelint-disable no-descending-specificity
       ~ span {
         margin-right: rem-calc(-14);
       }
-      /* stylelint-enable no-descending-specificity */
+      // stylelint-enable no-descending-specificity
     }
   }
 
@@ -200,7 +200,7 @@
       color: @oui-calendar-cell-font-color_disabled;
     }
 
-    /* stylelint-disable no-descending-specificity */
+    // stylelint-disable no-descending-specificity
     &,
     &.prevMonthDay,
     &.nextMonthDay {
@@ -212,7 +212,7 @@
         background-color: @oui-calendar-cell-background-color_hover;
       }
     }
-    /* stylelint-enable no-descending-specificity */
+    // stylelint-enable no-descending-specificity
 
     &:focus {
       outline-width: 1px;
@@ -275,7 +275,7 @@
       &.nextMonthDay.inRange { border-color: @oui-calendar-today-border-color; }
     }
 
-    /* stylelint-disable no-descending-specificity */
+    // stylelint-disable no-descending-specificity
     // Disabled
     &.disabled,
     &.disabled:hover,
@@ -290,7 +290,7 @@
 
       &.today { border-color: @oui-calendar-today-border-color_disabled; }
     }
-    /* stylelint-enable no-descending-specificity */
+    // stylelint-enable no-descending-specificity
   }
 
   // Timepicker
@@ -303,14 +303,14 @@
     align-items: stretch;
     justify-content: center;
 
-    /* stylelint-disable no-descending-specificity */
+    // stylelint-disable no-descending-specificity
     .numInputWrapper {
       width: ~"calc(@{oui-calendar-cell-width} * 3)";
       max-width: ~"calc(@{oui-calendar-cell-width} * 3)";
       height: 100%;
       flex: auto;
     }
-    /* stylelint-enable no-descending-specificity */
+    // stylelint-enable no-descending-specificity
 
     .numInput {
       border-radius: @oui-calendar-cell-border-radius;

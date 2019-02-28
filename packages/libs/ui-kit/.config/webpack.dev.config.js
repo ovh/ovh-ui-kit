@@ -4,7 +4,7 @@ const merge = require("webpack-merge");
 
 module.exports = merge(baseConfig, {
     mode: "development",
-    devtool: "inline-source-map",
+    devtool: "source-map",
     output: {
         path: path.resolve(".", "dist", "js"),
         filename: "oui.js",

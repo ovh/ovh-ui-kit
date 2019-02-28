@@ -45,9 +45,9 @@ export default class {
     // Sometimes the digest cycle is done before dom manipulation,
     // So we use $timeout to force the $apply
     this.$timeout(() => this.$element
-      .addClass('oui-search'))
+      .addClass('oui-search')
       .removeAttr('aria-label')
       .removeAttr('id')
-      .removeAttr('name');
+      .removeAttr('name'));
   }
 }

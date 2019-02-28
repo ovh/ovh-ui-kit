@@ -14,18 +14,18 @@
 }
 
 .responsive(@maxWidth; @rules) {
-  /* stylelint-disable at-rule-no-unknown */
+  // stylelint-disable at-rule-no-unknown
   @media screen and (max-width: (@maxWidth - 1px)) {
     @rules();
   }
-  /* stylelint-enable at-rule-no-unknown */
+  // stylelint-enable at-rule-no-unknown
 }
 
 // Min width
 .desktop(@rules) {
-  /* stylelint-disable at-rule-no-unknown */
+  // stylelint-disable at-rule-no-unknown
   @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
     @rules();
   }
-  /* stylelint-enable at-rule-no-unknown */
+  // stylelint-enable at-rule-no-unknown
 }

@@ -8,19 +8,20 @@
   #oui > .textarea-normalize();
   #oui > .textarea-base(@oui-textarea-selector);
   #oui > .textarea-error(@oui-textarea-selector);
-  #oui > .field-sizes();
 }
 
-/** Fieldset */
+// Size variants
+#oui > .field-sizes(oui-textarea);
+
+// Fieldset
 :disabled .oui-textarea {
   #oui > .textarea-disabled();
 }
 
-/** Legacy styling */
+// Legacy styling
 textarea.oui-textarea {
   #oui > .textarea-normalize();
   #oui > .textarea-legacy-base();
-  #oui > .field-sizes();
 
   &_error {
     #oui > .textarea-legacy-error();
