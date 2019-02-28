@@ -1,3 +1,4 @@
+@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) '~@ovh/ui-kit.input-group/src/less/input-group';
 
@@ -9,15 +10,19 @@
   position: relative;
 
   .oui-input {
-    #oui > .text-ellipsis();
+    &,
+    &:read-only {
+      #oui > .text-ellipsis();
 
-    cursor: pointer;
-    margin: 0;
-    padding-right: @oui-input-group-button-min-width;
-    color: @oui-input-font-color;
-    box-shadow: @oui-input-shadow;
-    border-color: @oui-input-border-color;
-    background-color: @oui-input-background-color;
+      cursor: pointer;
+      margin: 0;
+      padding-right: @oui-input-group-button-min-width;
+      color: @oui-input-font-color;
+      box-shadow: @oui-input-shadow;
+      border-radius: @oui-global-base-radius;
+      border-color: @oui-input-border-color;
+      background-color: @oui-input-background-color;
+    }
 
     &:hover {
       border-color: @oui-input-border-color-hover;
@@ -36,8 +41,6 @@
   }
 
   .oui-button {
-    transition: none;
-
     &,
     &:hover,
     &:focus {
@@ -50,6 +53,7 @@
       border-color: transparent;
       background: transparent;
       box-shadow: none;
+      transition: none;
       z-index: 2; // Avoid to be hidden by inputs
     }
   }

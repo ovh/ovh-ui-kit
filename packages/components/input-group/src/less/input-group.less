@@ -4,8 +4,6 @@
 @import (reference) './_variables';
 
 .oui-input-group {
-  #oui > .field-sizes();
-
   display: flex;
   align-content: stretch;
   align-items: flex-end;
@@ -63,8 +61,11 @@
   }
 }
 
+// Size variants
+#oui > .field-sizes(oui-input-group);
+
 // Button variant
-/* stylelint-disable no-descending-specificity */
+// stylelint-disable no-descending-specificity
 .oui-input-group_button {
   position: relative;
 
@@ -109,7 +110,7 @@
     }
   }
 }
-/* stylelint-enbale no-descending-specificity */
+// stylelint-enbale no-descending-specificity
 
 // Inline variant
 .oui-input-group_inline {
