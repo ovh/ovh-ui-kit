@@ -7,6 +7,7 @@
   "author": "OVH SAS",
   "dependencies": {
     "@ovh/ui-kit.core": "*",
+    "@ovh/ui-kit.flatpickr": "*",
     "@ovh/ui-kit.input": "*",
     "flatpickr": "^4.5.2"
   },

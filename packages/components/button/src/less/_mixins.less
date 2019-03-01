@@ -1,53 +1,6 @@
 @import (reference) './_variables';
 
 #oui {
-  .button-base(
-    @font-color: @oui-button-font-color,
-    @font-size: @oui-button-font-size,
-    @font-weight: @oui-button-font-weight,
-    @min-width: @oui-button-min-width,
-    @max-width: @oui-button-max-width,
-    @radius: @oui-button-radius,
-    @spacing: @oui-button-spacing,
-    @padding: @oui-button-padding,
-    @letter-spacing: 0.007em
-  ) {
-    min-width: @min-width;
-    max-width: @max-width;
-    position: relative;
-    margin: @spacing;
-    padding: @padding;
-    font-size: @font-size;
-    font-weight: @font-weight;
-    letter-spacing: @letter-spacing;
-    border-radius: @radius;
-
-    // Required to fix alignment when a button is beside of an
-    // inline-flex element, otherwise inline-flex are pushed to
-    // the bottom.
-    vertical-align: top;
-    color: @font-color;
-
-    &,
-    &:focus,
-    &:hover { text-decoration: none; }
-
-    &:focus {
-      outline-width: 1px;
-      outline-style: dotted;
-      outline-color: initial;
-      outline-offset: -2px;
-    }
-
-    &:disabled {
-      cursor: auto;
-    }
-
-    &:active:disabled {
-      box-shadow: none;
-    }
-  }
-
   .button-filled(
     @background-color: @oui-button-filled-background-color,
     @background-color_hover: @oui-button-filled-background-color_hover,
@@ -119,82 +72,7 @@
     }
   }
 
-  .button-dropdown(
-    @icon-selector: oui-icon,
-    @icon-size: @oui-button-dropdown-icon-size,
-    @color_disabled: @oui-button-dropdown-color,
-    @icon-color: @oui-button-dropdown-icon-color,
-    @icon-color_active: @oui-button-dropdown-icon-color_active,
-    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
-    @background-color_active: @oui-button-dropdown-background-color_active,
-    @border-color_active: @oui-button-dropdown-border-color_active,
-    @padding: @oui-button-dropdown-padding
-  ) {
-    padding-right: rem-calc(30) + @padding * 0.8;
-    padding-left: @padding;
-
-    .@{icon-selector} {
-      position: absolute;
-      right: 0;
-      top: 1px;
-      bottom: 1px;
-      width: ~"calc(@{icon-size} * 2.5)";
-      height: auto;
-      margin: auto;
-      text-align: center;
-      vertical-align: middle;
-      cursor: pointer;
-      pointer-events: none;
-
-      &::before {
-        display: inline-block;
-        margin-right: @padding * 1.5;
-        color: @oui-color-sapphire;
-        font-size: @icon-size;
-      }
-    }
-
-    &:active,
-    &:focus {
-      border-color: @border-color_active;
-      background: @background-color_active;
-      box-shadow: none;
-
-      .@{icon-selector} {
-        &::before {
-          color: @icon-color_active;
-        }
-      }
-    }
-
-    &:disabled {
-      color: @color_disabled;
-
-      .@{icon-selector} {
-        &::before {
-          color: @icon-color_disabled;
-        }
-      }
-    }
-
-    &.open .@{icon-selector} {
-      transform: rotate(180deg);
-    }
-  }
-
-  .button-dropdown-error() {
-    background-color: @oui-button-error-background-color;
-    border: 1px @oui-button-error-border-color solid;
-    color: @oui-button-error-text-color;
-
-    .oui-icon {
-      &::before {
-        color: @oui-button-error-text-color;
-      }
-    }
-  }
-
-  .button-icon-base(
+  .button-icon(
     @icon-selector: oui-icon,
     @icon-size: @oui-button-icon-icon-size,
     @icon-size_large: @oui-button-icon-icon-size_large,

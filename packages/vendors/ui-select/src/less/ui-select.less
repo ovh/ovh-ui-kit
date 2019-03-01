@@ -1,6 +1,5 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) '~@ovh/ui-kit.button/src/less/_mixins';
-@import (reference) '~@ovh/ui-kit.button/src/less/_variables';
+@import (reference) '~@ovh/ui-kit.button/src/less/button';
 @import (reference) '~@ovh/ui-kit.dropdown/src/less/_variables';
 @import (reference) '~@ovh/ui-kit.input/src/less/_mixins';
 @import (reference) './_variables';
@@ -136,10 +135,8 @@
     }
 
     .ui-select-match-container {
-      #oui > .button-normalize();
-      #oui > .button-base();
-      #oui > .button-hollow();
-      #oui > .button-dropdown(@icon-selector: oui-icon-chevron-down);
+      &:extend(.oui-button);
+      &:extend(.oui-button_dropdown all);
 
       max-width: 100%;
       width: 100%;
@@ -170,7 +167,15 @@
       }
 
       .oui-field_error & {
-        #oui > .button-dropdown-error();
+        background-color: @oui-button-error-background-color;
+        border: 1px @oui-button-error-border-color solid;
+        color: @oui-button-error-text-color;
+
+        .oui-icon {
+          &::before {
+            color: @oui-button-error-text-color;
+          }
+        }
       }
     }
 
@@ -202,10 +207,8 @@
   &_single {
     .ui-select-match,
     .ui-select-search { // stylelint-disable-line
-      #oui > .button-normalize();
-      #oui > .button-base();
-      #oui > .button-hollow();
-      #oui > .button-dropdown();
+      &:extend(.oui-button);
+      &:extend(.oui-button_dropdown all);
 
       max-width: 100%;
       width: 100%;
@@ -225,7 +228,15 @@
       }
 
       .oui-field_error & {
-        #oui > .button-dropdown-error();
+        background-color: @oui-button-error-background-color;
+        border: 1px @oui-button-error-border-color solid;
+        color: @oui-button-error-text-color;
+
+        .oui-icon {
+          &::before {
+            color: @oui-button-error-text-color;
+          }
+        }
       }
     }
   }

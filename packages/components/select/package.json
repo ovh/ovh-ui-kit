@@ -8,6 +8,7 @@
   "dependencies": {
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.field": "*",
+    "@ovh/ui-kit.ui-select": "*",
     "ui-select": "^0.19.8"
   },
   "peerDependencies": {

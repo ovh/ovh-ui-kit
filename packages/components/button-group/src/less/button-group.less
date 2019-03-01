@@ -1,13 +1,33 @@
-@import (reference) './_mixins';
+@import (reference) '~@ovh/ui-kit.button/src/less/_variables';
+@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
 
 .oui-button-group {
-  @oui-button-selector: oui-button;
-  @oui-button-primary-selector: oui-button_primary;
-  @oui-button-secondary-selector: oui-button_secondary;
+  display: inline-flex;
+  align-content: stretch;
+  align-items: flex-end;
+  vertical-align: top;
+  margin: @oui-button-spacing;
 
-  #oui > .button-group-base(
-    @button-selector: @oui-button-selector,
-    @button-primary-selector: @oui-button-primary-selector,
-    @button-secondary-selector: @oui-button-secondary-selector
-  );
+  .oui-button {
+    margin: 0;
+    border-radius: 0;
+
+    &:first-child {
+      border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
+    }
+
+    &:last-child {
+      border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
+    }
+
+    & + .oui-button {
+      border-left-width: 0;
+    }
+  }
+
+  .oui-button_primary {
+    & + .oui-button_secondary {
+      border-left-width: 1px;
+    }
+  }
 }
