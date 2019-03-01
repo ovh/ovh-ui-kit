@@ -1,154 +1,245 @@
+@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) './_mixins';
 @import (reference) './_variables';
-@import './_normalize';
 
 .oui-button {
-  @oui-icon-selector: oui-icon;
-  @oui-button-selector: oui-button;
+  #oui > .text-ellipsis();
+  #oui > .base-font();
 
-  #oui > .button-normalize();
-  #oui > .button-base();
+  min-width: @oui-button-min-width;
+  max-width: @oui-button-max-width;
+  display: inline-block;
+  position: relative;
+  margin: @oui-button-spacing;
+  padding: @oui-button-padding;
+  text-align: center;
+  font-size: @oui-button-font-size;
+  font-weight: @oui-button-font-weight;
+  letter-spacing: 0.007em;
+  border-radius: @oui-button-radius;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  overflow-y: hidden;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
-  &_primary {
-    #oui > .button-filled();
-    #oui > .button-icon-base(
-      @oui-icon-selector,
-      @icon-color_disabled: @oui-button-filled-font-color_disabled
-    );
+  // Required to fix alignment when a button is beside of an
+  // inline-flex element, otherwise inline-flex are pushed to
+  // the bottom.
+  vertical-align: top;
+  color: @oui-button-font-color;
+
+  &,
+  &:focus,
+  &:hover { text-decoration: none; }
+
+  &:focus {
+    outline-width: 1px;
+    outline-style: dotted;
+    outline-color: initial;
+    outline-offset: -2px;
   }
 
-  &_secondary {
-    #oui > .button-hollow();
-    #oui > .button-icon-base(
-      @oui-icon-selector,
-      @icon-color_disabled: @oui-button-hollow-font-color_disabled
-    );
+  &:disabled {
+    cursor: auto;
   }
 
-  &_dropdown {
-    #oui > .button-hollow();
-    #oui > .button-dropdown();
+  &:active:disabled {
+    box-shadow: none;
+  }
+}
+
+oui-button {
+  display: inline-block;
+}
+
+.oui-button_primary {
+  #oui > .button-filled();
+  #oui > .button-icon(
+    @icon-color_disabled: @oui-button-filled-font-color_disabled
+  );
+}
+
+.oui-button_secondary {
+  #oui > .button-hollow();
+  #oui > .button-icon(
+    @icon-color_disabled: @oui-button-hollow-font-color_disabled
+  );
+}
+
+.oui-button_dropdown {
+  #oui > .button-hollow();
+
+  padding-right: rem-calc(30) + @oui-button-dropdown-padding * 0.8;
+  padding-left: @oui-button-dropdown-padding;
+
+  .oui-icon-chevron-down {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    bottom: 1px;
+    width: ~"calc(@{oui-button-dropdown-icon-size} * 2.5)";
+    height: auto;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    pointer-events: none;
+
+    &::before {
+      display: inline-block;
+      margin-right: @oui-button-dropdown-padding * 1.5;
+      color: @oui-button-dropdown-icon-color;
+      font-size: @oui-button-dropdown-icon-size;
+    }
   }
 
-  &_link {
-    #oui > .button-icon-base(
-      @oui-icon-selector,
-      @icon-color_disabled: @oui-button-link-font-color_disabled
-    );
+  &:active,
+  &:focus {
+    border-color: @oui-button-dropdown-border-color_active;
+    background: @oui-button-dropdown-background-color_active;
+    box-shadow: none;
 
-    min-width: 0;
-    padding: @oui-button-link-padding;
-    border: 0;
+    .oui-icon-chevron-down {
+      &::before {
+        color: @oui-button-dropdown-icon-color_active;
+      }
+    }
+  }
+
+  &:disabled {
+    color: @oui-button-dropdown-color;
+
+    .oui-icon-chevron-down {
+      &::before {
+        color: @oui-button-dropdown-icon-color_disabled;
+      }
+    }
+  }
+
+  &.open .oui-icon-chevron-down {
+    transform: rotate(180deg);
+  }
+}
+
+.oui-button_link {
+  #oui > .button-icon(
+    @icon-color_disabled: @oui-button-link-font-color_disabled
+  );
+
+  min-width: 0;
+  padding: @oui-button-link-padding;
+  border: 0;
+  background: none;
+  color: @oui-button-link-font-color;
+  font-weight: @oui-button-link-font-weight;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
     background: none;
-    color: @oui-button-link-font-color;
-    font-weight: @oui-button-link-font-weight;
+    color: @oui-button-link-font-color_hover;
     text-decoration: underline;
-
-    &:hover,
-    &:focus {
-      background: none;
-      color: @oui-button-link-font-color_hover;
-      text-decoration: underline;
-    }
-
-    &:disabled,
-    &:disabled:active {
-      background: none;
-      color: @oui-button-link-font-color_disabled;
-      text-decoration: underline;
-    }
-
-    .oui-icon {
-      color: @oui-button-link-icon-color;
-    }
   }
 
-  &_icon-only {
-    #oui > .button-icon-base(@oui-icon-selector);
+  &:disabled,
+  &:disabled:active {
+    background: none;
+    color: @oui-button-link-font-color_disabled;
+    text-decoration: underline;
   }
 
-  &_icon-right {
-    padding-right: @oui-button-icon-padding-right;
+  .oui-icon {
+    color: @oui-button-link-icon-color;
+  }
+}
 
-    .oui-icon {
-      margin-left: @oui-button-icon-right-icon-margin-left;
-    }
+.oui-button_icon-only {
+  #oui > .button-icon();
+}
 
-    .oui-icon_circle::before {
-      line-height: 2;
-    }
+.oui-button_icon-right {
+  padding-right: @oui-button-icon-padding-right;
+
+  .oui-icon {
+    margin-left: @oui-button-icon-right-icon-margin-left;
   }
 
-  &_icon-left {
-    padding-left: @oui-button-icon-padding-left;
+  .oui-icon_circle::before {
+    line-height: 2;
+  }
+}
 
-    .oui-icon {
-      margin-right: @oui-button-icon-right-icon-margin-right;
-    }
+.oui-button_icon-left {
+  padding-left: @oui-button-icon-padding-left;
 
-    .oui-icon_circle::before {
-      line-height: 2;
-      text-indent: -2px;
-    }
+  .oui-icon {
+    margin-right: @oui-button-icon-right-icon-margin-right;
   }
 
-  &_icon-alone {
-    background: @oui-button-icon-alone-background;
-    min-width: @oui-button-icon-alone-min-width;
-    padding-left: @oui-button-icon-alone-padding-left;
-    padding-right: @oui-button-icon-alone-padding-right;
-    margin-right: @oui-button-icon-alone-margin-right;
+  .oui-icon_circle::before {
+    line-height: 2;
+    text-indent: -2px;
+  }
+}
 
-    .oui-icon {
-      color: @oui-button-icon-alone-font-color;
-    }
+.oui-button_icon-alone {
+  background: @oui-button-icon-alone-background;
+  min-width: @oui-button-icon-alone-min-width;
+  padding-left: @oui-button-icon-alone-padding-left;
+  padding-right: @oui-button-icon-alone-padding-right;
+  margin-right: @oui-button-icon-alone-margin-right;
 
-    .oui-icon:hover,
-    .oui-icon:focus {
-      color: @oui-button-icon-alone-font-color_hover;
-    }
+  .oui-icon {
+    color: @oui-button-icon-alone-font-color;
+  }
 
+  .oui-icon:hover,
+  .oui-icon:focus {
+    color: @oui-button-icon-alone-font-color_hover;
+  }
+
+  .oui-icon::before {
+    font-size: @oui-button-icon-alone-icon-font-size;
+  }
+}
+
+.oui-button_full-width {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+
+  .oui-icon::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &.oui-button_icon-left {
     .oui-icon::before {
-      font-size: @oui-button-icon-alone-icon-font-size;
+      left: @oui-button-icon-padding-left;
     }
   }
 
-  &_full-width {
-    max-width: none;
-    width: 100%;
-    height: 100%;
-
-    .oui-icon::before {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-    }
-
-    &.@{oui-button-selector}_icon-left {
-      .oui-icon::before {
-        left: @oui-button-icon-padding-left;
-      }
-    }
-
-    &.@{oui-button-selector}_icon-right {
-      .oui-icon::before:not(.oui-icon-external_link) {
-        right: @oui-button-icon-padding-right;
-      }
-    }
-
-    .oui-icon-external_link {
-      margin-left: rem-calc(5);
+  &.oui-button_icon-right {
+    .oui-icon::before:not(.oui-icon-external_link) {
+      right: @oui-button-icon-padding-right;
     }
   }
 
-  &_small-width {
-    min-width: @oui-button-small-width-min-width;
-    padding-left: @oui-button-small-width-padding-left-right;
-    padding-right: @oui-button-small-width-padding-left-right;
+  .oui-icon-external_link {
+    margin-left: rem-calc(5);
   }
+}
 
-  &_large-height {
-    min-height: @oui-button-large-height-min-height;
-  }
+.oui-button_small-width {
+  min-width: @oui-button-small-width-min-width;
+  padding-left: @oui-button-small-width-padding-left-right;
+  padding-right: @oui-button-small-width-padding-left-right;
+}
+
+.oui-button_large-height {
+  min-height: @oui-button-large-height-min-height;
 }
