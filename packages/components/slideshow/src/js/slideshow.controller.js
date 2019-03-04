@@ -76,12 +76,14 @@ export default class {
   next() {
     if (!this.isSliding) {
       this.slide(Direction.NEXT);
+      this.onPanelChange({ direction: Direction.NEXT, index: this.currentIndex });
     }
   }
 
   prev() {
     if (!this.isSliding) {
       this.slide(Direction.PREV);
+      this.onPanelChange({ direction: Direction.PREV, index: this.currentIndex });
     }
   }
 
