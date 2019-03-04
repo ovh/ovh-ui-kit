@@ -37,10 +37,10 @@ describe('ouiSlideshow', () => {
 
       it('should display a slideshow with active panel', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         expect(getBody(element).html()).toContain('oui-slideshow-panel');
         expect(getFirstPanel(element).hasClass('active')).toBe(true);
@@ -55,16 +55,27 @@ describe('ouiSlideshow', () => {
         getDismissButton(element).triggerHandler('click');
         expect(dismissSpy).toHaveBeenCalled();
       });
+
+      it('should add a classname with the theme value', () => {
+        const foo = 'bar';
+        const element = TestUtils.compileTemplate(`<oui-slideshow theme="${foo}"></oui-slideshow>`);
+        const controller = element.controller('ouiSlideshow');
+        const container = angular.element(element[0].querySelector(`.${controller.themeClassname}`));
+
+        expect(controller.themeClassname).toBeDefined();
+        expect(controller.themeClassname.search(foo)).toBeGreaterThan(-1);
+        expect(container.length).toBe(1);
+      });
     });
 
     describe('SlideshowPanel', () => {
       it('should update active panel on right button click', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow>
+              <oui-slideshow-panel></oui-slideshow-panel>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         const $firstPanel = getFirstPanel(element);
         expect($firstPanel.hasClass('active')).toBe(true);
@@ -75,22 +86,22 @@ describe('ouiSlideshow', () => {
 
       it('should hide left button if first panel is selected', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow>
+              <oui-slideshow-panel></oui-slideshow-panel>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         expect(getBody(element).html()).not.toContain('oui-slideshow__prev-button');
       });
 
       it('should always show left button if loop option is active', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow loop>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow loop>
+              <oui-slideshow-panel></oui-slideshow-panel>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         const $body = getBody(element);
         expect($body.html()).toContain('oui-slideshow__prev-button');
@@ -98,11 +109,11 @@ describe('ouiSlideshow', () => {
 
       it('should hide right button if last panel is selected', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow>
+              <oui-slideshow-panel></oui-slideshow-panel>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         const $body = getBody(element);
         expect($body.html()).toContain('oui-slideshow__next-button');
@@ -114,11 +125,11 @@ describe('ouiSlideshow', () => {
 
       it("should update bottom indicators if panel's changed", () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow>
+              <oui-slideshow-panel></oui-slideshow-panel>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         const $firstIndicator = getFirstIndicator(element);
         expect($firstIndicator).toBeDefined();
@@ -130,17 +141,33 @@ describe('ouiSlideshow', () => {
 
       it('should update active panel on indicator button click', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-slideshow>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                        <oui-slideshow-panel></oui-slideshow-panel>
-                    </oui-slideshow>
-                `);
+            <oui-slideshow>
+              <oui-slideshow-panel></oui-slideshow-panel>
+              <oui-slideshow-panel></oui-slideshow-panel>
+            </oui-slideshow>
+          `);
         $timeout.flush();
         const $firstPanel = getFirstPanel(element);
         expect($firstPanel.hasClass('active')).toBe(true);
         getLastIndicator(element).triggerHandler('click');
         $timeout.flush();
         expect($firstPanel.hasClass('active')).toBe(false);
+      });
+
+      it('should call function of event with attributes', () => {
+        const onPanelChangeSpy = jasmine.createSpy('onPanelChangeSpy');
+        const element = TestUtils.compileTemplate(`
+          <oui-slideshow on-panel-change="$ctrl.onPanelChangeSpy(direction, index)">
+            <oui-slideshow-panel></oui-slideshow-panel>
+            <oui-slideshow-panel></oui-slideshow-panel>
+          </oui-slideshow>`, {
+          onPanelChangeSpy,
+        });
+        const direction = 'next';
+        const index = 1;
+        $timeout.flush();
+        getNextButton(element).triggerHandler('click');
+        expect(onPanelChangeSpy).toHaveBeenCalledWith(direction, index);
       });
     });
   });

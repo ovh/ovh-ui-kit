@@ -53,7 +53,6 @@
 </oui-header>
 ```
 
-
 ## API
 
 | Attribute     | Type     | Binding    | One-time Binding  | Values    | Default   | Description
