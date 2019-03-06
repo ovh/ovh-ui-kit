@@ -1,3 +1,9 @@
+import '@ovh/ui-kit.checkbox';
+import '@ovh/ui-kit.radio';
+import '@ovh/ui-kit.select';
+import '@ovh/ui-kit.core/src/js/test-utils';
+import './index';
+
 import noop from 'lodash/noop';
 
 describe('ouiField', () => {

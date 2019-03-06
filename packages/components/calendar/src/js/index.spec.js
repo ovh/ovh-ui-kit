@@ -1,4 +1,6 @@
+import '@ovh/ui-kit.core/src/js/test-utils';
 import 'flatpickr/dist/l10n/fr';
+import './index';
 
 describe('ouiCalendar', () => {
   let $timeout;

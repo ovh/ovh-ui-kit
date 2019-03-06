@@ -1,3 +1,6 @@
+import '@ovh/ui-kit.core/src/js/test-utils';
+import './index';
+
 import get from 'lodash/get';
 import data from './index.spec.data.json';
 
@@ -78,7 +81,7 @@ describe('ouiDualList', () => {
   });
 
   describe('Component', () => {
-    describe('oui-inline-adder', () => {
+    describe('oui-dual-list', () => {
       it('should have a default classname', () => {
         const element = getDualList(sourceStrings, targetStrings);
 

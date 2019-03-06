@@ -20,11 +20,10 @@
     "lint:js": "eslint ./packages",
     "version": "npm run build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
-    "prepare": "lerna run prepare --parallel",
     "preview-changelog": "npm-scripts-config preview-changelog",
     "start": "lerna exec --scope @ovh/ui-kit-documentation -- yarn start",
-    "test": "cross-env NODE_ENV=test babel-node ./node_modules/karma/bin/karma start --reporters spec,coverage --single-run",
-    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test node -r babel-register ./node_modules/karma/bin/karma start --watch",
+    "test": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
+    "test:lerna": "lerna run test",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },
   "config": {
@@ -56,7 +55,7 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-import": "^2.16.0",
     "jasmine-core": "^3.3.0",
-    "karma": "^4.0.0",
+    "karma": "^4.0.1",
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
