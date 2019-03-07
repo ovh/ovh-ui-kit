@@ -31,7 +31,7 @@ module.exports = {
         enforce: 'pre',
         test: /\.js$/,
         use: [
-          { loader: 'eslint-loader', options: { formatter } }
+          { loader: 'eslint-loader', options: { formatter } },
         ],
         exclude,
       },
@@ -41,7 +41,24 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              rootMode: 'upward',
+              presets: [
+                [
+                  '@babel/preset-env',
+                  { useBuiltIns: 'usage' },
+                ],
+              ],
+              plugins: [
+                '@babel/plugin-syntax-dynamic-import',
+                '@babel/plugin-transform-runtime',
+                'babel-plugin-angularjs-annotate',
+                'babel-plugin-lodash',
+              ],
+              comments: false,
+              env: {
+                test: {
+                  plugins: ['babel-plugin-istanbul'],
+                },
+              },
             },
           },
         ],
@@ -67,7 +84,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: () => [autoprefixer({ browsers: ['last 2 versions', 'ie 11'] })]
+              plugins: () => [autoprefixer({ browsers: ['last 2 versions', 'ie 11'] })],
             },
           },
           {
@@ -87,7 +104,7 @@ module.exports = {
             options: {
               name: '[folder]/[name].[ext]',
               outputPath: '../fonts',
-              publicPath: '../fonts'
+              publicPath: '../fonts',
             },
           },
         ],

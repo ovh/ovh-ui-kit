@@ -1779,7 +1779,7 @@ amdefine@>=0.0.4:
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
   integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
-angular-aria@^1.7.7:
+angular-aria@>=1.6.x, angular-aria@^1.7.7:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/angular-aria/-/angular-aria-1.7.7.tgz#f7d16f18fdd5ce1140213ef8e61ca813fa686827"
   integrity sha512-Jju0VudfKVp+6FUtfzpDBuOJE8+8cGPSM10nRicXvJRX/Nx/YOu38f2aL3HQwThrRK+3E5jfo7yRwVNYoSmSxg==
@@ -1789,17 +1789,17 @@ angular-messages@^1.7.7:
   resolved "https://registry.yarnpkg.com/angular-messages/-/angular-messages-1.7.7.tgz#bd092a6ff0edca246d32780f8fe2de46bc6885bb"
   integrity sha512-XaMD6T0DSQy+6XZUUh0FARvwdwKUgWv4ea/x49Jd1q60dNA1FfJ5hCBDZcRYNQn+Q4Z0Mbjo8uRILywW4zIUhA==
 
-angular-mocks@^1.7.7:
+angular-mocks@>=1.6.x:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.7.7.tgz#227feca8a7e9cc61c4680366db024d6563d4c6eb"
   integrity sha512-EIUUAigjCgyk4Lqspf1iM0RItOPtlKoHlqDyrYsgVmMqj5xS41BDXIqedcMAFn6Lln5Qe9YDsGQ3ZHAAoX1SgA==
 
-angular-sanitize@^1.7.7:
+angular-sanitize@>=1.6.x, angular-sanitize@^1.7.7:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.7.7.tgz#5852592ea885d48db1f2718a3ec7b6e3330950d6"
   integrity sha512-DZ0kidLOOrq/mbqwKbeT2aSlT2Kdy25tZh5KcWOrRXx26imbhQfwbuncMYMFh7uPqfWySAI534+XhjnmhJ626Q==
 
-angular@^1.7.7:
+angular@>=1.6.x, angular@^1.7.7:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.7.tgz#26bd87693deadcbd5944610a7a0463fc79a18803"
   integrity sha512-MH3JEGd8y/EkNCKJ8EV6Ch0j9X0rZTta/QVIDpBWaIdfh85/e5KO8+ZKgvWIb02MQuiS20pDFmMFlv4ZaLcLWg==
@@ -2863,7 +2863,7 @@ cli-width@^2.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
   integrity sha1-/xnt6Kml5XkyQUewwR8PvLq+1jk=
 
-clipboard@^2.0.1:
+clipboard@^2.0.1, clipboard@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.4.tgz#836dafd66cf0fea5d71ce5d5b0bf6e958009112d"
   integrity sha512-Vw26VSLRpJfBofiVaFb/I8PVfdI1OxKcYShe6fm0sP/DtmiWQNCjhM/okTvdCo0G+lMMm1rMYbk4IK4x1X+kgQ==
@@ -4829,10 +4829,10 @@ flat-cache@^2.0.1:
     rimraf "2.6.3"
     write "1.0.3"
 
-flatpickr@^4.5.2:
-  version "4.5.4"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.4.tgz#7d46fc539d2a97daf80ac261994d4b45d5a4e5f6"
-  integrity sha512-AZOu3l6jUJtNofUKW4UGf9R5wKoLBb52VcQJhbL88G1sekJiXTPqqWJyZwGShjIMFjAIgnajEPglRd2fv/FaYg==
+flatpickr@^4.5.6:
+  version "4.5.6"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.5.6.tgz#9afdcccf5ffd30445e047a605eb175cb8e00a115"
+  integrity sha512-PYeKKH+5Zm5iGu00SsQPJmXtivolF0goXl00Ced5pEGV6//mxG0pA9Z0aas+X3X4NWqnVNMQuHE8m/fTY86iAQ==
 
 flatted@^2.0.0:
   version "2.0.0"

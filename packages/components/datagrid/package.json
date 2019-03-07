@@ -15,17 +15,16 @@
     "@ovh/ui-kit.criteria": "*",
     "@ovh/ui-kit.pagination": "*",
     "@ovh/ui-kit.spinner": "*",
-    "escape-string-regexp": "^1.0.5"
-  },
-  "peerDependencies": {
     "angular": ">=1.6.x",
-    "angular-aria": ">=1.6.x"
+    "angular-aria": ">=1.6.x",
+    "escape-string-regexp": "^1.0.5"
   },
   "devDependencies": {
     "@ovh/ui-kit.action-menu": "*",
     "@ovh/ui-kit.dropdown": "*",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
+    "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "karma": "^4.0.1",
     "lodash": "^4.17.11"

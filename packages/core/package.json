@@ -9,6 +9,15 @@
     "icons-generator": "icon-font-generator ./src/svg/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types 'woff, woff2' --center"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.3.4",
     "autoprefixer": "^9.4.8",
     "babel-loader": "^8.0.5",
     "chalk": "^2.4.2",

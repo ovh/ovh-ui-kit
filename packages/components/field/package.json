@@ -17,14 +17,13 @@
     "@ovh/ui-kit.radio": "*",
     "@ovh/ui-kit.select": "*",
     "@ovh/ui-kit.switch": "*",
-    "@ovh/ui-kit.textarea": "*"
-  },
-  "peerDependencies": {
+    "@ovh/ui-kit.textarea": "*",
     "angular": ">=1.6.x"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
+    "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "karma": "^4.0.1",
     "lodash": "^4.17.11"

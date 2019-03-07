@@ -9,7 +9,7 @@
   "main": "./dist/js/oui.js",
   "style": "./dist/css/oui.css",
   "scripts": {
-    "build": "npm-run-all -l -p build:* -s copy",
+    "build": "npm-run-all -l -s build:* copy",
     "build:less": "run-p build:less:*",
     "build:less:constants": "lessc ./src/less/_constants.less ./dist/less/_constants.less",
     "build:less:icons": "lessc ./src/less/_icons.less ./dist/less/_icons.less",
@@ -25,15 +25,14 @@
   },
   "dependencies": {
     "bloodhound-js": "^1.2.3",
-    "clipboard": "^2.0.1",
-    "flatpickr": "^4.5.2",
-    "popper.js": "^1.14.4",
+    "clipboard": "^2.0.4",
+    "flatpickr": "^4.5.6",
+    "popper.js": "^1.14.7",
     "ui-select": "^0.19.8"
   },
   "peerDependencies": {
     "angular": ">=1.6.x",
     "angular-aria": ">=1.6.x",
-    "angular-mocks": ">=1.6.x",
     "angular-sanitize": ">=1.6.x"
   },
   "devDependencies": {

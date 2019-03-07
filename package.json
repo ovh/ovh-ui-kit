@@ -12,7 +12,9 @@
     "packages/vendors/*"
   ],
   "scripts": {
-    "build": "lerna run build --parallel",
+    "build": "yarn build:libs && yarn build:apps",
+    "build:apps": "lerna exec --scope @ovh/ui-kit-documentation -- yarn build",
+    "build:libs": "lerna exec --scope @ovh/ui-kit -- yarn build",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
     "lint": "npm run lint:js && npm run lint:css",
@@ -22,8 +24,7 @@
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog",
     "start": "lerna exec --scope @ovh/ui-kit-documentation -- yarn start",
-    "test": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
-    "test:lerna": "lerna run test",
+    "test": "lerna run test",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },
   "config": {
@@ -41,15 +42,10 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/register": "^7.0.0",
     "@babel/runtime": "^7.3.4",
-    "angular": "^1.7.7",
-    "angular-aria": "^1.7.7",
-    "angular-mocks": "^1.7.7",
-    "angular-sanitize": "^1.7.7",
     "babel-eslint": "^10.0.1",
     "babel-plugin-angularjs-annotate": "^0.10.0",
     "babel-plugin-istanbul": "^5.1.1",
     "babel-plugin-lodash": "^3.3.4",
-    "cross-env": "^5.2.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-friendly-formatter": "^4.0.1",

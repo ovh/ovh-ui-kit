@@ -1,2 +1,6 @@
+.idea
+.preview-host
+*.log
+coverage
 dist
 node_modules

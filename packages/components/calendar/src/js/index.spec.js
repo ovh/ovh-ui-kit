@@ -1,5 +1,7 @@
-import '@ovh/ui-kit.core/src/js/test-utils';
+import 'flatpickr';
 import 'flatpickr/dist/l10n/fr';
+
+import '@ovh/ui-kit.core/src/js/test-utils';
 import './index';
 
 describe('ouiCalendar', () => {
