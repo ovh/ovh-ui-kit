@@ -1,3 +1,5 @@
+import './index';
+
 describe('ouiNumeric', () => {
   let $rootScope;
   let $compile;

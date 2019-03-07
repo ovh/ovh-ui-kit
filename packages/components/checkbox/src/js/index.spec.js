@@ -1,3 +1,6 @@
+import '@ovh/ui-kit.core/src/js/test-utils';
+import './index';
+
 describe('ouiCheckbox', () => {
   let $timeout;
   let TestUtils;
