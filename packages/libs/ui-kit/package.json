@@ -9,7 +9,7 @@
   "main": "./dist/js/oui.js",
   "style": "./dist/css/oui.css",
   "scripts": {
-    "build": "npm-run-all -l -p build:* -s copy",
+    "build": "npm-run-all -l -s build:* copy",
     "build:less": "run-p build:less:*",
     "build:less:constants": "lessc ./src/less/_constants.less ./dist/less/_constants.less",
     "build:less:icons": "lessc ./src/less/_icons.less ./dist/less/_icons.less",
@@ -25,15 +25,14 @@
   },
   "dependencies": {
     "bloodhound-js": "^1.2.3",
-    "clipboard": "^2.0.1",
-    "flatpickr": "^4.5.2",
-    "popper.js": "^1.14.4",
+    "clipboard": "^2.0.4",
+    "flatpickr": "^4.5.6",
+    "popper.js": "^1.14.7",
     "ui-select": "^0.19.8"
   },
   "peerDependencies": {
     "angular": ">=1.6.x",
     "angular-aria": ">=1.6.x",
-    "angular-mocks": ">=1.6.x",
     "angular-sanitize": ">=1.6.x"
   },
   "devDependencies": {
@@ -46,6 +45,7 @@
     "@ovh/ui-kit.chips": "*",
     "@ovh/ui-kit.clipboard": "*",
     "@ovh/ui-kit.collapsible": "*",
+    "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.criteria": "*",
     "@ovh/ui-kit.datagrid": "*",
     "@ovh/ui-kit.dropdown": "*",
@@ -79,29 +79,13 @@
     "@ovh/ui-kit.tile": "*",
     "@ovh/ui-kit.timepicker": "*",
     "@ovh/ui-kit.tooltip": "*",
-    "autoprefixer": "^9.4.8",
-    "babel-loader": "^8.0.5",
     "cpx": "^1.5.0",
     "cross-conf-env": "^1.1.2",
-    "css-loader": "^2.1.0",
-    "eslint-loader": "^2.1.2",
-    "file-loader": "^3.0.1",
-    "html-loader": "^0.5.5",
-    "istanbul-instrumenter-loader": "^3.0.1",
-    "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^4.0.0-rc.2",
     "less": "^3.9.0",
-    "less-loader": "^4.1.0",
-    "less-plugin-remcalc": "^0.1.0",
-    "lodash-webpack-plugin": "^0.11.5",
-    "mini-css-extract-plugin": "^0.5.0",
     "npm-run-all": "^4.1.5",
-    "postcss-loader": "^3.0.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-middleware": "^3.6.0",
-    "webpack-hot-middleware": "^2.24.3",
     "webpack-merge": "^4.2.1"
   }
 }

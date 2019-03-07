@@ -1,3 +1,6 @@
+import '@ovh/ui-kit.core/src/js/test-utils';
+import './index';
+
 describe('ouiProgress', () => {
   let TestUtils;
   let $timeout;
