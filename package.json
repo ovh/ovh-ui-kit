@@ -25,7 +25,7 @@
     "prepare": "yarn build",
     "preview-changelog": "npm-scripts-config preview-changelog",
     "start": "lerna exec --scope @ovh/ui-kit-documentation -- yarn start",
-    "test": "lerna run test",
+    "test": "yarn lint && lerna run test",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },
   "config": {
