@@ -126,39 +126,4 @@
       }
     }
   }
-
-  .field-sizes(@selector) {
-    .make-control-sizes(@i: 1) when (@i <= length(@oui-field-control-sizes)) {
-      .make-control-sizes(@i + 1);
-      @pair: extract(@oui-field-control-sizes, @i);
-      @key: extract(@pair, 1);
-      @value: extract(@pair, 2);
-
-      .@{selector}_@{key},
-      .@{selector}_@{i} {
-        width: @value;
-        min-width: @value;
-      }
-    }
-
-    .make-control-phone-sizes(@i: 1) when (@i <= length(@oui-field-control-phone-sizes)) {
-      .make-control-phone-sizes(@i + 1);
-      @pair: extract(@oui-field-control-phone-sizes, @i);
-      @key: extract(@pair, 1);
-      @value: extract(@pair, 2);
-
-      .@{selector}_@{key},
-      .@{selector}_@{i} {
-        width: auto;
-        min-width: 0;
-        max-width: @value;
-      }
-    }
-
-    .make-control-sizes();
-
-    @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
-      .make-control-phone-sizes();
-    }
-  }
 }

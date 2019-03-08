@@ -5,7 +5,6 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
-    "@ovh/ui-kit.core": "*",
-    "@ovh/ui-kit.field": "*"
+    "@ovh/ui-kit.core": "*"
   }
 }

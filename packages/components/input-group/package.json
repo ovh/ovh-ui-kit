@@ -5,8 +5,8 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
+    "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.core": "*",
-    "@ovh/ui-kit.field": "*",
     "@ovh/ui-kit.input": "*"
   }
 }
