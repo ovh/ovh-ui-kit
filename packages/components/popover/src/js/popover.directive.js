@@ -4,7 +4,7 @@ export default () => {
   'ngInject';
 
   return {
-    restrict: 'AE',
+    restrict: 'A',
     bindToController: {
       text: '@ouiPopover',
       title: '@?',
