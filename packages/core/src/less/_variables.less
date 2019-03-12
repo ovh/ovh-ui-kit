@@ -7,7 +7,7 @@
 @oui-global-base-font-family-icon: 'Oui Icons';
 @oui-global-base-font-family: 'Source Sans Pro', @oui-global-base-font-family-fallback;
 @oui-global-base-font-size: rem-calc(16);
-@oui-global-base-font-weight: 400;
+@oui-global-base-font-weight: @oui-font-regular;
 @oui-global-base-line-height: 1.5;
 @oui-global-base-letter-spacing: 0.007em;
 @oui-global-base-margin: 0 0 rem-calc(15);
@@ -92,6 +92,13 @@
   0 0 rem-calc(15),
   0 0 rem-calc(15),
   0 0 rem-calc(15);
+
+// Label
+@oui-label-font-color: @oui-color-shuttle;
+@oui-label-font-size: @oui-global-base-font-size;
+@oui-label-font-weight: @oui-global-base-font-weight;
+@oui-label-padding: 0;
+@oui-label-margin: 0 0 rem-calc(6);
 
 // Link
 @oui-link-font-color: @oui-color-pacific;

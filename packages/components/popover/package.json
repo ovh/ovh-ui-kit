@@ -10,7 +10,6 @@
     "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/karma start --watch"
   },
   "dependencies": {
-    "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.core": "*",
     "angular": ">=1.6.x",
     "popper.js": "^1.14.4"
@@ -18,6 +17,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
+    "@ovh/ui-kit.button": "*",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "karma": "^4.0.1"
