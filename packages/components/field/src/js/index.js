@@ -6,7 +6,9 @@ import FieldConfigurationProvider from './field.provider';
 const moduleName = 'oui.field';
 
 angular
-  .module(moduleName, [Popover])
+  .module(moduleName, [
+    Popover,
+  ])
   .component('ouiField', Field)
   .provider('ouiFieldConfiguration', FieldConfigurationProvider);
 

@@ -5,7 +5,9 @@ import Modal from './modal.component';
 const moduleName = 'oui.modal';
 
 angular
-  .module(moduleName, [Spinner])
+  .module(moduleName, [
+    Spinner,
+  ])
   .component('ouiModal', Modal);
 
 export default moduleName;

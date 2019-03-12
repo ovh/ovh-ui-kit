@@ -7,7 +7,9 @@ import ActionMenu from './action-menu.component';
 const moduleName = 'oui.action-menu';
 
 angular
-  .module(moduleName, [Dropdown])
+  .module(moduleName, [
+    Dropdown,
+  ])
   .component('ouiActionMenu', ActionMenu)
   .component('ouiActionMenuDivider', DropdownDivider)
   .component('ouiActionMenuItem', DropdownItem);

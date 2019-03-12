@@ -8,7 +8,9 @@ import HeaderTabsItem from './item/header-tabs-item.component';
 const moduleName = 'oui.header-tabs';
 
 angular
-  .module(moduleName, [Dropdown])
+  .module(moduleName, [
+    Dropdown,
+  ])
   .component('ouiHeaderTabs', HeaderTabs)
   .component('ouiHeaderTabsDivider', HeaderTabsDivider)
   .component('ouiHeaderTabsDropdown', HeaderTabsDropdown)
