@@ -10,6 +10,7 @@
     "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/karma start --watch"
   },
   "dependencies": {
+    "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.core": "*",
     "angular": ">=1.6.x"
   },

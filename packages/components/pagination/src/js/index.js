@@ -6,7 +6,9 @@ import PaginationConfigurationProvider from './pagination.provider';
 const moduleName = 'oui.pagination';
 
 angular
-  .module(moduleName, [Dropdown])
+  .module(moduleName, [
+    Dropdown,
+  ])
   .component('ouiPagination', Pagination)
   .provider('ouiPaginationConfiguration', PaginationConfigurationProvider);
 

@@ -13,7 +13,6 @@
     "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.input": "*",
-    "@ovh/ui-kit.input-group": "*",
     "angular": ">=1.6.x"
   },
   "devDependencies": {

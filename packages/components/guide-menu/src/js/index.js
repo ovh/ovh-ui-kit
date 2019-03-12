@@ -8,7 +8,9 @@ import GuideMenu from './guide-menu.component';
 const moduleName = 'oui.guide-menu';
 
 angular
-  .module(moduleName, [Dropdown])
+  .module(moduleName, [
+    Dropdown,
+  ])
   .component('ouiGuideMenu', GuideMenu)
   .component('ouiGuideMenuDivider', DropdownDivider)
   .component('ouiGuideMenuGroup', DropdownGroup)

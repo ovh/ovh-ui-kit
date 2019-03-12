@@ -5,7 +5,9 @@ import Search from './search.component';
 const moduleName = 'oui.search';
 
 angular
-  .module(moduleName, [Autocomplete])
+  .module(moduleName, [
+    Autocomplete,
+  ])
   .component('ouiSearch', Search);
 
 export default moduleName;

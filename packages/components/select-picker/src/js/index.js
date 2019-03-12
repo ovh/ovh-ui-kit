@@ -6,7 +6,9 @@ import SelectPickerSection from './section/select-picker-section.component';
 const moduleName = 'oui.select-picker';
 
 angular
-  .module(moduleName, [Select])
+  .module(moduleName, [
+    Select,
+  ])
   .component('ouiSelectPicker', SelectPicker)
   .component('ouiSelectPickerSection', SelectPickerSection);
 
