@@ -55,7 +55,6 @@
     "@ovh/ui-kit.form-actions": "*",
     "@ovh/ui-kit.guide-menu": "*",
     "@ovh/ui-kit.header": "*",
-    "@ovh/ui-kit.header-tabs": "*",
     "@ovh/ui-kit.inline-adder": "*",
     "@ovh/ui-kit.message": "*",
     "@ovh/ui-kit.modal": "*",
