@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ovh/ui-kit.core": "*",
+    "@ovh/ui-kit.dropdown": "*",
     "angular": ">=1.6.x"
   },
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@babel/node": "^7.2.2",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
-    "karma": "^4.0.1"
+    "karma": "^4.0.1",
+    "lodash": "^4.17.11"
   }
 }

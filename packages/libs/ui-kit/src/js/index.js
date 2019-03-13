@@ -21,7 +21,6 @@ import File from '@ovh/ui-kit.file';
 import FormActions from '@ovh/ui-kit.form-actions';
 import GuideMenu from '@ovh/ui-kit.guide-menu';
 import Header from '@ovh/ui-kit.header';
-import HeaderTabs from '@ovh/ui-kit.header-tabs';
 import InlineAdder from '@ovh/ui-kit.inline-adder';
 import Message from '@ovh/ui-kit.message';
 import Modal from '@ovh/ui-kit.modal';
@@ -68,7 +67,6 @@ angular
     FormActions,
     GuideMenu,
     Header,
-    HeaderTabs,
     InlineAdder,
     Message,
     Modal,
