@@ -13,7 +13,6 @@
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.radio": "*",
     "@ovh/ui-kit.select": "*",
-    "@ovh/ui-kit.thumbnail": "*",
     "angular": ">=1.6.x"
   },
   "devDependencies": {
