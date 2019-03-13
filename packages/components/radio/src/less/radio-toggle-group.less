@@ -1,20 +1,22 @@
 @import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
 @import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) '~@ovh/ui-kit.radio/src/less/_variables';
-@import './_normalize';
+@import (reference) './_variables';
 
 .oui-radio-toggle-group {
   display: flex;
   max-width: 300px;
 }
 
+oui-radio-toggle-group {
+  display: block;
+}
+
 .oui-radio-toggle {
-
-  #oui > .radio-toggle-normalize();
-
   flex: 1 1 auto;
 
   &__label {
+    #oui > .base-font();
+
     display: inline-block;
     width: 100%;
     height: rem-calc(40);
