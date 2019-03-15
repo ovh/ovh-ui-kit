@@ -1,5 +1,5 @@
-import '../src/less/oui.less';
-import '../src/js/index';
+import '@ovh/ui-kit.calendar';
+import '@ovh/ui-kit.calendar/src/index.less';
 
 import {
   Storybook,

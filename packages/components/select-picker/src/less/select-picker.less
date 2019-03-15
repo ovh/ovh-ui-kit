@@ -1,6 +1,5 @@
 @import '~@ovh/ui-kit.core/src/less/_mixins';
 @import './_mixins';
-@import './_normalize';
 
 .oui-select-picker {
   @oui-select-picker-selector: oui-select-picker;
@@ -21,6 +20,11 @@
       box-sizing: border-box;
     }
   }
+}
+
+oui-select-picker,
+oui-select-picker-section {
+  display: block;
 }
 
 .oui-select-picker_light {

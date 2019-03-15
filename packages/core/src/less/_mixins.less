@@ -87,8 +87,8 @@
     font-style: normal;
   }
 
-  .for(@array)   when (default()) { .for-impl_(length(@array)); }
-  .for-impl_(@i) when (@i > 1) { .for-impl_((@i - 1)); }
+  .for(@array)   when (default()) { #oui > .for-impl_(length(@array)); }
+  .for-impl_(@i) when (@i > 1) { #oui > .for-impl_((@i - 1)); }
   .for-impl_(@i) when (@i > 0) { .-each(extract(@array, @i)); }
 
   .define(@name) {
@@ -96,8 +96,8 @@
   }
 
   .icon-type() {
-    .for(@oui-icon-index); .-each(@index) {
-      .define(@index);
+    #oui > .for(@oui-icon-index); .-each(@index) {
+      #oui > .define(@index);
 
       &.oui-icon-@{index}::before {
         display: block;
@@ -227,10 +227,10 @@
   }
 
   .headings(@index: length(@oui-heading-font-sizes)) when(@index > 0) {
-    .headings(@index - 1);
+    #oui > .headings(@index - 1);
 
     &@{index} {
-      .base-font();
+      #oui > .base-font();
 
       font-size: extract(@oui-heading-font-sizes, @index);
       font-weight: extract(@oui-heading-font-weights, @index);

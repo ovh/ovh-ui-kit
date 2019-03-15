@@ -10,7 +10,8 @@
 
   &_inline { display: inline-block; }
 
-  &__control {
+  // Need to override read-only style of oui-input
+  & &__control {
     #oui > .input-base(
       @background-color-read-only: @oui-input-background-color,
       @border-color-read-only: @oui-input-border-color,

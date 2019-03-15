@@ -1,5 +1,5 @@
-import '../src/less/oui.less';
-import '../src/js/index';
+import '@ovh/ui-kit.clipboard';
+import '@ovh/ui-kit.clipboard/src/index.less';
 
 import {
   Storybook,

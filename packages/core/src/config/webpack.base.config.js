@@ -10,7 +10,7 @@ const exclude = [/node_modules(?![/\\](@ovh))/, /dist/];
 
 module.exports = {
   entry: {
-    component: ['./src/js/index.js'],
+    component: ['./src/index.js'],
   },
   plugins: [
     new webpack.DefinePlugin({

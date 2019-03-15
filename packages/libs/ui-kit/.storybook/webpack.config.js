@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const RemcalcPlugin = require('less-plugin-remcalc');
+const exclude = [/node_modules(?![/\\](@ovh))/, /dist/];
 
 module.exports = {
   module: {
@@ -7,7 +8,7 @@ module.exports = {
       test: /\.stories\.jsx?$/,
       loaders: [require.resolve('@storybook/addon-storysource/loader')],
       enforce: 'pre',
-    },{
+    }, {
       test: /\.css|.less$/,
       use: [
         {
@@ -27,6 +28,7 @@ module.exports = {
           },
         },
       ],
+      exclude,
     }],
   },
   resolve: {

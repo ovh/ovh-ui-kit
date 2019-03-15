@@ -4,61 +4,53 @@
 @import './_version';
 
 // Core
-@import '~@ovh/ui-kit.core/src/less/reboot';
-@import '~@ovh/ui-kit.core/src/less/fonts';
-@import '~@ovh/ui-kit.core/src/less/typography';
-@import '~@ovh/ui-kit.core/src/less/color';
-@import '~@ovh/ui-kit.core/src/less/icons';
+@import '~@ovh/ui-kit.core/src/index';
 
 // Components
-@import '~@ovh/ui-kit.button/src/less/button';
-@import '~@ovh/ui-kit.button/src/less/button-group';
-@import '~@ovh/ui-kit.form-actions/src/less/form-actions';
-@import '~@ovh/ui-kit.radio/src/less/radio';
-@import '~@ovh/ui-kit.radio/src/less/radio-toggle-group';
-@import '~@ovh/ui-kit.select-picker/src/less/select-picker';
-@import '~@ovh/ui-kit.checkbox/src/less/checkbox';
-@import '~@ovh/ui-kit.message/src/less/message';
-@import '~@ovh/ui-kit.tooltip/src/less/tooltip';
-@import '~@ovh/ui-kit.navbar/src/less/navbar';
-@import '~@ovh/ui-kit.sidebar/src/less/sidebar';
-@import '~@ovh/ui-kit.list/src/less/list';
-@import '~@ovh/ui-kit.input/src/less/input';
-@import '~@ovh/ui-kit.input/src/less/input-group';
-@import '~@ovh/ui-kit.clipboard/src/less/clipboard';
-@import '~@ovh/ui-kit.numeric/src/less/numeric';
-@import '~@ovh/ui-kit.search/src/less/search';
-@import '~@ovh/ui-kit.file/src/less/file';
-@import '~@ovh/ui-kit.password/src/less/password';
-@import '~@ovh/ui-kit.select/src/less/select';
-@import '~@ovh/ui-kit.box/src/less/box';
-@import '~@ovh/ui-kit.tabs/src/less/tabs';
-@import '~@ovh/ui-kit.progress-tracker/src/less/progress-tracker';
-@import '~@ovh/ui-kit.spinner/src/less/spinner';
-@import '~@ovh/ui-kit.datagrid/src/less/datagrid';
-@import '~@ovh/ui-kit.modal/src/less/modal';
-@import '~@ovh/ui-kit.switch/src/less/switch';
-@import '~@ovh/ui-kit.progress/src/less/progress';
-@import '~@ovh/ui-kit.textarea/src/less/textarea';
-@import '~@ovh/ui-kit.field/src/less/field';
-@import '~@ovh/ui-kit.dropdown/src/less/dropdown';
-@import '~@ovh/ui-kit.action-menu/src/less/action-menu';
-@import '~@ovh/ui-kit.guide-menu/src/less/guide-menu';
-@import '~@ovh/ui-kit.pagination/src/less/pagination';
-@import '~@ovh/ui-kit.back-button/src/less/back-button';
-@import '~@ovh/ui-kit.criteria/src/less/criteria';
-@import '~@ovh/ui-kit.chips/src/less/chips';
-@import '~@ovh/ui-kit.calendar/src/less/calendar';
-@import '~@ovh/ui-kit.timepicker/src/less/timepicker';
-@import '~@ovh/ui-kit.stepper/src/less/stepper';
-@import '~@ovh/ui-kit.status/src/less/status';
-@import '~@ovh/ui-kit.popover/src/less/popover';
-@import '~@ovh/ui-kit.collapsible/src/less/collapsible';
-@import '~@ovh/ui-kit.skeleton/src/less/skeleton';
-@import '~@ovh/ui-kit.slideshow/src/less/slideshow';
-@import '~@ovh/ui-kit.header/src/less/header';
-@import '~@ovh/ui-kit.header/src/less/header-tabs';
-@import '~@ovh/ui-kit.tile/src/less/tile';
-@import '~@ovh/ui-kit.inline-adder/src/less/inline-adder';
-@import '~@ovh/ui-kit.dual-list/src/less/dual-list';
-@import '~@ovh/ui-kit.autocomplete/src/less/autocomplete';
+@import '~@ovh/ui-kit.button/src/index'; // Atoms
+@import '~@ovh/ui-kit.form-actions/src/index'; // Molecules
+@import '~@ovh/ui-kit.radio/src/index'; // Atoms
+@import '~@ovh/ui-kit.select-picker/src/index'; // Molecules
+@import '~@ovh/ui-kit.checkbox/src/index'; // Atoms
+@import '~@ovh/ui-kit.message/src/index'; // Molecules
+@import '~@ovh/ui-kit.tooltip/src/index'; // Atoms
+@import '~@ovh/ui-kit.navbar/src/index'; // Organisms
+@import '~@ovh/ui-kit.sidebar/src/index'; // Organisms
+@import '~@ovh/ui-kit.list/src/index'; // Atoms
+@import '~@ovh/ui-kit.input/src/index'; // Atoms
+@import '~@ovh/ui-kit.clipboard/src/index'; // Molecules
+@import '~@ovh/ui-kit.numeric/src/index'; // Molecules
+@import '~@ovh/ui-kit.search/src/index'; // Molecules
+@import '~@ovh/ui-kit.file/src/index'; // Molecules
+@import '~@ovh/ui-kit.password/src/index'; // Molecules
+@import '~@ovh/ui-kit.select/src/index'; // Molecules
+@import '~@ovh/ui-kit.box/src/index'; // Atoms
+@import '~@ovh/ui-kit.tabs/src/index'; // Molecules
+@import '~@ovh/ui-kit.progress-tracker/src/index'; // Organisms
+@import '~@ovh/ui-kit.spinner/src/index'; // Atoms
+@import '~@ovh/ui-kit.skeleton/src/index'; // Atoms
+@import '~@ovh/ui-kit.datagrid/src/index'; // Organisms
+@import '~@ovh/ui-kit.modal/src/index'; // Organisms
+@import '~@ovh/ui-kit.switch/src/index'; // Atoms
+@import '~@ovh/ui-kit.progress/src/index'; // Molecules
+@import '~@ovh/ui-kit.textarea/src/index'; // Atoms
+@import '~@ovh/ui-kit.field/src/index'; // Molecules
+@import '~@ovh/ui-kit.dropdown/src/index'; // Molecules
+@import '~@ovh/ui-kit.action-menu/src/index'; // Molecules
+@import '~@ovh/ui-kit.guide-menu/src/index'; // Molecules
+@import '~@ovh/ui-kit.pagination/src/index'; // Organisms
+@import '~@ovh/ui-kit.back-button/src/index'; // Molecules
+@import '~@ovh/ui-kit.criteria/src/index'; // Organisms
+@import '~@ovh/ui-kit.chips/src/index'; // Molecules
+@import '~@ovh/ui-kit.calendar/src/index'; // Molecules
+@import '~@ovh/ui-kit.timepicker/src/index'; // Molecules
+@import '~@ovh/ui-kit.stepper/src/index'; // Organisms
+@import '~@ovh/ui-kit.status/src/index'; // Atoms
+@import '~@ovh/ui-kit.popover/src/index'; // Molecules
+@import '~@ovh/ui-kit.collapsible/src/index'; // Molecules
+@import '~@ovh/ui-kit.slideshow/src/index'; // Organisms
+@import '~@ovh/ui-kit.header/src/index'; // Organisms
+@import '~@ovh/ui-kit.tile/src/index'; // Molecules
+@import '~@ovh/ui-kit.inline-adder/src/index'; // Molecules
+@import '~@ovh/ui-kit.dual-list/src/index'; // Organisms
+@import '~@ovh/ui-kit.autocomplete/src/index'; // Molecules
