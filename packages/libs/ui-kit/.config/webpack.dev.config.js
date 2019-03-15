@@ -1,4 +1,4 @@
-const baseConfig = require("@ovh/ui-kit.core/src/config/webpack.base.config");
+const baseConfig = require("../.config/webpack.dev.config");
 const path = require("path");
 const merge = require("webpack-merge");
 
