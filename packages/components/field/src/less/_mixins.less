@@ -1,6 +1,6 @@
+@import '~@ovh/ui-kit.core/src/less/_mixins';
 @import '~@ovh/ui-kit.checkbox/src/less/_mixins';
 @import '~@ovh/ui-kit.input/src/less/_mixins';
-@import '~@ovh/ui-kit.core/src/less/_responsive';
 @import '~@ovh/ui-kit.select/src/less/_mixins';
 @import '~@ovh/ui-kit.switch/src/less/_mixins';
 @import '~@ovh/ui-kit.textarea/src/less/_mixins';
@@ -43,7 +43,7 @@
       display: flex;
       align-items: center;
 
-      .tablet({
+      #oui > .tablet({
         display: block;
       });
     }
@@ -80,7 +80,7 @@
         align-self: flex-start;
       }
 
-      .tablet({
+      #oui > .tablet({
         margin-left: 0;
       });
     }

@@ -1,6 +1,5 @@
-@import '~@ovh/ui-kit.button/src/less/_variables';
-@import '~@ovh/ui-kit.core/src/less/_responsive';
 @import '~@ovh/ui-kit.core/src/less/_mixins';
+@import '~@ovh/ui-kit.button/src/less/_variables';
 @import './_variables';
 
 #oui {
@@ -18,7 +17,7 @@
     margin: @oui-pagination-margin;
     font-size: @oui-pagination-font-size;
 
-    .phone({
+    #oui > .phone({
       flex-direction: column-reverse;
       justify-content: inherit;
       align-items: center;
@@ -55,7 +54,7 @@
       flex-wrap: nowrap;
       margin-left: rem-calc(20);
 
-      .phone({
+      #oui > .phone({
         margin-bottom: rem-calc(10);
         margin-left: 0;
       });
