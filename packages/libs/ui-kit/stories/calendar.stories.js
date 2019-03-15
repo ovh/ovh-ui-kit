@@ -1,14 +1,16 @@
 import '../src/less/oui.less';
 import '../src/js/index';
 
-import { storiesOf } from '@storybook/html';
-import { withKnobs, boolean } from '@storybook/addon-knobs';
-import { forModule } from 'storybook-addon-angularjs';
-import centered from '@storybook/addon-centered/html';
+import {
+  Storybook,
+  Knobs,
+  forModule,
+  centered,
+} from '@ovh/ui-kit.core/src/js/storybook-utils';
 
-storiesOf('Components/Calendar', module)
+Storybook.storiesOf('Components/Calendar', module)
   .addDecorator(centered)
-  .addDecorator(withKnobs)
+  .addDecorator(Knobs.withKnobs)
   .add(
     'default',
     forModule('oui.calendar').createElement(compile => compile`
@@ -24,7 +26,7 @@ storiesOf('Components/Calendar', module)
   .add(
     'disabled',
     forModule('oui.calendar').createElement((compile) => {
-      const disabled = boolean('disabled', true);
+      const disabled = Knobs.boolean('disabled', true);
 
       return compile`
         <oui-calendar model="$ctrl.model" disabled="${disabled}"></oui-calendar>

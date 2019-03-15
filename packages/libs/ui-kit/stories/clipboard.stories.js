@@ -1,18 +1,20 @@
 import '../src/less/oui.less';
 import '../src/js/index';
 
-import { storiesOf } from '@storybook/html';
-import { withKnobs, text } from '@storybook/addon-knobs';
-import { forModule } from 'storybook-addon-angularjs';
-import centered from '@storybook/addon-centered/html';
+import {
+  Storybook,
+  Knobs,
+  forModule,
+  centered,
+} from '@ovh/ui-kit.core/src/js/storybook-utils';
 
-storiesOf('Components/Clipboard', module)
+Storybook.storiesOf('Components/Clipboard', module)
   .addDecorator(centered)
-  .addDecorator(withKnobs)
+  .addDecorator(Knobs.withKnobs)
   .add(
     'default',
     forModule('oui.clipboard').createElement((compile) => {
-      const model = text('Model', 'Copy this text');
+      const model = Knobs.text('Model', 'Copy this text');
 
       return compile`
         <oui-clipboard model="${model}"></oui-clipboard>
