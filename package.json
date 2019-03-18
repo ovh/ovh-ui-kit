@@ -6,8 +6,8 @@
   "license": "BSD-3-Clause",
   "workspaces": [
     "packages/apps/*",
+    "packages/base/*",
     "packages/components/*",
-    "packages/core",
     "packages/libs/*",
     "packages/vendors/*"
   ],
