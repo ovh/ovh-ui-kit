@@ -1,7 +1,12 @@
-import '@ovh/ui-kit';
-import '@ovh/ui-kit/dist/css/oui.css';
+import { addParameters, addDecorator, configure } from "@storybook/html";
+import { withA11y } from '@storybook/addon-a11y';
+import { withKnobs } from '@storybook/addon-knobs';
+import centered from '@storybook/addon-centered/html';
 
-import { addParameters, configure } from "@storybook/html";
+// Addons
+addDecorator(centered);
+addDecorator(withA11y);
+addDecorator(withKnobs);
 
 // Options
 addParameters({

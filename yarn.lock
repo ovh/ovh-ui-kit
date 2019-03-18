@@ -1722,7 +1722,27 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@storybook/addon-actions@^5.0.1":
+"@storybook/addon-a11y@5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-5.0.1.tgz#3e4d1bb5f1d34f72ce729bf5a513d9d75458350c"
+  integrity sha512-uL12UXnFTEU3PXPAos8QoV3ijp6AWIvvCjWz0XmZOfkvBytByZfP67p4/2Toq7xzFj12DgdzqxbDS/zgfBEugA==
+  dependencies:
+    "@storybook/addons" "5.0.1"
+    "@storybook/client-logger" "5.0.1"
+    "@storybook/components" "5.0.1"
+    "@storybook/core-events" "5.0.1"
+    "@storybook/theming" "5.0.1"
+    axe-core "^3.1.2"
+    common-tags "^1.8.0"
+    core-js "^2.6.5"
+    global "^4.3.2"
+    memoizerific "^1.11.3"
+    prop-types "^15.6.2"
+    react "^16.8.1"
+    react-dom "^16.8.1"
+    util-deprecate "^1.0.2"
+
+"@storybook/addon-actions@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.0.1.tgz#58659ccebd7026ed411a03736ce19fb76924edc0"
   integrity sha512-OWsifGm6LRuFyynRf5D6Gc73++SXhQ2t/04AUBVpuKirULmxFJBf4479AFsBIbbgV0lxKETuMcfP1YVCfNkhRw==
@@ -1742,7 +1762,7 @@
     react-inspector "^2.3.0"
     uuid "^3.3.2"
 
-"@storybook/addon-centered@^5.0.1":
+"@storybook/addon-centered@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-centered/-/addon-centered-5.0.1.tgz#891c6ba6e9605b48ff23f6be87dd1be167c91c1d"
   integrity sha512-zNn+du4RoobyAF5zT0J5yzNHMbyyCpQH2MH4rnwkeVwZ0rh/S6CBRFVVMqX1XGOaMocBMJgBCpSWCnasuY1wnA==
@@ -1751,7 +1771,7 @@
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-knobs@^5.0.1":
+"@storybook/addon-knobs@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-5.0.1.tgz#c7a3449691d07485d3e31681db47655749ccaa16"
   integrity sha512-ELEjUF9n8aSMkszBzik6PpGgYp5eOPROeXaW815gZqFuZlu8MaYTkCSDbx2obQc8YsGSJ5G4Vbupmtg7IuQR1Q==
@@ -1773,7 +1793,7 @@
     react-select "^2.3.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-storysource@^5.0.1":
+"@storybook/addon-storysource@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-5.0.1.tgz#5815ae981e8e957d37afb9bf5c586bb75398bcc6"
   integrity sha512-ElKH4FWiWLFABUMTZT6Ittxae2CiurZrUQqKDjH3mbacpzJXwavSZh6orT9Dqa2hXzC9HE55MI5gWk8JEIiOhg==
@@ -1819,7 +1839,7 @@
   dependencies:
     core-js "^2.6.5"
 
-"@storybook/cli@^5.0.1":
+"@storybook/cli@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-5.0.1.tgz#5d41ca41df394371a9d55ee70e8e4d480ff7443a"
   integrity sha512-vKHhQH0+vnSLHTO5Xb9lUpVPlydKAcgoiz+CW24Y0ThXLxRJbpwta2Ny3uCs8oefTqKhEqc2hZqE7d3cpHP3Lg==
@@ -1987,7 +2007,7 @@
     webpack-dev-middleware "^3.5.1"
     webpack-hot-middleware "^2.24.3"
 
-"@storybook/html@^5.0.1":
+"@storybook/html@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@storybook/html/-/html-5.0.1.tgz#155c58fcf9ec00e6261983a919698052ef184974"
   integrity sha512-VYl3uv1nIlR+xsMITwH19PFGqGazvdwi+nOLrzOTQC5iDRuRM8VDBqt2ZzhWck6TVjOvL6OxRgbu7lI/kgI7PQ==
@@ -2922,6 +2942,11 @@ aws4@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.8.0.tgz#f0e003d9ca9e7f59c7a508945d7b2ef9a04a542f"
   integrity sha512-ReZxvNHIOv88FlT7rxcXIIC0fPt4KZqZbOlivyWtXLt8ESx84zd3kMC6iK5jVeS2qt+g7ftS7ye4fi06X5rtRQ==
+
+axe-core@^3.1.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-3.2.2.tgz#b06d6e9ae4636d706068843272bfaeed3fe97362"
+  integrity sha512-gAy4kMSPpuRJV3mwictJqlg5LhE84Vw2CydKdC4tvrLhR6+G3KW51zbL/vYujcLA2jvWOq3HMHrVeNuw+mrLVA==
 
 babel-code-frame@^6.26.0:
   version "6.26.0"
@@ -10950,7 +10975,7 @@ react-dev-utils@^7.0.0:
     strip-ansi "5.0.0"
     text-table "0.2.0"
 
-react-dom@^16.8.1:
+react-dom@^16.8.1, react-dom@^16.8.4:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.4.tgz#1061a8e01a2b3b0c8160037441c3bf00a0e3bc48"
   integrity sha512-Ob2wK7XG2tUDt7ps7LtLzGYYB6DXMCLj0G5fO6WeEICtT4/HdpOi7W/xLzZnR6RCG1tYza60nMdqtxzA8FaPJQ==
@@ -11113,7 +11138,7 @@ react-transition-group@^2.2.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.8.1:
+react@^16.8.1, react@^16.8.4:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.4.tgz#fdf7bd9ae53f03a9c4cd1a371432c206be1c4768"
   integrity sha512-0GQ6gFXfUH7aZcjGVymlPOASTuSjlQL4ZtVC5YKH+3JL6bBLCVO21DknzmaPlI90LN253ojj02nsapy+j7wIjg==

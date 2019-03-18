@@ -24,7 +24,7 @@
     "postversion": "git push && git push --tags",
     "prepare": "yarn build",
     "preview-changelog": "npm-scripts-config preview-changelog",
-    "start": "lerna exec --scope @ovh/ui-kit-documentation -- yarn start",
+    "start": "lerna exec --scope @ovh/ui-kit-workshop -- yarn storybook",
     "test": "yarn lint && lerna run test",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },

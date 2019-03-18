@@ -1,14 +1,14 @@
 import { storiesOf } from '@storybook/html';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
-import centered from '@storybook/addon-centered/html';
+
+import Clipboard from '@ovh/ui-kit.clipboard';
+import '@ovh/ui-kit.clipboard/src/index.less';
 
 storiesOf('Components/Clipboard', module)
-  .addDecorator(centered)
-  .addDecorator(withKnobs)
   .add(
     'default',
-    forModule('oui.clipboard').createElement((compile) => {
+    forModule(Clipboard).createElement((compile) => {
       const model = text('Model', 'Copy this text');
 
       return compile`

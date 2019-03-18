@@ -1,9 +1,10 @@
+import angular from 'angular';
+
 // Styles
 import './less/oui.less';
 
 // Components
 import ActionMenu from '@ovh/ui-kit.action-menu';
-import angular from 'angular';
 import Autocomplete from '@ovh/ui-kit.autocomplete';
 import BackButton from '@ovh/ui-kit.back-button';
 import Button from '@ovh/ui-kit.button';
