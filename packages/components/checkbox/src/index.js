@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Checkbox from './js/checkbox.component';
 
 const moduleName = 'oui.checkbox';

@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Skeleton from './js/skeleton.component';
 
 const moduleName = 'oui.skeleton';

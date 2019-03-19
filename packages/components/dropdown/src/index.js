@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Dropdown from './js/dropdown.component';
 import DropdownContent from './js/content/dropdown-content.directive';
 import DropdownDivider from './js/divider/dropdown-divider.component';

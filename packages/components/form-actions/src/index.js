@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import FormActions from './js/form-actions.component';
 import FormActionsProvider from './js/form-actions.provider';
 

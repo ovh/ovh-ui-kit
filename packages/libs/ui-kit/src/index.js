@@ -1,12 +1,13 @@
 import angular from 'angular';
 
 // Styles
-import './less/oui.less';
+import './index.less';
 
 // Components
 import ActionMenu from '@ovh/ui-kit.action-menu';
 import Autocomplete from '@ovh/ui-kit.autocomplete';
 import BackButton from '@ovh/ui-kit.back-button';
+import Box from '@ovh/ui-kit.box';
 import Button from '@ovh/ui-kit.button';
 import Calendar from '@ovh/ui-kit.calendar';
 import Checkbox from '@ovh/ui-kit.checkbox';
@@ -23,6 +24,8 @@ import FormActions from '@ovh/ui-kit.form-actions';
 import GuideMenu from '@ovh/ui-kit.guide-menu';
 import Header from '@ovh/ui-kit.header';
 import InlineAdder from '@ovh/ui-kit.inline-adder';
+import Input from '@ovh/ui-kit.input';
+import List from '@ovh/ui-kit.list';
 import Message from '@ovh/ui-kit.message';
 import Modal from '@ovh/ui-kit.modal';
 import Navbar from '@ovh/ui-kit.navbar';
@@ -31,13 +34,16 @@ import Pagination from '@ovh/ui-kit.pagination';
 import Password from '@ovh/ui-kit.password';
 import Popover from '@ovh/ui-kit.popover';
 import Progress from '@ovh/ui-kit.progress';
+import ProgressTracker from '@ovh/ui-kit.progress-tracker';
 import Radio from '@ovh/ui-kit.radio';
 import Search from '@ovh/ui-kit.search';
 import Select from '@ovh/ui-kit.select';
 import SelectPicker from '@ovh/ui-kit.select-picker';
+import Sidebar from '@ovh/ui-kit.sidebar';
 import Skeleton from '@ovh/ui-kit.skeleton';
 import Slideshow from '@ovh/ui-kit.slideshow';
 import Spinner from '@ovh/ui-kit.spinner';
+import Status from '@ovh/ui-kit.status';
 import Stepper from '@ovh/ui-kit.stepper';
 import Switch from '@ovh/ui-kit.switch';
 import Tabs from '@ovh/ui-kit.tabs';
@@ -53,6 +59,7 @@ angular
     ActionMenu,
     Autocomplete,
     BackButton,
+    Box,
     Button,
     Calendar,
     Checkbox,
@@ -69,6 +76,8 @@ angular
     GuideMenu,
     Header,
     InlineAdder,
+    Input,
+    List,
     Message,
     Modal,
     Navbar,
@@ -77,13 +86,16 @@ angular
     Password,
     Popover,
     Progress,
+    ProgressTracker,
     Radio,
     Search,
     Select,
     SelectPicker,
+    Sidebar,
     Skeleton,
     Slideshow,
     Spinner,
+    Status,
     Stepper,
     Switch,
     Tabs,

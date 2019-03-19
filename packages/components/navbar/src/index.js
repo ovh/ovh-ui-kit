@@ -1,7 +1,9 @@
 import 'angular-aria';
 import 'angular-sanitize';
 import angular from 'angular';
+
 import Spinner from '@ovh/ui-kit.spinner';
+
 import KEYBOARD_KEYS from './js/keyboard-keys.constant';
 import Navbar from './js/navbar.component';
 import NavbarBrand from './js/brand/navbar-brand.component';

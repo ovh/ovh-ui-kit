@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Textarea from './js/textarea.component';
 import TextareaProvider from './js/textarea.provider';
 

@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Calendar from './js/calendar.component';
 import CalendarProvider from './js/calendar.provider';
 

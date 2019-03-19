@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Password from './js/password.component';
 import PasswordConfigurationProvider from './js/password.provider';
 import PasswordRule from './js/rule/password-rule.component';

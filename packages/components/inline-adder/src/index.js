@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import InlineAdder from './js/inline-adder.component';
 import InlineAdderField from './js/field/inline-adder-field.component';
 import InlineAdderProvider from './js/inline-adder.provider';

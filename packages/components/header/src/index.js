@@ -1,7 +1,8 @@
 import angular from 'angular';
-import Dropdown from '@ovh/ui-kit.dropdown';
-import HeaderTabsDivider from '@ovh/ui-kit.dropdown/src/js/divider/dropdown-divider.component';
 
+import Dropdown from '@ovh/ui-kit.dropdown';
+
+import HeaderTabsDivider from '@ovh/ui-kit.dropdown/src/js/divider/dropdown-divider.component';
 import Header from './js/header.component';
 import HeaderTabs from './js/tabs/header-tabs.component';
 import HeaderTabsDropdown from './js/tabs/dropdown/header-tabs-dropdown.component';

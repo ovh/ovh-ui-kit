@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Numeric from './js/numeric.component';
 
 const moduleName = 'oui.numeric';

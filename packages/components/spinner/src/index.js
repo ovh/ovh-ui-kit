@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Spinner from './js/spinner.component';
 
 const moduleName = 'oui.spinner';

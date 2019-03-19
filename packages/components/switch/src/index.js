@@ -1,4 +1,5 @@
 import angular from 'angular';
+
 import Switch from './js/switch.component';
 
 const moduleName = 'oui.switch';
