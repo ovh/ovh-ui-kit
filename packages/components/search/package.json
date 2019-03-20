@@ -13,6 +13,7 @@
   "dependencies": {
     "@ovh/ui-kit.autocomplete": "*",
     "@ovh/ui-kit.button": "*",
+    "@ovh/ui-kit.config": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.input": "*",
     "angular": ">=1.6.x"

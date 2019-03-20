@@ -44,6 +44,7 @@
     "@ovh/ui-kit.chips": "*",
     "@ovh/ui-kit.clipboard": "*",
     "@ovh/ui-kit.collapsible": "*",
+    "@ovh/ui-kit.config": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.criteria": "*",
     "@ovh/ui-kit.datagrid": "*",
@@ -88,12 +89,6 @@
     "rimraf": "^2.6.3",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-merge": "^4.2.1",
-    "autoprefixer": "^9.4.8",
-    "less-loader": "^4.1.0",
-    "less-plugin-remcalc": "^0.1.0",
-    "postcss-loader": "^3.0.0",
-    "style-loader": "^0.23.1",
-    "css-loader": "^2.1.0"
+    "webpack-merge": "^4.2.1"
   }
 }

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ovh/ui-kit.checkbox": "*",
+    "@ovh/ui-kit.config": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.input": "*",
     "@ovh/ui-kit.popover": "*",

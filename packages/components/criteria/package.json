@@ -13,6 +13,7 @@
   "dependencies": {
     "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.chips": "*",
+    "@ovh/ui-kit.config": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.dropdown": "*",
     "@ovh/ui-kit.field": "*",

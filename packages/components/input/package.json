@@ -7,6 +7,7 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
+    "@ovh/ui-kit.config": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.button": "*"
   }
