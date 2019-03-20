@@ -1,6 +1,5 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
-@import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
-@import (reference) './_variables';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import './_variables';
 
 .oui-dual-list {
   #oui > .base-font();
@@ -12,7 +11,7 @@
   border-radius: @oui-dual-list-border-radius;
   background: @oui-dual-list-background;
 
-  .phone({
+  #oui > .phone({
     flex-direction: column;
   });
 
@@ -32,11 +31,11 @@
       display: none;
       cursor: pointer;
 
-      .phone({ display: flex; });
+      #oui > .phone({ display: flex; });
     }
 
     header& {
-      .phone({ display: none; });
+      #oui > .phone({ display: none; });
     }
   }
 
@@ -70,7 +69,7 @@
   }
 
   &__header[aria-expanded="false"] ~ &__wrapper {
-    .phone({
+    #oui > .phone({
       height: 0;
     });
   }
@@ -86,7 +85,7 @@
       overflow: hidden;
     }
 
-    .phone({
+    #oui > .phone({
       margin-left: -@oui-dual-list-wrapper-gutter;
       margin-right: -@oui-dual-list-wrapper-gutter;
     });
@@ -104,7 +103,7 @@
 
     .oui-button { padding: 0; }
 
-    .phone({
+    #oui > .phone({
       text-align: left;
     });
   }
@@ -113,7 +112,7 @@
   &__action + &__body {
     margin: @oui-dual-list-action-margin;
 
-    .phone({
+    #oui > .phone({
       margin-left: -@oui-dual-list-wrapper-gutter;
       margin-right: -@oui-dual-list-wrapper-gutter;
     });
@@ -165,7 +164,7 @@
       &:hover,
       &:focus { background: @oui-dual-list-item-background_hover; }
 
-      .phone({
+      #oui > .phone({
         padding: @oui-dual-list-item-padding_responsive;
         border-radius: 0;
       });
@@ -195,7 +194,7 @@
     flex: 1;
     flex-direction: column;
 
-    .phone({
+    #oui > .phone({
       flex: auto;
     });
   }
@@ -204,7 +203,7 @@
   &-source {
     border-right: @oui-dual-list-border;
 
-    .phone({ border-right: none; });
+    #oui > .phone({ border-right: none; });
   }
 
   // Variant "target"

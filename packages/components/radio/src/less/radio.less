@@ -1,6 +1,6 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
-@import (reference) './_mixins';
-@import './_normalize.less';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import './_mixins';
+@import './_variables';
 
 .oui-radio {
   @oui-radio-selector: oui-radio;
@@ -108,4 +108,9 @@
   &_inline {
     #oui > .radio-inline();
   }
+}
+
+oui-radio,
+oui-radio-group {
+  display: block;
 }

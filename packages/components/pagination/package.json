@@ -2,7 +2,8 @@
   "name": "@ovh/ui-kit.pagination",
   "version": "0.0.0",
   "private": true,
-  "main": "./src/js/index.js",
+  "main": "./src/index.js",
+  "less": "./src/index.less",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
@@ -13,11 +14,13 @@
     "@ovh/ui-kit.button": "*",
     "@ovh/ui-kit.core": "*",
     "@ovh/ui-kit.dropdown": "*",
+    "@ovh/ui-kit.input": "*",
     "angular": ">=1.6.x"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
+    "@ovh/ui-kit.test": "*",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "karma": "^4.0.1",

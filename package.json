@@ -6,8 +6,8 @@
   "license": "BSD-3-Clause",
   "workspaces": [
     "packages/apps/*",
+    "packages/base/*",
     "packages/components/*",
-    "packages/core",
     "packages/libs/*",
     "packages/vendors/*"
   ],
@@ -20,12 +20,13 @@
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint 'packages/**/*.less'",
     "lint:js": "eslint ./packages",
-    "version": "yarn build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
+    "version": "yarn build && git add dist packages/base/core/less/_icons.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "prepare": "yarn build",
     "preview-changelog": "npm-scripts-config preview-changelog",
-    "start": "lerna exec --scope @ovh/ui-kit-documentation -- yarn start",
-    "test": "yarn lint && lerna run test",
+    "start": "lerna exec --scope @ovh/ui-kit-workshop -- yarn storybook",
+    "test": "run-s lint test:karma",
+    "test:karma": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },
   "config": {

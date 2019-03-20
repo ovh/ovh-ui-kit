@@ -1,0 +1,17 @@
+{
+  "name": "@ovh/ui-kit.core",
+  "version": "0.0.0",
+  "private": true,
+  "less": "./src/index.less",
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "scripts": {
+    "icons": "mkdirp ./src/fonts/oui-icons && yarn icons-generator && node ./src/js/generate-icons-indexes.js",
+    "icons-generator": "icon-font-generator ./src/svg/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types 'woff, woff2' --center"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "icon-font-generator": "^2.1.10",
+    "mkdirp": "^0.5.1"
+  }
+}

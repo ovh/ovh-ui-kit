@@ -1,6 +1,6 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
-@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) './_variables';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import '~@ovh/ui-kit.core/src/less/_variables';
+@import './_variables';
 
 #oui {
   .input-base(
@@ -30,7 +30,6 @@
     border: 1px solid @border-color;
     border-radius: @oui-global-base-radius;
     margin: @margin;
-    vertical-align: top;
     background-color: @background-color;
     box-shadow: @oui-input-shadow;
     color: @font-color;
@@ -85,7 +84,7 @@
 
   .input-status() {
     &_error {
-      .input-error-style();
+      #oui > .input-error-style();
     }
 
     &-group_button .oui-input.oui-input_error:focus ~ .oui-button,
@@ -126,6 +125,7 @@
 
   .input-inline() {
     display: inline-block;
+    vertical-align: top;
     width: auto;
   }
 }

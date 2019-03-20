@@ -1,5 +1,5 @@
 import Filter from './filter';
-import originalFakeData from '../index.spec.data.json';
+import originalFakeData from '../datagrid.spec.data.json';
 import originalServersFakeData from '../servers.spec.data.json';
 
 const textSearchCriterion = {

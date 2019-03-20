@@ -1,5 +1,5 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
-@import (reference) './_variables';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import './_variables';
 
 .oui-tabs {
   display: block;
@@ -57,7 +57,7 @@
     display: flex; // Avoid inline spacing
     margin-bottom: -1px;
 
-    .phone({
+    #oui > .phone({
       display: none;
     });
   }
@@ -67,7 +67,7 @@
   display: block;
 
   & + & {
-    .phone({
+    #oui > .phone({
       margin-top: @oui-tabs-tab-spacing;
     });
   }
@@ -87,7 +87,7 @@
     background: @oui-tabs-tabpanel-background-color;
     cursor: pointer;
 
-    .phone({ display: flex; });
+    #oui > .phone({ display: flex; });
 
     &:focus {
       outline-width: 1px;
@@ -140,7 +140,7 @@
     border-top-right-radius: 0;
     background: @oui-tabs-tabpanel-background-color;
 
-    .phone({
+    #oui > .phone({
       padding: @oui-tabs-tabpanel-padding_mobile;
       border-top: none;
     });
