@@ -20,7 +20,7 @@
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint 'packages/**/*.less'",
     "lint:js": "eslint ./packages",
-    "version": "yarn build && git add dist packages/components/_core/_icons.less packages/base/less/_version.less && npm-scripts-config version",
+    "version": "yarn build && git add dist packages/base/core/less/_icons.less && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "prepare": "yarn build",
     "preview-changelog": "npm-scripts-config preview-changelog",

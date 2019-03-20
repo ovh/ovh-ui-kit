@@ -87,8 +87,11 @@ module.exports = {
           {
             loader: 'postcss-loader',
             options: {
+              ident: 'postcss',
               sourceMap: true,
-              plugins: () => [autoprefixer({ browsers: ['last 2 versions', 'ie 11'] })],
+              plugins: () => [
+                autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
+              ],
             },
           },
           {
@@ -106,7 +109,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[folder]/[name].[ext]',
+              name: '[folder]/[name].[ext]?[hash]',
               outputPath: '../fonts',
               publicPath: '../fonts',
             },
