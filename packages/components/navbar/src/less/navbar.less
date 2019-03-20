@@ -1,6 +1,6 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
-@import (reference) './_mixins';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import '~@ovh/ui-kit.core/src/less/_variables';
+@import './_mixins';
 @import './_normalize';
 
 .oui-navbar {
@@ -81,7 +81,7 @@
     z-index: -1;
 
     &_active {
-      .tablet({
+      #oui > .tablet({
         opacity: @oui-navbar-backdrop-opacity;
         pointer-events: auto;
         z-index: @oui-navbar-z-index;
@@ -217,7 +217,7 @@
     margin-right: @oui-navbar-toggler-margin-right;
     text-align: center;
 
-    .tablet({
+    #oui > .tablet({
       display: flex;
     });
 
@@ -324,7 +324,7 @@
       > .oui-navbar-list {
         overflow: auto;
 
-        .desktop({
+        #oui > .desktop({
           max-height: rem-calc(400);
         });
       }
@@ -502,7 +502,7 @@
 
   &-menu_notifications,
   &-menu__wrapper > &-menu_notifications {
-    .tablet({
+    #oui > .tablet({
       max-width: @oui-navbar-menu-width_large;
     });
   }
@@ -549,7 +549,7 @@
     }
 
     & > &__action {
-      .desktop({
+      #oui > .desktop({
         visibility: hidden;
       });
     }

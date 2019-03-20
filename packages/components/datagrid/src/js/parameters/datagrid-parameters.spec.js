@@ -2,7 +2,7 @@ import '@ovh/ui-kit.checkbox';
 import '@ovh/ui-kit.dropdown';
 
 import '@ovh/ui-kit.core/src/js/test-utils';
-import '../index';
+import '../../index';
 
 describe('ouiDatagridParameters', () => {
   let $timeout;

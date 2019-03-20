@@ -2,7 +2,8 @@
   "name": "@ovh/ui-kit.checkbox",
   "version": "0.0.0",
   "private": true,
-  "main": "./src/js/index.js",
+  "main": "./src/index.js",
+  "less": "./src/index.less",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {

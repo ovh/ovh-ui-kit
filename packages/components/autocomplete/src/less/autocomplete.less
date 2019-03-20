@@ -1,6 +1,6 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
-@import (reference) '~@ovh/ui-kit.dropdown/src/less/dropdown';
+@import '~@ovh/ui-kit.core/src/less/_variables';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import '~@ovh/ui-kit.dropdown/src/less/dropdown';
 
 .oui-autocomplete {
   &:extend(.oui-dropdown-menu all);
@@ -12,7 +12,7 @@
   padding: 0;
   list-style: none;
 
-  .phone({
+  #oui > .phone({
     max-width: 100%;
   });
 

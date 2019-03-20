@@ -1,7 +1,6 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_mixins';
-@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) '~@ovh/ui-kit.core/src/less/_responsive';
-@import (reference) './_variables';
+@import '~@ovh/ui-kit.core/src/less/_mixins';
+@import '~@ovh/ui-kit.core/src/less/_variables';
+@import './_variables';
 
 #oui {
   .navbar-list(
@@ -110,7 +109,7 @@
       display: none;
     }
 
-    .medium({
+    #oui > .medium({
       padding: 0;
       font-size: 0;
       text-align: center;
@@ -127,7 +126,7 @@
       color: @icon-color;
       vertical-align: middle;
 
-      .medium({
+      #oui > .medium({
         line-height: 1;
         margin: 0;
         vertical-align: middle;
@@ -151,7 +150,7 @@
         border-radius: @badge-radius;
         background: @badge-background-color;
 
-        .medium({
+        #oui > .medium({
           top: 50%;
           transform: translate(50%, -50%);
         });

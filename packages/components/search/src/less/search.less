@@ -1,12 +1,11 @@
-@import (reference) '~@ovh/ui-kit.core/src/less/_variables';
-@import (reference) '~@ovh/ui-kit.input/src/less/input-group';
-@import (reference) './_variables';
+@import '~@ovh/ui-kit.core/src/less/_variables';
+@import '~@ovh/ui-kit.input/src/less/input-group';
+@import './_variables';
 
 // Search
 .oui-search {
-  &:extend(.oui-input-group all);
-
-  position: relative;
+  display: block;
+  margin: 0 0 rem-calc(20);
 
   .oui-input:first-child {
     padding-right: @oui-input-group-search-padding-right;
@@ -65,7 +64,12 @@
 }
 
 oui-search {
-  // The component hasn't the root classname,
-  // No need to extend .oui-search
-  display: block;
+  &:extend(.oui-search);
+}
+
+.oui-search__form {
+  &:extend(.oui-input-group all);
+
+  margin: 0;
+  position: relative;
 }
