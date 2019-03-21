@@ -1,6 +1,6 @@
 import '@ovh/ui-kit.action-menu';
 
-import '@ovh/ui-kit.core/src/js/test-utils';
+import '@ovh/ui-kit.test/src/test-utils';
 import '../index';
 
 import columnsData from './columns.spec.data.json';

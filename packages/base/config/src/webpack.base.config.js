@@ -9,9 +9,6 @@ const RemcalcPlugin = require('less-plugin-remcalc');
 const exclude = [/node_modules(?![/\\](@ovh))/, /dist/];
 
 module.exports = {
-  entry: {
-    component: ['./src/index.js'],
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': process.env.NODE_ENV,
@@ -56,7 +53,14 @@ module.exports = {
               comments: false,
               env: {
                 test: {
-                  plugins: ['babel-plugin-istanbul'],
+                  plugins: [
+                    ['babel-plugin-istanbul', {
+                      exclude: [
+                        '**/*-utils.js',
+                        '**/*.spec.js',
+                      ],
+                    }],
+                  ],
                 },
               },
             },

@@ -6,6 +6,9 @@ const webpack = require("webpack");
 module.exports = merge(baseConfig, {
   mode: "production",
   devtool: "source-map",
+  entry: {
+    component: ['./src/index.js'],
+  },
   output: {
     path: path.resolve(".", "dist", "js"),
     filename: "oui.js"

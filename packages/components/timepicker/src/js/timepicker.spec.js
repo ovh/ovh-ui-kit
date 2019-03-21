@@ -1,7 +1,7 @@
 import 'flatpickr';
 import 'flatpickr/dist/l10n/fr';
 
-import '@ovh/ui-kit.core/src/js/test-utils';
+import '@ovh/ui-kit.test/src/test-utils';
 import '../index';
 
 describe('ouiTimepicker', () => {

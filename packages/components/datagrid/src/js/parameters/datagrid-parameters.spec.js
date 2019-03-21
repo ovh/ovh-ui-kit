@@ -1,7 +1,7 @@
 import '@ovh/ui-kit.checkbox';
 import '@ovh/ui-kit.dropdown';
 
-import '@ovh/ui-kit.core/src/js/test-utils';
+import '@ovh/ui-kit.test/src/test-utils';
 import '../../index';
 
 describe('ouiDatagridParameters', () => {

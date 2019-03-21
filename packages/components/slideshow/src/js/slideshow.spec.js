@@ -1,6 +1,6 @@
 import '@ovh/ui-kit.spinner';
 
-import '@ovh/ui-kit.core/src/js/test-utils';
+import '@ovh/ui-kit.test/src/test-utils';
 import '../index';
 
 describe('ouiSlideshow', () => {
