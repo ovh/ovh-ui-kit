@@ -5,9 +5,9 @@ import { forModule } from 'storybook-addon-angularjs';
 import Clipboard from '@ovh/ui-kit.clipboard';
 import '@ovh/ui-kit.clipboard/src/index.less';
 
-storiesOf('Components/Clipboard', module)
+storiesOf('Molecules/Clipboard', module)
   .add(
-    'default',
+    'Simple clipboard',
     forModule(Clipboard).createElement((compile) => {
       const model = text('Model', 'Copy this text');
 
