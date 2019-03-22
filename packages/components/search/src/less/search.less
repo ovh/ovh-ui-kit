@@ -5,10 +5,10 @@
 // Search
 .oui-search {
   display: block;
-  margin: 0 0 rem-calc(20);
+  margin: @oui-search-margin;
 
   .oui-input:first-child {
-    padding-right: @oui-input-group-search-padding-right;
+    padding-right: @oui-search-padding-right;
     border-radius: @oui-global-base-radius;
 
     &:disabled {
@@ -25,18 +25,18 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    padding: 0 @oui-input-group-search-button-padding-x;
+    padding: 0 @oui-search-button-padding-x;
     text-align: center;
     z-index: 2; // Avoid to be hidden by inputs
 
     &[type="reset"] {
-      right: @oui-input-group-search-reset-right;
-      font-size: @oui-input-group-search-reset-icon-size;
+      right: @oui-search-reset-right;
+      font-size: @oui-search-reset-icon-size;
     }
 
     &[type="submit"] {
-      right: @oui-input-group-search-submit-right;
-      font-size: @oui-input-group-search-submit-icon-size;
+      right: @oui-search-submit-right;
+      font-size: @oui-search-submit-icon-size;
     }
 
     &,

@@ -5,72 +5,96 @@
 ### Basic
 
 ```html:preview
-<div ng-init="$ctrl.value1 = {id:'a', name: 'Value A'}">
-<oui-select-picker name="ouiSelectPicker1"
-    match="name"
-    model="$ctrl.value1"
-    label="Value A or B"
-    values="[{id:'a', name: 'Value A'}, {id:'b', name: 'Value B'}]"></oui-select-picker>
-<oui-select-picker name="ouiSelectPicker1"
-    match="name"
-    model="$ctrl.value1"
-    label="Value C"
-    values="[{id:'c', name: 'Value C'}]"></oui-select-picker>
-<oui-select-picker name="ouiSelectPicker1"
-    match="name"
-    model="$ctrl.value1"
-    placeholder="Select"
-    label="Value D, E or F"
-    values="[{id:'d', name: 'Value D'}, {id:'e', name: 'Value E'}, {id:'f', name: 'Value F'}]"></oui-select-picker>
+<div class="row" ng-init="$ctrl.value1 = {id:'a', name: 'Value A'}">
+  <div class="col-4">
+    <oui-select-picker name="ouiSelectPicker1"
+        match="name"
+        model="$ctrl.value1"
+        label="Value A or B"
+        values="[{id:'a', name: 'Value A'}, {id:'b', name: 'Value B'}]"></oui-select-picker>
+  </div>
+  <div class="col-4">
+    <oui-select-picker name="ouiSelectPicker1"
+        match="name"
+        model="$ctrl.value1"
+        label="Value C"
+        values="[{id:'c', name: 'Value C'}]"></oui-select-picker>
+  </div>
+  <div class="col-4">
+    <oui-select-picker name="ouiSelectPicker1"
+        match="name"
+        model="$ctrl.value1"
+        placeholder="Select"
+        label="Value D, E or F"
+        values="[{id:'d', name: 'Value D'}, {id:'e', name: 'Value E'}, {id:'f', name: 'Value F'}]"></oui-select-picker>
+  </div>
 </div>
 ```
 
 ### Description
 
 ```html:preview
-<oui-select-picker label="Checked"
-    match="name"
-    description="Checked select picker"></oui-select-picker>
-<oui-select-picker label="Disabled"
-    match="name"
-    description="Disabled select picker"
-    disabled></oui-select-picker>
+<div class="row">
+  <div class="col-4">
+    <oui-select-picker label="Checked"
+      match="name"
+      description="Checked select picker"></oui-select-picker>
+  </div>
+  <div class="col-4">
+    <oui-select-picker label="Disabled"
+      match="name"
+      description="Disabled select picker"
+      disabled></oui-select-picker>
+  </div>
+</div>
 ```
 
 ### Sections using `oui-select-picker-section`
 
 ```html:preview
-<oui-select-picker label="Checked"
-    match="name"
-    description="Checked select picker">
-    <oui-select-picker-section>Section 1</oui-select-picker-section>
-    <oui-select-picker-section>Section 2</oui-select-picker-section>
-</oui-select-picker>
-<oui-select-picker label="Disabled"
-    match="name"
-    description="Disabled select picker"
-    disabled>
-    <oui-select-picker-section>Section 1</oui-select-picker-section>
-    <oui-select-picker-section>Section 2</oui-select-picker-section>
-</oui-select-picker>
+<div class="row">
+  <div class="col-4">
+    <oui-select-picker label="Checked"
+      match="name"
+      description="Checked select picker">
+      <oui-select-picker-section>Section 1</oui-select-picker-section>
+      <oui-select-picker-section>Section 2</oui-select-picker-section>
+    </oui-select-picker>
+  </div>
+  <div class="col-4">
+    <oui-select-picker label="Disabled"
+      match="name"
+      description="Disabled select picker"
+      disabled>
+      <oui-select-picker-section>Section 1</oui-select-picker-section>
+      <oui-select-picker-section>Section 2</oui-select-picker-section>
+    </oui-select-picker>
+  </div>
+</div>
 ```
 
 ### On change
 
 ```html:preview
-<div ng-init="$ctrl.value2 = {id:'a', name: 'Value A'}">
+<div class="row" ng-init="$ctrl.value2 = {id:'a', name: 'Value A'}">
+  <div class="col-4">
     <oui-select-picker label="Value A or B"
-        name="ouiSelectPicker2"
-        match="name"
-        model="$ctrl.value2"
-        values="[{id:'a', name: 'Value A'}, {id:'b', name: 'Value B'}]"
-        on-change="$ctrl.lastOnChangeValue = modelValue"></oui-select-picker>
+      name="ouiSelectPicker2"
+      match="name"
+      model="$ctrl.value2"
+      values="[{id:'a', name: 'Value A'}, {id:'b', name: 'Value B'}]"
+      on-change="$ctrl.lastOnChangeValue = modelValue">
+    </oui-select-picker>
+  </div>
+  <div class="col-4">
     <oui-select-picker label="Value C"
-        name="ouiSelectPicker2"
-        match="name"
-        model="$ctrl.value2"
-        values="[{id:'c', name: 'Value C'}]"
-        on-change="$ctrl.lastOnChangeValue = modelValue"></oui-select-picker>
+      name="ouiSelectPicker2"
+      match="name"
+      model="$ctrl.value2"
+      values="[{id:'c', name: 'Value C'}]"
+      on-change="$ctrl.lastOnChangeValue = modelValue">
+    </oui-select-picker>
+  </div>
 </div>
 
 <span>Last onChange value: {{ $ctrl.lastOnChangeValue }}</span>
@@ -79,26 +103,35 @@
 ### Variant
 
 ```html:preview
-<div ng-init="$ctrl.value3 = {id:'a', name: 'Value A'}">
-<oui-select-picker name="ouiSelectPicker5"
-    match="name"
-    model="$ctrl.value3"
-    label="Value A or B"
-    values="[{id:'a', name: 'Value A'}, {id:'b', name: 'Value B'}]"
-    variant="light"></oui-select-picker>
-<oui-select-picker name="ouiSelectPicker5"
-    match="name"
-    model="$ctrl.value3"
-    label="Value C"
-    values="[{id:'c', name: 'Value C'}]"
-    variant="light"></oui-select-picker>
-<oui-select-picker name="ouiSelectPicker5"
-    match="name"
-    model="$ctrl.value3"
-    placeholder="Select"
-    label="Value D, E or F"
-    values="[{id:'d', name: 'Value D'}, {id:'e', name: 'Value E'}, {id:'f', name: 'Value F'}]"
-    variant="light"></oui-select-picker>
+<div class="row" ng-init="$ctrl.value3 = {id:'a', name: 'Value A'}">
+  <div class="col-4">
+    <oui-select-picker name="ouiSelectPicker5"
+      match="name"
+      model="$ctrl.value3"
+      label="Value A or B"
+      values="[{id:'a', name: 'Value A'}, {id:'b', name: 'Value B'}]"
+      variant="light">
+    </oui-select-picker>
+  </div>
+  <div class="col-4">
+    <oui-select-picker name="ouiSelectPicker5"
+      match="name"
+      model="$ctrl.value3"
+      label="Value C"
+      values="[{id:'c', name: 'Value C'}]"
+      variant="light">
+    </oui-select-picker>
+  </div>
+  <div class="col-4">
+    <oui-select-picker name="ouiSelectPicker5"
+      match="name"
+      model="$ctrl.value3"
+      placeholder="Select"
+      label="Value D, E or F"
+      values="[{id:'d', name: 'Value D'}, {id:'e', name: 'Value E'}, {id:'f', name: 'Value F'}]"
+      variant="light">
+    </oui-select-picker>
+  </div>
 </div>
 ```
 

@@ -3,6 +3,7 @@
 
 .oui-tabs {
   display: block;
+  margin: @oui-tabs-tab-margin;
 
   &__tab {
     height: @oui-tabs-tab-height;
@@ -61,6 +62,10 @@
       display: none;
     });
   }
+}
+
+oui-tabs {
+  &:extend(.oui-tabs);
 }
 
 .oui-tabs-item {
@@ -150,10 +155,6 @@
     > :first-child { margin-top: 0; }
     > :last-child { margin-bottom: 0; }
   }
-}
-
-oui-tabs {
-  &:extend(.oui-tabs);
 }
 
 oui-tabs-item {

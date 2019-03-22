@@ -2,10 +2,12 @@ import { addBooleanParameter } from '@ovh/ui-kit.core/src/js/component-utils';
 import findIndex from 'lodash/findIndex';
 
 export default class {
-  constructor($attrs) {
+  constructor($attrs, $element, $timeout) {
     'ngInject';
 
     this.$attrs = $attrs; // For 'addBooleanParameter'
+    this.$element = $element;
+    this.$timeout = $timeout;
 
     this.minLength = 2;
     this.debounceDelay = 500;
@@ -108,6 +110,11 @@ export default class {
       this.add(this.constructor.getCriterion(modelValue));
       this.deletePreviewCriterion();
     }
+  }
+
+  $postLink() {
+    this.$timeout(() => this.$element
+      .addClass('oui-criteria'));
   }
 
   $onInit() {
