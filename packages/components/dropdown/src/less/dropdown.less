@@ -5,6 +5,8 @@
 .oui-dropdown {
   #oui > .base-font();
 
+  margin: 0;
+  display: inline-block;
   white-space: normal;
 
   &__trigger {
@@ -208,7 +210,7 @@
 }
 
 oui-dropdown {
-  display: inline-block;
+  &:extend(.oui-dropdown);
 
   &-trigger,
   &-content,

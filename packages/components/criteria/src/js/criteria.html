@@ -1,5 +1,5 @@
-<div class="oui-datagrid-topbar__actions">
-    <div class="oui-datagrid-topbar__slot"
+<div class="oui-criteria__actions">
+    <div class="oui-criteria__slot"
         ng-transclude>
     </div>
     <oui-search
@@ -17,7 +17,7 @@
         placement="end">
     </oui-criteria-adder>
 </div>
-<oui-chips class="oui-datagrid-topbar__criteria"
+<oui-chips class="oui-criteria__chips"
     ng-if="$ctrl.criteria.length"
     items="$ctrl.criteria"
     on-remove="$ctrl.remove(removed)"

@@ -35,3 +35,32 @@
 
   form { padding: rem-calc(20); }
 }
+
+.oui-criteria {
+  display: block;
+  margin-bottom: rem-calc(10);
+
+  &__actions {
+    margin-bottom: rem-calc(10);
+    display: flex;
+    justify-content: flex-end;
+
+    .oui-criteria-adder,
+    .oui-search {
+      display: inline-block;
+      margin-left: rem-calc(10);
+    }
+  }
+
+  &__slot {
+    flex: 1 0;
+
+    oui-action-menu {
+      margin-bottom: rem-calc(10);
+    }
+  }
+}
+
+oui-criteria {
+  &:extend(.oui-criteria);
+}

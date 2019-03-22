@@ -1,6 +1,6 @@
+@import '~@ovh/ui-kit.core/src/less/_mixins';
 @import '~@ovh/ui-kit.core/src/less/_variables';
 @import './_mixins';
-@import './_normalize';
 
 .oui-datagrid {
   @oui-selector: oui-datagrid;
@@ -9,7 +9,7 @@
   @oui-checkbox-selector: oui-checkbox;
   @oui-spinner-container-selector: oui-spinner__container;
 
-  #oui > .datagrid-normalize();
+  #oui > .base-font();
   #oui > .datagrid-base();
 
   &__row {
@@ -59,6 +59,11 @@
   &_compact &__cell {
     height: auto;
   }
+}
+
+oui-datagrid {
+  display: block;
+  margin: @oui-datagrid-margin;
 }
 
 .oui-datagrid-responsive-container {
@@ -125,34 +130,5 @@
 
   &__order-column {
     text-align: right;
-  }
-}
-
-.oui-datagrid-topbar {
-  display: block;
-
-  &__actions {
-    display: flex;
-    justify-content: flex-end;
-
-    .oui-criteria-adder,
-    .oui-search {
-      display: inline-block;
-      margin-bottom: rem-calc(10);
-      margin-left: rem-calc(10);
-    }
-  }
-
-  &__criteria {
-    display: block;
-    margin-bottom: rem-calc(10);
-  }
-
-  &__slot {
-    flex: 1 0;
-
-    oui-action-menu {
-      margin-bottom: rem-calc(10);
-    }
   }
 }
