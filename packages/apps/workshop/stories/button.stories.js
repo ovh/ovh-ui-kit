@@ -1,29 +1,45 @@
 import { storiesOf } from '@storybook/html';
+import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
 import Button from '@ovh/ui-kit.button';
 import '@ovh/ui-kit.button/src/index.less';
 
-storiesOf('Components/Button', module)
+storiesOf('Atoms/Button', module)
   .add(
-    'default',
+    'Simple button',
     forModule(Button).createElement(compile => compile`
-      <oui-button>Default button</oui-button>
+      <oui-button aria-label="Manage your servers">Manage your servers</oui-button>
     `),
   )
   .add(
-    'variants',
-    forModule(Button).createElement(compile => compile`
-      <oui-button variant="primary">Primary</oui-button>
-      <oui-button variant="secondary">Secondary</oui-button>
-      <oui-button variant="link">Link</oui-button>
-    `),
-  )
-  .add(
-    'disabled',
-    forModule(Button).createElement(compile => compile`
-      <oui-button variant="primary" disabled>Primary</oui-button>
-      <oui-button variant="secondary" disabled>Secondary</oui-button>
-      <oui-button variant="link" disabled>Link</oui-button>
-    `),
+    'Action buttons',
+    forModule(Button).createElement((compile) => {
+      const disabled = boolean('Disabled', false);
+      return compile`
+        <oui-button aria-label="Cancel moving the server"
+                    variant="secondary"
+                    disabled="${disabled}">Cancel</oui-button>
+        <oui-button aria-label="Confirm moving the server"
+                    variant="primary"
+                    disabled="${disabled}">Confirm</oui-button>
+        <oui-button aria-label="Open help"
+                    variant="link"
+                    disabled="${disabled}">Need help?</oui-button>
+      `;
+    }),
+  ).add(
+    'Arrow buttons',
+    forModule(Button).createElement((compile) => {
+      const disabled = boolean('Disabled', false);
+      return compile`
+        <oui-button aria-label="Previous step"
+                    variant-nav="previous"
+                    disabled="${disabled}">Previous</oui-button>
+        <oui-button aria-label="Next step"
+                    variant-nav="next"
+                    variant="primary"
+                    disabled="${disabled}">Next</oui-button>
+      `;
+    }),
   );
