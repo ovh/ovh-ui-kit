@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.core/src/js/test-utils';
-import '../index';
-
 import data from './autocomplete.spec.data.json';
 
 describe('ouiAutocomplete', () => {

@@ -1,4 +1,4 @@
-const webpackConfig = require('./webpack.test.config');
+const webpackConfig = require('@ovh/ui-kit.config/src/webpack.test.config');
 
 module.exports = {
   basePath: '../',
@@ -14,12 +14,14 @@ module.exports = {
     require.resolve('angular-mocks'),
     require.resolve('angular-aria'),
     require.resolve('angular-sanitize'),
+    require.resolve('./test-utils'),
   ],
   preprocessors: {
     [require.resolve('angular')]: ['webpack', 'sourcemap'],
     [require.resolve('angular-mocks')]: ['webpack', 'sourcemap'],
     [require.resolve('angular-aria')]: ['webpack', 'sourcemap'],
     [require.resolve('angular-sanitize')]: ['webpack', 'sourcemap'],
+    [require.resolve('./test-utils')]: ['webpack', 'sourcemap'],
   },
   webpack: webpackConfig,
   webpackMiddleware: {

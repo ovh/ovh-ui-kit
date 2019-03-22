@@ -18,16 +18,17 @@
     "@ovh/ui-kit.spinner": "*",
     "@ovh/ui-kit.skeleton": "*",
     "angular": ">=1.6.x",
-    "angular-aria": ">=1.6.x",
-    "escape-string-regexp": "^1.0.5"
+    "angular-aria": ">=1.6.x"
   },
   "devDependencies": {
-    "@ovh/ui-kit.action-menu": "*",
-    "@ovh/ui-kit.dropdown": "*",
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
+    "@ovh/ui-kit.action-menu": "*",
+    "@ovh/ui-kit.dropdown": "*",
+    "@ovh/ui-kit.test": "*",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
+    "escape-string-regexp": "^1.0.5",
     "karma": "^4.0.1",
     "lodash": "^4.17.11"
   }

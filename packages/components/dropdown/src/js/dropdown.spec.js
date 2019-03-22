@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.core/src/js/test-utils';
-import '../index';
-
 describe('ouiDropdown', () => {
   let TestUtils;
   let $document;

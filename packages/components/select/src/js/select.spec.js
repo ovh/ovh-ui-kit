@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.core/src/js/test-utils';
-import '../index';
-
 import uniq from 'lodash/uniq';
 import data from './select.spec.data';
 

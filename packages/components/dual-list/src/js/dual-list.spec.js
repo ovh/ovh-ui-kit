@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.core/src/js/test-utils';
-import '../index';
-
 import get from 'lodash/get';
 import data from './dual-list.spec.data.json';
 

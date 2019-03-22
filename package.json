@@ -25,7 +25,8 @@
     "prepare": "yarn build",
     "preview-changelog": "npm-scripts-config preview-changelog",
     "start": "lerna exec --scope @ovh/ui-kit-workshop -- yarn storybook",
-    "test": "yarn lint && lerna run test",
+    "test": "run-s lint test:karma",
+    "test:karma": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
   },
   "config": {
