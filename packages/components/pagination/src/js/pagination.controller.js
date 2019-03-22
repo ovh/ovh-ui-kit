@@ -2,13 +2,20 @@ import clamp from 'lodash/clamp';
 import range from 'lodash/range';
 
 export default class {
-  constructor($attrs, ouiPaginationConfiguration) {
+  constructor($attrs, $element, $timeout, ouiPaginationConfiguration) {
     'ngInject';
 
     this.$attrs = $attrs;
+    this.$element = $element;
+    this.$timeout = $timeout;
     this.config = ouiPaginationConfiguration;
     this.pageSizeList = this.config.pageSizeList.slice();
     this.pageSize = this.config.pageSize;
+  }
+
+  $postLink() {
+    this.$timeout(() => this.$element
+      .addClass('oui-pagination'));
   }
 
   $onChanges(changes) {

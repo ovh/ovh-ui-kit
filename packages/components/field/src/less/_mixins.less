@@ -51,24 +51,6 @@
     &__control {
       width: @oui-field-control-default-size;
       margin-bottom: @oui-field-control-spacing;
-
-      // Native form controls
-      .controls(@index: length(@form-controls)) when(@index > 0) {
-        .controls(@index - 1);
-        @control: extract(@form-controls, @index);
-
-        > @{control} {
-          margin-bottom: 0;
-        }
-      }
-      .controls();
-
-      // Specific cases
-      > oui-numeric > .@{input-group-selector},
-      > oui-select > .@{ui-select-selector},
-      > oui-switch > .@{switch-selector}__label-container {
-        margin-bottom: 0;
-      }
     }
 
     &__helper {

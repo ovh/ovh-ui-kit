@@ -1,10 +1,12 @@
+@import '~@ovh/ui-kit.core/src/less/_mixins';
 @import './_variables';
-@import './_normalize';
 
 .oui-tile {
-  #oui > .tile-normalize();
+  #oui > .base-font();
 
   padding: @oui-tile-padding;
+  margin: @oui-tile-margin;
+  display: block;
   background-color: @oui-tile-background-color;
   border: 1px solid @oui-tile-border-color;
   border-radius: @oui-tile-border-radius;
@@ -117,5 +119,15 @@
 
   &__body-content {
     padding: 0 @oui-tile-padding;
+  }
+}
+
+oui-tile {
+  &:extend(.oui-tile);
+
+  &-button,
+  &-definition,
+  &-description {
+    display: block;
   }
 }
