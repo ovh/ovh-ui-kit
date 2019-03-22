@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiFormActions', () => {
   let testUtils;
   const CANCEL_TEXT = 'CancelTest';

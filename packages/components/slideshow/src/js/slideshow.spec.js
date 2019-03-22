@@ -1,8 +1,5 @@
 import '@ovh/ui-kit.spinner';
 
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiSlideshow', () => {
   let TestUtils;
   let $timeout;

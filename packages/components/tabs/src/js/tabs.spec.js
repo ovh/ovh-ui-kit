@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiTabs', () => {
   let TestUtils;
   let $timeout;

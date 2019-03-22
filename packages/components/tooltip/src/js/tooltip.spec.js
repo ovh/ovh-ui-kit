@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiTooltip', () => {
   let $timeout;
   let testUtils;

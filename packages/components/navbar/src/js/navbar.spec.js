@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 import mockData from './navbar.spec.data.json';
 
 describe('ouiNavbar', () => {

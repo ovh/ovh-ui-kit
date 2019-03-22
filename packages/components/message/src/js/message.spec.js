@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 import filter from 'lodash/filter';
 
 function getElementsByClassName(element, tag, className) {

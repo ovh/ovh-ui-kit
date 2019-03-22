@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 import mockData from './chips.spec.data.json';
 
 describe('ouiChips', () => {

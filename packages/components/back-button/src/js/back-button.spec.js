@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiBackButton', () => {
   let $rootScope;
   let $compile;

@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiClipboard', () => {
   let $timeout;
   let testUtils;

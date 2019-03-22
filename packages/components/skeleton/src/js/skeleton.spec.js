@@ -1,6 +1,3 @@
-import '@ovh/ui-kit.test/src/test-utils';
-import '../index';
-
 describe('ouiSkeleton', () => {
   let TestUtils;
   let $timeout;
