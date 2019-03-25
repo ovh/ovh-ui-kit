@@ -31,8 +31,7 @@ module.exports = {
           { loader: 'eslint-loader', options: { formatter } },
         ],
         exclude,
-      },
-      {
+      }, {
         test: /\.js$/,
         use: [
           {
@@ -83,9 +82,7 @@ module.exports = {
         test: /\.css|.less$/,
         use: [
           {
-            loader: process.env.NODE_ENV === 'dev'
-              ? 'style-loader'
-              : MiniCssExtractPlugin.loader,
+            loader: 'style-loader',
           },
           { loader: 'css-loader', options: { sourceMap: true } },
           {
