@@ -3,6 +3,9 @@ import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 import centered from '@storybook/addon-centered/html';
 
+import '@ovh/ui-kit/src/index.js';
+import '@ovh/ui-kit/src/index.less';
+
 // Addons
 addDecorator(centered);
 addDecorator(withA11y);

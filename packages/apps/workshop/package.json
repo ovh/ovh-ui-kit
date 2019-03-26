@@ -9,12 +9,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@ovh/ui-kit.button": "*",
-    "@ovh/ui-kit.calendar": "*",
-    "@ovh/ui-kit.clipboard": "*",
-    "@ovh/ui-kit.field": "*",
-    "@ovh/ui-kit.modal": "*",
-    "@ovh/ui-kit.password": "*",
+    "@ovh/ui-kit": "*",
     "angular": "^1.7.8"
   },
   "devDependencies": {
