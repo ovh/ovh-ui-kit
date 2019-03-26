@@ -1,3 +1,13 @@
+<a name="2.26.1"></a>
+## [2.26.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.26.0...v2.26.1) (2019-03-26)
+
+
+### Bug Fixes
+
+* fix reboot on buttons and inputs ([#361](https://github.com/ovh-ux/ovh-ui-kit/issues/361)) ([b334126](https://github.com/ovh-ux/ovh-ui-kit/commit/b334126))
+
+
+
 <a name="2.26.0"></a>
 # [2.26.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.25.0...v2.26.0) (2019-03-26)
 
