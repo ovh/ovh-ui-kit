@@ -37,5 +37,6 @@ export default class {
 
   toggle() {
     this.expanded = !this.expanded;
+    this.onToggle({ expanded: this.expanded });
   }
 }
