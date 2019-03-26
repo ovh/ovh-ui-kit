@@ -566,7 +566,7 @@ p,
   font-family: "Oui Icons";
   font-style: normal;
   font-weight: 400;
-  src: url("./icons/icons.woff2?v=2.25.0") format("woff2"), url("./icons/icons.woff?v=2.25.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.26.0") format("woff2"), url("./icons/icons.woff?v=2.26.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -7586,10 +7586,6 @@ oui-modal {
   font-weight: 600;
 }
 .oui-modal__loader {
-  z-index: 1080;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;

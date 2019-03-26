@@ -1,3 +1,13 @@
+<a name="2.26.0"></a>
+# [2.26.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.25.0...v2.26.0) (2019-03-26)
+
+
+### Bug Fixes
+
+* **oui-modal:** remove loader absolute position ([#358](https://github.com/ovh-ux/ovh-ui-kit/issues/358)) ([3fcf235](https://github.com/ovh-ux/ovh-ui-kit/commit/3fcf235))
+
+
+
 <a name="2.25.0"></a>
 # [2.25.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.24.2...v2.25.0) (2019-03-01)
 
