@@ -12,15 +12,16 @@
         ng-class="'oui-icon-' + $ctrl.type + '_circle'"
         aria-hidden="true">
     </span>
-    <div class="oui-modal__loader"
-        ng-if="$ctrl.loading">
-        <oui-spinner></oui-spinner>
-    </div>
     <h2 class="oui-modal__title"
         ng-if="::!!$ctrl.heading"
         ng-bind="::$ctrl.heading">
     </h2>
-    <div ng-transclude></div>
+    <div class="oui-modal__loader"
+        ng-if="$ctrl.loading">
+        <oui-spinner></oui-spinner>
+    </div>
+    <div ng-if="!$ctrl.loading"
+        ng-transclude></div>
 </div>
 <div class="oui-modal__footer">
     <button class="oui-button oui-button_secondary"
