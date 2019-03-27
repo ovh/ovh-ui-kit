@@ -71,21 +71,21 @@ describe('ouiCollapsible', () => {
       expect(contentEl).toBeTruthy();
     });
 
-    it("should call ontoggle when defined into attributes", () => {
-      const onToggle = jasmine.createSpy("onToggle");
+    it('should call ontoggle when defined into attributes', () => {
+      const onToggle = jasmine.createSpy('onToggle');
       const element = TestUtils.compileTemplate(`
-          <oui-collapsible heading="Title" aria-label="Action" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
-          onToggle
+        <oui-collapsible heading="Title" aria-label="Action" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
+        onToggle,
       });
 
       const headerEl = angular.element(getHeaderElement(element));
 
       // Expand
-      headerEl.triggerHandler("click");
+      headerEl.triggerHandler('click');
       expect(onToggle).toHaveBeenCalledWith(true);
 
       // Collapse
-      headerEl.triggerHandler("click");
+      headerEl.triggerHandler('click');
       expect(onToggle).toHaveBeenCalledWith(false);
     });
   });
