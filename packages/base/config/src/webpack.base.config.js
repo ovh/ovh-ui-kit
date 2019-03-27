@@ -82,7 +82,9 @@ module.exports = {
         test: /\.css|.less$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: process.env.NODE_ENV === 'dev'
+              ? 'style-loader'
+              : MiniCssExtractPlugin.loader,
           },
           { loader: 'css-loader', options: { sourceMap: true } },
           {

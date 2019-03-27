@@ -331,17 +331,17 @@ select {
 //    controls in Android 4.
 // 2. Correct the inability to style clickable types in iOS and Safari.
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+html button[type="button"],
+button[type="reset"],
+button[type="submit"] {
   -webkit-appearance: button; // 2
 }
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+button[type="button"]::-moz-focus-inner,
+button[type="reset"]::-moz-focus-inner,
+button[type="submit"]::-moz-focus-inner {
   padding: 0;
   border-style: none;
 }
@@ -411,12 +411,12 @@ progress {
 }
 
 // Correct the cursor style of increment and decrement buttons in Chrome.
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-[type="search"] {
+input[type="search"] {
   // This overrides the extra rounded corners on search inputs in iOS so that our
   // `.form-control` class can properly style them. Note that this cannot simply
   // be added to `.form-control` as it's not specific enough. For details, see
@@ -429,8 +429,8 @@ progress {
 // Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
 //
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 

@@ -15,9 +15,7 @@ module.exports = async ({config }) => {
   config.module.rules.push({
     test: /\.css|.less$/,
     use: [
-      {
-        loader: 'style-loader',
-      },
+      { loader: 'style-loader', },
       { loader: 'css-loader' },
       {
         loader: 'postcss-loader',

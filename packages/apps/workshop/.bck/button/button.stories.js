@@ -2,11 +2,16 @@ import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-// Create mock module for the stories
-const moduleName = 'oui-button-stories';
-angular.module(moduleName, ['oui.button']);
+import { moduleName, moduleStyle } from './index';
 
 storiesOf('Atoms/Button', module)
+  .addDecorator((getStory, context) => {
+    const story = getStory(context);
+    const wrapper = document.createElement('div');
+    wrapper.className = moduleStyle;
+    wrapper.appendChild(story);
+    return wrapper;
+  })
   .add(
     'Simple button',
     forModule(moduleName).createElement(compile => compile`
