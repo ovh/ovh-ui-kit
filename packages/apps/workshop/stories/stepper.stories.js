@@ -1,6 +1,8 @@
 import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
+import { compileTemplate } from '../src/utils';
+
 // Create mock module for the stories
 const moduleName = 'oui-stepper-stories';
 angular.module(moduleName, ['oui.field', 'oui.stepper']);
@@ -8,7 +10,7 @@ angular.module(moduleName, ['oui.field', 'oui.stepper']);
 storiesOf('Organisms/Stepper', module)
   .add(
     'Simple stepper ',
-    forModule(moduleName).createElement(compile => compile`
+    forModule(moduleName).createElement(() => compileTemplate(`
       <oui-stepper>
         <oui-step-form header="Step 1" description="This is a description">
           <oui-field label="Email" size="xl">
@@ -26,5 +28,5 @@ storiesOf('Organisms/Stepper', module)
           </oui-field>
         </oui-step-form>
       </oui-stepper>
-    `),
+    `)),
   );
