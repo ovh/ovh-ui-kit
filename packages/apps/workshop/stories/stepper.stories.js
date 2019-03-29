@@ -7,7 +7,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-stepper-stories';
 angular.module(moduleName, ['oui.field', 'oui.stepper']);
 
-storiesOf('Organisms/Stepper', module)
+storiesOf('Templates/Stepper', module)
   .add(
     'Simple stepper ',
     forModule(moduleName).createElement(() => compileTemplate(`

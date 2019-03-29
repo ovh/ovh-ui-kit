@@ -7,7 +7,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-modal-stories';
 angular.module(moduleName, ['oui.modal', 'oui.field', 'oui.password']);
 
-storiesOf('Organisms/Modal', module)
+storiesOf('Templates/Modal', module)
   .add(
     'Open a modal',
     forModule(moduleName).createElement(() => compileTemplate(`

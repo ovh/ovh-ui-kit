@@ -8,7 +8,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-button-stories';
 angular.module(moduleName, ['oui.button']);
 
-storiesOf('Atoms/Button', module)
+storiesOf('Components/Button', module)
   .add(
     'Simple button',
     forModule(moduleName).createElement(() => compileTemplate(`

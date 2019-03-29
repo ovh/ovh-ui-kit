@@ -8,7 +8,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-calendar-stories';
 angular.module(moduleName, ['oui.calendar']);
 
-storiesOf('Molecules/Calendar', module)
+storiesOf('Components/Calendar', module)
   .add(
     'Simple date selector',
     forModule(moduleName).createElement(() => compileTemplate(

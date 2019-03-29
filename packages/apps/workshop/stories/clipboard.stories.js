@@ -8,7 +8,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-clipboard-stories';
 angular.module(moduleName, ['oui.clipboard']);
 
-storiesOf('Molecules/Clipboard', module)
+storiesOf('Components/Clipboard', module)
   .add(
     'Simple clipboard',
     forModule(moduleName).createElement(() => compileTemplate(

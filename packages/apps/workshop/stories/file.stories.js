@@ -7,7 +7,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-file-stories';
 angular.module(moduleName, ['oui.file']);
 
-storiesOf('Organisms/File', module)
+storiesOf('Components/File', module)
   .add(
     'Simple file selector ',
     forModule(moduleName).createElement(() => compileTemplate(`

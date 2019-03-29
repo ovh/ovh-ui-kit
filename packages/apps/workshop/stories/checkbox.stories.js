@@ -7,7 +7,7 @@ import { compileTemplate } from '../src/utils';
 const moduleName = 'oui-checkbox-stories';
 angular.module(moduleName, ['oui.checkbox', 'oui.field', 'oui.radio']);
 
-storiesOf('Atoms/Checkbox', module)
+storiesOf('Components/Checkbox', module)
   .add(
     'Simple checkbox',
     forModule(moduleName).createElement(() => compileTemplate(`
