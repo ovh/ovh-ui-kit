@@ -6,7 +6,7 @@ const RemcalcPlugin = require('less-plugin-remcalc');
 
 const exclude = [/node_modules(?![/\\](@ovh))/, /dist/];
 
-const eslintRule = {
+const eslintLoader = {
   enforce: 'pre',
   test: /\.js$/,
   use: [
@@ -15,7 +15,7 @@ const eslintRule = {
   exclude,
 };
 
-const jsRule = {
+const babelLoader = {
   test: /\.js$/,
   use: [
     {
@@ -52,7 +52,7 @@ const jsRule = {
   exclude,
 };
 
-const htmlRule = {
+const htmlLoader = {
   test: /\.(html|svg)$/,
   use: [
     {
@@ -66,14 +66,10 @@ const htmlRule = {
   exclude,
 };
 
-const styleRule = {
+const styleLoader = {
   test: /\.css|.less$/,
   use: [
-    {
-      loader: process.env.NODE_ENV === 'production'
-        ? MiniCssExtractPlugin.loader
-        : 'style-loader',
-    },
+    { loader: 'style-loader' },
     { loader: 'css-loader', options: { sourceMap: true } },
     {
       loader: 'postcss-loader',
@@ -96,7 +92,33 @@ const styleRule = {
   exclude,
 };
 
-const fontRule = {
+const cssExtractLoader = {
+  test: /\.css|.less$/,
+  use: [
+    { loader: MiniCssExtractPlugin.loader },
+    { loader: 'css-loader', options: { sourceMap: true } },
+    {
+      loader: 'postcss-loader',
+      options: {
+        ident: 'postcss',
+        sourceMap: true,
+        plugins: () => [
+          autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
+        ],
+      },
+    },
+    {
+      loader: 'less-loader',
+      options: {
+        plugins: [RemcalcPlugin],
+        sourceMap: true,
+      },
+    },
+  ],
+  exclude,
+};
+
+const fileLoader = {
   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?|.(woff(2)?|ttf|eot|svg)(\?[a-f0-9]{32})?$/,
   use: [
     {
@@ -111,9 +133,10 @@ const fontRule = {
 };
 
 module.exports = {
-  eslintRule,
-  jsRule,
-  htmlRule,
-  styleRule,
-  fontRule,
+  babelLoader,
+  cssExtractLoader,
+  eslintLoader,
+  fileLoader,
+  htmlLoader,
+  styleLoader,
 };

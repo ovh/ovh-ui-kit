@@ -1,4 +1,4 @@
-const { styleRule } = require('@ovh/ui-kit.config/src/webpack.rules');
+const { styleLoader } = require('@ovh/ui-kit.config/src/webpack.rules');
 
 module.exports = async ({ config }) => {
   // For @storybook/addon-storysource
@@ -9,7 +9,7 @@ module.exports = async ({ config }) => {
   });
 
   // For LESS files
-  config.module.rules.push(styleRule);
+  config.module.rules.push(styleLoader);
 
   config.resolve.alias.angular = require.resolve('angular');
 

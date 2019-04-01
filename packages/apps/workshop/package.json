@@ -5,9 +5,13 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
+    "build": "npm-run-all -l -s clean build-storybook copy",
+    "build-storybook": "build-storybook -c .storybook -o docs",
+    "clean": "rimraf ./docs",
+    "copy": "cpx \"./docs/**/*\" \"../../../docs\"",
+    "serve": "npx serve ./docs",
     "start": "yarn storybook",
-    "storybook": "start-storybook",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "@ovh/ui-kit": "*",
@@ -25,6 +29,7 @@
     "@storybook/cli": "^5.0.5",
     "@storybook/html": "^5.0.5",
     "babel-loader": "^8.0.5",
+    "cpx": "^1.5.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "storybook-addon-angularjs": "^0.0.2"
