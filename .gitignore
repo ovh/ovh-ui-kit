@@ -3,5 +3,6 @@
 *.log
 coverage
 dist
+docs
 node_modules
 storybook-static
