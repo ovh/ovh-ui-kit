@@ -2,18 +2,21 @@ import { storiesOf } from '@storybook/html';
 import { text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import { compileTemplate } from '../src/utils';
+
 // Create mock module for the stories
 const moduleName = 'oui-clipboard-stories';
 angular.module(moduleName, ['oui.clipboard']);
 
-storiesOf('Molecules/Clipboard', module)
+storiesOf('Components/Clipboard', module)
   .add(
     'Simple clipboard',
-    forModule(moduleName).createElement((compile) => {
-      const model = text('Model', 'Copy this text');
-
-      return compile`
-        <oui-clipboard model="${model}"></oui-clipboard>
-      `;
-    }),
+    forModule(moduleName).createElement(() => compileTemplate(
+      '<oui-clipboard model="$ctrl.model"></oui-clipboard>',
+      {
+        $ctrl: {
+          model: text('Model', 'Copy this text'),
+        },
+      },
+    )),
   );

@@ -1,14 +1,16 @@
 import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
+import { compileTemplate } from '../src/utils';
+
 // Create mock module for the stories
 const moduleName = 'oui-modal-stories';
 angular.module(moduleName, ['oui.modal', 'oui.field', 'oui.password']);
 
-storiesOf('Organisms/Modal', module)
+storiesOf('Templates/Modal', module)
   .add(
     'Open a modal',
-    forModule(moduleName).createElement(compile => compile`
+    forModule(moduleName).createElement(() => compileTemplate(`
       <oui-modal heading="Settings for MyServer01"
                 primary-label="Save"
                 primary-action="$ctrl.confirm = true"
@@ -33,5 +35,11 @@ storiesOf('Organisms/Modal', module)
           </oui-field>
         </form>
       </oui-modal>
-    `),
+    `,
+    {
+      $ctrl: {
+        name: 'MyServer01',
+        password: 'zxcvbn',
+      },
+    })),
   );
