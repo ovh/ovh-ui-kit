@@ -12,7 +12,7 @@
     "packages/vendors/*"
   ],
   "scripts": {
-    "build": "yarn build:libs && yarn build:apps",
+    "build": "run-s build:*",
     "build:apps": "lerna exec --scope @ovh/ui-kit-workshop -- yarn build",
     "build:libs": "lerna exec --scope @ovh/ui-kit -- yarn build",
     "lint": "run-p lint:css lint:js",
@@ -21,7 +21,7 @@
     "version": "yarn build && git add dist packages/base/core/less/_icons.less && npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "postversion": "git push && git push --tags",
     "prepare": "yarn build",
-    "start": "lerna exec --scope @ovh/ui-kit-workshop -- yarn storybook",
+    "start": "lerna exec --scope @ovh/ui-kit-workshop -- yarn start",
     "test": "run-s lint test:karma",
     "test:karma": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
     "watch": "lerna exec --scope @ovh/ui-kit -- yarn watch"
