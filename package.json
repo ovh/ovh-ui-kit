@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "build": "yarn build:libs && yarn build:apps",
-    "build:apps": "lerna exec --scope @ovh/ui-kit-documentation -- yarn build",
+    "build:apps": "lerna exec --scope @ovh/ui-kit-workshop -- yarn build",
     "build:libs": "lerna exec --scope @ovh/ui-kit -- yarn build",
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint 'packages/**/*.less'",
