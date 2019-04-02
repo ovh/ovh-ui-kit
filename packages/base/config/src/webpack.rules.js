@@ -1,4 +1,5 @@
 const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 const formatter = require('eslint-friendly-formatter');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -78,6 +79,7 @@ const styleLoader = {
         sourceMap: true,
         plugins: () => [
           autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
+          cssnano({ preset: 'default' }),
         ],
       },
     },
@@ -104,6 +106,7 @@ const cssExtractLoader = {
         sourceMap: true,
         plugins: () => [
           autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
+          cssnano({ preset: 'default' }),
         ],
       },
     },
