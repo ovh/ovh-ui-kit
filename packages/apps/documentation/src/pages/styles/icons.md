@@ -341,23 +341,23 @@
 
 <div class="row">
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-SMSEmitting" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-SMSEmitting</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-sms-emitting" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-sms-emitting</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-SMSPlanned" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-SMSPlanned</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-sms-planned" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-sms-planned</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-SMSReceiving" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-SMSReceiving</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-sms-receiving" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-sms-receiving</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-abbreviatedNumber" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-abbreviatedNumber</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-abbreviated-number" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-abbreviated-number</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -406,8 +406,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-answeringMachine" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-answeringMachine</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-answering-machine" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-answering-machine</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -416,8 +416,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-antiDDoS" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-antiDDoS</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-anti-ddos" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-anti-ddos</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -446,8 +446,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-backToV4" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-backToV4</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-back-to-v4" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-back-to-v4</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -456,8 +456,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-bootDisk" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-bootDisk</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-boot-disk" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-boot-disk</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -471,28 +471,28 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-callEmitting" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-callEmitting</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-emitting" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-emitting</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-callFilter" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-callFilter</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-filter" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-filter</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-callForwarding" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-callForwarding</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-forwarding" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-forwarding</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-callReceiving" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-callReceiving</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-receiving" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-receiving</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-callRestriction" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-callRestriction</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-restriction" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-restriction</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -616,8 +616,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-dedicatedCloud" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-dedicatedCloud</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-dedicated-cloud" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-dedicated-cloud</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -681,13 +681,13 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-faxEmitting" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-faxEmitting</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-fax-emitting" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-fax-emitting</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-faxReceiving" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-faxReceiving</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-fax-receiving" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-fax-receiving</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -716,13 +716,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-filter" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-filter</code></div>
-  </div>
-
-  <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-forbidUser" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-forbidUser</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-forbid-user" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-forbid-user</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -831,8 +826,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-lineCommunicating" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-lineCommunicating</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-line-communicating" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-line-communicating</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -841,8 +836,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-lockOpened" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-lockOpened</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-lock-opened" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-lock-opened</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -856,8 +851,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-messagesRead" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-messagesRead</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-messages-read" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-messages-read</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -866,13 +861,13 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-microphoneOff" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-microphoneOff</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-microphone-off" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-microphone-off</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-mobilePhone" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-mobilePhone</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-mobile-phone" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-mobile-phone</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -886,8 +881,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-newMail" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-newMail</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-new-mail" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-new-mail</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -901,8 +896,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-noneSpeaker" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-noneSpeaker</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-none-speaker" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-none-speaker</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -911,8 +906,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-oldNAS" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-oldNAS</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-old-nas" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-old-nas</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -921,13 +916,13 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-overTheBox" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-overTheBox</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-overthebox" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-overthebox</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-ovhLogo" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-ovhLogo</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-ovh-logo" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-ovh-logo</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -936,8 +931,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-palmTree" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-palmTree</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-palm-tree" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-palm-tree</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -956,18 +951,18 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-phoneAlt" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-phoneAlt</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-phone-alt" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-phone-alt</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-phoneCall" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-phoneCall</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-phone-call" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-phone-call</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-pieChart" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-pieChart</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-pie-chart" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-pie-chart</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -986,8 +981,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-programmableKeys" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-programmableKeys</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-programmable-keys" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-programmable-keys</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -1066,13 +1061,13 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-serverSave" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-serverSave</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-server-save" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-server-save</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-siteBuilder" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-siteBuilder</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-site-builder" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-site-builder</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -1096,13 +1091,13 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-splittedArrows" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-splittedArrows</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-splitted-arrows" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-splitted-arrows</code></div>
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-statutVIP" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-statutVIP</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-statut-vip" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-statut-vip</code></div>
   </div>
 
   <div class="oui-icon-badge">
@@ -1161,8 +1156,8 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-vRack" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-vRack</code></div>
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-vrack" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-vrack</code></div>
   </div>
 
   <div class="oui-icon-badge">
