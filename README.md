@@ -12,74 +12,29 @@ A css toolkit for the OVH brand.
 
 ## Installation
 
-### Dependencies
-
-These dependency will be installed automatically:
-
-- [less-plugin-remcalc](https://github.com/ovh-ux/less-plugin-remcalc)
-
 ### Install with [npm](https://www.npmjs.com/)
 
 ```bash
-npm install ovh-ui-kit
+npm install @ovh/ui-kit
 ```
 
 ### Install with [yarn](https://yarnpkg.com)
 
 ```bash
-yarn add ovh-ui-kit
+yarn add @ovh/ui-kit
 ```
 
 ## Usage
 
-### Integration
-
-#### Use in HTML file
+### CSS only
 
 ```html
-    ...
-  <link rel="stylesheet" href="path/to/ovh-ui-kit/dist/oui.css">
-    ...
+  <link rel="stylesheet" href="path/to/ovh-ui-kit/dist/css/oui.css">
 ```
+### AngularJS
 
-#### Use with [grunt](https://github.com/gruntjs/grunt) and [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)
-
-```less
-@import "path/to/ovh-ui-kit/packages/oui/stylekit";
-
-// or you can import every component a-la-carte:
-
-@import "path/to/ovh-ui-kit/packages/oui-button/button";
-@import "path/to/ovh-ui-kit/packages/oui-radio/radio";
-@import "path/to/ovh-ui-kit/packages/oui-field/field";
-```
-
-#### Use with [webpack](https://github.com/webpack/webpack) and [less-loader](https://github.com/webpack-contrib/less-loader)
-
-Webpack provide the `~` prefix for package imports:
-
-```less
-@import "~ovh-ui-kit/packages/oui/stylekit.less";
-
-// or a-la-carte:
-
-@import "~ovh-ui-kit/packages/oui-button/button.less";
-@import "~ovh-ui-kit/packages/oui-radio/radio.less";
-@import "~ovh-ui-kit/packages/oui-field/field.less";
-```
-
-#### Use with [bootstrap 3](https://github.com/twbs/bootstrap/tree/v3.3.7)
-
-For those who want to use **ovh-ui-kit** with **bootstrap** on the same project you need change
-the `rem-base` to `10px` otherwise components proportions will not be respected.
-
-```less
-@import '~bootstrap/less/bootstrap';
-
-// Sets rem-base to 10px because bootstrap sets font-size: 10px on the html element.
-@rem-base: rem-base(10px);
-
-@import "~ovh-ui-kit/packages/oui/stylekit.less";
+```html
+  <script src="ovh-ui-angular/dist/js/oui.js" type="text/javascript"></script>
 ```
 
 ## Develop
@@ -92,18 +47,17 @@ the `rem-base` to `10px` otherwise components proportions will not be respected.
 git clone https://github.com/ovh-ux/ovh-ui-kit.git
 cd ovh-ui-kit
 yarn install
-yarn link
 ```
 
-2. Run `ovh-ui-kit` with [ovh-ui-kit-documentation](https://github.com/ovh-ux/ovh-ui-kit-documentation)
+**Note**: The build of all `./dist` files are done in the process.
+
+2. Run `ovh-ui-kit` in the [Workshop](./packages/apps/workshop)
 
 ```bash
-git clone https://github.com/ovh-ux/ovh-ui-kit-documentation.git
-cd ovh-ui-kit-documentation
-yarn install
-yarn link ovh-ui-kit
 yarn start
 ```
+
+**Note**: This will open [Storybook](https://storybook.js.org/) in your default browser
 
 ### Hot reload
 

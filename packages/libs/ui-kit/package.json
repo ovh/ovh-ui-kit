@@ -1,6 +1,6 @@
 {
   "name": "@ovh/ui-kit",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "files": [
@@ -15,11 +15,9 @@
     "build:less:icons": "lessc ./src/less/_icons.less ./dist/less/_icons.less",
     "build:less:variables": "lessc ./src/less/_variables.less ./dist/less/_variables.less",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --colors --config ./.config/webpack.config.js",
-    "build-storybook": "build-storybook",
     "clean": "rimraf ./dist",
     "copy": "cpx \"./dist/**/*\" \"../../../dist\"",
-    "prepare": "yarn build",
-    "storybook": "start-storybook"
+    "prepare": "yarn build"
   },
   "dependencies": {
     "bloodhound-js": "^1.2.3",
