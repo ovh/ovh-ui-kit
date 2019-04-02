@@ -1,6 +1,6 @@
 {
   "name": "@ovh/ui-kit.core",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "private": true,
   "less": "./src/index.less",
   "license": "BSD-3-Clause",

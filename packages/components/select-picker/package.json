@@ -1,6 +1,6 @@
 {
   "name": "@ovh/ui-kit.select-picker",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "private": true,
   "main": "./src/index.js",
   "less": "./src/index.less",
