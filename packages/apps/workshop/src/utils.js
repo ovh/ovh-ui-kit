@@ -17,6 +17,9 @@ function getOrCreateWrapper() {
 }
 
 function replaceStory(wrapper, story) {
+  const centered = document.createElement('div');
+  Object.assign(centered.style, styles.centered);
+
   const inner = document.createElement('div');
   Object.assign(inner.style, styles.inner);
 
@@ -24,8 +27,15 @@ function replaceStory(wrapper, story) {
     wrapper.removeChild(wrapper.firstChild);
   }
 
-  wrapper.appendChild(inner);
-  inner.appendChild(story);
+  centered.appendChild(inner);
+  wrapper.appendChild(centered);
+
+  if (typeof story === 'string') {
+    inner.innerHTML = story;
+  } else {
+    inner.appendChild(story);
+  }
+
   return wrapper;
 }
 

@@ -1,9 +1,11 @@
+import '@storybook/addon-console';
 import { addParameters, addDecorator, configure } from "@storybook/html";
 import { withA11y } from '@storybook/addon-a11y';
 import { withKnobs } from '@storybook/addon-knobs';
 
 import { withCenteredLayout } from '../src/utils'
 
+// Load global style to avoid styles duplicate from style loader
 import '@ovh/ui-kit/src/index.js';
 import '@ovh/ui-kit/src/index.less';
 
@@ -16,7 +18,7 @@ addDecorator(withCenteredLayout);
 addParameters({
   options: {
     name: 'OVH UI Kit',
-    panelPosition: 'right',
+    panelPosition: 'bottom',
   },
 });
 

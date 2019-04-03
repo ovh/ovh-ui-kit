@@ -21,6 +21,12 @@ export default class {
     this.destroyPopper();
   }
 
+  $onChanges(changes) {
+    if (changes.text) {
+      this.updatePopper();
+    }
+  }
+
   $postLink() {
     this.$timeout(() => {
       if (this.title) {
@@ -51,6 +57,12 @@ export default class {
     this.popper = new Popper(trigger, tooltip, {
       placement: this.placement,
     });
+  }
+
+  updatePopper() {
+    if (this.popper) {
+      this.popper.scheduleUpdate();
+    }
   }
 
   destroyPopper() {

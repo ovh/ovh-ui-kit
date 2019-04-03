@@ -64,6 +64,7 @@ angular.module('myModule', ['oui.criteria'])
 | `model`       | object    | =         | no                | n/a                       | n/a       | model bound to component
 | `properties`  | array     | <?        | no                | n/a                       | n/a       | array of objects with columns informations
 | `disabled`    | boolean   | <?        | no                | `true`, `false`           | `false`   | disabled flag
+| `searchable`  | boolean   | <?        | no                | `true`, `false`           | `false`   | searchable flag
 | `on-change`   | function  | &         | no                | n/a                       | n/a       | handler triggered when model has changed
 
 ## Component `oui-criteria-adder`

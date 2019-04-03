@@ -111,7 +111,7 @@
 | `heading`     | string    | @?        | yes               | n/a               | n/a       | heading text
 | `placeholder` | string    | @?        | yes               | n/a               | n/a       | placeholder text
 | `loading`     | boolean   | <?        | no                | `true`, `false`   | `false`   | loading flag
-| `searchable`  | boolean   | <?        | no                | `true`, `false`   | `false`   | searchbale flag
+| `searchable`  | boolean   | <?        | no                | `true`, `false`   | `false`   | searchable flag
 
 ### oui-dual-list-target
 
@@ -120,7 +120,7 @@
 | `heading`     | string    | @?        | yes               | n/a               | n/a       | heading text
 | `placeholder` | string    | @?        | yes               | n/a               | n/a       | placeholder text
 | `loading`     | boolean   | <?        | no                | `true`, `false`   | `false`   | loading flag
-| `searchable`  | boolean   | <?        | no                | `true`, `false`   | `false`   | searchbale flag
+| `searchable`  | boolean   | <?        | no                | `true`, `false`   | `false`   | searchable flag
 
 ## Configuration
 
