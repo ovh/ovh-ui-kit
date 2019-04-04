@@ -17,14 +17,17 @@
     "@ovh/ui-kit": "*",
     "angular": "^1.7.8",
     "angular-aria": "^1.7.8",
-    "angular-sanitize": "^1.7.8"
+    "angular-sanitize": "^1.7.8",
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
     "@ovh/ui-kit.config": "*",
     "@storybook/addon-a11y": "^5.0.6",
     "@storybook/addon-actions": "^5.0.6",
+    "@storybook/addon-console": "^1.1.0",
     "@storybook/addon-knobs": "^5.0.6",
+    "@storybook/addon-notes": "^5.0.6",
     "@storybook/addon-storysource": "^5.0.6",
     "@storybook/cli": "^5.0.6",
     "@storybook/html": "^5.0.6",

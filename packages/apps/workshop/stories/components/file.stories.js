@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
-import { compileTemplate } from '../src/utils';
+import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-file-stories';
@@ -11,6 +11,6 @@ storiesOf('Components/File', module)
   .add(
     'Simple file selector ',
     forModule(moduleName).createElement(() => compileTemplate(`
-      <oui-file model="$ctrl.model"></oui-file>
+    <oui-file model="$ctrl.model"></oui-file>
     `)),
   );

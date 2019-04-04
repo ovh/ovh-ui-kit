@@ -21,7 +21,7 @@ storiesOf('Atoms/Button', module)
   .add(
     'Action buttons',
     forModule(moduleName).createElement((compile) => {
-      const disabled = boolean('Disabled', false);
+      const disabled = boolean('Disabled state', false);
       return compile`
         <oui-button aria-label="Cancel moving the server"
                     variant="secondary"
@@ -38,7 +38,7 @@ storiesOf('Atoms/Button', module)
   .add(
     'Arrow buttons',
     forModule(moduleName).createElement((compile) => {
-      const disabled = boolean('Disabled', false);
+      const disabled = boolean('Disabled state', false);
       return compile`
         <oui-button aria-label="Previous step"
                     variant-nav="previous"

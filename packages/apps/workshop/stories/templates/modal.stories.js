@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
-import { compileTemplate } from '../src/utils';
+import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-modal-stories';
@@ -35,8 +35,7 @@ storiesOf('Templates/Modal', module)
           </oui-field>
         </form>
       </oui-modal>
-    `,
-    {
+    `, {
       $ctrl: {
         name: 'MyServer01',
         password: 'zxcvbn',

@@ -7,13 +7,16 @@ const styles = {
     right: 0,
 
     display: 'flex',
-    alignItems: 'center',
+    flexDirection: 'column',
     justifyContent: 'center',
 
     overflow: 'auto',
   },
+  centered: {
+    maxHeight: '100%',
+    flex: 0,
+  },
   inner: {
-    flex: 1,
     textAlign: 'center',
     padding: '25px',
   },
