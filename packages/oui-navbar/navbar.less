@@ -1,6 +1,7 @@
 @import '../oui/_settings';
 @import '../oui-icons/_variables';
 @import '../oui-responsive/responsive';
+@import '../oui-typography/_mixins';
 @import './_normalize';
 @import './_mixins';
 
@@ -396,6 +397,8 @@
 
     // Title for Header
     &__title {
+      #oui > .text-ellipsis();
+
       line-height: @oui-navbar-menu-title-line-height;
       margin: 0;
       padding: 0;
