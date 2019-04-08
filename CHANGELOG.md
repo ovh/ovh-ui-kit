@@ -1,3 +1,39 @@
+<a name="2.28.0"></a>
+# [2.28.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.27.0...v2.28.0) (2019-04-08)
+
+
+### Features
+
+* **oui-navbar:** truncate if menu title is too long ([#375](https://github.com/ovh-ux/ovh-ui-kit/issues/375)) ([4f46c59](https://github.com/ovh-ux/ovh-ui-kit/commit/4f46c59))
+
+
+### Performance Improvements
+
+* **oui-typography:** font rendering configuration ([#374](https://github.com/ovh-ux/ovh-ui-kit/issues/374)) ([467f139](https://github.com/ovh-ux/ovh-ui-kit/commit/467f139))
+
+
+
+<a name="2.27.0"></a>
+# [2.27.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.26.1...v2.27.0) (2019-04-04)
+
+
+### Features
+
+* **oui-icons:** add bell, user and help icons ([#369](https://github.com/ovh-ux/ovh-ui-kit/issues/369)) ([c932729](https://github.com/ovh-ux/ovh-ui-kit/commit/c932729))
+* **oui-navbar:** add dropdown links style ([#370](https://github.com/ovh-ux/ovh-ui-kit/issues/370)) ([0013033](https://github.com/ovh-ux/ovh-ui-kit/commit/0013033))
+
+
+
+<a name="2.26.1"></a>
+## [2.26.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.26.0...v2.26.1) (2019-03-26)
+
+
+### Bug Fixes
+
+* fix reboot on buttons and inputs ([#361](https://github.com/ovh-ux/ovh-ui-kit/issues/361)) ([b334126](https://github.com/ovh-ux/ovh-ui-kit/commit/b334126))
+
+
+
 <a name="2.26.0"></a>
 # [2.26.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.25.0...v2.26.0) (2019-03-26)
 
