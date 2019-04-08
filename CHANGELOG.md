@@ -1,3 +1,18 @@
+<a name="2.28.0"></a>
+# [2.28.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.27.0...v2.28.0) (2019-04-08)
+
+
+### Features
+
+* **oui-navbar:** truncate if menu title is too long ([#375](https://github.com/ovh-ux/ovh-ui-kit/issues/375)) ([4f46c59](https://github.com/ovh-ux/ovh-ui-kit/commit/4f46c59))
+
+
+### Performance Improvements
+
+* **oui-typography:** font rendering configuration ([#374](https://github.com/ovh-ux/ovh-ui-kit/issues/374)) ([467f139](https://github.com/ovh-ux/ovh-ui-kit/commit/467f139))
+
+
+
 <a name="2.27.0"></a>
 # [2.27.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.26.1...v2.27.0) (2019-04-04)
 
