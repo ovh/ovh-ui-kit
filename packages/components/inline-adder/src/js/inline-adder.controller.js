@@ -1,4 +1,4 @@
-import { addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 import filter from 'lodash/filter';
 
 export default class {

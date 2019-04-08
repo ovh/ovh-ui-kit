@@ -6,8 +6,8 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withCenteredLayout } from '../src/utils'
 
 // Load global style to avoid styles duplicate from style loader
-import '@ovh/ui-kit/src/index.js';
-import '@ovh/ui-kit/src/index.less';
+import '@ovh-ux/ui-kit/src/index.js';
+import '@ovh-ux/ui-kit/src/index.less';
 
 // Addons
 addDecorator(withA11y);

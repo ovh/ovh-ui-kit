@@ -1,7 +1,7 @@
 import pages from './pages.data.json';
 
 const rootState = 'showcase';
-const req = require.context('@ovh/ui-kit-documentation/src/pages', true, /.*\.(html|md)$/);
+const req = require.context('@ovh-ux/ui-kit-documentation/src/pages', true, /.*\.(html|md)$/);
 
 function loadDirectory($stateProvider, items) {
   items.forEach((_item_) => {

@@ -1,4 +1,4 @@
-import { addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
   constructor($attrs, $element, $timeout) {

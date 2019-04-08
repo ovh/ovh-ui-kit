@@ -4,7 +4,7 @@ import ngMessages from 'angular-messages';
 import ngSanitize from 'angular-sanitize';
 
 import '@uirouter/angularjs';
-import '@ovh/ui-kit';
+import '@ovh-ux/ui-kit';
 
 import './styles/index.less';
 

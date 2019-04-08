@@ -1,4 +1,4 @@
-const webpackConfig = require('@ovh/ui-kit.config/src/webpack.dev.config');
+const webpackConfig = require('@ovh-ux/ui-kit.config/src/webpack.dev.config');
 
 module.exports = {
   basePath: '../',

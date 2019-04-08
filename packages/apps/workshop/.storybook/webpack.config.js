@@ -1,4 +1,4 @@
-const { styleLoader } = require('@ovh/ui-kit.config/src/webpack.rules');
+const { styleLoader } = require('@ovh-ux/ui-kit.config/src/webpack.rules');
 
 module.exports = async ({ config }) => {
   // For @storybook/addon-storysource

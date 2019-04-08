@@ -1,6 +1,6 @@
 {
-  "name": "@ovh/ui-kit.pagination",
-  "version": "3.0.0",
+  "name": "@ovh-ux/ui-kit.pagination",
+  "version": "2.28.0",
   "private": true,
   "main": "./src/index.js",
   "less": "./src/index.less",
@@ -11,16 +11,16 @@
     "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/karma start --watch"
   },
   "dependencies": {
-    "@ovh/ui-kit.button": "*",
-    "@ovh/ui-kit.core": "*",
-    "@ovh/ui-kit.dropdown": "*",
-    "@ovh/ui-kit.input": "*",
+    "@ovh-ux/ui-kit.button": "*",
+    "@ovh-ux/ui-kit.core": "*",
+    "@ovh-ux/ui-kit.dropdown": "*",
+    "@ovh-ux/ui-kit.input": "*",
     "angular": ">=1.6.x"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
-    "@ovh/ui-kit.test": "*",
+    "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "karma": "^4.0.1",

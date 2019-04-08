@@ -1,10 +1,10 @@
 import 'angular-aria';
 import angular from 'angular';
 
-import Checkbox from '@ovh/ui-kit.checkbox';
-import Criteria from '@ovh/ui-kit.criteria';
-import Pagination from '@ovh/ui-kit.pagination';
-import Spinner from '@ovh/ui-kit.spinner';
+import Checkbox from '@ovh-ux/ui-kit.checkbox';
+import Criteria from '@ovh-ux/ui-kit.criteria';
+import Pagination from '@ovh-ux/ui-kit.pagination';
+import Spinner from '@ovh-ux/ui-kit.spinner';
 
 import Cell from './js/cell/cell.component';
 import Datagrid from './js/datagrid.directive';

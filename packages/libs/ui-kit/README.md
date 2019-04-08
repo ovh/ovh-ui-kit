@@ -4,7 +4,7 @@
 
 A component framework for the OVH brand.
 
-[![npm version](https://badgen.net/npm/v/@ovh/ui-kit)](https://www.npmjs.com/package/@ovh/ui-kit)
+[![npm version](https://badgen.net/npm/v/@ovh-ux/ui-kit)](https://www.npmjs.com/package/@ovh-ux/ui-kit)
 
 ## Installation
 
@@ -25,20 +25,20 @@ You need to load these dependencies in your project:
 
 See `package.json` for more informations.
 
-[![Dependencies](https://badgen.net/david/dep/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh/ui-kit?activeTab=dependencies)
-[![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh/ui-kit?activeTab=dependencies)
-[![Peer Dependencies](https://badgen.net/david/peer/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh/ui-kit?activeTab=dependencies)
+[![Dependencies](https://badgen.net/david/dep/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
+[![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
+[![Peer Dependencies](https://badgen.net/david/peer/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
 
 ### Install with [npm](https://www.npmjs.com/)
 
 ```bash
-npm install @ovh/ui-kit
+npm install @ovh-ux/ui-kit
 ```
 
 ### Install with [yarn](https://yarnpkg.com)
 
 ```bash
-yarn add @ovh/ui-kit
+yarn add @ovh-ux/ui-kit
 ```
 
 ## Usage

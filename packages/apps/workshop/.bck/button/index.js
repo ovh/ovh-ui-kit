@@ -1,4 +1,4 @@
-import Button from '@ovh/ui-kit.button';
+import Button from '@ovh-ux/ui-kit.button';
 
 import './index.less';
 

@@ -1,4 +1,4 @@
-import { addBooleanParameter, addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
+import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
   constructor($scope, $element, $attrs, $timeout) {

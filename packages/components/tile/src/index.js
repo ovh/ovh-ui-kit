@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-import Popover from '@ovh/ui-kit.popover';
-import Spinner from '@ovh/ui-kit.spinner';
+import Popover from '@ovh-ux/ui-kit.popover';
+import Spinner from '@ovh-ux/ui-kit.spinner';
 
 import Tile from './js/tile.component';
 import TileButton from './js/button/tile-button.component';

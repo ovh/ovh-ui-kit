@@ -1,6 +1,6 @@
-import '@ovh/ui-kit.checkbox';
-import '@ovh/ui-kit.radio';
-import '@ovh/ui-kit.select';
+import '@ovh-ux/ui-kit.checkbox';
+import '@ovh-ux/ui-kit.radio';
+import '@ovh-ux/ui-kit.select';
 
 import noop from 'lodash/noop';
 

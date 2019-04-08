@@ -1,4 +1,4 @@
-import '@ovh/ui-kit.spinner';
+import '@ovh-ux/ui-kit.spinner';
 
 describe('ouiSlideshow', () => {
   let TestUtils;

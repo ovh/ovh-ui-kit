@@ -1,4 +1,4 @@
-import '@ovh/ui-kit.action-menu';
+import '@ovh-ux/ui-kit.action-menu';
 
 import columnsData from './columns.spec.data.json';
 import originalFakeData from './datagrid.spec.data.json';

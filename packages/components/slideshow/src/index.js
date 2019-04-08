@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-import Spinner from '@ovh/ui-kit.spinner';
+import Spinner from '@ovh-ux/ui-kit.spinner';
 
 import Slideshow from './js/slideshow.component';
 import SlideshowPanel from './js/panel/slideshow-panel.component';

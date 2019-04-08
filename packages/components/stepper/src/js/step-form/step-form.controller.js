@@ -1,4 +1,4 @@
-import { addBooleanParameter, addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
+import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class StepFormController {
   constructor($attrs, $element, $scope, $timeout, ouiStepperConfiguration) {

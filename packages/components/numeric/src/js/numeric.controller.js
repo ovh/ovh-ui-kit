@@ -1,4 +1,4 @@
-import { addBooleanParameter, addDefaultParameter } from '@ovh/ui-kit.core/src/js/component-utils';
+import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 import clamp from 'lodash/clamp';
 
 // By design, value is restricted to [0, 99999] interval

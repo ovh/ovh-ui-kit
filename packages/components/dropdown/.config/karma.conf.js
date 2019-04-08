@@ -1,4 +1,4 @@
-const karmaConfig = require("@ovh/ui-kit.test/src/karma.base.config");
+const karmaConfig = require("@ovh-ux/ui-kit.test/src/karma.base.config");
 
 module.exports = function (config) {
   const files = 'src/index.spec.js';

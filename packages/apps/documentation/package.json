@@ -1,7 +1,7 @@
 {
-  "name": "@ovh/ui-kit-documentation",
+  "name": "@ovh-ux/ui-kit-documentation",
   "private": true,
-  "version": "3.0.0",
+  "version": "2.28.0",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "main": "./src/index.js",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.20",
-    "@ovh/ui-kit": "*",
+    "@ovh-ux/ui-kit": "*",
     "angular": "^1.7.7",
     "angular-aria": "^1.7.7",
     "angular-messages": "^1.7.7",
