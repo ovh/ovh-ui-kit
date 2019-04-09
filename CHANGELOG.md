@@ -1,3 +1,13 @@
+<a name="2.29.0"></a>
+# [2.29.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.28.0...v2.29.0) (2019-04-09)
+
+
+### Bug Fixes
+
+* **oui-popover:** set white-space to normal ([#379](https://github.com/ovh-ux/ovh-ui-kit/issues/379)) ([4e68a63](https://github.com/ovh-ux/ovh-ui-kit/commit/4e68a63))
+
+
+
 <a name="2.28.0"></a>
 # [2.28.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.27.0...v2.28.0) (2019-04-08)
 
