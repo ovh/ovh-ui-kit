@@ -1,6 +1,6 @@
 {
   "name": "@ovh-ux/ui-kit.spinner",
-  "version": "2.29.0",
+  "version": "3.0.0-rc.0",
   "private": true,
   "main": "./src/index.js",
   "less": "./src/index.less",
@@ -11,13 +11,13 @@
     "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/karma start --watch"
   },
   "dependencies": {
-    "@ovh-ux/ui-kit.core": "*",
+    "@ovh-ux/ui-kit.core": "^3.0.0-rc.0",
     "angular": ">=1.6.x"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/node": "^7.2.2",
-    "@ovh-ux/ui-kit.test": "*",
+    "@ovh-ux/ui-kit.test": "^3.0.0-rc.0",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "karma": "^4.0.1"

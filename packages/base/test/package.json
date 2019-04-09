@@ -1,11 +1,11 @@
 {
   "name": "@ovh-ux/ui-kit.test",
-  "version": "2.29.0",
+  "version": "3.0.0-rc.0",
   "private": true,
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "dependencies": {
-    "@ovh-ux/ui-kit.config": "*",
+    "@ovh-ux/ui-kit.config": "^3.0.0-rc.0",
     "angular": "^1.7.8",
     "angular-aria": "^1.7.8",
     "angular-mocks": ">=1.6.x",
@@ -21,8 +21,8 @@
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-spec-reporter": "^0.0.32",
     "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^4.0.0-rc.2",
     "webpack": "^4.29.6"
   }
