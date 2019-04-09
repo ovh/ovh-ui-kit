@@ -579,7 +579,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.28.0") format("woff2"), url("./icons/icons.woff?v=2.28.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.29.0") format("woff2"), url("./icons/icons.woff?v=2.29.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -10666,6 +10666,7 @@ oui-popover-content {
   transition-timing-function: ease-in-out;
   z-index: -1;
   pointer-events: none;
+  white-space: normal;
 }
 .oui-popover__arrow {
   background-color: #fff;
