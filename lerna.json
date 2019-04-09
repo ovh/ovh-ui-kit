@@ -1,8 +1,16 @@
 {
     "lerna": "3.4.3",
+    "command": {
+      "version": {
+        "message": "build(release): bump version to v%s"
+      }
+    },
     "packages": [
-        "packages/components/*",
-        "packages/libs/*"
+      "packages/apps/*",
+      "packages/base/*",
+      "packages/components/*",
+      "packages/libs/*",
+      "packages/vendors/*"
     ],
     "npmClient": "yarn",
     "useWorkspaces": true,

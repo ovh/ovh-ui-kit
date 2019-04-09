@@ -13,7 +13,7 @@
         ng-if="::!!$ctrl.headerBreadcrumb"
         ng-bind="::$ctrl.headerBreadcrumb">
     </span>
-    <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle"></h3>
+    <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle" title="{{::$ctrl.headerTitle}}"></h3>
 </header>
 <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item {{::!!menuLink.class ? menuLink.class : null}}"
@@ -35,7 +35,7 @@
             ng-href="{{::menuLink.url}}"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
-            <span ng-bind="::menuLink.title"></span>
+            <span ng-bind-html="::menuLink.title"></span>
             <span class="oui-icon oui-icon-external_link" aria-hidden="true"
                 ng-if="::!!menuLink.isExternal">
             </span>
@@ -51,7 +51,7 @@
                 'oui-navbar_desktop-only': !!menuLink.subLinks
             }"
             ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
-            ng-bind="::menuLink.title"
+            ng-bind-html="::menuLink.title"
             ui-sref="{{::$ctrl.constructor.getFullSref(menuLink)}}"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
@@ -64,7 +64,7 @@
             ng-attr-aria-label="{{::!!menuLink.label ? menuLink.label : null}}"
             ng-attr-title="{{::!!menuLink.label ? menuLink.label : null}}"
             ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
-            ng-bind="::menuLink.title"
+            ng-bind-html="::menuLink.title"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
         </button>
@@ -80,7 +80,7 @@
                 'oui-navbar_mobile-only': !!menuLink.url || !!menuLink.state
             }"
             ng-click="$ctrl.navbarCtrl.toggleMenu(menuLink.name, true)"
-            ng-bind="::menuLink.title"
+            ng-bind-html="::menuLink.title"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
         </button>

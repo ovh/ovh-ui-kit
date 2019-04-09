@@ -1,4 +1,5 @@
 import { storiesOf } from '@storybook/html';
+import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
 import { compileTemplate } from '../../src/utils';
@@ -23,9 +24,7 @@ storiesOf('Directives/Autocomplete', module)
     `, {
       $ctrl: {
         suggestions: strings,
-        onAutocomplete: (value) => {
-          console.log('onAutocomplete', value);
-        },
+        onAutocomplete: action('onAutocomplete'),
       },
     })),
   )
@@ -43,9 +42,7 @@ storiesOf('Directives/Autocomplete', module)
     `, {
       $ctrl: {
         suggestions: objects,
-        onAutocomplete: (value) => {
-          console.log('onAutocomplete', value);
-        },
+        onAutocomplete: action('onAutocomplete'),
       },
     })),
   );

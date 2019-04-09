@@ -1,6 +1,6 @@
 {
   "name": "ovh-ui-kit",
-  "version": "2.29.0",
+  "version": "0.0.0",
   "private": true,
   "description": "A set of maintainable components for the OVH ecosystem",
   "license": "BSD-3-Clause",
@@ -18,7 +18,6 @@
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint 'packages/**/*.less'",
     "lint:js": "eslint ./packages",
-    "version": "yarn build && npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "prepare": "yarn build",
     "start": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn start",
     "test": "run-s lint test:karma",

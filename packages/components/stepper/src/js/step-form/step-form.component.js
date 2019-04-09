@@ -17,6 +17,7 @@ export default {
     submitText: '@?',
 
     disabled: '<?',
+    editable: '<?',
     loading: '<?',
     navigation: '<?',
     skippable: '<?',

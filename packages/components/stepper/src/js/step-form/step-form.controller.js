@@ -13,6 +13,7 @@ export default class StepFormController {
 
   $onInit() {
     addBooleanParameter(this, 'disabled');
+    addBooleanParameter(this, 'editable');
     addBooleanParameter(this, 'skippable');
 
     // Add default name
@@ -21,6 +22,11 @@ export default class StepFormController {
     // Add 'cancelText' default value
     if (angular.isDefined(this.$attrs.cancelHref) || angular.isDefined(this.$attrs.onCancel)) {
       addDefaultParameter(this, 'cancelText', this.translations.cancelButtonLabel);
+    }
+
+    // By default, we can edit a step
+    if (angular.isUndefined(this.$attrs.editable)) {
+      this.editable = true;
     }
 
     // Show validation if no attribute 'navigation'
@@ -56,9 +62,9 @@ export default class StepFormController {
   }
 
   onFormSubmit(form) {
-    if (form.$valid && this.valid) {
-      this.onSubmit({ form });
+    this.onSubmit({ form });
 
+    if (form.$valid && this.valid) {
       // Focus next step
       this.stepperCtrl.addForm(form, this.stepper.index);
     }

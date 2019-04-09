@@ -58,6 +58,7 @@ If you want to access the forms inside `on-finish` callback, you need to use the
 | `loading-text`    | string    | @?        | no                | n/a               | n/a       | text for the loading state
 | `loading`         | boolean   | <?        | no                | `true`, `false`   | `false`   | display the loading state
 | `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | disable the step and shrink it
+| `editable`        | boolean   | <?        | no                | `true`, `false`   | `true`    | Define if user can go back on a step and edit it again 
 | `navigation`      | boolean   | <?        | no                | `true`, `false`   | `true`    | show the navigation buttons
 | `skippable`       | boolean   | <?        | no                | `true`, `false`   | `false`   | add button to skip facultative step
 | `valid`           | boolean   | <?        | no                | `true`, `false`   | `true`    | custom validation for the form

@@ -1,6 +1,6 @@
 {
   "name": "@ovh-ux/ui-kit",
-  "version": "2.28.0",
+  "version": "2.29.0",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "files": [
@@ -17,6 +17,7 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --colors --config ./.config/webpack.config.js",
     "clean": "rimraf ./dist",
     "copy": "cpx \"./dist/**/*\" \"../../../dist\"",
+    "version": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "prepare": "yarn build"
   },
   "dependencies": {

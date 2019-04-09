@@ -60,6 +60,52 @@ describe('ouiStepper', () => {
         expect(form.hasClass(completeClass)).toBe(false);
       });
 
+      it('should display a editable step', () => {
+        let stepForm;
+        const element = TestUtils.compileTemplate(`
+          <oui-stepper>
+              <oui-step-form name='form' on-submit="$ctrl.onSubmitTest(form)"></oui-step-form>
+          </oui-stepper>`, {
+          onSubmitTest: (form) => {
+            stepForm = form;
+          },
+        });
+        const form = element.find('form').eq(0);
+        $timeout.flush();
+
+        form.triggerHandler('submit');
+
+        // $submitted is settled to false, fake it by access form directly and set it to true
+        stepForm.$submitted = true;
+        element.scope().$digest();
+
+        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_link'));
+        expect(editLink.length).toBe(1);
+      });
+
+      it('should display a not-editable step', () => {
+        let stepForm;
+        const element = TestUtils.compileTemplate(`
+          <oui-stepper>
+              <oui-step-form name='form' on-submit="$ctrl.onSubmitTest(form)" editable="false"></oui-step-form>
+          </oui-stepper>`, {
+          onSubmitTest: (form) => {
+            stepForm = form;
+          },
+        });
+        const form = element.find('form').eq(0);
+        $timeout.flush();
+
+        form.triggerHandler('submit');
+
+        // $submitted is settled to false, fake it by access form directly and set it to true
+        stepForm.$submitted = true;
+        element.scope().$digest();
+
+        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_link'));
+        expect(editLink.length).toBe(0);
+      });
+
       it('should display a loader', () => {
         const element = TestUtils.compileTemplate('<oui-stepper><oui-step-form loading></oui-step-form></oui-stepper>');
         $timeout.flush();
