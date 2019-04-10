@@ -1,3 +1,13 @@
+<a name="2.29.1"></a>
+## [2.29.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.29.0...v2.29.1) (2019-04-10)
+
+
+### Bug Fixes
+
+* **oui-radio:** fix wrong font-size for oui-radio m-thumbnail ([#383](https://github.com/ovh-ux/ovh-ui-kit/issues/383)) ([b41c7cc](https://github.com/ovh-ux/ovh-ui-kit/commit/b41c7cc))
+
+
+
 <a name="2.29.0"></a>
 # [2.29.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.28.0...v2.29.0) (2019-04-09)
 

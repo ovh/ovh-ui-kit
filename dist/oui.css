@@ -579,7 +579,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.29.0") format("woff2"), url("./icons/icons.woff?v=2.29.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.29.1") format("woff2"), url("./icons/icons.woff?v=2.29.1") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -2418,7 +2418,7 @@ oui-radio-group {
   left: 0.313rem;
 }
 .oui-radio_m .oui-radio__label {
-  font-size: 1.188rem;
+  font-size: 1.5rem;
 }
 .oui-radio_thumbnail {
   min-height: 1rem;
@@ -2603,7 +2603,7 @@ oui-radio-group {
   height: 0.625rem;
 }
 .oui-radio_thumbnail.oui-radio_m .oui-radio__label {
-  font-size: 1.188rem;
+  font-size: 1.5rem;
 }
 .oui-radio_thumbnail-light {
   min-height: 1rem;
@@ -2826,7 +2826,7 @@ oui-radio-group {
   height: 0.625rem;
 }
 .oui-radio_thumbnail-light.oui-radio_m .oui-radio__label {
-  font-size: 1.188rem;
+  font-size: 1.5rem;
 }
 .oui-radio_inline {
   display: inline-block;
