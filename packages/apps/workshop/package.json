@@ -14,7 +14,7 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "@ovh-ux/ui-kit": "^3.0.0-rc.0",
+    "@ovh-ux/ui-kit-builder": "^3.0.0-rc.0",
     "angular": "^1.7.8",
     "angular-aria": "^1.7.8",
     "angular-sanitize": "^1.7.8",
