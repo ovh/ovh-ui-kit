@@ -1,7 +1,7 @@
 {
   "name": "ovh-ui-kit",
-  "version": "0.0.0",
   "private": true,
+  "version": "0.0.0",
   "description": "A set of maintainable components for the OVH ecosystem",
   "license": "BSD-3-Clause",
   "workspaces": [

@@ -1,7 +1,7 @@
 {
   "name": "@ovh-ux/ui-kit.config",
-  "version": "3.0.0-rc.1",
   "private": true,
+  "version": "0.0.0",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "devDependencies": {
