@@ -1,7 +1,7 @@
 {
   "name": "@ovh-ux/ui-kit-documentation",
   "private": true,
-  "version": "3.0.0-rc.0",
+  "version": "3.0.0-rc.1",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "main": "./src/index.js",
@@ -12,7 +12,7 @@
     "webpack": "cross-env NODE_ENV=production webpack --progress --color --hide-modules --config ./.config/webpack.dist.config.js"
   },
   "dependencies": {
-    "@ovh-ux/ui-kit-builder": "^3.0.0-rc.0",
+    "@ovh-ux/ui-kit-builder": "^3.0.0-rc.1",
     "@uirouter/angularjs": "^1.0.20",
     "angular": "^1.7.7",
     "angular-aria": "^1.7.7",

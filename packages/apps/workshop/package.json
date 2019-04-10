@@ -1,7 +1,7 @@
 {
   "name": "@ovh-ux/ui-kit-workshop",
   "private": true,
-  "version": "3.0.0-rc.0",
+  "version": "3.0.0-rc.1",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
@@ -14,7 +14,7 @@
     "storybook": "start-storybook"
   },
   "dependencies": {
-    "@ovh-ux/ui-kit-builder": "^3.0.0-rc.0",
+    "@ovh-ux/ui-kit-builder": "^3.0.0-rc.1",
     "angular": "^1.7.8",
     "angular-aria": "^1.7.8",
     "angular-sanitize": "^1.7.8",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
-    "@ovh-ux/ui-kit.config": "^3.0.0-rc.0",
+    "@ovh-ux/ui-kit.config": "^3.0.0-rc.1",
     "@storybook/addon-a11y": "^5.0.6",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-console": "^1.1.0",

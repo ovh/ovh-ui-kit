@@ -1,6 +1,6 @@
 {
   "name": "@ovh-ux/ui-kit-builder",
-  "version": "3.0.0-rc.0",
+  "version": "3.0.0-rc.1",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "files": [
@@ -19,7 +19,6 @@
     "copy": "run-p copy:*",
     "copy:root": "cpx \"./dist/**/*\" \"../../../dist\"",
     "copy:lib": "cpx \"./dist/**/*\" \"../../libs/ui-kit/dist\"",
-    "version": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "prepare": "yarn build"
   },
   "dependencies": {
