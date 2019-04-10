@@ -476,11 +476,6 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-filter" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-filter</code></div>
-  </div>
-
-  <div class="oui-icon-badge">
     <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-call-forwarding" aria-hidden="true"></span></div>
     <div class="oui-icon-badge__code"><code>.oui-icon-legacy-call-forwarding</code></div>
   </div>
@@ -921,11 +916,6 @@
   </div>
 
   <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-ovh-logo" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-ovh-logo</code></div>
-  </div>
-
-  <div class="oui-icon-badge">
     <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-page" aria-hidden="true"></span></div>
     <div class="oui-icon-badge__code"><code>.oui-icon-legacy-page</code></div>
   </div>
@@ -1028,11 +1018,6 @@
   <div class="oui-icon-badge">
     <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-scheduled" aria-hidden="true"></span></div>
     <div class="oui-icon-badge__code"><code>.oui-icon-legacy-scheduled</code></div>
-  </div>
-
-  <div class="oui-icon-badge">
-    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-legacy-search" aria-hidden="true"></span></div>
-    <div class="oui-icon-badge__code"><code>.oui-icon-legacy-search</code></div>
   </div>
 
   <div class="oui-icon-badge">
