@@ -1,3 +1,17 @@
+# [3.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.1...v3.0.0-rc.2) (2019-04-11)
+
+
+### Bug Fixes
+
+* **radio:** fix wrong font-size for m-thumbnail ([e29e9ee](https://github.com/ovh-ux/ovh-ui-kit/commit/e29e9ee))
+
+
+### Features
+
+* add legacy icons from ovh-manager-webfont ([#367](https://github.com/ovh-ux/ovh-ui-kit/issues/367)) ([21a7a58](https://github.com/ovh-ux/ovh-ui-kit/commit/21a7a58))
+
+
+
 # [3.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.0...v3.0.0-rc.1) (2019-04-10)
 
 
