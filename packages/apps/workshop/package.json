@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm-run-all -l -s clean build-storybook copy",
     "build-storybook": "build-storybook -c .storybook -o docs",
-    "clean": "rimraf ./docs",
+    "clean": "rimraf ./docs ../../../docs",
     "copy": "cpx \"./docs/**/*\" \"../../../docs\"",
     "serve": "npx serve ./docs",
     "start": "yarn storybook",

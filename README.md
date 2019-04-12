@@ -11,10 +11,8 @@ Clone and install `ovh-ui-kit` by using [yarn](https://yarnpkg.com) >= 1.12.3 (w
 ```bash
 git clone https://github.com/ovh-ux/ovh-ui-kit.git
 cd ovh-ui-kit
-yarn install
+yarn
 ```
-
-The build of all `./dist` files are done in the process.
 
 ## Develop
 

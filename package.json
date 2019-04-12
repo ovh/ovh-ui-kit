@@ -13,15 +13,16 @@
   ],
   "scripts": {
     "build": "run-s build:*",
-    "build:apps": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn build",
-    "build:libs": "lerna exec --scope @ovh-ux/ui-kit-builder -- yarn build",
+    "build:docs": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn build",
+    "build:dist": "lerna exec --scope @ovh-ux/ui-kit-builder -- yarn build",
+    "karma": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
+    "lib:version": "lerna exec --scope @ovh-ux/ui-kit -- npm version",
+    "lib:publish": "lerna exec --scope @ovh-ux/ui-kit -- npm publish",
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint 'packages/**/*.less'",
     "lint:js": "eslint ./packages",
-    "prepare": "yarn build",
     "start": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn start",
-    "test": "run-s lint test:karma",
-    "test:karma": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run"
+    "test": "run-s lint karma"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
