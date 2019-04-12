@@ -1,3 +1,13 @@
+# [3.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.2...v3.0.0-rc.3) (2019-04-12)
+
+
+### Bug Fixes
+
+* **less:** fix imports in generated dist files ([1161031](https://github.com/ovh-ux/ovh-ui-kit/commit/1161031))
+* **modal:** fix transclude loading by using ng-show ([eccfde3](https://github.com/ovh-ux/ovh-ui-kit/commit/eccfde3))
+
+
+
 # [3.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.1...v3.0.0-rc.2) (2019-04-11)
 
 
