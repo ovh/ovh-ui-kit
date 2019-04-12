@@ -20,7 +20,7 @@
         ng-if="$ctrl.loading">
         <oui-spinner></oui-spinner>
     </div>
-    <div ng-if="!$ctrl.loading"
+    <div ng-show="!$ctrl.loading"
         ng-transclude></div>
 </div>
 <div class="oui-modal__footer">
