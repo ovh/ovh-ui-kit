@@ -203,6 +203,11 @@
     <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-help" aria-hidden="true"></span></div>
     <div class="oui-icon-badge__code"><code>.oui-icon-help</code></div>
   </div>
+
+  <div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-guides" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-guides</code></div>
+  </div>
 </div>
 
 ### Bicolor Icons
