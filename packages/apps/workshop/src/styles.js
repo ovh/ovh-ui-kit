@@ -17,7 +17,7 @@ const styles = {
     flex: 0,
   },
   inner: {
-    textAlign: 'center',
+    textAlign: 'left',
     padding: '25px',
   },
 };

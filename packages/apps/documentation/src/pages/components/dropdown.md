@@ -239,7 +239,7 @@ See <a href="#!/components/guide-menu">Guide menu component</a>.
 
 | Attribute         | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
 | ----              | ----      | ----      | ----              | ----                      | ----      | ----
-| `palcement`       | string    | @?        | yes               | `start`, `center`, `end`  | `start`   | placement of the dropdown menu
+| `placement`       | string    | @?        | yes               | `start`, `center`, `end`  | `start`   | placement of the dropdown menu
 | `arrow`           | boolean   | <?        | no                | `true`, `false`           | `false`   | display the dropdown arrow
 | `persistent`      | boolean   | <?        | no                | `true`, `false`           | `false`   | prevent dropdown to close on click
 
