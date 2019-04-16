@@ -1,3 +1,12 @@
+# [3.0.0-rc.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.3...v3.0.0-rc.4) (2019-04-16)
+
+
+### Features
+
+* add css file with rem base 10px ([178acc9](https://github.com/ovh-ux/ovh-ui-kit/commit/178acc9))
+
+
+
 # [3.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.2...v3.0.0-rc.3) (2019-04-12)
 
 
