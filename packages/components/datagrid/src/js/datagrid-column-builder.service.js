@@ -48,6 +48,10 @@ export default class DatagridColumnBuilder {
         }
       }
 
+      if (!hasAttribute(columnElement, 'type')) {
+        column.type = 'string';
+      }
+
       copyValueProperties.forEach((propertyName) => {
         if (hasAttribute(columnElement, propertyName)) {
           column[propertyName] = getAttribute(columnElement, propertyName);

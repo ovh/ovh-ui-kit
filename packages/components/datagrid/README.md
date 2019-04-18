@@ -262,7 +262,7 @@ These parameters override properties defined in `oui-column` or `columns` attrib
 | `title`                 | string          | n/a      | yes               | n/a               | n/a       | column title put in header
 | `property`              | string          | n/a      | yes               | n/a               | `null`    | property path used to get value from value
 | `sortable`              | string          | n/a      | yes               | `asc`, `desc`     | `asc`     | makes a column sortable and gives the order
-| `type`                  | string          | n/a      | no                | See below         | `null`    | define a column type
+| `type`                  | string          | n/a      | no                | See below         | `string`  | define a column type
 | `filterable`            | n/a             | n/a      | no                | n/a               | n/a       | define a filterable column
 | `searchable`            | n/a             | n/a      | no                | n/a               | n/a       | define a searchable column
 | `type-options`          | object          | n/a      | no                | See below         | `{}`      | define options related to column type (see below)
