@@ -44,8 +44,16 @@ You can use:
 * `$rowIndex` to get index of the current row
 * `$value` to get value of the cell
 
+And if `selectable-rows` is enabled:
+
+* `$isSelected` to get boolean of the current row selection state
+* `$selectedRows` to get values of selected rows
+
 ```html
 <oui-datagrid rows="$ctrl.data">
+    <oui-datagrid-topbar>
+      <pre>You have selected {{ $selectedRows.length }} row(s).</pre>
+    </oui-datagrid-topbar>
     <oui-datagrid-column title="'Index'">
         {{$rowIndex}}
     </oui-datagrid-column>
@@ -58,6 +66,9 @@ You can use:
     <oui-datagrid-column property="birth">
         {{$value | date:shortDate}}
     </oui-datagrid-column>
+    <oui-action-menu>
+      <oui-action-menu-item disabled="$isSelected">Some action</oui-action-menu-item>
+    </oui-action-menu>
 </oui-datagrid>
 ```
 

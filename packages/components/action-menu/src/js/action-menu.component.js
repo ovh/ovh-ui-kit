@@ -5,8 +5,7 @@ export default {
   template,
   controller,
   require: {
-    tile: '?^^ouiTile',
-    datagrid: '?^^ouiDatagrid',
+    tile: '?^^ouiTileDefinition',
   },
   bindings: {
     text: '@',

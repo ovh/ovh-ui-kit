@@ -172,6 +172,11 @@ export default class DatagridController {
       : this.ouiDatagridColumnBuilder.build(this.columnElements, this.getParentScope());
 
     if (this.actionColumnElements.length) {
+      // Set default value for the menu
+      angular.element(this.actionColumnElements)
+        .attr('compact', true)
+        .attr('placement', 'end');
+
       this.actionColumn = this.ouiDatagridColumnBuilder.buildActionColumn(
         this.actionColumnElements[0],
       );
