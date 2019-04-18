@@ -10,21 +10,21 @@
 <oui-datagrid
   rows="$ctrl.data"
   page-size="5">
-  <oui-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable type="string" searchable filterable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable type="string" searchable filterable>
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
-  <oui-column title="'Phone'" property="phone" sortable type="string" searchable filterable></oui-column>
-  <oui-column title="'Birth'" property="birth" sortable type="date" filterable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Phone'" property="phone" sortable type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Birth'" property="birth" sortable type="date" filterable>
     {{$value|date:short}}
-  </oui-column>
+  </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -35,21 +35,21 @@
   rows-loader="$ctrl.loadPartialData($config)"
   row-loader="$ctrl.loadRow($row)"
   page-size="5">
-  <oui-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable>
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
-  <oui-column title="'Phone'" property="phone"></oui-column>
-  <oui-column title="'Birth'" property="birth" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+  <oui-datagrid-column title="'Birth'" property="birth" sortable>
     {{$value|date:short}}
-  </oui-column>
+  </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -57,21 +57,21 @@
 
 ```html:preview
 <oui-datagrid rows-loader="$ctrl.loadPartialData($config)" row-loader="$ctrl.loadRow($row)" page-size="5">
-  <oui-column title="'First name'" property="firstName" sortable="asc"></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc"></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable>
     <a href="mailto:{{$value}}">{{$ctrl.label}}: {{$value}}</a>
-  </oui-column>
-  <oui-column title="'Phone'" property="phone"></oui-column>
-  <oui-column title="'Birth'" property="birth" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+  <oui-datagrid-column title="'Birth'" property="birth" sortable>
     {{$value|date:short}}
-  </oui-column>
+  </oui-datagrid-column>
   <oui-action-menu
       placement="end"
       compact>
@@ -95,32 +95,32 @@ Clicked row action 1: <span ng-if="$ctrl.action1Row">{{$ctrl.action1Row.lastName
 
 ```html:preview
 <oui-datagrid rows="$ctrl.data" page-size="5" selectable-rows on-row-select="$ctrl.onRowSelect($row, $rows)">
-  <oui-column title="'First name'" property="firstName" sortable="asc"></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc"></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable>
     <a href="mailto:{{$value}}">{{$ctrl.label}}: {{$value}}</a>
-  </oui-column>
-  <oui-column title="'Phone'" property="phone"></oui-column>
-  <oui-column title="'Birth'" property="birth" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+  <oui-datagrid-column title="'Birth'" property="birth" sortable>
     {{$value|date:short}}
-  </oui-column>
-  <oui-column title="'Selected'">
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Selected'">
     <span>{{ $isSelected }}</span>
-  </oui-column>
+  </oui-datagrid-column>
   <oui-action-menu placement="end" compact>
       <oui-action-menu-item disabled="$isSelected" on-click="">
         Some action
       </oui-action-menu-item>
   </oui-action-menu>
-  <extra-top>
+  <oui-datagrid-topbar>
     <pre>You have selected {{ $selectedRows.length }} row(s).</pre>
-  </extra-top>
+  </oui-datagrid-topbar>
 </oui-datagrid>
 ```
 
@@ -135,21 +135,21 @@ Clicked row action 1: <span ng-if="$ctrl.action1Row">{{$ctrl.action1Row.lastName
   rows="$ctrl.emptyList"
   empty-placeholder="There's no bananas here, sorry :("
   page-size="5">
-  <oui-column title="'First name'" property="firstName" sortable="asc"></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc"></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable>
     <a href="mailto:{{$value}}">{{$ctrl.label}}: {{$value}}</a>
-  </oui-column>
-  <oui-column title="'Phone'" property="phone"></oui-column>
-  <oui-column title="'Birth'" property="birth" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+  <oui-datagrid-column title="'Birth'" property="birth" sortable>
     {{$value|date:short}}
-  </oui-column>
+  </oui-datagrid-column>
   <oui-action-menu
       placement="end"
       compact>
@@ -236,28 +236,28 @@ All the properties of a column also become dynamic.
   on-columns-parameters-change="$ctrl.onColumnsParametersChange(id, columns)">
 
   <!-- A column can be tagged with "prevent-customization". -->
-  <oui-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable prevent-customization></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable prevent-customization></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable type="string" searchable filterable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable type="string" searchable filterable>
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
+  </oui-datagrid-column>
 
   <!-- To be customizable, a column without property (needed to be sortable, filterable, ...),
        must have a name. -->
-  <oui-column name="birth" title="'Named column'">
+  <oui-datagrid-column name="birth" title="'Named column'">
     Birth: {{$row.birth}}
-  </oui-column>
+  </oui-datagrid-column>
 
   <!-- A column without property nor name is not customizable. -->
-  <oui-column title="'Not named column'">
+  <oui-datagrid-column title="'Not named column'">
     Phone: {{$row.phone}}
-  </oui-column>
+  </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -277,8 +277,8 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html
 <oui-datagrid rows="$ctrl.data" page-size="10">
-  <oui-column title="'firstName'" property="firstName"></oui-column>
-  <oui-column title="$ctrl.lastNameText" property="lastName"></oui-column>
+  <oui-datagrid-column title="'firstName'" property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column title="$ctrl.lastNameText" property="lastName"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -286,16 +286,16 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html
 <oui-datagrid rows="$ctrl.data">
-  <oui-column title="'Name'">
+  <oui-datagrid-column title="'Name'">
     {{$row.firstName}} {{$row.lastName}}
-  </oui-column>
-  <oui-column property="email">
+  </oui-datagrid-column>
+  <oui-datagrid-column property="email">
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth">
+  </oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth">
     {{$value | date:shortDate}}
-  </oui-column>
+  </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -303,19 +303,19 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html:preview
 <oui-datagrid rows="$ctrl.data" page-size="5">
-  <oui-column title="'Index'">
+  <oui-datagrid-column title="'Index'">
     {{$rowIndex}}
-  </oui-column>
-  <oui-column title="'Name'">
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Name'">
     {{$row.firstName}} {{$row.lastName}}
-  </oui-column>
-  <oui-column property="email">
+  </oui-datagrid-column>
+  <oui-datagrid-column property="email">
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth">
+  </oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth">
     {{$value | date:shortDate}}
-  </oui-column>
+  </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -323,11 +323,11 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html
 <oui-datagrid rows-loader="$ctrl.loadData($config)">
-  <oui-column property="firstName"></oui-column>
-  <oui-column property="lastName"></oui-column>
-  <oui-column property="email"></oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth"></oui-column>
+  <oui-datagrid-column property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column property="lastName"></oui-datagrid-column>
+  <oui-datagrid-column property="email"></oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -366,11 +366,11 @@ You can use `row-loader`. It take the current row as argument and must return a 
 ```html
 <oui-datagrid rows-loader="$ctrl.loadPartialData($config)"
   row-loader="$ctrl.loadRow($row)">
-  <oui-column property="firstName"></oui-column>
-  <oui-column property="lastName"></oui-column>
-  <oui-column property="email"></oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth"></oui-column>
+  <oui-datagrid-column property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column property="lastName"></oui-datagrid-column>
+  <oui-datagrid-column property="email"></oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -390,8 +390,8 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html
 <oui-datagrid rows="$ctrl.data" page-size="10">
-  <oui-column title="'firstName'" property="firstName"></oui-column>
-  <oui-column title="$ctrl.lastNameText" property="lastName"></oui-column>
+  <oui-datagrid-column title="'firstName'" property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column title="$ctrl.lastNameText" property="lastName"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -399,16 +399,16 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html
 <oui-datagrid rows="$ctrl.data">
-  <oui-column title="'Name'">
+  <oui-datagrid-column title="'Name'">
     {{$row.firstName}} {{$row.lastName}}
-  </oui-column>
-  <oui-column property="email">
+  </oui-datagrid-column>
+  <oui-datagrid-column property="email">
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth">
+  </oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth">
     {{$value | date:shortDate}}
-  </oui-column>
+  </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -416,11 +416,11 @@ Or you can use the `page-size` property. It takes precedence over value configur
 
 ```html
 <oui-datagrid rows-loader="$ctrl.loadData($config)">
-  <oui-column property="firstName"></oui-column>
-  <oui-column property="lastName"></oui-column>
-  <oui-column property="email"></oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth"></oui-column>
+  <oui-datagrid-column property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column property="lastName"></oui-datagrid-column>
+  <oui-datagrid-column property="email"></oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -459,11 +459,11 @@ You can use `row-loader`. It take the current row as argument and must return a 
 ```html
 <oui-datagrid rows-loader="$ctrl.loadPartialData($config)"
   row-loader="$ctrl.loadRow($row)">
-  <oui-column property="firstName"></oui-column>
-  <oui-column property="lastName"></oui-column>
-  <oui-column property="email"></oui-column>
-  <oui-column property="phone"></oui-column>
-  <oui-column property="birth"></oui-column>
+  <oui-datagrid-column property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column property="lastName"></oui-datagrid-column>
+  <oui-datagrid-column property="email"></oui-datagrid-column>
+  <oui-datagrid-column property="phone"></oui-datagrid-column>
+  <oui-datagrid-column property="birth"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -472,7 +472,7 @@ You can use `row-loader`. It take the current row as argument and must return a 
 ```html:preview
 <oui-datagrid rows="$ctrl.servers"
   page-size="5">
-  <oui-column title="'Name'"
+  <oui-datagrid-column title="'Name'"
     property="name"
     type="string"
     searchable
@@ -482,23 +482,23 @@ You can use `row-loader`. It take the current row as argument and must return a 
         operators: [
             'contains'
         ]
-    }"></oui-column>
-  <oui-column title="'Memory'"
+    }"></oui-datagrid-column>
+  <oui-datagrid-column title="'Memory'"
     property="memory"
     type="number"
     filterable
-    sortable></oui-column>
-  <oui-column title="'CPUs'"
+    sortable></oui-datagrid-column>
+  <oui-datagrid-column title="'CPUs'"
     property="cpu"
     type="number"
     filterable
-    sortable></oui-column>
-  <oui-column title="'Running'"
+    sortable></oui-datagrid-column>
+  <oui-datagrid-column title="'Running'"
     property="up"
     type="boolean"
     filterable
-    sortable>{{ $value ? 'Yes' : 'No' }}</oui-column>
-  <oui-column title="'Purpose'"
+    sortable>{{ $value ? 'Yes' : 'No' }}</oui-datagrid-column>
+  <oui-datagrid-column title="'Purpose'"
     property="purpose"
     type="options"
     type-options="{
@@ -513,13 +513,13 @@ You can use `row-loader`. It take the current row as argument and must return a 
         }
     }"
     filterable
-    sortable></oui-column>
-  <oui-column title="'IP'"
+    sortable></oui-datagrid-column>
+  <oui-datagrid-column title="'IP'"
     property="ip"
     type="string"
     searchable
     filterable
-    sortable></oui-column>
+    sortable></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -598,15 +598,15 @@ To refresh asynchronous data, you need to define an id for the datagrid and use 
   id="localRefreshDatagrid"
   rows="$ctrl.data"
   row-loader="$ctrl.loadRandom($row)">
-  <oui-column
+  <oui-datagrid-column
     title="'Firstname'"
-    property="firstName"></oui-column>
-  <oui-column
+    property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Lastname'"
-    property="lastName"></oui-column>
-  <oui-column
+    property="lastName"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Random value'"
-    property="number"></oui-column>
+    property="number"></oui-datagrid-column>
 </oui-datagrid>
 <button type="button"
     class="oui-button oui-button_secondary"
@@ -638,24 +638,24 @@ call `rows-loader` and then a `row-loader` call for each line.
   id="remoteRefreshDatagrid"
   rows-loader="$ctrl.loadPartialData($config)"
   row-loader="$ctrl.loadRowWithRandom($row)">
-  <oui-column
+  <oui-datagrid-column
     title="'Firstname'"
-    property="firstName"></oui-column>
-  <oui-column
+    property="firstName"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Lastname'"
-    property="lastName"></oui-column>
-  <oui-column
+    property="lastName"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Email'"
-    property="email"></oui-column>
-  <oui-column
+    property="email"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Phone'"
-    property="phone"></oui-column>
-  <oui-column
+    property="phone"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Birth'"
-    property="birth"></oui-column>
-  <oui-column
+    property="birth"></oui-datagrid-column>
+  <oui-datagrid-column
     title="'Random value'"
-    property="number"></oui-column>
+    property="number"></oui-datagrid-column>
 </oui-datagrid>
 <button type="button"
     class="oui-button oui-button_secondary"
@@ -671,22 +671,22 @@ call `rows-loader` and then a `row-loader` call for each line.
 <oui-datagrid
   rows="$ctrl.data"
   page-size="5">
-  <oui-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable></oui-column>
-  <oui-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-column>
-  <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+  <oui-datagrid-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
     {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-  </oui-column>
-  <oui-column title="'Father'" property="parents.father.lastName" sortable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
     {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-  </oui-column>
-  <oui-column title="'Email'" property="email" sortable type="string" searchable filterable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Email'" property="email" sortable type="string" searchable filterable>
     <a href="mailto:{{$value}}">{{$value}}</a>
-  </oui-column>
-  <oui-column title="'Phone'" property="phone" sortable type="string" searchable filterable></oui-column>
-  <oui-column title="'Birth'" property="birth" sortable type="date" filterable>
+  </oui-datagrid-column>
+  <oui-datagrid-column title="'Phone'" property="phone" sortable type="string" searchable filterable></oui-datagrid-column>
+  <oui-datagrid-column title="'Birth'" property="birth" sortable type="date" filterable>
     {{$value|date:short}}
-  </oui-column>
-  <extra-top>
+  </oui-datagrid-column>
+  <oui-datagrid-topbar>
     <oui-action-menu
       text="Actions"
       aria-label="Server: actions"
@@ -700,7 +700,7 @@ call `rows-loader` and then a `row-loader` call for each line.
         Other action
       </oui-action-menu-item>
     </oui-action-menu>
-  </extra-top>
+  </oui-datagrid-topbar>
 </oui-datagrid>
 ```
 
@@ -734,7 +734,7 @@ const columnsParameters = [{
 ```
 
 This example shows columns parameters where "column1" column has no particular parameter and "column2" column is hidden.
-These parameters override properties defined in `oui-column` or `columns` attribute.
+These parameters override properties defined in `oui-datagrid-column` or `columns` attribute.
 
 **Only `hidden` is supported for now.**
 
@@ -743,7 +743,7 @@ These parameters override properties defined in `oui-column` or `columns` attrib
 - `id`: the id of the table
 - `columns`: the overrided parameters of each column. This value can be saved and then set in `columns-parameters`
 
-### oui-column / `columns` attribute
+### oui-datagrid-column / `columns` attribute
 
 | Attribute                                        | Type            | Binding  | One-time binding  | Values            | Default   | Description
 | ----                                             | ----            | ----     | ----              | ----              | ----      | ----

@@ -73,6 +73,8 @@ oui-datagrid {
 
   #oui > .datagrid-responsive-container();
 
+  margin: @oui-datagrid-margin;
+
   &__sticky-container {
     #oui > .datagrid-stick-columns-container(
       @headers-selector: @oui-headers-selector,
@@ -83,6 +85,10 @@ oui-datagrid {
 
   &__overflow-container {
     #oui > .datagrid-overflow-container();
+  }
+
+  .oui-datagrid {
+    margin: 0;
   }
 }
 

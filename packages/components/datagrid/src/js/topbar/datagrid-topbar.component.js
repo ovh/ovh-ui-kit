@@ -1,4 +1,4 @@
-import controller from './extra-top.controller';
+import controller from './datagrid-topbar.controller';
 
 export default {
   controller,

@@ -36,7 +36,7 @@ angular.module('myModule', ['oui.datagrid'])
 
 ### Custom cell templates
 
-Template inside `oui-column` component will be used as the content of each cell.
+Template inside `oui-datagrid-column` component will be used as the content of each cell.
 
 You can use:
 
@@ -46,18 +46,18 @@ You can use:
 
 ```html
 <oui-datagrid rows="$ctrl.data">
-    <oui-column title="'Index'">
+    <oui-datagrid-column title="'Index'">
         {{$rowIndex}}
-    </oui-column>
-    <oui-column title="'Name'">
+    </oui-datagrid-column>
+    <oui-datagrid-column title="'Name'">
         {{$row.firstName}} {{$row.lastName}}
-    </oui-column>
-    <oui-column property="email">
+    </oui-datagrid-column>
+    <oui-datagrid-column property="email">
         <a href="mailto:{{$value}}">{{$value}}</a>
-    </oui-column>
-    <oui-column property="birth">
+    </oui-datagrid-column>
+    <oui-datagrid-column property="birth">
         {{$value | date:shortDate}}
-    </oui-column>
+    </oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -87,11 +87,11 @@ Use `rows-loader` to load remote data. The config of the datagrid is accessible 
 
 ```html
 <oui-datagrid rows-loader="$ctrl.loadData($config)">
-    <oui-column property="firstName"></oui-column>
-    <oui-column property="lastName"></oui-column>
-    <oui-column property="email"></oui-column>
-    <oui-column property="phone"></oui-column>
-    <oui-column property="birth"></oui-column>
+    <oui-datagrid-column property="firstName"></oui-datagrid-column>
+    <oui-datagrid-column property="lastName"></oui-datagrid-column>
+    <oui-datagrid-column property="email"></oui-datagrid-column>
+    <oui-datagrid-column property="phone"></oui-datagrid-column>
+    <oui-datagrid-column property="birth"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -138,11 +138,11 @@ You can use `row-loader` with the current row as `$row` argument. Your method mu
 <oui-datagrid
     rows-loader="$ctrl.loadPartialData($config)"
     row-loader="$ctrl.loadRow($row)">
-    <oui-column property="firstName"></oui-column>
-    <oui-column property="lastName"></oui-column>
-    <oui-column property="email"></oui-column>
-    <oui-column property="phone"></oui-column>
-    <oui-column property="birth"></oui-column>
+    <oui-datagrid-column property="firstName"></oui-datagrid-column>
+    <oui-datagrid-column property="lastName"></oui-datagrid-column>
+    <oui-datagrid-column property="email"></oui-datagrid-column>
+    <oui-datagrid-column property="phone"></oui-datagrid-column>
+    <oui-datagrid-column property="birth"></oui-datagrid-column>
 </oui-datagrid>
 ```
 
@@ -150,7 +150,7 @@ You can use `row-loader` with the current row as `$row` argument. Your method mu
 
 | Attribute                         | Type      | Binding   | One-time binding    | Values              | Default      | Description
 | ----                              | ----      | ----      | ----                | ----                | ----         | ----
-| `columns`                         | array     | <?        | no                  | _see example above_ | `undefined`  | columns attributes (see oui-column below)
+| `columns`                         | array     | <?        | no                  | _see example above_ | `undefined`  | columns attributes (see oui-datagrid-column below)
 | `columns-parameters`              | array     | <?        | no                  | _see example above_ | `undefined`  | columns customization parameters
 | `customizable`                    | boolean   | <?        | no                  | `true`, `false`     | `false`      | display a dropdown menu to select columns to show/hide
 | `on-columns-parameters-change`    | function  | &         | no                  | n/a                 | n/a          | triggered on column parameter change when datagrid is customizable
@@ -210,7 +210,7 @@ const columnsParameters = [{
 
 This example shows columns parameters where "column1" column has no particular parameter and "column2" column is hidden.
 
-These parameters override properties defined in `oui-column` or `columns` attribute.
+These parameters override properties defined in `oui-datagrid-column` or `columns` attribute.
 
 **Only `hidden` is supported for now.**
 
@@ -230,32 +230,32 @@ These parameters override properties defined in `oui-column` or `columns` attrib
     on-columns-parameters-change="$ctrl.onColumnsParametersChange(id, columns)">
 
     <!-- A column can be tagged with "prevent-customization". -->
-    <oui-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable prevent-customization></oui-column>
-    <oui-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-column>
-    <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+    <oui-datagrid-column title="'First name'" property="firstName" sortable="asc" type="string" searchable filterable prevent-customization></oui-datagrid-column>
+    <oui-datagrid-column title="'Last name'" property="lastName" sortable type="string" searchable filterable></oui-datagrid-column>
+    <oui-datagrid-column title="'Mother'" property="parents.mother.lastName" sortable>
       {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
-    </oui-column>
-    <oui-column title="'Father'" property="parents.father.lastName" sortable>
+    </oui-datagrid-column>
+    <oui-datagrid-column title="'Father'" property="parents.father.lastName" sortable>
       {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
-    </oui-column>
-    <oui-column title="'Email'" property="email" sortable type="string" searchable filterable>
+    </oui-datagrid-column>
+    <oui-datagrid-column title="'Email'" property="email" sortable type="string" searchable filterable>
       <a href="mailto:{{$value}}">{{$value}}</a>
-    </oui-column>
+    </oui-datagrid-column>
 
     <!-- To be customizable, a column without property (needed to be sortable, filterable, ...),
         must have a name. -->
-    <oui-column name="birth" title="'Named column'">
+    <oui-datagrid-column name="birth" title="'Named column'">
         Birth: {{$row.birth}}
-    </oui-column>
+    </oui-datagrid-column>
 
     <!-- A column without property nor name is not customizable. -->
-    <oui-column title="'Not named column'">
+    <oui-datagrid-column title="'Not named column'">
         Phone: {{$row.phone}}
-    </oui-column>
+    </oui-datagrid-column>
 </oui-datagrid>
 ```
 
-## Component `oui-column`
+## Component `oui-datagrid-column`
 
 | Attribute               | Type            | Binding  | One-time binding  | Values            | Default   | Description
 | ----                    | ----            | ----     | ----              | ----              | ----      | ----

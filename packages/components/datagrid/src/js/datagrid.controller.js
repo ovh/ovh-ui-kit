@@ -34,7 +34,7 @@ export default class DatagridController {
     this.ouiDatagridService = ouiDatagridService;
     this.columnElements = [];
     this.actionColumnElements = [];
-    this.extraTopElements = [];
+    this.topbarElements = [];
     this.selectedRows = [];
     this.selectAllRows = false;
 
@@ -87,9 +87,9 @@ export default class DatagridController {
 
     if (this.htmlContent.trim().length) {
       const originalContent = angular.element(this.htmlContent);
-      this.columnElements = DatagridController.filterElements(originalContent, 'oui-column');
+      this.columnElements = DatagridController.filterElements(originalContent, 'oui-datagrid-column');
       this.actionColumnElements = DatagridController.filterElements(originalContent, 'oui-action-menu');
-      this.extraTopElements = DatagridController.filterElements(originalContent, 'extra-top');
+      this.topbarElements = DatagridController.filterElements(originalContent, 'oui-datagrid-topbar');
     }
 
     const builtColumns = this.buildColumns();
@@ -178,9 +178,9 @@ export default class DatagridController {
       this.hasActionMenu = true;
     }
 
-    if (this.extraTopElements.length) {
-      this.extraTopCompiledTemplate = this.$compile(`<div>${this.extraTopElements[0].innerHTML}</div>`);
-      this.hasExtraTopContent = true;
+    if (this.topbarElements.length) {
+      this.topbarCompiledTemplate = this.$compile(`<div>${this.topbarElements[0].innerHTML}</div>`);
+      this.hasTopbarContent = true;
     }
 
     this.availableColumns = angular.copy(builtColumns.columns)

@@ -4,12 +4,13 @@ import angular from 'angular';
 import Checkbox from '@ovh-ux/ui-kit.checkbox';
 import Criteria from '@ovh-ux/ui-kit.criteria';
 import Pagination from '@ovh-ux/ui-kit.pagination';
+import Skeleton from '@ovh-ux/ui-kit.skeleton';
 import Spinner from '@ovh-ux/ui-kit.spinner';
 
-import Cell from './js/cell/cell.component';
 import Datagrid from './js/datagrid.directive';
+import DatagridCell from './js/cell/cell.component';
 import DatagridColumnBuilder from './js/datagrid-column-builder.service';
-import DatagridExtraTop from './js/extra-top/extra-top.component';
+import DatagridTopbar from './js/topbar/datagrid-topbar.component';
 import DatagridPaging from './js/paging/datagrid-paging.service';
 import DatagridParameters from './js/parameters/datagrid-parameters.component';
 import DatagridProvider from './js/datagrid.provider';
@@ -23,12 +24,13 @@ angular
     Checkbox,
     Criteria,
     Pagination,
+    Skeleton,
     Spinner,
   ])
   .service('ouiDatagridColumnBuilder', DatagridColumnBuilder)
   .directive('ouiDatagrid', Datagrid)
-  .component('ouiDatagridCell', Cell)
-  .component('ouiDatagridExtraTop', DatagridExtraTop)
+  .component('ouiDatagridCell', DatagridCell)
+  .component('ouiDatagridTopbar', DatagridTopbar)
   .service('ouiDatagridPaging', DatagridPaging)
   .provider('ouiDatagridConfiguration', DatagridProvider)
   .service('ouiDatagridService', DatagridService)

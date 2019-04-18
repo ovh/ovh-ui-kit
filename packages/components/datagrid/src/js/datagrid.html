@@ -3,9 +3,9 @@
     properties="$ctrl.filterableColumns"
     searchable="$ctrl.isSearchTextVisible"
     on-change="$ctrl.onCriteriaChange(modelValue)">
-    <oui-datagrid-extra-top class="oui-datagrid-topbar__slot"
-        ng-if="$ctrl.hasExtraTopContent">
-    </oui-datagrid-extra-top>
+    <oui-datagrid-topbar class="oui-datagrid-topbar__slot"
+        ng-if="$ctrl.hasTopbarContent">
+    </oui-datagrid-topbar>
 </oui-criteria>
 <div class="oui-datagrid-responsive-container"
     ng-class="{

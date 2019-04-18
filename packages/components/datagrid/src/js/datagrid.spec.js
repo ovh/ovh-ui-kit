@@ -51,8 +51,8 @@ describe('ouiDatagrid', () => {
       it('should display rows using rows attribute', () => {
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeData.slice(0, 5),
@@ -74,8 +74,8 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeDataCopy,
@@ -102,9 +102,9 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows" row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeData.slice(0, 5),
@@ -127,9 +127,9 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows" row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeData.slice(0, 1),
@@ -153,9 +153,9 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows" row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeData.slice(0, 1),
@@ -177,8 +177,8 @@ describe('ouiDatagrid', () => {
       it('should display rows that can only be contained in a page', () => {
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows" page-size="2">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeData.slice(0, 5),
@@ -192,8 +192,8 @@ describe('ouiDatagrid', () => {
       it('should display rows sorted', () => {
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName" sortable="asc"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName" sortable="asc"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: fakeData.slice(0, 5),
@@ -219,9 +219,9 @@ describe('ouiDatagrid', () => {
                             id="refreshableDatagrid"
                             rows="$ctrl.rows"
                             row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           rows: angular.copy(fakeData.slice(0, 1)),
@@ -250,8 +250,8 @@ describe('ouiDatagrid', () => {
         it('should set page to 1 on filtering', () => {
           const element = TestUtils.compileTemplate(`
                             <oui-datagrid rows="$ctrl.rows">
-                                <oui-column property="firstName" type="string" searchable></oui-column>
-                                <oui-column property="lastName"></oui-column>
+                                <oui-datagrid-column property="firstName" type="string" searchable></oui-datagrid-column>
+                                <oui-datagrid-column property="lastName"></oui-datagrid-column>
                             </oui-datagrid>
                         `, {
             rows: fakeData,
@@ -273,8 +273,8 @@ describe('ouiDatagrid', () => {
         it('should not display search input nor criteria adder', () => {
           const element = TestUtils.compileTemplate(`
                             <oui-datagrid rows="$ctrl.rows">
-                                <oui-column property="firstName" type="string"></oui-column>
-                                <oui-column property="lastName"></oui-column>
+                                <oui-datagrid-column property="firstName" type="string"></oui-datagrid-column>
+                                <oui-datagrid-column property="lastName"></oui-datagrid-column>
                             </oui-datagrid>
                         `, {
             rows: fakeData,
@@ -290,8 +290,8 @@ describe('ouiDatagrid', () => {
         it('should display search input but not criteria adder', () => {
           const element = TestUtils.compileTemplate(`
                             <oui-datagrid rows="$ctrl.rows">
-                                <oui-column property="firstName" type="string" searchable></oui-column>
-                                <oui-column property="lastName"></oui-column>
+                                <oui-datagrid-column property="firstName" type="string" searchable></oui-datagrid-column>
+                                <oui-datagrid-column property="lastName"></oui-datagrid-column>
                             </oui-datagrid>
                         `, {
             rows: fakeData,
@@ -307,8 +307,8 @@ describe('ouiDatagrid', () => {
         it('should display criteria adder input but not search', () => {
           const element = TestUtils.compileTemplate(`
                             <oui-datagrid rows="$ctrl.rows">
-                                <oui-column property="firstName" type="string" filterable></oui-column>
-                                <oui-column property="lastName"></oui-column>
+                                <oui-datagrid-column property="firstName" type="string" filterable></oui-datagrid-column>
+                                <oui-datagrid-column property="lastName"></oui-datagrid-column>
                             </oui-datagrid>
                         `, {
             rows: fakeData,
@@ -324,8 +324,8 @@ describe('ouiDatagrid', () => {
         it('should display search and criteria adder', () => {
           const element = TestUtils.compileTemplate(`
                             <oui-datagrid rows="$ctrl.rows">
-                                <oui-column property="firstName" type="string" filterable></oui-column>
-                                <oui-column property="lastName" type="string" searchable></oui-column>
+                                <oui-datagrid-column property="firstName" type="string" filterable></oui-datagrid-column>
+                                <oui-datagrid-column property="lastName" type="string" searchable></oui-datagrid-column>
                             </oui-datagrid>
                         `, {
             rows: fakeData,
@@ -349,8 +349,8 @@ describe('ouiDatagrid', () => {
 
             const element = TestUtils.compileTemplate(`
                                 <oui-datagrid rows="$ctrl.rows">
-                                    <oui-column property="firstName" type="string" searchable></oui-column>
-                                    <oui-column property="lastName"></oui-column>
+                                    <oui-datagrid-column property="firstName" type="string" searchable></oui-datagrid-column>
+                                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                                 </oui-datagrid>
                             `, {
               rows: fakeData,
@@ -373,8 +373,8 @@ describe('ouiDatagrid', () => {
 
             const element = TestUtils.compileTemplate(`
                                 <oui-datagrid rows="$ctrl.rows">
-                                    <oui-column property="firstName" type="string" searchable></oui-column>
-                                    <oui-column property="lastName" type="string" searchable></oui-column>
+                                    <oui-datagrid-column property="firstName" type="string" searchable></oui-datagrid-column>
+                                    <oui-datagrid-column property="lastName" type="string" searchable></oui-datagrid-column>
                                 </oui-datagrid>
                             `, {
               rows: fakeData,
@@ -399,8 +399,8 @@ describe('ouiDatagrid', () => {
 
             const element = TestUtils.compileTemplate(`
                                 <oui-datagrid rows="$ctrl.rows">
-                                    <oui-column property="firstName" type="string" filterable></oui-column>
-                                    <oui-column property="lastName"></oui-column>
+                                    <oui-datagrid-column property="firstName" type="string" filterable></oui-datagrid-column>
+                                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                                 </oui-datagrid>
                             `, {
               rows: fakeData,
@@ -423,8 +423,8 @@ describe('ouiDatagrid', () => {
                 <oui-datagrid rows="$ctrl.rows"
                               selectable-rows
                               on-row-select="$ctrl.selectHandler($row, $rows)">
-                    <oui-column property="firstName"></oui-column>
-                    <oui-column property="lastName"></oui-column>
+                    <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                 </oui-datagrid>`, {
           rows: fakeData.slice(0, 5),
           selectHandler,
@@ -452,8 +452,8 @@ describe('ouiDatagrid', () => {
                 <oui-datagrid rows="$ctrl.rows"
                               selectable-rows
                               on-row-select="$ctrl.selectHandler($row, $rows)">
-                    <oui-column property="firstName"></oui-column>
-                    <oui-column property="lastName"></oui-column>
+                    <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                 </oui-datagrid>`, {
           rows: fakeData.slice(0, 5),
           selectHandler,
@@ -477,8 +477,8 @@ describe('ouiDatagrid', () => {
       it('should update global selection checkbox', () => {
         const element = TestUtils.compileTemplate(`
                 <oui-datagrid rows="$ctrl.rows" selectable-rows>
-                    <oui-column property="firstName"></oui-column>
-                    <oui-column property="lastName"></oui-column>
+                    <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                 </oui-datagrid>`, {
           rows: fakeData.slice(0, 5),
         });
@@ -502,19 +502,19 @@ describe('ouiDatagrid', () => {
         expect(ctrl.selectAllRows).toBe(false);
       });
 
-      it('should updates extra-top content', () => {
+      it('should updates oui-datagrid-topbar content', () => {
         const element = TestUtils.compileTemplate(`
                 <oui-datagrid rows="$ctrl.rows">
-                    <oui-column property="firstName"></oui-column>
-                    <oui-column property="lastName"></oui-column>
-                    <extra-top>{{ $selectedRows.length }}</extra-top>
+                    <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                    <oui-datagrid-topbar>{{ $selectedRows.length }}</oui-datagrid-topbar>
                 </oui-datagrid>`, {
           rows: fakeData.slice(0, 5),
         });
         const ctrl = element.controller('ouiDatagrid');
         ctrl.toggleAllRowsSelection(true);
         element.scope().$apply();
-        expect(element.find('oui-datagrid-extra-top').text()).toBe('5');
+        expect(element.find('oui-datagrid-topbar').text()).toBe('5');
       });
     });
 
@@ -538,8 +538,8 @@ describe('ouiDatagrid', () => {
       it('should display rows using rowsLoader', () => {
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows-loader="$ctrl.loadRows($config)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           loadRows: rowsLoaderSpy,
@@ -573,9 +573,9 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows-loader="$ctrl.loadRows($config)" row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           loadRows: rowsLoaderSpy,
@@ -609,9 +609,9 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows-loader="$ctrl.loadRows($config)" row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           loadRows: rowsLoaderSpy,
@@ -641,8 +641,8 @@ describe('ouiDatagrid', () => {
 
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows-loader="$ctrl.loadRows($config)" page-size="2">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           loadRows: rowsLoaderSpy,
@@ -656,8 +656,8 @@ describe('ouiDatagrid', () => {
       it('should display rows sorted', () => {
         TestUtils.compileTemplate(`
                         <oui-datagrid rows-loader="$ctrl.loadRows($config)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName" sortable="asc"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName" sortable="asc"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           loadRows: rowsLoaderSpy,
@@ -678,9 +678,9 @@ describe('ouiDatagrid', () => {
                             id="refreshableDatagrid"
                             rows-loader="$ctrl.loadRows($config)"
                             row-loader="$ctrl.loadRow($row)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
-                            <oui-column property="more"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                            <oui-datagrid-column property="more"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
           loadRows: () => $q.when({
@@ -724,8 +724,8 @@ describe('ouiDatagrid', () => {
 
             const element = TestUtils.compileTemplate(`
                                 <oui-datagrid rows-loader="$ctrl.loadRows($config)">
-                                    <oui-column property="firstName" type="text"></oui-column>
-                                    <oui-column property="lastName"></oui-column>
+                                    <oui-datagrid-column property="firstName" type="text"></oui-datagrid-column>
+                                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                                 </oui-datagrid>
                             `, {
               loadRows: rowsLoaderSpy,
@@ -751,8 +751,8 @@ describe('ouiDatagrid', () => {
 
             const element = TestUtils.compileTemplate(`
                                 <oui-datagrid rows-loader="$ctrl.loadRows($config)">
-                                    <oui-column property="firstName" type="text"></oui-column>
-                                    <oui-column property="lastName"></oui-column>
+                                    <oui-datagrid-column property="firstName" type="text"></oui-datagrid-column>
+                                    <oui-datagrid-column property="lastName"></oui-datagrid-column>
                                 </oui-datagrid>
                             `, {
               loadRows: rowsLoaderSpy,
@@ -829,8 +829,8 @@ describe('ouiDatagrid', () => {
         it('should not show parameters icon if not enabled', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -845,8 +845,8 @@ describe('ouiDatagrid', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows"
                             customizable>
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -860,8 +860,8 @@ describe('ouiDatagrid', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows"
                             customizable>
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                             <oui-action-menu>
                                 <oui-action-menu-item>Action 1</oui-action-menu-item>
                                 <oui-action-menu-item>Action 2</oui-action-menu-item>
@@ -878,8 +878,8 @@ describe('ouiDatagrid', () => {
         it('should only show not hidden columns', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName" hidden></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName" hidden></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -893,8 +893,8 @@ describe('ouiDatagrid', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows"
                             customizable>
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName" hidden></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName" hidden></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -908,8 +908,8 @@ describe('ouiDatagrid', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows"
                             columns-parameters="$ctrl.columnsParameters">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName" hidden></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName" hidden></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -935,8 +935,8 @@ describe('ouiDatagrid', () => {
           const element = TestUtils.compileTemplate(`
                         <oui-datagrid rows="$ctrl.rows"
                             columns-parameters="$ctrl.columnsParameters">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName" hidden></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName" hidden></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -970,8 +970,8 @@ describe('ouiDatagrid', () => {
                         <oui-datagrid rows="$ctrl.rows"
                             customizable
                             on-columns-parameters-change="$ctrl.changeHandler(id, column)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -995,8 +995,8 @@ describe('ouiDatagrid', () => {
                             id="${id}"
                             customizable
                             on-columns-parameters-change="$ctrl.changeHandler(id, columns)">
-                            <oui-column property="firstName"></oui-column>
-                            <oui-column property="lastName"></oui-column>
+                            <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         </oui-datagrid>
                     `, {
             rows: fakeData.slice(0, 5),
@@ -1017,8 +1017,8 @@ describe('ouiDatagrid', () => {
     it('should display a pagination component', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName"></oui-column>
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1036,10 +1036,10 @@ describe('ouiDatagrid', () => {
     it('should support row data binding inside cell', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName">
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName">
                             test: {{ $row.lastName }}
-                        </oui-column>
+                        </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1059,10 +1059,10 @@ describe('ouiDatagrid', () => {
     it('should support value data binding inside cell', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName">
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName">
                             test: {{ $value }}
-                        </oui-column>
+                        </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1082,10 +1082,10 @@ describe('ouiDatagrid', () => {
     it('should support row index data binding inside cell', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="">
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="">
                             test: {{ $rowIndex }}
-                        </oui-column>
+                        </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1116,10 +1116,10 @@ describe('ouiDatagrid', () => {
     it('should support parent binding inside cell', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName">
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName">
                             {{ $row.lastName }} + {{ $ctrl.something }}
-                        </oui-column>
+                        </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1140,14 +1140,14 @@ describe('ouiDatagrid', () => {
     it('should support advanced component inside cell', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName"></oui-column>
-                        <oui-column>
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                        <oui-datagrid-column>
                             <oui-action-menu>
                                 <oui-action-menu-item>Action 1</oui-action-menu-item>
                                 <oui-action-menu-item>Action 2</oui-action-menu-item>
                             </oui-action-menu>
-                        </oui-column>
+                        </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1164,9 +1164,9 @@ describe('ouiDatagrid', () => {
     it('should support sortable columns', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName" sortable></oui-column>
-                        <oui-column property="lastName"></oui-column>
-                        <oui-column property="phone" sortable></oui-column>
+                        <oui-datagrid-column property="firstName" sortable></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                        <oui-datagrid-column property="phone" sortable></oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1182,9 +1182,9 @@ describe('ouiDatagrid', () => {
     it('should support default sortable column', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName" sortable="asc"></oui-column>
-                        <oui-column property="lastName"></oui-column>
-                        <oui-column property="phone" sortable></oui-column>
+                        <oui-datagrid-column property="firstName" sortable="asc"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                        <oui-datagrid-column property="phone" sortable></oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1208,9 +1208,9 @@ describe('ouiDatagrid', () => {
     it('should update sort order on header click', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName" sortable="asc"></oui-column>
-                        <oui-column property="lastName"></oui-column>
-                        <oui-column property="phone" sortable></oui-column>
+                        <oui-datagrid-column property="firstName" sortable="asc"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                        <oui-datagrid-column property="phone" sortable></oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1236,8 +1236,8 @@ describe('ouiDatagrid', () => {
     it('should refresh when pagination has changed', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows" page-size="2">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName"></oui-column>
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1258,8 +1258,8 @@ describe('ouiDatagrid', () => {
     it('should support action-menu as column', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName"></oui-column>
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
                         <oui-action-menu>
                             <oui-action-menu-item>Action 1</oui-action-menu-item>
                             <oui-action-menu-item>Action 2</oui-action-menu-item>
@@ -1288,8 +1288,8 @@ describe('ouiDatagrid', () => {
                     <div>
                         <div ng-repeat="data in $ctrl.multiData track by $index">
                             <oui-datagrid rows="data">
-                                <oui-column property="firstName"></oui-column>
-                                <oui-column property="lastName"></oui-column>
+                                <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                                <oui-datagrid-column property="lastName"></oui-datagrid-column>
                                 <oui-action-menu>
                                     <oui-action-menu-item>Action 1</oui-action-menu-item>
                                     <oui-action-menu-item>Action 2</oui-action-menu-item>
@@ -1314,9 +1314,9 @@ describe('ouiDatagrid', () => {
     it('should display an extra top content', () => {
       const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows">
-                        <oui-column property="firstName"></oui-column>
-                        <oui-column property="lastName"></oui-column>
-                        <extra-top>PLACEHOLDER</extra-top>
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                        <oui-datagrid-topbar>PLACEHOLDER</oui-datagrid-topbar>
                     </oui-datagrid>
                 `, {
         rows: fakeData.slice(0, 5),
@@ -1329,12 +1329,12 @@ describe('ouiDatagrid', () => {
       it('should support dataset notation', () => {
         const element = TestUtils.compileTemplate(`
                         <oui-datagrid data-rows="$ctrl.rows">
-                            <oui-column data-property="firstName"
+                            <oui-datagrid-column data-property="firstName"
                                 data-sortable="asc"
-                                data-title="'First name'"></oui-column>
-                            <oui-column property="lastName"
+                                data-title="'First name'"></oui-datagrid-column>
+                            <oui-datagrid-column property="lastName"
                                 data-sortable
-                                data-title="'Last name'"></oui-column>
+                                data-title="'Last name'"></oui-datagrid-column>
                             <oui-action-menu>
                                 <oui-action-menu-item>Action 1</oui-action-menu-item>
                                 <oui-action-menu-item>Action 2</oui-action-menu-item>
@@ -1360,9 +1360,9 @@ describe('ouiDatagrid', () => {
       it('should not accept white spaces as template', () => {
         const element = TestUtils.compileTemplate(`
                     <oui-datagrid data-rows="$ctrl.rows">
-                        <oui-column data-property="firstName"
+                        <oui-datagrid-column data-property="firstName"
                             data-title="'First name'">
-                        </oui-column>
+                        </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
           rows: fakeData.slice(0, 5),
