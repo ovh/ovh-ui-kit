@@ -1,3 +1,13 @@
+# [3.0.0-rc.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.4...v3.0.0-rc.5) (2019-04-18)
+
+
+### Bug Fixes
+
+* **action-menu:** set default attributes when used in datagrid ([ed465a8](https://github.com/ovh-ux/ovh-ui-kit/commit/ed465a8))
+* **datagrid:** add default column type to string ([e8e4092](https://github.com/ovh-ux/ovh-ui-kit/commit/e8e4092))
+
+
+
 # [3.0.0-rc.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.3...v3.0.0-rc.4) (2019-04-16)
 
 
