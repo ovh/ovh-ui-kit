@@ -9,7 +9,7 @@ export default class {
         markRead: 'Mark as read',
         markUnread: 'Mark as unread',
         noNotification: 'You are all caught up!',
-        noNotificationDescription: "You don't have any notification.",
+        noNotificationDescription: 'You don’t have any notification.',
       },
     };
   }

@@ -19,7 +19,7 @@ angular.module('myModule', ['oui.navbar'])
         markRead: 'Mark as read',
         markUnread: 'Mark as unread',
         noNotification: 'You are all caught up!',
-        noNotificationDescription: 'You don't have any notification.'
+        noNotificationDescription: 'You don’t have any notification.'
       }
     });
   });
@@ -287,7 +287,7 @@ The property `name` **must be** `"user"`.
 ## Component `oui-navbar-brand`
 
 | Attribute             | Type      | Binding   | One-time Binding  | Values                                | Default   | Description
-| ----                  | ----      |           | ----              | ----                                  | ----      | ----
+| ----                  | ----      | ----      | ----              | ----                                  | ----      | ----
 | `heading`             | string    | @?        | yes               | n/a                                   | n/a       | title of the brand link
 | `aria-label`          | string    | @?        | yes               | n/a                                   | n/a       | accessibility label of the brand link
 | `icon-alt`            | string    | @?        | yes               | n/a                                   | n/a       | alternative text of the brand icon

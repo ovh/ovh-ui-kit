@@ -24,13 +24,6 @@
     "prepare": "yarn build"
   },
   "dependencies": {
-    "bloodhound-js": "^1.2.3",
-    "clipboard": "^2.0.4",
-    "flatpickr": "^4.5.7",
-    "popper.js": "^1.14.7",
-    "ui-select": "^0.19.8"
-  },
-  "peerDependencies": {
     "@ovh-ux/ui-kit.action-menu": "*",
     "@ovh-ux/ui-kit.autocomplete": "*",
     "@ovh-ux/ui-kit.back-button": "*",
@@ -79,17 +72,17 @@
     "@ovh-ux/ui-kit.textarea": "*",
     "@ovh-ux/ui-kit.tile": "*",
     "@ovh-ux/ui-kit.timepicker": "*",
-    "@ovh-ux/ui-kit.tooltip": "*",
-    "angular": ">=1.6.x",
-    "angular-aria": ">=1.6.x",
-    "angular-sanitize": ">=1.6.x"
+    "@ovh-ux/ui-kit.tooltip": "*"
+  },
+  "peerDependencies": {
+    "angular": ">=1.6.x"
   },
   "devDependencies": {
     "cpx": "^1.5.0",
     "cross-env": "^5.2.0",
     "less": "^3.9.0",
     "less-plugin-remcalc": "^0.1.0",
-    "mini-css-extract-plugin": "^0.5.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",

@@ -8,13 +8,13 @@ angular.module('myModule', ['oui.slideshow']);
 
 ## Component `oui-slideshow`
 
-| Attribute         | Type      | Binding   | One-time Binding  | Values                  | Default   | Description
-| ----              | ----      | ----      | ----              | ----                    | ----      | ----
-| `theme`           | string    | @?        | yes               | n/a                     | `default` | add specific theme to component
-| `loading`         | boolean   | <?        | no                | `true`, `false`         | `false`   | display loader flag
-| `loop`            | boolean   | <?        | no                | `true`, `false`         | `false`   | whether the component should cycle continuously
-| `on-dismiss`      | function  | &         | no                | n/a                     | n/a       | dismiss callback
-| `on-panel-change` | function  | &         | no                | direction, index        | n/a       | handler triggered when on click of next slide
+| Attribute         | Type      | Binding   | One-time Binding  | Values                  | Default       | Description
+| ----              | ----      | ----      | ----              | ----                    | ----          | ----
+| `theme`           | string    | @?        | yes               | n/a                     | `onboarding`  | add specific theme to component
+| `loading`         | boolean   | <?        | no                | `true`, `false`         | `false`       | display loader flag
+| `loop`            | boolean   | <?        | no                | `true`, `false`         | `false`       | whether the component should cycle continuously
+| `on-dismiss`      | function  | &         | no                | n/a                     | n/a           | dismiss callback
+| `on-panel-change` | function  | &         | no                | direction, index        | n/a           | handler triggered when on click of next slide
 
 ### Attribute `on-change`
 

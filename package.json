@@ -16,8 +16,6 @@
     "build:docs": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn build",
     "build:dist": "lerna exec --scope @ovh-ux/ui-kit-builder -- yarn build",
     "karma": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
-    "lib:version": "lerna exec --scope @ovh-ux/ui-kit -- npm version",
-    "lib:publish": "lerna exec --scope @ovh-ux/ui-kit -- npm publish",
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint 'packages/**/*.less'",
     "lint:js": "eslint ./packages",

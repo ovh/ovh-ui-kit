@@ -83,7 +83,7 @@ storiesOf('Styles/Checkbox', module)
     </div>
 
     <div class="oui-checkbox oui-checkbox_inline">
-      <input class="oui-checkbox__input" id="oui-checkbox-inline-2" name="oui-checkbox-inline-2" type="checkbox" checked="checked">
+      <input class="oui-checkbox__input" id="oui-checkbox-inline-2" name="oui-checkbox-inline-2" type="checkbox">
       <label class="oui-checkbox__label-container" for="oui-checkbox-inline-2">
         <span class="oui-checkbox__label">Checkbox 2
           <span class="oui-checkbox__icon">
