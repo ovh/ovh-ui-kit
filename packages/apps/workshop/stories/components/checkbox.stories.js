@@ -6,7 +6,13 @@ import { forModule } from 'storybook-addon-angularjs';
 import { compileTemplate } from '../../src/utils';
 
 const moduleName = 'oui-checkbox-stories';
-angular.module(moduleName, ['oui.checkbox', 'oui.field', 'oui.radio']);
+angular.module(moduleName, [
+  'oui.checkbox',
+
+  // For examples
+  'oui.field',
+  'oui.radio',
+]);
 
 storiesOf('Components/Checkbox', module)
   .add(
@@ -14,14 +20,14 @@ storiesOf('Components/Checkbox', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-checkbox
       aria-label="Allow ponies in your server"
-      model="$ctrl.model1"
+      model="$ctrl.model2"
       on-change="$ctrl.onChange(modelValue)">
       Allow ponies in your server
     </oui-checkbox>
 
     <oui-checkbox
       aria-label="Track ponies"
-      model="$ctrl.model2"
+      model="$ctrl.model3"
       on-change="$ctrl.onChange(modelValue)">
       Track ponies
     </oui-checkbox>

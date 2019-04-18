@@ -12,7 +12,12 @@ import data from '../_data/datagrid/index.data.json';
 
 // Create mock module for the stories
 const moduleName = 'oui-datagrid-stories';
-angular.module(moduleName, ['oui.datagrid']);
+angular.module(moduleName, [
+  'oui.datagrid',
+
+  // For examples
+  'oui.action-menu',
+]);
 
 storiesOf('Components/Datagrid', module)
   .add(
@@ -48,6 +53,29 @@ storiesOf('Components/Datagrid', module)
       $ctrl: {
         data: [],
         placeholder: 'There’s no bananas here, sorry :(',
+      },
+    })),
+  )
+  .add(
+    'With topbar',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-datagrid
+      page-size="5"
+      rows="$ctrl.data">
+      <oui-datagrid-topbar>
+        <oui-action-menu text="Actions">
+          <oui-action-menu-item aria-label="Persons: add item">Add person</oui-action-menu-item>
+          <oui-action-menu-item aria-label="Persons: other action">Other action</oui-action-menu-item>
+        </oui-action-menu>
+      </oui-datagrid-topbar>
+      <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+    </oui-datagrid>
+    `, {
+      $ctrl: {
+        data,
       },
     })),
   )
@@ -93,17 +121,51 @@ storiesOf('Components/Datagrid', module)
       rows="$ctrl.data"
       on-row-select="$ctrl.onRowSelect($row, $rows)"
       selectable-rows>
+      <oui-datagrid-topbar>
+        You have selected {{ $selectedRows.length }} row(s).
+      </oui-datagrid-topbar>
       <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+      <oui-action-menu align="end" compact>
+        <oui-action-menu-item disabled="$isSelected">Disabled if selected</oui-action-menu-item>
+      </oui-action-menu>
     </oui-datagrid>
     `, {
       $ctrl: {
         data,
         onRowSelect: action('onRowSelect'),
       },
-    })),
+    })), {
+      notes: 'This will create a sticky column at the start of your datagrid.',
+    },
+  )
+  .add(
+    'Row actions',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-datagrid
+      page-size="5"
+      rows="$ctrl.data">
+      <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+      <oui-action-menu text="Actions" compact>
+        <oui-action-menu-item
+          on-click="$ctrl.onActionClick($row)">
+          Action
+        </oui-action-menu-item>
+      </oui-action-menu>
+    </oui-datagrid>
+    `, {
+      $ctrl: {
+        data,
+        onActionClick: action('onActionClick'),
+      },
+    })), {
+      notes: 'This will create a sticky column at the end of your datagrid.<br />Rows action menu will be automatically set to `compact` with a placement to `end`.',
+    },
   )
   .add(
     'Customizable columns display',
@@ -122,7 +184,9 @@ storiesOf('Components/Datagrid', module)
         data,
         onColumnsParametersChange: action('onColumnsParametersChange'),
       },
-    })),
+    })), {
+      notes: 'This will create a sticky column at the end of your datagrid.',
+    },
   )
   .add(
     'Customizable cells template',
@@ -150,7 +214,7 @@ storiesOf('Components/Datagrid', module)
         data,
       },
     })), {
-      notes: 'You can use `$row` to get values of the current row, `$rowIndex` to get index of the current row, and `$value` to get value of the cell',
+      notes: 'You can use `$row` to get values of the current row, `$rowIndex` to get index of the current row, `$value` to get value of the cell',
     },
   )
   .add(

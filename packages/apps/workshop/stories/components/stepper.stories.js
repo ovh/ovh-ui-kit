@@ -7,7 +7,12 @@ import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-stepper-stories';
-angular.module(moduleName, ['oui.stepper', 'oui.field']);
+angular.module(moduleName, [
+  'oui.stepper',
+
+  // For examples
+  'oui.field',
+]);
 
 storiesOf('Components/Stepper', module)
   .add(

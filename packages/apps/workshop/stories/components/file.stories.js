@@ -6,7 +6,13 @@ import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-file-stories';
-angular.module(moduleName, ['oui.file', 'oui.field', 'oui.button']);
+angular.module(moduleName, [
+  'oui.file',
+
+  // For examples
+  'oui.field',
+  'oui.button',
+]);
 
 storiesOf('Components/File', module)
   .add(

@@ -6,7 +6,12 @@ import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-guide-menu-stories';
-angular.module(moduleName, ['oui.guide-menu', 'oui.header']);
+angular.module(moduleName, [
+  'oui.guide-menu',
+
+  // For examples
+  'oui.header',
+]);
 
 storiesOf('Components/Guide Menu', module)
   .add(

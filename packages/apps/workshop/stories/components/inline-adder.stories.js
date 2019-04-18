@@ -6,7 +6,13 @@ import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-inline-adder-stories';
-angular.module(moduleName, ['oui.inline-adder', 'oui.field', 'oui.numeric']);
+angular.module(moduleName, [
+  'oui.inline-adder',
+
+  // For examples
+  'oui.field',
+  'oui.numeric',
+]);
 
 storiesOf('Components/Inline Adder', module)
   .add(

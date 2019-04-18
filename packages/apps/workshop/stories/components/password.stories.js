@@ -7,7 +7,12 @@ import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-password-stories';
-angular.module(moduleName, ['oui.password', 'oui.field']);
+angular.module(moduleName, [
+  'oui.password',
+
+  // For examples
+  'oui.field',
+]);
 
 storiesOf('Components/Password', module)
   .add(

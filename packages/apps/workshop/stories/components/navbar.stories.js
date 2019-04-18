@@ -9,7 +9,12 @@ import {
 
 // Create mock module for the stories
 const moduleName = 'oui-navbar-stories';
-angular.module(moduleName, ['oui.navbar', 'oui.radio']);
+angular.module(moduleName, [
+  'oui.navbar',
+
+  // For examples
+  'oui.radio',
+]);
 
 storiesOf('Components/Navbar', module)
   .add(

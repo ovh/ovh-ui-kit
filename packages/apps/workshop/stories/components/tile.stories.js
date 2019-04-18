@@ -6,7 +6,12 @@ import { forModule } from 'storybook-addon-angularjs';
 import { compileTemplate } from '../../src/utils';
 
 const moduleName = 'oui-tile-stories';
-angular.module(moduleName, ['oui.tile', 'oui.action-menu']);
+angular.module(moduleName, [
+  'oui.tile',
+
+  // For examples
+  'oui.action-menu',
+]);
 
 storiesOf('Components/Tile', module)
   .add(
