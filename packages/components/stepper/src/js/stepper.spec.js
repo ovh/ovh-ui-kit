@@ -227,6 +227,35 @@ describe('ouiStepper', () => {
         expect(form2.hasClass(disabledClass)).toBe(false);
         expect(form3.hasClass(disabledClass)).toBe(true);
       });
+
+      it('should open designated step', () => {
+        const element = TestUtils.compileTemplate(`
+          <oui-stepper current-index="$ctrl.index">
+            <oui-step-form name="form1"></oui-step-form>
+            <oui-step-form name="form2"></oui-step-form>
+            <oui-step-form name="form3"></oui-step-form>
+          </oui-stepper>`, {
+          index: 1,
+        });
+
+        $timeout.flush();
+
+        const form1 = element.find('form').eq(0);
+        const form2 = element.find('form').eq(1);
+        const form3 = element.find('form').eq(2);
+
+        expect(form1.scope().$ctrl.stepper.focused).toBe(false);
+        expect(form2.scope().$ctrl.stepper.focused).toBe(true);
+        expect(form3.scope().$ctrl.stepper.focused).toBe(false);
+
+        element.scope().$ctrl.index = 2;
+
+        element.scope().$digest();
+
+        expect(form1.scope().$ctrl.stepper.focused).toBe(false);
+        expect(form2.scope().$ctrl.stepper.focused).toBe(false);
+        expect(form3.scope().$ctrl.stepper.focused).toBe(true);
+      });
     });
   });
 });

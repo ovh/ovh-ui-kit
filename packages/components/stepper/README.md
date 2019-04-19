@@ -30,6 +30,7 @@ angular.module('myModule', ['oui.stepper'])
 | ----              | ----      | ----      | ----              | ----              | ----      | ----
 | `name`            | string    | @?        | yes               | n/a               | n/a       | stepper name used to identify step
 | `id`              | string    | @?        | yes               | n/a               | n/a       | stepper id used to identify step
+| `current-index`   | number    | =?        | no                | n/a               | 0         | current step index 
 | `on-init`         | function  | &         | no                | n/a               | n/a       | initialization function
 | `on-finish`       | function  | &         | no                | n/a               | n/a       | submit all steps function
 

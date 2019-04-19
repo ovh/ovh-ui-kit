@@ -5,6 +5,7 @@ export default {
   bindings: {
     name: '@',
     id: '@',
+    currentIndex: '=?',
     onInit: '&',
     onFinish: '&',
   },

@@ -11,6 +11,7 @@ angular.module(moduleName, [
   'oui.stepper',
 
   // For examples
+  'oui.button',
   'oui.field',
 ]);
 
@@ -85,6 +86,29 @@ storiesOf('Components/Stepper', module)
           Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.
           In et elit ipsum.
         </p>
+      </oui-step-form>
+    </oui-stepper>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        loading: boolean('Loading state', true),
+      },
+    })),
+  )
+  .add(
+    'Control opened step',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-stepper
+      current-index="$ctrl.currentStep">
+      <oui-step-form
+        header="Step1">
+        <p>Random content</p>
+      </oui-step-form>
+        <oui-step-form
+          header="Step2">
+          <oui-button variant="link" on-click="$ctrl.currentStep = 0">
+            <span>Go to Step 1</span>
+          </oui-button>
       </oui-step-form>
     </oui-stepper>
     `, {

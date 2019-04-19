@@ -1,16 +1,19 @@
+import get from 'lodash/get';
+
 export default class {
-  constructor($attrs, $element, $timeout) {
+  constructor($attrs, $element, $scope, $timeout) {
     'ngInject';
 
     this.$attrs = $attrs;
     this.$element = $element;
+    this.$scope = $scope;
     this.$timeout = $timeout;
   }
 
   $onInit() {
     this.forms = [];
     this.steps = [];
-    this.currentIndex = 0;
+    this.currentIndex = get(this, 'currentIndex', 0);
     this.onInit();
   }
 
@@ -19,6 +22,11 @@ export default class {
       .removeAttr('id')
       .removeAttr('name')
       .addClass('oui-stepper'));
+
+    this.$scope.$watch(
+      () => this.currentIndex,
+      index => this.focusStep(index),
+    );
   }
 
   addStep(step) {
