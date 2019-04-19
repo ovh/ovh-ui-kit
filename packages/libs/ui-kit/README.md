@@ -43,17 +43,18 @@ yarn add @ovh-ux/ui-kit
 
 ## Usage
 
-### CSS only
+### CSS
 
 ```html
-  <link rel="stylesheet" href="path/to/ovh-ui-kit/dist/css/oui.css">
+<link rel="stylesheet" href="path/to/@ovh-ux/ui-kit/dist/css/oui.css">
 ```
-### AngularJS
+
+### Javascript (with AngularJS)
 
 1. In your `index.html`, you need to load `oui.js`:
 
 ```html
-  <script src="ovh-ui-angular/dist/js/oui.js" type="text/javascript"></script>
+<script src="path/to/@ovh-ux/ui-kit/dist/js/oui.js" type="text/javascript"></script>
 ```
 
 2. You need to add `oui` in your angular module dependencies like that:
@@ -61,6 +62,14 @@ yarn add @ovh-ux/ui-kit
 ```js
 angular.module('myAwesomeApp', ['oui']);
 ```
+
+### Access variables (LESS)
+
+```less
+@import 'path/to/@ovh-ux/ui-kit/dist/less/_variables';
+```
+
+Importing `_variables.less` will import `_constants.less` and `_icons.less` too.
 
 ## Develop
 
@@ -74,15 +83,13 @@ cd ovh-ui-kit
 yarn install
 ```
 
-**Note**: The build of all `./dist` files are done in the process.
-
-2. Run `ovh-ui-kit` in the [Workshop](./packages/apps/workshop)
+2. Run `ovh-ui-kit` in the Workshop
 
 ```bash
 yarn start
 ```
 
-**Note**: This will open [Storybook](https://storybook.js.org/) in your default browser
+This will open [Storybook](https://storybook.js.org/) in your default browser
 
 ### Hot reload
 
