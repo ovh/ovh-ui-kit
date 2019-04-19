@@ -267,25 +267,23 @@ export default class DatagridController {
     this.refreshData(() => {
       this.paging.setOffset(1);
       this.paging.setCriteria(criteria);
-    }, false, false);
+    }, false);
   }
 
-  onPaginationChange($event) {
+  onPaginationChange({ offset, pageSize }) {
     this.refreshData(() => {
-      this.paging.setOffset($event.offset);
-      this.paging.setPageSize($event.pageSize);
-    }, true, true);
+      this.paging.setOffset(offset);
+      this.paging.setPageSize(pageSize);
+      this.onPageChange({
+        $pagination: {
+          offset,
+          pageSize,
+        },
+      });
+    }, true);
   }
 
-  scrollToTop() {
-    // Small delay otherwise rows could not be rendered
-    // yet and position would be wrong
-    this.$timeout(() => {
-      this.$element[0].scrollIntoView(true);
-    });
-  }
-
-  refreshData(callback, skipSortAndFilter, requireScrollToTop, hideLoader, forceLoadRows) {
+  refreshData(callback, skipSortAndFilter, hideLoader, forceLoadRows) {
     if (this.loading) {
       return this.$q.when();
     }
@@ -302,9 +300,6 @@ export default class DatagridController {
       .then(() => this.paging.loadData(skipSortAndFilter, forceLoadRows))
       .then((result) => {
         this.displayedRows = result.data;
-        if (requireScrollToTop) {
-          this.scrollToTop();
-        }
         if (this.hasActionMenu) {
           setTimeout(() => this.checkScroll(), checkScrollOnRefreshDataDelay);
         }

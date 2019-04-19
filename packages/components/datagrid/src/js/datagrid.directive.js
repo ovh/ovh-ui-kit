@@ -18,6 +18,7 @@ export default () => {
       rowLoader: '&?',
       emptyPlaceholder: '@?',
       onColumnsParametersChange: '&',
+      onPageChange: '&',
       onRowSelect: '&',
     },
     compile: (elm) => {

@@ -38,6 +38,25 @@ storiesOf('Components/Datagrid', module)
     })),
   )
   .add(
+    'Pagination',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-datagrid
+      page-size="5"
+      rows="$ctrl.data"
+      on-page-change="$ctrl.onPageChange($pagination)">
+      <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+    </oui-datagrid>
+    `, {
+      $ctrl: {
+        data,
+        onPageChange: action('onPageChange'),
+      },
+    })),
+  )
+  .add(
     'Empty placeholer',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-datagrid

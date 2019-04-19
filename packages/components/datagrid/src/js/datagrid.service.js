@@ -29,7 +29,7 @@ export default class DatagridService {
     const datagridController = this.datagrids[datagridId];
 
     if (datagridController) {
-      datagridController.refreshData(false, false, false, !showSpinner, true);
+      datagridController.refreshData(false, false, !showSpinner, true);
     }
   }
 }
