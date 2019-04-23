@@ -579,7 +579,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.29.1") format("woff2"), url("./icons/icons.woff?v=2.29.1") format("woff");
+  src: url("./icons/icons.woff2?v=2.30.0") format("woff2"), url("./icons/icons.woff?v=2.30.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -800,89 +800,93 @@ p,
   display: block;
   content: "\f125";
 }
-.oui-icon.oui-icon-help::before {
+.oui-icon.oui-icon-guides::before {
   display: block;
   content: "\f126";
 }
-.oui-icon.oui-icon-help_circle::before {
+.oui-icon.oui-icon-help::before {
   display: block;
   content: "\f127";
 }
-.oui-icon.oui-icon-info_circle::before {
+.oui-icon.oui-icon-help_circle::before {
   display: block;
   content: "\f128";
 }
-.oui-icon.oui-icon-ovh::before {
+.oui-icon.oui-icon-info_circle::before {
   display: block;
   content: "\f129";
 }
-.oui-icon.oui-icon-padlock-close::before {
+.oui-icon.oui-icon-ovh::before {
   display: block;
   content: "\f12a";
 }
-.oui-icon.oui-icon-page_line::before {
+.oui-icon.oui-icon-padlock-close::before {
   display: block;
   content: "\f12b";
 }
-.oui-icon.oui-icon-paperplane_line::before {
+.oui-icon.oui-icon-page_line::before {
   display: block;
   content: "\f12c";
 }
-.oui-icon.oui-icon-pdf_line::before {
+.oui-icon.oui-icon-paperplane_line::before {
   display: block;
   content: "\f12d";
 }
-.oui-icon.oui-icon-pen_line::before {
+.oui-icon.oui-icon-pdf_line::before {
   display: block;
   content: "\f12e";
 }
-.oui-icon.oui-icon-power_line::before {
+.oui-icon.oui-icon-pen_line::before {
   display: block;
   content: "\f12f";
 }
-.oui-icon.oui-icon-printer_line::before {
+.oui-icon.oui-icon-power_line::before {
   display: block;
   content: "\f130";
 }
-.oui-icon.oui-icon-remove::before {
+.oui-icon.oui-icon-printer_line::before {
   display: block;
   content: "\f131";
 }
-.oui-icon.oui-icon-search::before {
+.oui-icon.oui-icon-remove::before {
   display: block;
   content: "\f132";
 }
-.oui-icon.oui-icon-shape-circle::before {
+.oui-icon.oui-icon-search::before {
   display: block;
   content: "\f133";
 }
-.oui-icon.oui-icon-shape-dot::before {
+.oui-icon.oui-icon-shape-circle::before {
   display: block;
   content: "\f134";
 }
-.oui-icon.oui-icon-success::before {
+.oui-icon.oui-icon-shape-dot::before {
   display: block;
   content: "\f135";
 }
-.oui-icon.oui-icon-success_circle::before {
+.oui-icon.oui-icon-success::before {
   display: block;
   content: "\f136";
 }
-.oui-icon.oui-icon-trash_line::before {
+.oui-icon.oui-icon-success_circle::before {
   display: block;
   content: "\f137";
 }
-.oui-icon.oui-icon-user::before {
+.oui-icon.oui-icon-trash_line::before {
   display: block;
   content: "\f138";
 }
-.oui-icon.oui-icon-user_line::before {
+.oui-icon.oui-icon-user::before {
   display: block;
   content: "\f139";
 }
-.oui-icon.oui-icon-warning_circle::before {
+.oui-icon.oui-icon-user_line::before {
   display: block;
   content: "\f13a";
+}
+.oui-icon.oui-icon-warning_circle::before {
+  display: block;
+  content: "\f13b";
 }
 .oui-icon_circle::before {
   width: 1.5rem;
@@ -5656,7 +5660,7 @@ ol {
 .oui-list_steps .oui-list__item_checked .oui-list__header::before,
 .oui-list_steps .oui-list__item_complete .oui-list__header::before {
   position: absolute;
-  content: "\f135";
+  content: "\f136";
   border: 1px solid #dedede;
   background-color: #f6f6f4;
   color: #f6f6f4;
@@ -9093,7 +9097,6 @@ oui-guide-menu-divider {
 .oui-guide-button__icon {
   display: inline-block;
   vertical-align: middle;
-  font-size: 0;
 }
 .oui-guide-button__text {
   margin-left: 10px;
@@ -10596,7 +10599,7 @@ oui-step-form {
   display: none;
 }
 .oui-stepper__container_complete .oui-stepper__header::before {
-  content: "\f135";
+  content: "\f136";
   font-family: 'Oui Icons';
   font-weight: 400;
   color: #fff;
@@ -10808,7 +10811,7 @@ oui-popover-content {
 }
 .oui-popover__help-button::before,
 .oui-popover-button::before {
-  content: "\f127";
+  content: "\f128";
   font-family: 'Oui Icons';
   font-size: inherit;
 }

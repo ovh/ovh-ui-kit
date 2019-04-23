@@ -1,3 +1,13 @@
+<a name="2.30.0"></a>
+# [2.30.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.29.1...v2.30.0) (2019-04-23)
+
+
+### Features
+
+* **oui-icons:** add guides icon ([#386](https://github.com/ovh-ux/ovh-ui-kit/issues/386)) ([7e2d63e](https://github.com/ovh-ux/ovh-ui-kit/commit/7e2d63e))
+
+
+
 <a name="2.29.1"></a>
 ## [2.29.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.29.0...v2.29.1) (2019-04-10)
 

@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?8af8aecff6f113113386fd8b2340c067") format("woff2"),
-url("./icons.woff?8af8aecff6f113113386fd8b2340c067") format("woff");
+    src: url("./icons.woff2?35edc0f0e768ca4c83b5aff2e887460b") format("woff2"),
+url("./icons.woff?35edc0f0e768ca4c83b5aff2e887460b") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -126,66 +126,69 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-gear_line:before {
     content: "\f125";
 }
-.oui-icon-help:before {
+.oui-icon-guides:before {
     content: "\f126";
 }
-.oui-icon-help_circle:before {
+.oui-icon-help:before {
     content: "\f127";
 }
-.oui-icon-info_circle:before {
+.oui-icon-help_circle:before {
     content: "\f128";
 }
-.oui-icon-ovh:before {
+.oui-icon-info_circle:before {
     content: "\f129";
 }
-.oui-icon-padlock-close:before {
+.oui-icon-ovh:before {
     content: "\f12a";
 }
-.oui-icon-page_line:before {
+.oui-icon-padlock-close:before {
     content: "\f12b";
 }
-.oui-icon-paperplane_line:before {
+.oui-icon-page_line:before {
     content: "\f12c";
 }
-.oui-icon-pdf_line:before {
+.oui-icon-paperplane_line:before {
     content: "\f12d";
 }
-.oui-icon-pen_line:before {
+.oui-icon-pdf_line:before {
     content: "\f12e";
 }
-.oui-icon-power_line:before {
+.oui-icon-pen_line:before {
     content: "\f12f";
 }
-.oui-icon-printer_line:before {
+.oui-icon-power_line:before {
     content: "\f130";
 }
-.oui-icon-remove:before {
+.oui-icon-printer_line:before {
     content: "\f131";
 }
-.oui-icon-search:before {
+.oui-icon-remove:before {
     content: "\f132";
 }
-.oui-icon-shape-circle:before {
+.oui-icon-search:before {
     content: "\f133";
 }
-.oui-icon-shape-dot:before {
+.oui-icon-shape-circle:before {
     content: "\f134";
 }
-.oui-icon-success:before {
+.oui-icon-shape-dot:before {
     content: "\f135";
 }
-.oui-icon-success_circle:before {
+.oui-icon-success:before {
     content: "\f136";
 }
-.oui-icon-trash_line:before {
+.oui-icon-success_circle:before {
     content: "\f137";
 }
-.oui-icon-user:before {
+.oui-icon-trash_line:before {
     content: "\f138";
 }
-.oui-icon-user_line:before {
+.oui-icon-user:before {
     content: "\f139";
 }
-.oui-icon-warning_circle:before {
+.oui-icon-user_line:before {
     content: "\f13a";
+}
+.oui-icon-warning_circle:before {
+    content: "\f13b";
 }
