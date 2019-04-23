@@ -1,3 +1,20 @@
+# [3.0.0-rc.6](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.5...v3.0.0-rc.6) (2019-04-23)
+
+
+### Bug Fixes
+
+* **icons:** remove fixed colors and size ([7c3ac90](https://github.com/ovh-ux/ovh-ui-kit/commit/7c3ac90))
+
+
+### Features
+
+* **datagrid:** add page change event ([5486950](https://github.com/ovh-ux/ovh-ui-kit/commit/5486950))
+* **icons:** add guides icon ([1eed018](https://github.com/ovh-ux/ovh-ui-kit/commit/1eed018))
+* **password:** add confirm attribute ([1cab076](https://github.com/ovh-ux/ovh-ui-kit/commit/1cab076))
+* **stepper:** add ability to change the current index ([40b92bd](https://github.com/ovh-ux/ovh-ui-kit/commit/40b92bd))
+
+
+
 # [3.0.0-rc.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.4...v3.0.0-rc.5) (2019-04-18)
 
 
