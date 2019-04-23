@@ -35,8 +35,10 @@
     "babel-loader": "^8.0.5",
     "cpx": "^1.5.0",
     "lodash": "^4.17.11",
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "storybook-addon-angularjs": "^0.0.2"
+    "storybook-addon-angularjs": "^0.0.2",
+    "webpack": "^4.30.0"
   }
 }
