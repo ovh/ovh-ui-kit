@@ -41,6 +41,7 @@ angular.module('myModule', ['oui.password'])
 | `maxlength`   | number                | <?        | yes               | n/a                   | n/a       | max length of the model value
 | `minlength`   | number                | <?        | yes               | n/a                   | n/a       | min length of the model value
 | `pattern`     | string&lt;regexp&gt;  | @?        | yes               | n/a                   | n/a       | pattern of the model value
+| `confirm`     | string                | <?        | no                | n/a                   | n/a       | an expression, used to confirm password, which should match with the model value 
 | `required`    | boolean               | <?        | no                | `true`, `false`       | `false`   | required flag
 | `on-change`   | function              | &         | no                | n/a                   | n/a       | handler triggered when value has changed
 

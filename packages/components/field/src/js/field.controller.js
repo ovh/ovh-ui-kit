@@ -39,7 +39,7 @@ export default class FieldController {
     this.ids = [];
     this.validationParameters = {};
     this.invalid = false;
-    this.invalidOnBlur = false;
+    this.blurred = false;
     this.hasFocus = false;
     this.size = this.size || 'auto';
   }
@@ -133,25 +133,19 @@ export default class FieldController {
 
     angular.element(controlElement).on('focus', () => {
       this.$timeout(() => {
-        this.hideErrors(controlElement, name);
+        this.form[name].$touched = false;
         this.hasFocus = true;
       });
     });
   }
 
   checkControlErrors(controlElement, name) {
+    this.blurred = true;
     if (this.form[name] && this.form[name].$invalid) {
-      this.invalidOnBlur = true;
       this.currentErrorField = name;
     } else {
-      this.invalidOnBlur = false;
       this.currentErrorField = null;
     }
-  }
-
-  hideErrors(controlElement, name) {
-    this.form[name].$touched = false;
-    this.invalidOnBlur = false;
   }
 
   isErrorVisible() {
@@ -160,11 +154,7 @@ export default class FieldController {
     }
 
     this.checkAllErrors();
-
-    // true if invalid after blur event
-    // true if invalid after submit event
-    return this.invalidOnBlur
-      || (this.form.$submitted && this.invalid && !this.hasFocus);
+    return this.invalid && !this.hasFocus && (this.blurred || this.form.$submitted);
   }
 
   checkAllErrors() {

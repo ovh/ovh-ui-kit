@@ -116,7 +116,6 @@
   * box-base
   * box-light
 * __oui-button__:
-  * button-normalize
   * button-base
   * button-action-menu
   * button-action-menu-compact

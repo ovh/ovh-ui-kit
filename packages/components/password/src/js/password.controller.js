@@ -6,7 +6,7 @@ export default class {
 
     this.$attrs = $attrs;
     this.$element = $element;
-    this.$id = $scope.$id;
+    this.$scope = $scope;
     this.$timeout = $timeout;
     this.translations = ouiPasswordConfiguration.translations;
   }
@@ -30,17 +30,26 @@ export default class {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'required');
 
-    addDefaultParameter(this, 'id', `ouiPassword${this.$id}`);
-    addDefaultParameter(this, 'name', `ouiPassword${this.$id}`);
+    addDefaultParameter(this, 'id', `ouiPassword${this.$scope.$id}`);
+    addDefaultParameter(this, 'name', `ouiPassword${this.$scope.$id}`);
 
     this.errors = {};
     this.isVisible = false;
   }
 
   $postLink() {
-    this.$timeout(() => this.$element
-      .removeAttr('id')
-      .removeAttr('name')
-      .addClass('oui-password'));
+    this.$timeout(() => {
+      this.$element
+        .removeAttr('id')
+        .removeAttr('name')
+        .addClass('oui-password');
+
+      if ('confirm' in this.$attrs) {
+        this.$scope.$watch(
+          () => this.confirm === this.model,
+          value => this.updateValidity('confirm', value),
+        );
+      }
+    });
   }
 }

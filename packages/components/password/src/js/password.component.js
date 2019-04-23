@@ -14,6 +14,7 @@ export default {
     maxlength: '<?',
     minlength: '<?',
     pattern: '@?',
+    confirm: '<?',
     required: '<?',
     onChange: '&',
   },

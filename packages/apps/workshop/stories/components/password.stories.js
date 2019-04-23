@@ -113,4 +113,35 @@ storiesOf('Components/Password', module)
         }
       }(),
     })),
+  )
+  .add(
+    'Confirm validation',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <form name="form3" novalidate>
+      <oui-field label="Password" size="xl">
+        <oui-password model="$ctrl.model1">
+          <oui-password-rule validator="$ctrl.checkPasswordLength(modelValue)">Must contain between 8 and 30 characters</oui-password-rule>
+          <oui-password-rule pattern="[0-9]+">Have at least one number</oui-password-rule>
+          <oui-password-rule pattern="[A-Z]+">Have at least capital letter</oui-password-rule>
+        </oui-password>
+      </oui-field>
+      <oui-field label="Confirm Password" size="xl">
+        <oui-password model="$ctrl.model2" confirm="$ctrl.model1">
+        </oui-password>
+      </oui-field>
+    </form>
+    `, {
+      $ctrl: new class {
+        constructor() {
+          this.minLength = 8;
+          this.maxLength = 30;
+        }
+
+        checkPasswordLength(password) {
+          return angular.isString(password)
+            && password.length >= this.minLength
+            && password.length <= this.maxLength;
+        }
+      }(),
+    })),
   );

@@ -92,15 +92,15 @@ describe('ouiPassword', () => {
 
       beforeEach(() => {
         form = TestUtils.compileTemplate(`
-                <form name="form">
-                    <oui-password id="foo" name="bar"
-                        model="$ctrl.model"
-                        minlength="4"
-                        maxlength="16"
-                        pattern="^[a-zA-Z0-9]+$"
-                        required>
-                    </oui-password>
-                </form>`);
+          <form name="form">
+            <oui-password id="foo" name="bar"
+              model="$ctrl.model"
+              minlength="4"
+              maxlength="16"
+              pattern="^[a-zA-Z0-9]+$"
+              required>
+            </oui-password>
+          </form>`);
 
         $timeout.flush();
 
@@ -141,11 +141,78 @@ describe('ouiPassword', () => {
       });
     });
 
+    describe('Confirm', () => {
+      let form;
+      let passwords;
+      let password;
+      let confirmPassword;
+      let confirmPasswordController;
+      let passwordInput;
+      let confirmPasswordInput;
+
+      beforeEach(() => {
+        form = TestUtils.compileTemplate(`
+        <form name="form">
+          <oui-password id="password1" name="password1"
+            model="$ctrl.model1"
+            minlength="4"
+            maxlength="16"
+            pattern="^[a-zA-Z0-9]+$"
+            required>
+          </oui-password>
+          <oui-password id="confirmpassword1" name="confirmpassword1"
+            model="$ctrl.model2"
+            confirm="$ctrl.model1">
+          </oui-password>
+        </form>`);
+
+        $timeout.flush();
+        passwords = form.find('oui-password');
+        password = angular.element(passwords[0]);
+        confirmPassword = angular.element(passwords[1]);
+        password.controller('ouiPassword');
+        confirmPasswordController = confirmPassword.controller('ouiPassword');
+        passwordInput = getInput(password);
+        confirmPasswordInput = getInput(confirmPassword);
+      });
+
+      it('should get an error "confirm"', () => {
+        passwordInput.val('foobar');
+        passwordInput.triggerHandler('input');
+        confirmPasswordInput.val('foo');
+        confirmPasswordInput.triggerHandler('input');
+
+        expect(confirmPasswordController.form.$error).toBeTruthy();
+        expect(confirmPasswordController.form.$error.password).toBeTruthy();
+      });
+
+      it('should not get an error if passwords match', () => {
+        passwordInput.val('foobar');
+        passwordInput.triggerHandler('input');
+        confirmPasswordInput.val('foobar');
+        confirmPasswordInput.triggerHandler('input');
+
+        expect(confirmPasswordController.form.$error.password).toBeFalsy();
+      });
+
+      it('should detect a change in the confirm property value and trigger validation', () => {
+        passwordInput.val('foobar');
+        passwordInput.triggerHandler('input');
+        confirmPasswordInput.val('foobar');
+        confirmPasswordInput.triggerHandler('input');
+        passwordInput.val('foobar123');
+        passwordInput.triggerHandler('input');
+
+        expect(confirmPasswordController.form.$error).toBeTruthy();
+        expect(confirmPasswordController.form.$error.password).toBeTruthy();
+      });
+    });
+
     describe('Strength', () => {
       const compileStrength = score => TestUtils.compileTemplate(`
-            <oui-password id="foo" name="bar" model="$ctrl.model">
-                <oui-password-strength score="$ctrl.score"></oui-password-strength>
-            </oui-password>`, {
+        <oui-password id="foo" name="bar" model="$ctrl.model">
+          <oui-password-strength score="$ctrl.score"></oui-password-strength>
+        </oui-password>`, {
         score,
       });
 
@@ -193,19 +260,19 @@ describe('ouiPassword', () => {
 
       beforeEach(() => {
         form = TestUtils.compileTemplate(`
-                <form name="form">
-                    <oui-password id="foo" name="bar" model="$ctrl.model">
-                        <oui-password-rule validator="$ctrl.checkPasswordLength(modelValue)">
-                            Must contain between 8 and 30 characters
-                        </oui-password-rule>
-                        <oui-password-rule pattern="[0-9]+">
-                            Have at least one number
-                        </oui-password-rule>
-                        <oui-password-rule pattern="[A-Z]+">
-                            Have at least capital letter
-                        </oui-password-rule>
-                    </oui-password>
-                </form>`, {
+          <form name="form">
+            <oui-password id="foo" name="bar" model="$ctrl.model">
+              <oui-password-rule validator="$ctrl.checkPasswordLength(modelValue)">
+                Must contain between 8 and 30 characters
+              </oui-password-rule>
+              <oui-password-rule pattern="[0-9]+">
+                Have at least one number
+              </oui-password-rule>
+              <oui-password-rule pattern="[A-Z]+">
+                Have at least capital letter
+              </oui-password-rule>
+            </oui-password>
+          </form>`, {
           checkPasswordLength: (password) => {
             const minLength = 8;
             const maxLength = 30;
