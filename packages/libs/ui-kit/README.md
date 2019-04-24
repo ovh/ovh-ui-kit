@@ -43,17 +43,11 @@ yarn add @ovh-ux/ui-kit
 
 ## Usage
 
-### CSS
+1. In your `index.html`, you need to load `oui.css` and `oui.js`:
 
 ```html
 <link rel="stylesheet" href="path/to/@ovh-ux/ui-kit/dist/css/oui.css">
-```
 
-### Javascript (with AngularJS)
-
-1. In your `index.html`, you need to load `oui.js`:
-
-```html
 <script src="path/to/@ovh-ux/ui-kit/dist/js/oui.js" type="text/javascript"></script>
 ```
 
@@ -63,13 +57,34 @@ yarn add @ovh-ux/ui-kit
 angular.module('myAwesomeApp', ['oui']);
 ```
 
-### Access variables (LESS)
+### Webpack
+
+In your `index.js`, you need to import the library, with its CSS file separately.
+
+```js
+import '@ovh-ux/ui-kit/dist/css/oui.css';
+import oui from '@ovh-ux/ui-kit';
+
+angular.module('myAwesomeApp', [oui]);
+```
+
+### LESS variables
+
+If you want to use the variables for your style, you can access it through `_variables.less`.
 
 ```less
 @import 'path/to/@ovh-ux/ui-kit/dist/less/_variables';
 ```
 
-Importing `_variables.less` will import `_constants.less` and `_icons.less` too.
+**Note**: Importing `_variables.less` will import `_constants.less` and `_icons.less` too.
+
+### Base 10px
+
+UI Kit use `rem` units and has for base `16px`. It could create size conflicts with others libraries using a base `10px`. In this case, you need to load `oui-b10.css` instead of `oui.css`.
+
+```html
+<link rel="stylesheet" href="path/to/@ovh-ux/ui-kit/dist/css/oui-b10.css">
+```
 
 ## Develop
 
