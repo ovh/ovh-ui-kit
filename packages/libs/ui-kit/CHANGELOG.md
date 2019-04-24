@@ -1,3 +1,7 @@
+# [3.0.0-rc.8](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.7...v3.0.0-rc.8) (2019-04-24)
+
+
+
 # [3.0.0-rc.7](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.6...v3.0.0-rc.7) (2019-04-24)
 
 
