@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Tooltip from './js/tooltip.directive';
 
 const moduleName = 'oui.tooltip';

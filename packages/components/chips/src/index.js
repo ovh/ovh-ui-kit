@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Chips from './js/chips.component';
 
 const moduleName = 'oui.chips';

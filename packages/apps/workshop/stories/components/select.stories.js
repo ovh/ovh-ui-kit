@@ -27,7 +27,6 @@ storiesOf('Components/Select', module)
     `, {
       $ctrl: {
         disabled: boolean('Disabled state', false),
-        items: countries,
         placeholder: 'Select a letter...',
         onBlur: action('onBlur'),
         onChange: action('onChange'),

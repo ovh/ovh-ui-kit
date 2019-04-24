@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Message from './js/message.component';
 
 const moduleName = 'oui.message';

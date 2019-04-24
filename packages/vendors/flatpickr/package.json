@@ -3,5 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "license": "BSD-3-Clause",
-  "author": "OVH SAS"
+  "author": "OVH SAS",
+  "dependencies": {
+    "flatpickr": "^4.5.7"
+  }
 }

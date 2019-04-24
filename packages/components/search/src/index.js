@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Autocomplete from '@ovh-ux/ui-kit.autocomplete';
 
 import Search from './js/search.component';

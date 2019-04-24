@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Progress from './js/progress.component';
 import ProgressBar from './js/bar/progress-bar.component';
 import ProgressThreshold from './js/threshold/progress-threshold.component';

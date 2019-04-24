@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Popover from '@ovh-ux/ui-kit.popover';
 import Spinner from '@ovh-ux/ui-kit.spinner';
 

@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 // Components
 import ActionMenu from '@ovh-ux/ui-kit.action-menu';
 import Autocomplete from '@ovh-ux/ui-kit.autocomplete';

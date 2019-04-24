@@ -1,7 +1,4 @@
-import 'angular-sanitize';
 import 'ui-select';
-import angular from 'angular';
-
 import Select from './js/select.directive';
 
 const choicesTpl = require('./js/templates/choices.html');

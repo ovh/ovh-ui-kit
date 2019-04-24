@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Tabs from './js/tabs.component';
 import TabsItem from './js/item/tabs-item.component';
 

@@ -1,6 +1,3 @@
-import 'angular-aria';
-import angular from 'angular';
-
 import Checkbox from '@ovh-ux/ui-kit.checkbox';
 import Criteria from '@ovh-ux/ui-kit.criteria';
 import Pagination from '@ovh-ux/ui-kit.pagination';

@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Popover from './js/popover.directive';
 
 const moduleName = 'oui.popover';

@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Button from '@ovh-ux/ui-kit.button';
 
 import BackButton from './js/back-button.component';

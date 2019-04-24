@@ -1,7 +1,3 @@
-import 'angular-aria';
-import 'angular-sanitize';
-import angular from 'angular';
-
 import Spinner from '@ovh-ux/ui-kit.spinner';
 
 import KEYBOARD_KEYS from './js/keyboard-keys.constant';

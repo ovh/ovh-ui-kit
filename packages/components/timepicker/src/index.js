@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Calendar from '@ovh-ux/ui-kit.calendar';
 
 import Timepicker from './js/timepicker.component';

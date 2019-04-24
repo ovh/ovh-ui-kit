@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Chips from '@ovh-ux/ui-kit.chips';
 import Dropdown from '@ovh-ux/ui-kit.dropdown';
 import Field from '@ovh-ux/ui-kit.field';

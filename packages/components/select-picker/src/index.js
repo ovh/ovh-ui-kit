@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Select from '@ovh-ux/ui-kit.select';
 
 import SelectPicker from './js/select-picker.component';

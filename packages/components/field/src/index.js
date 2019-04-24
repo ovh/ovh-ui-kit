@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Popover from '@ovh-ux/ui-kit.popover';
 
 import Field from './js/field.component';

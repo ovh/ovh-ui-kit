@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Radio from './js/radio.component';
 import RadioGroup from './js/group/radio-group.component';
 import RadioToggleGroup from './js/toggle-group/radio-toggle-group.component';

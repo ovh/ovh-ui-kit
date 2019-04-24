@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Collapsible from './js/collapsible.component';
 
 const moduleName = 'oui.collapsible';

@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Dropdown from '@ovh-ux/ui-kit.dropdown';
 
 import Pagination from './js/pagination.component';

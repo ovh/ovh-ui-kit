@@ -1,5 +1,3 @@
-import angular from 'angular';
-
 import Button from './js/button.component';
 
 const moduleName = 'oui.button';

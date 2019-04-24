@@ -19,12 +19,9 @@ module.exports = merge(baseConfig, {
     }),
   ],
   externals: {
-    'angular': 'angular',
-    'angular-aria': 'ngAria',
-    'angular-sanitize': 'ngSanitize',
     'bloodhound-js': 'Bloodhound',
     clipboard: 'Clipboard',
-    flatpickr: 'Flatpickr',
+    flatpickr: 'flatpickr',
     'popper.js': 'Popper',
     'ui-select': 'uiSelect',
   },
