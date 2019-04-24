@@ -20,9 +20,9 @@ module.exports = merge(baseConfig, {
   ],
   externals: {
     'bloodhound-js': 'Bloodhound',
-    clipboard: 'Clipboard',
+    clipboard: 'ClipboardJS',
     flatpickr: 'flatpickr',
     'popper.js': 'Popper',
-    'ui-select': '"ui.select"',
+    'ui-select': '"ui.select"', // Doesn't support module import
   },
 });

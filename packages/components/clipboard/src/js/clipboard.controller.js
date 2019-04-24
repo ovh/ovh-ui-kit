@@ -1,4 +1,4 @@
-import Clipboard from 'clipboard';
+import ClipboardJS from 'clipboard';
 
 export default class {
   constructor($attrs, $element, $timeout, ouiClipboardConfiguration) {
@@ -29,7 +29,7 @@ export default class {
     });
 
     // Init the clipboard instance
-    this.clipboard = new Clipboard(this.trigger, {
+    this.clipboard = new ClipboardJS(this.trigger, {
       target: () => this.target,
       text: () => this.model,
     });
