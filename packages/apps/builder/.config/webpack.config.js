@@ -23,6 +23,6 @@ module.exports = merge(baseConfig, {
     clipboard: 'Clipboard',
     flatpickr: 'flatpickr',
     'popper.js': 'Popper',
-    'ui-select': 'uiSelect',
+    'ui-select': '"ui.select"',
   },
 });
