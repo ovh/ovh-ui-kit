@@ -5,9 +5,13 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import { withCenteredLayout } from '../src/vcentered-addon/index'
 
-// Load global style to avoid styles duplicate from style loader
+import 'angular';
+import 'angular-aria';
+import 'angular-sanitize';
+
+// Load src for livereload
 import '@ovh-ux/ui-kit-builder/src/index.js';
-import '@ovh-ux/ui-kit-builder/src/index.less';
+import '../src/index.less';
 
 // Addons
 addDecorator(withA11y);

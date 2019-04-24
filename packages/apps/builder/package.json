@@ -74,10 +74,8 @@
     "@ovh-ux/ui-kit.timepicker": "*",
     "@ovh-ux/ui-kit.tooltip": "*"
   },
-  "peerDependencies": {
-    "angular": ">=1.6.x"
-  },
   "devDependencies": {
+    "angular": ">=1.6.x",
     "cpx": "^1.5.0",
     "cross-env": "^5.2.0",
     "less": "^3.9.0",
