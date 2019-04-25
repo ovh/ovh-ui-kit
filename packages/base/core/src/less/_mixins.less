@@ -106,49 +106,6 @@
     }
   }
 
-  .icon-circle(
-    @icon-size: @oui-icon-size;
-  ) {
-    &::before {
-      width: @icon-size;
-      height: @icon-size;
-      border-radius: 50%;
-      background: #333;
-      color: #fff;
-      font-size: ~"calc(@{icon-size} / 2)";
-      line-height: 2;
-      text-align: center;
-    }
-  }
-
-  .icon-bicolor(
-    @icon-char-color: @oui-icon-char-color;
-  ) {
-    position: relative;
-    z-index: 1;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 90%;
-      height: 90%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      background: @icon-char-color;
-      border-radius: 50%;
-      z-index: -1;
-    }
-
-    &.oui-icon-warning_circle::after {
-      width: 25%;
-      height: 75%;
-    }
-  }
-
   // Responsive
   .responsive(@maxWidth; @rules) {
     @media screen and (max-width: (@maxWidth - 1px)) {
