@@ -35,8 +35,6 @@ to hear from you!
 
 see [CONTRIBUTING](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
 
-And read this [quick start](https://github.com/ovh-ux/ovh-ui-kit-documentation).
-
 ## Related links
 
  * Contribute: [https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
