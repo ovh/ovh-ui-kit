@@ -57,6 +57,7 @@ export default class {
       file.reader = new this.$window.FileReader();
       file.reader.readAsDataURL(file);
       file.reader.onload = () => {
+        file.loading = false;
         file.preview = `url("${file.reader.result}")`;
 
         this.$scope.$apply();
