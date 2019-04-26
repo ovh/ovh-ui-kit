@@ -73,19 +73,25 @@
 <!-- Multiple -->
 <div class="oui-file-multiple"
     ng-if="::$ctrl.multiple && !$ctrl.droparea">
-    <button type="button" class="oui-button oui-button_secondary"
-        ng-bind="::$ctrl.translations.filesSelector"
-        ng-click="$ctrl.openFileSelector()">
-    </button>
+    <oui-button
+        disabled="$ctrl.disabled"
+        variant="secondary"
+        on-click="$ctrl.openFileSelector()">
+        {{::$ctrl.translations.filesSelector}}
+    </oui-button>
 </div>
 <!-- /Multiple -->
 
 <!-- Drop Area -->
 <div class="oui-file-droparea"
     ng-if="::$ctrl.droparea"
+    ng-class="{
+        'oui-file-droparea_disabled': !!$ctrl.disabled
+    }"
     ng-attr-id="{{::$ctrl.dropareaId}}">
     <span ng-bind="::$ctrl.translations.dropArea"></span>
     <oui-button variant="link"
+        disabled="$ctrl.disabled"
         on-click="$ctrl.openFileSelector()">
         {{::$ctrl.translations.dropAreaSelector}}
     </oui-button>
