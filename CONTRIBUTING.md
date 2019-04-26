@@ -9,16 +9,14 @@ pay attention to a few things:
 4. you may contribute through GitHub Pull Requests
 
 All contributions are welcome. However, keeping in mind the primary goal
-of this project, which is to provide a stylekit for the _OVH_ brand, we
-**strongly recommend** that you submit a RFC pull request or reach out
-to the [UX team on Gitter](https://gitter.im/ovh/ux) to discuss your
-proposal first.
+of this project, which is to provide a UI framework for the _OVH_ brand, we
+**strongly recommend** that you submit a RFC pull request.
 
 # Coding style rules
 
 * Use the [BEM CSS selector naming convention](https://en.bem.info/methodology/naming-convention/).
-* Lint your code with stylelint: `npm run lint`.
-* Test your build: `npm run build`.
+* Test your code: `yarn test`.
+* Test your build: `yarn build`.
 
 # Submitting Modifications
 
@@ -34,43 +32,24 @@ copyright header making clear under which license it's being released.
 
 # Setup your environment
 
-**ovh-ui-kit-documentation** showcases **ovh-ui-kit**'s components and
+**Storybook** showcases **ovh-ui-kit**'s components and
 doubles as a development environment. This section provides a guide to
 a local development installation.
 
 ## Yarn
 
-### ovh-ui-kit
-
 1. Start from your workspace directory
     example:`~/workspace`
-2. `git clone` the **ovh-ui-less** repository locally
-3. Move to the `ovh-ui-less` directory
-4. Link `ovh-ui-less` to yarn links
+2. `git clone` the **ovh-ui-kit** repository locally
+3. Move to the `ovh-ui-kit` directory
+4. Install external dependencies
+5. Launch `ovh-ui-kit` in **Storybook**
 
 ```
 cd <your workspace directory>
 git clone <ovh-ui-less repository>
 cd ovh-ui-kit
-yarn link
-```
-
-### ovh-ui-kit-documentation
-
-1. Start from your workspace directory
-    example:`~/workspace`
-2. `git clone` the **ovh-ui-kit-documentation** repository locally
-3. Move to the `ovh-ui-kit` directory
-4. Install external dependencies
-5. Use your local `ovh-ui-kit` repository instead of the remote dependency
-6. Launch `ovh-ui-kit` in watch mode
-
-```
-cd <your workspace directory>
-git clone <ovh-ui-kit-documentation repository>
-cd ovh-ui-kit-documentation
 yarn install
-yarn link ovh-ui-kit
 yarn start
 ```
 
