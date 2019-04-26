@@ -10,7 +10,7 @@ The filename of each files **must** follows [BEM CSS selector naming convention]
 
 ## Regenerate webfont
 
-When new files as been added, you need to regenerate the font files by launching this script:
+When new files has been added, you need to regenerate the font files by launching this script:
 
 ```sh
 yarn icons

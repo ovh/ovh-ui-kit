@@ -140,6 +140,9 @@
   * dropdown-base
 * __oui-field__:
   * field-sizes
+* __oui-icon__:
+  * icon-bicolor
+  * icon-circle
 * __oui-input-group__:
   * input-group-base
   * input-group-button

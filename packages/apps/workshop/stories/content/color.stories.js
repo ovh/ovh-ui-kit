@@ -8,7 +8,11 @@ storiesOf('Content/Color', module)
     <span class="oui-icon oui-icon-info_circle"></span>
     <span class="oui-icon oui-icon-success_circle"></span>
     <span class="oui-icon oui-icon-warning_circle"></span>
-    `,
+    `, {
+      options: {
+        showPanel: true,
+      },
+    },
   )
   .add(
     'General',
