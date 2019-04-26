@@ -24,8 +24,23 @@ export default class PopoverController {
   }
 
   $postLink() {
-    this.setPopover();
-    this.setTrigger();
+    this.setPopover()
+      .then(() => this.setTrigger())
+      .then(() => {
+        if (this.open) {
+          this.openPopover();
+        }
+      });
+  }
+
+  $onChanges(changes) {
+    if (angular.isDefined(changes.open) && this.triggerElement) {
+      if (changes.open.currentValue) {
+        this.openPopover();
+      } else {
+        this.closePopover();
+      }
+    }
   }
 
   $onDestroy() {
@@ -33,7 +48,7 @@ export default class PopoverController {
   }
 
   setPopover() {
-    this.$timeout(() => {
+    return this.$timeout(() => {
       // Create a new scope to compile the popover next to the trigger
       const popoverScope = angular.extend(this.$scope.$new(true), {
         $popoverCtrl: this,
@@ -53,7 +68,7 @@ export default class PopoverController {
   }
 
   setTrigger() {
-    this.$timeout(() => {
+    return this.$timeout(() => {
       const { 0: trigger } = this.$element;
       this.triggerElement = trigger;
 
@@ -63,8 +78,12 @@ export default class PopoverController {
           'aria-haspopup': true,
           'aria-expanded': false,
           'aria-describedby': this.id,
-        })
-        .on('click', () => this.onTriggerClick());
+        });
+
+      if (angular.isUndefined(this.$attrs.ouiPopoverOpen)) {
+        this.$element
+          .on('click', () => this.onTriggerClick());
+      }
     });
   }
 
@@ -90,6 +109,9 @@ export default class PopoverController {
 
     this.$document.on('keydown', evt => this.triggerKeyHandler(evt));
     this.$element.attr('aria-expanded', true);
+
+    // force the digest because the popover is outside the angular digest loop
+    this.$timeout(() => this.onOpen(), 0);
   }
 
   closePopover() {
@@ -97,6 +119,9 @@ export default class PopoverController {
 
     this.$document.off('keydown', evt => this.triggerKeyHandler(evt));
     this.$element.attr('aria-expanded', false);
+
+    // force the digest because the popover is outside the angular digest loop
+    this.$timeout(() => this.onClose(), 0);
   }
 
   createPopper() {

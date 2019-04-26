@@ -103,6 +103,64 @@ describe('ouiPopover', () => {
         trigger.triggerHandler('click');
         expect(trigger.attr('aria-expanded')).toBe('false');
       });
+
+
+      it('should open the popover if specified', () => {
+        const component = testUtils.compileTemplate(
+          `<div>
+              <button class="trigger" oui-popover="foo" oui-popover-open="$ctrl.open"></button>
+            </div>`, {
+            open: true,
+          },
+        );
+
+        $timeout.flush();
+
+        const trigger = angular.element(component[0].querySelector('.trigger'));
+        expect(trigger.attr('aria-expanded')).toBe('true');
+
+        component.scope().$ctrl.open = false;
+        component.scope().$apply();
+
+        expect(trigger.attr('aria-expanded')).toBe('false');
+      });
+
+      it('should not register event handler on trigger element if open is specified', () => {
+        const component = testUtils.compileTemplate('<div><button class="trigger" oui-popover="foo" oui-popover-open="false"></button></div>');
+
+        $timeout.flush();
+
+        const trigger = angular.element(component[0].querySelector('.trigger')).triggerHandler('click');
+        const popover = trigger.next();
+
+        expect(popover.attr('x-placement')).toBe(undefined);
+      });
+
+      it('should trigger on-open and on-close', () => {
+        const openSpy = jasmine.createSpy('open');
+        const closeSpy = jasmine.createSpy('close');
+        const component = testUtils.compileTemplate(
+          `<div>
+              <button class="trigger" oui-popover="foo" oui-popover-on-open="$ctrl.open()" oui-popover-on-close="$ctrl.close()"></button>
+            </div>`, {
+            open: openSpy,
+            close: closeSpy,
+          },
+        );
+
+        $timeout.flush();
+        angular.element(component[0].querySelector('.trigger')).triggerHandler('click');
+        $timeout.flush();
+
+        expect(openSpy).toHaveBeenCalled();
+        expect(openSpy.calls.count()).toEqual(1);
+
+        angular.element(component[0].querySelector('.trigger')).triggerHandler('click');
+        $timeout.flush();
+
+        expect(closeSpy).toHaveBeenCalled();
+        expect(closeSpy.calls.count()).toEqual(1);
+      });
     });
   });
 });
