@@ -1,3 +1,15 @@
+## [3.0.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0...v3.0.1) (2019-04-26)
+
+
+### Bug Fixes
+
+* **button:** fix arrows button icon ([1460f96](https://github.com/ovh-ux/ovh-ui-kit/commit/1460f96))
+* **calendar:** fix disabled state on alt input ([85ae5a0](https://github.com/ovh-ux/ovh-ui-kit/commit/85ae5a0))
+* **file:** fix disabled state for multiple and droparea ([a303af5](https://github.com/ovh-ux/ovh-ui-kit/commit/a303af5))
+* **file:** fix loading in preview mode ([8033343](https://github.com/ovh-ux/ovh-ui-kit/commit/8033343))
+
+
+
 # [3.0.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.9...v3.0.0) (2019-04-25)
 
 
