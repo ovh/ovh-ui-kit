@@ -17,7 +17,7 @@ storiesOf('Internal/Criteria', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-criteria
       disabled="$ctrl.disabled"
-      model="$ctrl.modle"
+      model="$ctrl.model"
       on-change="onChange(modelValue)"
       properties="$ctrl.properties">
     </oui-criteria>
@@ -34,7 +34,7 @@ storiesOf('Internal/Criteria', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-criteria
       disabled="$ctrl.disabled"
-      model="$ctrl.modle"
+      model="$ctrl.model"
       properties="$ctrl.properties"
       searchable>
     </oui-criteria>
