@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icons/System/location</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/System/location" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M17,8.66666667 C17,6.11175246 14.7826599,4 12,4 C9.21734008,4 7,6.11175246 7,8.66666667 C7,11.8621505 8.63302645,15.3431255 12,19.0956141 C15.3669735,15.3431255 17,11.8621505 17,8.66666667 Z M12,22 C7.33333333,17.3333333 5,12.8888889 5,8.66666667 C5,4.98476833 8.13400675,2 12,2 C15.8659932,2 19,4.98476833 19,8.66666667 C19,12.8888889 16.6666667,17.3333333 12,22 Z M12,11 C10.8954305,11 10,10.1045695 10,9 C10,7.8954305 10.8954305,7 12,7 C13.1045695,7 14,7.8954305 14,9 C14,10.1045695 13.1045695,11 12,11 Z" id="Color" fill="#2859C0"></path>
+    </g>
+</svg>
