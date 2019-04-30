@@ -1,3 +1,13 @@
+<a name="2.31.0"></a>
+# [2.31.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.30.0...v2.31.0) (2019-04-30)
+
+
+### Features
+
+* **oui-icons:** add extra-thin icons ([4218681](https://github.com/ovh-ux/ovh-ui-kit/commit/4218681))
+
+
+
 <a name="2.30.0"></a>
 # [2.30.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.29.1...v2.30.0) (2019-04-23)
 
