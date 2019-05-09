@@ -579,7 +579,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.31.0") format("woff2"), url("./icons/icons.woff?v=2.31.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.32.0") format("woff2"), url("./icons/icons.woff?v=2.32.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -4989,12 +4989,15 @@ oui-navbar-main {
 }
 .oui-navbar-menu__header {
   display: block;
-  position: relative;
   padding: 0.688rem 1.25rem 0.938rem 1.25rem;
   text-align: left;
   color: #113f6d;
   border-bottom: solid 1px #e9ebe7;
   background: #fafafa;
+}
+.oui-navbar-menu__header-container {
+  display: flex;
+  align-items: center;
 }
 .oui-navbar-menu__title {
   overflow: hidden;
@@ -5002,7 +5005,6 @@ oui-navbar-main {
   text-overflow: ellipsis;
   line-height: 1.2;
   margin: 0;
-  padding: 0;
   font-size: 1.25rem;
   font-weight: 600;
   color: #113f6d;
@@ -5014,10 +5016,7 @@ oui-navbar-main {
 }
 .oui-navbar-menu__back {
   display: block;
-  position: absolute;
   left: 0.25rem 0 0 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 .oui-navbar-menu__back .oui-icon,
 .oui-navbar-menu__back .oui-button,

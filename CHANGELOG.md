@@ -1,3 +1,13 @@
+<a name="2.32.0"></a>
+# [2.32.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.31.0...v2.32.0) (2019-05-09)
+
+
+### Features
+
+* **oui-navbar:** add style for menu header container ([5a9f2a6](https://github.com/ovh-ux/ovh-ui-kit/commit/5a9f2a6))
+
+
+
 <a name="2.31.0"></a>
 # [2.31.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.30.0...v2.31.0) (2019-04-30)
 
