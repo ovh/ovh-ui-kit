@@ -11,6 +11,7 @@ angular.module('myModule', ['oui.tabs']);
 | Attribute     | Type      | Binding   | One-time Binding  | Values            | Default   | Description
 | ----          | ----      | ----      | ----              | ----              | ----      | ----
 | `aria-label`  | string    | @?        | yes               | n/a               | n/a       | accessibility label
+| `model`       | object    | =?        | no                | n/a               | n/a       | `id` of the current active tab item
 
 ## Component `oui-tabs-item`
 

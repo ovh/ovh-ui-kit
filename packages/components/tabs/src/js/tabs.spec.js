@@ -86,7 +86,47 @@ describe('ouiTabs', () => {
 
       const id = button.next().attr('id');
       const tabsCtrl = element.controller('ouiTabs');
-      expect(tabsCtrl.activeId).toBe(id);
+      expect(tabsCtrl.model).toBe(id);
+    });
+
+    it('should active default tab', () => {
+      const element = TestUtils.compileTemplate(`
+                <oui-tabs aria-label="tablist" model="$ctrl.activeTab">
+                    <oui-tabs-item id="tab1" heading="lorem"></oui-tabs-item>
+                    <oui-tabs-item id="tab2" heading="ipsum"></oui-tabs-item>
+                </oui-tabs>`, {
+        activeTab: 'tab2',
+      });
+
+      $timeout.flush();
+
+      const items = element.find('oui-tabs-item');
+      const button = angular.element(items[1]).find('button');
+
+      const id = button.next().attr('id');
+      const expanded = button.attr('aria-expanded');
+      const tabsCtrl = element.controller('ouiTabs');
+
+      expect(tabsCtrl.model).toBe(id);
+      expect(expanded).toBe('true');
+    });
+
+    it('should update model when active tab change', () => {
+      const element = TestUtils.compileTemplate(`
+                <oui-tabs aria-label="tablist" model="$ctrl.activeTab">
+                    <oui-tabs-item id="tab1" heading="lorem"></oui-tabs-item>
+                    <oui-tabs-item id="tab2" heading="ipsum"></oui-tabs-item>
+                </oui-tabs>`, {
+        activeTab: 'tab1',
+      });
+
+      $timeout.flush();
+
+      const items = element.find('oui-tabs-item');
+      const button = angular.element(items[1]).find('button');
+      button.triggerHandler('click');
+
+      expect(TestUtils.getElementController(element).activeTab).toEqual('tab2');
     });
 
     it('should update checkmark', () => {
