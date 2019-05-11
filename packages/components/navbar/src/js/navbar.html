@@ -55,11 +55,10 @@
         icon-animated="asideLink.iconAnimated ? asideLink.iconAnimated : false"
         on-click="asideLink.onClick()"
         ng-repeat="asideLink in $ctrl.asideLinks track by $index"
-        ng-class="::!!asideLink.class ? asideLink.class : null"
-        ng-switch="::asideLink.name">
+        ng-class="::!!asideLink.class ? asideLink.class : null">
 
         <!-- Notifications Menu -->
-        <oui-navbar-notification ng-switch-when="notifications"
+        <oui-navbar-notification ng-if="asideLink.name === 'notifications'"
             class="oui-navbar-menu_fixed oui-navbar-menu_right"
             ng-class="::!!asideLink.class ? asideLink.class : null"
             name="{{::asideLink.name}}"
@@ -74,7 +73,7 @@
         <!-- /Notifications Menu -->
 
         <!-- User Menu -->
-        <oui-navbar-menu ng-switch-when="user"
+        <oui-navbar-menu ng-if="asideLink.name === 'user'"
             class="oui-navbar-menu_user"
             ng-class="::!!asideLink.class ? asideLink.class : null"
             header-breadcrumb="{{::asideLink.nichandle}}"
@@ -87,7 +86,8 @@
         <!-- /User Menu -->
 
         <!-- Default Menu -->
-        <oui-navbar-menu ng-switch-default
+        <oui-navbar-menu
+            ng-if="asideLink.name !== 'notifications' && asideLink.name !== 'user'"
             ng-class="::!!asideLink.class ? asideLink.class : null"
             header-class="oui-navbar_mobile-only"
             header-breadcrumb="{{::!!asideLink.headerBreadcrumb ? asideLink.headerBreadcrumb : null}}"
