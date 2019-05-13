@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@ovh-ux/ui-kit-builder": "*",
+    "@ovh-ux/ui-kit.core": "*",
     "angular": "^1.7.8",
     "angular-aria": "^1.7.8",
     "angular-sanitize": "^1.7.8",

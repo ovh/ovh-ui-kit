@@ -34,6 +34,30 @@ storiesOf('Directives/Popover', module)
     })),
   )
   .add(
+    'Open from another trigger',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <p>
+      <span
+        title="This is an awesome popover content."
+        oui-popover
+        oui-popover-open="$ctrl.isOpen"
+        oui-popover-on-close="$ctrl.isOpen = false">
+        This is an awesome text
+      </span>
+    </p>
+    <button
+      type="button"
+      class="oui-button oui-button_primary"
+      ng-click="$ctrl.isOpen = !$ctrl.isOpen">
+      Click to toggle popover
+    </button>
+    `, {
+      $ctrl: {
+        isOpen: true,
+      },
+    })),
+  )
+  .add(
     'Using a template',
     forModule(moduleName).createElement(() => compileTemplate(`
     <input type="text" class="oui-input oui-input_inline"

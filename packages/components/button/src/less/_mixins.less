@@ -84,18 +84,13 @@
     }
 
     .@{icon-selector}::before {
-      width: @icon-size;
-      height: @icon-size;
       font-size: @icon-size;
-      line-height: @icon-size;
     }
 
-    .@{icon-selector}_circle::before {
-      background: @icon-color;
+    .@{icon-selector}_circle {
       width: @icon-size_large;
       height: @icon-size_large;
-      font-size: @icon-size;
-      line-height: @icon-size_large;
+      background: @icon-color;
     }
 
     &:disabled .@{icon-selector}::before {

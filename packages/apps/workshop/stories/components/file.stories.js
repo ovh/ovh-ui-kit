@@ -92,22 +92,32 @@ storiesOf('Components/File', module)
     'Drag & Drop area',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-file
+      disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
       droparea>
     </oui-file>
-    `)),
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })),
   )
   .add(
     'Drag & Drop with preview',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-file
+      disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
       droparea
       preview>
     </oui-file>
-    `)), {
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })), {
       notes: 'Preview works only with `image/*` files.',
     },
   );

@@ -15,6 +15,9 @@ angular.module('myModule', ['oui.popover']);
 | `oui-popover-placement`   | string    | @?        | yes               | See [Popper placements](https://popper.js.org/popper-documentation.html#Popper.placements)    | `right`           | modifier for alignment
 | `oui-popover-template`    | string    | @?        | no                | n/a                                                                                           | n/a               | id of the popover template
 | `oui-popover-scope`       | string    | <?        | no                | n/a                                                                                           | n/a               | scope of the popover template
+| `oui-popover-open`        | boolean   | <?        | no                | `true`, `false`                                                                               | `false`           | open or close the popover
+| `oui-popover-on-open`     | function  | &         | no                | n/a                                                                                           | n/a               | called when popover is opened
+| `oui-popover-on-close`    | function  | &         | no                | n/a                                                                                           | n/a               | called when popover is closed
 
 ### Using a template with `oui-popover-template` attribute
 

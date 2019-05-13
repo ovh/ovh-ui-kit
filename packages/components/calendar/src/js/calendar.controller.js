@@ -101,6 +101,17 @@ export default class {
     this.initCalendarInstance();
   }
 
+  $onChanges() {
+    if (this.flatpickr && this.flatpickr.altInput) {
+      // Fix disabled state when there is an alt input
+      if (this.disabled) {
+        angular.element(this.flatpickr.altInput).attr('disabled', 'disabled');
+      } else {
+        angular.element(this.flatpickr.altInput).removeAttr('disabled');
+      }
+    }
+  }
+
   $onDestroy() {
     this.flatpickr.destroy();
   }

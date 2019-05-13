@@ -57,6 +57,7 @@ export default class {
       file.reader = new this.$window.FileReader();
       file.reader.readAsDataURL(file);
       file.reader.onload = () => {
+        file.loading = false;
         file.preview = `url("${file.reader.result}")`;
 
         this.$scope.$apply();
@@ -215,7 +216,7 @@ export default class {
           .on('drop', (e) => {
             // FileList from input file is read-only
             // Needed to be port as an array for manipulation
-            if (e.dataTransfer) {
+            if (!this.disabled && e.dataTransfer) {
               this.addFiles(Array.from(e.dataTransfer.files));
             }
           });
