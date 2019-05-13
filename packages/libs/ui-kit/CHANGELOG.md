@@ -1,3 +1,12 @@
+## [3.0.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.2...v3.0.3) (2019-05-13)
+
+
+### Bug Fixes
+
+* **clipboard:** set button type ([#397](https://github.com/ovh-ux/ovh-ui-kit/issues/397)) ([a87f98a](https://github.com/ovh-ux/ovh-ui-kit/commit/a87f98a))
+
+
+
 ## [3.0.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0...v3.0.1) (2019-04-26)
 
 
