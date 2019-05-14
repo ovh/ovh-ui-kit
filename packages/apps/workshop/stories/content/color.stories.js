@@ -4,10 +4,10 @@ storiesOf('Content/Color', module)
   .add(
     'Usage',
     () => `
-    <span class="oui-icon oui-icon-error_circle"></span>
-    <span class="oui-icon oui-icon-info_circle"></span>
-    <span class="oui-icon oui-icon-success_circle"></span>
-    <span class="oui-icon oui-icon-warning_circle"></span>
+    <p class="oui-color-jungle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p class="oui-color-pomegranate">Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.</p>
+    <p class="oui-color-california">Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu.</p>
+    <p class="oui-color-atlantis">Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus.</p>
     `, {
       options: {
         showPanel: true,
