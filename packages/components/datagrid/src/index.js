@@ -8,6 +8,7 @@ import Datagrid from './js/datagrid.directive';
 import DatagridCell from './js/cell/cell.component';
 import DatagridColumnBuilder from './js/datagrid-column-builder.service';
 import DatagridTopbar from './js/topbar/datagrid-topbar.component';
+import DatagridExpandedRow from './js/expanded-row/datagrid-expanded-row.component';
 import DatagridPaging from './js/paging/datagrid-paging.service';
 import DatagridParameters from './js/parameters/datagrid-parameters.component';
 import DatagridProvider from './js/datagrid.provider';
@@ -28,6 +29,7 @@ angular
   .directive('ouiDatagrid', Datagrid)
   .component('ouiDatagridCell', DatagridCell)
   .component('ouiDatagridTopbar', DatagridTopbar)
+  .component('ouiDatagridExpandedRow', DatagridExpandedRow)
   .service('ouiDatagridPaging', DatagridPaging)
   .provider('ouiDatagridConfiguration', DatagridProvider)
   .service('ouiDatagridService', DatagridService)

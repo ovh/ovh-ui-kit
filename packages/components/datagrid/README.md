@@ -32,6 +32,7 @@ angular.module('myModule', ['oui.datagrid'])
 | `rows`                            | array     | <?        | yes                 | n/a              | n/a          | local rows to load in the datagrid
 | `empty-placeholder`               | string    | @?        | yes                 | n/a              | n/a          | custom placeholder text when there is no data
 | `selectable-rows`                 | boolean   | <?        | no                  | `true`, `false`  | `false`      | allow rows to be selected
+| `expandable-rows`                 | boolean   | <?        | no                  | `true`, `false`  | `false`      | allow rows to be expanded when clicked
 | `on-page-change`                  | function  | &         | no                  | n/a              | n/a          | triggered when pagination is changed
 | `on-row-select`                   | function  | &         | no                  | n/a              | n/a          | triggered when a row is selected
 

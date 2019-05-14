@@ -20,12 +20,16 @@
         <div class="oui-datagrid-responsive-container__overflow-container">
             <table class="oui-datagrid oui-datagrid_responsive">
                 <thead class="oui-datagrid__headers">
-                    <tr class="oui-datagrid__row">
+                    <tr class="oui-datagrid__row"
+                        ng-class="{'expandable': $ctrl.expandableRows}">
                         <th class="oui-datagrid__header oui-datagrid__cell-sticky"
                             ng-if="$ctrl.selectableRows">
                             <oui-checkbox model="$ctrl.selectAllRows"
                                             on-change="$ctrl.toggleAllRowsSelection(modelValue)">
                             </oui-checkbox>
+                        </th>
+                        <th class="oui-datagrid__header oui-datagrid__cell-sticky expandable"
+                            ng-if="$ctrl.expandableRows">
                         </th>
                         <th class="oui-datagrid__header"
                             ng-class="$ctrl.getSortableClasses(column)"
@@ -44,13 +48,24 @@
                 <tbody class="oui-datagrid__body"
                     ng-hide="$ctrl.loading">
                     <tr class="oui-datagrid__row oui-action-menu-container"
-                        ng-repeat="row in $ctrl.displayedRows track by $index"
-                        ng-init="rowIndex = $index">
+                        ng-class="{'expandable': $ctrl.expandableRows}"
+                        ng-repeat-start="row in $ctrl.displayedRows track by $index"
+                        ng-init="rowIndex = $index"
+                        ng-click="$ctrl.toggleRowExpansion($index)">
                         <td class="oui-datagrid__cell oui-datagrid__cell-sticky"
                             ng-if="$ctrl.selectableRows">
                             <oui-checkbox model="$ctrl.selectedRows[$index]"
                                             on-change="$ctrl.toggleRowSelection($index, modelValue)">
                             </oui-checkbox>
+                        </td>
+                        <td class="oui-datagrid__cell oui-datagrid__cell-sticky"
+                            ng-if="$ctrl.expandableRows">
+                            <button type="button" 
+                                class="button_expand"
+                                ng-if="$ctrl.expandableRows">
+                                <i ng-show="!$ctrl.isRowExpanded($index)" class="oui-icon oui-icon-chevron-down" aria-hidden="true"></i>
+                                <i ng-show="$ctrl.isRowExpanded($index)" class="oui-icon oui-icon-chevron-up" aria-hidden="true"></i>
+                            </button>
                         </td>
                         <td class="oui-datagrid__cell"
                             ng-class="::[column.class]"
@@ -75,6 +90,12 @@
                             </oui-datagrid-cell>
                         </td>
                     </tr>
+                    <tr ng-repeat-end ng-if="$ctrl.isRowExpanded($index)">
+                        <td ng-attr-colspan="{{$ctrl.columns.length + 1 + ($ctrl.selectableRows ? 1 : 0)}}">
+                            <oui-datagrid-expanded-row class="oui-datagrid-expanded-row" row="row">
+                            </oui-datagrid-expanded-row>
+                        </td>
+                    </tr>
                 </tbody>
                 <tbody class="oui-datagrid__body"
                     ng-show="!$ctrl.displayedRows.length || $ctrl.loading || $ctrl.firstLoading">
@@ -82,8 +103,7 @@
                         <td ng-if="$ctrl.selectableRows"
                             class="oui-datagrid__cell oui-datagrid__cell-sticky"></td>
                         <td class="oui-datagrid__cell"
-                            ng-attr-colspan="{{ $ctrl.columns.length }}"
-                            >
+                            ng-attr-colspan="{{ $ctrl.columns.length }}">
                             <span ng-if="!$ctrl.loading && !$ctrl.firstLoading"
                                     ng-bind="::$ctrl.emptyPlaceholder || $ctrl.config.translations.emptyPlaceholder"></span>
                             <oui-spinner ng-if="$ctrl.loading || $ctrl.firstLoading"

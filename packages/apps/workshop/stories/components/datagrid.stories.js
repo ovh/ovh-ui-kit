@@ -161,6 +161,29 @@ storiesOf('Components/Datagrid', module)
     },
   )
   .add(
+    'Expandable rows',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-datagrid
+      rows="$ctrl.data"
+      page-size="5"
+      expandable-rows>
+      <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+      <oui-datagrid-expanded-row>
+        test {{$row}} xx
+      </oui-datagrid-expanded-row>
+    </oui-datagrid>
+    `, {
+      $ctrl: {
+        data,
+      },
+    })), {
+      notes: 'This will expand datagrid rows when clicked.',
+    },
+  )
+  .add(
     'Row actions',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-datagrid
