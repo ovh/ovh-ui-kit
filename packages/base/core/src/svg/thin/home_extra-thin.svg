@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icons/System/home</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/System/home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M16,21 L20,21 L20,10.8907248 L12,3.69072481 L4,10.8907248 L4,21 L8,21 L8,15 C8,13.8954305 8.8954305,13 10,13 L14,13 C15.1045695,13 16,13.8954305 16,15 L16,21 Z M10,15 L10,21 L14,21 L14,15 L10,15 Z M2,10 L12,1 L22,10 L22,21 C22,22.3333333 21.3333333,23 20,23 L4,23 C2.66666667,23 2,22.3333333 2,21 L2,10 Z" id="Color" fill="#2859C0"></path>
+    </g>
+</svg>
