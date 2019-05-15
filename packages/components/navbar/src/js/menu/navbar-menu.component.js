@@ -15,6 +15,9 @@ export default {
     placement: '@?',
     fixed: '<?',
   },
+  transclude: {
+    header: '?ouiNavbarMenuHeader',
+  },
   controller,
   template,
 };

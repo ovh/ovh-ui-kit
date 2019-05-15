@@ -1,19 +1,24 @@
 <header class="oui-navbar-menu__header"
     ng-if="::!!$ctrl.headerTitle"
     ng-class="::!!$ctrl.headerClass ? $ctrl.headerClass : null">
-    <div class="oui-navbar-menu__back"
-        ng-if="::!!$ctrl.backButton">
-        <button type="button" class="oui-button oui-button_link oui-button_icon-left"
-            ng-click="$ctrl.closeMenu($ctrl.menuName, true)"
-            oui-navbar-group="{{::$ctrl.menuName}}">
-            <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
-        </button>
+    <div class="oui-navbar-menu__header-container">
+        <div class="oui-navbar-menu__back"
+             ng-if="::!!$ctrl.backButton">
+            <button type="button" class="oui-button oui-button_link oui-button_icon-left"
+                ng-click="$ctrl.closeMenu($ctrl.menuName, true)"
+                oui-navbar-group="{{::$ctrl.menuName}}">
+                <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div>
+            <span class="oui-navbar-menu__breadcrumb"
+                ng-if="::!!$ctrl.headerBreadcrumb"
+                ng-bind="::$ctrl.headerBreadcrumb">
+            </span>
+            <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle" title="{{::$ctrl.headerTitle}}"></h3>
+        </div>
     </div>
-    <span class="oui-navbar-menu__breadcrumb"
-        ng-if="::!!$ctrl.headerBreadcrumb"
-        ng-bind="::$ctrl.headerBreadcrumb">
-    </span>
-    <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle" title="{{::$ctrl.headerTitle}}"></h3>
+    <div ng-if="$ctrl.transcludeHeader" ng-transclude="header"></div>
 </header>
 <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item {{::!!menuLink.class ? menuLink.class : null}}"
@@ -96,6 +101,11 @@
             placement="{{::$ctrl.placement}}"
             fixed="::$ctrl.fixed"
             back-button>
+            <oui-navbar-menu-header>
+                <div ng-if="$ctrl.transcludeHeader"
+                    ng-transclude="header">
+                </div>
+            </oui-navbar-menu-header>
         </oui-navbar-menu>
         <!-- Menu for Next Level -->
 

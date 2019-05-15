@@ -385,12 +385,16 @@
     // Header for Menu
     &__header {
       display: block;
-      position: relative;
       padding: @oui-navbar-menu-header-padding;
       text-align: left;
       color: @oui-navbar-menu-font-color;
       border-bottom: @oui-navbar-menu-header-border-bottom;
       background: @oui-navbar-menu-header-background-color;
+    }
+
+    &__header-container {
+      display: flex;
+      align-items: center;
     }
 
     // Title for Header
@@ -399,7 +403,6 @@
 
       line-height: @oui-navbar-menu-title-line-height;
       margin: 0;
-      padding: 0;
       font-size: @oui-navbar-menu-title-font-size;
       font-weight: @oui-navbar-menu-title-font-weight;
       color: @oui-navbar-menu-title-font-color;
@@ -415,10 +418,7 @@
     // Back Button
     &__back {
       display: block;
-      position: absolute;
       left: @oui-navbar-menu-padding;
-      top: 50%;
-      transform: translateY(-50%);
 
       .oui-icon,
       .oui-button {
