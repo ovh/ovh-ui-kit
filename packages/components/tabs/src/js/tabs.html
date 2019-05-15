@@ -4,7 +4,7 @@
         ng-repeat="item in $ctrl.items"
         ng-attr-aria-controls="{{::item.id}}"
         ng-attr-aria-label="{{::item.ariaLabel}}"
-        ng-attr-aria-selected="{{item.id === $ctrl.activeId}}"
+        ng-attr-aria-selected="{{item.id === $ctrl.model}}"
         ng-class="{ 'oui-tabs__tab_checked': item.checked }"
         ng-click="$ctrl.setActiveTab(item)">
         <span class="oui-icon oui-icon-success"

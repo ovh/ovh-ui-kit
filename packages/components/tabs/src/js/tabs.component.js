@@ -6,6 +6,7 @@ export default {
   template,
   bindings: {
     ariaLabel: '@?',
+    model: '=?',
   },
   transclude: {
     item: '?ouiTabsItem',
