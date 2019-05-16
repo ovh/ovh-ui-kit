@@ -30,7 +30,7 @@ angular.module('myModule', ['oui.stepper'])
 | ----              | ----      | ----      | ----              | ----              | ----      | ----
 | `name`            | string    | @?        | yes               | n/a               | n/a       | stepper name used to identify step
 | `id`              | string    | @?        | yes               | n/a               | n/a       | stepper id used to identify step
-| `current-index`   | number    | =?        | no                | n/a               | 0         | current step index 
+| `current-index`   | number    | =?        | no                | n/a               | 0         | current step index
 | `on-init`         | function  | &         | no                | n/a               | n/a       | initialization function
 | `on-finish`       | function  | &         | no                | n/a               | n/a       | submit all steps function
 
@@ -59,7 +59,7 @@ If you want to access the forms inside `on-finish` callback, you need to use the
 | `loading-text`    | string    | @?        | no                | n/a               | n/a       | text for the loading state
 | `loading`         | boolean   | <?        | no                | `true`, `false`   | `false`   | display the loading state
 | `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | disable the step and shrink it
-| `editable`        | boolean   | <?        | no                | `true`, `false`   | `true`    | Define if user can go back on a step and edit it again 
+| `editable`        | boolean   | <?        | no                | `true`, `false`   | `true`    | Define if user can go back on a step and edit it again
 | `navigation`      | boolean   | <?        | no                | `true`, `false`   | `true`    | show the navigation buttons
 | `skippable`       | boolean   | <?        | no                | `true`, `false`   | `false`   | add button to skip facultative step
 | `valid`           | boolean   | <?        | no                | `true`, `false`   | `true`    | custom validation for the form
@@ -75,6 +75,8 @@ The value of the custom validation attribute doesn't override the angular form v
 ### Attribute `on-submit`
 
 If you want to access the form inside `on-submit` callback, you need to use the `form` variable as below.
+
+When the form is submitted the `oui-step-form.submit` event is emitted having `form` as a parameter to allow global actions on form submission
 
 ```html:preview
 <oui-stepper>

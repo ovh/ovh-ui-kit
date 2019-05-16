@@ -62,6 +62,7 @@ export default class StepFormController {
   }
 
   onFormSubmit(form) {
+    this.$scope.$emit('oui-step-form.submit', { form });
     this.onSubmit({ form });
 
     if (form.$valid && this.valid) {
