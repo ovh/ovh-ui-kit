@@ -53,7 +53,7 @@ storiesOf('Styles/Checkbox', module)
       <input class="oui-checkbox__input" id="oui-checkbox-4" name="oui-checkbox-4" type="checkbox" disabled="disabled" checked>
       <label class="oui-checkbox__label-container" for="oui-checkbox-4">
         <span class="oui-checkbox__label">
-          Checkbox Disabled
+          Checkbox Disabled Checked
           <span class="oui-checkbox__icon">
             <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
             <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
@@ -83,7 +83,7 @@ storiesOf('Styles/Checkbox', module)
       <input class="oui-checkbox__input" id="oui-checkbox-6" name="oui-checkbox-6" type="checkbox" checked>
       <label class="oui-checkbox__label-container" for="oui-checkbox-6">
         <span class="oui-checkbox__label">
-          Checkbox Error
+          Checkbox Error Checked
           <span class="oui-checkbox__icon">
             <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
             <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
