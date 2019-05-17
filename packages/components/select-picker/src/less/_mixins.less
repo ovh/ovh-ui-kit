@@ -6,13 +6,8 @@
   .select-picker(
     @selector
   ) {
-    #oui > .radio(
-      @selector
-    );
-
-    #oui > .radio-thumbnail(
-      @selector
-    );
+    #oui > .radio-base(@selector);
+    #oui > .choice-thumbnail(@selector);
 
     // sub components exceptions
     .oui-select,
@@ -89,7 +84,7 @@
 
     &__input:not(:disabled) ~ .@{selector}__label-container {
       .ui-select-match {
-        #oui > .thumbnail-base-color(
+        #oui > .choice-thumbnail-color(
           @oui-select-picker-value-border-color,
           @oui-select-picker-value-background-color,
           1px
