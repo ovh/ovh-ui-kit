@@ -11,7 +11,7 @@ export default class {
   }
 
   setActive() {
-    this.tabsCtrl.activeId = this.id;
+    this.tabsCtrl.model = this.id;
   }
 
   getNodeIndex() {
@@ -37,7 +37,7 @@ export default class {
 
     // Watch if hidden
     this.$scope.$watch(
-      () => this.tabsCtrl.activeId,
+      () => this.tabsCtrl.model,
       (value) => {
         this.isHidden = value !== this.id;
       },

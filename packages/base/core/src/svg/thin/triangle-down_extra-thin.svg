@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icons/System/triangle-down</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/System/triangle-down" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7.70710678,11.7071068 L11.2928932,15.2928932 C11.6834175,15.6834175 12.3165825,15.6834175 12.7071068,15.2928932 L16.2928932,11.7071068 C16.6834175,11.3165825 16.6834175,10.6834175 16.2928932,10.2928932 C16.1053568,10.1053568 15.8510029,10 15.5857864,10 L8.41421356,10 C7.86192881,10 7.41421356,10.4477153 7.41421356,11 C7.41421356,11.2652165 7.5195704,11.5195704 7.70710678,11.7071068 Z" id="Color" fill="#2859C0"></path>
+    </g>
+</svg>

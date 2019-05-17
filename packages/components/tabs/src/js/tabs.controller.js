@@ -1,8 +1,13 @@
+import find from 'lodash/find';
+import first from 'lodash/first';
+import isEmpty from 'lodash/isEmpty';
+
 export default class {
-  constructor($element, $timeout) {
+  constructor($element, $scope, $timeout) {
     'ngInject';
 
     this.$element = $element;
+    this.$scope = $scope;
     this.$timeout = $timeout;
   }
 
@@ -13,11 +18,6 @@ export default class {
     } else {
       this.items.push(item);
     }
-
-    // Set first added tab active
-    if (this.items.length === 1) {
-      this.setActiveTab(item);
-    }
   }
 
   removeItem(item) {
@@ -27,8 +27,8 @@ export default class {
       this.items.splice(index, 1);
     }
 
-    // If was activeId, set first item as active
-    if (this.items.length && item.id === this.activeId) {
+    // If was model, set first item as active
+    if (this.items.length && item.id === this.model) {
       this.setActiveTab(this.items[0]);
     }
   }
@@ -48,5 +48,11 @@ export default class {
     this.$timeout(() => this.$element
       .addClass('oui-tabs')
       .removeAttr('aria-label'));
+
+    this.$scope.$watch(() => this.items.length, () => {
+      if (!isEmpty(this.items.length)) {
+        this.setActiveTab(find(this.items, { id: this.model }) || first(this.items));
+      }
+    });
   }
 }

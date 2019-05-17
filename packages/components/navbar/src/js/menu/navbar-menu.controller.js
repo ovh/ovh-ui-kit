@@ -1,12 +1,13 @@
 import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
-  constructor($attrs, $element, $timeout, ouiNavbarConfiguration, KEYBOARD_KEYS) {
+  constructor($attrs, $element, $timeout, $transclude, ouiNavbarConfiguration, KEYBOARD_KEYS) {
     'ngInject';
 
     this.$attrs = $attrs;
     this.$element = $element;
     this.$timeout = $timeout;
+    this.$transclude = $transclude;
     this.config = ouiNavbarConfiguration;
     this.KEYBOARD_KEYS = KEYBOARD_KEYS;
   }
@@ -46,6 +47,8 @@ export default class {
   $onInit() {
     addBooleanParameter(this, 'backButton');
     addBooleanParameter(this, 'fixed');
+
+    this.transcludeHeader = this.$transclude.isSlotFilled('header');
   }
 
   $postLink() {

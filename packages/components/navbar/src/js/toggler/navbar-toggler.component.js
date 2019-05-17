@@ -13,4 +13,5 @@ export default {
   },
   controller,
   template,
+  transclude: true,
 };
