@@ -1,0 +1,30 @@
+@import '../_variables';
+
+// Responsive
+#oui {
+  .responsive(@maxWidth; @rules) {
+    @media screen and (max-width: (@maxWidth - 1px)) {
+      @rules();
+    }
+  }
+
+  // Responsive - Max width
+  .phone(@rules) {
+    #oui > .responsive(@oui-responsive-breakpoint-phone, @rules);
+  }
+
+  .tablet(@rules) {
+    #oui > .responsive(@oui-responsive-breakpoint-tablet, @rules);
+  }
+
+  .medium(@rules) {
+    #oui > .responsive(@oui-responsive-breakpoint-medium, @rules);
+  }
+
+  // Responsive - Min width
+  .desktop(@rules) {
+    @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
+      @rules();
+    }
+  }
+}

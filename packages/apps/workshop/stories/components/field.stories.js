@@ -11,6 +11,7 @@ angular.module(moduleName, [
   'oui.field',
 
   // For examples
+  'oui.form-actions',
   'oui.checkbox',
   'oui.radio',
   'oui.switch',
@@ -61,6 +62,8 @@ storiesOf('Components/Field', module)
           ng-model="$ctrl.user.username"
           ng-pattern="/^[a-zA-Z]{3,8}$/">
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `, {
       $ctrl: {
@@ -87,6 +90,8 @@ storiesOf('Components/Field', module)
           minlength="3"
           maxlength="32">
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -107,6 +112,8 @@ storiesOf('Components/Field', module)
           HSTS
         </oui-checkbox>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -135,6 +142,8 @@ storiesOf('Components/Field', module)
           UDP
         </oui-radio>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -149,6 +158,8 @@ storiesOf('Components/Field', module)
           required>
         </oui-switch>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -176,6 +187,8 @@ storiesOf('Components/Field', module)
           required>
         </oui-textarea>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -224,6 +237,8 @@ storiesOf('Components/Field', module)
           multiple>
         </oui-select>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -240,6 +255,8 @@ storiesOf('Components/Field', module)
           min="1">
         </oui-numeric>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -256,6 +273,8 @@ storiesOf('Components/Field', module)
           required>
         </oui-calendar>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     <form>
     `)),
   );
