@@ -8,18 +8,19 @@ angular.module('myModule', ['oui.radio']);
 
 ## Component `oui-radio`
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values            | Default   | Description
-| ----          | ----      | ----      | ----              | ----              | ----      | ----
-| `model`       | object    | =?        | no                | n/a               | n/a       | current value of the radio
-| `id`          | string    | @?        | yes               | n/a               | n/a       | id attribute of the radio
-| `name`        | string    | @?        | yes               | n/a               | n/a       | name attribute of the radio
-| `description` | string    | @?        | no                | n/a               | n/a       | description text
-| `variant`     | string    | @?        | yes               | `default`, `light`| `default` | used in conjunction with `thumbnail`. Defines specific style for the thumbnail
-| `value`       | object    | <         | no                | n/a               | n/a       | value of the radio
-| `disabled`    | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
-| `required`    | boolean   | <?        | no                | `true`, `false`   | `false`   | required flag
-| `thumbnail`   | boolean   | <?        | no                | `true`, `false`   | `false`   | thumbnail style of the radio
-| `on-change`   | function  | &?        | no                | n/a               | n/a       | handler triggered when value has changed
+| Attribute     | Type      | Binding   | One-time Binding  | Values              | Default   | Description
+| ----          | ----      | ----      | ----              | ----                | ----      | ----
+| `model`       | object    | =?        | no                | n/a                 | n/a       | current value of the radio
+| `id`          | string    | @?        | yes               | n/a                 | n/a       | id attribute of the radio
+| `name`        | string    | @?        | yes               | n/a                 | n/a       | name attribute of the radio
+| `description` | string    | @?        | no                | n/a                 | n/a       | description text
+| `size`        | string    | @?        | yes               | `m`                 | n/a       | radio size
+| `variant`     | string    | @?        | yes               | `default`, `light`  | `default` | used in conjunction with `thumbnail`. Defines specific style for the thumbnail  
+| `value`       | object    | <         | no                | n/a                 | n/a       | value of the radio
+| `disabled`    | boolean   | <?        | no                | `true`, `false`     | `false`   | disabled flag
+| `required`    | boolean   | <?        | no                | `true`, `false`     | `false`   | required flag
+| `thumbnail`   | boolean   | <?        | no                | `true`, `false`     | `false`   | thumbnail style of the radio
+| `on-change`   | function  | &?        | no                | n/a                 | n/a       | handler triggered when value has changed
 
 ### Attribute `on-change`
 
