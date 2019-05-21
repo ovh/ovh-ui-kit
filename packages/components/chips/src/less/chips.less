@@ -8,9 +8,9 @@
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: flex-start;
-  padding: rem-calc(5) rem-calc(18);
+  padding: @oui-chip-container-padding;
   background-color: @oui-chip-container-background-color;
-  border: 1px solid @oui-chip-container-border-color;
+  border: @oui-chip-container-border-size solid @oui-chip-container-border-color;
 }
 
 oui-chips {
@@ -33,7 +33,7 @@ oui-chips {
   border-radius: @oui-chip-border-radius;
   background-color: @oui-chip-background-color;
 
-  &__container & { margin: rem-calc(5) rem-calc(2); }
+  &__container & { margin: @oui-chip-container-item-spacing; }
 
   &__close {
     width: @oui-chip-height;
