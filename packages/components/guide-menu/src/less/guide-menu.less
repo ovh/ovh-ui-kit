@@ -1,3 +1,4 @@
+@import "~@ovh-ux/ui-kit.core/src/less/_mixins";
 @import "~@ovh-ux/ui-kit.core/src/less/_variables";
 @import './_variables';
 @import './_normalize';
@@ -13,10 +14,7 @@
   white-space: nowrap;
 
   &:focus {
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: initial;
-    outline-offset: -2px;
+    #oui > .outline-border();
   }
 
   &__icon {
