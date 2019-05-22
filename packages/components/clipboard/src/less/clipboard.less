@@ -1,6 +1,7 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import '~@ovh-ux/ui-kit.input/src/less/input-group';
+@import './_variables.less';
 
 // Clipboard
 .oui-clipboard {
@@ -17,26 +18,26 @@
 
       cursor: pointer;
       margin: 0;
-      padding-right: @oui-input-group-button-min-width;
-      color: @oui-input-font-color;
-      box-shadow: @oui-input-shadow;
-      border-radius: @oui-global-base-radius;
-      border-color: @oui-input-border-color;
-      background-color: @oui-input-background-color;
+      padding-right: @oui-clipboard-button-width;
+      color: @oui-clipboard-font-color;
+      box-shadow: @oui-clipboard-box-shadow;
+      border-radius: @oui-clipboard-border-radius;
+      border-color: @oui-clipboard-border-color;
+      background-color: @oui-clipboard-background-color;
     }
 
     &:hover {
-      border-color: @oui-input-border-color-hover;
+      border-color: @oui-clipboard-border-color_hover;
     }
 
     &:focus {
       #oui > .animate();
 
       transition-property: border-color, box-shadow, background-color;
-      border-color: @oui-input-border-color-focus;
+      border-color: @oui-clipboard-border-color_focus;
       outline: none;
-      box-shadow: @oui-input-shadow-focus;
-      background-color: @oui-input-background-color-focus;
+      box-shadow: @oui-clipboard-box-shadow_focus;
+      background-color: @oui-clipboard-background-color_focus;
       text-decoration: none;
     }
   }
@@ -49,7 +50,7 @@
       top: 0;
       right: 0;
       bottom: 0;
-      min-width: @oui-input-group-button-min-width;
+      min-width: @oui-clipboard-button-width;
       width: auto;
       border-color: transparent;
       background: transparent;
