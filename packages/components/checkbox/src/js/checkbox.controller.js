@@ -11,8 +11,6 @@ export default class {
   }
 
   $postLink() {
-    addBooleanParameter(this, 'required');
-
     // Sometimes the digest cycle is done before dom manipulation,
     // So we use $timeout to force the $apply
     this.$timeout(() => this.$element
@@ -30,7 +28,9 @@ export default class {
   $onInit() {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'required');
+    addBooleanParameter(this, 'thumbnail');
     addDefaultParameter(this, 'id', `ouiCheckbox${this.$scope.$id}`);
+    addDefaultParameter(this, 'variant', 'default');
   }
 
   hasError() {
