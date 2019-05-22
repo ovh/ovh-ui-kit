@@ -1,7 +1,6 @@
-@import "~@ovh-ux/ui-kit.core/src/less/_mixins";
-@import "~@ovh-ux/ui-kit.core/src/less/_variables";
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
+@import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import './_variables';
-@import './_normalize';
 
 .oui-guide-button {
   color: @oui-guide-button-font-color;
@@ -23,20 +22,31 @@
   }
 
   &__text {
-    margin-left: 10px;
+    margin-left: @oui-guide-button-icon-spacing;
     font-size: @oui-guide-button-font-size;
-    font-weight: 600;
+    font-weight: @oui-guide-button-font-weight;
     vertical-align: middle;
   }
 
   @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 100%;
-    width: rem-calc(36);
-    height: rem-calc(36);
+    background: @oui-guide-button-responsive-background-color;
+    border-radius: @oui-guide-button-responsive-border-radius;
+    width: @oui-guide-button-responsive-size;
+    height: @oui-guide-button-responsive-size;
 
     &__text {
       display: none;
     }
+  }
+}
+
+oui-guide-menu {
+  display: inline-block;
+
+  &-content,
+  &-group,
+  &-item,
+  &-divider {
+    display: block;
   }
 }
