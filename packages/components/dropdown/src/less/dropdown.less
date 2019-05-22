@@ -151,6 +151,47 @@
       }
     }
 
+    &[x-placement^="left"] {
+      margin-right: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
+
+      .oui-dropdown-menu__arrow {
+        margin: @oui-dropdown-arrow-margin 0;
+        left: 100%;
+        border-left-color: @oui-dropdown-menu-border-color;
+
+        &::before {
+          top: 0;
+          border-left-color: @oui-dropdown-menu-border-color;
+        }
+
+        &::after {
+          top: @oui-dropdown-arrow-diff-size;
+          border-left-color: @oui-dropdown-menu-background-color;
+        }
+      }
+    }
+
+    &[x-placement^="right"] {
+      margin-left: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
+
+      .oui-dropdown-menu__arrow {
+        margin: @oui-dropdown-arrow-margin 0;
+        border-right-color: @oui-dropdown-menu-border-color;
+
+        &::before {
+          top: 0;
+          right: 100%;
+          border-right-color: @oui-dropdown-menu-border-color;
+        }
+
+        &::after {
+          right: 100%;
+          top: @oui-dropdown-arrow-diff-size;
+          border-right-color: @oui-dropdown-menu-background-color;
+        }
+      }
+    }
+
     &[x-placement^="top"] {
       margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
 
