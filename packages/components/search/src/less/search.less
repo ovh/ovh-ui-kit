@@ -9,10 +9,10 @@
 
   .oui-input:first-child {
     padding-right: @oui-search-padding-right;
-    border-radius: @oui-global-base-radius;
+    border-radius: @oui-search-border-radius;
 
     &:disabled {
-      color: @oui-color-shuttle;
+      color: @oui-search-input-font-color_disabled;
     }
   }
 
@@ -42,14 +42,14 @@
     &,
     &:hover,
     &:focus {
-      color: @oui-color-sapphire;
+      color: @oui-search-button-font-color_hover;
       border-color: transparent;
       background: transparent;
       box-shadow: none;
     }
 
     &:disabled {
-      color: @oui-color-silver;
+      color: @oui-search-button-font-color_disabled;
       border-color: transparent;
       background: transparent;
       box-shadow: none;
