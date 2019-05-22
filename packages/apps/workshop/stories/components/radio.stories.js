@@ -71,6 +71,70 @@ storiesOf('Components/Radio', module)
     })),
   )
   .add(
+    'Thumbnails',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-radio
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      value="a"
+      thumbnail>
+      Thumbnail
+    </oui-radio>
+    <oui-radio
+      description="Pellentesque euismod magna rutrum lectus gravida semper."
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      variant="light"
+      value="b"
+      thumbnail>
+      Thumbnail Light
+    </oui-radio>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })),
+  )
+  .add(
+    'Size',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-radio
+      description="Pellentesque euismod magna rutrum lectus gravida semper."
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      size="m">
+      Medium
+    </oui-radio>
+    <oui-radio
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      size="m"
+      thumbnail>
+      Thumbnail
+    </oui-radio>
+    <oui-radio
+      description="Pellentesque euismod magna rutrum lectus gravida semper."
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      size="m"
+      variant="light"
+      thumbnail>
+      Thumbnail Light
+    </oui-radio>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })),
+  )
+  .add(
     'In group',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-radio-group
