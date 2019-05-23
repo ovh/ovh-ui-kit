@@ -1,28 +1,34 @@
 // Progress Tracker
-@oui-progress-tracker-font-color: @oui-color-dusty;
-@oui-progress-tracker-font-color-active: #fff;
-@oui-progress-tracker-font-color-complete: #fff;
-@oui-progress-tracker-font-color-error: #fff;
+@oui-progress-tracker-margin: 0 0 rem-calc(20);
+@oui-progress-tracker-step-spacing: rem-calc(30);
+@oui-progress-tracker-connector-spacing: rem-calc(5);
 @oui-progress-tracker-font-size: rem-calc(16);
-@oui-progress-tracker-status-size_error: @oui-font-semibold;
-
-@oui-progress-tracker-label-color: @oui-color-silver;
-@oui-progress-tracker-label-color-active: @oui-color-sapphire;
-@oui-progress-tracker-label-color-complete: @oui-color-sapphire;
-@oui-progress-tracker-label-color-error: @oui-color-error-dark;
-@oui-progress-tracker-label-line-height: 1.4;
-
-@oui-progress-tracker-icon-height: ~"calc(@{oui-progress-tracker-font-size} * 2)";
-@oui-progress-tracker-icon-size: rem-calc(20);
-@oui-progress-tracker-icon-size_success: rem-calc(18);
-@oui-progress-tracker-icon-spacing: rem-calc(10);
-@oui-progress-tracker-icon-size_error: rem-calc(18);
-@oui-progress-tracker-icon-error: @oui-icon-index-close;
+@oui-progress-tracker-font-weight: @oui-font-regular;
 
 @oui-progress-tracker-background-color: @oui-color-nurse;
-@oui-progress-tracker-background-color-active: @oui-color-sapphire;
-@oui-progress-tracker-background-color-complete: @oui-color-success-medium;
-@oui-progress-tracker-background-color-error: @oui-color-error-dark;
+@oui-progress-tracker-background-color_active: @oui-color-sapphire;
+@oui-progress-tracker-background-color_complete: @oui-color-success-medium;
+@oui-progress-tracker-background-color_error: @oui-color-error-dark;
 
-@oui-progress-tracker-connector-spacing: rem-calc(5);
-@oui-progress-tracker-container-margin: 0 0 rem-calc(20);
+@oui-progress-tracker-font-color: @oui-color-dusty;
+@oui-progress-tracker-font-color_active: #fff;
+@oui-progress-tracker-font-color_complete: #fff;
+@oui-progress-tracker-font-color_error: #fff;
+
+@oui-progress-tracker-label-color: @oui-color-silver;
+@oui-progress-tracker-label-color_active: @oui-color-sapphire;
+@oui-progress-tracker-label-color_complete: @oui-color-sapphire;
+@oui-progress-tracker-label-color_error: @oui-color-error-dark;
+@oui-progress-tracker-label-font-weight: @oui-font-semibold;
+@oui-progress-tracker-label-line-height: 1.4;
+
+@oui-progress-tracker-status-height: ~"calc(@{oui-progress-tracker-font-size} * 2)";
+@oui-progress-tracker-status-spacing: rem-calc(10);
+@oui-progress-tracker-status-font-family_complete: @oui-global-base-font-family-icon;
+@oui-progress-tracker-status-font-family_error: @oui-global-base-font-family-icon;
+@oui-progress-tracker-status-font-weight: @oui-font-semibold;
+@oui-progress-tracker-status-font-size: rem-calc(20);
+@oui-progress-tracker-status-font-size_complete: rem-calc(18);
+@oui-progress-tracker-status-font-size_error: rem-calc(18);
+@oui-progress-tracker-status-icon_complete: @oui-icon-index-ok_extra-thin;
+@oui-progress-tracker-status-icon_error: @oui-icon-index-close_extra-thin;
