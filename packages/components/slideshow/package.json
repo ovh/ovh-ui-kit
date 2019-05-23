@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@ovh-ux/ui-kit.core": "*",
-    "@ovh-ux/ui-kit.modal": "*",
     "@ovh-ux/ui-kit.spinner": "*",
     "angular": ">=1.6.x"
   },
