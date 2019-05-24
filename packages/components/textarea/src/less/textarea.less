@@ -1,13 +1,100 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
-@import './_mixins';
-@import './_normalize';
+@import './_variables';
 
 .oui-textarea {
-  @oui-textarea-selector: oui-textarea;
+  #oui > .animate();
+  #oui > .base-font();
 
-  #oui > .textarea-normalize();
-  #oui > .textarea-base(@oui-textarea-selector);
-  #oui > .textarea-error(@oui-textarea-selector);
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+
+  transition-property: border-color, box-shadow, background-color;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: @oui-textarea-margin;
+  color: @oui-textarea-font-color;
+  background-color: @oui-textarea-background-color;
+  border-radius: @oui-textarea-border-radius;
+  box-shadow: @oui-textarea-box-shadow;
+  border: @oui-textarea-border-width solid @oui-textarea-border-color;
+
+  &__textarea {
+    display: block;
+    flex-grow: 1;
+    min-width: 100%;
+    max-width: 100%;
+    outline: none;
+    padding: @oui-textarea-field-padding;
+    border: none;
+    background-color: transparent;
+    font-size: @oui-textarea-font-size;
+    line-height: @oui-textarea-line-height;
+    font-weight: @oui-textarea-font-weight;
+    font-family: inherit;
+    color: inherit;
+
+    &::selection {
+      background: @oui-textarea-selection-background-color;
+      color: @oui-textarea-selection-font-color;
+    }
+  }
+
+  &__footer {
+    #oui > .animate();
+
+    transition-property: border-color, color;
+    display: block;
+    padding: @oui-textarea-footer-padding;
+    border-top: @oui-textarea-border-width solid @oui-textarea-border-color;
+    text-align: right;
+    font-size: @oui-textarea-footer-font-size;
+    color: @oui-textarea-footer-color;
+  }
+
+  &_xs &__footer {
+    display: none;
+  }
+
+  // Set this state when element is focused.
+  &_active {
+    border-color: @oui-textarea-border-color_focus;
+    outline: none;
+    background-color: @oui-textarea-background-color_focus;
+    box-shadow: @oui-textarea-box-shadow_focus;
+  }
+
+  &_disabled {
+    background-color: @oui-textarea-background-color_disabled;
+    border-color: @oui-textarea-border-color_disabled;
+    box-shadow: none;
+    color: @oui-textarea-font-color_disabled;
+  }
+
+  &_readonly {
+    background-color: @oui-textarea-background-color_readonly;
+    border-color: @oui-textarea-border-color_readonly;
+    box-shadow: none;
+  }
+
+  &_error,
+  .oui-field_error & {
+    border-color: @oui-textarea-border-color_error;
+    background-color: @oui-textarea-background-color_error;
+    box-shadow: none;
+    color: @oui-textarea-font-color_error;
+
+    .oui-textarea__footer {
+      border-color: @oui-textarea-border-color_error;
+      color: @oui-textarea-font-color_error;
+    }
+  }
+}
+
+oui-textarea {
+  display: block;
 }
 
 // Size variants
@@ -15,19 +102,78 @@
 
 // Fieldset
 :disabled .oui-textarea {
-  #oui > .textarea-disabled();
+  background-color: @oui-textarea-background-color_disabled;
+  border-color: @oui-textarea-border-color_disabled;
+  box-shadow: none;
+  color: @oui-textarea-font-color_disabled;
 }
 
 // Legacy styling
 textarea.oui-textarea {
-  #oui > .textarea-normalize();
-  #oui > .textarea-legacy-base();
+  #oui > .animate();
+  #oui > .base-font();
+
+  width: 100%;
+  padding: @oui-textarea-field-padding;
+  font-size: @oui-textarea-font-size;
+  line-height: @oui-textarea-line-height;
+  font-weight: @oui-textarea-font-weight;
+  color: @oui-textarea-font-color;
+
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+  }
+
+  &::selection {
+    background: @oui-textarea-selection-background-color;
+    color: @oui-textarea-selection-font-color;
+  }
+
+  &:focus {
+    border-color: @oui-textarea-border-color_focus;
+    outline: none;
+    background-color: @oui-textarea-background-color_focus;
+    box-shadow: @oui-textarea-box-shadow_focus;
+  }
+
+  &:disabled {
+    background-color: @oui-textarea-background-color_disabled;
+    border-color: @oui-textarea-border-color_disabled;
+    box-shadow: none;
+    color: @oui-textarea-font-color_disabled;
+  }
+
+  &:read-only {
+    background-color: @oui-textarea-background-color_readonly;
+    border-color: @oui-textarea-border-color_readonly;
+    box-shadow: none;
+  }
 
   &_error {
-    #oui > .textarea-legacy-error();
+    color: @oui-textarea-font-color_error;
+
+    &:not(:disabled),
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
+      border-color: @oui-textarea-border-color_error;
+      background-color: @oui-textarea-background-color_error;
+      box-shadow: none;
+    }
+
+    &:not(:disabled):focus {
+      box-shadow: @oui-textarea-box-shadow_error;
+    }
+
+    &::selection {
+      background: @oui-textarea-selection-background-color_error;
+      color: @oui-textarea-selection-font-color_error;
+    }
   }
 
   &_inline {
-    #oui > .textarea-legacy-inline();
+    display: inline-block;
+    width: auto;
   }
 }

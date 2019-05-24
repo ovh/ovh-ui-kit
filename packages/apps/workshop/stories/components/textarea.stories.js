@@ -24,6 +24,7 @@ storiesOf('Components/Textarea', module)
       $ctrl: {
         disabled: boolean('Disabled state', false),
         readonly: boolean('Read-only state', false),
+        model: 'Lorem ipsum dolor sit amet',
         onChange: action('onClick'),
       },
     })),
