@@ -21,7 +21,7 @@
   border: none;
   user-select: none;
   overflow-y: hidden;
-  -webkit-appearance: none;
+  appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   // Required to fix alignment when a button is beside of an
@@ -73,12 +73,10 @@ oui-button {
 
   .oui-icon-chevron-down {
     position: absolute;
-    right: 0;
+    right: 1px;
     top: 1px;
     bottom: 1px;
-    width: ~"calc(@{oui-button-dropdown-icon-size} * 2.5)";
-    height: auto;
-    margin: auto;
+    color: inherit;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -87,7 +85,7 @@ oui-button {
     &::before {
       display: inline-block;
       margin-right: @oui-button-dropdown-margin-right;
-      color: @oui-button-dropdown-icon-color;
+      color: inherit;
       font-size: @oui-button-dropdown-icon-size;
     }
   }
@@ -97,22 +95,10 @@ oui-button {
     border-color: @oui-button-dropdown-border-color_active;
     background: @oui-button-dropdown-background-color_active;
     box-shadow: none;
-
-    .oui-icon-chevron-down {
-      &::before {
-        color: @oui-button-dropdown-icon-color_active;
-      }
-    }
   }
 
   &:disabled {
     color: @oui-button-dropdown-color;
-
-    .oui-icon-chevron-down {
-      &::before {
-        color: @oui-button-dropdown-icon-color_disabled;
-      }
-    }
   }
 
   &.open .oui-icon-chevron-down {

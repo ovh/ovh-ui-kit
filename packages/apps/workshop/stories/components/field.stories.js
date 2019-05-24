@@ -240,7 +240,23 @@ storiesOf('Components/Field', module)
 
       <oui-form-actions></oui-form-actions>
     </form>
-    `)),
+    `, {
+      $ctrl: {
+        osList: [{
+          name: 'freebsd',
+          label: 'FreeBSD',
+        }, {
+          name: 'linux',
+          label: 'Linux',
+        }, {
+          name: 'osx',
+          label: 'OSX',
+        }, {
+          name: 'windows',
+          label: 'Windows',
+        }],
+      },
+    })),
   )
   .add(
     'Numeric',
