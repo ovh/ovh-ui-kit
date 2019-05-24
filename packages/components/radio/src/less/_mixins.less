@@ -88,7 +88,7 @@
 
       &:checked ~ .@{selector}__label-container:not(:active):hover {
         #oui > .radio-color(
-          @icon-outer-color: @oui-radio-icon-outer-color_hover-checked
+          @icon-outer-color: @oui-radio-icon-outer-color_checked-hover
         );
       }
     }
@@ -196,16 +196,6 @@
       .@{selector}__input:checked:not(:disabled):focus ~ .@{selector}__label-container {
         border-color: @@status-border-color;
         box-shadow: 0 0 3px 0 @@status-border-color;
-      }
-    }
-
-    &.@{selector}_thumbnail-light {
-      .@{selector}__input:not(:disabled) ~ .@{selector}__label-container {
-        background: @oui-choice-thumbnail-background-light;
-
-        &:hover {
-          background: @oui-choice-thumbnail-background-light_hover;
-        }
       }
     }
   }

@@ -9,7 +9,7 @@ body {
 abbr[title],
 abbr[oui-tooltip],
 abbr[data-oui-tooltip] {
-  border-bottom: dashed 1px @oui-color-pacific;
+  border-bottom: dashed @oui-abbr-border-width @oui-abbr-border-color;
   text-decoration: none;
   cursor: help;
 }
@@ -41,34 +41,7 @@ h,
 // Links
 a,
 .oui-link {
-  #oui > .base-font();
-
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: @oui-link-font-color;
-  text-decoration: oui-link-text-decoration;
-  line-height: inherit;
-  cursor: pointer;
-  -webkit-text-decoration-skip: objects;
-
-  &:active,
-  &:hover {
-    outline-width: 0;
-  }
-
-  &:hover,
-  &:focus {
-    color: @oui-link-font-color_hover;
-  }
-
-  &:hover {
-    text-decoration: @oui-link-text-decoration_hover;
-  }
-
-  img {
-    border: none;
-  }
+  #oui > .link();
 }
 
 .oui-link_icon .oui-icon {

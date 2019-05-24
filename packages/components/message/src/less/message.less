@@ -1,43 +1,106 @@
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
+@import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import './_mixins';
-@import './_normalize';
+@import './_variables';
 
 .oui-message {
-  @oui-message-selector: oui-message;
+  #oui > .base-font();
 
-  #oui > .message-normalize();
-  #oui > .message-base();
+  position: relative;
+  min-height: @oui-message-min-height;
+  padding: @oui-message-padding;
+  border: @oui-message-border-width solid @oui-message-border-color;
+  border-radius: @oui-message-border-radius;
+  margin: @oui-message-margin;
+  background-color: @oui-message-background-color;
+  color: @oui-message-font-color;
+  font-size: @oui-message-font-size;
+  line-height: @oui-message-line-height;
+  font-weight: @oui-message-font-weight;
 
+  &__icon {
+    position: absolute;
+    display: block;
+    top: @oui-message-icon-position-top;
+    left: @oui-message-icon-position-left;
+    font-size: @oui-message-icon-size;
+  }
+
+  &__body {
+    margin: 0;
+  }
+
+  &__close-button {
+    #oui > .animate();
+
+    cursor: pointer;
+    position: absolute;
+    top: @oui-message-close-button-top;
+    right: @oui-message-close-button-right;
+    min-width: @oui-message-close-button-width;
+    min-height: @oui-message-close-button-height;
+    padding: @oui-message-close-button-padding;
+    border: @oui-message-close-button-border;
+    margin: @oui-message-close-button-margin;
+    background-color: @oui-message-close-button-background-color;
+    opacity: @oui-message-close-button-opacity;
+    color: @oui-message-close-button-color;
+    font-size: @oui-message-close-button-font-size;
+    line-height: 0;
+    text-align: center;
+
+    &::before {
+      display: block;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      #oui > .animate();
+
+      outline: none;
+      opacity: @oui-message-close-button-opacity_hover;
+    }
+  }
+
+  // Variants
   &_success {
-    #oui > .message-success();
+    #oui > .message-color(
+      @font-color: @oui-message-success-font-color,
+      @border-color: @oui-message-success-border-color,
+      @background-color: @oui-message-success-background-color,
+      @icon-color: @oui-message-success-icon-color
+    );
   }
 
   &_info {
-    #oui > .message-info();
+    #oui > .message-color(
+      @font-color: @oui-message-info-font-color,
+      @border-color: @oui-message-info-border-color,
+      @background-color: @oui-message-info-background-color,
+      @icon-color: @oui-message-info-icon-color
+    );
   }
 
   &_warning {
-    #oui > .message-warning();
-    #oui > .message-l-warning(@oui-message-selector);
+    #oui > .message-color(
+      @font-color: @oui-message-warning-font-color,
+      @border-color: @oui-message-warning-border-color,
+      @background-color: @oui-message-warning-background-color,
+      @icon-color: @oui-message-warning-icon-color
+    );
   }
 
   &_error {
-    #oui > .message-error();
-    #oui > .message-l-error(@oui-message-selector);
+    #oui > .message-color(
+      @font-color: @oui-message-error-font-color,
+      @border-color: @oui-message-error-border-color,
+      @background-color: @oui-message-error-background-color,
+      @icon-color: @oui-message-error-icon-color
+    );
   }
+}
 
-  &_icon-m {
-    #oui > .message-icon-m();
-  }
-
-  &_no-icon {
-    #oui > .message-no-icon();
-  }
-
-  &_no-border {
-    #oui > .message-no-border();
-  }
-
-  &_l {
-    #oui > .message-l(@oui-message-selector);
-  }
+oui-message {
+  display: block;
 }

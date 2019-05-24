@@ -1,20 +1,21 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import '~@ovh-ux/ui-kit.button/src/less/button';
+@import './_variables';
 
 .oui-inline-adder {
   #oui > .base-font();
 
-  margin-bottom: rem-calc(20);
+  margin-bottom: @oui-inline-adder-margin-bottom;
 
   &__form {
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin-bottom: rem-calc(20);
-    border: 1px solid @oui-color-ironlight;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.06);
-    background-color: @oui-color-white;
+    margin-bottom: @oui-inline-adder-row-spacing;
+    border: @oui-inline-adder-border-width solid @oui-inline-adder-border-color;
+    box-shadow: @oui-inline-adder-box-shadow;
+    background-color: @oui-inline-adder-background-color;
   }
 
   &__fieldset {
@@ -23,13 +24,13 @@
   }
 
   &__row {
-    padding: rem-calc(20);
+    padding: @oui-inline-adder-row-padding;
     padding-bottom: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 
-    & + & { border-top: 1px solid @oui-color-silver; }
+    & + & { border-top: @oui-inline-adder-border-width solid @oui-inline-adder-border-color; }
 
     #oui > .phone({
       flex-direction: column;
@@ -40,7 +41,7 @@
     flex: 1;
 
     & + & {
-      margin-left: rem-calc(10);
+      margin-left: @oui-inline-adder-field-spacing;
 
       #oui > .phone({
         margin-left: 0;
@@ -53,28 +54,28 @@
   }
 
   &__footer {
-    padding: rem-calc(10);
+    padding: @oui-inline-adder-footer-padding;
     flex: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: @oui-color-concrete;
+    background-color: @oui-inline-adder-footer-background-color;
   }
 
   &__action {
     &:extend(.oui-button, .oui-button_secondary);
 
-    min-width: @oui-button-small-width-min-width;
-    padding-left: @oui-button-small-width-padding-left-right;
-    padding-right: @oui-button-small-width-padding-left-right;
-    width: rem-calc(40);
-    height: rem-calc(40);
+    min-width: @oui-inline-adder-action-size;
+    width: @oui-inline-adder-action-size;
+    height: @oui-inline-adder-action-size;
+    padding-left: @oui-inline-adder-action-padding-x;
+    padding-right: @oui-inline-adder-action-padding-x;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .oui-icon {
-      font-size: rem-calc(16);
+      font-size: @oui-inline-adder-action-icon-size;
 
       &::before {
         display: inline;

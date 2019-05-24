@@ -1,35 +1,37 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
+@import './_variables';
 
 .oui-status {
   #oui > .base-font();
 
-  border: none;
-  border-radius: 50px;
-  color: @oui-color-sapphire;
+  background: @oui-status-background-color;
+  border: @oui-status-border;
+  border-radius: @oui-status-border-radius;
+  color: @oui-status-font-color;
   display: inline-block;
-  font-size: rem-calc(16);
-  font-weight: @oui-font-regular;
-  line-height: 1.375;
-  max-width: rem-calc(200);
+  font-size: @oui-status-font-size;
+  font-weight: @oui-status-font-weight;
+  line-height: @oui-status-line-height;
+  max-width: @oui-status-max-width;
   overflow: hidden;
-  padding: rem-calc(4) rem-calc(10);
+  padding: @oui-status-padding;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: middle;
 
   &_success {
-    background-color: @oui-color-success-fade;
+    background-color: @oui-status-background-color_success;
   }
 
   &_info {
-    background-color: @oui-color-info-fade;
+    background-color: @oui-status-background-color_info;
   }
 
   &_warning {
-    background-color: @oui-color-warning-fade;
+    background-color: @oui-status-background-color_warning;
   }
 
   &_error {
-    background-color: @oui-color-error-fade;
+    background-color: @oui-status-background-color_error;
   }
 }

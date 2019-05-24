@@ -1,22 +1,21 @@
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import './_variables';
-@import './_normalize';
 
 .oui-collapsible {
-  #oui > .collapsible-normalize();
+  #oui > .base-font();
 
   display: block;
   margin: @oui-collapsible-margin;
-  font-size: rem-calc(16);
 
   &__toggle-icon {
-    color: inherit;
+    color: @oui-collapsible-icon-color;
 
     &::before {
       transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: rem-calc(13);
-      right: rem-calc(14);
-      height: rem-calc(10);
-      line-height: rem-calc(10);
+      font-size: @oui-collapsible-icon-size;
+      right: @oui-collapsible-icon-spacing;
+      height: @oui-collapsible-icon-size;
+      line-height: @oui-collapsible-icon-size;
     }
   }
 
@@ -25,9 +24,9 @@
     height: @oui-collapsible-header-height;
     margin: 0;
     padding: @oui-collapsible-header-padding;
-    background-color: @oui-collapsible-inactive-color;
+    background-color: @oui-collapsible-background-color;
 
-    &:hover { background-color: @oui-collapsible-active-color; }
+    &:hover { background-color: @oui-collapsible-background-color_active; }
   }
 
   &__wrapper {
@@ -36,18 +35,18 @@
   }
 
   &__body {
-    padding: rem-calc(15);
-    border: 1px solid @oui-collapsible-active-color;
+    padding: @oui-collapsible-padding;
+    border: @oui-collapsible-border-width solid @oui-collapsible-border-color;
     border-top: none;
-    border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
+    border-radius: 0 0 @oui-collapsible-border-radius @oui-collapsible-border-radius;
   }
 
   &__header[aria-expanded="true"] {
-    background-color: @oui-collapsible-active-color;
+    background-color: @oui-collapsible-background-color_active;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 
-    &:hover { background-color: @oui-collapsible-inactive-color; }
+    &:hover { background-color: @oui-collapsible-background-color; }
   }
 
   &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
@@ -58,4 +57,8 @@
     height: 0 !important;
     // stylelint-enable declaration-no-important
   }
+}
+
+oui-collapsible {
+  &:extend(.oui-collapsible);
 }

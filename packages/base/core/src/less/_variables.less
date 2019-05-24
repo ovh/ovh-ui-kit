@@ -65,11 +65,16 @@
 @oui-icon-size: 1.5em;
 @oui-icon-color: inherit;
 @oui-icon-char-color: #fff;
+@oui-icon-font-family: @oui-global-base-font-family-icon;
 
 @oui-icon-circle-border-radius: 50%;
 @oui-icon-circle-background: #000;
 @oui-icon-circle-color: #fff;
 @oui-icon-circle-size: 1em;
+
+// Abbreviations
+@oui-abbr-border-color: @oui-color-pacific;
+@oui-abbr-border-width: 1px;
 
 // Heading
 @oui-heading-border-width: 2px;
@@ -134,7 +139,6 @@
 @oui-choice-font-color: @oui-color-sapphire;
 @oui-choice-font-color_disabled: @oui-color-sapphire;
 @oui-choice-margin: 0;
-@oui-choice-padding: 0;
 @oui-choice-padding-left: rem-calc(9);
 
 @oui-choice-description-spacing: rem-calc(5);
@@ -144,6 +148,33 @@
 @oui-choice-section-border-color: @oui-choice-thumbnail-border-color;
 
 @oui-choice-inline-spacing: rem-calc(20);
+
+// Choice - Custom icon
+@oui-choice-icon-size: rem-calc(16);
+
+@oui-choice-icon-background-color: #fff;
+@oui-choice-icon-background-color_active: @oui-color-foam;
+@oui-choice-icon-background-color_disabled: @oui-color-concrete;
+
+@oui-choice-icon-outer-color: @oui-color-dusty;
+@oui-choice-icon-outer-color_active: @oui-color-pacific;
+@oui-choice-icon-outer-color_disabled: @oui-color-silver;
+@oui-choice-icon-outer-color_focus: @oui-color-sapphire;
+@oui-choice-icon-outer-color_hover: @oui-color-sapphire;
+@oui-choice-icon-outer-color_checked: @oui-color-sapphire;
+@oui-choice-icon-outer-color_checked-hover: @oui-color-info-light;
+
+@oui-choice-icon-inner-color: @oui-color-sapphire;
+@oui-choice-icon-inner-color_active: @oui-color-pacific;
+@oui-choice-icon-inner-color_disabled: @oui-color-silver;
+
+@oui-choice-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+
+// Choice - M Variant
+@oui-choice-m-line-height: @oui-choice-line-height;
+@oui-choice-m-font-size: rem-calc(24);
+
+@oui-choice-m-icon-size: rem-calc(20);
 
 // Choice - Thumbnail
 @oui-choice-thumbnail-padding: rem-calc(20);

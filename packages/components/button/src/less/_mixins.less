@@ -39,6 +39,7 @@
     @border-color: @oui-button-hollow-border-color,
     @border-color_hover: @oui-button-hollow-border-color_hover,
     @border-color_disabled: @oui-button-hollow-border-color_disabled,
+    @border-size: @oui-button-hollow-border-size,
     @background-color_disabled: @oui-button-hollow-background-color_disabled,
     @box-shadow_active: @oui-button-hollow-box-shadow_active,
     @box-shadow_focus: @oui-button-hollow-box-shadow_focus,
@@ -47,7 +48,7 @@
   ) {
     padding: @padding;
     background-color: @background-color;
-    border: 1px solid @border-color;
+    border: @border-size solid @border-color;
 
     &:hover,
     &:focus {

@@ -1,24 +1,133 @@
-@import './_mixins';
-@import './_normalize';
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
+@import './_variables';
 
 .oui-modal {
-  @oui-button-selector: oui-button;
+  #oui > .base-font();
 
-  #oui > .modal-normalize();
+  margin: @oui-modal-spacing;
+  border-radius: @oui-global-base-radius-medium;
+  border: none;
+  font-size: @oui-modal-font-size;
+  background-color: @oui-modal-background-color;
 
-  #oui > .modal-base(@oui-button-selector);
+  &__header {
+    position: relative;
+    height: @oui-modal-close-button-size + @oui-modal-close-button-padding-y * 2;
+    border-top-right-radius: @oui-global-base-radius-medium;
+    border-top-left-radius: @oui-global-base-radius-medium;
+    background-color: @oui-modal-header-background-color;
+  }
 
-  #oui > .modal-icon-base(oui-icon-success_circle, @oui-modal-icon-success-color);
-  #oui > .modal-icon-base(oui-icon-error_circle, @oui-modal-icon-error-color);
-  #oui > .modal-icon-base(oui-icon-warning_circle, @oui-modal-icon-warning-color);
-  #oui > .modal-icon-base(oui-icon-info_circle, @oui-modal-icon-info-color);
-  #oui > .modal-icon-base(oui-icon-help_circle, @oui-modal-icon-help-color);
+  &__close-button {
+    #oui > .animate();
+
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: @oui-modal-close-button-size;
+    min-height: @oui-modal-close-button-size;
+    padding: @oui-modal-close-button-padding-y @oui-modal-close-button-padding-x;
+    border: none;
+    margin: 0;
+    background-color: transparent;
+    color: @oui-modal-close-button-color;
+    font-size: @oui-modal-close-button-size;
+    line-height: 1;
+    text-align: center;
+
+    &::before {
+      display: block;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      #oui > .animate();
+
+      outline: none;
+      opacity: 1;
+    }
+  }
+
+  &__body {
+    position: relative;
+    padding: @oui-modal-body-padding;
+    color: @oui-modal-body-color;
+
+    &_no-icon {
+      padding: @oui-modal-body-padding-no-icon;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    color: @oui-modal-title-color;
+    font-size: rem-calc(21);
+    line-height: rem-calc(22.4);
+    letter-spacing: 0.01em;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: @oui-modal-body-color;
+    font-size: rem-calc(16);
+    line-height: rem-calc(22.4);
+    letter-spacing: 0.01em;
+    font-weight: 400;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__loader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @oui-modal-loader-background-color;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: @oui-modal-footer-padding;
+    border-top: 0 none;
+
+    .oui-button {
+      margin-bottom: 0;
+    }
+
+    .oui-button + .oui-button {
+      margin-left: @oui-modal-footer-button-spacing;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    top: @oui-modal-icon-position-top;
+    left: @oui-modal-icon-position-left;
+    font-size: @oui-modal-icon-font-size;
+
+    &.oui-icon-success_circle { color: @oui-modal-icon-success-color; }
+    &.oui-icon-error_circle { color: @oui-modal-icon-error-color; }
+    &.oui-icon-warning_circle { color: @oui-modal-icon-warning-color; }
+    &.oui-icon-info_circle { color: @oui-modal-icon-info-color; }
+    &.oui-icon-help_circle { color: @oui-modal-icon-help-color; }
+  }
 
   &_shadow {
-    #oui > .modal-shadow();
+    box-shadow: @oui-modal-shadow;
   }
 }
 
+oui-modal {
+  display: block;
+}
+
 .oui-modal-backdrop {
-  #oui > .modal-backdrop();
+  background-color: @oui-modal-backdrop-color;
 }

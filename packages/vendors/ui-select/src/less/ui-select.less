@@ -1,3 +1,4 @@
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import '~@ovh-ux/ui-kit.button/src/less/button';
 @import '~@ovh-ux/ui-kit.dropdown/src/less/_variables';
@@ -77,10 +78,7 @@
     }
 
     &:focus {
-      outline-width: 1px;
-      outline-style: dotted;
-      outline-color: initial;
-      outline-offset: -2px;
+      #oui > .outline-border();
     }
 
     &:hover,
@@ -149,12 +147,10 @@
 
       &:focus,
       &_focus {
+        #oui > .outline-border();
+
         background-color: @oui-color-concrete;
         border-color: @oui-color-dusty;
-        outline-width: 1px;
-        outline-style: dotted;
-        outline-color: initial;
-        outline-offset: -2px;
       }
 
       &_disabled,
@@ -217,14 +213,11 @@
 
       &:focus,
       &_focus {
+        // To override reset style
+        #oui > .outline-border() !important;
+
         background-color: @oui-color-concrete;
         border-color: @oui-color-dusty;
-
-        // To override reset style
-        outline-width: 1px !important;
-        outline-style: dotted !important;
-        outline-color: initial !important;
-        outline-offset: -2px !important;
       }
 
       .oui-field_error & {

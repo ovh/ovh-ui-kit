@@ -1,11 +1,12 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.dropdown/src/less/dropdown';
+@import './_variables';
 
 .oui-autocomplete {
   &:extend(.oui-dropdown-menu all);
 
-  max-height: ~"calc(@{oui-dropdown-item-height} * 5 + @{oui-dropdown-menu-spacing} * 2)";
+  max-height: calc((@oui-autocomplete-item-height * @oui-autocomplete-items-displayed) + (@oui-autocomplete-menu-spacing * 2));
   overflow-y: auto;
   display: block;
   margin: 0;
@@ -23,8 +24,8 @@
   }
 
   &-highlight {
-    color: inherit;
-    font-weight: @oui-font-bold;
-    background: none;
+    color: @oui-autocomplete-highlight-color;
+    font-weight: @oui-autocomplete-highlight-font-weight;
+    background: @oui-autocomplete-highlight-background;
   }
 }

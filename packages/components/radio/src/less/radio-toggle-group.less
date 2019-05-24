@@ -4,7 +4,7 @@
 
 .oui-radio-toggle-group {
   display: flex;
-  max-width: 300px;
+  max-width: @oui-ragio-toggle-group-max-width;
 }
 
 oui-radio-toggle-group {
@@ -19,15 +19,15 @@ oui-radio-toggle-group {
 
     display: inline-block;
     width: 100%;
-    height: rem-calc(40);
-    padding: rem-calc(10) rem-calc(20) 0;
-    border: 1px solid @oui-color-dusty;
+    height: @oui-ragio-toggle-group-height;
+    line-height: calc(@oui-ragio-toggle-group-height - @oui-ragio-toggle-group-border-width);
+    padding: @oui-ragio-toggle-group-padding;
+    border: @oui-ragio-toggle-group-border-width solid @oui-ragio-toggle-group-border-color;
     text-align: center;
-    line-height: 1.2;
-    font-size: @oui-radio-font-size;
-    font-weight: @oui-font-semibold;
-    background-color: @oui-color-white;
-    color: @oui-color-sapphire;
+    font-size: @oui-ragio-toggle-group-font-size;
+    font-weight: @oui-ragio-toggle-group-font-weight;
+    background-color: @oui-ragio-toggle-group-background-color;
+    color: @oui-ragio-toggle-group-font-color;
     white-space: nowrap;
 
     &:hover {
@@ -36,14 +36,14 @@ oui-radio-toggle-group {
   }
 
   &:first-of-type &__label {
-    border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
-    border-left-width: 1px;
+    border-radius: @oui-ragio-toggle-group-border-radius 0 0 @oui-ragio-toggle-group-border-radius;
+    border-left-width: @oui-ragio-toggle-group-border-width;
     border-right-width: 0;
   }
 
   &:last-of-type &__label {
-    border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
-    border-right-width: 1px;
+    border-radius: 0 @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius 0;
+    border-right-width: @oui-ragio-toggle-group-border-width;
     border-left-width: 0;
   }
 
@@ -56,28 +56,28 @@ oui-radio-toggle-group {
   }
 
   &__input:hover ~ &__label-container &__label {
-    background-color: @oui-color-concrete;
+    background-color: @oui-ragio-toggle-group-background-color_hover;
   }
 
   &__input:checked ~ &__label-container &__label {
-    background-color: @oui-color-sapphire;
-    color: @oui-color-white;
+    background-color: @oui-ragio-toggle-group-background-color_checked;
+    color: @oui-ragio-toggle-group-font-color_checked;
     cursor: default;
   }
 
   &__input:not(:checked) ~ &__label-container &__label {
-    box-shadow: inset 0 3px 1px 0 @oui-color-nurse;
+    box-shadow: @oui-radio-toggle-group-box-shadow;
   }
 
   &__input:disabled ~ &__label-container &__label {
     cursor: default;
-    background-color: @oui-color-concrete;
-    color: @oui-color-silver;
+    background-color: @oui-ragio-toggle-group-background-color_disabled;
+    color: @oui-ragio-toggle-group-font-color_disabled;
   }
 
   &__input:disabled:checked ~ &__label-container &__label {
-    background-color: @oui-color-ironlight;
-    color: @oui-color-dusty;
+    background-color: @oui-ragio-toggle-group-background-color_checked-disabled;
+    color: @oui-ragio-toggle-group-font-color_checked-disabled;
     cursor: default;
   }
 }

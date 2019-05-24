@@ -1,9 +1,8 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import './_variables';
-@import './_normalize';
 
 .oui-stepper {
-  #oui > .stepper-normalize();
+  #oui > .base-font();
 
   display: block;
   margin: @oui-stepper-margin;
@@ -29,20 +28,20 @@
     &::before {
       content: counter(steps);
       counter-increment: steps;
-      width: @oui-stepper-step-icon-size;
-      height: @oui-stepper-step-icon-size;
-      line-height: @oui-stepper-step-icon-size;
+      width: @oui-stepper-step-bullet-size;
+      height: @oui-stepper-step-bullet-size;
+      line-height: @oui-stepper-step-bullet-size;
       display: inline-block;
       position: absolute;
-      top: ~"calc((@{oui-stepper-step-title-line-height} - @{oui-stepper-step-icon-size}) / 2)";
+      top: ~"calc((@{oui-stepper-step-title-line-height} - @{oui-stepper-step-bullet-size}) / 2)";
       left: -@oui-stepper-step-container-padding-left;
-      font-size: @oui-stepper-step-icon-font-size;
-      font-weight: @oui-stepper-step-icon-font-weight;
+      font-size: @oui-stepper-step-bullet-font-size;
+      font-weight: @oui-stepper-step-bullet-font-weight;
       text-align: center;
       vertical-align: baseline;
-      color: @oui-stepper-step-icon-color;
-      border-radius: 50%;
-      background: @oui-stepper-step-icon-background;
+      color: @oui-stepper-step-bullet-color;
+      border-radius: @oui-stepper-step-bullet-border-radius;
+      background: @oui-stepper-step-bullet-background;
     }
 
     &::after {
@@ -98,8 +97,8 @@
     pointer-events: all;
 
     .oui-stepper__header::before {
-      color: @oui-stepper-step-icon-color_disabled;
-      background: @oui-stepper-step-icon-background_disabled;
+      color: @oui-stepper-step-bullet-color_disabled;
+      background: @oui-stepper-step-bullet-background_disabled;
     }
 
     .oui-stepper__title { color: @oui-stepper-step-title-color_disabled; }
@@ -112,13 +111,18 @@
   // Variant `complete`
   &__container_complete {
     .oui-stepper__header::before {
-      content: @oui-icon-index-success;
-      font-family: @oui-global-base-font-family-icon;
-      font-weight: @oui-font-regular;
-      color: @oui-stepper-step-icon-color_complete;
-      background: @oui-stepper-step-icon-background_complete;
+      content: @oui-stepper-step-bullet-icon-content_complete;
+      font-family: @oui-stepper-step-bullet-icon-font-family;
+      font-weight: @oui-stepper-step-bullet-icon-font-weight;
+      color: @oui-stepper-step-bullet-color_complete;
+      background: @oui-stepper-step-bullet-background_complete;
     }
 
     .oui-stepper__title { color: @oui-stepper-step-title-color_complete; }
   }
+}
+
+oui-stepper,
+oui-step-form {
+  display: block;
 }

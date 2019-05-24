@@ -15,7 +15,7 @@
   text-align: center;
   font-size: @oui-button-font-size;
   font-weight: @oui-button-font-weight;
-  letter-spacing: 0.007em;
+  letter-spacing: @oui-button-letter-spacing;
   border-radius: @oui-button-radius;
   cursor: pointer;
   border: none;
@@ -35,10 +35,7 @@
   &:hover { text-decoration: none; }
 
   &:focus {
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: initial;
-    outline-offset: -2px;
+    #oui > .outline-border();
   }
 
   &:disabled {
@@ -71,8 +68,8 @@ oui-button {
 .oui-button_dropdown {
   #oui > .button-hollow();
 
-  padding-right: rem-calc(30) + @oui-button-dropdown-padding * 0.8;
-  padding-left: @oui-button-dropdown-padding;
+  padding-right: @oui-button-dropdown-padding-right;
+  padding-left: @oui-button-dropdown-padding-left;
 
   .oui-icon-chevron-down {
     position: absolute;
@@ -89,7 +86,7 @@ oui-button {
 
     &::before {
       display: inline-block;
-      margin-right: @oui-button-dropdown-padding * 1.5;
+      margin-right: @oui-button-dropdown-margin-right;
       color: @oui-button-dropdown-icon-color;
       font-size: @oui-button-dropdown-icon-size;
     }

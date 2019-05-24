@@ -1,39 +1,59 @@
 // Radio
-@oui-radio-min-height: rem-calc(30);
-@oui-radio-line-height: 1.5;
-@oui-radio-font-size: rem-calc(16);
-@oui-radio-font-color: @oui-color-sapphire;
-@oui-radio-font-color_disabled: @oui-color-silver;
-@oui-radio-padding-left: rem-calc(9);
+@oui-radio-min-height: @oui-choice-min-height;
+@oui-radio-line-height: @oui-choice-line-height;
+@oui-radio-font-size: @oui-choice-font-size;
+@oui-radio-font-color: @oui-choice-font-color;
+@oui-radio-font-color_disabled: @oui-choice-font-color_disabled;
+@oui-radio-padding-left: @oui-choice-padding-left;
 
-@oui-radio-description-spacing: rem-calc(5);
-@oui-radio-description-font-size: rem-calc(14);
+@oui-radio-description-spacing: @oui-choice-description-spacing;
+@oui-radio-description-font-size: @oui-choice-description-font-size;
 
-@oui-radio-inline-spacing: rem-calc(20);
+@oui-radio-inline-spacing: @oui-choice-inline-spacing;
 
 // Radio - Custom icon
-@oui-radio-icon-size: rem-calc(16);
+@oui-radio-icon-size: @oui-choice-icon-size;
 
-@oui-radio-icon-background-color: #fff;
-@oui-radio-icon-background-color_active: @oui-color-foam;
-@oui-radio-icon-background-color_disabled: @oui-color-concrete;
+@oui-radio-icon-background-color: @oui-choice-icon-background-color;
+@oui-radio-icon-background-color_active: @oui-choice-icon-background-color_active;
+@oui-radio-icon-background-color_disabled: @oui-choice-icon-background-color_disabled;
 
-@oui-radio-icon-outer-color: @oui-color-dusty;
-@oui-radio-icon-outer-color_active: @oui-color-pacific;
-@oui-radio-icon-outer-color_checked: @oui-color-sapphire;
-@oui-radio-icon-outer-color_disabled: @oui-color-silver;
-@oui-radio-icon-outer-color_focus: @oui-color-sapphire;
-@oui-radio-icon-outer-color_hover: @oui-color-sapphire;
-@oui-radio-icon-outer-color_hover-checked: @oui-color-info-light;
+@oui-radio-icon-outer-color: @oui-choice-icon-outer-color;
+@oui-radio-icon-outer-color_active: @oui-choice-icon-outer-color_active;
+@oui-radio-icon-outer-color_disabled: @oui-choice-icon-outer-color_disabled;
+@oui-radio-icon-outer-color_focus: @oui-choice-icon-outer-color_focus;
+@oui-radio-icon-outer-color_hover: @oui-choice-icon-outer-color_hover;
+@oui-radio-icon-outer-color_checked: @oui-choice-icon-outer-color_checked;
+@oui-radio-icon-outer-color_checked-hover: @oui-choice-icon-outer-color_checked-hover;
 
-@oui-radio-icon-inner-color: @oui-color-sapphire;
-@oui-radio-icon-inner-color_active: @oui-color-pacific;
-@oui-radio-icon-inner-color_disabled: @oui-color-silver;
+@oui-radio-icon-inner-color: @oui-choice-icon-inner-color;
+@oui-radio-icon-inner-color_active: @oui-choice-icon-inner-color_active;
+@oui-radio-icon-inner-color_disabled: @oui-choice-icon-inner-color_disabled;
 
-@oui-radio-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+@oui-radio-box-shadow_focus: @oui-choice-box-shadow_focus;
 
-// Checkbox - M Variant
-@oui-radio-m-line-height: @oui-radio-line-height;
-@oui-radio-m-font-size: rem-calc(24);
+// Radio - M Variant
+@oui-radio-m-line-height: @oui-choice-m-line-height;
+@oui-radio-m-font-size: @oui-choice-m-font-size;
 
-@oui-radio-m-icon-size: rem-calc(20);
+@oui-radio-m-icon-size: @oui-choice-m-icon-size;
+
+// Radio - Toggle group
+@oui-ragio-toggle-group-max-width: rem-calc(300);
+@oui-ragio-toggle-group-height: rem-calc(40);
+@oui-ragio-toggle-group-padding: 0 rem-calc(20);
+@oui-ragio-toggle-group-font-color: @oui-color-sapphire;
+@oui-ragio-toggle-group-font-color_disabled: @oui-color-silver;
+@oui-ragio-toggle-group-font-color_checked: @oui-color-white;
+@oui-ragio-toggle-group-font-color_checked-disabled: @oui-color-dusty;
+@oui-ragio-toggle-group-font-size: @oui-radio-font-size;
+@oui-ragio-toggle-group-font-weight: @oui-font-semibold;
+@oui-ragio-toggle-group-border-color: @oui-color-dusty;
+@oui-ragio-toggle-group-border-width: 1px;
+@oui-ragio-toggle-group-border-radius: @oui-global-base-radius;
+@oui-radio-toggle-group-box-shadow: inset 0 3px 1px 0 @oui-color-nurse;
+@oui-ragio-toggle-group-background-color: #fff;
+@oui-ragio-toggle-group-background-color_hover: @oui-color-concrete;
+@oui-ragio-toggle-group-background-color_disabled: @oui-color-concrete;
+@oui-ragio-toggle-group-background-color_checked: @oui-color-sapphire;
+@oui-ragio-toggle-group-background-color_checked-disabled: @oui-color-ironlight;

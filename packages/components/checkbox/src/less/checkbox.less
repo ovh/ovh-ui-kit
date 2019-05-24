@@ -2,9 +2,6 @@
 @import './_mixins';
 @import './_variables';
 
-@oui-checkbox-selector: oui-checkbox;
-@oui-icon-selector: oui-icon-checkbox;
-
 // Checkbox - Base
 .oui-checkbox {
   #oui > .choice-base();
@@ -140,7 +137,7 @@ oui-checkbox {
 
   &:checked ~ .oui-checkbox__label-container:not(:active):hover {
     #oui > .checkbox-color(
-      @icon-outer-color: @oui-checkbox-icon-outer-color_hover-checked
+      @icon-outer-color: @oui-checkbox-icon-outer-color_checked-hover
     );
   }
 }
