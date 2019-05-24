@@ -73,11 +73,6 @@ export default class FieldController {
       Object.keys(this.controls).forEach((name) => {
         const namedControls = this.controls[name];
 
-        // TODO: Skip radio for now (there is no validation for them)
-        if (namedControls.length > 1) {
-          return;
-        }
-
         // Manage the way the error are shown on the field.
         namedControls.forEach((control) => {
           // Avoid binding DOM events

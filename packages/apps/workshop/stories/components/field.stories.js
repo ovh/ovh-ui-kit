@@ -125,20 +125,22 @@ storiesOf('Components/Field', module)
         <oui-radio
           name="protocol"
           model="$ctrl.protocol"
-          value="'http'">
+          value="'http'"
+          required>
           HTTP
         </oui-radio>
         <oui-radio
           name="protocol"
           model="$ctrl.protocol"
-          value="'tcp'">
+          value="'tcp'"
+          required>
           TCP
         </oui-radio>
         <oui-radio
           name="protocol"
           model="$ctrl.protocol"
           value="'udp'"
-          disabled>
+          required>
           UDP
         </oui-radio>
       </oui-field>

@@ -1,8 +1,4 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
-@import '~@ovh-ux/ui-kit.checkbox/src/less/_mixins';
-@import '~@ovh-ux/ui-kit.input/src/less/_mixins';
-@import '~@ovh-ux/ui-kit.select/src/less/_mixins';
-@import '~@ovh-ux/ui-kit.switch/src/less/_mixins';
 @import './_variables';
 
 #oui {
@@ -82,22 +78,6 @@
     &_error {
       .@{selector}__error {
         display: block;
-      }
-
-      .oui-input {
-        #oui > .input-error-style();
-      }
-
-      .@{checkbox-selector} {
-        #oui > .checkbox-error-style();
-      }
-
-      .@{select-selector} {
-        #oui > .select-error-style();
-      }
-
-      .@{switch-selector} {
-        #oui > .switch-error-style();
       }
     }
   }
