@@ -461,6 +461,11 @@ storiesOf('Content/Icons', module)
         <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-warning_extra-thin" aria-hidden="true"></span></div>
         <div class="oui-icon-badge__code"><code>.oui-icon-warning_extra-thin</code></div>
       </div>
+
+      <div class="oui-icon-badge">
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-search_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-search_extra-thin</code></div>
+      </div>
     </div>
     `, {
       options: {
