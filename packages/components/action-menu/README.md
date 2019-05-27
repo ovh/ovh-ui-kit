@@ -12,7 +12,7 @@ angular.module('myModule', ['oui.action-menu']);
 | ----              | ----            | ----    | ----             | ----                      | ----       | ----
 | `text`            | string          | @       | yes              | n/a                       | n/a        | button label
 | `aria-label`      | string          | @?      | yes              | n/a                       | n/a        | accessibility label
-| `placement`       | string          | @?      | yes              | `start`, `center`, `end`  | `start`    | placement of the dropdown menu
+| `placement`       | string          | @?      | yes              | See [Popper placements](https://popper.js.org/popper-documentation.html#Popper.placements)  | `bottom-start`  | placement of the dropdown menu
 | `compact`         | boolean         | <?      | yes              | `true`, `false`           | `false`    | use the compact button
 | `disabled`        | boolean         | <?      | no               | `true`, `false`           | `false`    | disable flag
 

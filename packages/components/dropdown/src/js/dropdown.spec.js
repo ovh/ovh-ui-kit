@@ -127,6 +127,23 @@ describe('ouiDropdown', () => {
       expect(element[0].querySelector('[x-arrow]')).toBeNull();
     });
 
+    it('should give the correct placement', () => {
+      const element = TestUtils.compileTemplate(`
+          <oui-dropdown placement="left-start">
+            <button class="oui-button" oui-dropdown-trigger></button>
+            <div oui-dropdown-content>
+              <b>the menu</b>
+            </div>
+          </oui-dropdown>`);
+
+      $timeout.flush();
+
+      const controller = element.controller('ouiDropdown');
+      controller.toggle();
+
+      expect(controller.popper.options.placement).toEqual('left-start');
+    });
+
     describe('Item', () => {
       it('should have default classname', () => {
         const element = TestUtils.compileTemplate(`
