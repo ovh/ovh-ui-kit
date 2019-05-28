@@ -31,5 +31,20 @@ storiesOf('Components/Form Actions', module)
         onCancelClick: action('onCancelClick'),
         onSubmitClick: action('onSubmitClick'),
       },
-    })),
+    }))
+      .add(
+        'Disabled submit action',
+        forModule(moduleName).createElement(() => compileTemplate(`
+      <oui-form-actions
+        submit-text="Apply"
+        cancel-text="Close"
+        on-cancel="$ctrl.onCancelClick()"
+        disabled>
+      </oui-form-actions>
+      `, {
+          $ctrl: {
+            onCancelClick: action('onCancelClick'),
+          },
+        })),
+      ),
   );

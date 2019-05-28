@@ -1,7 +1,8 @@
 <button class="oui-button oui-button_primary"
     type="submit"
     ng-bind="::$ctrl.submitText"
-    ng-click="$ctrl.onSubmit()">
+    ng-click="$ctrl.onSubmit()"
+    ng-disabled="$ctrl.disabled">
 </button>
 <button class="oui-button oui-button_link"
     type="button"

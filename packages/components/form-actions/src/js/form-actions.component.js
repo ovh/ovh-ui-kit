@@ -10,6 +10,7 @@ export default {
     onSubmit: '&',
     onCancel: '&?',
     href: '@?',
+    disabled: '<?',
   },
   transclude: true,
 };
