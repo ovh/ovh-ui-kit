@@ -28,6 +28,7 @@ angular.module('myModule', ['oui.form-actions'])
 | `submit-text` | string    | @?        | yes               | n/a       | `Submit`  | submit button text
 | `cancel-text` | string    | @?        | yes               | n/a       | `Cancel`  | cancel button text
 | `href`        | string    | @?        | yes               | n/a       | n/a       | link url on cancel
+| `disabled`    | boolean   | <?        | yes               | `true` `false`       | `false`       | should submit action be disabled
 | `on-submit`   | function  | &         | no                | n/a       | n/a       | button submit click handler
 | `on-cancel`   | function  | &?        | no                | n/a       | n/a       | button cancel click handler
 
