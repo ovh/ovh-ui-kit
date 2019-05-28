@@ -4,7 +4,7 @@ import { hasProperty } from './util';
 
 import template from './datagrid.html';
 
-const cssSorted = 'oui-datagrid__cell_sorted';
+const cssSorted = 'oui-datagrid__header_sorted';
 const cssSortable = 'oui-datagrid__header_sortable';
 const cssSortableAsc = 'oui-datagrid__header_sortable-asc';
 const cssSortableDesc = 'oui-datagrid__header_sortable-desc';
