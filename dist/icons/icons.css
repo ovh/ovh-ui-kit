@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?5dd84af19d064fd30afc2423cb295a71") format("woff2"),
-url("./icons.woff?5dd84af19d064fd30afc2423cb295a71") format("woff");
+    src: url("./icons.woff2?bc3684861b7ae0fd8ff4543c87da72db") format("woff2"),
+url("./icons.woff?bc3684861b7ae0fd8ff4543c87da72db") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -264,51 +264,54 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-search:before {
     content: "\f153";
 }
-.oui-icon-settings_extra-thin:before {
+.oui-icon-search_extra-thin:before {
     content: "\f154";
 }
-.oui-icon-shape-circle:before {
+.oui-icon-settings_extra-thin:before {
     content: "\f155";
 }
-.oui-icon-shape-dot:before {
+.oui-icon-shape-circle:before {
     content: "\f156";
 }
-.oui-icon-success:before {
+.oui-icon-shape-dot:before {
     content: "\f157";
 }
-.oui-icon-success_circle:before {
+.oui-icon-success:before {
     content: "\f158";
 }
-.oui-icon-time_extra-thin:before {
+.oui-icon-success_circle:before {
     content: "\f159";
 }
-.oui-icon-trash_line:before {
+.oui-icon-time_extra-thin:before {
     content: "\f15a";
 }
-.oui-icon-triangle-down_extra-thin:before {
+.oui-icon-trash_line:before {
     content: "\f15b";
 }
-.oui-icon-triangle-left_extra-thin:before {
+.oui-icon-triangle-down_extra-thin:before {
     content: "\f15c";
 }
-.oui-icon-triangle-right_extra-thin:before {
+.oui-icon-triangle-left_extra-thin:before {
     content: "\f15d";
 }
-.oui-icon-triangle-up_extra-thin:before {
+.oui-icon-triangle-right_extra-thin:before {
     content: "\f15e";
 }
-.oui-icon-user:before {
+.oui-icon-triangle-up_extra-thin:before {
     content: "\f15f";
 }
-.oui-icon-user_extra-thin:before {
+.oui-icon-user:before {
     content: "\f160";
 }
-.oui-icon-user_line:before {
+.oui-icon-user_extra-thin:before {
     content: "\f161";
 }
-.oui-icon-warning_circle:before {
+.oui-icon-user_line:before {
     content: "\f162";
 }
-.oui-icon-warning_extra-thin:before {
+.oui-icon-warning_circle:before {
     content: "\f163";
+}
+.oui-icon-warning_extra-thin:before {
+    content: "\f164";
 }
