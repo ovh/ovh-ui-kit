@@ -1,10 +1,9 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import './_mixins';
-@import './_normalize';
 
 .oui-navbar {
-  #oui > .navbar-normalize();
+  #oui > .base-font();
 
   min-height: @oui-navbar-height;
   display: flex;
@@ -51,7 +50,7 @@
 
     .oui-icon {
       vertical-align: initial;
-      font-size: rem-calc(44);
+      font-size: @oui-navbar-brand-icon-size;
       color: inherit;
     }
   }
@@ -59,10 +58,13 @@
   // Header/Title
   &__title {
     display: inline-block;
-    margin-left: rem-calc(15);
     font-size: @oui-navbar-brand-font-size;
-    font-weight: @oui-font-light;
+    font-weight: @oui-navbar-brand-font-weight;
     color: @oui-navbar-brand-color;
+  }
+
+  &__brand .oui-icon + &__title {
+    margin-left: @oui-navbar-brand-title-spacing;
   }
 
   &-backdrop {
@@ -204,7 +206,7 @@
       @line-height: @oui-navbar-toggler-line-height,
       @padding: @oui-navbar-toggler-padding
     );
-    #oui              > .navbar-link_variant(
+    #oui > .navbar-link_variant(
       @font-color: @oui-navbar-font-color
     );
 
@@ -323,7 +325,7 @@
         overflow: auto;
 
         #oui > .desktop({
-          max-height: rem-calc(400);
+          max-height: @oui-navbar-notification-max-height;
         });
       }
     }
@@ -367,7 +369,7 @@
       // Gradient over items
       &::before {
         content: ' ';
-        height: rem-calc(36);
+        height: @oui-navbar-menu-gradient-height;
         position: absolute;
         bottom: 100%;
         left: 0;
@@ -528,20 +530,20 @@
   &-notification {
     align-items: flex-start;
     display: flex;
-    padding: @oui-notification-padding;
+    padding: @oui-navbar-notification-padding;
 
     &__action {
       background: none;
       border: 0;
-      padding: rem-calc(4) rem-calc(10);
+      padding: @oui-navbar-notification-action-padding;
 
       .oui-icon {
-        color: @oui-notification-action-font-color;
-        font-size: @oui-notification-action-icon-font-size;
+        color: @oui-navbar-notification-action-font-color;
+        font-size: @oui-navbar-notification-action-icon-font-size;
       }
 
       &:hover > .oui-icon {
-        color: @oui-notification-action-font-color_hover;
+        color: @oui-navbar-notification-action-font-color_hover;
       }
     }
 
@@ -570,24 +572,24 @@
     }
 
     &__icon {
-      font-size: @oui-notification-icon-font-size;
-      max-height: @oui-notification-icon-font-size;
-      margin: @oui-notification-icon-margin;
+      font-size: @oui-navbar-notification-icon-font-size;
+      max-height: @oui-navbar-notification-icon-font-size;
+      margin: @oui-navbar-notification-icon-margin;
 
       &.oui-icon-info_circle {
-        color: @oui-notification-info-icon-color;
+        color: @oui-navbar-notification-icon-color_info;
       }
 
       &.oui-icon-success_circle {
-        color: @oui-notification-success-icon-color;
+        color: @oui-navbar-notification-icon-color_success;
       }
 
       &.oui-icon-warning_circle {
-        color: @oui-notification-warning-icon-color;
+        color: @oui-navbar-notification-icon-color_warning;
       }
 
       &.oui-icon-error_circle {
-        color: @oui-notification-error-icon-color;
+        color: @oui-navbar-notification-icon-color_error;
       }
 
       &.oui-icon-clock-wait {
@@ -596,43 +598,43 @@
     }
 
     &-placeholder {
-      background-color: @oui-notification-placeholder-color;
+      background-color: @oui-navbar-notification-placeholder-color;
       height: @oui-navbar-menu-placeholder-height;
 
       &:hover {
-        background-color: @oui-notification-placeholder-color;
+        background-color: @oui-navbar-notification-placeholder-color;
       }
 
       &__content {
-        color: @oui-notification-placeholder-font-color;
+        color: @oui-navbar-notification-placeholder-font-color;
         display: flex;
         margin: auto;
       }
 
       &__title {
-        font-size: rem-calc(16);
-        font-weight: @oui-notification-title-weight;
+        font-size: @oui-navbar-notification-title-font-size;
+        font-weight: @oui-navbar-notification-title-font-weight;
       }
 
       &__description {
-        font-size: rem-calc(14);
+        font-size: @oui-navbar-notification-description-font-size;
       }
     }
 
     &__time {
-      padding: 0 0 0 rem-calc(5);
+      padding: @oui-navbar-notification-time-padding;
     }
 
     &__description {
-      font-size: rem-calc(14);
-      line-height: rem-calc(20);
-      max-height: rem-calc(80);
+      font-size: @oui-navbar-notification-description-font-size;
+      line-height: @oui-navbar-notification-description-font-size;
+      max-height: @oui-navbar-notification-description-max-height;
       overflow: hidden;
     }
 
     &__title {
-      font-size: rem-calc(16);
-      font-weight: @oui-notification-title-weight;
+      font-size: @oui-navbar-notification-title-font-size;
+      font-weight: @oui-navbar-notification-title-font-weight;
     }
   }
 
@@ -647,5 +649,35 @@
     @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
       display: none !important;
     }
+  }
+}
+
+oui-navbar {
+  &-link,
+  &-menu,
+  &-brand,
+  &-toggler,
+  &-dropdown,
+  &-dropdown-menu,
+  &-notification {
+    display: block;
+  }
+
+  &,
+  &-aside,
+  &-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-aside {
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &-main {
+    flex-grow: 0;
+    justify-content: flex-start;
   }
 }
