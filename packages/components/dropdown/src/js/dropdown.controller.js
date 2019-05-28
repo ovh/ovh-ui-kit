@@ -131,6 +131,7 @@ export default class {
 
   createPopper() {
     let { placement } = this;
+    const center = placement === 'center' || (!placement.includes('start') && !placement.includes('end'));
 
     if (['start', 'end'].indexOf(this.placement) >= 0) {
       placement = `bottom-${this.placement}`;
@@ -141,7 +142,7 @@ export default class {
     }
 
     // Let Popper.js manage the arrow position when it's centered (default).
-    if (this.arrowElement && placement === 'bottom') {
+    if (this.arrowElement && center) {
       this.arrowElement.setAttribute('x-arrow', '');
     }
 
