@@ -1,16 +1,31 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import './_mixins';
-@import './_normalize';
 
+// Inputs
 .oui-input {
-  #oui > .input-normalize();
   #oui > .input-base();
-  #oui > .input-status();
+}
 
-  &_inline {
-    #oui > .input-inline();
-  }
+// Inputs - Inline
+.oui-input_inline {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
 }
 
 // Size variants
 #oui > .control-sizes(oui-input);
+
+// Inputs - Error
+.oui-input_error,
+.oui-field_error .oui-input {
+  #oui > .input-error-style();
+}
+
+.oui-input-group_button .oui-input.oui-input_error:focus ~ .oui-button,
+.oui-input-group_button .oui-input.oui-input_error ~ .oui-button:hover,
+.oui-input-group_button .oui-input.oui-input_error ~ .oui-button:focus {
+  .oui-icon {
+    color: @oui-color-error-dark;
+  }
+}
