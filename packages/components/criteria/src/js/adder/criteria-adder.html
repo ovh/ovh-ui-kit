@@ -9,7 +9,7 @@
             ng-submit="$ctrl.onFormSubmit()">
 
             <!-- Column field -->
-            <oui-field label="{{::$ctrl.translations.column_label}}">
+            <oui-field label="{{::$ctrl.translations.column_label}}" size="m">
                 <oui-select
                     ng-attr-id="{{::$ctrl.id}}Column"
                     name="{{::$ctrl.name}}Column"
@@ -24,7 +24,7 @@
             <!-- /Column field -->
 
             <!-- Operator field -->
-            <oui-field label="{{::$ctrl.translations.operator_label}}">
+            <oui-field label="{{::$ctrl.translations.operator_label}}" size="m">
                 <oui-select
                     ng-attr-id="{{::$ctrl.id}}Operator"
                     name="{{::$ctrl.name}}Operator"
@@ -42,7 +42,7 @@
 
                 <!-- String (Default) -->
                 <div ng-switch-default>
-                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                    <oui-field label="{{::$ctrl.translations.value_label}}" size="m">
                         <input class="oui-input" type="text" name="{{::$ctrl.name}}Value"
                             ng-attr-id="{{::$ctrl.id}}Value"
                             ng-model="$ctrl.valueModel['string']">
@@ -52,7 +52,7 @@
 
                 <!-- Number -->
                 <div ng-switch-when="number">
-                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                    <oui-field label="{{::$ctrl.translations.value_label}}" size="m">
                         <input class="oui-input" type="number" name="{{::$ctrl.name}}Value"
                             ng-attr-id="{{::$ctrl.id}}Value"
                             ng-model="$ctrl.valueModel['number']">
@@ -62,7 +62,7 @@
 
                 <!-- Boolean -->
                 <div ng-switch-when="boolean">
-                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                    <oui-field label="{{::$ctrl.translations.value_label}}" size="m">
                         <oui-select
                             name="{{::$ctrl.name}}Value"
                             model="$ctrl.valueModel['boolean']"
@@ -77,7 +77,7 @@
 
                 <!-- Options -->
                 <div ng-switch-when="options">
-                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                    <oui-field label="{{::$ctrl.translations.value_label}}" size="m">
                         <oui-select
                             name="{{::$ctrl.name}}Value"
                             model="$ctrl.valueModel['options']"
@@ -92,7 +92,7 @@
 
                 <!-- Date -->
                 <div ng-switch-when="date">
-                    <oui-field label="{{::$ctrl.translations.value_label}}">
+                    <oui-field label="{{::$ctrl.translations.value_label}}" size="m">
                         <oui-calendar
                             name="{{::$ctrl.name}}Value"
                             model="$ctrl.valueModel['date']">
