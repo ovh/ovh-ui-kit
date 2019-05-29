@@ -1,3 +1,29 @@
+# [3.1.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.3...v3.1.0) (2019-05-29)
+
+
+### Bug Fixes
+
+* **criteria:** fix fields size to medium ([#422](https://github.com/ovh-ux/ovh-ui-kit/issues/422)) ([7cfaac1](https://github.com/ovh-ux/ovh-ui-kit/commit/7cfaac1))
+* **oui-dropdown:** fix arrow position for side placement ([f9d1981](https://github.com/ovh-ux/ovh-ui-kit/commit/f9d1981))
+* **oui-dropdown:** fix automatic center positionning ([386ccee](https://github.com/ovh-ux/ovh-ui-kit/commit/386ccee))
+* **select:** close others opened select on opening ([#421](https://github.com/ovh-ux/ovh-ui-kit/issues/421)) ([a100f9a](https://github.com/ovh-ux/ovh-ui-kit/commit/a100f9a))
+* **typography:** fix horizontal line margin ([6c8cbd5](https://github.com/ovh-ux/ovh-ui-kit/commit/6c8cbd5))
+
+
+### Features
+
+* **checkbox:** add size and variant attributes ([#407](https://github.com/ovh-ux/ovh-ui-kit/issues/407)) ([ba7d3fa](https://github.com/ovh-ux/ovh-ui-kit/commit/ba7d3fa))
+* **core:** add extra thin icons to 'Oui Icons' font ([#395](https://github.com/ovh-ux/ovh-ui-kit/issues/395)) ([614fe5b](https://github.com/ovh-ux/ovh-ui-kit/commit/614fe5b)), closes [#393](https://github.com/ovh-ux/ovh-ui-kit/issues/393)
+* **dropdown:** allow placement in others directions ([#411](https://github.com/ovh-ux/ovh-ui-kit/issues/411)) ([9e545e0](https://github.com/ovh-ux/ovh-ui-kit/commit/9e545e0))
+* **navbar:** add style for menu header container ([#396](https://github.com/ovh-ux/ovh-ui-kit/issues/396)) ([7ab3998](https://github.com/ovh-ux/ovh-ui-kit/commit/7ab3998)), closes [#394](https://github.com/ovh-ux/ovh-ui-kit/issues/394)
+* **oui-form-actions:** allow submit button to be disabled ([#417](https://github.com/ovh-ux/ovh-ui-kit/issues/417)) ([57fe866](https://github.com/ovh-ux/ovh-ui-kit/commit/57fe866))
+* **oui-icons:** add extra thin search icon ([#414](https://github.com/ovh-ux/ovh-ui-kit/issues/414)) ([b63ce95](https://github.com/ovh-ux/ovh-ui-kit/commit/b63ce95))
+* **radio:** add size attribute ([#408](https://github.com/ovh-ux/ovh-ui-kit/issues/408)) ([7e969c2](https://github.com/ovh-ux/ovh-ui-kit/commit/7e969c2))
+* **stepper:** emit event on form submit ([#404](https://github.com/ovh-ux/ovh-ui-kit/issues/404)) ([ea996ea](https://github.com/ovh-ux/ovh-ui-kit/commit/ea996ea))
+* **tabs:** allow to select active tab item ([#398](https://github.com/ovh-ux/ovh-ui-kit/issues/398)) ([2dfb325](https://github.com/ovh-ux/ovh-ui-kit/commit/2dfb325))
+
+
+
 ## [3.0.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.2...v3.0.3) (2019-05-13)
 
 
