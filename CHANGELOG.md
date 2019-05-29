@@ -1,3 +1,13 @@
+<a name="2.33.1"></a>
+## [2.33.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.0...v2.33.1) (2019-05-29)
+
+
+### Bug Fixes
+
+* **oui-dropdown:** fix arrow position for side placement ([#418](https://github.com/ovh-ux/ovh-ui-kit/issues/418)) ([a7e5248](https://github.com/ovh-ux/ovh-ui-kit/commit/a7e5248))
+
+
+
 <a name="2.33.0"></a>
 # [2.33.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.32.0...v2.33.0) (2019-05-28)
 

@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.33.0") format("woff2"), url("./icons/icons.woff?v=2.33.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.33.1") format("woff2"), url("./icons/icons.woff?v=2.33.1") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -9914,15 +9914,29 @@ oui-dropdown-divider {
   top: 100%;
   border-top-color: #fff;
 }
-.oui-dropdown-menu_arrow[x-placement$="start"] .oui-dropdown-menu__arrow,
-.oui-action-menu_arrow[x-placement$="start"] .oui-dropdown-menu__arrow,
-.oui-autocomplete_arrow[x-placement$="start"] .oui-dropdown-menu__arrow {
+.oui-dropdown-menu_arrow[x-placement="top-start"] .oui-dropdown-menu__arrow,
+.oui-dropdown-menu_arrow[x-placement="bottom-start"] .oui-dropdown-menu__arrow,
+.oui-action-menu_arrow[x-placement="top-start"] .oui-dropdown-menu__arrow,
+.oui-action-menu_arrow[x-placement="bottom-start"] .oui-dropdown-menu__arrow,
+.oui-autocomplete_arrow[x-placement="top-start"] .oui-dropdown-menu__arrow,
+.oui-autocomplete_arrow[x-placement="bottom-start"] .oui-dropdown-menu__arrow {
   left: 0;
 }
-.oui-dropdown-menu_arrow[x-placement$="end"] .oui-dropdown-menu__arrow,
-.oui-action-menu_arrow[x-placement$="end"] .oui-dropdown-menu__arrow,
-.oui-autocomplete_arrow[x-placement$="end"] .oui-dropdown-menu__arrow {
+.oui-dropdown-menu_arrow[x-placement="top-end"] .oui-dropdown-menu__arrow,
+.oui-dropdown-menu_arrow[x-placement="bottom-end"] .oui-dropdown-menu__arrow,
+.oui-action-menu_arrow[x-placement="top-end"] .oui-dropdown-menu__arrow,
+.oui-action-menu_arrow[x-placement="bottom-end"] .oui-dropdown-menu__arrow,
+.oui-autocomplete_arrow[x-placement="top-end"] .oui-dropdown-menu__arrow,
+.oui-autocomplete_arrow[x-placement="bottom-end"] .oui-dropdown-menu__arrow {
   left: calc(100% - 2 * (0.625rem + 0.43799999999999994rem));
+}
+.oui-dropdown-menu_arrow[x-placement="left-end"] .oui-dropdown-menu__arrow,
+.oui-dropdown-menu_arrow[x-placement="right-end"] .oui-dropdown-menu__arrow,
+.oui-action-menu_arrow[x-placement="left-end"] .oui-dropdown-menu__arrow,
+.oui-action-menu_arrow[x-placement="right-end"] .oui-dropdown-menu__arrow,
+.oui-autocomplete_arrow[x-placement="left-end"] .oui-dropdown-menu__arrow,
+.oui-autocomplete_arrow[x-placement="right-end"] .oui-dropdown-menu__arrow {
+  top: calc(100% - 2 * (0.625rem + 0.43799999999999994rem));
 }
 .oui-dropdown-group__label {
   line-height: 1.125rem;
