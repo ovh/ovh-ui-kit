@@ -110,7 +110,6 @@ export default class {
       if (this.multiple || this.$select.open || (!this.$select.open && !this.isOpen)) {
         if (this.fieldCtrl) {
           this.fieldCtrl.hasFocus = true;
-          this.fieldCtrl.hideErrors(this.$select.$element[0], this.name);
         }
 
         this.onFocus();

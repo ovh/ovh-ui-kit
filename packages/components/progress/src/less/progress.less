@@ -76,17 +76,17 @@
     position: absolute;
     z-index: 1;
     height: @oui-progress-height;
-    width: 1px;
+    width: calc(@oui-progress-threshold-width / 2);
     transition: left @oui-animation-default-timing @oui-animation-default;
-    background-color: #fff;
+    background-color: @oui-progress-threshold-background;
 
     &::before {
       position: absolute;
       content: '';
       height: @oui-progress-height;
-      width: 1px;
+      width: calc(@oui-progress-threshold-width / 2);
       left: -1px;
-      background-color: rgba(100, 100, 100, 0.3);
+      background-color: @oui-progress-threshold-foreground;
     }
   }
 

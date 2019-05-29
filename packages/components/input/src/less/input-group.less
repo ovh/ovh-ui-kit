@@ -14,9 +14,9 @@
 
   > .oui-button {
     #oui > .button-hollow(
-      @background-color: @oui-input-group-button-hollow-background-color,
-      @border-color_disabled: @oui-input-group-button-hollow-border-color_disabled,
-      @padding: @oui-input-group-button-hollow-padding
+      @background-color: @oui-input-group-button-background-color,
+      @border-color_disabled: @oui-input-group-button-border-color_disabled,
+      @padding: @oui-input-group-button-padding
     );
   }
 
@@ -25,11 +25,11 @@
     z-index: 1; // Set border priority on inputs
 
     &_number {
-      -moz-appearance: textfield;
+      appearance: textfield;
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
+        appearance: none;
         margin: 0;
       }
     }
@@ -42,17 +42,17 @@
     margin: 0;
 
     &:first-child {
-      border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
+      border-radius: @oui-input-group-border-radius 0 0 @oui-input-group-border-radius;
     }
 
     &:last-child {
-      border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
+      border-radius: 0 @oui-input-group-border-radius @oui-input-group-border-radius 0;
     }
   }
 
   > .oui-button + .oui-input,
   > .oui-button + .oui-button {
-    margin-left: -1px;
+    margin-left: -@oui-input-group-border-size;
   }
 
   > .oui-input + .oui-input,
@@ -72,12 +72,12 @@
   .oui-input,
   .oui-input:first-child {
     padding-right: @oui-input-group-button-min-width;
-    border-radius: @oui-global-base-radius;
+    border-radius: @oui-input-group-border-radius;
   }
 
   .oui-icon {
-    color: @oui-color-silver;
-    font-size: rem-calc(20);
+    color: @oui-input-group-button-font-color;
+    font-size: @oui-input-group-button-icon-size;
     vertical-align: middle;
   }
 
@@ -98,15 +98,15 @@
 
   .oui-button:focus {
     .oui-icon {
-      color: @oui-input-group-button-color_hover;
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+      color: @oui-input-group-button-font-color_focus;
+      text-shadow: @oui-input-group-button-icon-shadow_focus;
     }
   }
 
   .oui-button:hover,
   .oui-input:focus ~ .oui-button {
     .oui-icon {
-      color: @oui-input-group-button-color_hover;
+      color: @oui-input-group-button-font-color_hover;
     }
   }
 }

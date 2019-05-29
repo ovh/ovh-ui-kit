@@ -5,7 +5,7 @@
   #oui > .base-font();
 
   margin: @oui-modal-spacing;
-  border-radius: @oui-global-base-radius-medium;
+  border-radius: @oui-modal-border-radius;
   border: none;
   font-size: @oui-modal-font-size;
   background-color: @oui-modal-background-color;
@@ -13,8 +13,8 @@
   &__header {
     position: relative;
     height: @oui-modal-close-button-size + @oui-modal-close-button-padding-y * 2;
-    border-top-right-radius: @oui-global-base-radius-medium;
-    border-top-left-radius: @oui-global-base-radius-medium;
+    border-top-right-radius: @oui-modal-border-radius;
+    border-top-left-radius: @oui-modal-border-radius;
     background-color: @oui-modal-header-background-color;
   }
 
@@ -63,22 +63,8 @@
   &__title {
     margin-top: 0;
     color: @oui-modal-title-color;
-    font-size: rem-calc(21);
-    line-height: rem-calc(22.4);
-    letter-spacing: 0.01em;
-    font-weight: 600;
-  }
-
-  &__text {
-    color: @oui-modal-body-color;
-    font-size: rem-calc(16);
-    line-height: rem-calc(22.4);
-    letter-spacing: 0.01em;
-    font-weight: 400;
-
-    strong {
-      font-weight: 600;
-    }
+    font-size: @oui-modal-header-font-size;
+    font-weight: @oui-modal-header-font-weight;
   }
 
   &__loader {

@@ -11,7 +11,7 @@ storiesOf('Styles/Progress Tracker', module)
             <span class="oui-progress-tracker__label">Choix du produit</span>
           </a>
         </li>
-        <li class="oui-progress-tracker__step oui-progress-tracker__step_complete">
+        <li class="oui-progress-tracker__step oui-progress-tracker__step_error">
           <a class="oui-progress-tracker__status" href="#">
             <span class="oui-progress-tracker__label">Configuration du produit</span>
           </a>

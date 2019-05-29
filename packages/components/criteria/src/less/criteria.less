@@ -1,18 +1,18 @@
 @import '~@ovh-ux/ui-kit.button/src/less/_variables';
-@import './_normalize';
+@import './_variables';
 
 .oui-criteria-adder {
   display: inline-block;
 
   &__button { margin-bottom: 0; }
 
-  &__submit { margin-top: rem-calc(8); }
+  &__submit { margin-top: @oui-criteria-adder-submit-spacing; }
 
   oui-dropdown { display: inline-block; }
 
   .oui-dropdown {
     & > .oui-button .oui-icon {
-      height: rem-calc(24);
+      height: @oui-criteria-adder-icon-size;
       display: flex; // For a better vertical centering
       flex-direction: row;
       align-items: center;
@@ -27,40 +27,39 @@
     }
 
     &__content {
-      width: rem-calc(300);
+      width: @oui-criteria-adder-menu-width;
     }
   }
 
-  .oui-field { margin-bottom: rem-calc(6); }
+  .oui-field { margin-bottom: @oui-criteria-adder-field-spacing; }
 
-  form { padding: rem-calc(20); }
+  form { padding: @oui-criteria-adder-form-padding; }
 }
 
 .oui-criteria {
   display: block;
-  margin-bottom: rem-calc(10);
+  margin-bottom: @oui-criteria-margin-bottom;
 
   &__actions {
-    margin-bottom: rem-calc(10);
+    margin-bottom: @oui-criteria-actions-margin-bottom;
     display: flex;
     justify-content: flex-end;
 
     .oui-criteria-adder,
     .oui-search {
       display: inline-block;
-      margin-left: rem-calc(10);
+      margin-left: @oui-criteria-adder-spacing;
+      margin-bottom: 0;
     }
   }
 
   &__slot {
     flex: 1 0;
-
-    oui-action-menu {
-      margin-bottom: rem-calc(10);
-    }
   }
 }
 
 oui-criteria {
   &:extend(.oui-criteria);
+
+  &-adder { &:extend(.oui-criteria); }
 }

@@ -10,7 +10,7 @@
 @oui-global-base-font-weight: @oui-font-regular;
 @oui-global-base-line-height: 1.5;
 @oui-global-base-letter-spacing: 0.007em;
-@oui-global-base-margin: 0 0 rem-calc(15);
+@oui-global-base-margin: rem-calc(15);
 @oui-global-base-radius: 3px;
 @oui-global-base-radius-medium: @oui-global-base-radius * 2;
 @oui-global-base-form-controls:
@@ -64,12 +64,12 @@
 @oui-icon-spacing: 0;
 @oui-icon-size: 1.5em;
 @oui-icon-color: inherit;
-@oui-icon-char-color: #fff;
+@oui-icon-char-color: @oui-color-white;
 @oui-icon-font-family: @oui-global-base-font-family-icon;
 
 @oui-icon-circle-border-radius: 50%;
-@oui-icon-circle-background: #000;
-@oui-icon-circle-color: #fff;
+@oui-icon-circle-background: @oui-color-black;
+@oui-icon-circle-color: @oui-color-white;
 @oui-icon-circle-size: 1em;
 
 // Abbreviations
@@ -78,7 +78,7 @@
 
 // Heading
 @oui-heading-border-width: 2px;
-@oui-heading-border-color: #ddd;
+@oui-heading-border-color: @oui-color-ironlight;
 @oui-heading-font-sizes:
   rem-calc(46),
   rem-calc(36),
@@ -152,7 +152,7 @@
 // Choice - Custom icon
 @oui-choice-icon-size: rem-calc(16);
 
-@oui-choice-icon-background-color: #fff;
+@oui-choice-icon-background-color: @oui-color-white;
 @oui-choice-icon-background-color_active: @oui-color-foam;
 @oui-choice-icon-background-color_disabled: @oui-color-concrete;
 
@@ -198,15 +198,15 @@
 @oui-choice-thumbnail-border-color-checked_hover: @oui-color-turquoise;
 @oui-choice-thumbnail-border-color-checked_disabled: @oui-color-pacific;
 
-@oui-choice-thumbnail-background-light: #fff;
-@oui-choice-thumbnail-background-light_hover: #fff;
-@oui-choice-thumbnail-background-light_disabled: #fff;
+@oui-choice-thumbnail-background-light: @oui-color-white;
+@oui-choice-thumbnail-background-light_hover: @oui-color-white;
+@oui-choice-thumbnail-background-light_disabled: @oui-color-white;
 @oui-choice-thumbnail-border-color-light: @oui-color-charlotte;
 @oui-choice-thumbnail-border-color-light_hover: @oui-color-charlotte;
 @oui-choice-thumbnail-border-color-light_disabled: @oui-color-charlotte;
 
-@oui-choice-thumbnail-background-light-checked: #fff;
-@oui-choice-thumbnail-background-light-checked_hover: #fff;
+@oui-choice-thumbnail-background-light-checked: @oui-color-white;
+@oui-choice-thumbnail-background-light-checked_hover: @oui-color-white;
 @oui-choice-thumbnail-background-light-checked_disabled: @oui-color-polar;
 @oui-choice-thumbnail-border-color-light-checked: @oui-color-pacific;
 @oui-choice-thumbnail-border-color-light-checked_hover: @oui-color-turquoise;

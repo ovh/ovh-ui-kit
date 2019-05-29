@@ -1,38 +1,136 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.button/src/less/_mixins';
-@import './_mixins';
+@import './_variables';
 
 .oui-pagination {
-  @oui-button-selector: oui-button;
-  @oui-button-link-selector: oui-button_link;
-  @oui-button-secondary-selector: oui-button_secondary;
-  @oui-button-group-selector: oui-button-group;
+  #oui > .base-font();
 
-  #oui > .pagination-base(
-    @button-selector: @oui-button-selector,
-    @button-link-selector: @oui-button-link-selector,
-    @button-secondary-selector: @oui-button-secondary-selector,
-    @button-group-selector: @oui-button-group-selector
-  );
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: @oui-pagination-margin;
+  font-size: @oui-pagination-font-size;
+
+  #oui > .phone({
+    flex-direction: column-reverse;
+    justify-content: inherit;
+    align-items: center;
+  });
+
+  .oui-button,
+  .oui-button-group {
+    margin-bottom: 0;
+  }
+
+  .oui-button_link {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: @oui-pagination-link-spacing;
+  }
+
+  &__progress {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  &__progress-text {
+    color: @oui-pagination-progress-text-font-color;
+  }
+
+  &__text {
+    display: inline-block;
+  }
+
+  &__selector {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: @oui-pagination-selector-spacing;
+
+    #oui > .phone({
+      margin-bottom: @oui-pagination-selector-spacing_responsive;
+      margin-left: 0;
+    });
+
+    // Fix weird padding on Firefox <=56
+    .oui-button_secondary {
+      padding-top: @oui-pagination-button-padding;
+      padding-bottom: @oui-pagination-button-padding;
+    }
+
+    > .oui-button {
+      &:first-child {
+        margin-right: @oui-pagination-button-spacing;
+      }
+
+      &:last-child {
+        margin-left: @oui-pagination-button-spacing;
+      }
+    }
+  }
+
+  &__size-selector {
+    display: inline-block;
+  }
+
+  &__size-selector-text {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .oui-pagination-button {
-  #oui > .pagination-button();
+  &_selected,
+  &_selected:disabled {
+    background-color: @oui-pagination-button-selected-background;
+    color: @oui-pagination-button-selected-color;
+  }
 }
 
 .oui-pagination-menu {
-  #oui > .pagination-menu();
+  #oui > .base-font();
+
+  padding: @oui-pagination-menu-padding;
 
   &__group {
-    #oui > .pagination-menu-group();
+    padding: @oui-pagination-menu-item-padding;
+    line-height: @oui-pagination-menu-item-line-height;
+    font-size: @oui-pagination-menu-group-font-size;
+    color: @oui-pagination-menu-group-color;
   }
 
   &__items-list {
-    #oui > .pagination-menu-items-list();
+    overflow-y: auto;
+    width: 100%;
+    max-height: @oui-pagination-menu-items-list-max-height;
   }
 
   &__item {
-    #oui > .pagination-menu-item();
+    display: block;
+    width: 100%;
+    padding: @oui-pagination-menu-item-padding;
+    outline: none;
+    line-height: @oui-pagination-menu-item-line-height;
+    background: none;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    font-size: @oui-pagination-menu-item-font-size;
+    color: @oui-pagination-menu-item-font-color;
+
+    &:disabled,
+    &_disabled {
+      color: @oui-pagination-menu-item-font-color_disabled;
+      cursor: auto;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: @oui-pagination-menu-item-background-color_active;
+      color: @oui-pagination-menu-item-font-color_active;
+    }
   }
 }
 
@@ -44,7 +142,7 @@
     margin: 0;
     text-align: right;
     vertical-align: baseline;
-    -moz-appearance: textfield;
+    appearance: textfield;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button { -webkit-appearance: none; }

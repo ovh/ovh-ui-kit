@@ -2,25 +2,54 @@
 @oui-datagrid-width: 100%;
 @oui-datagrid-margin: 0 0 rem-calc(20);
 @oui-datagrid-font-size: rem-calc(16);
+
+@oui-datagrid-arrow-content_asc: @oui-icon-index-arrow-up;
+@oui-datagrid-arrow-content_desc: @oui-icon-index-arrow-down;
+@oui-datagrid-arrow-font-family: @oui-global-base-font-family-icon;
 @oui-datagrid-arrow-size: rem-calc(10);
 
-@oui-datagrid-row-background-color-even: @oui-color-alabaster;
-@oui-datagrid-row-background-color-odd: #fff;
+@oui-datagrid-row-background-color_even: @oui-color-alabaster;
+@oui-datagrid-row-background-color_odd: @oui-color-white;
 
 @oui-datagrid-header-background-color: @oui-color-nurse;
-@oui-datagrid-header-background-color-hover: mix(@oui-color-dusty, @oui-color-nurse, 10%);
-@oui-datagrid-header-background-color-sorted: mix(@oui-color-dusty, @oui-color-nurse, 10%);
+@oui-datagrid-header-background-color_hover: mix(@oui-color-dusty, @oui-color-nurse, 10%);
+@oui-datagrid-header-background-color_sorted: mix(@oui-color-dusty, @oui-color-nurse, 10%);
 @oui-datagrid-header-font-color: @oui-color-shuttle;
-@oui-datagrid-header-font-color-hover: @oui-color-sapphire;
-@oui-datagrid-header-font-color-sorted: @oui-color-sapphire;
+@oui-datagrid-header-font-color_hover: @oui-color-sapphire;
+@oui-datagrid-header-font-color_sorted: @oui-color-sapphire;
+@oui-datagrid-header-font-weight: @oui-font-regular;
+@oui-datagrid-header-font-weight_sorted: @oui-font-semibold;
 @oui-datagrid-header-padding: rem-calc(2) rem-calc(10);
 @oui-datagrid-header-height: rem-calc(44);
 
-@oui-datagrid-cell-background-color: #fff;
+@oui-datagrid-cell-background-color: @oui-color-white;
 @oui-datagrid-cell-border-color: @oui-color-nurse;
 @oui-datagrid-cell-font-color: @oui-color-shuttle;
 @oui-datagrid-cell-padding: rem-calc(5) rem-calc(10);
 @oui-datagrid-cell-height: rem-calc(56);
 
-@oui-datagrid-checkbox-column-width: rem-calc(44);
+// Datagrid - Sticky columns
+@oui-datagrid-sticky-column-border: 1px solid #e4e4e4;
+
 @oui-datagrid-action-column-width: rem-calc(80);
+@oui-datagrid-action-column-margin-top: rem-calc(5);
+@oui-datagrid-action-column-box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.08);
+
+@oui-datagrid-checkbox-column-width: rem-calc(44);
+@oui-datagrid-checkbox-column-margin-top: rem-calc(5);
+@oui-datagrid-checkbox-column-box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.08);
+
+// Datagrid - Parameters
+@oui-datagrid-parameters-button-width: rem-calc(36);
+@oui-datagrid-parameters-button-line-height: rem-calc(26);
+@oui-datagrid-parameters-button-padding: rem-calc(6) 0;
+@oui-datagrid-parameters-button-font-color: @oui-color-sapphire;
+@oui-datagrid-parameters-button-font-color_hover: @oui-color-sapphire;
+
+@oui-datagrid-parameters-header-line-height: rem-calc(40);
+@oui-datagrid-parameters-header-font-color: @oui-color-dusty;
+@oui-datagrid-parameters-header-font-size: rem-calc(14);
+
+@oui-datagrid-parameters-body-padding: 0 rem-calc(18) rem-calc(4) rem-calc(18);
+
+@oui-datagrid-parameters-column-spacing: rem-calc(18);

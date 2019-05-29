@@ -60,7 +60,7 @@ storiesOf('Components/Select', module)
     })),
   )
   .add(
-    'Multiple & Searchable',
+    'Searchable',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-select
       disabled="$ctrl.disabled"
@@ -72,8 +72,33 @@ storiesOf('Components/Select', module)
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()"
-      multiple
       searchable>
+    </oui-select>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        items: countries,
+        placeholder: 'Select a country...',
+        onBlur: action('onBlur'),
+        onChange: action('onChange'),
+        onFocus: action('onFocus'),
+      },
+    })),
+  )
+  .add(
+    'Multiple',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-select
+      disabled="$ctrl.disabled"
+      items="$ctrl.items"
+      match="country.name"
+      model="$ctrl.model"
+      name="country"
+      placeholder="{{ $ctrl.placeholder }}"
+      on-blur="$ctrl.onBlur()"
+      on-change="$ctrl.onChange(modelValue)"
+      on-focus="$ctrl.onFocus()"
+      multiple>
     </oui-select>
     `, {
       $ctrl: {
