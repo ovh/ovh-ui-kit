@@ -261,12 +261,13 @@
     "icon-phone_extra-thin": "\\f204",
     "icon-plus_extra-thin": "\\f205",
     "icon-refresh_extra-thin": "\\f206",
-    "icon-settings_extra-thin": "\\f207",
-    "icon-time_extra-thin": "\\f208",
-    "icon-triangle-down_extra-thin": "\\f209",
-    "icon-triangle-left_extra-thin": "\\f20a",
-    "icon-triangle-right_extra-thin": "\\f20b",
-    "icon-triangle-up_extra-thin": "\\f20c",
-    "icon-user_extra-thin": "\\f20d",
-    "icon-warning_extra-thin": "\\f20e"
+    "icon-search_extra-thin": "\\f207",
+    "icon-settings_extra-thin": "\\f208",
+    "icon-time_extra-thin": "\\f209",
+    "icon-triangle-down_extra-thin": "\\f20a",
+    "icon-triangle-left_extra-thin": "\\f20b",
+    "icon-triangle-right_extra-thin": "\\f20c",
+    "icon-triangle-up_extra-thin": "\\f20d",
+    "icon-user_extra-thin": "\\f20e",
+    "icon-warning_extra-thin": "\\f20f"
 }

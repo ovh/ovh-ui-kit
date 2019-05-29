@@ -8,12 +8,12 @@
   margin: @oui-tile-margin;
   display: block;
   background-color: @oui-tile-background-color;
-  border: 1px solid @oui-tile-border-color;
+  border: @oui-tile-border-width solid @oui-tile-border-color;
   border-radius: @oui-tile-border-radius;
   box-shadow: @oui-tile-box-shadow;
 
   &__title {
-    font-weight: @oui-font-semibold;
+    font-weight: @oui-tile-title-font-weight;
     color: @oui-tile-title-color;
   }
 
@@ -30,7 +30,7 @@
     padding-right: @oui-tile-item-side-spacing;
     margin: 0 -@oui-tile-item-side-spacing;
     box-sizing: content-box;
-    font-weight: @oui-font-semibold;
+    font-weight: @oui-tile-button-font-weight;
     text-align: left;
     text-decoration: none;
 
@@ -44,7 +44,7 @@
 
     &:hover,
     &:focus {
-      background-color: @oui-tile-background-hover;
+      background-color: @oui-tile-background-color_hover;
     }
 
     &:disabled {
@@ -61,11 +61,11 @@
   &__item {
     position: relative;
     display: flex;
-    border-top: 1px solid @oui-tile-item-border-color;
+    border-top: @oui-tile-item-border-width solid @oui-tile-item-border-color;
     padding: @oui-tile-item-top-spacing 0;
 
     &:last-child {
-      border-bottom: 1px solid @oui-tile-item-border-color;
+      border-bottom: @oui-tile-item-border-width solid @oui-tile-item-border-color;
     }
 
     &_button {
@@ -81,7 +81,7 @@
   &__term {
     color: @oui-tile-definition-term-color;
     font-size: @oui-tile-definition-term-font-size;
-    font-weight: @oui-font-regular;
+    font-weight: @oui-tile-definition-term-font-weight;
   }
 
   &__description {
@@ -95,30 +95,12 @@
     }
   }
 
-  &__extra {
-    font-weight: @oui-font-regular;
-  }
-
   &__body {
     &_list {
       list-style: none;
       margin: 0;
       padding: 0;
     }
-  }
-
-  &__top-bordered {
-    &::before {
-      content: "";
-      display: block;
-      margin: 0 @oui-tile-padding;
-      height: 1px;
-      background-color: @oui-tile-item-border-color;
-    }
-  }
-
-  &__body-content {
-    padding: 0 @oui-tile-padding;
   }
 }
 

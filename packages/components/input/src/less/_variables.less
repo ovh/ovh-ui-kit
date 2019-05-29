@@ -1,37 +1,52 @@
 // Input
-@oui-input-background-color: #fff;
-@oui-input-border-color: @oui-color-silver;
+@oui-input-height: rem-calc(40);
+@oui-input-margin: 0;
+@oui-input-padding: 0 rem-calc(11);
 @oui-input-font-color: @oui-color-zodiac;
+@oui-input-font-color_disabled: @oui-color-silver;
+@oui-input-font-color_readonly: @oui-color-gothic;
+@oui-input-font-color_error: @oui-color-error-dark;
 @oui-input-font-size: rem-calc(16);
 @oui-input-font-weight: @oui-font-semibold;
-@oui-input-padding: rem-calc(11);
-@oui-input-margin: 0;
+@oui-input-font-weight_error: @oui-font-regular;
+@oui-input-border-color: @oui-color-silver;
+@oui-input-border-color_hover: @oui-color-dusty;
+@oui-input-border-color_focus: @oui-color-pacific;
+@oui-input-border-color_disabled: @oui-color-silver;
+@oui-input-border-color_readonly: @oui-color-nurse;
+@oui-input-border-color_error: @oui-color-error-medium;
+@oui-input-border-radius: @oui-global-base-radius;
+@oui-input-border-size: 1px;
+@oui-input-box-shadow: inset 2px 2px 1px 0 rgba(18, 40, 68, 0.07);
+@oui-input-box-shadow_focus: inset 2px 2px 1px 0 fade(@oui-color-turquoise, 35%), 0 0 3px 0 @oui-color-info-light;
+@oui-input-box-shadow_error: inset 1px 1px 1px 0 @oui-color-error-light;
+@oui-input-box-shadow_error: inset 1px 1px 1px 0 @oui-color-error-light;
+@oui-input-background-color: @oui-color-white;
+@oui-input-background-color_focus: @oui-color-polar;
+@oui-input-background-color_disabled: @oui-color-concrete;
+@oui-input-background-color_readonly: @oui-color-concrete;
+@oui-input-background-color_error: @oui-color-error-fade;
+@oui-input-background-color_error-focus: 0 0 3px 0 rgba(0, 0, 0, 0.35);
+
+@oui-input-placeholder-font-color: @oui-color-silver;
+
 @oui-input-selection-background-color: @oui-color-pacific;
-@oui-input-selection-font-color: #fff;
-@oui-input-shadow: inset 2px 2px 1px 0 rgba(18, 40, 68, 0.07);
-
-@oui-input-border-color-hover: @oui-color-dusty;
-
-@oui-input-background-color-focus: @oui-color-polar;
-@oui-input-border-color-focus: @oui-color-pacific;
-@oui-input-shadow-focus: inset 2px 2px 1px 0 fade(@oui-color-turquoise, 35%), 0 0 3px 0 @oui-color-info-light;
-
-@oui-input-background-color-disabled: @oui-color-concrete;
-@oui-input-border-color-disabled: @oui-color-silver;
-@oui-input-font-color-disabled: @oui-color-silver;
-
-@oui-input-background-color-read-only: @oui-color-concrete;
-@oui-input-border-color-read-only: #e6e6e6;
-@oui-input-font-color-read-only: @oui-color-gothic;
-
-@oui-input-status: error;
-@oui-input-shadow-error: inset 1px 1px 1px 0 @oui-color-error-light;
+@oui-input-selection-background-color_error: @oui-color-error-dark;
+@oui-input-selection-font-color: @oui-color-white;
+@oui-input-selection-font-color_error: @oui-color-white;
 
 // Input Group
 @oui-input-group-margin: 0;
+@oui-input-group-border-radius: @oui-input-border-radius;
+@oui-input-group-border-size: @oui-input-border-size;
 
 @oui-input-group-button-min-width: rem-calc(50);
-@oui-input-group-button-color_hover: @oui-color-pacific;
-@oui-input-group-button-hollow-background-color: #fff;
-@oui-input-group-button-hollow-border-color_disabled: @oui-input-border-color-disabled;
-@oui-input-group-button-hollow-padding: rem-calc(7);
+@oui-input-group-button-padding: rem-calc(7);
+@oui-input-group-button-background-color: @oui-input-background-color;
+@oui-input-group-button-border-color_disabled: @oui-input-border-color_disabled;
+@oui-input-group-button-font-color: @oui-color-silver;
+@oui-input-group-button-font-color_hover: @oui-color-pacific;
+@oui-input-group-button-font-color_focus: @oui-input-group-button-font-color_hover;
+
+@oui-input-group-button-icon-size: rem-calc(20);
+@oui-input-group-button-icon-shadow_focus: 0 1px 1px rgba(0, 0, 0, 0.15);

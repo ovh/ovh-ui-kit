@@ -1,20 +1,103 @@
-@import '~@ovh-ux/ui-kit.ui-select/src/less/ui-select';
 @import '~@ovh-ux/ui-kit.core/src/less/_mixins';
+@import '~@ovh-ux/ui-kit.ui-select/src/less/ui-select';
 @import './_mixins';
-@import './_normalize';
+@import './_variables';
 
 .oui-select {
-  @oui-select-selector: oui-select;
-  @oui-icon-selector: oui-icon;
+  #oui > .base-font();
 
-  #oui > .select-normalize();
-  #oui > .select(@oui-icon-selector);
-  #oui > .select-error();
+  position: relative;
+  display: block;
+  border-radius: @oui-select-border-radius;
+  margin: @oui-select-margin;
 
-  &_inline {
-    #oui > .select-inline();
+  .oui-icon {
+    position: absolute;
+    top: @oui-select-border-width;
+    right: @oui-select-border-width;
+    bottom: @oui-select-border-width;
+    vertical-align: middle;
+    pointer-events: none;
+    cursor: pointer;
+
+    &::before {
+      display: inline-block;
+      margin-right: @oui-select-icon-spacing;
+      font-size: @oui-select-icon-size;
+    }
+  }
+
+  &__input {
+    #oui > .text-ellipsis();
+
+    width: 100%;
+    max-width: 100%;
+    height: @oui-select-height;
+    padding: 0;
+    padding-left: @oui-select-padding-x;
+    padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
+    border: @oui-select-border-width solid @oui-select-border-color;
+    border-radius: @oui-select-border-radius;
+    background: @oui-select-background-color;
+    box-shadow: @oui-select-box-shadow;
+    color: @oui-select-font-color;
+    font-size: @oui-select-font-size;
+    font-family: inherit;
+    font-weight: @oui-select-font-weight;
+    cursor: pointer;
+    appearance: none;
+
+    ~ .oui-icon {
+      color: @oui-select-font-color;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      #oui > .animate();
+
+      border-color: @oui-select-border-color_focus;
+      outline: none;
+      box-shadow: @oui-select-box-shadow_focus;
+      background: @oui-select-background-color_focus;
+
+      ~ .oui-icon {
+        color: @oui-select-border-color_focus;
+      }
+    }
+
+    &:disabled {
+      border-color: @oui-select-border-color_disabled;
+      background-color: @oui-select-background-color_disabled;
+      color: @oui-select-font-color_disabled;
+      text-shadow: none;
+      cursor: auto;
+
+      ~ .oui-icon {
+        color: @oui-select-font-color_disabled;
+      }
+    }
   }
 }
 
-// Size variants
+oui-select {
+  display: block;
+}
+
+// Select - Inline
+.oui-select_inline {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+}
+
+// Select - Error
+.oui-select_error,
+.oui-field_error .oui-select {
+  #oui > .select-error-style();
+}
+
+// Select - Size variants
 #oui > .control-sizes(oui-select);

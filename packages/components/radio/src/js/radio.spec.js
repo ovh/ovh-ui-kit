@@ -167,14 +167,35 @@ describe('ouiRadio', () => {
       });
 
 
+      describe('size attribute', () => {
+        it('should display a classic radio when no attribute', () => {
+          const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');
+
+          $timeout.flush();
+          expect(angular.element(element).hasClass('oui-radio_m')).toBeFalsy();
+        });
+
+        it('should display a medium radio when value is m', () => {
+          const element = TestUtils.compileTemplate('<oui-radio size="m"></oui-radio>');
+
+          $timeout.flush();
+          expect(angular.element(element).hasClass('oui-radio_m')).toBeTruthy();
+        });
+      });
+
+
       describe('thumbnail attribute', () => {
         it('should display a classic radio when no attribute', () => {
           const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');
+
+          $timeout.flush();
           expect(angular.element(element).hasClass('oui-radio_thumbnail')).toBe(false);
         });
 
         it('should display a thumbnail radio when defined but no value', () => {
           const element = TestUtils.compileTemplate('<oui-radio thumbnail></oui-radio>');
+
+          $timeout.flush();
           expect(angular.element(element).hasClass('oui-radio_thumbnail')).toBe(true);
         });
 
@@ -183,6 +204,7 @@ describe('ouiRadio', () => {
             thumbnail: false,
           });
 
+          $timeout.flush();
           expect(angular.element(element).hasClass('oui-radio_thumbnail')).toBe(false);
         });
 
@@ -191,6 +213,7 @@ describe('ouiRadio', () => {
             thumbnail: true,
           });
 
+          $timeout.flush();
           expect(angular.element(element).hasClass('oui-radio_thumbnail')).toBe(true);
         });
       });
@@ -314,6 +337,7 @@ describe('ouiRadio', () => {
                     </oui-radio-group>
             `);
 
+        $timeout.flush();
         expect(getElementByClass(element, '.oui-radio').length).toEqual(1);
         expect(getElementByClass(element, '.oui-radio__input').length).toEqual(1);
         expect(getElementByClass(element, '.oui-radio__label-container').length).toEqual(1);
@@ -442,6 +466,7 @@ describe('ouiRadio', () => {
                     </oui-radio-toggle-group>
             `);
 
+        $timeout.flush();
         expect(getElementByClass(element, '.oui-radio-toggle').length).toEqual(1);
         expect(getElementByClass(element, '.oui-radio-toggle__input').length).toEqual(1);
         expect(getElementByClass(element, '.oui-radio-toggle__label-container').length).toEqual(1);

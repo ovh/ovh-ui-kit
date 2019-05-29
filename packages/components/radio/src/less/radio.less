@@ -2,115 +2,45 @@
 @import './_mixins';
 @import './_variables';
 
+// Radio - Base
 .oui-radio {
-  @oui-radio-selector: oui-radio;
-
-  #oui > .radio(@oui-radio-selector);
-  #oui > .radio-status();
-
-  &__label {
-    #oui > .base-font();
-  }
-
-  &__label-container {
-    font-weight: inherit;
-    cursor: pointer;
-
-    &::before,
-    &::after {
-      box-sizing: border-box;
-    }
-  }
-
-  &_m {
-    #oui > .radio-size(
-      @oui-radio-selector,
-      @oui-radio-m-outer-circle-size,
-      @oui-radio-m-inner-circle-size,
-      @oui-radio-padding-left
-    );
-
-    #oui        > .radio-position(
-      @oui-radio-selector,
-      @oui-radio-m-outer-circle-top,
-      @oui-radio-m-outer-circle-left,
-      @oui-radio-m-inner-circle-top,
-      @oui-radio-m-inner-circle-left
-    );
-
-    #oui        > .radio-label(
-      @oui-radio-selector,
-      @oui-radio-m-inner-font-size,
-      @oui-radio-m-outer-circle-size
-    );
-  }
-
-  &_thumbnail {
-    #oui > .radio-thumbnail(
-      @oui-radio-selector
-    );
-  }
-
-  &_thumbnail&_m {
-    #oui > .radio-thumbnail(
-      @oui-radio-selector
-    );
-
-    #oui        > .radio-size(
-      @oui-radio-selector,
-      @oui-radio-m-outer-circle-size,
-      @oui-radio-m-inner-circle-size,
-      @oui-radio-padding-left,
-      false
-    );
-
-    #oui        > .radio-label(
-      @oui-radio-selector,
-      @oui-radio-m-inner-font-size,
-      @oui-radio-m-outer-circle-size
-    );
-  }
-
-  &_thumbnail-light {
-    #oui > .radio-thumbnail(
-      @oui-radio-selector
-    );
-
-    #oui        > .radio-thumbnail-light(
-      @oui-radio-selector
-    );
-  }
-
-  &_thumbnail-light&_m {
-    #oui > .radio-thumbnail(
-      @oui-radio-selector
-    );
-
-    #oui        > .radio-thumbnail-light(
-      @oui-radio-selector
-    );
-
-    #oui        > .radio-size(
-      @oui-radio-selector,
-      @oui-radio-m-outer-circle-size,
-      @oui-radio-m-inner-circle-size,
-      @oui-radio-padding-left,
-      false
-    );
-
-    #oui        > .radio-label(
-      @oui-radio-selector,
-      @oui-radio-m-inner-font-size,
-      @oui-radio-m-outer-circle-size
-    );
-  }
-
-  &_inline {
-    #oui > .radio-inline();
-  }
+  #oui > .radio-base();
 }
 
 oui-radio,
 oui-radio-group {
-  display: block;
+  &:extend(.oui-radio);
+}
+
+// Radio - Inline
+.oui-radio_inline {
+  display: inline-block;
+  margin-right: @oui-radio-inline-spacing;
+}
+
+// Radio - Medium
+.oui-radio_m {
+  #oui > .radio-size(
+    @line-height: @oui-radio-m-line-height,
+    @font-size: @oui-radio-m-font-size,
+    @icon-size: @oui-radio-m-icon-size
+  );
+}
+
+// Radio - Thumbnail
+.oui-radio_thumbnail {
+  #oui > .choice-thumbnail(oui-radio);
+}
+
+// Radio - Thumbnail light
+.oui-radio_thumbnail-light {
+  &:extend(.oui-radio_thumbnail all);
+
+  #oui > .choice-thumbnail_light(oui-radio);
+}
+
+// Radio - Error
+.oui-radio_error,
+.oui-field_error .oui-radio {
+  #oui > .radio-error-style();
 }

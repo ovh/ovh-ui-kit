@@ -1,3 +1,4 @@
+@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import './_variables';
 
@@ -27,8 +28,8 @@
 
   // Add arrow for button with popup
   &[aria-haspopup="true"]::after {
-    content: @oui-icon-index-chevron-down;
-    font-family: @oui-global-base-font-family-icon;
+    content: @oui-sidebar-arrow-content;
+    font-family: @oui-sidebar-arrow-font-family;
     font-size: @oui-sidebar-arrow-size;
     color: @oui-sidebar-arrow-color;
     padding: 0;
@@ -39,7 +40,7 @@
   }
 
   &[aria-expanded="true"]::after {
-    content: @oui-icon-index-chevron-up;
+    content: @oui-sidebar-arrow-content_active;
   }
 
   a&,
@@ -53,7 +54,7 @@
     &:focus,
     &_active,
     &[aria-expanded="true"] {
-      color: #fff;
+      color: @oui-sidebar-link-font-color_active;
 
       &[aria-haspopup="true"]::after {
         color: inherit;
@@ -61,10 +62,7 @@
     }
 
     &:focus {
-      outline-width: 1px;
-      outline-style: dotted;
-      outline-color: initial;
-      outline-offset: -2px;
+      #oui > .outline-border();
     }
   }
 }
@@ -77,7 +75,7 @@
   list-style: none;
 
   // Add max-height for collapsible list
-  [aria-expanded] ~ .oui-sidebar-menu & { max-height: 35vh; }
+  [aria-expanded] ~ .oui-sidebar-menu & { max-height: @oui-sidebar-list-max-height; }
 
   [aria-expanded] ~ .oui-sidebar-menu & & { max-height: none; }
 
@@ -92,7 +90,7 @@
 
     & & & + & { border-top: @oui-sidebar-menu-item-border-bottom_level-2; }
 
-    &_active > .oui-sidebar-link { color: #fff; }
+    &_active > .oui-sidebar-link { color: @oui-sidebar-link-font-color_active; }
   }
 }
 
@@ -130,14 +128,14 @@
     display: block;
     background-color: @oui-sidebar-menu-background-color_level-1;
 
-    .oui-sidebar-link { text-indent: rem-calc(10); }
+    .oui-sidebar-link { text-indent: @oui-sidebar-link-text-indent; }
   }
 
   // Menu Level 2
   & & & {
     background-color: @oui-sidebar-menu-background-color_level-2;
 
-    .oui-sidebar-link { text-indent: rem-calc(20); }
+    .oui-sidebar-link { text-indent: calc(@oui-sidebar-link-text-indent * 2); }
   }
 
   @keyframes delay-visibility {

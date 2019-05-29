@@ -17,11 +17,6 @@ export default class {
     addDefaultParameter(this, 'id', `ouiRadio${this.$scope.$id}`);
     addDefaultParameter(this, 'variant', 'default');
 
-    this.$element.addClass(this.radioToggleGroup ? 'oui-radio-toggle' : 'oui-radio');
-    if (this.thumbnail && !this.radioToggleGroup) {
-      this.$element.addClass(this.variant === 'default' ? 'oui-radio_thumbnail' : `oui-radio_thumbnail-${this.variant}`);
-    }
-
     this.group = this.radioGroup || this.radioToggleGroup;
     if (this.group) {
       this.name = this.group.name;
@@ -36,9 +31,20 @@ export default class {
   $postLink() {
     // Sometimes the digest cycle is done before dom manipulation,
     // So we use $timeout to force the $apply
-    this.$timeout(() => this.$element
-      .removeAttr('id')
-      .removeAttr('name'));
+    this.$timeout(() => {
+      this.$element
+        .removeAttr('id')
+        .removeAttr('name')
+        .addClass(this.radioToggleGroup ? 'oui-radio-toggle' : 'oui-radio');
+
+      if (this.size) {
+        this.$element.addClass(`oui-radio_${this.size}`);
+      }
+
+      if (this.thumbnail && !this.radioToggleGroup) {
+        this.$element.addClass(this.variant === 'default' ? 'oui-radio_thumbnail' : `oui-radio_thumbnail-${this.variant}`);
+      }
+    });
   }
 
   onRadioModelChange(event) {

@@ -332,7 +332,7 @@ button,
 html button[type="button"],
 button[type="reset"],
 button[type="submit"] {
-  -webkit-appearance: button; // 2
+  appearance: button; // 2
 }
 
 // Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
@@ -368,7 +368,7 @@ input[type="month"] {
   // centered within the input.
   // See https://bugs.webkit.org/show_bug.cgi?id=139848
   // and https://github.com/twbs/bootstrap/issues/11266
-  -webkit-appearance: listbox;
+  appearance: listbox;
 }
 
 textarea {
@@ -420,7 +420,7 @@ input[type="search"] {
   // be added to `.form-control` as it's not specific enough. For details, see
   // https://github.com/twbs/bootstrap/issues/11586.
   outline-offset: -2px; // 2. Correct the outline style in Safari.
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 //
@@ -429,7 +429,7 @@ input[type="search"] {
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 //
@@ -439,7 +439,7 @@ input[type="search"]::-webkit-search-decoration {
 
 ::-webkit-file-upload-button {
   font: inherit; // 2
-  -webkit-appearance: button; // 1
+  appearance: button; // 1
 }
 
 //

@@ -1,7 +1,7 @@
 @font-face {
     font-family: "oui-icons";
-    src: url("./oui-icons.woff2?e88cb58bb688e2f65f793766ded0b95a") format("woff2"),
-url("./oui-icons.woff?e88cb58bb688e2f65f793766ded0b95a") format("woff");
+    src: url("./oui-icons.woff2?af5acf2af16a16f38e43c5b1ec5182f7") format("woff2"),
+url("./oui-icons.woff?af5acf2af16a16f38e43c5b1ec5182f7") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -801,27 +801,30 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-refresh_extra-thin:before {
     content: "\f206";
 }
-.oui-icon-settings_extra-thin:before {
+.oui-icon-search_extra-thin:before {
     content: "\f207";
 }
-.oui-icon-time_extra-thin:before {
+.oui-icon-settings_extra-thin:before {
     content: "\f208";
 }
-.oui-icon-triangle-down_extra-thin:before {
+.oui-icon-time_extra-thin:before {
     content: "\f209";
 }
-.oui-icon-triangle-left_extra-thin:before {
+.oui-icon-triangle-down_extra-thin:before {
     content: "\f20a";
 }
-.oui-icon-triangle-right_extra-thin:before {
+.oui-icon-triangle-left_extra-thin:before {
     content: "\f20b";
 }
-.oui-icon-triangle-up_extra-thin:before {
+.oui-icon-triangle-right_extra-thin:before {
     content: "\f20c";
 }
-.oui-icon-user_extra-thin:before {
+.oui-icon-triangle-up_extra-thin:before {
     content: "\f20d";
 }
-.oui-icon-warning_extra-thin:before {
+.oui-icon-user_extra-thin:before {
     content: "\f20e";
+}
+.oui-icon-warning_extra-thin:before {
+    content: "\f20f";
 }

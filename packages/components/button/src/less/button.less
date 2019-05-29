@@ -15,13 +15,13 @@
   text-align: center;
   font-size: @oui-button-font-size;
   font-weight: @oui-button-font-weight;
-  letter-spacing: 0.007em;
+  letter-spacing: @oui-button-letter-spacing;
   border-radius: @oui-button-radius;
   cursor: pointer;
   border: none;
   user-select: none;
   overflow-y: hidden;
-  -webkit-appearance: none;
+  appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   // Required to fix alignment when a button is beside of an
@@ -35,10 +35,7 @@
   &:hover { text-decoration: none; }
 
   &:focus {
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: initial;
-    outline-offset: -2px;
+    #oui > .outline-border();
   }
 
   &:disabled {
@@ -71,17 +68,15 @@ oui-button {
 .oui-button_dropdown {
   #oui > .button-hollow();
 
-  padding-right: rem-calc(30) + @oui-button-dropdown-padding * 0.8;
-  padding-left: @oui-button-dropdown-padding;
+  padding-right: @oui-button-dropdown-padding-right;
+  padding-left: @oui-button-dropdown-padding-left;
 
   .oui-icon-chevron-down {
     position: absolute;
-    right: 0;
+    right: 1px;
     top: 1px;
     bottom: 1px;
-    width: ~"calc(@{oui-button-dropdown-icon-size} * 2.5)";
-    height: auto;
-    margin: auto;
+    color: inherit;
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
@@ -89,8 +84,8 @@ oui-button {
 
     &::before {
       display: inline-block;
-      margin-right: @oui-button-dropdown-padding * 1.5;
-      color: @oui-button-dropdown-icon-color;
+      margin-right: @oui-button-dropdown-margin-right;
+      color: inherit;
       font-size: @oui-button-dropdown-icon-size;
     }
   }
@@ -100,22 +95,10 @@ oui-button {
     border-color: @oui-button-dropdown-border-color_active;
     background: @oui-button-dropdown-background-color_active;
     box-shadow: none;
-
-    .oui-icon-chevron-down {
-      &::before {
-        color: @oui-button-dropdown-icon-color_active;
-      }
-    }
   }
 
   &:disabled {
     color: @oui-button-dropdown-color;
-
-    .oui-icon-chevron-down {
-      &::before {
-        color: @oui-button-dropdown-icon-color_disabled;
-      }
-    }
   }
 
   &.open .oui-icon-chevron-down {
@@ -202,6 +185,8 @@ oui-button {
   height: 100%;
 
   .oui-icon::before {
+    width: 1em;
+    height: 1em;
     position: absolute;
     top: 0;
     bottom: 0;

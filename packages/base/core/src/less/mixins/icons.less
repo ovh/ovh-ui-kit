@@ -1,0 +1,40 @@
+@import '../_variables';
+
+// Icons
+#oui {
+  .icon(
+    @icon-size: @oui-icon-size,
+    @icon-color: @oui-icon-color,
+    @font-family: @oui-icon-font-family,
+    @spacing: @oui-icon-spacing
+  ) {
+    display: inline-block;
+    margin: @spacing;
+    padding: 0;
+    color: @icon-color;
+    font-family: @font-family;
+    font-size: @icon-size;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .for(@array)   when (default()) { #oui > .for-impl_(length(@array)); }
+  .for-impl_(@i) when (@i > 1) { #oui > .for-impl_((@i - 1)); }
+  .for-impl_(@i) when (@i > 0) { .-each(extract(@array, @i)); }
+
+  .define(@name) {
+    @content: "oui-icon-index-@{name}";
+  }
+
+  .icon-type() {
+    #oui > .for(@oui-icon-index); .-each(@index) {
+      #oui > .define(@index);
+
+      &.oui-icon-@{index}::before {
+        display: block;
+        content: @@content;
+      }
+    }
+  }
+}

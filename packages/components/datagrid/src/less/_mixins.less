@@ -4,166 +4,10 @@
 @import './_variables';
 
 #oui {
-  .datagrid-base(
-    @width: @oui-datagrid-width,
-    @margin: @oui-datagrid-margin,
-    @font-size: @oui-datagrid-font-size
-  ) {
-    width: @width;
-    border: 0;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin: @margin;
-    text-align: left;
-    font-size: @font-size;
-  }
-
-  .datagrid-headers(
-    @header-selector,
-    @header-height: @oui-datagrid-header-height,
-    @background-color: @oui-datagrid-header-background-color
-  ) {
-    .@{header-selector} {
-      height: @header-height;
-      background-color: @background-color;
-    }
-  }
-
-  .datagrid-header(
-    @checkbox-selector,
-    @font-color: @oui-datagrid-header-font-color,
-    @padding: @oui-datagrid-header-padding
-  ) {
-    #oui > .animate();
-
-    padding: @padding;
-    white-space: nowrap;
-    outline: none;
-    color: @font-color;
-    font-weight: @oui-font-regular;
-
-    &[role="button"] {
-      cursor: inherit;
-    }
-
-    .@{checkbox-selector} {
-      margin-bottom: 0;
-    }
-  }
-
-  .datagrid-header-sortable(
-    @datagrid-selector,
-    @background-color-hover: @oui-datagrid-header-background-color-hover,
-    @font-color-hover: @oui-datagrid-header-font-color-hover,
-    @padding: @oui-datagrid-header-padding,
-    @arrow-size: @oui-datagrid-arrow-size
-  ) {
-    padding-right: ~"calc(@{arrow-size} * 3)";
-    cursor: pointer;
-
-    &[role="button"] {
-      cursor: pointer;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: @background-color-hover;
-      color: @font-color-hover;
-    }
-
-    #oui > .datagrid-arrow-asc(
-      @font-color: @oui-datagrid-header-font-color,
-      @font-weight: @oui-font-regular
-    );
-  }
-
-  .datagrid-header-arrow(
-    @arrow-color: @oui-datagrid-header-font-color-sorted,
-    @arrow-size: @oui-datagrid-arrow-size
-  ) {
-    display: inline-block;
-    width: ~"calc(@{arrow-size} * 2)";
-    height: @arrow-size;
-    margin: auto;
-    color: @arrow-color;
-    font-family: @oui-global-base-font-family-icon;
-    font-size: @arrow-size;
-    line-height: 1;
-    font-weight: @oui-font-regular;
-    text-align: center;
-  }
-
-  .datagrid-arrow-asc(
-    @font-color: @oui-datagrid-header-font-color-sorted,
-    @font-weight: @oui-font-semibold
-  ) {
-    font-weight: @font-weight;
-    color: @font-color;
-
-    &::after {
-      .datagrid-header-arrow();
-
-      opacity: 0;
-      content: @oui-icon-index-arrow-up;
-    }
-
-    &:hover::after {
-      #oui > .animate();
-
-      opacity: 0.5;
-    }
-
-    &:focus::after,
-    &:active::after {
-      #oui > .animate();
-
-      opacity: 1;
-    }
-  }
-
-  .datagrid-arrow-desc(
-    @font-color: @oui-datagrid-header-font-color-sorted
-  ) {
-    font-weight: @oui-font-semibold;
-    color: @font-color;
-
-    &::after {
-      .datagrid-header-arrow();
-
-      opacity: 0;
-      content: @oui-icon-index-arrow-down;
-    }
-
-    &:hover::after {
-      #oui > .animate();
-
-      opacity: 0.5;
-    }
-
-    &:focus::after,
-    &:active::after {
-      #oui > .animate();
-
-      opacity: 1;
-    }
-  }
-
-  .datagrid-cell-sorted(
-  ) {
-    &.oui-datagrid__header {
-      &::after,
-      &:hover::after,
-      &:focus::after,
-      &:active::after {
-        opacity: 1;
-      }
-    }
-  }
-
   .datagrid-row(
     @cell-selector,
-    @background-color-odd: @oui-datagrid-row-background-color-odd,
-    @background-color-even: @oui-datagrid-row-background-color-even
+    @background-color-odd: @oui-datagrid-row-background-color_odd,
+    @background-color_even: @oui-datagrid-row-background-color_even
   ) {
     &:nth-child(odd) {
       .@{cell-selector} {
@@ -173,7 +17,7 @@
 
     &:nth-child(even) {
       .@{cell-selector} {
-        background-color: @background-color-even;
+        background-color: @background-color_even;
       }
     }
   }

@@ -9,7 +9,12 @@ import { properties } from '../_data/criteria.data.json';
 
 // Create mock module for the stories
 const moduleName = 'oui-criteria-stories';
-angular.module(moduleName, ['oui.criteria']);
+angular.module(moduleName, [
+  'oui.criteria',
+
+  // For examples
+  'oui.action-menu',
+]);
 
 storiesOf('Internal/Criteria', module)
   .add(
@@ -37,6 +42,38 @@ storiesOf('Internal/Criteria', module)
       model="$ctrl.model"
       properties="$ctrl.properties"
       searchable>
+    </oui-criteria>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        onChange: action('onChange'),
+        properties,
+      },
+    })),
+  )
+  .add(
+    'With action menu',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-criteria
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      properties="$ctrl.properties"
+      searchable>
+      <oui-action-menu text="Actions">
+        <oui-action-menu-item on-click="$ctrl.onActionClick('Action 1')">
+          Action 1 (button)
+        </oui-action-menu-item>
+        <oui-action-menu-item on-click="$ctrl.onActionClick('Action 2')" href="">
+          Action 2 (link)
+        </oui-action-menu-item>
+        <oui-action-menu-item disabled>
+          Action 3 (disabled)
+        </oui-action-menu-item>
+        <oui-action-menu-divider></oui-action-menu-divider>
+        <oui-action-menu-item on-click="$ctrl.onActionClick('External link')" href="" external>
+          External link
+        </oui-action-menu-item>
+      </oui-action-menu>
     </oui-criteria>
     `, {
       $ctrl: {

@@ -1,0 +1,75 @@
+@import '../_variables';
+
+// Typography
+#oui {
+  .base-font(
+    @line-height: @oui-global-base-line-height,
+    @letter-spacing: @oui-global-base-letter-spacing,
+    @font-family: @oui-global-base-font-family
+  ) {
+    font-family: @font-family;
+    line-height: @line-height;
+    letter-spacing: @letter-spacing;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .text-ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .headings(@index: length(@oui-heading-font-sizes)) when(@index > 0) {
+    #oui > .headings(@index - 1);
+
+    &@{index} {
+      #oui > .base-font();
+
+      font-size: extract(@oui-heading-font-sizes, @index);
+      font-weight: extract(@oui-heading-font-weights, @index);
+      margin: extract(@oui-heading-margins, @index);
+      color: inherit;
+    }
+  }
+
+  .link(
+    @font-color: @oui-link-font-color,
+    @font-color_hover: @oui-link-font-color_hover,
+    @text-decoration: @oui-link-text-decoration,
+    @text-decoration_hover: @oui-link-text-decoration_hover
+  ) {
+    .base-font();
+
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: @font-color;
+    text-decoration: @text-decoration;
+    line-height: inherit;
+    cursor: pointer;
+    -webkit-text-decoration-skip: objects;
+
+    &:active,
+    &:hover {
+      outline-width: 0;
+    }
+
+    &:hover,
+    &:focus {
+      color: @font-color_hover;
+    }
+
+    &:hover {
+      text-decoration: @text-decoration_hover;
+    }
+
+    img {
+      border-style: none;
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+
 export default class {
   constructor($attrs, ouiFormActionsConfiguration) {
     'ngInject';
@@ -8,6 +10,8 @@ export default class {
 
   $onInit() {
     this.processTranslations();
+
+    addBooleanParameter(this, 'disabled');
   }
 
   processTranslations() {

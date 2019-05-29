@@ -1,0 +1,175 @@
+@import '../_variables';
+
+// Choice (for Checkbox / Radio / Select Picker)
+#oui {
+  .choice-base(
+    @min-height: @oui-choice-min-height,
+    @margin: @oui-choice-margin,
+    @font-color: @oui-choice-font-color,
+    @font-size: @oui-choice-font-size,
+    @description-spacing: @oui-choice-description-spacing,
+    @description-font-size: @oui-choice-description-font-size,
+    @section-spacing: @oui-choice-section-spacing,
+    @section-border-color: @oui-choice-section-border-color
+  ) {
+    display: block;
+    margin: @margin;
+
+    &__label-container {
+      min-height: @min-height;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      font-weight: inherit;
+      cursor: pointer;
+    }
+
+    &__label,
+    &__description,
+    &__section {
+      #oui > .base-font();
+
+      display: block;
+      color: @font-color;
+    }
+
+    &__label {
+      position: relative;
+      font-weight: @oui-font-semibold;
+    }
+
+    &__description {
+      margin-top: @description-spacing;
+      font-size: @description-font-size;
+    }
+
+    &__section {
+      margin-top: @section-spacing;
+      padding-top: @section-spacing;
+      border-top: 1px solid @section-border-color;
+    }
+
+    &__input {
+      #oui > .visually-hidden();
+    }
+  }
+
+  .choice-thumbnail(@selector) {
+    .@{selector}__label-container {
+      #oui > .choice-thumbnail-base();
+
+      position: relative;
+      justify-content: start;
+      height: 100%;
+    }
+
+    .@{selector}__input:checked ~ .@{selector}__label-container {
+      box-shadow: @oui-choice-thumbnail-box-shadow-checked;
+      padding: ~"calc(@{oui-choice-thumbnail-padding} - (@{oui-choice-thumbnail-border-size-checked} - @{oui-choice-thumbnail-border-size}))";
+    }
+
+    .@{selector}__input:disabled {
+      ~ .@{selector}__label-container {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color_disabled,
+          @oui-choice-thumbnail-background_disabled
+        );
+      }
+
+      &:checked ~ .@{selector}__label-container {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color-checked_disabled,
+          @oui-choice-thumbnail-background-checked_disabled,
+          @oui-choice-thumbnail-border-size-checked
+        );
+      }
+    }
+
+    .@{selector}__input:not(:disabled) {
+      ~ .@{selector}__label-container:hover {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color_hover,
+          @oui-choice-thumbnail-background_hover
+        );
+      }
+
+      &:focus ~ .@{selector}__label-container .@{selector}__label::before {
+        box-shadow: @oui-choice-thumbnail-box-shadow_focus;
+      }
+
+      &:checked ~ .@{selector}__label-container {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color-checked,
+          @oui-choice-thumbnail-background-checked,
+          @oui-choice-thumbnail-border-size-checked
+        );
+
+        &:hover {
+          #oui > .choice-thumbnail-color(
+            @oui-choice-thumbnail-border-color-checked_hover,
+            @oui-choice-thumbnail-background-checked_hover,
+            @oui-choice-thumbnail-border-size-checked
+          );
+        }
+      }
+    }
+  }
+
+  .choice-thumbnail_light(@selector) {
+    .@{selector}__label-container {
+      #oui > .choice-thumbnail-base(
+        @oui-choice-thumbnail-border-color-light,
+        @oui-choice-thumbnail-background-light
+      );
+    }
+
+    .@{selector}__input:disabled {
+      ~ .@{selector}__label-container {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color-light_disabled,
+          @oui-choice-thumbnail-background-light_disabled
+        );
+      }
+
+      &:checked ~ .@{selector}__label-container {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color-light-checked_disabled,
+          @oui-choice-thumbnail-background-light-checked_disabled,
+          @oui-choice-thumbnail-border-size-checked
+        );
+      }
+    }
+
+    .@{selector}__input:not(:disabled) {
+      ~ .@{selector}__label-container:hover {
+        #oui > .choice-thumbnail-color(
+          @oui-choice-thumbnail-border-color-light_hover,
+          @oui-choice-thumbnail-background-light_hover
+        );
+      }
+    }
+  }
+
+  .choice-thumbnail-base(
+    @border-color: @oui-choice-thumbnail-border-color,
+    @background: @oui-choice-thumbnail-background,
+    @border-size: @oui-choice-thumbnail-border-size,
+    @padding: @oui-choice-thumbnail-padding
+  ) {
+    padding: @padding;
+    border: @border-size solid @border-color;
+    border-radius: @oui-global-base-radius-medium;
+    background: @background;
+    cursor: pointer;
+  }
+
+  .choice-thumbnail-color(
+    @border-hover-color: @oui-choice-thumbnail-border-hover-color,
+    @background: @oui-choice-thumbnail-background,
+    @border-size: @oui-choice-thumbnail-border-size
+  ) {
+    border: @border-size solid @border-hover-color;
+    background: @background;
+  }
+}

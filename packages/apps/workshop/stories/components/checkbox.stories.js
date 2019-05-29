@@ -77,7 +77,22 @@ storiesOf('Components/Checkbox', module)
   .add(
     'With description',
     forModule(moduleName).createElement(() => compileTemplate(`
-    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model">Normal</oui-checkbox>
-    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model" disabled>Disabled</oui-checkbox>
+    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model1">Normal</oui-checkbox>
+    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" disabled>Disabled</oui-checkbox>
+    `)),
+  )
+  .add(
+    'Thumbnails',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model1" thumbnail>Thumbnail</oui-checkbox>
+    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" variant="light" thumbnail>Thumbnail Light</oui-checkbox>
+    `)),
+  )
+  .add(
+    'Size',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" size="m">Medium</oui-checkbox>
+    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model1" size="m" thumbnail>Thumbnail</oui-checkbox>
+    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" size="m" variant="light" thumbnail>Thumbnail Light</oui-checkbox>
     `)),
   );

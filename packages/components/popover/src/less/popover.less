@@ -2,18 +2,16 @@
 @import '~@ovh-ux/ui-kit.core/src/less/_variables';
 @import '~@ovh-ux/ui-kit.button/src/less/_variables';
 @import './_variables';
-@import './_normalize';
 
 .oui-popover {
   background-color: @oui-popover-background-color;
-  box-shadow: 0 4px 6px 0 @oui-color-info-fade;
+  box-shadow: @oui-popover-box-shadow;
   border: @oui-popover-border-width solid @oui-popover-border-color;
-  padding: rem-calc(20);
-  padding-right: rem-calc(30);
+  padding: @oui-popover-padding;
   position: absolute;
-  color: @oui-color-sapphire;
-  font-size: rem-calc(14);
-  max-width: rem-calc(300);
+  color: @oui-popover-font-color;
+  font-size: @oui-popover-font-size;
+  max-width: @oui-popover-max-width;
   text-align: initial;
   opacity: 0;
   visibility: hidden; // For ARIA
@@ -156,16 +154,16 @@
 
     background-color: transparent;
     border: none;
-    color: @oui-color-info-dark;
+    color: @oui-popover-close-button-icon-color;
     cursor: pointer;
-    font-size: @oui-popover-close-button-size;
+    font-size: @oui-popover-close-button-icon-size;
     line-height: 1;
     margin: 0;
-    min-height: @oui-popover-close-button-size;
-    min-width: @oui-popover-close-button-size;
+    min-height: @oui-popover-close-button-icon-size;
+    min-width: @oui-popover-close-button-icon-size;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: @oui-popover-close-button-right;
+    top: @oui-popover-close-button-top;
 
     &::before {
       display: block;
@@ -174,40 +172,33 @@
     &:hover,
     &:focus,
     &:active {
-      #oui > .animate();
-
-      outline-color: initial;
-      outline-style: dotted;
-      outline-width: 1px;
-      opacity: 1;
+      #oui > .outline-border();
     }
   }
 
   &-button {
-    width: rem-calc(20);
-    height: rem-calc(20);
-    margin: 0 0 0 rem-calc(10);
+    width: @oui-popover-button-size;
+    height: @oui-popover-button-size;
+    margin: 0 0 0 @oui-popover-button-spacing;
     line-height: 1;
     padding: 0;
     vertical-align: middle;
-    color: @oui-color-sapphire;
-    font-size: rem-calc(20);
+    color: @oui-popover-button-font-color;
+    font-size: @oui-popover-button-font-size;
     border: none;
     background: none;
     cursor: help;
 
     &::before {
-      content: @oui-icon-index-help_circle;
-      font-family: @oui-global-base-font-family-icon;
+      content: @oui-popover-button-content;
+      font-family: @oui-popover-button-font-family;
       font-size: inherit;
     }
 
     &:focus {
-      box-shadow: @oui-button-hollow-box-shadow_focus;
-      outline-width: 1px;
-      outline-style: dotted;
-      outline-color: initial;
-      outline-offset: -2px;
+      #oui > .outline-border();
+
+      box-shadow: @oui-popover-button-box-shadow_focus;
     }
   }
 }

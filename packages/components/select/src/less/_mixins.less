@@ -3,110 +3,6 @@
 @import './_variables';
 
 #oui {
-  .select(
-    @icon-selector,
-    @font-color: @oui-select-font-color,
-    @font-size: @oui-select-font-size,
-    @font-weight: @oui-select-font-weight,
-    @icon-size: @oui-select-icon-size,
-    @icon-position-right: @oui-select-icon-position-right,
-    @border-color: @oui-select-border-color,
-    @spacing: @oui-select-margin,
-    @padding: @oui-select-padding,
-    @shadow: @oui-select-shadow
-  ) {
-    position: relative;
-    display: block;
-    border-radius: @oui-global-base-radius;
-    margin: @spacing;
-
-    &__input {
-      width: 100%;
-      max-width: 100%;
-      height: @oui-select-height;
-      min-height: rem-calc(36);
-      padding: 0 rem-calc(30) + @padding * 0.8 0 @padding;
-      border: 1px solid @border-color;
-      border-radius: @oui-global-base-radius;
-      background: #fff;
-      box-shadow: @shadow;
-      color: @font-color;
-      font-size: @font-size;
-      font-family: inherit;
-      line-height: rem-calc(34);
-      font-weight: @font-weight;
-      cursor: pointer;
-      -webkit-appearance: none;
-    }
-
-    &__input:focus {
-      #oui > .animate();
-
-      border: 1px solid #0090b1;
-      outline: none;
-      box-shadow: inset 1px 1px 2px 0 rgba(102, 199, 214, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.35);
-      background: @oui-color-polar;
-
-      ~ .@{icon-selector} {
-        box-shadow: inset -1px 1px 1px 0 rgba(102, 199, 214, 0.5);
-        background: @oui-color-polar;
-      }
-
-      ~ .@{icon-selector}::before {
-        color: #0090b1;
-      }
-    }
-
-    &__input:disabled {
-      border-color: #e6e6e6;
-      background-color: @oui-color-concrete;
-      color: #b3b3b3;
-      text-shadow: none;
-      cursor: auto;
-
-      ~ .@{icon-selector} {
-        background-color: @oui-color-concrete;
-      }
-
-      ~ .@{icon-selector}::before {
-        color: #b3b3b3;
-      }
-    }
-
-    select&__input::-ms-expand {
-      display: none;
-    }
-
-    .@{icon-selector} {
-      position: absolute;
-      top: 1px;
-      right: 1px;
-      bottom: 1px;
-      width: ~"calc(@{icon-size} * 2.5)";
-      height: auto;
-      border-radius: ~"calc(@{oui-global-base-radius} - 1px)";
-      margin: auto;
-      background: #fff;
-      text-align: center;
-      vertical-align: middle;
-      cursor: pointer;
-      pointer-events: none;
-
-      &::before {
-        display: inline-block;
-        margin-right: @padding * 1.5;
-        color: @oui-color-shuttle;
-        font-size: @icon-size;
-      }
-    }
-  }
-
-  .select-error() {
-    &_error {
-      .select-error-style();
-    }
-  }
-
   .select-error-style(
     @select-selector: oui-select;
     @icon-selector: oui-icon;
@@ -138,11 +34,5 @@
     .@{select-selector}__input:focus {
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
     }
-  }
-
-  .select-inline() {
-    display: inline-block;
-    vertical-align: top;
-    width: auto;
   }
 }

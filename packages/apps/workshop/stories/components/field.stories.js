@@ -11,6 +11,7 @@ angular.module(moduleName, [
   'oui.field',
 
   // For examples
+  'oui.form-actions',
   'oui.checkbox',
   'oui.radio',
   'oui.switch',
@@ -61,6 +62,8 @@ storiesOf('Components/Field', module)
           ng-model="$ctrl.user.username"
           ng-pattern="/^[a-zA-Z]{3,8}$/">
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `, {
       $ctrl: {
@@ -87,6 +90,8 @@ storiesOf('Components/Field', module)
           minlength="3"
           maxlength="32">
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -107,6 +112,8 @@ storiesOf('Components/Field', module)
           HSTS
         </oui-checkbox>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -118,23 +125,27 @@ storiesOf('Components/Field', module)
         <oui-radio
           name="protocol"
           model="$ctrl.protocol"
-          value="'http'">
+          value="'http'"
+          required>
           HTTP
         </oui-radio>
         <oui-radio
           name="protocol"
           model="$ctrl.protocol"
-          value="'tcp'">
+          value="'tcp'"
+          required>
           TCP
         </oui-radio>
         <oui-radio
           name="protocol"
           model="$ctrl.protocol"
           value="'udp'"
-          disabled>
+          required>
           UDP
         </oui-radio>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -149,6 +160,8 @@ storiesOf('Components/Field', module)
           required>
         </oui-switch>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -176,6 +189,8 @@ storiesOf('Components/Field', module)
           required>
         </oui-textarea>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -224,8 +239,26 @@ storiesOf('Components/Field', module)
           multiple>
         </oui-select>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
-    `)),
+    `, {
+      $ctrl: {
+        osList: [{
+          name: 'freebsd',
+          label: 'FreeBSD',
+        }, {
+          name: 'linux',
+          label: 'Linux',
+        }, {
+          name: 'osx',
+          label: 'OSX',
+        }, {
+          name: 'windows',
+          label: 'Windows',
+        }],
+      },
+    })),
   )
   .add(
     'Numeric',
@@ -240,6 +273,8 @@ storiesOf('Components/Field', module)
           min="1">
         </oui-numeric>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     </form>
     `)),
   )
@@ -256,6 +291,8 @@ storiesOf('Components/Field', module)
           required>
         </oui-calendar>
       </oui-field>
+
+      <oui-form-actions></oui-form-actions>
     <form>
     `)),
   );

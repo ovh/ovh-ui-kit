@@ -10,8 +10,8 @@
   height: @oui-action-button-size;
   padding: 0;
   overflow: visible;
-  border: 1px solid @oui-action-button-border-color;
-  border-radius: 50%;
+  border: @oui-action-button-border-size solid @oui-action-button-border-color;
+  border-radius: @oui-action-button-border-radius;
   background-color: @oui-action-button-background-color;
 
   circle {
@@ -37,11 +37,11 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 3px 1px fade(@oui-color-pacific, 60%);
+    box-shadow: @oui-action-button-box-shadow_focus;
   }
 
   &:active {
-    box-shadow: inset 1px 1px 4px 0 fade(#000, 33%);
+    box-shadow: @oui-action-button-box-shadow_active;
   }
 
   &:disabled {

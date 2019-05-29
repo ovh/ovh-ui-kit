@@ -2,12 +2,13 @@ import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils'
 import get from 'lodash/get';
 
 export default class {
-  constructor($attrs, $compile, $element, $scope, $timeout) {
+  constructor($attrs, $compile, $element, $rootScope, $scope, $timeout) {
     'ngInject';
 
     this.$attrs = $attrs;
     this.$compile = $compile;
     this.$element = $element;
+    this.$rootScope = $rootScope;
     this.$scope = $scope;
     this.$timeout = $timeout;
   }
@@ -44,6 +45,10 @@ export default class {
 
     // For focus from oui-field label
     this.unregisterFocus = this.$scope.$on('oui:focus', () => this.$select.setFocus());
+
+    this.$scope.$on('oui-select:closeAll', () => {
+      this.$select.close();
+    });
   }
 
   $onDestroy() {
@@ -61,6 +66,11 @@ export default class {
   }
 
   onUiSelectClick() {
+    // Close others instances of oui-select before opening it
+    if (!this.$select.open) {
+      this.$rootScope.$broadcast('oui-select:closeAll');
+    }
+
     if (!this.$select.focus) {
       this.$select.setFocus();
     }
@@ -110,7 +120,6 @@ export default class {
       if (this.multiple || this.$select.open || (!this.$select.open && !this.isOpen)) {
         if (this.fieldCtrl) {
           this.fieldCtrl.hasFocus = true;
-          this.fieldCtrl.hideErrors(this.$select.$element[0], this.name);
         }
 
         this.onFocus();

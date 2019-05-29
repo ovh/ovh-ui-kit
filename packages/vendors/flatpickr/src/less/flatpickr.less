@@ -22,18 +22,18 @@
       transform: translateX(-50%);
     }
 
-    &::before { border: @oui-dropdown-arrow-size transparent solid; }
+    &::before { border: @oui-calendar-arrow-size transparent solid; }
 
-    &::after { border: @oui-dropdown-arrow-inner-size transparent solid; }
+    &::after { border: @oui-calendar-arrow-inner-size transparent solid; }
 
     &.arrowTop {
-      margin-top: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
+      margin-top: @oui-calendar-arrow-size + @oui-calendar-arrow-spacing;
 
       &::before { border-bottom-color: @oui-calendar-border-color; }
     }
 
     &.arrowBottom {
-      margin-bottom: @oui-dropdown-arrow-size + @oui-dropdown-menu-spacing;
+      margin-bottom: @oui-calendar-arrow-size + @oui-calendar-arrow-spacing;
 
       &::before { border-top-color: @oui-calendar-border-color; }
     }
@@ -135,11 +135,11 @@
     span.cur-month:hover { background: none; }
 
     input.cur-year {
-      padding-left: rem-calc(5);
+      padding-left: @oui-calendar-title-year-spacing;
 
       // stylelint-disable no-descending-specificity
       ~ span {
-        margin-right: rem-calc(-14);
+        margin-right: -@oui-calendar-title-button-width;
       }
       // stylelint-enable no-descending-specificity
     }
@@ -157,7 +157,7 @@
   &-weekwrapper &-weeks {
     width: @oui-calendar-cell-width;
     padding: 0;
-    box-shadow: 1px 0 0 @oui-calendar-separator-color;
+    box-shadow: @oui-calendar-separator-size 0 0 @oui-calendar-separator-color;
   }
 
   &-weekwrapper &-weekday,
@@ -185,7 +185,7 @@
     max-width: @oui-calendar-cell-width;
     height: @oui-calendar-cell-height;
     line-height: @oui-calendar-cell-line-height;
-    margin-top: rem-calc(8);
+    margin-top: @oui-calendar-cell-spacing;
     font-size: inherit;
     font-weight: inherit;
     color: @oui-calendar-font-color;
@@ -193,7 +193,7 @@
     border-radius: @oui-calendar-cell-border-radius;
 
     &,
-    .rangeMode & { margin-top: rem-calc(8); }
+    .rangeMode & { margin-top: @oui-calendar-cell-spacing; }
 
     &.prevMonthDay,
     &.nextMonthDay {
@@ -216,10 +216,7 @@
     // stylelint-enable no-descending-specificity
 
     &:focus {
-      outline-width: 1px;
-      outline-style: dotted;
-      outline-color: initial;
-      outline-offset: -2px;
+      #oui > .outline-border();
     }
 
     // Selection

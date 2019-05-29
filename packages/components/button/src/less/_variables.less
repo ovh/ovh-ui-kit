@@ -8,9 +8,10 @@
 @oui-button-padding-base: rem-calc(10);
 @oui-button-padding: @oui-button-padding-base rem-calc(20);
 @oui-button-margin: 0;
+@oui-button-letter-spacing: 0.007em;
 
 @oui-button-filled-background-color: @oui-color-turquoise;
-@oui-button-filled-background-color_hover: #34c4e2;
+@oui-button-filled-background-color_hover: darken(@oui-color-turquoise, 10%);
 @oui-button-filled-background-color_disabled: @oui-color-ironlight;
 @oui-button-filled-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
 @oui-button-filled-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
@@ -18,11 +19,12 @@
 @oui-button-filled-padding-base: rem-calc(8);
 @oui-button-filled-padding: @oui-button-filled-padding-base rem-calc(20);
 
-@oui-button-hollow-background-color: #fff;
+@oui-button-hollow-background-color: @oui-color-white;
 @oui-button-hollow-background-color_hover: @oui-color-concrete;
-@oui-button-hollow-border-color: #bdbec0;
+@oui-button-hollow-border-color: @oui-color-silver;
 @oui-button-hollow-border-color_hover: @oui-color-dusty;
 @oui-button-hollow-border-color_disabled: @oui-color-concrete;
+@oui-button-hollow-border-size: 1px;
 @oui-button-hollow-background-color_disabled: @oui-color-concrete;
 @oui-button-hollow-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
 @oui-button-hollow-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
@@ -32,12 +34,12 @@
 
 @oui-button-dropdown-color: @oui-color-dusty;
 @oui-button-dropdown-icon-size: rem-calc(10);
-@oui-button-dropdown-icon-color: @oui-color-sapphire;
-@oui-button-dropdown-icon-color_active: @oui-color-sapphire;
-@oui-button-dropdown-icon-color_disabled: @oui-color-dusty;
 @oui-button-dropdown-background-color_active: @oui-color-concrete;
 @oui-button-dropdown-border-color_active: @oui-color-dusty;
-@oui-button-dropdown-padding: rem-calc(12);
+@oui-button-dropdown-spacing: rem-calc(12);
+@oui-button-dropdown-padding-right: rem-calc(30) + @oui-button-dropdown-spacing;
+@oui-button-dropdown-padding-left: @oui-button-dropdown-spacing;
+@oui-button-dropdown-margin-right: @oui-button-dropdown-spacing * 1.5;
 
 @oui-button-icon-icon-size: rem-calc(10);
 @oui-button-icon-icon-size_large: rem-calc(20);
