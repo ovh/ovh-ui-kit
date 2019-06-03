@@ -1,3 +1,13 @@
+## [3.1.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.0...v3.1.1) (2019-06-03)
+
+
+### Bug Fixes
+
+* **autocomplete:** fix less import in variables file ([5e442d9](https://github.com/ovh-ux/ovh-ui-kit/commit/5e442d9))
+* **choice:** add relative position ([#426](https://github.com/ovh-ux/ovh-ui-kit/issues/426)) ([c8d134b](https://github.com/ovh-ux/ovh-ui-kit/commit/c8d134b))
+
+
+
 # [3.1.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.3...v3.1.0) (2019-05-29)
 
 
