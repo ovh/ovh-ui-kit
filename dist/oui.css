@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.33.1") format("woff2"), url("./icons/icons.woff?v=2.33.1") format("woff");
+  src: url("./icons/icons.woff2?v=2.33.2") format("woff2"), url("./icons/icons.woff?v=2.33.2") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -4243,6 +4243,7 @@ oui-checkbox {
 .oui-checkbox {
   min-width: 1rem;
   margin: 0;
+  position: relative;
 }
 .oui-checkbox__label-container {
   font-weight: inherit;

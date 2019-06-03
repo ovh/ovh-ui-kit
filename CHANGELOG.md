@@ -1,3 +1,13 @@
+<a name="2.33.2"></a>
+## [2.33.2](http://ovh-ux/ovh-ui-kit/compare/v2.33.1...v2.33.2) (2019-06-03)
+
+
+### Bug Fixes
+
+* **oui-checkbox:** add relative position ([#425](http://ovh-ux/ovh-ui-kit/issues/425)) ([2e49d5d](http://ovh-ux/ovh-ui-kit/commits/2e49d5d))
+
+
+
 <a name="2.33.1"></a>
 ## [2.33.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.0...v2.33.1) (2019-05-29)
 
