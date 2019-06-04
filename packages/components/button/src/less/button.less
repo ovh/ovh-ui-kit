@@ -184,23 +184,23 @@ oui-button {
   width: 100%;
   height: 100%;
 
-  .oui-icon::before {
-    width: 1em;
-    height: 1em;
+  // stylelint-disable no-descending-specificity
+  .oui-icon {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     margin: auto;
   }
+  // stylelint-enable no-descending-specificity
 
   &.oui-button_icon-left {
-    .oui-icon::before {
+    .oui-icon {
       left: @oui-button-icon-padding-left;
     }
   }
 
   &.oui-button_icon-right {
-    .oui-icon::before:not(.oui-icon-external_link) {
+    .oui-icon:not(.oui-icon-external_link) {
       right: @oui-button-icon-padding-right;
     }
   }
