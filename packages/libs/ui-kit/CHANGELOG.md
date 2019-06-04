@@ -1,3 +1,12 @@
+## [3.1.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.1...v3.1.2) (2019-06-04)
+
+
+### Bug Fixes
+
+* **button:** fix icon placement with full width ([f0069a3](https://github.com/ovh-ux/ovh-ui-kit/commit/f0069a3))
+
+
+
 ## [3.1.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.0...v3.1.1) (2019-06-03)
 
 
