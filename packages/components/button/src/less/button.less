@@ -184,12 +184,14 @@ oui-button {
   width: 100%;
   height: 100%;
 
+  // stylelint-disable no-descending-specificity
   .oui-icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin: auto;
   }
+  // stylelint-enable no-descending-specificity
 
   &.oui-button_icon-left {
     .oui-icon {
