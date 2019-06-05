@@ -99,6 +99,58 @@
       @icon-color: @oui-message-error-icon-color
     );
   }
+
+  &_no-icon {
+    padding: @oui-message-no-icon-padding;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  &_no-border {
+    border: none;
+  }
+
+  &_l {
+    max-width: none;
+    padding: @oui-message-l-padding;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+
+    .oui-message__title {
+      max-width: @oui-message-l-max-width;
+      margin: 0 auto;
+      margin-bottom: @oui-message-l-title-spacing;
+      color: @oui-message-l-color;
+      font-size: @oui-message-l-title-font-size;
+    }
+
+    .oui-message__body {
+      max-width: @oui-message-l-max-width;
+      margin: 0 auto;
+      color: @oui-message-l-color;
+      font-size: @oui-message-l-body-font-size;
+    }
+
+    .oui-message_l-icon {
+      display: inline-block;
+      box-sizing: content-box;
+      width: @oui-message-l-icon-width;
+      height: @oui-message-l-icon-height;
+      margin-bottom: @oui-message-l-icon-spacing;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &_l&_warning .oui-message_l-icon {
+    background-image: @oui-message-l-warning-background-image;
+  }
+
+  &_l&_error .oui-message_l-icon {
+    background-image: @oui-message-l-error-background-image;
+  }
 }
 
 oui-message {

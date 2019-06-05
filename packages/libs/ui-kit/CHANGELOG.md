@@ -1,3 +1,12 @@
+## [3.1.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.2...v3.1.3) (2019-06-04)
+
+
+### Bug Fixes
+
+* **message:** fix missing styles ([2071f89](https://github.com/ovh-ux/ovh-ui-kit/commit/2071f89))
+
+
+
 ## [3.1.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.1...v3.1.2) (2019-06-04)
 
 
