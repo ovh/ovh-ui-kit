@@ -1,6 +1,3 @@
-@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
-@import './_variables';
-
 .oui-collapsible {
   #oui > .base-font();
 
@@ -8,15 +5,12 @@
   margin: @oui-collapsible-margin;
 
   &__toggle-icon {
+    height: @oui-collapsible-icon-size;
+    line-height: @oui-collapsible-icon-size;
+    right: @oui-collapsible-icon-spacing;
+    font-size: @oui-collapsible-icon-size;
     color: @oui-collapsible-icon-color;
-
-    &::before {
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: @oui-collapsible-icon-size;
-      right: @oui-collapsible-icon-spacing;
-      height: @oui-collapsible-icon-size;
-      line-height: @oui-collapsible-icon-size;
-    }
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__header {
