@@ -1,3 +1,12 @@
+## [3.1.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.3...v3.1.4) (2019-06-06)
+
+
+### Bug Fixes
+
+* **tabs:** fix tabs that won't open on click ([#435](https://github.com/ovh-ux/ovh-ui-kit/issues/435)) ([4680837](https://github.com/ovh-ux/ovh-ui-kit/commit/4680837))
+
+
+
 ## [3.1.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.2...v3.1.3) (2019-06-04)
 
 
