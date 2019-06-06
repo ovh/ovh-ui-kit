@@ -34,7 +34,7 @@ export default class {
   }
 
   setActiveTab(item) {
-    this.activeId = item.id;
+    this.model = item.id;
     if (angular.isFunction(item.onActive)) {
       item.onActive();
     }
@@ -50,7 +50,7 @@ export default class {
       .removeAttr('aria-label'));
 
     this.$scope.$watch(() => this.items.length, () => {
-      if (!isEmpty(this.items.length)) {
+      if (!isEmpty(this.items)) {
         this.setActiveTab(find(this.items, { id: this.model }) || first(this.items));
       }
     });

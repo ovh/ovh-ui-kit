@@ -13,7 +13,6 @@
   "dependencies": {
     "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.dropdown": "*",
-    "@ovh-ux/ui-kit.flatpickr": "*",
     "@ovh-ux/ui-kit.input": "*",
     "angular": ">=1.6.x",
     "flatpickr": "^4.5.7"

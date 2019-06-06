@@ -17,8 +17,14 @@ const download = (url, dest, cb) => {
   });
 };
 
-// Download the tokens from the design system documentation
+// Download the SCSS tokens from ZeroHeight
 download(
   'https://ovh.zeroheight.com/api/design_tokens?auth=hUD5Kp-oZUOD3WCelspGLg&format=sass&id=7826&dl=1',
   'src/scss/_tokens.scss',
+);
+
+// Download the CSS tokens from ZeroHeight
+download(
+  'https://ovh.zeroheight.com/api/design_tokens?auth=hUD5Kp-oZUOD3WCelspGLg&format=css&id=7826&dl=1',
+  'src/css/_tokens.css',
 );

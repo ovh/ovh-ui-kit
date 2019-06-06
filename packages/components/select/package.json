@@ -14,7 +14,6 @@
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.input": "*",
-    "@ovh-ux/ui-kit.ui-select": "*",
     "angular": ">=1.6.x",
     "angular-sanitize": ">=1.6.x",
     "ui-select": "^0.19.8"

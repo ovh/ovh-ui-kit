@@ -74,9 +74,9 @@ storiesOf('Components/Navbar', module)
           icon-class="{{asideLink.iconClass}}"
           on-click="asideLink.onClick"
           ng-repeat="asideLink in $ctrl.asideLinks track by $index"
-          ng-class="asideLink.class"
-          ng-switch="asideLink.name">
-          <oui-navbar-notification ng-switch-when="notifications"
+          ng-class="asideLink.class">
+          <oui-navbar-notification
+            ng-if="asideLink.name === 'notifications'"
             name="{{asideLink.name}}"
             links="asideLink.subLinks"
             limit-to="asideLink.limitTo"
@@ -88,7 +88,8 @@ storiesOf('Components/Navbar', module)
             placement="end"
             fixed>
           </oui-navbar-notification>
-          <oui-navbar-menu ng-switch-when="user"
+          <oui-navbar-menu
+            ng-if="asideLink.name === 'user'"
             header-breadcrumb="{{asideLink.nichandle}}"
             header-title="{{asideLink.fullName}}"
             name="{{asideLink.name}}"
@@ -96,7 +97,8 @@ storiesOf('Components/Navbar', module)
             placement="end"
             fixed>
           </oui-navbar-menu>
-          <oui-navbar-menu ng-switch-default
+          <oui-navbar-menu
+            ng-if="asideLink.name !== 'notifications' && asideLink.name !== 'user'"
             header-class="oui-navbar_mobile-only"
             header-breadcrumb="{{asideLink.headerBreadcrumb}}"
             header-title="{{asideLink.headerTitle}}"
