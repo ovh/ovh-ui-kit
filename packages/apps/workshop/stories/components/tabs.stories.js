@@ -1,5 +1,4 @@
 import { storiesOf } from '@storybook/html';
-import { action } from '@storybook/addon-actions';
 import { boolean, text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -23,13 +22,7 @@ storiesOf('Components/Tabs', module)
         <p>Duis egestas nulla at euismod semper. Nullam bibendum auctor viverra. Sed posuere neque nulla, id cursus nisi molestie vel. Nulla ornare elit sit amet congue faucibus. Aliquam eget lorem id justo ornare pretium in sit amet lectus. Sed maximus odio id porttitor rhoncus. Quisque pulvinar mauris ut sapien dictum, ultrices fermentum orci efficitur. Cras nec auctor ante. Aliquam ornare eleifend neque, at condimentum lacus aliquet elementum. Mauris mattis porttitor tortor vel vehicula. Phasellus venenatis nibh nec viverra sollicitudin. Ut lobortis mattis mauris, vel euismod nibh faucibus a.</p>
       </oui-tabs-item>
     </oui-tabs>
-    `, {
-      $ctrl: {
-        disabled: boolean('Disabled state', false),
-        readonly: boolean('Read-only state', false),
-        onChange: action('onClick'),
-      },
-    })),
+    `)),
   )
   .add(
     'With check marks',
