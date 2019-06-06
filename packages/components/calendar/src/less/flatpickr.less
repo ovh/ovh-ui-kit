@@ -1,6 +1,4 @@
 @import (less) "~flatpickr/dist/flatpickr.css";
-@import '~@ovh-ux/ui-kit.core/src/less/_mixins';
-@import '~@ovh-ux/ui-kit.button/src/less/_variables';
 
 .flatpickr {
   &-calendar {
@@ -238,7 +236,7 @@
 
       &.endRange { border-radius: 0 @oui-calendar-cell-border-radius @oui-calendar-cell-border-radius 0; }
 
-      &.startRange + .endRange { box-shadow: none; }
+      &.startRange + .endRange { box-shadow: none !important; }
 
       &.startRange.endRange { border-radius: @oui-calendar-cell-border-radius; }
     }
