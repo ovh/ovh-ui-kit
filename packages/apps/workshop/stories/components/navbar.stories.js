@@ -97,7 +97,8 @@ storiesOf('Components/Navbar', module)
             placement="end"
             fixed>
           </oui-navbar-menu>
-          <oui-navbar-menu ng-if="asideLink.name !== 'notifications' && asideLink.name !== 'user'"
+          <oui-navbar-menu
+            ng-if="asideLink.name !== 'notifications' && asideLink.name !== 'user'"
             header-class="oui-navbar_mobile-only"
             header-breadcrumb="{{asideLink.headerBreadcrumb}}"
             header-title="{{asideLink.headerTitle}}"
