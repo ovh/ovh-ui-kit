@@ -6,15 +6,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(baseConfig, {
   entry: {
-    component: ['./src/base-10.js'],
+    'oui-b10': './src/base-10.js',
   },
   output: {
     path: path.resolve('.', 'dist', 'js'),
-    filename: 'oui-b10.js',
+    filename: '[name].js',
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '../css/oui-b10.css',
+      filename: '../css/[name].css',
       allChunks: true,
     }),
   ],

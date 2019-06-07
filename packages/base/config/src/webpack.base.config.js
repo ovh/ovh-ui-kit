@@ -7,7 +7,6 @@ const {
   eslintLoader,
   fileLoader,
   htmlLoader,
-  styleLoader,
 } = require('./webpack.rules');
 
 const plugins = [
@@ -28,7 +27,6 @@ module.exports = {
       eslintLoader,
       fileLoader,
       htmlLoader,
-      styleLoader,
     ],
   },
 };

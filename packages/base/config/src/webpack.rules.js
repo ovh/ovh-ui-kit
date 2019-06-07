@@ -25,7 +25,10 @@ const babelLoader = {
         presets: [
           [
             '@babel/preset-env',
-            { useBuiltIns: 'usage' },
+            {
+              corejs: 2,
+              useBuiltIns: 'usage',
+            },
           ],
         ],
         plugins: [
@@ -78,7 +81,7 @@ const styleLoader = {
         ident: 'postcss',
         sourceMap: true,
         plugins: () => [
-          autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
+          autoprefixer(),
           cssnano({ preset: 'default' }),
         ],
       },
@@ -105,7 +108,7 @@ const cssExtractLoader = {
         ident: 'postcss',
         sourceMap: true,
         plugins: () => [
-          autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
+          autoprefixer(),
           cssnano({ preset: 'default' }),
         ],
       },
@@ -122,7 +125,7 @@ const cssExtractLoader = {
 };
 
 const fileLoader = {
-  test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?|.(woff(2)?|ttf|eot|svg)(\?[a-f0-9]{32})?$/,
+  test: /\.(woff(2)?|ttf|eot|svg)(\?[a-f0-9]{32})?$/,
   use: [
     {
       loader: 'file-loader',
