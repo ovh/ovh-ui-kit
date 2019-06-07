@@ -29,7 +29,7 @@
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
     "escape-string-regexp": "^1.0.5",
-    "karma": "^4.0.1",
+    "karma": "^4.1.0",
     "lodash": "^4.17.11"
   }
 }
