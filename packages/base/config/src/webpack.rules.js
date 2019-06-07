@@ -122,7 +122,7 @@ const cssExtractLoader = {
 };
 
 const fileLoader = {
-  test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?|.(woff(2)?|ttf|eot|svg)(\?[a-f0-9]{32})?$/,
+  test: /\.(woff(2)?|ttf|eot|svg)(\?[a-f0-9]{32})?$/,
   use: [
     {
       loader: 'file-loader',

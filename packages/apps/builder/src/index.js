@@ -1,4 +1,3 @@
-import './index.less'; // Styles
-import moduleName from './js/components'; // Components
+import moduleName from './js/components';
 
 export default moduleName;
