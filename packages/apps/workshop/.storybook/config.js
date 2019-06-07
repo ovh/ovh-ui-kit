@@ -10,7 +10,7 @@ import 'angular-aria';
 import 'angular-sanitize';
 
 // Load src for livereload
-import '@ovh-ux/ui-kit-builder/src/index.js';
+import '@ovh-ux/ui-kit-builder/src/oui';
 import '../src/index.less';
 
 // Addons

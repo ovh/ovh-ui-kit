@@ -2,7 +2,6 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const formatter = require('eslint-friendly-formatter');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const RemcalcPlugin = require('less-plugin-remcalc');
 
 const exclude = [/node_modules(?![/\\](@ovh))/, /dist/];
@@ -97,13 +96,21 @@ const styleLoader = {
 const cssExtractLoader = {
   test: /\.css|.less$/,
   use: [
-    { loader: MiniCssExtractPlugin.loader },
-    { loader: 'css-loader', options: { sourceMap: true } },
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name].css',
+        context: './',
+        outputPath: '../css',
+        publicPath: '../css',
+      },
+    },
+    { loader: 'extract-loader' },
+    { loader: 'css-loader' },
     {
       loader: 'postcss-loader',
       options: {
         ident: 'postcss',
-        sourceMap: true,
         plugins: () => [
           autoprefixer({ browsers: ['last 2 versions', 'ie 11'] }),
           cssnano({ preset: 'default' }),
@@ -114,7 +121,6 @@ const cssExtractLoader = {
       loader: 'less-loader',
       options: {
         plugins: [RemcalcPlugin],
-        sourceMap: true,
       },
     },
   ],

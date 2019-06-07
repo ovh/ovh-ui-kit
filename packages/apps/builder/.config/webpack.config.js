@@ -2,23 +2,20 @@ const baseConfig = require('@ovh-ux/ui-kit.config/src/webpack.dist.config');
 const merge = require('webpack-merge');
 const path = require('path');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
 module.exports = merge(baseConfig, {
   entry: {
-    'oui': ['./src/index.js', './src/index.less'],
-    'oui-b10': ['./src/base-10.js', './src/base-10.less'],
+    'oui': [
+      './src/oui.js',
+      './src/oui.less',
+
+      // Themes
+      './src/oui-b10.less'
+    ],
   },
   output: {
     path: path.resolve('.', 'dist', 'js'),
     filename: '[name].js',
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '../css/[name].css',
-      allChunks: true,
-    }),
-  ],
   externals: {
     'bloodhound-js': 'Bloodhound',
     clipboard: 'ClipboardJS',
