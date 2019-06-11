@@ -14792,6 +14792,11 @@ webpack-dev-middleware@^3.5.1:
     range-parser "^1.2.1"
     webpack-log "^2.0.0"
 
+webpack-extraneous-file-cleanup-plugin@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/webpack-extraneous-file-cleanup-plugin/-/webpack-extraneous-file-cleanup-plugin-2.0.0.tgz#fad563d8e9be1bc5e3a30f1a7f293fe31fc27355"
+  integrity sha1-+tVj2Om+G8Xjow8afyk/4x/Cc1U=
+
 webpack-hot-middleware@^2.24.3:
   version "2.25.0"
   resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.25.0.tgz#4528a0a63ec37f8f8ef565cf9e534d57d09fe706"
