@@ -11,7 +11,8 @@ module.exports = merge(baseConfig, {
     hints: false,
   },
   plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(), // Enable scope hoisting
+    // Enable scope hoisting
+    new webpack.optimize.ModuleConcatenationPlugin(),
   ],
   module: {
     rules: [

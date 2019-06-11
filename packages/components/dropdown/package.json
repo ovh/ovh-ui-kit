@@ -22,6 +22,6 @@
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": ">=1.6.x",
     "cross-env": "^5.2.0",
-    "karma": "^4.0.1"
+    "karma": "^4.1.0"
   }
 }
