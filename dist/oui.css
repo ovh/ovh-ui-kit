@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.33.2") format("woff2"), url("./icons/icons.woff?v=2.33.2") format("woff");
+  src: url("./icons/icons.woff2?v=2.33.3") format("woff2"), url("./icons/icons.woff?v=2.33.3") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -2451,7 +2451,7 @@ oui-form-actions {
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   min-width: 6.25rem;
-  max-width: 20rem;
+  max-width: 100%;
   position: relative;
   margin: 0;
   padding: 0.625rem 1.25rem;
@@ -7358,6 +7358,9 @@ oui-file {
   padding: 0;
   list-style: none;
   z-index: 0;
+  max-height: 14.375rem;
+  overflow-y: auto;
+  box-shadow: 0px 0px 6px rgba(179, 190, 204, 0.2);
 }
 .oui-file-attachments__item {
   min-height: 2.5rem;
@@ -8392,6 +8395,7 @@ oui-criteria-adder {
 .oui-datagrid-responsive-container__overflow-container {
   max-width: 100%;
   overflow-x: auto;
+  overflow-y: hidden;
 }
 .oui-datagrid-parameters {
   display: inline-block;
@@ -10407,7 +10411,6 @@ oui-select {
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   min-width: 6.25rem;
-  max-width: 20rem;
   position: relative;
   margin: 0;
   padding: 0.625rem 1.25rem;
@@ -10577,7 +10580,6 @@ oui-select {
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   min-width: 6.25rem;
-  max-width: 20rem;
   position: relative;
   margin: 0;
   padding: 0.625rem 1.25rem;
@@ -12589,7 +12591,7 @@ oui-inline-adder-field {
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   min-width: 6.25rem;
-  max-width: 20rem;
+  max-width: 100%;
   position: relative;
   margin: 0;
   padding: 0.625rem 1.25rem;

@@ -1,3 +1,15 @@
+<a name="2.33.3"></a>
+## [2.33.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.2...v2.33.3) (2019-06-11)
+
+
+### Bug Fixes
+
+* **button:** set max-width to 100% ([#444](https://github.com/ovh-ux/ovh-ui-kit/issues/444)) ([60b8126](https://github.com/ovh-ux/ovh-ui-kit/commit/60b8126))
+* **oui-datagrid:** prevent scroll from displaying inside the datagrid ([#432](https://github.com/ovh-ux/ovh-ui-kit/issues/432)) ([169176b](https://github.com/ovh-ux/ovh-ui-kit/commit/169176b))
+* **oui-file:** add max-height to file list ([#441](https://github.com/ovh-ux/ovh-ui-kit/issues/441)) ([c859857](https://github.com/ovh-ux/ovh-ui-kit/commit/c859857))
+
+
+
 <a name="2.33.2"></a>
 ## [2.33.2](http://ovh-ux/ovh-ui-kit/compare/v2.33.1...v2.33.2) (2019-06-03)
 
