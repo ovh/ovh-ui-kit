@@ -66,7 +66,7 @@ angular.module('myModule', ['oui.dropdown']);
 | `external`        | boolean   | <?        | yes               | `true`, `false`           | `false`   | external flag
 | `on-click`        | function  | &         | no                | n/a                       | n/a       | callback on component click
 
-**Note**: `ui-router` is needed for the attributes `state` and `state-params`.
+**Note**: `@uirouter/angularjs` is needed for the attributes `state` and `state-params`.
 
 ## Component `oui-dropdown-divider`
 

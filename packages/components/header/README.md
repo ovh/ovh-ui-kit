@@ -25,7 +25,7 @@ angular.module('myModule', ['oui.header']);
 | `external`      | boolean   | <?        | yes               | `true`, `false`   | `false`   | external link flag
 | `on-click`      | function  | &         | no                | n/a               | n/a       | click handler
 
-**Note**: `ui-router` is needed for the attributes `state` and `state-params`.
+**Note**: `@uirouter/angularjs` is needed for the attributes `state` and `state-params`.
 
 ## Component `oui-header-tabs-dropdown`
 

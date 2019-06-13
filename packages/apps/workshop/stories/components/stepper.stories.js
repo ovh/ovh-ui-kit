@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/html';
-import { boolean } from '@storybook/addon-knobs';
+import { boolean, number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -68,7 +68,7 @@ storiesOf('Components/Stepper', module)
     })),
   )
   .add(
-    'States ',
+    'Step form states',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-stepper>
       <oui-step-form
@@ -96,25 +96,29 @@ storiesOf('Components/Stepper', module)
     })),
   )
   .add(
-    'Control opened step',
+    'Controlling opened step index',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-stepper
       current-index="$ctrl.currentStep">
       <oui-step-form
-        header="Step1">
-        <p>Random content</p>
+        header="Step 1">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet libero ut justo molestie, iaculis accumsan metus sollicitudin. Nulla fermentum ultricies scelerisque. Vestibulum luctus mi eu porttitor dapibus. In sit amet tempor neque. Nullam vehicula sodales elit ac lacinia. Nulla quis feugiat enim. Curabitur nec diam vel enim ornare consequat. Nulla rhoncus felis quis tortor varius blandit. Nam non justo id quam sagittis gravida tincidunt et dolor. Nullam id est ac lectus efficitur venenatis sed eu erat. Pellentesque vel massa at dui sollicitudin luctus. In mi tortor, facilisis eu gravida vel, commodo nec augue. Nullam elit magna, porttitor vel dui sed, congue blandit mauris.</p>
       </oui-step-form>
-        <oui-step-form
-          header="Step2">
-          <oui-button variant="link" on-click="$ctrl.currentStep = 0">
-            <span>Go to Step 1</span>
-          </oui-button>
+      <oui-step-form
+        header="Step 2">
+        <p>Proin ullamcorper ullamcorper imperdiet. Ut vel diam iaculis, tristique nunc fermentum, ultrices lorem. In ultricies lacinia venenatis. Etiam sed risus interdum, pharetra tellus id, lobortis erat. Ut quis ex nibh. Pellentesque euismod condimentum ipsum id dapibus. Ut vitae felis id sapien sollicitudin tincidunt sed et mauris. Nullam facilisis, ex vel elementum porttitor, nisl metus blandit nunc, vel rhoncus tortor leo ac sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </oui-step-form>
+      <oui-step-form
+        header="Step 3">
+        <oui-button variant="link" on-click="$ctrl.currentStep = 0">
+          <span>Go to Step 1</span>
+        </oui-button>
+        <p>Cras sagittis felis enim, ut pharetra arcu ultrices non. Aliquam iaculis magna eget nibh laoreet, ac dapibus diam rutrum. Donec vel vehicula quam. Pellentesque at justo ut quam molestie rutrum in eget orci. Sed mollis nisl ac massa tristique, egestas pellentesque libero sodales. Morbi luctus iaculis mauris eu lobortis. Vestibulum nec aliquam metus. Sed mollis risus ipsum, vel consequat nulla aliquam sed. Phasellus tempor nunc at purus interdum euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a fringilla elit. Etiam blandit turpis risus, sit amet sodales leo auctor ac.</p>
       </oui-step-form>
     </oui-stepper>
     `, {
       $ctrl: {
-        disabled: boolean('Disabled state', false),
-        loading: boolean('Loading state', true),
+        currentStep: number('Opened step index', 1),
       },
     })),
   );

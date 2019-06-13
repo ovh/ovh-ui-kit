@@ -10,7 +10,9 @@ module.exports = merge(baseConfig, {
     'oui': './src/index.js',
 
     // Themes
-    'oui-b10': './src/_base-10.less',
+    'oui-b10':      './src/_base-10.less',
+    'oui-ods':      './src/_design-system.less',
+    'oui-ods-dark': './src/_dark-mode.less',
   },
   output: {
     path: path.resolve('.', 'dist', 'js'),

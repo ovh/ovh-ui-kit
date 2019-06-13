@@ -108,7 +108,7 @@ The menu item will be set as a `<a>`.
 }
 ```
 
-#### Set a menu item as a link for ui-router
+#### Set a menu item as a link for @uirouter/angularjs
 
 - `state`: define `ui-sref` of the menu item. The menu item will be set as a `<a>`, `click` and `url` will be ignored.
 - `stateParams` **(optional)**: define parameters for `state`.
