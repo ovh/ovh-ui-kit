@@ -1,3 +1,12 @@
+## [3.2.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.1...v3.2.2) (2019-06-13)
+
+
+### Bug Fixes
+
+* fix rem base for all CSS files ([#452](https://github.com/ovh-ux/ovh-ui-kit/issues/452)) ([9f1f02e](https://github.com/ovh-ux/ovh-ui-kit/commit/9f1f02e))
+
+
+
 ## [3.2.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.0...v3.2.1) (2019-06-13)
 
 
