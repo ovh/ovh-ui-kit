@@ -28,12 +28,12 @@
     #oui > .headings(@index - 1);
 
     &@{index} {
-      #oui > .base-font();
-
+      color: extract(@oui-heading-colors, @index);
       font-size: extract(@oui-heading-font-sizes, @index);
       font-weight: extract(@oui-heading-font-weights, @index);
+      letter-spacing: extract(@oui-heading-letter-spacings, @index);
+      line-height: extract(@oui-heading-line-heights, @index);
       margin: extract(@oui-heading-margins, @index);
-      color: inherit;
     }
   }
 

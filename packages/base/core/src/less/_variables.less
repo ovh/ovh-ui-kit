@@ -17,16 +17,6 @@
 @oui-global-base-margin: rem-calc(15);
 @oui-global-base-radius: 3px;
 @oui-global-base-radius-medium: @oui-global-base-radius * 2;
-@oui-global-base-form-controls:
-  ~".oui-calendar",
-  ~".oui-checkbox",
-  ~".oui-input",
-  ~".oui-input-group",
-  ~".oui-file",
-  ~".oui-radio",
-  ~".oui-select",
-  ~".oui-switch",
-  ~".oui-textarea";
 
 // Animations
 @oui-animation-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,6 +73,15 @@
 // Heading
 @oui-heading-border-width: 2px;
 @oui-heading-border-color: @oui-color-ironlight;
+
+@oui-heading-colors:
+  inherit,
+  inherit,
+  inherit,
+  inherit,
+  inherit,
+  inherit;
+
 @oui-heading-font-sizes:
   rem-calc(46),
   rem-calc(36),
@@ -99,13 +98,29 @@
   @oui-font-semibold,
   @oui-font-semibold;
 
+@oui-heading-letter-spacings:
+  @oui-global-base-letter-spacing,
+  @oui-global-base-letter-spacing,
+  @oui-global-base-letter-spacing,
+  @oui-global-base-letter-spacing,
+  @oui-global-base-letter-spacing,
+  @oui-global-base-letter-spacing;
+
+@oui-heading-line-heights:
+  @oui-global-base-line-height,
+  @oui-global-base-line-height,
+  @oui-global-base-line-height,
+  @oui-global-base-line-height,
+  @oui-global-base-line-height,
+  @oui-global-base-line-height;
+
 @oui-heading-margins:
-  0 0 rem-calc(15),
-  0 0 rem-calc(15),
-  0 0 rem-calc(15),
-  0 0 rem-calc(15),
-  0 0 rem-calc(15),
-  0 0 rem-calc(15);
+  0 0 @oui-global-base-margin,
+  0 0 @oui-global-base-margin,
+  0 0 @oui-global-base-margin,
+  0 0 @oui-global-base-margin,
+  0 0 @oui-global-base-margin,
+  0 0 @oui-global-base-margin;
 
 // Label
 @oui-label-font-color: @oui-color-shuttle;
