@@ -1,3 +1,12 @@
+## [3.2.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.0...v3.2.1) (2019-06-13)
+
+
+### Bug Fixes
+
+* **stepper:** fix modify step button appearance ([#448](https://github.com/ovh-ux/ovh-ui-kit/issues/448)) ([70d9656](https://github.com/ovh-ux/ovh-ui-kit/commit/70d9656))
+
+
+
 # [3.2.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.4...v3.2.0) (2019-06-11)
 
 
