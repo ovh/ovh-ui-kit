@@ -1,7 +1,4 @@
 .oui-progress {
-  #oui > .base-font();
-  @oui-progress-selector: oui-progress;
-
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -92,7 +89,7 @@
 
     &::before { display: none; }
 
-    .@{oui-progress-selector}__bar {
+    .oui-progress__bar {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -106,12 +103,12 @@
       }
     }
 
-    .@{oui-progress-selector}__label {
+    .oui-progress__label {
       margin-left: @oui-progress-bar-text-spacing;
       font-size: @oui-progress-bar-compact-text-font-size;
     }
 
-    .@{oui-progress-selector}__threshold {
+    .oui-progress__threshold {
       display: none;
     }
   }
