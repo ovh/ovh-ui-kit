@@ -7,7 +7,7 @@
   "files": [
     "dist"
   ],
-  "main": "./src/index.js",
+  "main": "./src/oui.js",
   "scripts": {
     "build": "npm-run-all -l -s clean build:* copy",
     "build:less": "run-p build:less:*",
