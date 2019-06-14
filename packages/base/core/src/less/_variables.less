@@ -152,6 +152,8 @@
 @oui-font-source-sans-pro-folder: "../fonts/source-sans-pro";
 
 // Choice
+//
+// Common style for checkboxes, radios and select-picker
 @oui-choice-min-height: rem-calc(30);
 @oui-choice-line-height: 1.5;
 @oui-choice-font-size: rem-calc(16);
@@ -174,10 +176,12 @@
 @oui-choice-icon-background-color: @oui-color-white;
 @oui-choice-icon-background-color_active: @oui-color-foam;
 @oui-choice-icon-background-color_disabled: @oui-color-concrete;
+@oui-choice-icon-background-color_error: @oui-color-white;
 
 @oui-choice-icon-outer-color: @oui-color-dusty;
 @oui-choice-icon-outer-color_active: @oui-color-pacific;
 @oui-choice-icon-outer-color_disabled: @oui-color-silver;
+@oui-choice-icon-outer-color_error: @oui-color-error-light;
 @oui-choice-icon-outer-color_focus: @oui-color-sapphire;
 @oui-choice-icon-outer-color_hover: @oui-color-sapphire;
 @oui-choice-icon-outer-color_checked: @oui-color-sapphire;
@@ -186,8 +190,10 @@
 @oui-choice-icon-inner-color: @oui-color-sapphire;
 @oui-choice-icon-inner-color_active: @oui-color-pacific;
 @oui-choice-icon-inner-color_disabled: @oui-color-silver;
+@oui-choice-icon-inner-color_error: @oui-color-error-medium;
 
 @oui-choice-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+@oui-choice-box-shadow_error: 0 0 3px 1px @oui-color-error-light;
 
 // Choice - M Variant
 @oui-choice-m-line-height: @oui-choice-line-height;
@@ -201,14 +207,17 @@
 @oui-choice-thumbnail-border-size-checked: 2px;
 @oui-choice-thumbnail-border-radius: rem-calc(4);
 @oui-choice-thumbnail-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
+@oui-choice-thumbnail-box-shadow_error: 0 0 3px 0 @oui-color-error-light;
 @oui-choice-thumbnail-box-shadow-checked: 0 4px 6px 1px @oui-color-info-fade;
 
 @oui-choice-thumbnail-background: @oui-color-foam;
 @oui-choice-thumbnail-background_hover: @oui-color-foam;
 @oui-choice-thumbnail-background_disabled: @oui-color-polar;
+@oui-choice-thumbnail-background_error: @oui-color-error-fade;
 @oui-choice-thumbnail-border-color: @oui-color-turquoise;
 @oui-choice-thumbnail-border-color_hover: @oui-color-turquoise;
 @oui-choice-thumbnail-border-color_disabled: @oui-color-charlotte;
+@oui-choice-thumbnail-border-color_error: @oui-color-error-light;
 
 @oui-choice-thumbnail-background-checked: @oui-color-foam;
 @oui-choice-thumbnail-background-checked_hover: @oui-color-foam;
@@ -439,10 +448,12 @@
 @oui-checkbox-icon-background-color: @oui-choice-icon-background-color;
 @oui-checkbox-icon-background-color_active: @oui-choice-icon-background-color_active;
 @oui-checkbox-icon-background-color_disabled: @oui-choice-icon-background-color_disabled;
+@oui-checkbox-icon-background-color_error: @oui-choice-icon-background-color_error;
 
 @oui-checkbox-icon-outer-color: @oui-choice-icon-outer-color;
 @oui-checkbox-icon-outer-color_active: @oui-choice-icon-outer-color_active;
 @oui-checkbox-icon-outer-color_disabled: @oui-choice-icon-outer-color_disabled;
+@oui-checkbox-icon-outer-color_error: @oui-choice-icon-outer-color_error;
 @oui-checkbox-icon-outer-color_focus: @oui-choice-icon-outer-color_focus;
 @oui-checkbox-icon-outer-color_hover: @oui-choice-icon-outer-color_hover;
 @oui-checkbox-icon-outer-color_checked: @oui-choice-icon-outer-color_checked;
@@ -451,8 +462,10 @@
 @oui-checkbox-icon-inner-color: @oui-choice-icon-inner-color;
 @oui-checkbox-icon-inner-color_active: @oui-choice-icon-inner-color_active;
 @oui-checkbox-icon-inner-color_disabled: @oui-choice-icon-inner-color_disabled;
+@oui-checkbox-icon-inner-color_error: @oui-choice-icon-inner-color_error;
 
 @oui-checkbox-box-shadow_focus: @oui-choice-box-shadow_focus;
+@oui-checkbox-box-shadow_error: @oui-choice-box-shadow_error;
 
 // Checkbox - M Variant
 @oui-checkbox-m-line-height: @oui-choice-m-line-height;
@@ -1320,10 +1333,12 @@
 @oui-radio-icon-background-color: @oui-choice-icon-background-color;
 @oui-radio-icon-background-color_active: @oui-choice-icon-background-color_active;
 @oui-radio-icon-background-color_disabled: @oui-choice-icon-background-color_disabled;
+@oui-radio-icon-background-color_error: @oui-choice-icon-background-color_error;
 
 @oui-radio-icon-outer-color: @oui-choice-icon-outer-color;
 @oui-radio-icon-outer-color_active: @oui-choice-icon-outer-color_active;
 @oui-radio-icon-outer-color_disabled: @oui-choice-icon-outer-color_disabled;
+@oui-radio-icon-outer-color_error: @oui-choice-icon-outer-color_error;
 @oui-radio-icon-outer-color_focus: @oui-choice-icon-outer-color_focus;
 @oui-radio-icon-outer-color_hover: @oui-choice-icon-outer-color_hover;
 @oui-radio-icon-outer-color_checked: @oui-choice-icon-outer-color_checked;
@@ -1332,8 +1347,10 @@
 @oui-radio-icon-inner-color: @oui-choice-icon-inner-color;
 @oui-radio-icon-inner-color_active: @oui-choice-icon-inner-color_active;
 @oui-radio-icon-inner-color_disabled: @oui-choice-icon-inner-color_disabled;
+@oui-radio-icon-inner-color_error: @oui-choice-icon-inner-color_error;
 
 @oui-radio-box-shadow_focus: @oui-choice-box-shadow_focus;
+@oui-radio-box-shadow_error: @oui-choice-box-shadow_error;
 
 // Radio - M Variant
 @oui-radio-m-line-height: @oui-choice-m-line-height;
@@ -1384,6 +1401,7 @@
 @oui-select-padding-x: rem-calc(12);
 @oui-select-font-color: @oui-color-zodiac;
 @oui-select-font-color_disabled: @oui-color-silver;
+@oui-select-font-color_error: @oui-color-error-dark;
 @oui-select-font-size: rem-calc(16);
 @oui-select-font-weight: 600;
 @oui-select-box-shadow: 1px 1px 0 0 rgba(18, 40, 68, 0.07);
@@ -1391,11 +1409,13 @@
 @oui-select-border-color: @oui-color-silver;
 @oui-select-border-color_focus: @oui-color-pacific;
 @oui-select-border-color_disabled: @oui-color-concrete;
+@oui-select-border-color_error: @oui-color-error-light;
 @oui-select-border-width: 1px;
 @oui-select-border-radius: @oui-global-base-radius;
 @oui-select-background-color: @oui-color-white;
 @oui-select-background-color_focus: @oui-color-polar;
 @oui-select-background-color_disabled: @oui-color-concrete;
+@oui-select-background-color_error: @oui-color-error-fade;
 
 @oui-select-icon-size: rem-calc(10);
 @oui-select-icon-spacing: rem-calc(18);
@@ -1472,10 +1492,12 @@
 @oui-select-picker-value-background-color_light: @oui-choice-thumbnail-background-light;
 @oui-select-picker-value-background-color_hover: @oui-dropdown-menu-background-color;
 @oui-select-picker-value-background-color_checked: @oui-dropdown-menu-background-color;
+@oui-select-picker-value-background-color_error: @oui-choice-thumbnail-background_error;
 @oui-select-picker-value-border-color: @oui-choice-thumbnail-border-color;
 @oui-select-picker-value-border-color_light: @oui-choice-thumbnail-border-color;
 @oui-select-picker-value-border-color_hover: @oui-choice-thumbnail-border-color;
 @oui-select-picker-value-border-color_checked: @oui-choice-thumbnail-border-color;
+@oui-select-picker-value-border-color_error: @oui-choice-thumbnail-border-color_error;
 @oui-select-picker-value-padding: @oui-choice-section-spacing;
 
 // Sidebar
@@ -1687,13 +1709,16 @@
 @oui-switch-background-color: @oui-color-nurse;
 @oui-switch-background-color_checked: @oui-color-info-dark;
 @oui-switch-background-color_disabled: @oui-color-ironlight;
+@oui-switch-background-color_error: @oui-color-error-fade;
 @oui-switch-border-width: 2px;
+@oui-switch-border-color_error: @oui-color-error-medium;
 @oui-switch-box-shadow: inset 0 1px 1px 0 rgba(63, 81, 103, 0.2);
 @oui-switch-box-shadow_checked: inset 0 1px 1px 0 rgba(63, 81, 103, 0.2), 0 0 3px 1px rgba(0, 0, 0, 0.15);
 
 @oui-switch-cursor-background-color: @oui-color-white;
 @oui-switch-cursor-background-color_disabled: @oui-color-concrete;
 @oui-switch-cursor-box-shadow: 0 1px 2px 0 @oui-color-silver;
+@oui-switch-cursor-box-shadow_error: 0 1px 2px 0 @oui-color-error-medium;
 
 // Tabs
 @oui-tabs-tab-height: rem-calc(40);

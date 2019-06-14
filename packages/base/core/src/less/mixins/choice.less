@@ -150,6 +150,30 @@
     }
   }
 
+  .choice-thumbnail_error(@selector) {
+    .@{selector}__input:not(:disabled) ~ .@{selector}__label-container,
+    .@{selector}__input:checked:not(:disabled) ~ .@{selector}__label-container {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: @oui-choice-thumbnail-border-color_error;
+        background: @oui-choice-thumbnail-background_error;
+
+        .@{selector}__description,
+        .@{selector}__section {
+          border-color: @oui-choice-thumbnail-border-color_error;
+        }
+      }
+    }
+
+    .@{selector}__input:not(:disabled):focus ~ .@{selector}__label-container,
+    .@{selector}__input:checked:not(:disabled):focus ~ .@{selector}__label-container {
+      border-color: @oui-choice-thumbnail-border-color_error;
+      box-shadow: @oui-choice-thumbnail-box-shadow_error;
+    }
+  }
+
   .choice-thumbnail-base(
     @border-color: @oui-choice-thumbnail-border-color,
     @background: @oui-choice-thumbnail-background,

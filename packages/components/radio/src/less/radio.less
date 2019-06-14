@@ -38,7 +38,33 @@ oui-radio-group {
 }
 
 // Radio - Error
+// stylelint-disable no-descending-specificity
 .oui-radio_error,
 .oui-field_error .oui-radio {
-  #oui > .radio-error-style();
+  .oui-radio__input:not(:disabled) ~ .oui-radio__label-container,
+  .oui-radio__input:checked:not(:disabled) ~ .oui-radio__label-container {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      #oui > .radio-color(
+        @icon-background-color: @oui-radio-icon-background-color_error,
+        @icon-outer-color: @oui-radio-icon-outer-color_error,
+        @icon-inner-color: @oui-radio-icon-inner-color_error
+      );
+    }
+  }
+
+  .oui-radio__input:not(:disabled):focus ~ .oui-radio__label-container,
+  .oui-radio__input:checked:not(:disabled):focus ~ .oui-radio__label-container {
+    .oui-radio__label::before {
+      box-shadow: @oui-radio-box-shadow_error;
+    }
+  }
+
+  // Thumbnail variant
+  &.oui-radio_thumbnail {
+    #oui > .choice-thumbnail_error(oui-radio);
+  }
 }
+// stylelint-enable no-descending-specificity

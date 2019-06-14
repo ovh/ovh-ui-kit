@@ -1,5 +1,4 @@
-@import './_mixins';
-
+// Select
 .oui-select {
   #oui > .base-font();
 
@@ -91,10 +90,28 @@ oui-select {
 }
 
 // Select - Error
+// stylelint-disable no-descending-specificity
 .oui-select_error,
 .oui-field_error .oui-select {
-  #oui > .select-error-style();
+  .oui-select__input,
+  .oui-select__input:hover,
+  .oui-select__input:active,
+  .oui-select__input:focus {
+    border-color: @oui-select-border-color_error;
+    background-color: @oui-select-background-color_error;
+    color: @oui-select-font-color_error;
+
+    ~ .oui-icon {
+      box-shadow: none;
+      background-color: @oui-select-background-color_error;
+
+      &::before {
+        color: @oui-select-font-color_error;
+      }
+    }
+  }
 }
+// stylelint-enable no-descending-specificity
 
 // Select - Size variants
 #oui > .control-sizes(oui-select);
