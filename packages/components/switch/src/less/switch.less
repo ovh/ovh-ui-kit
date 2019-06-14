@@ -1,5 +1,4 @@
-@import './_mixins';
-
+// Switch
 .oui-switch {
   line-height: 0;
   display: inline-block;
@@ -86,7 +85,19 @@ oui-switch {
   &:extend(.oui-switch);
 }
 
+// Switch - Error
+// stylelint-disable no-descending-specificity
 .oui-switch_error,
 .oui-field_error .oui-switch {
-  #oui > .switch-error-style();
+  .oui-switch__checkbox:not(:disabled) + .oui-switch__slider,
+  .oui-switch__checkbox:checked + .oui-switch__slider {
+    background-color: @oui-switch-background-color_error;
+    border-color: @oui-switch-border-color_error;
+  }
+
+  .oui-switch__checkbox:not(:disabled) + .oui-switch__slider::before,
+  .oui-switch__checkbox:checked + .oui-switch__slider::before {
+    box-shadow: @oui-switch-cursor-box-shadow_error;
+  }
 }
+// stylelint-enable no-descending-specificity
