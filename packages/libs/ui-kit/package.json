@@ -11,7 +11,8 @@
   "style": "./dist/css/oui.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ovh-ux/ovh-ui-kit.git"
+    "url": "git+https://github.com/ovh-ux/ovh-ui-kit.git",
+    "directory": "packages/libs/ui-kit"
   },
   "bugs": {
     "url": "https://github.com/ovh-ux/ovh-ui-kit/issues"
