@@ -293,38 +293,52 @@
 @oui-box-light-border-color: @oui-color-ironlight;
 
 // Button
+@oui-button-min-width: rem-calc(100);
+@oui-button-max-width: 100%;
+@oui-button-padding-x: rem-calc(20);
+@oui-button-padding-y: rem-calc(8);
+@oui-button-padding: calc(@oui-button-padding-y - @oui-button-border-size) calc(@oui-button-padding-x - @oui-button-border-size);
+@oui-button-margin: 0;
+@oui-button-letter-spacing: 0.007em;
 @oui-button-font-color: @oui-color-sapphire;
 @oui-button-font-size: rem-calc(16);
 @oui-button-font-weight: @oui-font-semibold;
 @oui-button-radius: @oui-global-base-radius;
-@oui-button-min-width: rem-calc(100);
-@oui-button-max-width: 100%;
-@oui-button-padding-base: rem-calc(10);
-@oui-button-padding: @oui-button-padding-base rem-calc(20);
-@oui-button-margin: 0;
-@oui-button-letter-spacing: 0.007em;
+@oui-button-border-size: 1px;
 
-@oui-button-filled-background-color: @oui-color-turquoise;
-@oui-button-filled-background-color_hover: darken(@oui-color-turquoise, 10%);
-@oui-button-filled-background-color_disabled: @oui-color-ironlight;
-@oui-button-filled-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
-@oui-button-filled-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
-@oui-button-filled-font-color_disabled: @oui-color-dusty;
-@oui-button-filled-padding-base: rem-calc(8);
-@oui-button-filled-padding: @oui-button-filled-padding-base rem-calc(20);
+@oui-button-primary-padding: calc(@oui-button-padding-y - @oui-button-primary-border-size) calc(@oui-button-padding-x - @oui-button-primary-border-size);
+@oui-button-primary-border-size: 0;
+@oui-button-primary-background-color: @oui-color-turquoise;
+@oui-button-primary-background-color_hover: darken(@oui-button-primary-background-color, 10%);
+@oui-button-primary-background-color_active: darken(@oui-button-primary-background-color, 10%);
+@oui-button-primary-background-color_disabled: @oui-color-ironlight;
+@oui-button-primary-border-color: @oui-button-primary-background-color;
+@oui-button-primary-border-color_hover: @oui-button-primary-background-color_hover;
+@oui-button-primary-border-color_active: @oui-button-primary-background-color_active;
+@oui-button-primary-border-color_disabled: @oui-button-primary-background-color_disabled;
+@oui-button-primary-box-shadow: none;
+@oui-button-primary-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
+@oui-button-primary-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
+@oui-button-primary-box-shadow_disabled: none;
+@oui-button-primary-font-color: @oui-button-font-color;
+@oui-button-primary-font-color_disabled: @oui-color-dusty;
 
-@oui-button-hollow-background-color: @oui-color-white;
-@oui-button-hollow-background-color_hover: @oui-color-concrete;
-@oui-button-hollow-border-color: @oui-color-silver;
-@oui-button-hollow-border-color_hover: @oui-color-dusty;
-@oui-button-hollow-border-color_disabled: @oui-color-concrete;
-@oui-button-hollow-border-size: 1px;
-@oui-button-hollow-background-color_disabled: @oui-color-concrete;
-@oui-button-hollow-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
-@oui-button-hollow-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
-@oui-button-hollow-font-color_disabled: @oui-color-silver;
-@oui-button-hollow-padding-base: rem-calc(7);
-@oui-button-hollow-padding: @oui-button-hollow-padding-base rem-calc(20);
+@oui-button-secondary-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-size) calc(@oui-button-padding-x - @oui-button-secondary-border-size);
+@oui-button-secondary-border-size: @oui-button-border-size;
+@oui-button-secondary-background-color: @oui-color-white;
+@oui-button-secondary-background-color_hover: @oui-color-concrete;
+@oui-button-secondary-background-color_active: @oui-color-concrete;
+@oui-button-secondary-background-color_disabled: @oui-color-concrete;
+@oui-button-secondary-border-color: @oui-color-silver;
+@oui-button-secondary-border-color_hover: @oui-color-dusty;
+@oui-button-secondary-border-color_active: @oui-color-dusty;
+@oui-button-secondary-border-color_disabled: @oui-color-concrete;
+@oui-button-secondary-box-shadow: none;
+@oui-button-secondary-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+@oui-button-secondary-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
+@oui-button-secondary-box-shadow_disabled: none;
+@oui-button-secondary-font-color: @oui-button-font-color;
+@oui-button-secondary-font-color_disabled: @oui-color-silver;
 
 @oui-button-dropdown-color: @oui-color-dusty;
 @oui-button-dropdown-icon-size: rem-calc(10);
@@ -406,8 +420,8 @@
 @oui-calendar-input-background-color_hover: @oui-color-charlotte;
 
 @oui-calendar-button-font-color: @oui-button-font-color;
-@oui-calendar-button-background-color: @oui-button-filled-background-color;
-@oui-calendar-button-background-color_hover: @oui-button-filled-background-color_hover;
+@oui-calendar-button-background-color: @oui-button-primary-background-color;
+@oui-calendar-button-background-color_hover: @oui-button-primary-background-color_hover;
 
 @oui-calendar-body-padding: rem-calc(20) rem-calc(25);
 
@@ -1196,7 +1210,6 @@
 @oui-pagination-selector-spacing: rem-calc(20);
 @oui-pagination-selector-spacing_responsive: rem-calc(10);
 
-@oui-pagination-button-padding: @oui-button-hollow-padding-base;
 @oui-pagination-button-spacing: rem-calc(10);
 
 @oui-pagination-button-selected-background: @oui-color-sapphire;
@@ -1255,7 +1268,7 @@
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
 @oui-popover-button-font-size: rem-calc(20);
-@oui-popover-button-box-shadow_focus: @oui-button-hollow-box-shadow_focus;
+@oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 
 // Progress
 @oui-progress-height: rem-calc(12px);
@@ -1427,15 +1440,15 @@
 @oui-ui-select-button-height: rem-calc(40);
 @oui-ui-select-button-line-height: rem-calc(36);
 @oui-ui-select-button-letter-spacing: @oui-global-base-letter-spacing;
-@oui-ui-select-button-font-color_disabled: @oui-button-hollow-font-color_disabled;
+@oui-ui-select-button-font-color_disabled: @oui-button-secondary-font-color_disabled;
 @oui-ui-select-button-font-color_error: @oui-button-error-text-color;
 @oui-ui-select-button-font-weight: @oui-font-semibold;
 @oui-ui-select-button-border-width: 1px;
 @oui-ui-select-button-border-color_focus: @oui-color-dusty;
-@oui-ui-select-button-border-color_disabled: @oui-button-hollow-border-color_disabled;
+@oui-ui-select-button-border-color_disabled: @oui-button-secondary-border-color_disabled;
 @oui-ui-select-button-border-color_error: @oui-button-error-border-color;
 @oui-ui-select-button-background-color_focus: @oui-color-concrete;
-@oui-ui-select-button-background-color_disabled: @oui-button-hollow-background-color_disabled;
+@oui-ui-select-button-background-color_disabled: @oui-button-secondary-background-color_disabled;
 @oui-ui-select-button-background-color_error: @oui-button-error-background-color;
 
 @oui-ui-select-menu-min-width: @oui-dropdown-menu-min-width;

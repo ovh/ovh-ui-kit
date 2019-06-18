@@ -4,6 +4,8 @@ storiesOf('Styles/Button', module)
   .add(
     'With colors',
     () => `
+    <button class="oui-button">Default</button>
+    <button class="oui-button" disabled>Default disabled</button>
     <button class="oui-button oui-button_primary">Primary</button>
     <button class="oui-button oui-button_primary" disabled>Primary disabled</button>
     <button class="oui-button oui-button_secondary">Secondary</button>

@@ -3,6 +3,7 @@
 .oui-button {
   #oui > .text-ellipsis();
 
+  cursor: pointer;
   min-width: @oui-button-min-width;
   max-width: @oui-button-max-width;
   display: inline-block;
@@ -14,16 +15,12 @@
   font-weight: @oui-button-font-weight;
   letter-spacing: @oui-button-letter-spacing;
   border-radius: @oui-button-radius;
-  cursor: pointer;
-  border: none;
+  border-style: solid;
+  border-width: @oui-button-border-size;
   user-select: none;
   overflow-y: hidden;
   appearance: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-  // Required to fix alignment when a button is beside of an
-  // inline-flex element, otherwise inline-flex are pushed to
-  // the bottom.
   vertical-align: top;
   color: @oui-button-font-color;
 
@@ -38,10 +35,6 @@
   &:disabled {
     cursor: auto;
   }
-
-  &:active:disabled {
-    box-shadow: none;
-  }
 }
 
 oui-button {
@@ -49,21 +42,44 @@ oui-button {
 }
 
 .oui-button_primary {
-  #oui > .button-filled();
-  #oui > .button-icon(
-    @icon-color_disabled: @oui-button-filled-font-color_disabled
+  #oui > .button-color(
+    @background-color: @oui-button-primary-background-color,
+    @background-color_hover: @oui-button-primary-background-color_hover,
+    @background-color_active: @oui-button-primary-background-color_active,
+    @background-color_disabled: @oui-button-primary-background-color_disabled,
+    @border-color: @oui-button-primary-border-color,
+    @border-color_hover: @oui-button-primary-border-color_hover,
+    @border-color_active: @oui-button-primary-border-color_active,
+    @border-color_disabled: @oui-button-primary-border-color_disabled,
+    @box-shadow: @oui-button-primary-box-shadow,
+    @box-shadow_focus: @oui-button-primary-box-shadow_focus,
+    @box-shadow_active: @oui-button-primary-box-shadow_active,
+    @box-shadow_disabled: @oui-button-secondary-box-shadow_disabled,
+    @font-color: @oui-button-primary-font-color,
+    @font-color_disabled: @oui-button-primary-font-color_disabled,
   );
+
+  #oui > .button-icon(
+    @icon-color_disabled: @oui-button-primary-font-color_disabled
+  );
+
+  padding: @oui-button-primary-padding;
+  border-width: @oui-button-primary-border-size;
 }
 
 .oui-button_secondary {
-  #oui > .button-hollow();
+  #oui > .button-color();
+
   #oui > .button-icon(
-    @icon-color_disabled: @oui-button-hollow-font-color_disabled
+    @icon-color_disabled: @oui-button-secondary-font-color_disabled
   );
+
+  padding: @oui-button-secondary-padding;
+  border-width: @oui-button-secondary-border-size;
 }
 
 .oui-button_dropdown {
-  #oui > .button-hollow();
+  #oui > .button-color();
 
   padding-right: @oui-button-dropdown-padding-right;
   padding-left: @oui-button-dropdown-padding-left;
