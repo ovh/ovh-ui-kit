@@ -24,6 +24,8 @@ export default {
     valid: '<?',
     position: '@?',
 
+    preventNext: '<?',
+
     onCancel: '&?',
     onFocus: '&',
     onSubmit: '&',
