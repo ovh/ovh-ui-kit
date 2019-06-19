@@ -25,8 +25,8 @@ storiesOf('Components/Header', module)
       heading="My title"
       description="My subtitle">
       <oui-header-tabs>
-        <oui-header-tabs-item href="#">Home</oui-header-tabs-item>
-        <oui-header-tabs-item href="#" active>Header</oui-header-tabs-item>
+        <oui-header-tabs-item href="#" active>Home</oui-header-tabs-item>
+        <oui-header-tabs-item href="#">Header</oui-header-tabs-item>
         <oui-header-tabs-item href="#">Header Tabs</oui-header-tabs-item>
         <oui-header-tabs-dropdown text="Form">
             <oui-header-tabs-item href="#" disabled>Field</oui-header-tabs-item>
