@@ -1,10 +1,4 @@
 .oui-button {
-  transition: all ease-in 200ms;
-
-  &.oui-button_icon-left {
-    padding: 0.438rem 1.25rem;
-  }
-
   &.oui-button_icon-left .oui-icon,
   .oui-file-selector__button_icon-left .oui-icon {
     margin-right: 0.4rem;
@@ -28,21 +22,7 @@
 
     &:disabled {
       background-color: transparent;
-      color: rgb(196, 207, 219);
-    }
-  }
-
-  &:disabled {
-    &,
-    &:hover,
-    &:focus {
-      background-color: #c4cfdb;
-      border: 0;
-      color: #113f6d;
-
-      & .oui-icon::before {
-        color: #113f6d;
-      }
+      color: #c4cfdb;
     }
   }
 }

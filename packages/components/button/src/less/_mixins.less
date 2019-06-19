@@ -14,11 +14,24 @@
     @box-shadow_disabled: @oui-button-secondary-box-shadow_disabled,
     @font-color: @oui-button-secondary-font-color,
     @font-color_disabled: @oui-button-secondary-font-color_disabled,
+    @icon-color: @oui-button-secondary-icon-color,
+    @icon-color_disabled: @oui-button-secondary-icon-color_disabled,
+    @icon-circle-color: @oui-button-secondary-icon-circle-color,
+    @icon-circle-color_disabled: @oui-button-secondary-icon-circle-color_disabled
   ) {
     color: @font-color;
     background-color: @background-color;
     border-color: @border-color;
     box-shadow: @box-shadow;
+
+    .oui-icon {
+      color: @icon-color;
+
+      &_circle {
+        color: @icon-circle-color;
+        background: @icon-color;
+      }
+    }
 
     &:hover,
     &:focus {
@@ -42,37 +55,15 @@
       border-color: @border-color_disabled;
       background-color: @background-color_disabled;
       box-shadow: @box-shadow_disabled;
-    }
-  }
 
-  .button-icon(
-    @icon-selector: oui-icon,
-    @icon-size: @oui-button-icon-icon-size,
-    @icon-size_large: @oui-button-icon-icon-size_large,
-    @icon-color: @oui-button-icon-icon-color,
-    @icon-color_disabled: @oui-button-icon-icon-color_disabled
-  ) {
-    .@{icon-selector} {
-      color: @icon-color;
-    }
+      .oui-icon {
+        color: @icon-color_disabled;
 
-    .@{icon-selector}::before {
-      font-size: @icon-size;
-    }
-
-    .@{icon-selector}_circle {
-      width: @icon-size_large;
-      height: @icon-size_large;
-      background: @icon-color;
-    }
-
-    &:disabled .@{icon-selector} {
-      color: @icon-color_disabled;
-    }
-
-    &:disabled .@{icon-selector}_circle {
-      background: @icon-color_disabled;
-      color: @oui-color-white;
+        &_circle {
+          color: @icon-circle-color_disabled;
+          background: @icon-color_disabled;
+        }
+      }
     }
   }
 }
