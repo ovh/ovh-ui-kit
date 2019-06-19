@@ -132,6 +132,8 @@
 // Link
 @oui-link-font-color: @oui-color-pacific;
 @oui-link-font-color_hover: @oui-color-sapphire;
+@oui-link-font-color_disabled: @oui-color-dusty;
+@oui-link-font-weight: @oui-font-regular;
 @oui-link-text-decoration: none;
 @oui-link-text-decoration_hover: underline;
 @oui-link-icon-icon-size: rem-calc(10);
@@ -359,12 +361,14 @@
 @oui-button-secondary-icon-circle-color_disabled: @oui-color-white;
 
 // Button - Link variant
-@oui-button-link-font-color: @oui-color-pacific;
-@oui-button-link-font-color_hover: @oui-color-sapphire;
-@oui-button-link-font-color_disabled: @oui-color-dusty;
-@oui-button-link-font-weight: @oui-font-regular;
+@oui-button-link-font-color: @oui-link-font-color;
+@oui-button-link-font-color_hover: @oui-link-font-color_hover;
+@oui-button-link-font-color_disabled: @oui-link-font-color_disabled;
+@oui-button-link-font-weight: @oui-link-font-weight;
 @oui-button-link-icon-color: @oui-button-font-color;
 @oui-button-link-icon-color_disabled: @oui-button-link-font-color_disabled;
+@oui-button-link-text-decoration: underline;
+@oui-button-link-text-decoration_hover: underline;
 @oui-button-link-padding: rem-calc(8) rem-calc(20);
 
 // Button - Dropdown variant
@@ -1695,13 +1699,17 @@
 @oui-status-max-width: rem-calc(200);
 @oui-status-padding: rem-calc(4) rem-calc(10);
 @oui-status-font-color: @oui-color-sapphire;
+@oui-status-font-color_info: @oui-status-font-color;
+@oui-status-font-color_success: @oui-status-font-color;
+@oui-status-font-color_warning: @oui-status-font-color;
+@oui-status-font-color_error: @oui-status-font-color;
 @oui-status-font-size: rem-calc(16);
 @oui-status-font-weight: @oui-font-regular;
 @oui-status-border: none;
 @oui-status-border-radius: calc(@oui-status-font-size * @oui-status-line-height);
 @oui-status-background-color: @oui-color-white;
-@oui-status-background-color_success: @oui-color-success-fade;
 @oui-status-background-color_info: @oui-color-info-fade;
+@oui-status-background-color_success: @oui-color-success-fade;
 @oui-status-background-color_warning: @oui-color-warning-fade;
 @oui-status-background-color_error: @oui-color-error-fade;
 

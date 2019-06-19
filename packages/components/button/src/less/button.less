@@ -164,7 +164,7 @@ oui-button {
   background: none;
   color: @oui-button-link-font-color;
   font-weight: @oui-button-link-font-weight;
-  text-decoration: underline;
+  text-decoration: @oui-button-link-text-decoration;
 
   .oui-icon {
     color: @oui-button-link-icon-color;
@@ -174,14 +174,14 @@ oui-button {
   &:focus {
     background: none;
     color: @oui-button-link-font-color_hover;
-    text-decoration: underline;
+    text-decoration: @oui-button-link-text-decoration_hover;
   }
 
   &:disabled,
   &:disabled:active {
     background: none;
     color: @oui-button-link-font-color_disabled;
-    text-decoration: underline;
+    text-decoration: @oui-button-link-text-decoration;
 
     .oui-icon {
       color: @oui-button-link-icon-color_disabled;
