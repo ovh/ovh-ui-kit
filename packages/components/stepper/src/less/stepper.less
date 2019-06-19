@@ -10,6 +10,11 @@
     border-top: @oui-stepper-step-separator;
 
     &:last-child { border-bottom: @oui-stepper-step-separator; }
+
+    @media screen and (max-width: (@oui-responsive-breakpoint-tablet - 1px)) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__container {
