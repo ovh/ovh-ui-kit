@@ -13,6 +13,7 @@ angular.module(moduleName, [
   // For examples
   'oui.button',
   'oui.field',
+  'oui.select',
 ]);
 
 storiesOf('Components/Stepper', module)
@@ -92,6 +93,29 @@ storiesOf('Components/Stepper', module)
       $ctrl: {
         disabled: boolean('Disabled state', false),
         loading: boolean('Loading state', true),
+      },
+    })),
+  )
+  .add(
+    'Disable next button',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-stepper>
+      <oui-step-form
+        header="Favorite ice cream flavor"
+        valid="$ctrl.favorite === 'Vanilla'"
+        prevent-next>
+        <oui-field label="Select Vanilla! That's the best.">
+          <oui-select required
+                      placeholder="My favorite ice cream flavor is..."
+                      items="['Chocolate', 'Strawberry', 'Vanilla', 'Coconut']"
+                      model="$ctrl.favorite">
+          </oui-select>
+        </oui-field>
+      </oui-step-form>
+    </oui-stepper>
+    `, {
+      $ctrl: {
+        favorite: null,
       },
     })),
   )

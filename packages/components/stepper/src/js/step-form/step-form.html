@@ -44,7 +44,7 @@
         <footer class="oui-stepper__footer"
             ng-if="$ctrl.navigation"
             ng-show="!$ctrl.loading && $ctrl.stepper.focused">
-            <oui-button variant="primary" type="submit">
+            <oui-button variant="primary" type="submit" disabled="$ctrl.preventNext && (!$ctrl.valid || !this[$ctrl.name].$valid)">
                 {{$ctrl.submitText || ($ctrl.stepper.last ? $ctrl.translations.submitButtonLabel : $ctrl.translations.nextButtonLabel)}}
             </oui-button>
             <oui-button variant="link"

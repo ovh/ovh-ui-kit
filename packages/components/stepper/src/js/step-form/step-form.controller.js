@@ -15,6 +15,7 @@ export default class StepFormController {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'editable');
     addBooleanParameter(this, 'skippable');
+    addBooleanParameter(this, 'preventNext');
 
     // Add default name
     addDefaultParameter(this, 'name', `ouiStepForm${this.$scope.$id}`);
