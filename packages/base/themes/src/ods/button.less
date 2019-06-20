@@ -11,8 +11,6 @@
     &:hover,
     &:focus {
       background-color: @primary-color;
-      border: 2px solid transparent;
-      border-radius: @border-radius-default;
 
       &,
       .oui-icon {
@@ -56,29 +54,4 @@
 .oui-autocomplete__option:focus {
   background-color: @primary-color;
   color: #fff;
-}
-
-.oui-button-group {
-  .oui-button { /* stylelint-disable-line */
-    border: 0;
-    border-radius: @border-radius-default;
-  }
-
-  .oui-button_primary.oui-pagination-button_selected {
-    border-radius: @border-radius-default;
-    margin-right: 0.4rem;
-
-    &:nth-last-child(1) {
-      margin-right: 0;
-    }
-  }
-
-  .oui-button.oui-button_secondary {
-    &:hover,
-    &:focus {
-      background-color: rgb(239, 249, 253);
-      border-radius: @border-radius-default;
-      box-shadow: 0 5pt 10pt rgba(40, 89, 192, 0.15);
-    }
-  }
 }

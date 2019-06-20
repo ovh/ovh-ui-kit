@@ -75,14 +75,6 @@ storiesOf('Styles/Button', module)
     `,
   )
   .add(
-    'Icon alone',
-    () => `
-    <button type="button" class="oui-button oui-button_icon-alone">
-      <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
-    </button>
-    `,
-  )
-  .add(
     'Full width',
     () => `
     <div style="width: 40%; display: inline-block;">
@@ -141,5 +133,33 @@ storiesOf('Styles/Button', module)
     <button class="oui-button oui-button_secondary oui-button_small-width">
       <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
     </button>
+    `,
+  )
+  .add(
+    'In a group',
+    () => `
+    <div>
+      <div class="oui-button-group">
+        <button class="oui-button oui-button_secondary oui-button_small-width">1</button>
+        <button class="oui-button oui-button_secondary oui-button_small-width">2</button>
+        <button class="oui-button oui-button_secondary oui-button_small-width">3</button>
+        <button class="oui-button oui-button_secondary oui-button_small-width">4</button>
+        <button class="oui-button oui-button_secondary oui-button_small-width">5</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="oui-button-group">
+        <button class="oui-button oui-button_primary">Button 1</button>
+        <button class="oui-button oui-button_secondary">Button 2</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="oui-button-group">
+        <button class="oui-button oui-button_secondary">Button 1</button>
+        <button class="oui-button oui-button_primary">Button 2</button>
+      </div>
+    </div>
     `,
   );
