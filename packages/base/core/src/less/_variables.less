@@ -74,6 +74,7 @@
 // Heading
 @oui-heading-border-width: 2px;
 @oui-heading-border-color: @oui-color-ironlight;
+@oui-heading-border-spacing: 0;
 
 @oui-heading-colors:
   inherit,
@@ -149,6 +150,8 @@
 @oui-horizontal-line-thin-width: 1px;
 
 // Paragraph
+@oui-paragraph-line-height: @oui-global-base-line-height;
+@oui-paragraph-font-color: inherit;
 @oui-paragraph-margin: 0 0 rem-calc(15);
 
 // Fonts
@@ -411,7 +414,7 @@
 
 // Button - Size variants
 @oui-button-small-width-min-width: rem-calc(40);
-@oui-button-small-width-padding-left-right: rem-calc(5);
+@oui-button-small-width-padding-x: rem-calc(5);
 
 @oui-button-large-height-min-height: rem-calc(45);
 
@@ -887,7 +890,7 @@
 @oui-inline-adder-footer-padding: rem-calc(10);
 
 @oui-inline-adder-action-size: rem-calc(40);
-@oui-inline-adder-action-padding-x: @oui-button-small-width-padding-left-right;
+@oui-inline-adder-action-padding-x: @oui-button-small-width-padding-x;
 @oui-inline-adder-action-icon-size: rem-calc(16);
 
 // Input
