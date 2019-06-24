@@ -12,6 +12,9 @@
       @background-color: @oui-input-group-button-background-color,
       @border-color_disabled: @oui-input-group-button-border-color_disabled
     );
+
+    padding: @oui-input-group-button-padding;
+    border-width: @oui-button-secondary-border-size;
   }
 
   > .oui-input {
@@ -60,7 +63,7 @@
 
 // Button variant
 // stylelint-disable no-descending-specificity
-.oui-input-group_button {
+.oui-input-group.oui-input-group_button {
   position: relative;
 
   .oui-input,
@@ -107,7 +110,7 @@
 // stylelint-enbale no-descending-specificity
 
 // Inline variant
-.oui-input-group_inline {
+.oui-input-group.oui-input-group_inline {
   display: inline-flex;
   width: auto;
 }

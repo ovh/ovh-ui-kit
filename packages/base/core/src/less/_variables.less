@@ -65,6 +65,7 @@
 @oui-icon-circle-background: @oui-color-black;
 @oui-icon-circle-color: @oui-color-white;
 @oui-icon-circle-size: 1em;
+@oui-icon-circle-vertical-align: sub;
 
 // Abbreviations
 @oui-abbr-border-color: @oui-color-pacific;
@@ -306,7 +307,7 @@
 @oui-button-font-size: rem-calc(16);
 @oui-button-font-weight: @oui-font-semibold;
 @oui-button-radius: @oui-global-base-radius;
-@oui-button-border-size: 1px;
+@oui-button-border-size: 0;
 
 // Button - Icons
 @oui-button-icon-size: rem-calc(10);
@@ -340,7 +341,7 @@
 
 // Button - Secondary variant
 @oui-button-secondary-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-size) calc(@oui-button-padding-x - @oui-button-secondary-border-size);
-@oui-button-secondary-border-size: @oui-button-border-size;
+@oui-button-secondary-border-size: 1px;
 @oui-button-secondary-background-color: @oui-color-white;
 @oui-button-secondary-background-color_hover: @oui-color-concrete;
 @oui-button-secondary-background-color_active: @oui-color-concrete;
@@ -373,10 +374,10 @@
 
 // Button - Dropdown variant
 @oui-button-dropdown-icon-size: rem-calc(10);
-@oui-button-dropdown-spacing: rem-calc(12);
-@oui-button-dropdown-padding-right: rem-calc(30) + @oui-button-dropdown-spacing;
-@oui-button-dropdown-padding-left: @oui-button-dropdown-spacing;
-@oui-button-dropdown-margin-right: @oui-button-dropdown-spacing * 1.5;
+@oui-button-dropdown-padding-x: rem-calc(12);
+@oui-button-dropdown-padding: calc(@oui-button-padding-y - @oui-button-dropdown-border-size) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-size);
+@oui-button-dropdown-padding-right: rem-calc(30) + @oui-button-dropdown-padding-x;
+@oui-button-dropdown-margin-right: @oui-button-dropdown-padding-x * 1.5;
 
 @oui-button-dropdown-border-size: @oui-button-secondary-border-size;
 @oui-button-dropdown-background-color: @oui-button-secondary-background-color;
@@ -418,6 +419,13 @@
 @oui-button-error-background-color: @oui-color-error-fade;
 @oui-button-error-border-color: @oui-color-error-light;
 @oui-button-error-text-color: @oui-color-error-dark;
+
+// Button Group
+@oui-button-group-margin: 0;
+@oui-button-group-outer-radius: @oui-button-radius;
+@oui-button-group-inner-radius: 0;
+@oui-button-group-primary-spacing: -@oui-button-primary-border-size;
+@oui-button-group-secondary-spacing: -@oui-button-secondary-border-size;
 
 // Calendar
 @oui-calendar-font-color: @oui-color-sapphire;
@@ -1254,8 +1262,8 @@
 
 @oui-pagination-button-spacing: rem-calc(10);
 
-@oui-pagination-button-selected-background: @oui-color-sapphire;
-@oui-pagination-button-selected-color: @oui-color-white;
+@oui-pagination-button-selected-background: @oui-button-primary-background-color;
+@oui-pagination-button-selected-color: @oui-button-primary-font-color;
 
 @oui-pagination-menu-padding: 0;
 
@@ -1304,12 +1312,12 @@
 @oui-popover-close-button-icon-color: @oui-color-info-dark;
 
 // Popover - Help button
-@oui-popover-button-size: rem-calc(20);
+@oui-popover-button-line-height: 1;
 @oui-popover-button-spacing: rem-calc(10);
 @oui-popover-button-content: @oui-icon-index-help_circle;
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
-@oui-popover-button-font-size: rem-calc(20);
+@oui-popover-button-font-size: rem-calc(16);
 @oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 
 // Progress

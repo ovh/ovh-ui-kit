@@ -25,7 +25,7 @@
   color: @oui-button-font-color;
   transition: background-color ease-in 200ms, border-color ease-in 200ms, box-shadow ease-in 200ms;
 
-  .oui-icon::before {
+  .oui-icon {
     font-size: @oui-button-icon-size;
   }
 
@@ -131,8 +131,10 @@ oui-button {
     @icon-circle-color_disabled: @oui-button-dropdown-icon-circle-color_disabled
   );
 
+  padding: @oui-button-dropdown-padding;
   padding-right: @oui-button-dropdown-padding-right;
-  padding-left: @oui-button-dropdown-padding-left;
+  border-width: @oui-button-dropdown-border-size;
+  text-align: left;
 
   .oui-icon-chevron-down {
     margin-right: @oui-button-dropdown-margin-right;
@@ -147,8 +149,11 @@ oui-button {
     cursor: pointer;
 
     &::before {
-      display: inline-block;
+      display: block;
       font-size: @oui-button-dropdown-icon-size;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
