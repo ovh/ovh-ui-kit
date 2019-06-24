@@ -58,9 +58,15 @@
  * Components
  */
 
+// Action-Menu
+@oui-action-button-background-color_hover: @primary-color;
+
+@oui-action-button-border-color_hover: @primary-color;
+
+@oui-action-button-foreground-color: @primary-color;
+
 // Button
 @oui-button-font-color: @primary-color;
-@oui-button-border-size: 2px;
 
 // Button - Primary variant
 @oui-button-primary-background-color: @primary-color;
@@ -71,6 +77,7 @@
 @oui-button-primary-icon-circle-color: @oui-button-primary-background-color;
 
 // Button - Secondary variant
+@oui-button-secondary-border-size: 2px;
 @oui-button-secondary-background-color_hover: #eff9fd;
 @oui-button-secondary-background-color_active: @oui-button-secondary-background-color_hover;
 @oui-button-secondary-background-color_disabled: @oui-button-secondary-background-color;
@@ -90,6 +97,11 @@
 @oui-button-group-inner-radius: @oui-button-radius;
 @oui-button-group-primary-spacing: rem-calc(6);
 @oui-button-group-secondary-spacing: rem-calc(6);
+
+// Dropdown
+@oui-dropdown-item-background-color_active: @primary-color;
+
+@oui-dropdown-item-font-color_active: @oui-color-white;
 
 // File
 @oui-file-attachment-box-shadow: 0 0 6px fade(@primary-color, 20%);
@@ -113,6 +125,26 @@
 @oui-header-tabs-item-font-color: @primary-color;
 @oui-header-tabs-item-font-weight: @oui-font-semibold;
 @oui-header-tabs-item-border-color:  @primary-color;
+
+// Input
+@oui-input-font-color: #1c3193;
+@oui-input-border-color: #89d7f8;
+@oui-input-border-color_hover: @oui-input-border-color;
+@oui-input-border-color_focus: #1c3193;
+@oui-input-border-color_error: #c11b1b;
+@oui-input-border-radius: 0;
+@oui-input-border-size: 2px;
+@oui-input-box-shadow: none;
+@oui-input-box-shadow_focus: none;
+@oui-input-box-shadow_error: none;
+@oui-input-box-shadow_error-focus: none;
+@oui-input-background-color: @oui-color-white;
+@oui-input-background-color_hover: #eff9fd;
+@oui-input-background-color_focus: @oui-input-background-color_hover;
+@oui-input-background-color_error: #ffd2dd;
+
+// Input Group
+@oui-input-group-spacing: 0;
 
 // Message
 @oui-message-border-width: 0;

@@ -19,6 +19,7 @@
     @box-shadow_focus: @oui-input-box-shadow_focus,
     @box-shadow_error: @oui-input-box-shadow_error,
     @background-color: @oui-input-background-color,
+    @background-color_hover: @oui-input-background-color_hover,
     @background-color_focus: @oui-input-background-color_focus,
     @background-color_disabled: @oui-input-background-color_disabled,
     @background-color_readonly: @oui-input-background-color_readonly,
@@ -57,6 +58,7 @@
     }
 
     &:hover {
+      background-color: @background-color_hover;
       border-color: @border-color_hover;
     }
 
@@ -104,7 +106,7 @@
     }
 
     &:not(:disabled):focus {
-      box-shadow: @oui-input-background-color_error-focus;
+      box-shadow: @oui-input-box-shadow_error-focus;
     }
 
     &::selection {

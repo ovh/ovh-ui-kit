@@ -777,6 +777,8 @@
 @oui-file-button-padding: @oui-input-group-button-padding;
 @oui-file-button-background-color: @oui-input-group-button-background-color;
 @oui-file-button-border-color_disabled: @oui-input-group-button-border-color_disabled;
+@oui-file-button-border-size: @oui-button-secondary-border-size;
+@oui-file-button-spacing: @oui-input-group-spacing;
 
 @oui-file-icon-width: rem-calc(40);
 @oui-file-icon-color: @oui-color-sapphire;
@@ -917,13 +919,13 @@
 @oui-input-box-shadow: inset 2px 2px 1px 0 rgba(18, 40, 68, 0.07);
 @oui-input-box-shadow_focus: inset 2px 2px 1px 0 fade(@oui-color-turquoise, 35%), 0 0 3px 0 @oui-color-info-light;
 @oui-input-box-shadow_error: inset 1px 1px 1px 0 @oui-color-error-light;
-@oui-input-box-shadow_error: inset 1px 1px 1px 0 @oui-color-error-light;
+@oui-input-box-shadow_error-focus: 0 0 3px 0 rgba(0, 0, 0, 0.35);
 @oui-input-background-color: @oui-color-white;
+@oui-input-background-color_hover: @oui-input-background-color;
 @oui-input-background-color_focus: @oui-color-polar;
 @oui-input-background-color_disabled: @oui-color-concrete;
 @oui-input-background-color_readonly: @oui-color-concrete;
 @oui-input-background-color_error: @oui-color-error-fade;
-@oui-input-background-color_error-focus: 0 0 3px 0 rgba(0, 0, 0, 0.35);
 
 @oui-input-placeholder-font-color: @oui-color-silver;
 
@@ -936,9 +938,10 @@
 @oui-input-group-margin: 0;
 @oui-input-group-border-radius: @oui-input-border-radius;
 @oui-input-group-border-size: @oui-input-border-size;
+@oui-input-group-spacing: -@oui-input-group-border-size;
 
 @oui-input-group-button-min-width: rem-calc(50);
-@oui-input-group-button-padding: rem-calc(7);
+@oui-input-group-button-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-size);
 @oui-input-group-button-background-color: @oui-input-background-color;
 @oui-input-group-button-border-color_disabled: @oui-input-border-color_disabled;
 @oui-input-group-button-font-color: @oui-color-silver;
@@ -1447,7 +1450,7 @@
 // Search
 @oui-search-margin: 0;
 @oui-search-padding-right: rem-calc(62);
-@oui-search-border-radius: @oui-global-base-radius;
+@oui-search-border-radius: @oui-input-border-radius;
 
 @oui-search-input-font-color_disabled: @oui-color-shuttle;
 
