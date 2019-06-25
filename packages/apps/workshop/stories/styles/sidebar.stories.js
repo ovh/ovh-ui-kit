@@ -4,7 +4,7 @@ storiesOf('Styles/Sidebar', module)
   .add(
     'Simple',
     () => `
-    <nav class="oui-sidebar">
+    <nav class="oui-sidebar" style="width: 300px;">
       <div class="oui-sidebar-menu">
         <ul class="oui-sidebar-list">
           <li class="oui-sidebar-list__item">
@@ -40,7 +40,7 @@ storiesOf('Styles/Sidebar', module)
   .add(
     'Multi levels',
     () => `
-    <nav class="oui-sidebar">
+    <nav class="oui-sidebar" style="width: 300px;">
       <!-- Root -->
       <div class="oui-sidebar-menu">
         <ul class="oui-sidebar-list">
@@ -97,7 +97,7 @@ storiesOf('Styles/Sidebar', module)
   .add(
     'Collapsible',
     () => `
-    <nav class="oui-sidebar">
+    <nav class="oui-sidebar" style="width: 300px;">
       <div class="oui-sidebar-menu">
         <ul class="oui-sidebar-list">
           <li class="oui-sidebar-list__item">
@@ -161,7 +161,7 @@ storiesOf('Styles/Sidebar', module)
   .add(
     'Responsive',
     () => `
-    <nav class="oui-sidebar">
+    <nav class="oui-sidebar" style="width: 300px;">
       <!-- Root -->
       <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
         <ul class="oui-sidebar-list">

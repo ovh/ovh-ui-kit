@@ -47,7 +47,10 @@
     @min-height: @oui-navbar-link-min-height,
     @line-height: @oui-navbar-link-line-height,
     @display: block,
-    @padding: @oui-navbar-link-padding
+    @padding: @oui-navbar-link-padding,
+    @text-decoration: @oui-navbar-link-text-decoration,
+    @text-decoration_hover: @oui-navbar-link-text-decoration_hover,
+    @text-decoration_active: @oui-navbar-link-text-decoration_active
   ) {
     min-width: @min-width;
     min-height: @min-height;
@@ -58,17 +61,24 @@
     justify-content: center;
     padding: @padding;
     position: relative;
-    text-decoration: none;
+    text-decoration: @text-decoration;
     text-align: left;
     border: none;
 
     &:hover,
     &:focus {
-      text-decoration: none;
+      cursor: pointer;
+      text-decoration: @text-decoration_hover;
     }
 
     &:focus {
       #oui > .outline-border();
+    }
+
+    &_active {
+      &,
+      &:hover,
+      &:focus { text-decoration: @text-decoration_active; }
     }
   }
 
