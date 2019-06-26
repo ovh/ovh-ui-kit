@@ -285,7 +285,12 @@
 
 // Back Button
 @oui-back-button-margin-bottom: rem-calc(30);
-@oui-back-button-icon-spacing: rem-calc(7);
+@oui-back-button-valign: middle;
+
+@oui-back-button-arrow-padding: rem-calc(5);
+@oui-back-button-arrow-spacing: rem-calc(10);
+@oui-back-button-arrow-size: rem-calc(20);
+@oui-back-button-arrow-valign: middle;
 
 // Box
 @oui-box-background-color: @oui-color-concrete;
@@ -401,16 +406,6 @@
 @oui-button-dropdown-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
 @oui-button-dropdown-icon-circle-color: @oui-button-secondary-icon-circle-color;
 @oui-button-dropdown-icon-circle-color_disabled: @oui-button-secondary-icon-circle-color_disabled;
-
-// Button - Icon alone variant
-@oui-button-icon-alone-background: transparent;
-@oui-button-icon-alone-font-color: @oui-link-font-color;
-@oui-button-icon-alone-min-width: rem-calc(20);
-@oui-button-icon-alone-padding-left: rem-calc(5);
-@oui-button-icon-alone-padding-right: 0;
-@oui-button-icon-alone-margin-right: rem-calc(15);
-@oui-button-icon-alone-icon-font-size: rem-calc(20);
-@oui-button-icon-alone-font-color_hover: @oui-link-font-color_hover;
 
 // Button - Size variants
 @oui-button-small-width-min-width: rem-calc(40);
@@ -558,7 +553,7 @@
 @oui-clipboard-border-color: @oui-input-border-color;
 @oui-clipboard-border-color_hover: @oui-input-border-color_hover;
 @oui-clipboard-border-color_focus: @oui-input-border-color_focus;
-@oui-clipboard-border-radius: @oui-global-base-radius;
+@oui-clipboard-border-radius: @oui-input-border-radius;
 @oui-clipboard-background-color: @oui-input-background-color;
 @oui-clipboard-background-color_focus: @oui-input-background-color_focus;
 
@@ -644,6 +639,9 @@
 @oui-datagrid-parameters-button-padding: rem-calc(6) 0;
 @oui-datagrid-parameters-button-font-color: @oui-color-sapphire;
 @oui-datagrid-parameters-button-font-color_hover: @oui-color-sapphire;
+@oui-datagrid-parameters-button-icon-size: rem-calc(20);
+@oui-datagrid-parameters-button-border: none;
+@oui-datagrid-parameters-button-background-color: transparent;
 
 @oui-datagrid-parameters-header-line-height: rem-calc(40);
 @oui-datagrid-parameters-header-font-color: @oui-color-dusty;

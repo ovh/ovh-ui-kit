@@ -1,6 +1,6 @@
 <button ng-if="::!$ctrl.href && !$ctrl.state"
     type="button"
-    class="oui-button oui-button_icon-alone"
+    class="oui-back-button__arrow"
     ng-attr-aria-label="{{:: $ctrl.ariaLabel }}"
     ng-attr-id="{{:: $ctrl.id }}"
     ng-attr-name="{{:: $ctrl.name }}"
@@ -8,7 +8,7 @@
   <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
 </button>
 <a ng-if="::!!$ctrl.href"
-   class="oui-button oui-button_icon-alone"
+   class="oui-back-button__arrow"
    ng-attr-aria-label="{{:: $ctrl.ariaLabel }}"
    ng-attr-id="{{:: $ctrl.id }}"
    ng-attr-name="{{:: $ctrl.name }}"
@@ -17,7 +17,7 @@
   <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
 </a>
 <a ng-if="::!!$ctrl.state"
-   class="oui-button oui-button_icon-alone"
+   class="oui-back-button__arrow"
    ng-attr-aria-label="{{:: $ctrl.ariaLabel }}"
    ng-attr-id="{{:: $ctrl.id }}"
    ng-attr-name="{{:: $ctrl.name }}"
@@ -25,4 +25,4 @@
    ui-sref="{{::$ctrl.getFullSref()}}">
   <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
 </a>
-<h2 class="oui-back-button_title oui-heading_2" ng-transclude></h2>
+<h2 class="oui-back-button__title" ng-transclude></h2>
