@@ -536,7 +536,7 @@ describe('ouiNavbar', () => {
         $timeout.flush();
 
         menu = angular.element(component[0].querySelector('.oui-navbar-list_aside'));
-        links = menu.children('li');
+        links = menu.children();
       });
 
       it('should create a list of links', () => {
@@ -545,7 +545,7 @@ describe('ouiNavbar', () => {
       });
 
       it('should have links with tertiary variant', () => {
-        expect(links.eq(0).children('a').hasClass('oui-navbar-link_tertiary')).toBe(true);
+        expect(links.eq(0).children().hasClass('oui-navbar-link_dropdown')).toBe(true);
       });
 
       it('should have links with icon', () => {
