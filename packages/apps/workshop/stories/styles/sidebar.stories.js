@@ -8,27 +8,27 @@ storiesOf('Styles/Sidebar', module)
       <div class="oui-sidebar-menu">
         <ul class="oui-sidebar-list">
           <li class="oui-sidebar-list__item">
-            <a class="oui-sidebar-link oui-sidebar-link_active" href="">
+            <a class="oui-sidebar-link oui-sidebar-link_active" href="#">
               Service 1
             </a>
           </li>
           <li class="oui-sidebar-list__item">
-            <a class="oui-sidebar-link" href="">
+            <a class="oui-sidebar-link" href="#">
               Service 2
             </a>
           </li>
           <li class="oui-sidebar-list__item">
-            <a class="oui-sidebar-link" href="">
+            <a class="oui-sidebar-link" href="#">
               Service 3
             </a>
           </li>
           <li class="oui-sidebar-list__item">
-            <a class="oui-sidebar-link" href="">
+            <a class="oui-sidebar-link" href="#">
               Service 4
             </a>
           </li>
           <li class="oui-sidebar-list__item">
-            <a class="oui-sidebar-link" href="">
+            <a class="oui-sidebar-link" href="#">
               Service 5
             </a>
           </li>
@@ -59,17 +59,17 @@ storiesOf('Styles/Sidebar', module)
                   <div class="oui-sidebar-menu">
                     <ul class="oui-sidebar-list">
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link oui-sidebar-link_active" href="">
+                        <a class="oui-sidebar-link oui-sidebar-link_active" href="#">
                           Service 1
                         </a>
                       </li>
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link" href="">
+                        <a class="oui-sidebar-link" href="#">
                           Service 2
                         </a>
                       </li>
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link" href="">
+                        <a class="oui-sidebar-link" href="#">
                           Service 3
                         </a>
                       </li>
@@ -77,12 +77,12 @@ storiesOf('Styles/Sidebar', module)
                   </div>
                 </li>
                 <li class="oui-sidebar-list__item">
-                  <a class="oui-sidebar-link" href="">
+                  <a class="oui-sidebar-link" href="#">
                     Product 2
                   </a>
                 </li>
                 <li class="oui-sidebar-list__item">
-                  <a class="oui-sidebar-link" href="">
+                  <a class="oui-sidebar-link" href="#">
                     Product 3
                   </a>
                 </li>
@@ -113,17 +113,17 @@ storiesOf('Styles/Sidebar', module)
                   <div class="oui-sidebar-menu">
                     <ul class="oui-sidebar-list">
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link oui-sidebar-link_active" href="">
+                        <a class="oui-sidebar-link oui-sidebar-link_active" href="#">
                           Service 1
                         </a>
                       </li>
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link" href="">
+                        <a class="oui-sidebar-link" href="#">
                           Service 2
                         </a>
                       </li>
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link" href="">
+                        <a class="oui-sidebar-link" href="#">
                           Service 3
                         </a>
                       </li>
@@ -131,12 +131,12 @@ storiesOf('Styles/Sidebar', module)
                   </div>
                 </li>
                 <li class="oui-sidebar-list__item">
-                  <a class="oui-sidebar-link" href="">
+                  <a class="oui-sidebar-link" href="#">
                     Product 2
                   </a>
                 </li>
                 <li class="oui-sidebar-list__item">
-                  <a class="oui-sidebar-link" href="">
+                  <a class="oui-sidebar-link" href="#">
                     Product 3
                   </a>
                 </li>
@@ -216,17 +216,17 @@ storiesOf('Styles/Sidebar', module)
                     </header>
                     <ul class="oui-sidebar-list">
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link oui-sidebar-link_active" href="">
+                        <a class="oui-sidebar-link oui-sidebar-link_active" href="#">
                           Service 1
                         </a>
                       </li>
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link" href="">
+                        <a class="oui-sidebar-link" href="#">
                           Service 2
                         </a>
                       </li>
                       <li class="oui-sidebar-list__item">
-                        <a class="oui-sidebar-link" href="">
+                        <a class="oui-sidebar-link" href="#">
                           Service 3
                         </a>
                       </li>
@@ -234,12 +234,12 @@ storiesOf('Styles/Sidebar', module)
                   </div>
                 </li>
                 <li class="oui-sidebar-list__item">
-                  <a class="oui-sidebar-link" href="">
+                  <a class="oui-sidebar-link" href="#">
                     Product 2
                   </a>
                 </li>
                 <li class="oui-sidebar-list__item">
-                  <a class="oui-sidebar-link" href="">
+                  <a class="oui-sidebar-link" href="#">
                     Product 3
                   </a>
                 </li>

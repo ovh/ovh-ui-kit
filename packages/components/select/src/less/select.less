@@ -22,58 +22,58 @@
       font-size: @oui-select-icon-size;
     }
   }
+}
 
-  &__input {
-    #oui > .text-ellipsis();
+.oui-select__input {
+  #oui > .text-ellipsis();
 
-    width: 100%;
-    max-width: 100%;
-    height: @oui-select-height;
-    padding: 0;
-    padding-left: @oui-select-padding-x;
-    padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
-    border: @oui-select-border-width solid @oui-select-border-color;
-    border-radius: @oui-select-border-radius;
-    background: @oui-select-background-color;
-    box-shadow: @oui-select-box-shadow;
+  width: 100%;
+  max-width: 100%;
+  height: @oui-select-height;
+  padding: 0;
+  padding-left: @oui-select-padding-x;
+  padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
+  border: @oui-select-border-width solid @oui-select-border-color;
+  border-radius: @oui-select-border-radius;
+  background: @oui-select-background-color;
+  box-shadow: @oui-select-box-shadow;
+  color: @oui-select-font-color;
+  font-size: @oui-select-font-size;
+  font-family: inherit;
+  font-weight: @oui-select-font-weight;
+  cursor: pointer;
+  appearance: none;
+
+  ~ .oui-icon {
     color: @oui-select-font-color;
-    font-size: @oui-select-font-size;
-    font-family: inherit;
-    font-weight: @oui-select-font-weight;
-    cursor: pointer;
-    appearance: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &:focus {
+    #oui > .animate();
+
+    border-color: @oui-select-border-color_focus;
+    outline: none;
+    box-shadow: @oui-select-box-shadow_focus;
+    background: @oui-select-background-color_focus;
 
     ~ .oui-icon {
-      color: @oui-select-font-color;
+      color: @oui-select-border-color_focus;
     }
+  }
 
-    &::-ms-expand {
-      display: none;
-    }
+  &:disabled {
+    border-color: @oui-select-border-color_disabled;
+    background-color: @oui-select-background-color_disabled;
+    color: @oui-select-font-color_disabled;
+    text-shadow: none;
+    cursor: auto;
 
-    &:focus {
-      #oui > .animate();
-
-      border-color: @oui-select-border-color_focus;
-      outline: none;
-      box-shadow: @oui-select-box-shadow_focus;
-      background: @oui-select-background-color_focus;
-
-      ~ .oui-icon {
-        color: @oui-select-border-color_focus;
-      }
-    }
-
-    &:disabled {
-      border-color: @oui-select-border-color_disabled;
-      background-color: @oui-select-background-color_disabled;
+    ~ .oui-icon {
       color: @oui-select-font-color_disabled;
-      text-shadow: none;
-      cursor: auto;
-
-      ~ .oui-icon {
-        color: @oui-select-font-color_disabled;
-      }
     }
   }
 }
