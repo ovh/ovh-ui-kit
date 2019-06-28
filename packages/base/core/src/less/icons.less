@@ -15,14 +15,20 @@
   &_circle {
     width: @oui-icon-circle-size;
     height: @oui-icon-circle-size;
+    overflow: hidden;
+    position: relative;
     border-radius: @oui-icon-circle-border-radius;
+    color: @oui-icon-circle-color;
     background: @oui-icon-circle-background;
+    vertical-align: @oui-icon-circle-vertical-align;
 
     &::before {
-      color: @oui-icon-circle-color;
-      font-size: ~"calc(@{oui-icon-circle-size} / 2)";
-      line-height: 2;
-      text-align: center;
+      color: inherit;
+      font-size: @oui-icon-circle-size;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
 
     // For better centering the icon

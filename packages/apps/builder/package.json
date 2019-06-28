@@ -70,6 +70,7 @@
     "@ovh-ux/ui-kit.switch": "*",
     "@ovh-ux/ui-kit.tabs": "*",
     "@ovh-ux/ui-kit.textarea": "*",
+    "@ovh-ux/ui-kit.themes": "*",
     "@ovh-ux/ui-kit.tile": "*",
     "@ovh-ux/ui-kit.timepicker": "*",
     "@ovh-ux/ui-kit.tooltip": "*"

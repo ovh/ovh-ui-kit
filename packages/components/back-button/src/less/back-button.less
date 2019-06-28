@@ -1,12 +1,32 @@
 .oui-back-button {
   margin-bottom: @oui-back-button-margin-bottom;
 
-  .oui-button_icon-alone {
-    top: @oui-back-button-icon-spacing;
+  &__arrow {
+    #oui > .link();
+
+    width: @oui-back-button-arrow-size;
+    height: @oui-back-button-arrow-size;
+    padding: @oui-back-button-arrow-padding;
+    box-sizing: content-box;
+    line-height: @oui-back-button-arrow-size;
+    margin-right: @oui-back-button-arrow-spacing;
+    vertical-align: @oui-back-button-arrow-valign;
+
+    .oui-icon {
+      font-size: @oui-back-button-arrow-size;
+      color: inherit;
+    }
+
+    &:focus {
+      #oui > .outline-border();
+    }
   }
 
-  .oui-back-button_title {
+  &__title {
+    &:extend(.oui-heading_2);
+
     display: inline;
+    vertical-align: @oui-back-button-valign;
   }
 }
 

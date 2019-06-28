@@ -41,10 +41,10 @@ storiesOf('Components/Tile', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-tile heading="Title" description="Lorem dolor sit amet" loading="$ctrl.loading">
       <oui-tile-button on-click="$ctrl.onClick()">Button 1</oui-tile-button>
-      <oui-tile-button href="">Button 2</oui-tile-button>
-      <oui-tile-button aria-label="access to .." href="" external>Button 3</oui-tile-button>
+      <oui-tile-button href="#">Button 2</oui-tile-button>
+      <oui-tile-button aria-label="access to .." href="#" external>Button 3</oui-tile-button>
       <oui-tile-button disabled>Button 4 (disabled)</oui-tile-button>
-      <oui-tile-button href="" disabled>Button 5 (disabled)</oui-tile-button>
+      <oui-tile-button href="#" disabled>Button 5 (disabled)</oui-tile-button>
     </oui-tile>
     `, {
       $ctrl: {

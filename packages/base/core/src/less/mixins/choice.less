@@ -1,5 +1,3 @@
-@import '../_variables';
-
 // Choice (for Checkbox / Radio / Select Picker)
 #oui {
   .choice-base(
@@ -65,7 +63,7 @@
 
     .@{selector}__input:checked ~ .@{selector}__label-container {
       box-shadow: @oui-choice-thumbnail-box-shadow-checked;
-      padding: ~"calc(@{oui-choice-thumbnail-padding} - (@{oui-choice-thumbnail-border-size-checked} - @{oui-choice-thumbnail-border-size}))";
+      padding: ~"calc(@{oui-choice-thumbnail-padding} - (@{oui-choice-thumbnail-border-width-checked} - @{oui-choice-thumbnail-border-width}))";
     }
 
     .@{selector}__input:disabled {
@@ -80,7 +78,7 @@
         #oui > .choice-thumbnail-color(
           @oui-choice-thumbnail-border-color-checked_disabled,
           @oui-choice-thumbnail-background-checked_disabled,
-          @oui-choice-thumbnail-border-size-checked
+          @oui-choice-thumbnail-border-width-checked
         );
       }
     }
@@ -101,14 +99,14 @@
         #oui > .choice-thumbnail-color(
           @oui-choice-thumbnail-border-color-checked,
           @oui-choice-thumbnail-background-checked,
-          @oui-choice-thumbnail-border-size-checked
+          @oui-choice-thumbnail-border-width-checked
         );
 
         &:hover {
           #oui > .choice-thumbnail-color(
             @oui-choice-thumbnail-border-color-checked_hover,
             @oui-choice-thumbnail-background-checked_hover,
-            @oui-choice-thumbnail-border-size-checked
+            @oui-choice-thumbnail-border-width-checked
           );
         }
       }
@@ -135,7 +133,7 @@
         #oui > .choice-thumbnail-color(
           @oui-choice-thumbnail-border-color-light-checked_disabled,
           @oui-choice-thumbnail-background-light-checked_disabled,
-          @oui-choice-thumbnail-border-size-checked
+          @oui-choice-thumbnail-border-width-checked
         );
       }
     }
@@ -177,11 +175,11 @@
   .choice-thumbnail-base(
     @border-color: @oui-choice-thumbnail-border-color,
     @background: @oui-choice-thumbnail-background,
-    @border-size: @oui-choice-thumbnail-border-size,
+    @border-width: @oui-choice-thumbnail-border-width,
     @padding: @oui-choice-thumbnail-padding
   ) {
     padding: @padding;
-    border: @border-size solid @border-color;
+    border: @border-width solid @border-color;
     border-radius: @oui-global-base-radius-medium;
     background: @background;
     cursor: pointer;
@@ -190,9 +188,9 @@
   .choice-thumbnail-color(
     @border-hover-color: @oui-choice-thumbnail-border-hover-color,
     @background: @oui-choice-thumbnail-background,
-    @border-size: @oui-choice-thumbnail-border-size
+    @border-width: @oui-choice-thumbnail-border-width
   ) {
-    border: @border-size solid @border-hover-color;
+    border: @border-width solid @border-hover-color;
     background: @background;
   }
 }

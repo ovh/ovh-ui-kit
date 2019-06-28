@@ -65,6 +65,7 @@
 @oui-icon-circle-background: @oui-color-black;
 @oui-icon-circle-color: @oui-color-white;
 @oui-icon-circle-size: 1em;
+@oui-icon-circle-vertical-align: sub;
 
 // Abbreviations
 @oui-abbr-border-color: @oui-color-pacific;
@@ -73,6 +74,7 @@
 // Heading
 @oui-heading-border-width: 2px;
 @oui-heading-border-color: @oui-color-ironlight;
+@oui-heading-border-spacing: 0;
 
 @oui-heading-colors:
   inherit,
@@ -132,6 +134,8 @@
 // Link
 @oui-link-font-color: @oui-color-pacific;
 @oui-link-font-color_hover: @oui-color-sapphire;
+@oui-link-font-color_disabled: @oui-color-dusty;
+@oui-link-font-weight: @oui-font-regular;
 @oui-link-text-decoration: none;
 @oui-link-text-decoration_hover: underline;
 @oui-link-icon-icon-size: rem-calc(10);
@@ -146,6 +150,8 @@
 @oui-horizontal-line-thin-width: 1px;
 
 // Paragraph
+@oui-paragraph-line-height: @oui-global-base-line-height;
+@oui-paragraph-font-color: inherit;
 @oui-paragraph-margin: 0 0 rem-calc(15);
 
 // Fonts
@@ -203,8 +209,8 @@
 
 // Choice - Thumbnail
 @oui-choice-thumbnail-padding: rem-calc(20);
-@oui-choice-thumbnail-border-size: 1px;
-@oui-choice-thumbnail-border-size-checked: 2px;
+@oui-choice-thumbnail-border-width: 1px;
+@oui-choice-thumbnail-border-width-checked: 2px;
 @oui-choice-thumbnail-border-radius: rem-calc(4);
 @oui-choice-thumbnail-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
 @oui-choice-thumbnail-box-shadow_error: 0 0 3px 0 @oui-color-error-light;
@@ -258,7 +264,7 @@
 @oui-action-button-border-color_disabled: @oui-color-concrete;
 
 @oui-action-button-border-radius: 50%;
-@oui-action-button-border-size: 1px;
+@oui-action-button-border-width: 1px;
 
 @oui-action-button-box-shadow_focus: 0 0 3px 1px fade(@oui-color-pacific, 60%);
 @oui-action-button-box-shadow_active: inset 1px 1px 4px 0 fade(@oui-color-black, 33%);
@@ -279,12 +285,17 @@
 
 // Back Button
 @oui-back-button-margin-bottom: rem-calc(30);
-@oui-back-button-icon-spacing: rem-calc(7);
+@oui-back-button-valign: middle;
+
+@oui-back-button-arrow-padding: rem-calc(5);
+@oui-back-button-arrow-spacing: rem-calc(10);
+@oui-back-button-arrow-size: rem-calc(20);
+@oui-back-button-arrow-valign: middle;
 
 // Box
 @oui-box-background-color: @oui-color-concrete;
 @oui-box-border-color: @oui-color-ironlight;
-@oui-box-border-size: 2px;
+@oui-box-border-width: 2px;
 @oui-box-border-radius: @oui-global-base-radius-medium;
 @oui-box-padding: rem-calc(20);
 @oui-box-spacing: rem-calc(15);
@@ -293,82 +304,126 @@
 @oui-box-light-border-color: @oui-color-ironlight;
 
 // Button
+@oui-button-min-width: rem-calc(100);
+@oui-button-max-width: 100%;
+@oui-button-padding-x: rem-calc(20);
+@oui-button-padding-y: rem-calc(8);
+@oui-button-padding: calc(@oui-button-padding-y - @oui-button-border-width) calc(@oui-button-padding-x - @oui-button-border-width);
+@oui-button-margin: 0;
+@oui-button-letter-spacing: 0.007em;
 @oui-button-font-color: @oui-color-sapphire;
 @oui-button-font-size: rem-calc(16);
 @oui-button-font-weight: @oui-font-semibold;
 @oui-button-radius: @oui-global-base-radius;
-@oui-button-min-width: rem-calc(100);
-@oui-button-max-width: 100%;
-@oui-button-padding-base: rem-calc(10);
-@oui-button-padding: @oui-button-padding-base rem-calc(20);
-@oui-button-margin: 0;
-@oui-button-letter-spacing: 0.007em;
+@oui-button-border-width: 0;
 
-@oui-button-filled-background-color: @oui-color-turquoise;
-@oui-button-filled-background-color_hover: darken(@oui-color-turquoise, 10%);
-@oui-button-filled-background-color_disabled: @oui-color-ironlight;
-@oui-button-filled-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
-@oui-button-filled-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
-@oui-button-filled-font-color_disabled: @oui-color-dusty;
-@oui-button-filled-padding-base: rem-calc(8);
-@oui-button-filled-padding: @oui-button-filled-padding-base rem-calc(20);
+// Button - Icons
+@oui-button-icon-size: rem-calc(10);
+@oui-button-icon-size_large: rem-calc(20);
+@oui-button-icon-color: @oui-button-font-color;
+@oui-button-icon-color_disabled: @oui-color-silver;
+@oui-button-icon-offset: rem-calc(10);
+@oui-button-icon-spacing: rem-calc(20);
 
-@oui-button-hollow-background-color: @oui-color-white;
-@oui-button-hollow-background-color_hover: @oui-color-concrete;
-@oui-button-hollow-border-color: @oui-color-silver;
-@oui-button-hollow-border-color_hover: @oui-color-dusty;
-@oui-button-hollow-border-color_disabled: @oui-color-concrete;
-@oui-button-hollow-border-size: 1px;
-@oui-button-hollow-background-color_disabled: @oui-color-concrete;
-@oui-button-hollow-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
-@oui-button-hollow-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
-@oui-button-hollow-font-color_disabled: @oui-color-silver;
-@oui-button-hollow-padding-base: rem-calc(7);
-@oui-button-hollow-padding: @oui-button-hollow-padding-base rem-calc(20);
+// Button - Primary variant
+@oui-button-primary-padding: calc(@oui-button-padding-y - @oui-button-primary-border-width) calc(@oui-button-padding-x - @oui-button-primary-border-width);
+@oui-button-primary-border-width: 0;
+@oui-button-primary-background-color: @oui-color-turquoise;
+@oui-button-primary-background-color_hover: darken(@oui-button-primary-background-color, 10%);
+@oui-button-primary-background-color_active: darken(@oui-button-primary-background-color, 10%);
+@oui-button-primary-background-color_disabled: @oui-color-ironlight;
+@oui-button-primary-border-color: @oui-button-primary-background-color;
+@oui-button-primary-border-color_hover: @oui-button-primary-background-color_hover;
+@oui-button-primary-border-color_active: @oui-button-primary-background-color_active;
+@oui-button-primary-border-color_disabled: @oui-button-primary-background-color_disabled;
+@oui-button-primary-box-shadow: none;
+@oui-button-primary-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
+@oui-button-primary-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
+@oui-button-primary-box-shadow_disabled: none;
+@oui-button-primary-font-color: @oui-button-font-color;
+@oui-button-primary-font-color_disabled: @oui-color-dusty;
+@oui-button-primary-icon-color: @oui-button-primary-font-color;
+@oui-button-primary-icon-color_disabled: @oui-button-primary-font-color_disabled;
+@oui-button-primary-icon-circle-color: @oui-color-white;
+@oui-button-primary-icon-circle-color_disabled: @oui-color-white;
 
-@oui-button-dropdown-color: @oui-color-dusty;
-@oui-button-dropdown-icon-size: rem-calc(10);
-@oui-button-dropdown-background-color_active: @oui-color-concrete;
-@oui-button-dropdown-border-color_active: @oui-color-dusty;
-@oui-button-dropdown-spacing: rem-calc(12);
-@oui-button-dropdown-padding-right: rem-calc(30) + @oui-button-dropdown-spacing;
-@oui-button-dropdown-padding-left: @oui-button-dropdown-spacing;
-@oui-button-dropdown-margin-right: @oui-button-dropdown-spacing * 1.5;
+// Button - Secondary variant
+@oui-button-secondary-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-width) calc(@oui-button-padding-x - @oui-button-secondary-border-width);
+@oui-button-secondary-border-width: 1px;
+@oui-button-secondary-background-color: @oui-color-white;
+@oui-button-secondary-background-color_hover: @oui-color-concrete;
+@oui-button-secondary-background-color_active: @oui-color-concrete;
+@oui-button-secondary-background-color_disabled: @oui-color-concrete;
+@oui-button-secondary-border-color: @oui-color-silver;
+@oui-button-secondary-border-color_hover: @oui-color-dusty;
+@oui-button-secondary-border-color_active: @oui-color-dusty;
+@oui-button-secondary-border-color_disabled: @oui-color-concrete;
+@oui-button-secondary-box-shadow: none;
+@oui-button-secondary-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+@oui-button-secondary-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
+@oui-button-secondary-box-shadow_disabled: none;
+@oui-button-secondary-font-color: @oui-button-font-color;
+@oui-button-secondary-font-color_disabled: @oui-color-silver;
+@oui-button-secondary-icon-color: @oui-button-secondary-font-color;
+@oui-button-secondary-icon-color_disabled: @oui-button-secondary-font-color_disabled;
+@oui-button-secondary-icon-circle-color: @oui-color-white;
+@oui-button-secondary-icon-circle-color_disabled: @oui-color-white;
 
-@oui-button-icon-icon-size: rem-calc(10);
-@oui-button-icon-icon-size_large: rem-calc(20);
-@oui-button-icon-icon-color: @oui-color-sapphire;
-@oui-button-icon-icon-color_disabled: @oui-color-silver;
-@oui-button-icon-padding-right: rem-calc(10);
-@oui-button-icon-padding-left: rem-calc(10);
-
-@oui-button-icon-alone-background: transparent;
-@oui-button-icon-alone-font-color: @oui-link-font-color;
-@oui-button-icon-alone-min-width: rem-calc(20);
-@oui-button-icon-alone-padding-left: rem-calc(5);
-@oui-button-icon-alone-padding-right: 0;
-@oui-button-icon-alone-margin-right: rem-calc(15);
-@oui-button-icon-alone-icon-font-size: rem-calc(20);
-@oui-button-icon-alone-font-color_hover: @oui-link-font-color_hover;
-
-@oui-button-icon-right-icon-margin-left: rem-calc(20);
-@oui-button-icon-right-icon-margin-right: rem-calc(20);
-
-@oui-button-link-icon-color: @oui-color-sapphire;
-@oui-button-link-font-color: @oui-color-pacific;
-@oui-button-link-font-color_hover: @oui-color-sapphire;
-@oui-button-link-font-color_disabled: @oui-color-dusty;
-@oui-button-link-font-weight: @oui-font-regular;
+// Button - Link variant
+@oui-button-link-font-color: @oui-link-font-color;
+@oui-button-link-font-color_hover: @oui-link-font-color_hover;
+@oui-button-link-font-color_disabled: @oui-link-font-color_disabled;
+@oui-button-link-font-weight: @oui-link-font-weight;
+@oui-button-link-icon-color: @oui-button-font-color;
+@oui-button-link-icon-color_disabled: @oui-button-link-font-color_disabled;
+@oui-button-link-text-decoration: underline;
+@oui-button-link-text-decoration_hover: underline;
 @oui-button-link-padding: rem-calc(8) rem-calc(20);
 
+// Button - Dropdown variant
+@oui-button-dropdown-icon-size: rem-calc(10);
+@oui-button-dropdown-padding-x: rem-calc(12);
+@oui-button-dropdown-padding: calc(@oui-button-padding-y - @oui-button-dropdown-border-width) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-width);
+@oui-button-dropdown-padding-right: rem-calc(30) + @oui-button-dropdown-padding-x;
+@oui-button-dropdown-margin-right: @oui-button-dropdown-padding-x * 1.5;
+
+@oui-button-dropdown-border-width: @oui-button-secondary-border-width;
+@oui-button-dropdown-background-color: @oui-button-secondary-background-color;
+@oui-button-dropdown-background-color_hover: @oui-button-secondary-background-color_hover;
+@oui-button-dropdown-background-color_active: @oui-button-secondary-background-color_active;
+@oui-button-dropdown-background-color_disabled: @oui-button-secondary-background-color_disabled;
+@oui-button-dropdown-border-color: @oui-button-secondary-border-color;
+@oui-button-dropdown-border-color_hover: @oui-button-secondary-border-color_hover;
+@oui-button-dropdown-border-color_active: @oui-button-secondary-border-color_active;
+@oui-button-dropdown-border-color_disabled: @oui-button-secondary-border-color_disabled;
+@oui-button-dropdown-box-shadow: @oui-button-secondary-box-shadow;
+@oui-button-dropdown-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
+@oui-button-dropdown-box-shadow_active: @oui-button-secondary-box-shadow_active;
+@oui-button-dropdown-box-shadow_disabled: @oui-button-secondary-box-shadow_disabled;
+@oui-button-dropdown-font-color: @oui-button-secondary-font-color;
+@oui-button-dropdown-font-color_disabled: @oui-button-secondary-font-color_disabled;
+@oui-button-dropdown-icon-color: @oui-button-secondary-icon-color;
+@oui-button-dropdown-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
+@oui-button-dropdown-icon-circle-color: @oui-button-secondary-icon-circle-color;
+@oui-button-dropdown-icon-circle-color_disabled: @oui-button-secondary-icon-circle-color_disabled;
+
+// Button - Size variants
 @oui-button-small-width-min-width: rem-calc(40);
-@oui-button-small-width-padding-left-right: rem-calc(5);
+@oui-button-small-width-padding-x: rem-calc(5);
 
 @oui-button-large-height-min-height: rem-calc(45);
 
+// Button - Error status
 @oui-button-error-background-color: @oui-color-error-fade;
 @oui-button-error-border-color: @oui-color-error-light;
 @oui-button-error-text-color: @oui-color-error-dark;
+
+// Button Group
+@oui-button-group-margin: 0;
+@oui-button-group-outer-radius: @oui-button-radius;
+@oui-button-group-inner-radius: 0;
+@oui-button-group-primary-spacing: -@oui-button-primary-border-width;
+@oui-button-group-secondary-spacing: -@oui-button-secondary-border-width;
 
 // Calendar
 @oui-calendar-font-color: @oui-color-sapphire;
@@ -405,9 +460,9 @@
 @oui-calendar-input-background-color: @oui-input-background-color;
 @oui-calendar-input-background-color_hover: @oui-color-charlotte;
 
-@oui-calendar-button-font-color: @oui-button-font-color;
-@oui-calendar-button-background-color: @oui-button-filled-background-color;
-@oui-calendar-button-background-color_hover: @oui-button-filled-background-color_hover;
+@oui-calendar-button-font-color: @oui-button-primary-font-color;
+@oui-calendar-button-background-color: @oui-button-primary-background-color;
+@oui-calendar-button-background-color_hover: @oui-button-primary-background-color_hover;
 
 @oui-calendar-body-padding: rem-calc(20) rem-calc(25);
 
@@ -489,7 +544,7 @@
 @oui-chip-container-item-spacing: rem-calc(5) rem-calc(2);
 @oui-chip-container-background-color: @oui-color-white;
 @oui-chip-container-border-color: @oui-color-nurse;
-@oui-chip-container-border-size: 1px;
+@oui-chip-container-border-width: 1px;
 
 // Clipboard
 @oui-clipboard-font-color: @oui-input-font-color;
@@ -498,7 +553,7 @@
 @oui-clipboard-border-color: @oui-input-border-color;
 @oui-clipboard-border-color_hover: @oui-input-border-color_hover;
 @oui-clipboard-border-color_focus: @oui-input-border-color_focus;
-@oui-clipboard-border-radius: @oui-global-base-radius;
+@oui-clipboard-border-radius: @oui-input-border-radius;
 @oui-clipboard-background-color: @oui-input-background-color;
 @oui-clipboard-background-color_focus: @oui-input-background-color_focus;
 
@@ -584,6 +639,9 @@
 @oui-datagrid-parameters-button-padding: rem-calc(6) 0;
 @oui-datagrid-parameters-button-font-color: @oui-color-sapphire;
 @oui-datagrid-parameters-button-font-color_hover: @oui-color-sapphire;
+@oui-datagrid-parameters-button-icon-size: rem-calc(20);
+@oui-datagrid-parameters-button-border: none;
+@oui-datagrid-parameters-button-background-color: transparent;
 
 @oui-datagrid-parameters-header-line-height: rem-calc(40);
 @oui-datagrid-parameters-header-font-color: @oui-color-dusty;
@@ -602,7 +660,7 @@
 @oui-dropdown-menu-box-shadow: 0 4px 6px 0 @oui-color-info-fade;
 @oui-dropdown-menu-min-width: rem-calc(140);
 @oui-dropdown-menu-max-width: rem-calc(300);
-@oui-dropdown-menu-zindex: 100;
+@oui-dropdown-menu-z-index: 100;
 
 @oui-dropdown-arrow-size: rem-calc(10);
 @oui-dropdown-arrow-center-position: rem-calc(17);
@@ -717,6 +775,9 @@
 @oui-file-button-padding: @oui-input-group-button-padding;
 @oui-file-button-background-color: @oui-input-group-button-background-color;
 @oui-file-button-border-color_disabled: @oui-input-group-button-border-color_disabled;
+@oui-file-button-border-width: @oui-button-secondary-border-width;
+@oui-file-button-border-radius: 0 @oui-input-group-border-radius @oui-input-group-border-radius 0;
+@oui-file-button-spacing: @oui-input-group-spacing;
 
 @oui-file-icon-width: rem-calc(40);
 @oui-file-icon-color: @oui-color-sapphire;
@@ -777,21 +838,28 @@
 
 @oui-header-guide-spacing: rem-calc(20);
 
+@oui-header-title-line-height: @oui-global-base-line-height;
 @oui-header-title-font-color: @oui-color-sapphire;
 @oui-header-title-font-size: rem-calc(36);
 @oui-header-title-font-weight: @oui-font-regular;
 
 @oui-header-description-spacing: rem-calc(5);
+@oui-header-description-line-height: normal;
 @oui-header-description-font-color: @oui-color-dusty;
 @oui-header-description-font-size: rem-calc(16);
 @oui-header-description-font-weight: @oui-font-regular;
 
 // Header Tabs
+@oui-header-tabs-margin: 0 @oui-header-tabs-slider-nav-width;
+@oui-header-tabs-border-bottom: none;
+
 @oui-header-tabs-item-padding: rem-calc(10) rem-calc(30);
 @oui-header-tabs-item-font-color: @oui-color-sapphire;
 @oui-header-tabs-item-font-color_disabled: @oui-color-dusty;
 @oui-header-tabs-item-font-size: rem-calc(16);
-@oui-header-tabs-item-border-size: rem-calc(4);
+@oui-header-tabs-item-font-weight: @oui-font-regular;
+@oui-header-tabs-item-border-width: rem-calc(4);
+@oui-header-tabs-item-border-color:  @oui-color-sapphire;
 
 @oui-header-tabs-icon-spacing: rem-calc(10);
 @oui-header-tabs-icon-font-size: rem-calc(12);
@@ -823,7 +891,7 @@
 @oui-inline-adder-footer-padding: rem-calc(10);
 
 @oui-inline-adder-action-size: rem-calc(40);
-@oui-inline-adder-action-padding-x: @oui-button-small-width-padding-left-right;
+@oui-inline-adder-action-padding-x: @oui-button-small-width-padding-x;
 @oui-inline-adder-action-icon-size: rem-calc(16);
 
 // Input
@@ -838,7 +906,7 @@
 @oui-input-font-color_error: @oui-color-error-dark;
 @oui-input-font-size: rem-calc(16);
 @oui-input-font-weight: @oui-font-semibold;
-@oui-input-font-weight_error: @oui-font-regular;
+@oui-input-font-weight_error: @oui-font-semibold;
 @oui-input-border-color: @oui-color-silver;
 @oui-input-border-color_hover: @oui-color-dusty;
 @oui-input-border-color_focus: @oui-color-pacific;
@@ -846,17 +914,17 @@
 @oui-input-border-color_readonly: @oui-color-nurse;
 @oui-input-border-color_error: @oui-color-error-medium;
 @oui-input-border-radius: @oui-global-base-radius;
-@oui-input-border-size: 1px;
+@oui-input-border-width: 1px;
 @oui-input-box-shadow: inset 2px 2px 1px 0 rgba(18, 40, 68, 0.07);
 @oui-input-box-shadow_focus: inset 2px 2px 1px 0 fade(@oui-color-turquoise, 35%), 0 0 3px 0 @oui-color-info-light;
 @oui-input-box-shadow_error: inset 1px 1px 1px 0 @oui-color-error-light;
-@oui-input-box-shadow_error: inset 1px 1px 1px 0 @oui-color-error-light;
+@oui-input-box-shadow_error-focus: 0 0 3px 0 rgba(0, 0, 0, 0.35);
 @oui-input-background-color: @oui-color-white;
+@oui-input-background-color_hover: @oui-input-background-color;
 @oui-input-background-color_focus: @oui-color-polar;
 @oui-input-background-color_disabled: @oui-color-concrete;
 @oui-input-background-color_readonly: @oui-color-concrete;
 @oui-input-background-color_error: @oui-color-error-fade;
-@oui-input-background-color_error-focus: 0 0 3px 0 rgba(0, 0, 0, 0.35);
 
 @oui-input-placeholder-font-color: @oui-color-silver;
 
@@ -868,10 +936,11 @@
 // Input Group
 @oui-input-group-margin: 0;
 @oui-input-group-border-radius: @oui-input-border-radius;
-@oui-input-group-border-size: @oui-input-border-size;
+@oui-input-group-border-width: @oui-input-border-width;
+@oui-input-group-spacing: -@oui-input-group-border-width;
 
 @oui-input-group-button-min-width: rem-calc(50);
-@oui-input-group-button-padding: rem-calc(7);
+@oui-input-group-button-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-width);
 @oui-input-group-button-background-color: @oui-input-background-color;
 @oui-input-group-button-border-color_disabled: @oui-input-border-color_disabled;
 @oui-input-group-button-font-color: @oui-color-silver;
@@ -934,7 +1003,7 @@
 @oui-message-padding: rem-calc(16) rem-calc(16) rem-calc(16) rem-calc(58);
 @oui-message-border-color: @oui-color-zodiac;
 @oui-message-border-width: 2px;
-@oui-message-border-radius: 6px;
+@oui-message-border-radius: @oui-global-base-radius-medium;
 @oui-message-background-color: @oui-color-white;
 @oui-message-font-color: @oui-color-zodiac;
 @oui-message-font-size: rem-calc(16);
@@ -1044,6 +1113,7 @@
 @oui-navbar-font-color: @oui-color-white;
 @oui-navbar-background-color: @oui-color-zodiac;
 @oui-navbar-background-color_active: @oui-color-rhino;
+@oui-navbar-box-shadow: none;
 @oui-navbar-z-index: 1030;
 
 // Navbar - Brand
@@ -1072,10 +1142,12 @@
 @oui-navbar-notification-title-font-weight: @oui-font-semibold;
 
 @oui-navbar-notification-description-line-height: rem-calc(20);
-@oui-navbar-notification-description-max-height: rem-calc(80);
+@oui-navbar-notification-description-max-height: calc(@oui-navbar-notification-description-line-height * 4);
 @oui-navbar-notification-description-font-size: rem-calc(14);
+@oui-navbar-notification-description-font-weight: @oui-font-regular;
 
 @oui-navbar-notification-time-padding: 0 0 0 rem-calc(5);
+@oui-navbar-notification-time-font-weight: @oui-font-light;
 
 @oui-navbar-notification-icon-color_info: @oui-color-info-medium;
 @oui-navbar-notification-icon-color_success: @oui-color-success-medium;
@@ -1095,6 +1167,7 @@
 
 @oui-navbar-backdrop-background-color: @oui-color-shuttle;
 @oui-navbar-backdrop-opacity: 0.5;
+@oui-navbar-backdrop-z-index: -1;
 
 // Navbar Menu
 @oui-navbar-menu-width: rem-calc(300);
@@ -1122,7 +1195,12 @@
 @oui-navbar-menu-title-font-size: rem-calc(20);
 @oui-navbar-menu-title-font-weight: 600;
 
-@oui-navbar-menu-back-padding: rem-calc(30);
+@oui-navbar-menu-back-spacing: rem-calc(10);
+@oui-navbar-menu-back-padding: 0 rem-calc(5);
+@oui-navbar-menu-back-border-color: transparent;
+@oui-navbar-menu-back-border-radius: 0;
+@oui-navbar-menu-back-border-width: 0;
+@oui-navbar-menu-back-background-color: none;
 
 @oui-navbar-menu-item-padding: rem-calc(10) rem-calc(20);
 @oui-navbar-menu-item-border-bottom: solid 1px @oui-color-silver;
@@ -1141,11 +1219,14 @@
 @oui-navbar-link-font-color: @oui-color-white;
 @oui-navbar-link-font-size: rem-calc(16);
 @oui-navbar-link-font-weight: 400;
+@oui-navbar-link-text-decoration: none;
+@oui-navbar-link-text-decoration_hover: none;
+@oui-navbar-link-text-decoration_active: none;
 @oui-navbar-link-background-color: transparent;
 @oui-navbar-link-background-color_active: @oui-color-foam;
 
 @oui-navbar-arrow-color: @oui-color-zodiac;
-@oui-navbar-arrow-padding: (@oui-navbar-menu-back-padding + @oui-navbar-arrow-spacing);
+@oui-navbar-arrow-padding: calc(rem-calc(30) + @oui-navbar-arrow-spacing);
 @oui-navbar-arrow-size: rem-calc(10);
 @oui-navbar-arrow-spacing: rem-calc(20);
 
@@ -1196,11 +1277,10 @@
 @oui-pagination-selector-spacing: rem-calc(20);
 @oui-pagination-selector-spacing_responsive: rem-calc(10);
 
-@oui-pagination-button-padding: @oui-button-hollow-padding-base;
 @oui-pagination-button-spacing: rem-calc(10);
 
-@oui-pagination-button-selected-background: @oui-color-sapphire;
-@oui-pagination-button-selected-color: @oui-color-white;
+@oui-pagination-button-selected-background: @oui-button-primary-background-color;
+@oui-pagination-button-selected-color: @oui-button-primary-font-color;
 
 @oui-pagination-menu-padding: 0;
 
@@ -1249,13 +1329,13 @@
 @oui-popover-close-button-icon-color: @oui-color-info-dark;
 
 // Popover - Help button
-@oui-popover-button-size: rem-calc(20);
+@oui-popover-button-line-height: 1;
 @oui-popover-button-spacing: rem-calc(10);
 @oui-popover-button-content: @oui-icon-index-help_circle;
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
-@oui-popover-button-font-size: rem-calc(20);
-@oui-popover-button-box-shadow_focus: @oui-button-hollow-box-shadow_focus;
+@oui-popover-button-font-size: rem-calc(16);
+@oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 
 // Progress
 @oui-progress-height: rem-calc(12px);
@@ -1381,7 +1461,7 @@
 // Search
 @oui-search-margin: 0;
 @oui-search-padding-right: rem-calc(62);
-@oui-search-border-radius: @oui-global-base-radius;
+@oui-search-border-radius: @oui-input-border-radius;
 
 @oui-search-input-font-color_disabled: @oui-color-shuttle;
 
@@ -1396,47 +1476,52 @@
 @oui-search-submit-icon-size: rem-calc(20);
 
 // Select
-@oui-select-height: rem-calc(40);
-@oui-select-margin: 0;
+@oui-select-height: @oui-input-height;
+@oui-select-margin: @oui-input-margin;
 @oui-select-padding-x: rem-calc(12);
-@oui-select-font-color: @oui-color-zodiac;
-@oui-select-font-color_disabled: @oui-color-silver;
-@oui-select-font-color_error: @oui-color-error-dark;
-@oui-select-font-size: rem-calc(16);
-@oui-select-font-weight: 600;
-@oui-select-box-shadow: 1px 1px 0 0 rgba(18, 40, 68, 0.07);
-@oui-select-box-shadow_focus: inset 1px 1px 2px 0 rgba(102, 199, 214, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.35);
-@oui-select-border-color: @oui-color-silver;
-@oui-select-border-color_focus: @oui-color-pacific;
-@oui-select-border-color_disabled: @oui-color-concrete;
-@oui-select-border-color_error: @oui-color-error-light;
-@oui-select-border-width: 1px;
-@oui-select-border-radius: @oui-global-base-radius;
-@oui-select-background-color: @oui-color-white;
-@oui-select-background-color_focus: @oui-color-polar;
-@oui-select-background-color_disabled: @oui-color-concrete;
-@oui-select-background-color_error: @oui-color-error-fade;
+@oui-select-letter-spacing: @oui-global-base-letter-spacing;
+@oui-select-font-color: @oui-input-font-color;
+@oui-select-font-color_disabled: @oui-input-font-color_disabled;
+@oui-select-font-color_error: @oui-input-font-color_error;
+@oui-select-font-size: @oui-input-font-size;
+@oui-select-font-weight: @oui-input-font-weight;
+@oui-select-font-weight_error: @oui-input-font-weight_error;
+@oui-select-border-color: @oui-input-border-color;
+@oui-select-border-color_hover: @oui-input-border-color_hover;
+@oui-select-border-color_focus: @oui-input-border-color_focus;
+@oui-select-border-color_disabled: @oui-input-border-color_disabled;
+@oui-select-border-color_error: @oui-input-border-color_error;
+@oui-select-border-radius: @oui-input-border-radius;
+@oui-select-border-width: @oui-input-border-width;
+@oui-select-box-shadow: none;
+@oui-select-box-shadow_focus: @oui-input-box-shadow_focus;
+@oui-select-box-shadow_error: none;
+@oui-select-box-shadow_error-focus: none;
+@oui-select-background-color: @oui-input-background-color;
+@oui-select-background-color_hover: @oui-input-background-color_hover;
+@oui-select-background-color_focus: @oui-input-background-color_focus;
+@oui-select-background-color_disabled: @oui-input-background-color_disabled;
+@oui-select-background-color_error: @oui-input-background-color_error;
 
 @oui-select-icon-size: rem-calc(10);
 @oui-select-icon-spacing: rem-calc(18);
 @oui-select-icon-position-right: rem-calc(12);
 
 // Select - Ui-Select
-@oui-ui-select-margin: 0;
+@oui-ui-select-margin: @oui-select-margin;
 
-@oui-ui-select-button-height: rem-calc(40);
+@oui-ui-select-button-height: @oui-select-height;
 @oui-ui-select-button-line-height: rem-calc(36);
-@oui-ui-select-button-letter-spacing: @oui-global-base-letter-spacing;
-@oui-ui-select-button-font-color_disabled: @oui-button-hollow-font-color_disabled;
-@oui-ui-select-button-font-color_error: @oui-button-error-text-color;
-@oui-ui-select-button-font-weight: @oui-font-semibold;
-@oui-ui-select-button-border-width: 1px;
-@oui-ui-select-button-border-color_focus: @oui-color-dusty;
-@oui-ui-select-button-border-color_disabled: @oui-button-hollow-border-color_disabled;
-@oui-ui-select-button-border-color_error: @oui-button-error-border-color;
-@oui-ui-select-button-background-color_focus: @oui-color-concrete;
-@oui-ui-select-button-background-color_disabled: @oui-button-hollow-background-color_disabled;
-@oui-ui-select-button-background-color_error: @oui-button-error-background-color;
+@oui-ui-select-button-letter-spacing: @oui-select-letter-spacing;
+@oui-ui-select-button-font-color_error: @oui-select-font-color_error;
+@oui-ui-select-button-font-weight: @oui-select-font-weight;
+@oui-ui-select-button-border-color_error: @oui-select-border-color_error;
+@oui-ui-select-button-border-width: @oui-select-border-width;
+@oui-ui-select-button-background-color_error: @oui-select-background-color_error;
+
+@oui-ui-select-icon-size: rem-calc(10);
+@oui-ui-select-icon-spacing: rem-calc(18);
+@oui-ui-select-icon-position-right: rem-calc(12);
 
 @oui-ui-select-menu-min-width: @oui-dropdown-menu-min-width;
 @oui-ui-select-menu-max-height: rem-calc(200);
@@ -1445,7 +1530,7 @@
 @oui-ui-select-menu-border-color: @oui-dropdown-menu-border-color;
 @oui-ui-select-menu-border-width: @oui-dropdown-menu-border-width;
 @oui-ui-select-menu-background-color: @oui-dropdown-menu-background-color;
-@oui-ui-select-menu-zindex: @oui-dropdown-menu-zindex;
+@oui-ui-select-menu-z-index: @oui-dropdown-menu-z-index;
 
 @oui-ui-select-item-line-height: @oui-dropdown-item-line-height;
 @oui-ui-select-item-padding: @oui-dropdown-item-padding;
@@ -1475,7 +1560,7 @@
 
 // Select Picker
 @oui-select-picker-padding: @oui-choice-thumbnail-padding;
-@oui-select-picker-border-size: @oui-choice-thumbnail-border-size;
+@oui-select-picker-border-width: @oui-choice-thumbnail-border-width;
 @oui-select-picker-border-color: @oui-choice-thumbnail-border-color;
 @oui-select-picker-border-color_disabled: @oui-choice-thumbnail-border-color_disabled;
 
@@ -1506,6 +1591,7 @@
 @oui-sidebar-font-color_responsive: @oui-color-sapphire;
 @oui-sidebar-background-color: @oui-color-sapphire;
 @oui-sidebar-background-color_responsive: @oui-color-white;
+@oui-sidebar-box-shadow: none;
 @oui-sidebar-z-index: 1020;
 @oui-sidebar-transition-delay: 0.3s;
 
@@ -1651,13 +1737,17 @@
 @oui-status-max-width: rem-calc(200);
 @oui-status-padding: rem-calc(4) rem-calc(10);
 @oui-status-font-color: @oui-color-sapphire;
+@oui-status-font-color_info: @oui-status-font-color;
+@oui-status-font-color_success: @oui-status-font-color;
+@oui-status-font-color_warning: @oui-status-font-color;
+@oui-status-font-color_error: @oui-status-font-color;
 @oui-status-font-size: rem-calc(16);
 @oui-status-font-weight: @oui-font-regular;
 @oui-status-border: none;
 @oui-status-border-radius: calc(@oui-status-font-size * @oui-status-line-height);
 @oui-status-background-color: @oui-color-white;
-@oui-status-background-color_success: @oui-color-success-fade;
 @oui-status-background-color_info: @oui-color-info-fade;
+@oui-status-background-color_success: @oui-color-success-fade;
 @oui-status-background-color_warning: @oui-color-warning-fade;
 @oui-status-background-color_error: @oui-color-error-fade;
 
@@ -1753,27 +1843,29 @@
 
 // Textarea
 @oui-textarea-line-height: rem-calc(20);
-@oui-textarea-margin: 0;
-@oui-textarea-border-radius: @oui-global-base-radius;
-@oui-textarea-font-size: rem-calc(16);
-@oui-textarea-font-weight: 400;
+@oui-textarea-margin: @oui-input-margin;
+@oui-textarea-border-radius: @oui-input-border-radius;
+@oui-textarea-font-size: @oui-input-font-size;
+@oui-textarea-font-weight: @oui-font-regular;
 @oui-textarea-font-color: @oui-color-sapphire;
 @oui-textarea-font-color_disabled: @oui-color-dusty;
 @oui-textarea-font-color_error: @oui-color-error-dark;
-@oui-textarea-box-shadow: inset 2px 2px 1px 0 @oui-color-nurse;
-@oui-textarea-box-shadow_focus: 0 0 3px 0 @oui-color-info-light, inset 2px 2px 1px 0 rgba(89, 210, 239, 0.35);
-@oui-textarea-box-shadow_error: 0 0 3px 0 rgba(0, 0, 0, 0.35);
-@oui-textarea-border-color: @oui-color-silver;
-@oui-textarea-border-color_focus: @oui-color-pacific;
+@oui-textarea-box-shadow: @oui-input-box-shadow;
+@oui-textarea-box-shadow_focus: @oui-input-box-shadow_focus;
+@oui-textarea-box-shadow_error: @oui-input-box-shadow_error;
+@oui-textarea-border-color: @oui-input-border-color;
+@oui-textarea-border-color_hover: @oui-input-border-color_hover;
+@oui-textarea-border-color_focus: @oui-input-border-color_focus;
 @oui-textarea-border-color_readonly: @oui-color-alabaster;
 @oui-textarea-border-color_disabled: @oui-color-alabaster;
 @oui-textarea-border-color_error: @oui-color-error-medium;
-@oui-textarea-border-width: 1px;
-@oui-textarea-background-color: @oui-color-white;
-@oui-textarea-background-color_focus: @oui-color-polar;
-@oui-textarea-background-color_readonly: @oui-color-alabaster;
-@oui-textarea-background-color_disabled: @oui-color-alabaster;
-@oui-textarea-background-color_error: @oui-color-error-fade;
+@oui-textarea-border-width: @oui-input-border-width;
+@oui-textarea-background-color: @oui-input-background-color;
+@oui-textarea-background-color_hover: @oui-input-background-color_hover;
+@oui-textarea-background-color_focus: @oui-input-background-color_focus;
+@oui-textarea-background-color_readonly: @oui-input-background-color_readonly;
+@oui-textarea-background-color_disabled: @oui-input-background-color_disabled;
+@oui-textarea-background-color_error: @oui-input-background-color_error;
 
 @oui-textarea-selection-font-color: @oui-color-white;
 @oui-textarea-selection-font-color_error: @oui-color-white;
@@ -1827,7 +1919,7 @@
 @oui-tooltip-font-color: @oui-color-sapphire;
 @oui-tooltip-box-shadow: 0 rem-calc(9) rem-calc(10) 0 fade(darken(@oui-color-info-fade, 50%), 10%);
 @oui-tooltip-border-color: @oui-color-silver;
-@oui-tooltip-border-size: 1px;
+@oui-tooltip-border-width: 1px;
 @oui-tooltip-background-color: @oui-color-white;
 @oui-tooltip-opacity: 1;
 @oui-tooltip-transition-duration: 250ms;

@@ -119,22 +119,22 @@ storiesOf('Styles/Navbar', module)
       <div class="oui-navbar-menu oui-navbar-menu_fixed oui-navbar-menu_toggle">
         <ul class="oui-navbar-list">
           <li class="oui-navbar-list__item">
-            <a class="oui-navbar-link oui-navbar-link_active" href="">Lorem ipsum</a>
+            <a class="oui-navbar-link oui-navbar-link_active" href="#">Lorem ipsum</a>
           </li>
           <li class="oui-navbar-list__item">
-            <a class="oui-navbar-link" href="">Dolor sit amet</a>
+            <a class="oui-navbar-link" href="#">Dolor sit amet</a>
           </li>
         </ul>
       </div>
-      <a class="oui-navbar__brand" href="">
+      <a class="oui-navbar__brand" href="#">
         <span class="oui-icon oui-icon-ovh"></span>
       </a>
       <ul class="oui-navbar-list oui-navbar_desktop-only">
         <li class="oui-navbar-list__item">
-          <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="">Lorem ipsum</a>
+          <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href="#">Lorem ipsum</a>
         </li>
         <li class="oui-navbar-list__item">
-          <a class="oui-navbar-link oui-navbar-link_primary" href="">Dolor sit amet</a>
+          <a class="oui-navbar-link oui-navbar-link_primary" href="#">Dolor sit amet</a>
         </li>
       </ul>
       <div class="oui-navbar-backdrop" aria-hidden="true"></div>

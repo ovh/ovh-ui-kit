@@ -1,5 +1,7 @@
+@import './_mixins';
+
 // Keep the templates classnames
-// Since they are used directly in the plugin
+// Since they are used directly by the plugin
 .oui-ui-select {
   position: relative;
   margin: @oui-ui-select-margin;
@@ -17,7 +19,7 @@
     box-shadow: @oui-ui-select-menu-box-shadow;
     border: @oui-ui-select-menu-border-width @oui-ui-select-menu-border-color solid;
     background-color: @oui-ui-select-menu-background-color;
-    z-index: @oui-ui-select-menu-zindex;
+    z-index: @oui-ui-select-menu-z-index;
   }
 
   [aria-expanded="true"] ~ .ui-select-dropdown { display: block; }
@@ -115,112 +117,77 @@
     left: 0;
     top: 0;
   }
+}
 
-  // Variant 'multiple'
-  &_multiple {
-    .ui-select-match,
-    .ui-select-match-items {
-      line-height: @oui-ui-select-button-line-height;
-    }
+// Variant 'multiple'
+.oui-ui-select_multiple {
+  .ui-select-match,
+  .ui-select-match-items {
+    line-height: @oui-ui-select-button-line-height;
+  }
 
-    .ui-select-match-container {
-      &:extend(.oui-button);
-      &:extend(.oui-button_dropdown all);
+  .ui-select-match-container {
+    #oui > .select-base();
 
-      max-width: 100%;
-      width: 100%;
-      min-height: @oui-ui-select-button-height;
-      line-height: @oui-ui-select-button-line-height;
-      padding-top: calc(((@oui-ui-select-button-height - @oui-ui-select-button-line-height) / 2) - @oui-ui-select-button-border-width);
-      padding-bottom: calc(((@oui-ui-select-button-height - @oui-ui-select-button-line-height) / 2) - @oui-ui-select-button-border-width);
-      text-align: left;
-      white-space: normal;
+    min-height: @oui-ui-select-button-height;
+    line-height: @oui-ui-select-button-line-height;
+    padding-top: calc(((@oui-ui-select-button-height - @oui-ui-select-button-line-height) / 2) - @oui-ui-select-button-border-width);
+    padding-bottom: calc(((@oui-ui-select-button-height - @oui-ui-select-button-line-height) / 2) - @oui-ui-select-button-border-width);
 
-      &:focus,
-      &_focus {
-        #oui > .outline-border();
-
-        background-color: @oui-ui-select-button-background-color_focus;
-        border-color: @oui-ui-select-button-border-color_focus;
-      }
-
-      &_disabled,
-      &_disabled:hover,
-      &_disabled:focus {
-        color: @oui-ui-select-button-font-color_disabled;
-        border-color: @oui-ui-select-button-border-color_disabled;
-        background-color: @oui-ui-select-button-background-color_disabled;
-        cursor: auto;
-      }
-
-      .oui-field_error & {
-        background-color: @oui-ui-select-button-background-color_error;
-        border-color: @oui-ui-select-button-border-color_error;
-        color: @oui-ui-select-button-font-color_error;
-      }
-    }
-
-    .ui-select-match-item {
-      position: relative;
-      margin-right: rem-calc(5);
-      z-index: 1;
-    }
-
-    .ui-select-search {
-      width: auto !important; // Override inline style
-      height: @oui-ui-select-button-line-height;
-      line-height: @oui-ui-select-button-line-height;
-      margin: 0;
-      padding: 0;
-      letter-spacing: @oui-ui-select-button-letter-spacing;
-      font-weight: @oui-ui-select-button-font-weight;
-      outline: none;
-      border: none;
-      background: none;
-
-      &::-ms-clear {
-        display: none;
-      }
+    .oui-field_error & {
+      background-color: @oui-ui-select-button-background-color_error;
+      border-color: @oui-ui-select-button-border-color_error;
+      color: @oui-ui-select-button-font-color_error;
     }
   }
 
-  // Variant 'single'
-  &_single {
-    .ui-select-match,
-    .ui-select-search { // stylelint-disable-line
-      &:extend(.oui-button);
-      &:extend(.oui-button_dropdown all);
-
-      max-width: 100%;
-      width: 100%;
-      height: @oui-ui-select-button-height;
-      text-align: left;
-
-      &:focus,
-      &_focus {
-        // To override reset style
-        #oui > .outline-border() !important;
-
-        background-color: @oui-ui-select-button-background-color_focus;
-        border-color: @oui-ui-select-button-border-color_focus;
-      }
-
-      .oui-field_error & {
-        background-color: @oui-ui-select-button-background-color_error;
-        border-color: @oui-ui-select-button-border-color_error;
-        color: @oui-ui-select-button-font-color_error;
-      }
-    }
+  .ui-select-match-item {
+    position: relative;
+    margin-right: rem-calc(5);
+    z-index: 1;
   }
 
-  // To keep track of keydown
-  .ui-select-search_hidden {
-    opacity: 0;
-    height: 0;
-    min-height: 0;
-    position: absolute;
-    padding: 0;
+  .ui-select-search {
+    width: auto !important; // Override inline style
+    height: @oui-ui-select-button-line-height;
+    line-height: @oui-ui-select-button-line-height;
     margin: 0;
-    border: 0;
+    padding: 0;
+    letter-spacing: @oui-ui-select-button-letter-spacing;
+    font-weight: @oui-ui-select-button-font-weight;
+    outline: none;
+    border: none;
+    background: none;
+
+    &::-ms-clear {
+      display: none;
+    }
   }
+}
+
+// Variant 'single'
+.oui-ui-select_single {
+  .ui-select-match,
+  .ui-select-search { // stylelint-disable-line
+    #oui > .select-base();
+
+    height: @oui-ui-select-button-height;
+
+    .oui-field_error & {
+      background-color: @oui-ui-select-button-background-color_error;
+      border-color: @oui-ui-select-button-border-color_error;
+      color: @oui-ui-select-button-font-color_error;
+    }
+  }
+}
+
+// To keep track of keydown
+.oui-ui-select .ui-select-search_hidden {
+  opacity: 0;
+  height: 0;
+  min-height: 0;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }

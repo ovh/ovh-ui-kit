@@ -14,26 +14,27 @@
     @border-color_disabled: @oui-input-border-color_disabled,
     @border-color_readonly: @oui-input-border-color_readonly,
     @border-radius: @oui-input-border-radius,
-    @border-size: @oui-input-border-size,
+    @border-width: @oui-input-border-width,
     @box-shadow: @oui-input-box-shadow,
     @box-shadow_focus: @oui-input-box-shadow_focus,
-    @box-shadow_error: @oui-input-box-shadow_error,
     @background-color: @oui-input-background-color,
+    @background-color_hover: @oui-input-background-color_hover,
     @background-color_focus: @oui-input-background-color_focus,
     @background-color_disabled: @oui-input-background-color_disabled,
     @background-color_readonly: @oui-input-background-color_readonly,
     @selection-background-color: @oui-input-selection-background-color,
     @selection-font-color: @oui-input-selection-font-color
   ) {
+    #oui > .animate();
     #oui > .base-font();
 
     width: 100%;
     min-height: @height;
-    line-height: calc(@height - (@border-size * 2));
+    line-height: calc(@height - (@border-width * 2));
     margin: @margin;
     padding: @padding;
     display: block;
-    border: @border-size solid @border-color;
+    border: @border-width solid @border-color;
     border-radius: @border-radius;
     background-color: @background-color;
     box-shadow: @box-shadow;
@@ -57,13 +58,11 @@
     }
 
     &:hover {
+      background-color: @background-color_hover;
       border-color: @border-color_hover;
     }
 
     &:focus {
-      #oui > .animate();
-
-      transition-property: border-color, box-shadow, background-color;
       border-color: @border-color_focus;
       outline: none;
       box-shadow: @box-shadow_focus;
@@ -79,11 +78,11 @@
     }
 
     &:disabled {
+      cursor: not-allowed;
       border-color: @border-color_disabled;
       background-color: @background-color_disabled;
       box-shadow: none;
       color: @font-color_disabled;
-      cursor: auto;
     }
 
     &::placeholder {
@@ -104,7 +103,7 @@
     }
 
     &:not(:disabled):focus {
-      box-shadow: @oui-input-background-color_error-focus;
+      box-shadow: @oui-input-box-shadow_error-focus;
     }
 
     &::selection {

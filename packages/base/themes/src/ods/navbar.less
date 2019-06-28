@@ -1,0 +1,37 @@
+// Used in Manager Public Cloud
+// Not define for now in ZeroHeight
+.oui-navbar {
+  .navbar-oui-icon {
+    color: #59697d;
+  }
+
+  .oui-icon.oui-icon-chevron-down,
+  .oui-icon.oui-icon-chevron-up {
+    display: none;
+  }
+
+  &-menu {
+    // Languages menu
+    &_language &__item_active {
+      .oui-navbar-link::after {
+        content: @oui-icon-index-check_line;
+        display: inline-block;
+        margin-left: rem-calc(20);
+        margin-top: -0.3rem;
+        vertical-align: middle;
+        font-family: "Oui Icons", sans-serif;
+        font-size: @oui-navbar-external-size;
+        color: inherit;
+      }
+    }
+  }
+
+  // Add a border on main links
+  & > &-list > &-list__item > &-link {
+    border-bottom: 3px solid transparent;
+
+    &_active {
+      border-bottom-color: @primary-color;
+    }
+  }
+}

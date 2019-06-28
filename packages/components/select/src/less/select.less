@@ -1,3 +1,5 @@
+@import './_mixins';
+
 // Select
 .oui-select {
   #oui > .base-font();
@@ -22,60 +24,12 @@
       font-size: @oui-select-icon-size;
     }
   }
+}
 
-  &__input {
-    #oui > .text-ellipsis();
+.oui-select__input {
+  #oui > .select-base();
 
-    width: 100%;
-    max-width: 100%;
-    height: @oui-select-height;
-    padding: 0;
-    padding-left: @oui-select-padding-x;
-    padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
-    border: @oui-select-border-width solid @oui-select-border-color;
-    border-radius: @oui-select-border-radius;
-    background: @oui-select-background-color;
-    box-shadow: @oui-select-box-shadow;
-    color: @oui-select-font-color;
-    font-size: @oui-select-font-size;
-    font-family: inherit;
-    font-weight: @oui-select-font-weight;
-    cursor: pointer;
-    appearance: none;
-
-    ~ .oui-icon {
-      color: @oui-select-font-color;
-    }
-
-    &::-ms-expand {
-      display: none;
-    }
-
-    &:focus {
-      #oui > .animate();
-
-      border-color: @oui-select-border-color_focus;
-      outline: none;
-      box-shadow: @oui-select-box-shadow_focus;
-      background: @oui-select-background-color_focus;
-
-      ~ .oui-icon {
-        color: @oui-select-border-color_focus;
-      }
-    }
-
-    &:disabled {
-      border-color: @oui-select-border-color_disabled;
-      background-color: @oui-select-background-color_disabled;
-      color: @oui-select-font-color_disabled;
-      text-shadow: none;
-      cursor: auto;
-
-      ~ .oui-icon {
-        color: @oui-select-font-color_disabled;
-      }
-    }
-  }
+  height: @oui-select-height;
 }
 
 oui-select {
@@ -93,21 +47,29 @@ oui-select {
 // stylelint-disable no-descending-specificity
 .oui-select_error,
 .oui-field_error .oui-select {
-  .oui-select__input,
-  .oui-select__input:hover,
-  .oui-select__input:active,
-  .oui-select__input:focus {
-    border-color: @oui-select-border-color_error;
-    background-color: @oui-select-background-color_error;
-    color: @oui-select-font-color_error;
-
-    ~ .oui-icon {
-      box-shadow: none;
+  .oui-select__input {
+    &:not(:disabled),
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
+      border-color: @oui-select-border-color_error;
       background-color: @oui-select-background-color_error;
+      color: @oui-select-font-color_error;
+      font-weight: @oui-select-font-weight_error;
+      box-shadow: @oui-select-box-shadow_error;
 
-      &::before {
-        color: @oui-select-font-color_error;
+      ~ .oui-icon {
+        box-shadow: none;
+        background-color: @oui-select-background-color_error;
+
+        &::before {
+          color: @oui-select-font-color_error;
+        }
       }
+    }
+
+    &:not(:disabled):focus {
+      box-shadow: @oui-select-box-shadow_error-focus;
     }
   }
 }
