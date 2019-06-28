@@ -906,7 +906,7 @@
 @oui-input-font-color_error: @oui-color-error-dark;
 @oui-input-font-size: rem-calc(16);
 @oui-input-font-weight: @oui-font-semibold;
-@oui-input-font-weight_error: @oui-font-regular;
+@oui-input-font-weight_error: @oui-font-semibold;
 @oui-input-border-color: @oui-color-silver;
 @oui-input-border-color_hover: @oui-color-dusty;
 @oui-input-border-color_focus: @oui-color-pacific;
@@ -1476,26 +1476,32 @@
 @oui-search-submit-icon-size: rem-calc(20);
 
 // Select
-@oui-select-height: rem-calc(40);
-@oui-select-margin: 0;
+@oui-select-height: @oui-input-height;
+@oui-select-margin: @oui-input-margin;
 @oui-select-padding-x: rem-calc(12);
-@oui-select-font-color: @oui-color-zodiac;
-@oui-select-font-color_disabled: @oui-color-silver;
-@oui-select-font-color_error: @oui-color-error-dark;
-@oui-select-font-size: rem-calc(16);
-@oui-select-font-weight: @oui-font-semibold;
-@oui-select-box-shadow: 1px 1px 0 0 rgba(18, 40, 68, 0.07);
-@oui-select-box-shadow_focus: inset 1px 1px 2px 0 rgba(102, 199, 214, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.35);
-@oui-select-border-color: @oui-color-silver;
-@oui-select-border-color_focus: @oui-color-pacific;
-@oui-select-border-color_disabled: @oui-color-concrete;
-@oui-select-border-color_error: @oui-color-error-light;
-@oui-select-border-radius: @oui-global-base-radius;
-@oui-select-border-width: 1px;
-@oui-select-background-color: @oui-color-white;
-@oui-select-background-color_focus: @oui-color-polar;
-@oui-select-background-color_disabled: @oui-color-concrete;
-@oui-select-background-color_error: @oui-color-error-fade;
+@oui-select-letter-spacing: @oui-global-base-letter-spacing;
+@oui-select-font-color: @oui-input-font-color;
+@oui-select-font-color_disabled: @oui-input-font-color_disabled;
+@oui-select-font-color_error: @oui-input-font-color_error;
+@oui-select-font-size: @oui-input-font-size;
+@oui-select-font-weight: @oui-input-font-weight;
+@oui-select-font-weight_error: @oui-input-font-weight_error;
+@oui-select-border-color: @oui-input-border-color;
+@oui-select-border-color_hover: @oui-input-border-color_hover;
+@oui-select-border-color_focus: @oui-input-border-color_focus;
+@oui-select-border-color_disabled: @oui-input-border-color_disabled;
+@oui-select-border-color_error: @oui-input-border-color_error;
+@oui-select-border-radius: @oui-input-border-radius;
+@oui-select-border-width: @oui-input-border-size;
+@oui-select-box-shadow: none;
+@oui-select-box-shadow_focus: @oui-input-box-shadow_focus;
+@oui-select-box-shadow_error: none;
+@oui-select-box-shadow_error-focus: none;
+@oui-select-background-color: @oui-input-background-color;
+@oui-select-background-color_hover: @oui-input-background-color_hover;
+@oui-select-background-color_focus: @oui-input-background-color_focus;
+@oui-select-background-color_disabled: @oui-input-background-color_disabled;
+@oui-select-background-color_error: @oui-input-background-color_error;
 
 @oui-select-icon-size: rem-calc(10);
 @oui-select-icon-spacing: rem-calc(18);
@@ -1506,21 +1512,11 @@
 
 @oui-ui-select-button-height: @oui-select-height;
 @oui-ui-select-button-line-height: rem-calc(36);
-@oui-ui-select-button-letter-spacing: @oui-global-base-letter-spacing;
-@oui-ui-select-button-font-color: @oui-select-font-color;
-@oui-ui-select-button-font-color_disabled: @oui-select-font-color_disabled;
+@oui-ui-select-button-letter-spacing: @oui-select-letter-spacing;
 @oui-ui-select-button-font-color_error: @oui-select-font-color_error;
 @oui-ui-select-button-font-weight: @oui-select-font-weight;
-@oui-ui-select-box-shadow: @oui-select-box-shadow;
-@oui-ui-select-box-shadow_focus: @oui-select-box-shadow_focus;
-@oui-ui-select-button-border-color_focus: @oui-select-border-color_focus;
-@oui-ui-select-button-border-color_disabled: @oui-select-border-color_disabled;
 @oui-ui-select-button-border-color_error: @oui-select-border-color_error;
-@oui-ui-select-button-border-radius: @oui-select-border-radius;
 @oui-ui-select-button-border-width: @oui-select-border-width;
-@oui-ui-select-button-background-color: @oui-select-background-color;
-@oui-ui-select-button-background-color_focus: @oui-select-background-color_focus;
-@oui-ui-select-button-background-color_disabled: @oui-select-background-color_disabled;
 @oui-ui-select-button-background-color_error: @oui-select-background-color_error;
 
 @oui-ui-select-icon-size: rem-calc(10);
