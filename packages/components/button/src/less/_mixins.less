@@ -15,9 +15,7 @@
     @font-color: @oui-button-secondary-font-color,
     @font-color_disabled: @oui-button-secondary-font-color_disabled,
     @icon-color: @oui-button-secondary-icon-color,
-    @icon-color_disabled: @oui-button-secondary-icon-color_disabled,
-    @icon-circle-color: @oui-button-secondary-icon-circle-color,
-    @icon-circle-color_disabled: @oui-button-secondary-icon-circle-color_disabled
+    @icon-color_disabled: @oui-button-secondary-icon-color_disabled
   ) {
     color: @font-color;
     background-color: @background-color;
@@ -26,11 +24,6 @@
 
     .oui-icon {
       color: @icon-color;
-
-      &_circle {
-        color: @icon-circle-color;
-        background: @icon-color;
-      }
     }
 
     &:hover,
@@ -58,11 +51,6 @@
 
       .oui-icon {
         color: @icon-color_disabled;
-
-        &_circle {
-          color: @icon-circle-color_disabled;
-          background: @icon-color_disabled;
-        }
       }
     }
   }

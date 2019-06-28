@@ -209,66 +209,6 @@ storiesOf('Content/Icons', module)
     },
   )
   .add(
-    'Bicolor',
-    () => `
-    <div class="row">
-      <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code">
-          <code>.oui-icon-error_circle</code>
-          <code>.oui-icon_bicolor</code>
-        </div>
-      </div>
-
-      <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code">
-          <code>.oui-icon-info_circle</code>
-          <code>.oui-icon_bicolor</code>
-        </div>
-      </div>
-
-      <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code">
-          <code>.oui-icon-success_circle</code>
-          <code>.oui-icon_bicolor</code>
-        </div>
-      </div>
-
-      <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code">
-          <code>.oui-icon-warning_circle</code>
-          <code>.oui-icon_bicolor</code>
-        </div>
-      </div>
-    </div>
-    `, {
-      options: {
-        showPanel: false,
-      },
-    },
-  )
-  .add(
-    'Circled',
-    () => `
-    <div class="row">
-      <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-close oui-icon_circle" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code">
-          <code>.oui-icon-close</code>
-          <code>.oui-icon_circle</code>
-        </div>
-      </div>
-    </div>
-    `, {
-      options: {
-        showPanel: false,
-      },
-    },
-  )
-  .add(
     'Extra Thin',
     () => `
     <div class="row">

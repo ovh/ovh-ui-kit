@@ -19,12 +19,12 @@ storiesOf('Styles/Button', module)
     () => `
     <div>
       <button class="oui-button oui-button_primary oui-button_icon-left">
-        <span class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Point your finger to the left!
       </button>
       <button class="oui-button oui-button_secondary oui-button_icon-right">
         Point your finger to the right!
-        <span class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_dropdown">
         I have something to hide...
@@ -33,12 +33,12 @@ storiesOf('Styles/Button', module)
     </div>
     <div>
       <button class="oui-button oui-button_primary oui-button_icon-left" disabled>
-        <span class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Point your finger to the left!
       </button>
       <button class="oui-button oui-button_secondary oui-button_icon-right" disabled>
         Point your finger to the right!
-        <span class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_dropdown" disabled>
         I have something to hide...
@@ -84,11 +84,11 @@ storiesOf('Styles/Button', module)
           Button link Full width Icon left
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_primary">
-          <span class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Primary Full width Icon left
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_secondary">
-          <span class="oui-icon oui-icon_circle oui-icon-chevron-left" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Secondary Full width Icon left
       </button>
     </div>
@@ -100,11 +100,11 @@ storiesOf('Styles/Button', module)
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary">
           Secondary Full width Icon right
-          <span class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_secondary">
           Secondary Full width Icon right
-          <span class="oui-icon oui-icon_circle oui-icon-chevron-right" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
     </div>
     `,

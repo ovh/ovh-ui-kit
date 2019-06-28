@@ -29,13 +29,6 @@
     font-size: @oui-button-icon-size;
   }
 
-  .oui-icon_circle {
-    width: @oui-button-icon-size_large;
-    height: @oui-button-icon-size_large;
-    background: @oui-button-icon-color;
-    color: @oui-color-white;
-  }
-
   &,
   &:focus,
   &:hover { text-decoration: none; }
@@ -46,10 +39,6 @@
 
   &:disabled {
     cursor: not-allowed;
-
-    .oui-icon_circle {
-      background: @oui-button-icon-color_disabled;
-    }
   }
 }
 
@@ -74,9 +63,7 @@ oui-button {
     @font-color: @oui-button-primary-font-color,
     @font-color_disabled: @oui-button-primary-font-color_disabled,
     @icon-color: @oui-button-primary-icon-color,
-    @icon-color_disabled: @oui-button-primary-icon-color_disabled,
-    @icon-circle-color: @oui-button-primary-icon-circle-color,
-    @icon-circle-color_disabled: @oui-button-primary-icon-circle-color_disabled
+    @icon-color_disabled: @oui-button-primary-icon-color_disabled
   );
 
   padding: @oui-button-primary-padding;
@@ -100,9 +87,7 @@ oui-button {
     @font-color: @oui-button-secondary-font-color,
     @font-color_disabled: @oui-button-secondary-font-color_disabled,
     @icon-color: @oui-button-secondary-icon-color,
-    @icon-color_disabled: @oui-button-secondary-icon-color_disabled,
-    @icon-circle-color: @oui-button-secondary-icon-circle-color,
-    @icon-circle-color_disabled: @oui-button-secondary-icon-circle-color_disabled
+    @icon-color_disabled: @oui-button-secondary-icon-color_disabled
   );
 
   padding: @oui-button-secondary-padding;
@@ -126,9 +111,7 @@ oui-button {
     @font-color: @oui-button-dropdown-font-color,
     @font-color_disabled: @oui-button-dropdown-font-color_disabled,
     @icon-color: @oui-button-dropdown-icon-color,
-    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled,
-    @icon-circle-color: @oui-button-dropdown-icon-circle-color,
-    @icon-circle-color_disabled: @oui-button-dropdown-icon-circle-color_disabled
+    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled
   );
 
   padding: @oui-button-dropdown-padding;
