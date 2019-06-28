@@ -460,7 +460,7 @@
 @oui-calendar-input-background-color: @oui-input-background-color;
 @oui-calendar-input-background-color_hover: @oui-color-charlotte;
 
-@oui-calendar-button-font-color: @oui-button-font-color;
+@oui-calendar-button-font-color: @oui-button-primary-font-color;
 @oui-calendar-button-background-color: @oui-button-primary-background-color;
 @oui-calendar-button-background-color_hover: @oui-button-primary-background-color_hover;
 
@@ -1843,27 +1843,29 @@
 
 // Textarea
 @oui-textarea-line-height: rem-calc(20);
-@oui-textarea-margin: 0;
-@oui-textarea-border-radius: @oui-global-base-radius;
-@oui-textarea-font-size: rem-calc(16);
-@oui-textarea-font-weight: 400;
+@oui-textarea-margin: @oui-input-margin;
+@oui-textarea-border-radius: @oui-input-border-radius;
+@oui-textarea-font-size: @oui-input-font-size;
+@oui-textarea-font-weight: @oui-font-regular;
 @oui-textarea-font-color: @oui-color-sapphire;
 @oui-textarea-font-color_disabled: @oui-color-dusty;
 @oui-textarea-font-color_error: @oui-color-error-dark;
-@oui-textarea-box-shadow: inset 2px 2px 1px 0 @oui-color-nurse;
-@oui-textarea-box-shadow_focus: 0 0 3px 0 @oui-color-info-light, inset 2px 2px 1px 0 rgba(89, 210, 239, 0.35);
-@oui-textarea-box-shadow_error: 0 0 3px 0 rgba(0, 0, 0, 0.35);
-@oui-textarea-border-color: @oui-color-silver;
-@oui-textarea-border-color_focus: @oui-color-pacific;
+@oui-textarea-box-shadow: @oui-input-box-shadow;
+@oui-textarea-box-shadow_focus: @oui-input-box-shadow_focus;
+@oui-textarea-box-shadow_error: @oui-input-box-shadow_error;
+@oui-textarea-border-color: @oui-input-border-color;
+@oui-textarea-border-color_hover: @oui-input-border-color_hover;
+@oui-textarea-border-color_focus: @oui-input-border-color_focus;
 @oui-textarea-border-color_readonly: @oui-color-alabaster;
 @oui-textarea-border-color_disabled: @oui-color-alabaster;
 @oui-textarea-border-color_error: @oui-color-error-medium;
-@oui-textarea-border-width: 1px;
-@oui-textarea-background-color: @oui-color-white;
-@oui-textarea-background-color_focus: @oui-color-polar;
-@oui-textarea-background-color_readonly: @oui-color-alabaster;
-@oui-textarea-background-color_disabled: @oui-color-alabaster;
-@oui-textarea-background-color_error: @oui-color-error-fade;
+@oui-textarea-border-width: @oui-input-border-size;
+@oui-textarea-background-color: @oui-input-background-color;
+@oui-textarea-background-color_hover: @oui-input-background-color_hover;
+@oui-textarea-background-color_focus: @oui-input-background-color_focus;
+@oui-textarea-background-color_readonly: @oui-input-background-color_readonly;
+@oui-textarea-background-color_disabled: @oui-input-background-color_disabled;
+@oui-textarea-background-color_error: @oui-input-background-color_error;
 
 @oui-textarea-selection-font-color: @oui-color-white;
 @oui-textarea-selection-font-color_error: @oui-color-white;
