@@ -33,8 +33,8 @@ angular.module('myModule', ['oui.field'])
 
 | Attribute         | Type      | Binding   | One-time binding  | Values                            | Default   | Description
 | ----              | ----      | ----      | ----              | ----                              | ----      | ----
-| `label`           | string    | @?        | yes               | n/a                               | n/a       | field label
-| `label-popover`   | string    | @?        | yes               | n/a                               | n/a       | text to describe the field or give more information
-| `help-text`       | string    | @?        | yes               | n/a                               | n/a       | text to help fill the form field
+| `label`           | string    | @?        | no                | n/a                               | n/a       | field label
+| `label-popover`   | string    | @?        | no                | n/a                               | n/a       | text to describe the field or give more information
+| `help-text`       | string    | @?        | no                | n/a                               | n/a       | text to help fill the form field
 | `size`            | string    | @?        | yes               | `xs`, `s`, `m`, `l`, `xl`, `auto` | `auto`    | field size
 | `error-messages`  | object    | <?        | no                | n/a                               | n/a       | dictionary to override default messages
