@@ -14,7 +14,7 @@
     @border-color_disabled: @oui-input-border-color_disabled,
     @border-color_readonly: @oui-input-border-color_readonly,
     @border-radius: @oui-input-border-radius,
-    @border-size: @oui-input-border-size,
+    @border-width: @oui-input-border-width,
     @box-shadow: @oui-input-box-shadow,
     @box-shadow_focus: @oui-input-box-shadow_focus,
     @background-color: @oui-input-background-color,
@@ -30,11 +30,11 @@
 
     width: 100%;
     min-height: @height;
-    line-height: calc(@height - (@border-size * 2));
+    line-height: calc(@height - (@border-width * 2));
     margin: @margin;
     padding: @padding;
     display: block;
-    border: @border-size solid @border-color;
+    border: @border-width solid @border-color;
     border-radius: @border-radius;
     background-color: @background-color;
     box-shadow: @box-shadow;
