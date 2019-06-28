@@ -2,17 +2,17 @@
     ng-class="{ 'oui-field_error': $ctrl.isErrorVisible() }">
     <label class="oui-field__label oui-label"
         ng-attr-for="{{ ::$ctrl.for }}"
-        ng-if="::!!$ctrl.label && !$ctrl.labelPopover"
-        ng-bind="::$ctrl.label"></label>
+        ng-if="!!$ctrl.label && !$ctrl.labelPopover"
+        ng-bind="$ctrl.label"></label>
     <div class="oui-field__label-container"
-         ng-if="::!!$ctrl.label && !!$ctrl.labelPopover">
+         ng-if="!!$ctrl.label && !!$ctrl.labelPopover">
         <label class="oui-field__label oui-label"
                ng-attr-for="{{ ::$ctrl.for }}"
-               ng-bind="::$ctrl.label">
+               ng-bind="$ctrl.label">
         </label>
         <button type="button" class="oui-popover-button"
             aria-label="Help"
-            oui-popover="{{::$ctrl.labelPopover}}"
+            oui-popover="{{$ctrl.labelPopover}}"
             oui-popover-id="{{::$ctrl.popoverId}}"></button>
     </div>
     <div ng-class=":: 'oui-field__control oui-field__control_' + $ctrl.size" ng-transclude></div>
@@ -27,7 +27,7 @@
         </span>
     </div>
     <div class="oui-field__helper"
-        ng-if="::!!$ctrl.helpText"
-        ng-bind="::$ctrl.helpText">
+        ng-if="!!$ctrl.helpText"
+        ng-bind="$ctrl.helpText">
     </div>
 </div>
