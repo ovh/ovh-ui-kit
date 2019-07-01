@@ -40,7 +40,6 @@ export default class FieldController {
     this.validationParameters = {};
     this.invalid = false;
     this.blurred = false;
-    this.hasFocus = false;
     this.size = this.size || 'auto';
   }
 
@@ -122,14 +121,12 @@ export default class FieldController {
     angular.element(controlElement).on('blur', () => {
       this.$timeout(() => {
         this.checkControlErrors(controlElement, name);
-        this.hasFocus = false;
       });
     });
 
     angular.element(controlElement).on('focus', () => {
       this.$timeout(() => {
         this.form[name].$touched = false;
-        this.hasFocus = true;
       });
     });
   }
