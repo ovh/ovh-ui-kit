@@ -18,6 +18,13 @@
 @oui-global-base-radius: 3px;
 @oui-global-base-radius-medium: @oui-global-base-radius * 2;
 
+// Accessibility
+@oui-a11y-outline-color: initial;
+@oui-a11y-outline-offset: -2px;
+@oui-a11y-outline-style: dotted;
+@oui-a11y-outline-width: 1px;
+@oui-a11y-outline-radius: 0;
+
 // Animations
 @oui-animation-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
 @oui-animation-default: @oui-animation-fast-out-slow-in;
@@ -56,10 +63,13 @@
 // Icons
 @oui-icon-dist-folder: "../fonts/oui-icons";
 @oui-icon-spacing: 0;
+@oui-icon-padding: 0;
 @oui-icon-size: 1.5em;
 @oui-icon-color: inherit;
 @oui-icon-char-color: @oui-color-white;
+@oui-icon-line-height: inherit;
 @oui-icon-font-family: @oui-global-base-font-family-icon;
+@oui-icon-vertical-align: inherit;
 
 // Abbreviations
 @oui-abbr-border-color: @oui-color-pacific;
@@ -279,12 +289,12 @@
 
 // Back Button
 @oui-back-button-margin-bottom: rem-calc(30);
-@oui-back-button-valign: middle;
+@oui-back-button-vertical-align: middle;
 
 @oui-back-button-arrow-padding: rem-calc(5);
 @oui-back-button-arrow-spacing: rem-calc(10);
 @oui-back-button-arrow-size: rem-calc(20);
-@oui-back-button-arrow-valign: middle;
+@oui-back-button-arrow-vertical-align: middle;
 
 // Box
 @oui-box-background-color: @oui-color-concrete;
@@ -300,8 +310,10 @@
 // Button
 @oui-button-min-width: rem-calc(100);
 @oui-button-max-width: 100%;
+@oui-button-min-height: rem-calc(40);
+@oui-button-line-height: rem-calc(20);
 @oui-button-padding-x: rem-calc(20);
-@oui-button-padding-y: rem-calc(8);
+@oui-button-padding-y: calc((@oui-button-min-height - @oui-button-line-height) / 2);
 @oui-button-padding: calc(@oui-button-padding-y - @oui-button-border-width) calc(@oui-button-padding-x - @oui-button-border-width);
 @oui-button-margin: 0;
 @oui-button-letter-spacing: 0.007em;
@@ -312,15 +324,29 @@
 @oui-button-border-width: 0;
 
 // Button - Icons
-@oui-button-icon-size: rem-calc(10);
+@oui-button-icon-size: rem-calc(16);
 @oui-button-icon-size_large: rem-calc(20);
 @oui-button-icon-color: @oui-button-font-color;
 @oui-button-icon-color_disabled: @oui-color-silver;
 @oui-button-icon-offset: rem-calc(10);
 @oui-button-icon-spacing: rem-calc(20);
 
+@oui-button-external-icon-spacing: rem-calc(10);
+@oui-button-external-icon-size: rem-calc(12);
+
+// Button - Small variant
+@oui-button-small-min-height: rem-calc(32);
+@oui-button-small-line-height: rem-calc(16);
+@oui-button-small-font-size: rem-calc(16);
+@oui-button-small-font-weight: @oui-font-semibold;
+@oui-button-small-padding-x: rem-calc(10);
+@oui-button-small-padding-y: calc((@oui-button-small-min-height - @oui-button-small-line-height) / 2);
+@oui-button-small-padding: calc(@oui-button-small-padding-y - @oui-button-small-border-width) calc(@oui-button-small-padding-x - @oui-button-small-border-width);
+@oui-button-small-border-width: @oui-button-border-width;
+
 // Button - Primary variant
 @oui-button-primary-padding: calc(@oui-button-padding-y - @oui-button-primary-border-width) calc(@oui-button-padding-x - @oui-button-primary-border-width);
+@oui-button-primary-padding_small: calc(@oui-button-small-padding-y - @oui-button-primary-border-width) calc(@oui-button-small-padding-x - @oui-button-primary-border-width);
 @oui-button-primary-border-width: 0;
 @oui-button-primary-background-color: @oui-color-turquoise;
 @oui-button-primary-background-color_hover: darken(@oui-button-primary-background-color, 10%);
@@ -331,6 +357,7 @@
 @oui-button-primary-border-color_active: @oui-button-primary-background-color_active;
 @oui-button-primary-border-color_disabled: @oui-button-primary-background-color_disabled;
 @oui-button-primary-box-shadow: none;
+@oui-button-primary-box-shadow_hover: none;
 @oui-button-primary-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
 @oui-button-primary-box-shadow_active: inset 2px 2px 1px 0 @oui-color-pacific;
 @oui-button-primary-box-shadow_disabled: none;
@@ -341,6 +368,7 @@
 
 // Button - Secondary variant
 @oui-button-secondary-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-width) calc(@oui-button-padding-x - @oui-button-secondary-border-width);
+@oui-button-secondary-padding_small: calc(@oui-button-small-padding-y - @oui-button-secondary-border-width) calc(@oui-button-small-padding-x - @oui-button-secondary-border-width);
 @oui-button-secondary-border-width: 1px;
 @oui-button-secondary-background-color: @oui-color-white;
 @oui-button-secondary-background-color_hover: @oui-color-concrete;
@@ -351,6 +379,7 @@
 @oui-button-secondary-border-color_active: @oui-color-dusty;
 @oui-button-secondary-border-color_disabled: @oui-color-concrete;
 @oui-button-secondary-box-shadow: none;
+@oui-button-secondary-box-shadow_hover: none;
 @oui-button-secondary-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.15);
 @oui-button-secondary-box-shadow_active: inset 2px 2px 1px 0 fade(@oui-color-silver, 30%);
 @oui-button-secondary-box-shadow_disabled: none;
@@ -368,14 +397,16 @@
 @oui-button-link-icon-color_disabled: @oui-button-link-font-color_disabled;
 @oui-button-link-text-decoration: underline;
 @oui-button-link-text-decoration_hover: underline;
-@oui-button-link-padding: rem-calc(8) rem-calc(20);
+@oui-button-link-padding: @oui-button-padding-y @oui-button-padding-x;
 
 // Button - Dropdown variant
-@oui-button-dropdown-icon-size: rem-calc(10);
+@oui-button-dropdown-icon-size: @oui-button-icon-size;
 @oui-button-dropdown-padding-x: rem-calc(12);
 @oui-button-dropdown-padding: calc(@oui-button-padding-y - @oui-button-dropdown-border-width) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-width);
-@oui-button-dropdown-padding-right: rem-calc(30) + @oui-button-dropdown-padding-x;
-@oui-button-dropdown-margin-right: @oui-button-dropdown-padding-x * 1.5;
+@oui-button-dropdown-padding_small: calc(@oui-button-small-padding-y - @oui-button-dropdown-border-width) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-width);
+@oui-button-dropdown-padding-right: calc(@oui-button-dropdown-icon-size + (@oui-button-dropdown-padding-x * 2));
+@oui-button-dropdown-padding-right_small: calc(@oui-button-dropdown-icon-size + (@oui-button-dropdown-padding-x * 2));
+@oui-button-dropdown-margin-right: @oui-button-dropdown-padding-x;
 
 @oui-button-dropdown-border-width: @oui-button-secondary-border-width;
 @oui-button-dropdown-background-color: @oui-button-secondary-background-color;
@@ -387,6 +418,7 @@
 @oui-button-dropdown-border-color_active: @oui-button-secondary-border-color_active;
 @oui-button-dropdown-border-color_disabled: @oui-button-secondary-border-color_disabled;
 @oui-button-dropdown-box-shadow: @oui-button-secondary-box-shadow;
+@oui-button-dropdown-box-shadow_hover: @oui-button-secondary-box-shadow_hover;
 @oui-button-dropdown-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 @oui-button-dropdown-box-shadow_active: @oui-button-secondary-box-shadow_active;
 @oui-button-dropdown-box-shadow_disabled: @oui-button-secondary-box-shadow_disabled;
@@ -396,10 +428,8 @@
 @oui-button-dropdown-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
 
 // Button - Size variants
-@oui-button-small-width-min-width: rem-calc(40);
+@oui-button-small-width-min-width: @oui-button-min-height;
 @oui-button-small-width-padding-x: rem-calc(5);
-
-@oui-button-large-height-min-height: rem-calc(45);
 
 // Button - Error status
 @oui-button-error-background-color: @oui-color-error-fade;
@@ -573,7 +603,7 @@
 
 // Criteria Adder
 @oui-criteria-adder-spacing: rem-calc(10);
-@oui-criteria-adder-icon-size: rem-calc(24);
+@oui-criteria-adder-icon-size: @oui-button-icon-size_large;
 @oui-criteria-adder-menu-width: rem-calc(300);
 
 @oui-criteria-adder-form-padding: rem-calc(20);
@@ -929,13 +959,30 @@
 @oui-input-group-spacing: -@oui-input-group-border-width;
 
 @oui-input-group-button-min-width: rem-calc(50);
+@oui-input-group-button-min-height: @oui-button-min-height;
+@oui-input-group-button-line-height: @oui-button-line-height;
 @oui-input-group-button-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-width);
 @oui-input-group-button-background-color: @oui-input-background-color;
+@oui-input-group-button-background-color_hover: @oui-button-secondary-background-color_hover;
+@oui-input-group-button-background-color_active: @oui-button-secondary-background-color_active;
+@oui-input-group-button-background-color_disabled: @oui-button-secondary-background-color_disabled;
+@oui-input-group-button-border-color: @oui-button-secondary-border-color;
+@oui-input-group-button-border-color_hover: @oui-button-secondary-border-color_hover;
+@oui-input-group-button-border-color_active: @oui-button-secondary-border-color_active;
 @oui-input-group-button-border-color_disabled: @oui-input-border-color_disabled;
-@oui-input-group-button-font-color: @oui-color-silver;
+@oui-input-group-button-border-width: @oui-button-secondary-border-width;
+@oui-input-group-button-box-shadow: @oui-button-secondary-box-shadow;
+@oui-input-group-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
+@oui-input-group-button-box-shadow_active: @oui-button-secondary-box-shadow_active;
+@oui-input-group-button-box-shadow_disabled: @oui-button-secondary-box-shadow_disabled;
+@oui-input-group-button-font-color: @oui-button-secondary-font-color;
 @oui-input-group-button-font-color_hover: @oui-color-pacific;
 @oui-input-group-button-font-color_focus: @oui-input-group-button-font-color_hover;
-
+@oui-input-group-button-font-color_disabled: @oui-button-secondary-font-color_disabled;
+@oui-input-group-button-font-size: @oui-button-small-font-size;
+@oui-input-group-button-font-weight: @oui-button-small-font-weight;
+@oui-input-group-button-icon-color: @oui-button-secondary-icon-color;
+@oui-input-group-button-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
 @oui-input-group-button-icon-size: rem-calc(20);
 @oui-input-group-button-icon-shadow_focus: 0 1px 1px rgba(0, 0, 0, 0.15);
 

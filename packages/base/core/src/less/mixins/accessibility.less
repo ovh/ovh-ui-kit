@@ -1,10 +1,11 @@
 // Accessibility
 #oui {
   .outline-border() {
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: initial;
-    outline-offset: -2px;
+    outline-width: @oui-a11y-outline-width;
+    outline-style: @oui-a11y-outline-style;
+    outline-color: @oui-a11y-outline-color;
+    outline-offset: @oui-a11y-outline-offset;
+    -moz-outline-radius: @oui-a11y-outline-radius;
   }
 
   .visually-hidden() {

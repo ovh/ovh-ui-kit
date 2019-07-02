@@ -210,7 +210,21 @@
       position: inherit;
     }
 
-    &_sortable {
+    &_sortable::after {
+      content: @oui-datagrid-arrow-content_asc;
+    }
+
+    &_sortable-asc::after {
+      content: @oui-datagrid-arrow-content_asc;
+    }
+
+    &_sortable-desc::after {
+      content: @oui-datagrid-arrow-content_desc;
+    }
+
+    &_sortable,
+    &_sortable-asc,
+    &_sortable-desc {
       padding-right: ~"calc(@{oui-datagrid-arrow-size} * 3)";
       cursor: pointer;
 
@@ -227,7 +241,6 @@
       &::after {
         #oui > .animate();
 
-        content: @oui-datagrid-arrow-content_asc;
         display: inline-block;
         width: ~"calc(@{oui-datagrid-arrow-size} * 2)";
         height: @oui-datagrid-arrow-size;
@@ -249,14 +262,6 @@
       &:active::after {
         opacity: 1;
       }
-    }
-
-    &_sortable-asc::after {
-      content: @oui-datagrid-arrow-content_asc;
-    }
-
-    &_sortable-desc::after {
-      content: @oui-datagrid-arrow-content_desc;
     }
 
     &_sorted {

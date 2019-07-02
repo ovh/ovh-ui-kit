@@ -9,6 +9,7 @@
     @border-color_active: @oui-button-secondary-border-color_active,
     @border-color_disabled: @oui-button-secondary-border-color_disabled,
     @box-shadow: @oui-button-secondary-box-shadow,
+    @box-shadow_hover: @oui-button-secondary-box-shadow_hover,
     @box-shadow_focus: @oui-button-secondary-box-shadow_focus,
     @box-shadow_active: @oui-button-secondary-box-shadow_active,
     @box-shadow_disabled: @oui-button-secondary-box-shadow_disabled,
@@ -26,10 +27,10 @@
       color: @icon-color;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: @background-color_hover;
       border-color: @border-color_hover;
+      box-shadow: @box-shadow_hover;
     }
 
     &:focus {
