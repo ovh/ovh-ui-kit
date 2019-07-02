@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Checkbox', module)
+storiesOf('Documentation|Styles/Checkbox', module)
   .add(
     'Simple',
     () => `

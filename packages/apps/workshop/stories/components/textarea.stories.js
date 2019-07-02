@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-textarea-stories';
 angular.module(moduleName, ['oui.textarea']);
 
-storiesOf('Components/Textarea', module)
+storiesOf('Documentation|Components/Textarea', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

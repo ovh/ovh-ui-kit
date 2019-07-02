@@ -14,7 +14,7 @@ angular.module(moduleName, [
   'oui.button',
 ]);
 
-storiesOf('Components/File', module)
+storiesOf('Documentation|Components/File', module)
   .add(
     'Simple file selector ',
     forModule(moduleName).createElement(() => compileTemplate(`

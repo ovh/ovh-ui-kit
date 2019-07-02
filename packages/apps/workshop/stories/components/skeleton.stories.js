@@ -6,7 +6,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-skeleton-stories';
 angular.module(moduleName, ['oui.skeleton']);
 
-storiesOf('Components/Skeleton', module)
+storiesOf('Documentation|Components/Skeleton', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

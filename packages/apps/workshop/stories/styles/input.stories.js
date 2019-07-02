@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Input', module)
+storiesOf('Documentation|Styles/Input', module)
   .add(
     'Simple',
     () => `

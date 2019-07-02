@@ -13,7 +13,7 @@ angular.module(moduleName, [
   'oui.header',
 ]);
 
-storiesOf('Components/Guide Menu', module)
+storiesOf('Documentation|Components/Guide Menu', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

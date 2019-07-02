@@ -7,7 +7,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-popover-stories';
 angular.module(moduleName, ['oui.popover']);
 
-storiesOf('Directives/Popover', module)
+storiesOf('Documentation|Directives/Popover', module)
   .add(
     'Static (title attribute)',
     forModule(moduleName).createElement(() => compileTemplate(`

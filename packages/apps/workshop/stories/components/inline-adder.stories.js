@@ -14,7 +14,7 @@ angular.module(moduleName, [
   'oui.numeric',
 ]);
 
-storiesOf('Components/Inline Adder', module)
+storiesOf('Documentation|Components/Inline Adder', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

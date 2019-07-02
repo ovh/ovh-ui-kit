@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-back-button-stories';
 angular.module(moduleName, ['oui.back-button']);
 
-storiesOf('Components/Back Button', module)
+storiesOf('Documentation|Components/Back Button', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

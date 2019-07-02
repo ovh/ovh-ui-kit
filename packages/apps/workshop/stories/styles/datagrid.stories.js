@@ -1,15 +1,15 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Datagrid', module)
+storiesOf('Documentation|Styles/Datagrid', module)
   .add(
     'Simple',
     () => `
     <table class="oui-datagrid">
       <thead class="oui-datagrid__headers">
         <tr>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">First Name</th>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sortable-desc oui-datagrid__header_sorted" tabindex="0">First Name</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sortable-asc oui-datagrid__header_sorted" tabindex="0">Last Name</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Mother</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Father</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Email</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Phone</th>
@@ -48,9 +48,9 @@ storiesOf('Styles/Datagrid', module)
           <table class="oui-datagrid">
             <thead class="oui-datagrid__headers">
               <tr>
-                <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">First Name</th>
-                <th class="oui-datagrid__header oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
-                <th class="oui-datagrid__header oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
+                <th class="oui-datagrid__header oui-datagrid__header_sortable-desc oui-datagrid__header_sorted" tabindex="0">First Name</th>
+                <th class="oui-datagrid__header oui-datagrid__header_sortable-asc oui-datagrid__header_sorted" tabindex="0">Last Name</th>
+                <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Mother</th>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Father</th>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Email</th>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Phone</th>
@@ -89,9 +89,9 @@ storiesOf('Styles/Datagrid', module)
     <table class="oui-datagrid oui-datagrid_compact">
       <thead class="oui-datagrid__headers">
         <tr>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">First Name</th>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sortable-desc oui-datagrid__header_sorted" tabindex="0">First Name</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sortable-asc oui-datagrid__header_sorted" tabindex="0">Last Name</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Mother</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Father</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Email</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Phone</th>

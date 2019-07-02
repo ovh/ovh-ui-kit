@@ -10,7 +10,7 @@ import countries from '../_data/countries.data.json';
 const moduleName = 'oui-select-stories';
 angular.module(moduleName, ['oui.select']);
 
-storiesOf('Components/Select', module)
+storiesOf('Documentation|Components/Select', module)
   .add(
     'Array of strings',
     forModule(moduleName).createElement(() => compileTemplate(`

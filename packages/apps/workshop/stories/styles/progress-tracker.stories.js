@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Progress Tracker', module)
+storiesOf('Documentation|Styles/Progress Tracker', module)
   .add(
     'Default',
     () => `

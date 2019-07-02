@@ -7,7 +7,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-tabs-stories';
 angular.module(moduleName, ['oui.tabs']);
 
-storiesOf('Components/Tabs', module)
+storiesOf('Documentation|Components/Tabs', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

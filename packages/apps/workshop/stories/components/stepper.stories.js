@@ -16,7 +16,7 @@ angular.module(moduleName, [
   'oui.select',
 ]);
 
-storiesOf('Components/Stepper', module)
+storiesOf('Documentation|Components/Stepper', module)
   .add(
     'Simple ',
     forModule(moduleName).createElement(() => compileTemplate(`

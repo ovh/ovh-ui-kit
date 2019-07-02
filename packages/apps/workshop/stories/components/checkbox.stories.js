@@ -14,7 +14,7 @@ angular.module(moduleName, [
   'oui.radio',
 ]);
 
-storiesOf('Components/Checkbox', module)
+storiesOf('Documentation|Components/Checkbox', module)
   .add(
     'Simple checkbox',
     forModule(moduleName).createElement(() => compileTemplate(`

@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-slideshow-stories';
 angular.module(moduleName, ['oui.slideshow']);
 
-storiesOf('Components/Slideshow', module)
+storiesOf('Documentation|Components/Slideshow', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

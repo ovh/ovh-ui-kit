@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Navbar', module)
+storiesOf('Documentation|Styles/Navbar', module)
   .add(
     'Simple',
     () => `

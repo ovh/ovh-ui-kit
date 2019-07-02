@@ -10,7 +10,7 @@ import { items } from '../_data/chips.data.json';
 const moduleName = 'oui-chips-stories';
 angular.module(moduleName, ['oui.chips']);
 
-storiesOf('Components/Chips', module)
+storiesOf('Documentation|Components/Chips', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

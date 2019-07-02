@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-dropdown-stories';
 angular.module(moduleName, ['oui.dropdown']);
 
-storiesOf('Components/Dropdown', module)
+storiesOf('Documentation|Components/Dropdown', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -115,7 +115,7 @@ storiesOf('Components/Dropdown', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-dropdown>
       <button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width" oui-dropdown-trigger>
-        <span class="oui-icon oui-icon-gear_line" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-settings_extra-thin" aria-hidden="true"></span>
       </button>
       <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">

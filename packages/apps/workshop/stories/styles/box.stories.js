@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Box', module)
+storiesOf('Documentation|Styles/Box', module)
   .add(
     'Default',
     () => `

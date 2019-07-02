@@ -16,7 +16,7 @@ angular.module(moduleName, [
   'oui.radio',
 ]);
 
-storiesOf('Components/Navbar', module)
+storiesOf('Documentation|Components/Navbar', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

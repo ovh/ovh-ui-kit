@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-modal-stories';
 angular.module(moduleName, ['oui.modal']);
 
-storiesOf('Components/Modal', module)
+storiesOf('Documentation|Components/Modal', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

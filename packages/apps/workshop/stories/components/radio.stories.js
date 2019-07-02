@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-radio-stories';
 angular.module(moduleName, ['oui.radio']);
 
-storiesOf('Components/Radio', module)
+storiesOf('Documentation|Components/Radio', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

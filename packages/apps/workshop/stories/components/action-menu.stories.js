@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-action-menu-stories';
 angular.module(moduleName, ['oui.action-menu']);
 
-storiesOf('Components/Action Menu', module)
+storiesOf('Documentation|Components/Action Menu', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

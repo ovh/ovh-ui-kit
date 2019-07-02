@@ -6,7 +6,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-spinner-stories';
 angular.module(moduleName, ['oui.spinner']);
 
-storiesOf('Components/Spinner', module)
+storiesOf('Documentation|Components/Spinner', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

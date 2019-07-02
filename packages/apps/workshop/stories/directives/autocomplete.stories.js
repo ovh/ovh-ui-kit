@@ -10,7 +10,7 @@ import { strings, objects } from '../_data/autocomplete.data.json';
 const moduleName = 'oui-autocomplete-stories';
 angular.module(moduleName, ['oui.autocomplete']);
 
-storiesOf('Directives/Autocomplete', module)
+storiesOf('Documentation|Directives/Autocomplete', module)
   .add(
     'Array of strings',
     forModule(moduleName).createElement(() => compileTemplate(`
