@@ -10,11 +10,27 @@
   > .oui-button {
     #oui > .button-color(
       @background-color: @oui-input-group-button-background-color,
-      @border-color_disabled: @oui-input-group-button-border-color_disabled
+      @background-color_hover: @oui-input-group-button-background-color_hover,
+      @background-color_active: @oui-input-group-button-background-color_active,
+      @background-color_disabled: @oui-input-group-button-background-color_disabled,
+      @border-color: @oui-input-group-button-border-color,
+      @border-color_hover: @oui-input-group-button-border-color_hover,
+      @border-color_active: @oui-input-group-button-border-color_active,
+      @border-color_disabled: @oui-input-group-button-border-color_disabled,
+      @box-shadow: @oui-input-group-button-box-shadow,
+      @box-shadow_focus: @oui-input-group-button-box-shadow_focus,
+      @box-shadow_active: @oui-input-group-button-box-shadow_active,
+      @box-shadow_disabled: @oui-input-group-button-box-shadow_disabled,
+      @font-color: @oui-input-group-button-font-color,
+      @font-color_disabled: @oui-input-group-button-font-color_disabled,
+      @icon-color: @oui-input-group-button-icon-color,
+      @icon-color_disabled: @oui-input-group-button-icon-color_disabled
     );
 
+    line-height: @oui-input-group-button-line-height;
     padding: @oui-input-group-button-padding;
-    border-width: @oui-button-secondary-border-width;
+    border-width: @oui-input-group-button-border-width;
+    font-size: @oui-input-group-button-font-size;
   }
 
   > .oui-input {
