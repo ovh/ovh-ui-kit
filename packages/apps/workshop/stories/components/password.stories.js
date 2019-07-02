@@ -14,7 +14,7 @@ angular.module(moduleName, [
   'oui.field',
 ]);
 
-storiesOf('Components/Password', module)
+storiesOf('Documentation|Components/Password', module)
   .add(
     'Normal',
     forModule(moduleName).createElement(() => compileTemplate(`

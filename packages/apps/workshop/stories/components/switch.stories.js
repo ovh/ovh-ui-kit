@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-switch-stories';
 angular.module(moduleName, ['oui.switch']);
 
-storiesOf('Components/Switch', module)
+storiesOf('Documentation|Components/Switch', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

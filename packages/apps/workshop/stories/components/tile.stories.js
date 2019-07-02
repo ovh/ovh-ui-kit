@@ -13,7 +13,7 @@ angular.module(moduleName, [
   'oui.action-menu',
 ]);
 
-storiesOf('Components/Tile', module)
+storiesOf('Documentation|Components/Tile', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

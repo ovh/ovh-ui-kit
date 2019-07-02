@@ -21,7 +21,7 @@ angular.module(moduleName, [
   'oui.calendar',
 ]);
 
-storiesOf('Components/Field', module)
+storiesOf('Documentation|Components/Field', module)
   .add(
     'Input',
     forModule(moduleName).createElement(() => compileTemplate(`

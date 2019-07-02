@@ -19,7 +19,7 @@ angular.module(moduleName, [
   'oui.action-menu',
 ]);
 
-storiesOf('Components/Datagrid', module)
+storiesOf('Documentation|Components/Datagrid', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

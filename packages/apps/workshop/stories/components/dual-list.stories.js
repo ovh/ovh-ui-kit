@@ -11,7 +11,7 @@ import data from '../_data/dual-list.data.json';
 const moduleName = 'oui-dual-list-stories';
 angular.module(moduleName, ['oui.dual-list']);
 
-storiesOf('Components/Dual List', module)
+storiesOf('Documentation|Components/Dual List', module)
   .add(
     'Array of strings',
     forModule(moduleName).createElement(() => compileTemplate(`

@@ -7,7 +7,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-tooltip-stories';
 angular.module(moduleName, ['oui.tooltip']);
 
-storiesOf('Directives/Tooltip', module)
+storiesOf('Documentation|Directives/Tooltip', module)
   .add(
     'Static (title attribute)',
     forModule(moduleName).createElement(() => compileTemplate(`

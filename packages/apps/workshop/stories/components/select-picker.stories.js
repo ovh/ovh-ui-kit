@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-select-picker-stories';
 angular.module(moduleName, ['oui.select-picker']);
 
-storiesOf('Components/Select Picker', module)
+storiesOf('Documentation|Components/Select Picker', module)
   .add(
     'Basic',
     forModule(moduleName).createElement(() => compileTemplate(`

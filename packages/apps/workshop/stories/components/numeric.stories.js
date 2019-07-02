@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-numeric-stories';
 angular.module(moduleName, ['oui.numeric']);
 
-storiesOf('Components/Numeric', module)
+storiesOf('Documentation|Components/Numeric', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

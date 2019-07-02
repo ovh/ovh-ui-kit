@@ -10,7 +10,7 @@ import { objects } from '../_data/autocomplete.data.json';
 const moduleName = 'oui-search-stories';
 angular.module(moduleName, ['oui.search']);
 
-storiesOf('Components/Search', module)
+storiesOf('Documentation|Components/Search', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

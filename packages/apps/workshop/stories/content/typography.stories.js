@@ -7,7 +7,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-typography-stories';
 angular.module(moduleName, ['oui.tooltip']);
 
-storiesOf('Content/Typography', module)
+storiesOf('Documentation|Content/Typography', module)
   .add(
     'Headings',
     () => `
@@ -84,7 +84,7 @@ storiesOf('Content/Typography', module)
     'Links (with icon)',
     () => `
     <p>
-      <a href="#" class="oui-link_icon">
+      <a href="#" class="oui-link oui-link_icon">
         The quick brown fox jumps over the lazy dog
         <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
       </a>

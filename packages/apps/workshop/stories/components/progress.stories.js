@@ -7,7 +7,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-progress-stories';
 angular.module(moduleName, ['oui.progress']);
 
-storiesOf('Components/Progress', module)
+storiesOf('Documentation|Components/Progress', module)
   .add(
     'Variants',
     forModule(moduleName).createElement(() => compileTemplate(`

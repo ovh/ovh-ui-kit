@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-form-actions-stories';
 angular.module(moduleName, ['oui.form-actions']);
 
-storiesOf('Components/Form Actions', module)
+storiesOf('Documentation|Components/Form Actions', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

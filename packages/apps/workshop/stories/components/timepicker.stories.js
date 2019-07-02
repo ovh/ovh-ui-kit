@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-timepicker-stories';
 angular.module(moduleName, ['oui.timepicker']);
 
-storiesOf('Components/Timepicker', module)
+storiesOf('Documentation|Components/Timepicker', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

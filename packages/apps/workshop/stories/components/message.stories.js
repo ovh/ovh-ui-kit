@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-message-stories';
 angular.module(moduleName, ['oui.message']);
 
-storiesOf('Components/Message', module)
+storiesOf('Documentation|Components/Message', module)
   .add(
     'Normal',
     forModule(moduleName).createElement(() => compileTemplate(`

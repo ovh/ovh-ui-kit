@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-header-stories';
 angular.module(moduleName, ['oui.header']);
 
-storiesOf('Components/Header', module)
+storiesOf('Documentation|Components/Header', module)
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Content/Icons', module)
+storiesOf('Documentation|Content/Icons', module)
   .add(
     'Usage',
     () => `
@@ -233,6 +233,11 @@ storiesOf('Content/Icons', module)
       </div>
 
       <div class="oui-icon-badge">
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-book_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-book_extra-thin</code></div>
+      </div>
+
+      <div class="oui-icon-badge">
         <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-calendar_extra-thin" aria-hidden="true"></span></div>
         <div class="oui-icon-badge__code"><code>.oui-icon-calendar_extra-thin</code></div>
       </div>
@@ -268,13 +273,13 @@ storiesOf('Content/Icons', module)
       </div>
 
       <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-ellypsis-vertical_extra-thin" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code"><code>.oui-icon-ellypsis-vertical_extra-thin</code></div>
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-ellipsis-vertical_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-ellipsis-vertical_extra-thin</code></div>
       </div>
 
       <div class="oui-icon-badge">
-        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-ellypsis_extra-thin" aria-hidden="true"></span></div>
-        <div class="oui-icon-badge__code"><code>.oui-icon-ellypsis_extra-thin</code></div>
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-ellipsis_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-ellipsis_extra-thin</code></div>
       </div>
 
       <div class="oui-icon-badge">

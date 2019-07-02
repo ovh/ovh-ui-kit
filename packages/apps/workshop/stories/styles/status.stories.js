@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Status', module)
+storiesOf('Documentation|Styles/Status', module)
   .add(
     'Variants',
     () => `

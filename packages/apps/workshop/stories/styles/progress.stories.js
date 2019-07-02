@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Styles/Progress', module)
+storiesOf('Documentation|Styles/Progress', module)
   .add(
     'Native',
     () => `
