@@ -293,7 +293,7 @@
 
 @oui-back-button-arrow-padding: rem-calc(5);
 @oui-back-button-arrow-spacing: rem-calc(10);
-@oui-back-button-arrow-size: rem-calc(20);
+@oui-back-button-arrow-size: rem-calc(24);
 @oui-back-button-arrow-vertical-align: middle;
 
 // Box
@@ -470,7 +470,7 @@
 
 @oui-calendar-icon-color: @oui-color-pacific;
 @oui-calendar-icon-color_hover: @oui-color-sapphire;
-@oui-calendar-icon-size: rem-calc(12);
+@oui-calendar-icon-size: rem-calc(20);
 @oui-calendar-icon-spacing: rem-calc(12);
 
 @oui-calendar-input-font-color: @oui-input-font-color;
@@ -577,6 +577,7 @@
 
 // Clipboard - Button
 @oui-clipboard-button-width: @oui-input-group-button-min-width;
+@oui-clipboard-button-icon-size: @oui-input-group-button-icon-size;
 
 // Collapsible
 @oui-collapsible-margin: rem-calc(4);
@@ -1056,7 +1057,7 @@
 @oui-message-close-button-border: none;
 @oui-message-close-button-width: @oui-message-close-button-font-size;
 @oui-message-close-button-height: @oui-message-close-button-font-size;
-@oui-message-close-button-font-size: rem-calc(10);
+@oui-message-close-button-font-size: rem-calc(16);
 @oui-message-close-button-margin: rem-calc(-5) rem-calc(-6) 0 rem-calc(16);
 @oui-message-close-button-padding: 0;
 @oui-message-close-button-top: rem-calc(12);
@@ -1113,7 +1114,7 @@
 @oui-modal-backdrop-color: fade(@oui-color-shuttle, 50%);
 @oui-modal-loader-background-color: rgba(255, 255, 255, 0.5);
 
-@oui-modal-close-button-size: rem-calc(12);
+@oui-modal-close-button-size: rem-calc(16);
 @oui-modal-close-button-padding-x: rem-calc(10);
 @oui-modal-close-button-padding-y: rem-calc(9);
 @oui-modal-close-button-color: @oui-color-info-dark;
@@ -1367,7 +1368,7 @@
 // Popover - Help button
 @oui-popover-button-line-height: 1;
 @oui-popover-button-spacing: rem-calc(10);
-@oui-popover-button-content: @oui-icon-index-help_circle;
+@oui-popover-button-content: @oui-icon-index-help;
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
 @oui-popover-button-font-size: rem-calc(16);
@@ -1427,8 +1428,8 @@
 @oui-progress-tracker-status-font-size: rem-calc(20);
 @oui-progress-tracker-status-font-size_complete: rem-calc(18);
 @oui-progress-tracker-status-font-size_error: rem-calc(18);
-@oui-progress-tracker-status-icon_complete: @oui-icon-index-ok_extra-thin;
-@oui-progress-tracker-status-icon_error: @oui-icon-index-close_extra-thin;
+@oui-progress-tracker-status-icon_complete: @oui-icon-index-ok;
+@oui-progress-tracker-status-icon_error: @oui-icon-index-close;
 
 // Radio
 @oui-radio-min-height: @oui-choice-min-height;
@@ -1539,9 +1540,8 @@
 @oui-select-background-color_disabled: @oui-input-background-color_disabled;
 @oui-select-background-color_error: @oui-input-background-color_error;
 
-@oui-select-icon-size: rem-calc(10);
-@oui-select-icon-spacing: rem-calc(18);
-@oui-select-icon-position-right: rem-calc(12);
+@oui-select-icon-size: @oui-button-icon-size;
+@oui-select-icon-spacing: @oui-button-icon-offset;
 
 // Select - Ui-Select
 @oui-ui-select-margin: @oui-select-margin;
@@ -1554,10 +1554,6 @@
 @oui-ui-select-button-border-color_error: @oui-select-border-color_error;
 @oui-ui-select-button-border-width: @oui-select-border-width;
 @oui-ui-select-button-background-color_error: @oui-select-background-color_error;
-
-@oui-ui-select-icon-size: rem-calc(10);
-@oui-ui-select-icon-spacing: rem-calc(18);
-@oui-ui-select-icon-position-right: rem-calc(12);
 
 @oui-ui-select-menu-min-width: @oui-dropdown-menu-min-width;
 @oui-ui-select-menu-max-height: rem-calc(200);
@@ -1666,8 +1662,8 @@
 @oui-sidebar-arrow-color: @oui-color-info-medium;
 @oui-sidebar-arrow-color_responsive: @oui-color-zodiac;
 @oui-sidebar-arrow-padding: (@oui-sidebar-menu-back-padding + @oui-sidebar-arrow-spacing);
-@oui-sidebar-arrow-size: rem-calc(10);
-@oui-sidebar-arrow-spacing: rem-calc(20);
+@oui-sidebar-arrow-size: rem-calc(16);
+@oui-sidebar-arrow-spacing: rem-calc(16);
 
 // Sidebar List
 @oui-sidebar-list-max-height: 35vh;

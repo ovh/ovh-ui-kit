@@ -43,7 +43,7 @@
             "class": "navbar-notification__list",
             "title": "<div>Your</div>notifications",
             "headerTitle": "Your notifications",
-            "iconClass": "oui-icon oui-icon-info_circle",
+            "iconClass": "oui-icon oui-icon-bell",
             "iconAnimated": true,
             "subLinks": [
               {
@@ -87,7 +87,7 @@
             "name": "libero",
             "title": "<div>Need</div>help",
             "headerTitle": "Need help",
-            "iconClass": "oui-icon oui-icon-help_circle",
+            "iconClass": "oui-icon oui-icon-help",
             "subLinks": [
                 {
                     "title": "Donec",
@@ -128,7 +128,7 @@
         {
             "name": "user",
             "title": "<div>Hello Username</div>your account",
-            "iconClass": "oui-icon oui-icon-info_circle",
+            "iconClass": "oui-icon oui-icon-user",
             "subLinks": [
                 {
                     "name": "user.adipiscing",
@@ -408,7 +408,7 @@
         "name": "notifications",
         "class": "navbar-notification__list",
         "title": "Notifications",
-        "iconClass": "oui-icon oui-icon-info_circle",
+        "iconClass": "oui-icon oui-icon-bell",
         "subLinks": null,
         "limitTo": 10
     }]

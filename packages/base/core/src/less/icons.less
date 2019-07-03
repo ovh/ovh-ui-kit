@@ -32,8 +32,20 @@
     animation-iteration-count: infinite;
   }
 
-  // Fix bad vertical alignment from this icon
-  &-eye-blocked::before { margin-top: -0.1em; }
+  // Deprecated: Support for old/duplicate classnames
+  &-close_thin {
+    &:extend(.oui-icon-close all);
+  }
+
+  &-copy-error,
+  &-copy-normal,
+  &-copy-success {
+    &:extend(.oui-icon-copy all);
+  }
+
+  &-external_link {
+    &:extend(.oui-icon-external-link all);
+  }
 }
 
 @keyframes oui-shake {

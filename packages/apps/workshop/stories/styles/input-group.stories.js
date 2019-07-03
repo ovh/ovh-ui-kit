@@ -56,13 +56,13 @@ storiesOf('Documentation|Styles/Input Group', module)
     <div class="oui-input-group oui-input-group_xs">
       <input class="oui-input" placeholder="XS">
       <button class="oui-button oui-button_small-width" type="button">
-        <span class="oui-icon oui-icon-search_extra-thin"></span>
+        <span class="oui-icon oui-icon-search"></span>
       </button>
     </div>
     <div class="oui-input-group oui-input-group_s">
       <input class="oui-input" placeholder="S">
       <button class="oui-button oui-button_small-width" type="button">
-        <span class="oui-icon oui-icon-search_extra-thin"></span>
+        <span class="oui-icon oui-icon-search"></span>
       </button>
     </div>
     <div class="oui-input-group oui-input-group_m">

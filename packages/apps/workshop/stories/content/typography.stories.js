@@ -86,7 +86,7 @@ storiesOf('Documentation|Content/Typography', module)
     <p>
       <a href="#" class="oui-link oui-link_icon">
         The quick brown fox jumps over the lazy dog
-        <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-external-link" aria-hidden="true"></span>
       </a>
     </p>
     `,

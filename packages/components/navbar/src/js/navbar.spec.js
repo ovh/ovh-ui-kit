@@ -291,7 +291,7 @@ describe('ouiNavbar', () => {
           title: 'bar',
           label: 'lorem',
           badge: 5,
-          icon: 'oui-icon oui-icon-help_circle',
+          icon: 'oui-icon oui-icon-help',
           text: 'Lorem ipsum',
         });
 
@@ -336,7 +336,7 @@ describe('ouiNavbar', () => {
           title: 'bar',
           label: 'lorem',
           badge: 5,
-          icon: 'oui-icon oui-icon-help_circle',
+          icon: 'oui-icon oui-icon-help',
           text: 'Lorem ipsum',
         });
         const dropdownMenu = component.find('oui-navbar-dropdown-menu');

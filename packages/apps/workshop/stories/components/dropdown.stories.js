@@ -115,7 +115,7 @@ storiesOf('Documentation|Components/Dropdown', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-dropdown>
       <button type="button" class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width" oui-dropdown-trigger>
-        <span class="oui-icon oui-icon-settings_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-settings" aria-hidden="true"></span>
       </button>
       <oui-dropdown-content>
         <oui-dropdown-group label="Lorem ipsum">
