@@ -25,7 +25,7 @@
 
     // UI Select
     .oui-icon {
-      margin-right: @oui-button-dropdown-margin-right;
+      margin-right: @oui-select-icon-spacing;
       position: absolute;
       right: 1px;
       top: 1px;
@@ -36,7 +36,7 @@
 
       &::before {
         display: block;
-        font-size: @oui-button-dropdown-icon-size;
+        font-size: @oui-select-icon-size;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
@@ -45,7 +45,7 @@
 
     ~ .oui-icon,
     .oui-icon {
-      color: @oui-select-font-color;
+      color: inherit;
     }
 
     &::-ms-expand {
@@ -66,11 +66,6 @@
       outline: none;
       box-shadow: @oui-select-box-shadow_focus;
       background: @oui-select-background-color_focus;
-
-      ~ .oui-icon,
-      .oui-icon {
-        color: @oui-select-border-color_focus;
-      }
     }
 
     &:disabled,
@@ -82,11 +77,6 @@
       background-color: @oui-select-background-color_disabled;
       box-shadow: none;
       color: @oui-select-font-color_disabled;
-
-      ~ .oui-icon,
-      .oui-icon {
-        color: @oui-select-font-color_disabled;
-      }
     }
     // stylelint-enable no-descending-specificity
   };

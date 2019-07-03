@@ -12,7 +12,8 @@
     #oui > .for(@oui-icon-index); .-each(@index) {
       #oui > .define(@index);
 
-      &.oui-icon-@{index}::before {
+      &.oui-icon-@{index}::before,
+      &.oui-icon-@{index}_extra-thin::before { // Deprecated: Support for old classnames
         display: block;
         content: @@content;
       }

@@ -87,7 +87,7 @@
             "name": "libero",
             "title": "<div class=\"oui-color-gothic\">Need</div><span>help</span>",
             "headerTitle": "Need help",
-            "iconClass": "oui-icon oui-icon-help_circle",
+            "iconClass": "oui-icon oui-icon-help",
             "subLinks": [
                 {
                     "title": "Donec",

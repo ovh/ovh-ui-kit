@@ -19,22 +19,22 @@ storiesOf('Documentation|Styles/Button', module)
     () => `
     <p>
       <button class="oui-button oui-button_primary oui-button_icon-left">
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
         Primary
       </button>
       <button class="oui-button oui-button_secondary oui-button_icon-right">
         Secondary
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       </button>
     </p>
     <p>
       <button class="oui-button oui-button_primary oui-button_icon-left" disabled>
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
         Primary
       </button>
       <button class="oui-button oui-button_secondary oui-button_icon-right" disabled>
         Secondary
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       </button>
     </p>
     `,
@@ -44,30 +44,30 @@ storiesOf('Documentation|Styles/Button', module)
     () => `
     <p>
       <button class="oui-button oui-button_primary oui-button_icon-left">
-        <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Primary
       </button>
       <button class="oui-button oui-button_secondary oui-button_icon-right">
         Secondary
-        <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_dropdown">
         Dropdown
-        <span class="oui-icon oui-icon-chevron-down_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
       </button>
     </p>
     <p>
       <button class="oui-button oui-button_primary oui-button_icon-left" disabled>
-        <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Primary
       </button>
       <button class="oui-button oui-button_secondary oui-button_icon-right" disabled>
         Secondary
-        <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_dropdown" disabled>
         Dropdown
-        <span class="oui-icon oui-icon-chevron-down_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
       </button>
     </p>
     `,
@@ -78,23 +78,23 @@ storiesOf('Documentation|Styles/Button', module)
     <div>
       <button class="oui-button oui-button_link">Click me to get more information</button>
       <button class="oui-button oui-button_link oui-button_icon-left">
-        <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Previous page
       </button>
       <button class="oui-button oui-button_link oui-button_icon-right">
         Next page
-        <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
     </div>
     <div>
       <button class="oui-button oui-button_link" disabled>Click me to get more information</button>
       <button class="oui-button oui-button_link oui-button_icon-left" disabled>
-        <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Previous page
       </button>
       <button class="oui-button oui-button_link oui-button_icon-right" disabled>
         Next page
-        <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
     </div>
     `,
@@ -105,15 +105,15 @@ storiesOf('Documentation|Styles/Button', module)
     <div style="width: 40%; display: inline-block;">
       <button class="oui-button oui-button_full-width oui-button_primary">Primary Button Full width</button>
       <button class="oui-button oui-button_full-width oui-button_link oui-button_icon-left">
-          <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Button link Full width Icon left
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_primary">
-          <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Primary Full width Icon left
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_secondary">
-          <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Secondary Full width Icon left
       </button>
     </div>
@@ -121,15 +121,15 @@ storiesOf('Documentation|Styles/Button', module)
       <button class="oui-button oui-button_full-width oui-button_secondary">Secondary Button Full width</button>
       <button class="oui-button oui-button_full-width oui-button_link oui-button_icon-right">
           Button link Full width Icon right
-          <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary">
           Secondary Full width Icon right
-          <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
       <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_secondary">
           Secondary Full width Icon right
-          <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+          <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
     </div>
     `,
@@ -139,10 +139,10 @@ storiesOf('Documentation|Styles/Button', module)
     () => `
     <button class="oui-button oui-button_primary oui-button_small-width">Ok</button>
     <button class="oui-button oui-button_secondary oui-button_small-width">
-      <span class="oui-icon oui-icon-chevron-left_extra-thin" aria-hidden="true"></span>
+      <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
     </button>
     <button class="oui-button oui-button_secondary oui-button_small-width">
-      <span class="oui-icon oui-icon-chevron-right_extra-thin" aria-hidden="true"></span>
+      <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
     </button>
     `,
   )
@@ -151,22 +151,22 @@ storiesOf('Documentation|Styles/Button', module)
     () => `
     <p>
       <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left">
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
         Primary
       </button>
       <button class="oui-button oui-button_s oui-button_secondary oui-button_icon-right">
         Secondary
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       </button>
     </p>
     <p>
       <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left" disabled>
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
         Primary
       </button>
       <button class="oui-button oui-button_s oui-button_secondary oui-button_icon-right" disabled>
         Secondary
-        <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       </button>
     </p>
     `,

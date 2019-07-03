@@ -19,7 +19,7 @@ storiesOf('Components|Buttons/Primary', module)
     'Normal + Icon',
     () => `
     <button class="oui-button oui-button_primary oui-button_icon-left">
-      <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+      <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
     </button>`,
   )
@@ -27,7 +27,7 @@ storiesOf('Components|Buttons/Primary', module)
     'Normal + Icon (Disabled)',
     () => `
     <button class="oui-button oui-button_primary oui-button_icon-left" disabled>
-      <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+      <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
     </button>`,
   )
@@ -49,7 +49,7 @@ storiesOf('Components|Buttons/Primary', module)
     'Small + Icon',
     () => `
     <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left">
-      <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+      <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
     </button>`,
   )
@@ -57,7 +57,7 @@ storiesOf('Components|Buttons/Primary', module)
     'Small + Icon (Disabled)',
     () => `
     <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left" disabled>
-      <span class="oui-icon oui-icon-folder_extra-thin" aria-hidden="true"></span>
+      <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
     </button>`,
   );

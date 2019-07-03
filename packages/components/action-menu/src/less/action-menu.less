@@ -11,10 +11,10 @@
   border-radius: @oui-action-button-border-radius;
   background-color: @oui-action-button-background-color;
 
-  circle {
+  .oui-icon {
     #oui > .animate();
 
-    fill: @oui-action-button-foreground-color;
+    color: @oui-action-button-foreground-color;
   }
 
   &[aria-expanded="true"] {
@@ -26,9 +26,8 @@
     border-color: @oui-action-button-border-color_hover;
     background-color: @oui-action-button-background-color_hover;
 
-    circle {
-      fill: @oui-action-button-foreground-color_hover;
-      transform-origin: center;
+    .oui-icon {
+      color: @oui-action-button-foreground-color_hover;
     }
   }
 
@@ -47,8 +46,8 @@
     border-color: @oui-action-button-border-color_disabled;
     background-color: @oui-action-button-background-color_disabled;
 
-    circle {
-      fill: @oui-action-button-foreground-color_disabled;
+    .oui-icon {
+      color: @oui-action-button-foreground-color_disabled;
     }
   }
 }

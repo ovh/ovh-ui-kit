@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icons/System/ok</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/System/ok" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M9,16.5857864 L19.2928932,6.29289322 C19.6834175,5.90236893 20.3165825,5.90236893 20.7071068,6.29289322 C21.0976311,6.68341751 21.0976311,7.31658249 20.7071068,7.70710678 L9,19.4142136 L3.29289322,13.7071068 C2.90236893,13.3165825 2.90236893,12.6834175 3.29289322,12.2928932 C3.68341751,11.9023689 4.31658249,11.9023689 4.70710678,12.2928932 L9,16.5857864 Z" id="Color" fill="#2859C0"></path>
+    </g>
+</svg>

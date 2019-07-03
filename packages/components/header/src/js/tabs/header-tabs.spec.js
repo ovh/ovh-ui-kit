@@ -39,7 +39,7 @@ describe('ouiHeaderTabs', () => {
       const $linkItem = angular.element(linkItem);
       expect($linkItem.attr('target')).toBe('_blank');
       expect($linkItem.attr('rel')).toBe('noopener');
-      expect(linkItem.querySelector('.oui-icon-external_link')).not.toBeNull();
+      expect(linkItem.querySelector('.oui-icon-external-link')).not.toBeNull();
     });
 
     it('should display the header tabs with disabled items', () => {
