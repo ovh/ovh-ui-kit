@@ -11,13 +11,17 @@
     padding: @oui-datagrid-cell-padding;
     height: @oui-datagrid-cell-height;
     white-space: nowrap;
-    border-bottom: 1px solid @oui-datagrid-cell-border-color;
+    border-top: 1px solid @oui-datagrid-cell-border-color;
     outline: none;
     color: @oui-datagrid-cell-font-color;
     cursor: default;
 
     .oui-spinner__container {
       margin: 0;
+    }
+
+    &-short {
+      width: 1rem;
     }
   }
 
@@ -27,17 +31,58 @@
   }
 
   &__row {
-    &:nth-child(odd) {
-      .oui-datagrid__cell {
+    &:nth-child(odd),
+    &.oui-datagrid__row_expandable:nth-child(4n+1),
+    &.oui-datagrid__row_expandable:nth-child(4n+1) + .oui-datagrid-row-detail {
+      .oui-datagrid__cell,
+      .oui-datagrid-row-detail__cell {
         background-color: @oui-datagrid-row-background-color_odd;
       }
     }
 
-    &:nth-child(even) {
-      .oui-datagrid__cell {
+    &:nth-child(even),
+    &.oui-datagrid__row_expandable:nth-child(4n+3),
+    &.oui-datagrid__row_expandable:nth-child(4n+3) + .oui-datagrid-row-detail {
+      .oui-datagrid__cell,
+      .oui-datagrid__cell-sticky,
+      .oui-datagrid-row-detail__cell {
         background-color: @oui-datagrid-row-background-color_even;
       }
     }
+
+    &_expandable {
+      th,
+      td {
+        position: inherit;
+      }
+
+      td {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__expand-button {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+
+    .oui-icon {
+      color: @oui-datagrid-cell-font-color;
+      font-size: @oui-dropdown-arrow-size;
+    }
+  }
+
+  &-row-detail > &__cell-sticky {
+    height:20%;
+    border: 0;
+  }
+
+  &-row-detail__container {
+    display: block;
+    color: @oui-datagrid-cell-font-color;
+    margin: 0 1rem 1rem;
+    padding: 0 0 0 2.5rem;
   }
 
   &__header {
@@ -53,6 +98,10 @@
 
     &[role="button"] {
       cursor: inherit;
+    }
+
+    &_expandable {
+      position: inherit;
     }
 
     &_sortable {
