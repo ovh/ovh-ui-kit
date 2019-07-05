@@ -1,4 +1,3 @@
-import './oui.less'; // Styles
-import moduleName from './js/components'; // Components
+import moduleName from '@ovh-ux/ui-kit.components';
 
 export default moduleName;
