@@ -309,7 +309,7 @@
 @oui-box-light-border-color: @oui-color-ironlight;
 
 // Button
-@oui-button-min-width: rem-calc(100);
+@oui-button-min-width: 0;
 @oui-button-max-width: 100%;
 @oui-button-min-height: rem-calc(32);
 @oui-button-line-height: rem-calc(16);
@@ -323,6 +323,7 @@
 @oui-button-font-weight: @oui-font-semibold;
 @oui-button-radius: @oui-global-base-radius;
 @oui-button-border-width: 0;
+@oui-button-background-color: transparent;
 
 // Button - Icons
 @oui-button-icon-size: rem-calc(24);
@@ -337,7 +338,8 @@
 
 // Button - Primary variant
 @oui-button-primary-padding: calc(@oui-button-padding-y - @oui-button-primary-border-width) calc(@oui-button-padding-x - @oui-button-primary-border-width);
-@oui-button-primary-padding_small: calc(@oui-button-large-padding-y - @oui-button-primary-border-width) calc(@oui-button-large-padding-x - @oui-button-primary-border-width);
+@oui-button-primary-padding_small: calc(@oui-button-small-padding-y - @oui-button-primary-border-width) calc(@oui-button-small-padding-x - @oui-button-primary-border-width);
+@oui-button-primary-padding_large: calc(@oui-button-large-padding-y - @oui-button-primary-border-width) calc(@oui-button-large-padding-x - @oui-button-primary-border-width);
 @oui-button-primary-border-width: 0;
 @oui-button-primary-background-color: @p-500;
 @oui-button-primary-background-color_hover: @p-700;
@@ -359,7 +361,8 @@
 
 // Button - Secondary variant
 @oui-button-secondary-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-width) calc(@oui-button-padding-x - @oui-button-secondary-border-width);
-@oui-button-secondary-padding_small: calc(@oui-button-large-padding-y - @oui-button-secondary-border-width) calc(@oui-button-large-padding-x - @oui-button-secondary-border-width);
+@oui-button-secondary-padding_small: calc(@oui-button-small-padding-y - @oui-button-secondary-border-width) calc(@oui-button-small-padding-x - @oui-button-secondary-border-width);
+@oui-button-secondary-padding_large: calc(@oui-button-large-padding-y - @oui-button-secondary-border-width) calc(@oui-button-large-padding-x - @oui-button-secondary-border-width);
 @oui-button-secondary-border-width: 2px;
 @oui-button-secondary-background-color: @oui-color-white;
 @oui-button-secondary-background-color_hover: #eff9fd;
@@ -380,6 +383,9 @@
 @oui-button-secondary-icon-color_disabled: @oui-button-secondary-font-color_disabled;
 
 // Button - Link variant
+@oui-button-link-padding: @oui-button-padding-y @oui-button-padding-x;
+@oui-button-link-padding_small: @oui-button-small-padding-y @oui-button-small-padding-x;
+@oui-button-link-padding_large: @oui-button-large-padding-y @oui-button-large-padding-x;
 @oui-button-link-font-color: @oui-link-font-color;
 @oui-button-link-font-color_hover: @oui-link-font-color_hover;
 @oui-button-link-font-color_disabled: @oui-link-font-color_disabled;
@@ -388,15 +394,14 @@
 @oui-button-link-icon-color_disabled: @oui-button-link-font-color_disabled;
 @oui-button-link-text-decoration: none;
 @oui-button-link-text-decoration_hover: underline;
-@oui-button-link-padding: @oui-button-padding-y @oui-button-padding-x;
 
 // Button - Dropdown variant
 @oui-button-dropdown-icon-size: @oui-button-icon-size;
 @oui-button-dropdown-padding-x: @oui-button-padding-x;
 @oui-button-dropdown-padding: calc(@oui-button-padding-y - @oui-button-dropdown-border-width) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-width);
-@oui-button-dropdown-padding_small: calc(@oui-button-large-padding-y - @oui-button-dropdown-border-width) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-width);
+@oui-button-dropdown-padding_large: calc(@oui-button-large-padding-y - @oui-button-dropdown-border-width) calc(@oui-button-dropdown-padding-x - @oui-button-dropdown-border-width);
 @oui-button-dropdown-padding-right: calc(@oui-button-dropdown-icon-size + (@oui-button-dropdown-padding-x * 2));
-@oui-button-dropdown-padding-right_small: calc(@oui-button-dropdown-icon-size + (@oui-button-dropdown-padding-x * 2));
+@oui-button-dropdown-padding-right_large: calc(@oui-button-dropdown-icon-size + (@oui-button-dropdown-padding-x * 2));
 @oui-button-dropdown-margin-right: @oui-button-dropdown-padding-x;
 
 @oui-button-dropdown-border-width: @oui-button-secondary-border-width;
@@ -429,6 +434,7 @@
 
 @oui-button-small-min-width: @oui-button-min-height;
 @oui-button-small-padding-x: calc((@oui-button-small-min-width - @oui-button-icon-size) / 2);
+@oui-button-small-padding-y: @oui-button-padding-y;
 
 // Button - Error status
 @oui-button-error-background-color: @oui-color-error-fade;
@@ -564,7 +570,7 @@
 @oui-chip-font-weight: @oui-font-regular;
 @oui-chip-background-color: @oui-color-foam;
 
-@oui-chip-close-icon-size: rem-calc(12);
+@oui-chip-close-icon-size: rem-calc(16);
 
 @oui-chip-container-margin: 0 0 rem-calc(10);
 @oui-chip-container-padding: rem-calc(5) rem-calc(18);
@@ -599,6 +605,8 @@
 
 @oui-collapsible-header-height: rem-calc(40);
 @oui-collapsible-header-padding: 0 rem-calc(14) 0 rem-calc(19);
+@oui-collapsible-header-font-color: @oui-color-sapphire;
+@oui-collapsible-header-font-color_active: @oui-color-sapphire;
 
 @oui-collapsible-label-color: @oui-color-sapphire;
 
@@ -613,7 +621,7 @@
 
 // Criteria Adder
 @oui-criteria-adder-spacing: rem-calc(10);
-@oui-criteria-adder-icon-size: @oui-button-icon-size_large;
+@oui-criteria-adder-icon-size: rem-calc(20); // Should be changed when updated with new icon
 @oui-criteria-adder-menu-width: rem-calc(300);
 
 @oui-criteria-adder-form-padding: rem-calc(20);
@@ -807,11 +815,6 @@
 @oui-file-input-background-color_disabled: @oui-input-background-color_disabled;
 @oui-file-input-background-color_error: @oui-color-error-fade;
 
-@oui-file-button-padding: @oui-input-group-button-padding;
-@oui-file-button-background-color: @oui-input-group-button-background-color;
-@oui-file-button-border-color_disabled: @oui-input-group-button-border-color_disabled;
-@oui-file-button-border-width: @oui-button-secondary-border-width;
-@oui-file-button-border-radius: @oui-global-base-radius;
 @oui-file-button-spacing: rem-calc(10);
 
 @oui-file-icon-width: rem-calc(40);
@@ -888,8 +891,10 @@
 @oui-header-tabs-margin: rem-calc(16) 0 0 0; // This will cause problems with nav buttons
 @oui-header-tabs-border-bottom: 1px solid #e6f5fc;
 
-@oui-header-tabs-item-padding: rem-calc(10) rem-calc(30);
+@oui-header-tabs-item-padding: rem-calc(8) rem-calc(16);
+@oui-header-tabs-item-padding_dropdown: rem-calc(8) @oui-button-dropdown-padding-right rem-calc(8) rem-calc(16);
 @oui-header-tabs-item-font-color: @primary-color;
+@oui-header-tabs-item-font-color_disabled: @oui-color-dusty;
 @oui-header-tabs-item-font-color_disabled: @oui-color-dusty;
 @oui-header-tabs-item-font-size: rem-calc(16);
 @oui-header-tabs-item-font-weight: @oui-font-semibold;
@@ -977,7 +982,7 @@
 @oui-input-group-button-min-width: rem-calc(50);
 @oui-input-group-button-min-height: @oui-button-min-height;
 @oui-input-group-button-line-height: @oui-button-line-height;
-@oui-input-group-button-padding: @oui-button-secondary-padding_small;
+@oui-input-group-button-padding: @oui-button-secondary-padding_large;
 @oui-input-group-button-background-color: @oui-input-background-color;
 @oui-input-group-button-background-color_hover: @oui-button-secondary-background-color_hover;
 @oui-input-group-button-background-color_active: @oui-button-secondary-background-color_active;
@@ -1532,10 +1537,10 @@
 @oui-search-button-font-color_disabled: @oui-color-silver;
 
 @oui-search-reset-right: rem-calc(30);
-@oui-search-reset-icon-size: rem-calc(12);
+@oui-search-reset-icon-size: rem-calc(16);
 
 @oui-search-submit-right: 0;
-@oui-search-submit-icon-size: rem-calc(20);
+@oui-search-submit-icon-size: rem-calc(16);
 
 // Select
 @oui-select-height: @oui-input-height;
@@ -1887,7 +1892,7 @@
 @oui-tabs-tab-background-color_hover: @oui-color-concrete;
 @oui-tabs-tab-background-color_active: @oui-color-white;
 
-@oui-tabs-icon-size: rem-calc(12);
+@oui-tabs-icon-size: rem-calc(16);
 @oui-tabs-icon-spacing: rem-calc(10);
 @oui-tabs-icon-color: @oui-color-silver;
 @oui-tabs-icon-color_checked: @oui-color-atlantis;

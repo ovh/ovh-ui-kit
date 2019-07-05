@@ -103,31 +103,31 @@ storiesOf('Old|Styles/Button', module)
     'Full width',
     () => `
     <div style="width: 40%; display: inline-block;">
-      <button class="oui-button oui-button_full-width oui-button_primary">Primary Button Full width</button>
-      <button class="oui-button oui-button_full-width oui-button_link oui-button_icon-left">
+      <button class="oui-button oui-button_block oui-button_primary">Primary Button Full width</button>
+      <button class="oui-button oui-button_block oui-button_link oui-button_icon-left">
           <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Button link Full width Icon left
       </button>
-      <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_primary">
+      <button class="oui-button oui-button_block oui-button_icon-left oui-button_primary">
           <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Primary Full width Icon left
       </button>
-      <button class="oui-button oui-button_full-width oui-button_icon-left oui-button_secondary">
+      <button class="oui-button oui-button_block oui-button_icon-left oui-button_secondary">
           <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Secondary Full width Icon left
       </button>
     </div>
     <div style="width: 40%; display: inline-block;">
-      <button class="oui-button oui-button_full-width oui-button_secondary">Secondary Button Full width</button>
-      <button class="oui-button oui-button_full-width oui-button_link oui-button_icon-right">
+      <button class="oui-button oui-button_block oui-button_secondary">Secondary Button Full width</button>
+      <button class="oui-button oui-button_block oui-button_link oui-button_icon-right">
           Button link Full width Icon right
           <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
-      <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_primary">
+      <button class="oui-button oui-button_block oui-button_icon-right oui-button_primary">
           Secondary Full width Icon right
           <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
-      <button class="oui-button oui-button_full-width oui-button_icon-right oui-button_secondary">
+      <button class="oui-button oui-button_block oui-button_icon-right oui-button_secondary">
           Secondary Full width Icon right
           <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
@@ -137,11 +137,11 @@ storiesOf('Old|Styles/Button', module)
   .add(
     'Small width',
     () => `
-    <button class="oui-button oui-button_primary oui-button_small-width">Ok</button>
-    <button class="oui-button oui-button_secondary oui-button_small-width">
+    <button class="oui-button oui-button_primary oui-button_small">Ok</button>
+    <button class="oui-button oui-button_secondary oui-button_small">
       <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
     </button>
-    <button class="oui-button oui-button_secondary oui-button_small-width">
+    <button class="oui-button oui-button_secondary oui-button_small">
       <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
     </button>
     `,
@@ -176,11 +176,11 @@ storiesOf('Old|Styles/Button', module)
     () => `
     <p>
       <span class="oui-button-group">
-        <button class="oui-button oui-button_secondary oui-button_small-width">1</button>
-        <button class="oui-button oui-button_secondary oui-button_small-width">2</button>
-        <button class="oui-button oui-button_secondary oui-button_small-width">3</button>
-        <button class="oui-button oui-button_secondary oui-button_small-width">4</button>
-        <button class="oui-button oui-button_secondary oui-button_small-width">5</button>
+        <button class="oui-button oui-button_secondary oui-button_small">1</button>
+        <button class="oui-button oui-button_secondary oui-button_small">2</button>
+        <button class="oui-button oui-button_secondary oui-button_small">3</button>
+        <button class="oui-button oui-button_secondary oui-button_small">4</button>
+        <button class="oui-button oui-button_secondary oui-button_small">5</button>
       </span>
     </p>
 

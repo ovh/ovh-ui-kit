@@ -44,15 +44,6 @@ oui-chips {
     font-size: @oui-chip-close-icon-size;
     border: none;
     background: none;
-
-    &:focus {
-      #oui > .outline-border();
-    }
-
-    .oui-icon {
-      color: inherit;
-      font-size: inherit;
-    }
   }
 
   &_closable { padding-right: @oui-chip-height; }
@@ -64,5 +55,13 @@ oui-chips {
     justify-content: center;
   }
 
-  &_full-width { width: 100%; }
+  // Deprecated: Support for old classname
+  &_full-width,
+  &_block { width: 100%; }
+
+  button&:hover { cursor: pointer; }
+
+  button&:focus {
+    #oui > .outline-border();
+  }
 }

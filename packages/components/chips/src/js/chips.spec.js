@@ -41,7 +41,7 @@ describe('ouiChips', () => {
     });
 
     it("should have chips with 'full-width' variant, when 'stacked' attribute is set", () => {
-      expect(component.children().hasClass('oui-chip_full-width')).toBe(true);
+      expect(component.children().hasClass('oui-chip_block')).toBe(true);
     });
 
     it("should have chips with close button, when 'closable' attribute is set", () => {

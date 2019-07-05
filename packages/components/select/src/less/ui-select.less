@@ -127,7 +127,9 @@
   }
 
   .ui-select-match-container {
-    #oui > .select-base();
+    #oui > .select-base(
+      @icon-selector: ui-select-match-icon
+    );
 
     min-height: @oui-ui-select-button-height;
     line-height: @oui-ui-select-button-line-height;

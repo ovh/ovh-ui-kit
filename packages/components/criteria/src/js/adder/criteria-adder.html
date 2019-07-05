@@ -1,7 +1,7 @@
 <oui-dropdown placement="{{::$ctrl.placement}}" arrow persistent>
-    <button type="button" class="oui-criteria-adder__button oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
+    <button type="button" class="oui-criteria-adder__button oui-button oui-button_secondary oui-button_small"
         oui-dropdown-trigger>
-        <span class="oui-icon oui-icon-filter" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-filter"></span>
     </button>
     <oui-dropdown-content>
         <form name="{{::$ctrl.name}}" novalidate
@@ -105,7 +105,7 @@
             </div>
             <!-- /Value field -->
 
-            <button class="oui-criteria-adder__submit oui-button oui-button_primary oui-button_full-width" type="submit"
+            <button class="oui-criteria-adder__submit oui-button oui-button_primary oui-button_block" type="submit"
                 ng-bind="::$ctrl.translations.submit_label">
             </button>
         </form>

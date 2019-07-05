@@ -27,7 +27,7 @@
 <div class="oui-pagination__selector"
     ng-if="$ctrl.totalItems > $ctrl.pageSize">
     <button type="button"
-        class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
+        class="oui-button oui-button_secondary oui-button_small"
         ng-attr-aria-label="{{ ::$ctrl.translations.previousPage }}"
         ng-disabled="$ctrl.currentPage === 1"
         ng-click="$ctrl.onPageChange($ctrl.getCurrentPage() - 1)">
@@ -38,7 +38,7 @@
     <div class="oui-button-group"
         ng-if="$ctrl.pageCount <= 5">
         <button type="button"
-            class="oui-button oui-button_small-width"
+            class="oui-button oui-button_small"
             ng-repeat="page in $ctrl.getPageRange() track by page"
             ng-class="{
                 'oui-button_primary oui-pagination-button_selected': page === $ctrl.currentPage,
@@ -95,7 +95,7 @@
     <!-- /Input (> 100 pages) -->
 
     <button type="button"
-        class="oui-button oui-button_secondary oui-button_icon-only oui-button_small-width"
+        class="oui-button oui-button_secondary oui-button_small"
         ng-attr-aria-label="{{ ::$ctrl.translations.nextPage }}"
         ng-disabled="$ctrl.currentPage === $ctrl.pageCount"
         ng-click="$ctrl.onPageChange($ctrl.currentPage + 1)">
