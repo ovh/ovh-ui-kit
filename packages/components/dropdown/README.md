@@ -26,7 +26,7 @@ angular.module('myModule', ['oui.dropdown']);
 
 ```html
 <oui-dropdown>
-    <button type="button" class="oui-button oui-button_secondary oui-button_small-width" oui-dropdown-trigger>
+    <button type="button" class="oui-button oui-button_secondary oui-button_small" oui-dropdown-trigger>
         <span class="oui-icon oui-icon-gear" aria-hidden="true"></span>
     </button>
     <oui-dropdown-content>

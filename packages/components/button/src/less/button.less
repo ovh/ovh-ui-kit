@@ -18,6 +18,7 @@
   border-radius: @oui-button-radius;
   border-style: solid;
   border-width: @oui-button-border-width;
+  background-color: @oui-button-background-color;
   user-select: none;
   overflow-y: hidden;
   appearance: none;
@@ -51,6 +52,61 @@ oui-button {
   display: inline-block;
 }
 
+// Icons variants
+.oui-button_icon-right .oui-icon {
+  margin-left: @oui-button-icon-spacing;
+}
+
+.oui-button_icon-left .oui-icon {
+  margin-right: @oui-button-icon-spacing;
+}
+
+// Sizes variants
+// Deprecated: Support for old classname
+.oui-button_full-width,
+.oui-button_block {
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  .oui-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: auto;
+  }
+
+  &.oui-button_icon-left .oui-icon {
+    left: @oui-button-icon-offset;
+  }
+
+  &.oui-button_icon-right .oui-icon:not(.oui-icon-external-link) {
+    right: @oui-button-icon-offset;
+  }
+
+  .oui-icon-external-link {
+    margin-left: @oui-button-external-icon-spacing;
+  }
+}
+
+// Deprecated: Support for old classname
+.oui-button_small-width,
+.oui-button_small {
+  min-width: @oui-button-small-min-width;
+  padding-left: @oui-button-small-padding-x;
+  padding-right: @oui-button-small-padding-x;
+}
+
+// Deprecated: Support for old classname
+.oui-button_large-height,
+.oui-button_large {
+  line-height: @oui-button-large-line-height;
+  padding: @oui-button-large-padding;
+  font-size: @oui-button-large-font-size;
+  font-weight: @oui-button-large-font-weight;
+}
+
 // Colors variants
 .oui-button_primary {
   #oui > .button-color(
@@ -76,7 +132,9 @@ oui-button {
   padding: @oui-button-primary-padding;
   border-width: @oui-button-primary-border-width;
 
-  &.oui-button_large { padding: @oui-button-primary-padding_small; }
+  &.oui-button_small { padding: @oui-button-primary-padding_small; }
+
+  &.oui-button_large { padding: @oui-button-primary-padding_large; }
 }
 
 .oui-button_secondary {
@@ -102,7 +160,9 @@ oui-button {
   padding: @oui-button-secondary-padding;
   border-width: @oui-button-secondary-border-width;
 
-  &.oui-button_large { padding: @oui-button-secondary-padding_small; }
+  &.oui-button_small { padding: @oui-button-secondary-padding_small; }
+
+  &.oui-button_large { padding: @oui-button-secondary-padding_large; }
 }
 
 .oui-button_dropdown {
@@ -130,12 +190,13 @@ oui-button {
   border-width: @oui-button-dropdown-border-width;
   text-align: left;
 
+  // stylelint-disable no-descending-specificity
   .oui-icon {
     margin-right: @oui-button-dropdown-margin-right;
     position: absolute;
-    right: 1px;
-    top: 1px;
-    bottom: 1px;
+    right: 0;
+    top: 0;
+    bottom: 0;
     color: inherit;
     text-align: center;
     vertical-align: middle;
@@ -155,10 +216,12 @@ oui-button {
     transform: rotate(180deg);
   }
 
+  // No need to add a small variant
   &.oui-button_large {
-    padding: @oui-button-dropdown-padding_small;
-    padding-right: @oui-button-dropdown-padding-right_small;
+    padding: @oui-button-dropdown-padding_large;
+    padding-right: @oui-button-dropdown-padding-right_large;
   }
+  // stylelint-enable no-descending-specificity
 }
 
 .oui-button_link {
@@ -170,9 +233,11 @@ oui-button {
   font-weight: @oui-button-link-font-weight;
   text-decoration: @oui-button-link-text-decoration;
 
+  // stylelint-disable no-descending-specificity
   .oui-icon {
     color: @oui-button-link-icon-color;
   }
+  // stylelint-enable no-descending-specificity
 
   &:hover,
   &:focus {
@@ -187,60 +252,14 @@ oui-button {
     color: @oui-button-link-font-color_disabled;
     text-decoration: @oui-button-link-text-decoration;
 
+    // stylelint-disable no-descending-specificity
     .oui-icon {
       color: @oui-button-link-icon-color_disabled;
     }
-  }
-}
-
-// Icons variants
-.oui-button_icon-right .oui-icon {
-  margin-left: @oui-button-icon-spacing;
-}
-
-.oui-button_icon-left .oui-icon {
-  margin-right: @oui-button-icon-spacing;
-}
-
-// Sizes variants
-.oui-button_full-width, // Deprecated: Support for old classname
-.oui-button_block {
-  max-width: none;
-  width: 100%;
-  height: 100%;
-  display: block;
-
-  .oui-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: auto;
+    // stylelint-enable no-descending-specificity
   }
 
-  &.oui-button_full-width.oui-button_icon-left .oui-icon {
-    left: @oui-button-icon-offset;
-  }
+  &.oui-button_small { padding: @oui-button-link-padding_small; }
 
-  &.oui-button_full-width.oui-button_icon-right .oui-icon:not(.oui-icon-external-link) {
-    right: @oui-button-icon-offset;
-  }
-
-  .oui-icon-external-link {
-    margin-left: @oui-button-external-icon-spacing;
-  }
-}
-
-.oui-button_small-width, // Deprecated: Support for old classname
-.oui-button_small {
-  min-width: @oui-button-small-min-width;
-  padding-left: @oui-button-small-padding-x;
-  padding-right: @oui-button-small-padding-x;
-}
-
-.oui-button_large-height, // Deprecated: Support for old classname
-.oui-button_large {
-  line-height: @oui-button-large-line-height;
-  padding: @oui-button-large-padding;
-  font-size: @oui-button-large-font-size;
-  font-weight: @oui-button-large-font-weight;
+  &.oui-button_large { padding: @oui-button-link-padding_large; }
 }

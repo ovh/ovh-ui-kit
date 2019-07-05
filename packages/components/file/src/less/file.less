@@ -120,19 +120,14 @@
   }
 
   &__button {
-    &:extend(.oui-button);
+    &:extend(.oui-button all);
+    &:extend(.oui-button_secondary all);
 
-    #oui > .button-color(
-      @background-color: @oui-file-button-background-color,
-      @border-color_disabled: @oui-file-button-border-color_disabled
-    );
+    #oui > .button-color();
 
     display: table-cell;
     margin: 0;
     margin-left: @oui-file-button-spacing;
-    padding: @oui-file-button-padding;
-    border-width: @oui-file-button-border-width;
-    border-radius: @oui-file-button-border-radius;
   }
 
   // Field Error

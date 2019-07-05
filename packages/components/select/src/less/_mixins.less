@@ -1,5 +1,6 @@
 #oui {
   .select-base(
+    @icon-selector: oui-icon
   ) {
     #oui > .animate();
     #oui > .text-ellipsis();
@@ -25,7 +26,7 @@
     white-space: normal;
 
     // UI Select
-    .oui-icon {
+    .@{icon-selector} {
       margin-right: @oui-select-icon-spacing;
       position: absolute;
       right: 1px;
@@ -44,8 +45,8 @@
       }
     }
 
-    ~ .oui-icon,
-    .oui-icon {
+    ~ .@{icon-selector},
+    .@{icon-selector} {
       color: inherit;
     }
 

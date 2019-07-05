@@ -16,9 +16,13 @@
     height: @oui-collapsible-header-height;
     margin: 0;
     padding: @oui-collapsible-header-padding;
+    color: @oui-collapsible-header-font-color;
     background-color: @oui-collapsible-background-color;
 
-    &:hover { background-color: @oui-collapsible-background-color_active; }
+    &:hover {
+      color: @oui-collapsible-header-font-color_active;
+      background-color: @oui-collapsible-background-color_active;
+    }
   }
 
   &__wrapper {

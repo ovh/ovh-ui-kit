@@ -15,9 +15,9 @@ storiesOf('Old|Styles/Input Group', module)
     </div>
 
     <div class="oui-input-group">
-      <button class="oui-button oui-button_secondary oui-button_small-width" type="button">-</button>
+      <button class="oui-button oui-button_secondary oui-button_small" type="button">-</button>
       <input class="oui-input oui-input_number" type="number" placeholder="vCores">
-      <button class="oui-button oui-button_secondary oui-button_small-width" type="button">+</button>
+      <button class="oui-button oui-button_secondary oui-button_small" type="button">+</button>
     </div>
 
     <div class="oui-input-group">
@@ -55,13 +55,13 @@ storiesOf('Old|Styles/Input Group', module)
     () => `
     <div class="oui-input-group oui-input-group_xs">
       <input class="oui-input" placeholder="XS">
-      <button class="oui-button oui-button_secondary oui-button_small-width" type="button">
+      <button class="oui-button oui-button_secondary oui-button_small" type="button">
         <span class="oui-icon oui-icon-search"></span>
       </button>
     </div>
     <div class="oui-input-group oui-input-group_s">
       <input class="oui-input" placeholder="S">
-      <button class="oui-button oui-button_secondary oui-button_small-width" type="button">
+      <button class="oui-button oui-button_secondary oui-button_small" type="button">
         <span class="oui-icon oui-icon-search"></span>
       </button>
     </div>
