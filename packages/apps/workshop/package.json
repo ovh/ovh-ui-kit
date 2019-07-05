@@ -22,7 +22,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.5.0",
     "@ovh-ux/ui-kit.config": "*",
     "@storybook/addon-a11y": "^5.1.8",
     "@storybook/addon-actions": "^5.1.8",
@@ -40,6 +40,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "storybook-addon-angularjs": "^0.0.2",
-    "webpack": "^4.34.0"
+    "webpack": "^4.35.2"
   }
 }

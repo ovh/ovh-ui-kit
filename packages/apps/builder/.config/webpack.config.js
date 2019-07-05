@@ -7,12 +7,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(baseConfig, {
   entry: {
-    'oui': './src/oui.js',
+    'oui': [
+      './src/oui.js',
+      './src/oui.less',
+    ],
 
     // Themes
-    'oui-b10':      './src/oui-b10.less',
-    'oui-ods':      './src/oui-ods.less',
-    'oui-ods-dark': './src/oui-ods-dark.less',
+    'oui-b10': './src/oui-b10.less',
   },
   output: {
     path: path.resolve('.', 'dist', 'js'),
