@@ -1,62 +1,42 @@
 import { storiesOf } from '@storybook/html';
+import { select } from '@storybook/addon-knobs';
+
+const state = {
+  label: 'State',
+  options: {
+    Normal: '',
+    Disabled: 'disabled',
+  },
+  default: '',
+};
 
 storiesOf('Components|Buttons/Primary', module)
   .add(
     'Normal',
     () => `
-    <button class="oui-button oui-button_primary">
-      Call to action
-    </button>`,
-  )
-  .add(
-    'Normal (Disabled)',
-    () => `
-    <button class="oui-button oui-button_primary" disabled>
+    <button class="oui-button oui-button_primary" ${select(state.label, state.options, state.default)}>
       Call to action
     </button>`,
   )
   .add(
     'Normal + Icon',
     () => `
-    <button class="oui-button oui-button_primary oui-button_icon-left">
+    <button class="oui-button oui-button_primary oui-button_icon-left" ${select(state.label, state.options, state.default)}>
       <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
     </button>`,
   )
   .add(
-    'Normal + Icon (Disabled)',
+    'Large',
     () => `
-    <button class="oui-button oui-button_primary oui-button_icon-left" disabled>
-      <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
+    <button class="oui-button oui-button_large oui-button_primary" ${select(state.label, state.options, state.default)}>
       Call to action
     </button>`,
   )
   .add(
-    'Small',
+    'Large + Icon',
     () => `
-    <button class="oui-button oui-button_s oui-button_primary">
-      Call to action
-    </button>`,
-  )
-  .add(
-    'Small (Disabled)',
-    () => `
-    <button class="oui-button oui-button_s oui-button_primary" disabled>
-      Call to action
-    </button>`,
-  )
-  .add(
-    'Small + Icon',
-    () => `
-    <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left">
-      <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
-      Call to action
-    </button>`,
-  )
-  .add(
-    'Small + Icon (Disabled)',
-    () => `
-    <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left" disabled>
+    <button class="oui-button oui-button_large oui-button_primary oui-button_icon-left" ${select(state.label, state.options, state.default)}>
       <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
     </button>`,

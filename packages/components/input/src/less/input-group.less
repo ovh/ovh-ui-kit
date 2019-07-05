@@ -7,32 +7,6 @@
   max-width: 100%;
   margin: @oui-input-group-margin;
 
-  > .oui-button {
-    #oui > .button-color(
-      @background-color: @oui-input-group-button-background-color,
-      @background-color_hover: @oui-input-group-button-background-color_hover,
-      @background-color_active: @oui-input-group-button-background-color_active,
-      @background-color_disabled: @oui-input-group-button-background-color_disabled,
-      @border-color: @oui-input-group-button-border-color,
-      @border-color_hover: @oui-input-group-button-border-color_hover,
-      @border-color_active: @oui-input-group-button-border-color_active,
-      @border-color_disabled: @oui-input-group-button-border-color_disabled,
-      @box-shadow: @oui-input-group-button-box-shadow,
-      @box-shadow_focus: @oui-input-group-button-box-shadow_focus,
-      @box-shadow_active: @oui-input-group-button-box-shadow_active,
-      @box-shadow_disabled: @oui-input-group-button-box-shadow_disabled,
-      @font-color: @oui-input-group-button-font-color,
-      @font-color_disabled: @oui-input-group-button-font-color_disabled,
-      @icon-color: @oui-input-group-button-icon-color,
-      @icon-color_disabled: @oui-input-group-button-icon-color_disabled
-    );
-
-    line-height: @oui-input-group-button-line-height;
-    padding: @oui-input-group-button-padding;
-    border-width: @oui-input-group-button-border-width;
-    font-size: @oui-input-group-button-font-size;
-  }
-
   > .oui-input {
     flex: 2 1 auto;
     z-index: 1; // Set border priority on inputs
@@ -48,19 +22,18 @@
     }
   }
 
-  > .oui-button,
   > .oui-input {
     display: table-cell;
     border-radius: 0;
     margin: 0;
 
-    &:first-child {
-      border-radius: @oui-input-group-border-radius 0 0 @oui-input-group-border-radius;
-    }
+    // &:first-child {
+    //   border-radius: @oui-input-group-border-radius 0 0 @oui-input-group-border-radius;
+    // }
 
-    &:last-child {
-      border-radius: 0 @oui-input-group-border-radius @oui-input-group-border-radius 0;
-    }
+    // &:last-child {
+    //   border-radius: 0 @oui-input-group-border-radius @oui-input-group-border-radius 0;
+    // }
   }
 
   > .oui-button + .oui-input,
@@ -82,7 +55,7 @@
   .oui-input,
   .oui-input:first-child {
     padding-right: @oui-input-group-button-min-width;
-    border-radius: @oui-input-group-border-radius;
+    // border-radius: @oui-input-group-border-radius;
   }
 
   .oui-icon {
