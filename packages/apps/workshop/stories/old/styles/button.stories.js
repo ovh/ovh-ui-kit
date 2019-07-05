@@ -147,24 +147,24 @@ storiesOf('Old|Styles/Button', module)
     `,
   )
   .add(
-    'Small variant',
+    'Large height',
     () => `
     <p>
-      <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left">
+      <button class="oui-button oui-button_large oui-button_primary oui-button_icon-left">
         <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
         Primary
       </button>
-      <button class="oui-button oui-button_s oui-button_secondary oui-button_icon-right">
+      <button class="oui-button oui-button_large oui-button_secondary oui-button_icon-right">
         Secondary
         <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       </button>
     </p>
     <p>
-      <button class="oui-button oui-button_s oui-button_primary oui-button_icon-left" disabled>
+      <button class="oui-button oui-button_large oui-button_primary oui-button_icon-left" disabled>
         <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
         Primary
       </button>
-      <button class="oui-button oui-button_s oui-button_secondary oui-button_icon-right" disabled>
+      <button class="oui-button oui-button_large oui-button_secondary oui-button_icon-right" disabled>
         Secondary
         <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       </button>

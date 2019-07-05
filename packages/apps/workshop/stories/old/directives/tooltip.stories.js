@@ -12,13 +12,13 @@ storiesOf('Old|Directives/Tooltip', module)
     'Static (title attribute)',
     forModule(moduleName).createElement(() => compileTemplate(`
     <p>
-      <a href="#" class="oui-link" title="This is an awesome tooltip content" oui-tooltip>focus or hover me</a>
+      <a href="#" class="oui-link" title="Lorem ipsum" oui-tooltip>focus or hover me</a>
     </p>
     <p>
-      <button class="oui-button oui-button_primary" title="This is an awesome tooltip content" oui-tooltip>focus or hover me</button>
+      <button class="oui-button oui-button_primary" title="Lorem ipsum" oui-tooltip>focus or hover me</button>
     </p>
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="focus or hover me" title="This is an awesome tooltip content" oui-tooltip>
+      <input type="text" class="oui-input oui-input_inline" placeholder="focus or hover me" title="Lorem ipsum" oui-tooltip>
     </p>
     `)),
   )
@@ -36,7 +36,7 @@ storiesOf('Old|Directives/Tooltip', module)
     </p>
     `, {
       $ctrl: {
-        text: text('Text', 'This is an awesome tooltip content'),
+        text: text('Text', 'Lorem ipsum'),
       },
     })),
   )
@@ -44,22 +44,22 @@ storiesOf('Old|Directives/Tooltip', module)
     'Directions',
     forModule(moduleName).createElement(() => compileTemplate(`
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="Top Left" oui-tooltip="This is an awesome tooltip content" oui-tooltip-placement="top-start">
+      <input type="text" class="oui-input oui-input_inline" placeholder="Top Left" oui-tooltip="Lorem ipsum" oui-tooltip-placement="top-start">
     </p>
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="Top Center" oui-tooltip="This is an awesome tooltip content" oui-tooltip-placement="top">
+      <input type="text" class="oui-input oui-input_inline" placeholder="Top Center" oui-tooltip="Lorem ipsum" oui-tooltip-placement="top">
     </p>
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="Top Right" oui-tooltip="This is an awesome tooltip content" oui-tooltip-placement="top-end">
+      <input type="text" class="oui-input oui-input_inline" placeholder="Top Right" oui-tooltip="Lorem ipsum" oui-tooltip-placement="top-end">
     </p>
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="Bottom Left" oui-tooltip="This is an awesome tooltip content" oui-tooltip-placement="bottom-start">
+      <input type="text" class="oui-input oui-input_inline" placeholder="Bottom Left" oui-tooltip="Lorem ipsum" oui-tooltip-placement="bottom-start">
     </p>
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="Bottom Center" oui-tooltip="This is an awesome tooltip content" oui-tooltip-placement="bottom">
+      <input type="text" class="oui-input oui-input_inline" placeholder="Bottom Center" oui-tooltip="Lorem ipsum" oui-tooltip-placement="bottom">
     </p>
     <p>
-      <input type="text" class="oui-input oui-input_inline" placeholder="Bottom Right" oui-tooltip="This is an awesome tooltip content" oui-tooltip-placement="bottom-end">
+      <input type="text" class="oui-input oui-input_inline" placeholder="Bottom Right" oui-tooltip="Lorem ipsum" oui-tooltip-placement="bottom-end">
     </p>
     `)),
   );
