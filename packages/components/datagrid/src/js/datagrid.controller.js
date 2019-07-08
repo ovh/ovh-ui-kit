@@ -37,6 +37,7 @@ export default class DatagridController {
     this.topbarElements = [];
     this.selectedRows = [];
     this.selectAllRows = false;
+    this.expandedRows = [];
 
     this.config = ouiDatagridConfiguration;
 
@@ -90,6 +91,9 @@ export default class DatagridController {
       this.columnElements = DatagridController.filterElements(originalContent, 'oui-datagrid-column');
       this.actionColumnElements = DatagridController.filterElements(originalContent, 'oui-action-menu');
       this.topbarElements = DatagridController.filterElements(originalContent, 'oui-datagrid-topbar');
+      this.rowDetailElements = DatagridController.filterElements(originalContent, 'oui-datagrid-row-detail');
+
+      this.expandableRows = this.rowDetailElements.length > 0;
     }
 
     const builtColumns = this.buildColumns();
@@ -186,6 +190,10 @@ export default class DatagridController {
     if (this.topbarElements.length) {
       this.topbarCompiledTemplate = this.$compile(`<div>${this.topbarElements[0].innerHTML}</div>`);
       this.hasTopbarContent = true;
+    }
+
+    if (this.expandableRows) {
+      this.rowDetailCompiledTemplate = this.$compile(`<div>${this.rowDetailElements[0].innerHTML}</div>`);
     }
 
     this.availableColumns = angular.copy(builtColumns.columns)
@@ -374,6 +382,20 @@ export default class DatagridController {
       $row: null,
       $rows: this.getSelectedRows(),
     });
+  }
+
+  toggleRowExpansion(index) {
+    if (this.expandableRows) {
+      if (!this.isRowExpanded(index)) {
+        this.expandedRows.push(index);
+      } else {
+        this.expandedRows.splice(this.expandedRows.indexOf(index), 1);
+      }
+    }
+  }
+
+  isRowExpanded(index) {
+    return this.expandedRows.includes(index);
   }
 
   static createEmptyRows(pageSize) {
