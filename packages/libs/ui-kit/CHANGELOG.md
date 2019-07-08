@@ -1,3 +1,12 @@
+## [3.3.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.0...v3.3.1) (2019-07-08)
+
+
+### Bug Fixes
+
+* **datagrid:** typo on class selector ([#465](https://github.com/ovh-ux/ovh-ui-kit/issues/465)) ([ae79692](https://github.com/ovh-ux/ovh-ui-kit/commit/ae79692))
+
+
+
 # [3.3.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.2...v3.3.0) (2019-07-08)
 
 
