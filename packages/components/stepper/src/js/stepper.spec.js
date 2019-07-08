@@ -120,6 +120,45 @@ describe('ouiStepper', () => {
         expect(button.length).toBe(1);
       });
 
+      it('should disable next button when the form is invalid', () => {
+        const element = TestUtils.compileTemplate(`
+          <oui-stepper>
+            <oui-step-form prevent-next>
+              <oui-field><input ng-model="$ctrl.model" name="input" type="text" required /></oui-field>
+            </oui-step-form>
+          </oui-stepper>`);
+        $timeout.flush();
+        const button = angular.element(element[0].querySelector('button[type="submit"][disabled="disabled"]'));
+
+        expect(button.length).toBe(1);
+      });
+
+      it('should disable next button when a custom validation is not fulfilled', () => {
+        const element = TestUtils.compileTemplate(`
+        <oui-stepper>
+          <oui-step-form
+            valid="$ctrl.favorite"
+            prevent-next>
+            <oui-field>
+              <input ng-model="$ctrl.model" name="input" type="text" />
+            </oui-field>
+          </oui-step-form>
+        </oui-stepper>`,
+        {
+          favorite: false,
+        });
+        $timeout.flush();
+
+        let button = angular.element(element[0].querySelector('button[type="submit"][disabled="disabled"]'));
+        expect(button.length).toBe(1);
+
+        element.scope().$ctrl.favorite = true;
+        element.scope().$digest();
+
+        button = angular.element(element[0].querySelector('button[type="submit"][disabled="disabled"]'));
+        expect(button.length).toBe(0);
+      });
+
       it('should submit a step', () => {
         const onSubmitSpy = jasmine.createSpy();
         const element = TestUtils.compileTemplate(`

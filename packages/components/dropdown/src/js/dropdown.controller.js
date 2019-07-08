@@ -16,7 +16,6 @@ export default class {
 
   $onInit() {
     this.isDropdownOpen = false;
-    this.hasFocus = false;
     this.currentFocusedElement = null;
 
     addBooleanParameter(this, 'arrow');
@@ -152,7 +151,7 @@ export default class {
       placement,
       modifiers: {
         flip: {
-          boundariesElement: 'viewport',
+          enabled: false,
         },
         keepTogether: {
           enabled: true,

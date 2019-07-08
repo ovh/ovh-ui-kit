@@ -1,5 +1,4 @@
-@import './_mixins';
-
+// Select Picker
 .oui-select-picker {
   #oui > .radio-base(oui-select-picker);
   #oui > .choice-thumbnail(oui-select-picker);
@@ -34,10 +33,6 @@
     padding-bottom: @oui-select-picker-value-padding;
     padding-top: @oui-select-picker-value-padding;
     width: 100%;
-  }
-
-  &__label {
-    #oui > .base-font();
   }
 
   &__label-container {
@@ -143,6 +138,7 @@ oui-select-picker-section {
   display: block;
 }
 
+// Select Picker - Light variant
 .oui-select-picker_light {
   #oui > .choice-thumbnail_light(oui-select-picker);
 
@@ -154,6 +150,29 @@ oui-select-picker-section {
   }
 }
 
+// Select Picker - Error
 .oui-select-picker_error {
-  #oui > .select-picker-error-style();
+  #oui > .choice-thumbnail_error(oui-select-picker);
+
+  .oui-select-picker__input:not(:disabled) + .oui-select-picker__label-container,
+  .oui-select-picker__input:not(:disabled):checked + .oui-select-picker__label-container {
+    // stylelint-disable no-descending-specificity
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      #oui > .radio-color(
+        @selector: oui-select-picker,
+        @icon-background-color: @oui-radio-icon-background-color_error,
+        @icon-outer-color: @oui-radio-icon-outer-color_error,
+        @icon-inner-color: @oui-radio-icon-inner-color_error
+      );
+    }
+    // stylelint-enable no-descending-specificity
+
+    .ui-select-match {
+      background-color: @oui-select-picker-value-background-color_error;
+      border-color: @oui-select-picker-value-border-color_error;
+    }
+  }
 }

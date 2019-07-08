@@ -8,11 +8,13 @@
   margin: @oui-input-group-margin;
 
   > .oui-button {
-    #oui > .button-hollow(
+    #oui > .button-color(
       @background-color: @oui-input-group-button-background-color,
-      @border-color_disabled: @oui-input-group-button-border-color_disabled,
-      @padding: @oui-input-group-button-padding
+      @border-color_disabled: @oui-input-group-button-border-color_disabled
     );
+
+    padding: @oui-input-group-button-padding;
+    border-width: @oui-button-secondary-border-width;
   }
 
   > .oui-input {
@@ -46,13 +48,10 @@
   }
 
   > .oui-button + .oui-input,
-  > .oui-button + .oui-button {
-    margin-left: -@oui-input-group-border-size;
-  }
-
+  > .oui-button + .oui-button,
   > .oui-input + .oui-input,
   > .oui-input + .oui-button {
-    border-left: 0;
+    margin-left: @oui-input-group-spacing;
   }
 }
 
@@ -61,7 +60,7 @@
 
 // Button variant
 // stylelint-disable no-descending-specificity
-.oui-input-group_button {
+.oui-input-group.oui-input-group_button {
   position: relative;
 
   .oui-input,
@@ -108,7 +107,7 @@
 // stylelint-enbale no-descending-specificity
 
 // Inline variant
-.oui-input-group_inline {
+.oui-input-group.oui-input-group_inline {
   display: inline-flex;
   width: auto;
 }

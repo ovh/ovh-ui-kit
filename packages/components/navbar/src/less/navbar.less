@@ -1,8 +1,6 @@
 @import './_mixins';
 
 .oui-navbar {
-  #oui > .base-font();
-
   min-height: @oui-navbar-height;
   display: flex;
   flex-direction: row;
@@ -15,6 +13,16 @@
   font-size: @oui-navbar-font-size;
   color: @oui-navbar-font-color;
   background-color: @oui-navbar-background-color;
+  box-shadow: @oui-navbar-box-shadow;
+  z-index: @oui-navbar-z-index;
+
+  .oui-icon {
+    &,
+    &::after,
+    a::before {
+      text-decoration: none !important;
+    }
+  }
 
   // variant 'fixed'
   &_fixed {
@@ -22,7 +30,6 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: @oui-navbar-z-index;
   }
 
   // Header/Brand
@@ -75,7 +82,7 @@
     background: @oui-navbar-backdrop-background-color;
     transition: opacity 0.25s ease-out;
     pointer-events: none;
-    z-index: -1;
+    z-index: @oui-navbar-backdrop-z-index;
 
     &_active {
       #oui > .tablet({
@@ -161,6 +168,25 @@
         @font-size: @oui-navbar-icon-font-size,
         @font-weight: @oui-navbar-icon-font-weight
       );
+    }
+
+    &_dropdown {
+      &:extend(.oui-navbar-link_tertiary all);
+
+      text-decoration: none !important;
+
+      .oui-navbar-link__text { text-decoration: @oui-navbar-link-text-decoration !important; }
+
+      &:hover .oui-navbar-link__text,
+      &:focus .oui-navbar-link__text {
+        text-decoration: @oui-navbar-link-text-decoration_hover !important;
+      }
+    }
+
+    &_dropdown&_active {
+      .oui-navbar-link__text,
+      &:hover .oui-navbar-link__text,
+      &:focus .oui-navbar-link__text { text-decoration: @oui-navbar-link-text-decoration_active; }
     }
 
     &_icon {
@@ -378,6 +404,7 @@
 
     // Header for Menu
     &__header {
+      align-items: center;
       display: block;
       padding: @oui-navbar-menu-header-padding;
       text-align: left;
@@ -412,19 +439,18 @@
     // Back Button
     &__back {
       display: block;
+      margin-right: @oui-navbar-menu-back-spacing;
       left: @oui-navbar-menu-padding;
 
       .oui-icon,
-      .oui-button {
-        padding: 0;
-        margin-bottom: 0;
-        color: @oui-navbar-arrow-color;
-      }
-    }
+      .oui-button { color: @oui-navbar-arrow-color; }
 
-    &__back ~ &__title,
-    &__back ~ &__breadcrumb {
-      padding-left: @oui-navbar-menu-back-padding;
+      .oui-button {
+        padding: @oui-navbar-menu-back-padding;
+        border: @oui-navbar-menu-back-border-width solid @oui-navbar-menu-back-border-color;
+        border-radius: @oui-navbar-menu-back-border-radius;
+        background-color: @oui-navbar-menu-back-background-color;
+      }
     }
   }
 
@@ -621,11 +647,13 @@
 
     &__time {
       padding: @oui-navbar-notification-time-padding;
+      font-weight: @oui-navbar-notification-time-font-weight;
     }
 
     &__description {
       font-size: @oui-navbar-notification-description-font-size;
-      line-height: @oui-navbar-notification-description-font-size;
+      font-weight: @oui-navbar-notification-description-font-weight;
+      line-height: @oui-navbar-notification-description-line-height;
       max-height: @oui-navbar-notification-description-max-height;
       overflow: hidden;
     }

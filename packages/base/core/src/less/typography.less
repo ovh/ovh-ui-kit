@@ -20,13 +20,12 @@ h,
 // stylelint-enable selector-type-no-unknown
 
 .oui-heading_underline {
+  padding-bottom: @oui-heading-border-spacing;
   border-bottom: @oui-heading-border-width solid @oui-heading-border-color;
 }
 
 // Labels
 .oui-label {
-  #oui > .base-font();
-
   display: block;
   padding: @oui-label-padding;
   margin: @oui-label-margin;
@@ -74,6 +73,8 @@ hr,
 // Paragraphs
 p,
 .oui-paragraph {
+  line-height: @oui-paragraph-line-height;
+  color: @oui-paragraph-font-color;
   margin: @oui-paragraph-margin;
   word-break: normal;
 }

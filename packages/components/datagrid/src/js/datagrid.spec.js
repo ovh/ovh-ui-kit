@@ -518,6 +518,59 @@ describe('ouiDatagrid', () => {
       });
     });
 
+    describe('Expandable rows', () => {
+      it('should toggle row detail on click on one row, if row detail exists', () => {
+        const element = TestUtils.compileTemplate(`
+            <oui-datagrid rows="$ctrl.rows">
+                <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                <oui-datagrid-column property="description"></oui-datagrid-column>
+                <oui-datagrid-row-detail>
+                    Contact informations :
+                    <ul>
+                        <li>Email : <span ng-bind="$row.email"></span></li>
+                        <li>Phone : <span ng-bind="$row.phone"></span></li>
+                    </ul>
+                </oui-datagrid-row-detail>
+            </oui-datagrid>
+          `, {
+          rows: fakeData.slice(0, 5),
+        });
+
+        const ctrl = element.controller('ouiDatagrid');
+        expect(ctrl.expandableRows).toBe(true);
+        expect(ctrl.expandedRows.length).toEqual(0);
+        ctrl.toggleRowExpansion(0);
+        expect(ctrl.expandedRows.length).toEqual(1);
+        expect(ctrl.isRowExpanded(0)).toBe(true);
+        expect(element.find('<span ng-bind="$row.phone>')).not.toBe(null);
+        expect(ctrl.isRowExpanded(1)).toBe(false);
+        expect(ctrl.isRowExpanded(2)).toBe(false);
+        expect(ctrl.isRowExpanded(3)).toBe(false);
+        expect(ctrl.isRowExpanded(4)).toBe(false);
+        ctrl.toggleRowExpansion(0);
+        expect(ctrl.expandedRows.length).toEqual(0);
+        expect(ctrl.isRowExpanded(0)).toBe(false);
+      });
+
+      it('should not expand any row, if no row detail exists', () => {
+        const element = TestUtils.compileTemplate(`
+            <oui-datagrid rows="$ctrl.rows">
+                <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                <oui-datagrid-column property="description"></oui-datagrid-column>
+            </oui-datagrid>
+          `, {
+          rows: fakeData.slice(0, 5),
+        });
+
+        const ctrl = element.controller('ouiDatagrid');
+        expect(ctrl.expandableRows).toBe(false);
+        ctrl.toggleRowExpansion(0);
+        expect(ctrl.expandedRows.length).toEqual(0);
+      });
+    });
+
     describe('Remote rows', () => {
       let rowsLoaderSpy;
 

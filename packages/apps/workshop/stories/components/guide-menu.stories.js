@@ -21,11 +21,11 @@ storiesOf('Components/Guide Menu', module)
       <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
         Guide 2 (button)
       </oui-guide-menu-item>
-      <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="">
+      <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#">
         Guide 1 (link)
       </oui-guide-menu-item>
       <oui-guide-menu-divider></oui-guide-menu-divider>
-      <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="" external>
+      <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#" external>
         External link
       </oui-guide-menu-item>
     </oui-guide-menu>
@@ -43,7 +43,7 @@ storiesOf('Components/Guide Menu', module)
         <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
           Guide 2 (button)
         </oui-guide-menu-item>
-        <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="">
+        <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#">
           Guide 1 (link)
         </oui-guide-menu-item>
       </oui-guide-menu-group>
@@ -51,12 +51,12 @@ storiesOf('Components/Guide Menu', module)
         <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
           Guide 2 (button)
         </oui-guide-menu-item>
-        <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="">
+        <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#">
           Guide 1 (link)
         </oui-guide-menu-item>
       </oui-guide-menu-group>
       <oui-guide-menu-divider></oui-guide-menu-divider>
-      <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="" external>
+      <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#" external>
         External link
       </oui-guide-menu-item>
     </oui-guide-menu>
@@ -75,7 +75,7 @@ storiesOf('Components/Guide Menu', module)
           <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
             Guide 2 (button)
           </oui-guide-menu-item>
-          <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="">
+          <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#">
             Guide 1 (link)
           </oui-guide-menu-item>
         </oui-guide-menu-group>
@@ -83,12 +83,12 @@ storiesOf('Components/Guide Menu', module)
           <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
             Guide 2 (button)
           </oui-guide-menu-item>
-          <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="">
+          <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#">
             Guide 1 (link)
           </oui-guide-menu-item>
         </oui-guide-menu-group>
         <oui-guide-menu-divider></oui-guide-menu-divider>
-        <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="" external>
+        <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#" external>
           External link
         </oui-guide-menu-item>
       </oui-guide-menu>

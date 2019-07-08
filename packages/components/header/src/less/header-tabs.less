@@ -1,6 +1,4 @@
 .oui-header-tabs {
-  #oui > .base-font();
-
   display: block;
 
   &__nav {
@@ -21,18 +19,21 @@
     .oui-button_dropdown {
       background-color: transparent;
       display: block;
+      color: @oui-header-tabs-item-font-color;
       font-size: @oui-header-tabs-item-font-size;
+      font-weight: @oui-header-tabs-item-font-weight;
+      box-shadow: none;
       margin: 0;
 
       .oui-icon {
         color: inherit;
         font-size: @oui-header-tabs-icon-font-size;
         margin-left: @oui-header-tabs-icon-spacing;
+        margin-right: 0;
       }
     }
 
     & > a {
-      color: @oui-header-tabs-item-font-color;
       text-decoration: none;
 
       &:focus {
@@ -43,7 +44,9 @@
     .oui-button_dropdown {
       border: none;
       border-radius: inherit;
-      font-weight: normal;
+      color: @oui-header-tabs-item-font-color;
+      font-size: @oui-header-tabs-item-font-size;
+      font-weight: @oui-header-tabs-item-font-weight;
       padding: @oui-header-tabs-item-padding;
       transition: none;
 
@@ -70,7 +73,7 @@
 
     // stylelint-disable no-descending-specificity
     &_active .oui-button_dropdown {
-      border-bottom: @oui-header-tabs-item-border-size solid;
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
     // stylelint-enable no-descending-specificity
 
@@ -82,7 +85,7 @@
       }
 
       &_active > a {
-        border-bottom: @oui-header-tabs-item-border-size solid;
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
       }
     }
 
@@ -105,9 +108,10 @@
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
-    margin: 0 @oui-header-tabs-slider-nav-width;
+    margin: @oui-header-tabs-margin;
     overflow: hidden;
     padding: 0;
+    border-bottom: @oui-header-tabs-border-bottom;
   }
 
   &__slider {
@@ -132,7 +136,7 @@
 
   .oui-dropdown_active {
     .oui-button_dropdown {
-      border-bottom: @oui-header-tabs-item-border-size solid;
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
   }
 }

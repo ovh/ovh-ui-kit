@@ -168,7 +168,33 @@ oui-checkbox {
 }
 
 // Checkbox - Error
+// stylelint-disable no-descending-specificity
 .oui-checkbox_error,
 .oui-field_error .oui-checkbox {
-  #oui > .checkbox-error-style();
+  .oui-checkbox__input:not(:disabled) ~ .oui-checkbox__label-container,
+  .oui-checkbox__input:checked:not(:disabled) ~ .oui-checkbox__label-container {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      #oui > .checkbox-color(
+        @icon-background-color: @oui-checkbox-icon-background-color_error,
+        @icon-outer-color: @oui-checkbox-icon-outer-color_error,
+        @icon-inner-color: @oui-checkbox-icon-inner-color_error
+      );
+    }
+  }
+
+  .oui-checkbox__input:not(:disabled):focus ~ .oui-checkbox__label-container,
+  .oui-checkbox__input:checked:not(:disabled):focus ~ .oui-checkbox__label-container {
+    .oui-checkbox__icon::before {
+      box-shadow: @oui-checkbox-box-shadow_error;
+    }
+  }
+
+  // Thumbnail variant
+  &.oui-checkbox_thumbnail {
+    #oui > .choice-thumbnail_error(oui-checkbox);
+  }
 }
+// stylelint-enable no-descending-specificity

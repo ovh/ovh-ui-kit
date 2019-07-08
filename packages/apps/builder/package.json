@@ -7,7 +7,7 @@
   "files": [
     "dist"
   ],
-  "main": "./src/index.js",
+  "main": "./src/oui.js",
   "scripts": {
     "build": "npm-run-all -l -s clean build:* copy",
     "build:less": "run-p build:less:*",
@@ -70,6 +70,7 @@
     "@ovh-ux/ui-kit.switch": "*",
     "@ovh-ux/ui-kit.tabs": "*",
     "@ovh-ux/ui-kit.textarea": "*",
+    "@ovh-ux/ui-kit.themes": "*",
     "@ovh-ux/ui-kit.tile": "*",
     "@ovh-ux/ui-kit.timepicker": "*",
     "@ovh-ux/ui-kit.tooltip": "*"
@@ -82,9 +83,9 @@
     "less-plugin-remcalc": "^0.1.0",
     "mini-css-extract-plugin": "^0.7.0",
     "rimraf": "^2.6.3",
-    "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.3",
-    "webpack-merge": "^4.2.1",
-    "webpack-extraneous-file-cleanup-plugin": "^2.0.0"
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-extraneous-file-cleanup-plugin": "^2.0.0",
+    "webpack-merge": "^4.2.1"
   }
 }

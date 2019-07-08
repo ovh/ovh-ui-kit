@@ -13,13 +13,13 @@
   "dependencies": {
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.core": "*",
-    "angular": ">=1.6.x"
+    "angular": "^1.7.8"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@ovh-ux/ui-kit.test": "*",
-    "angular-mocks": ">=1.6.x",
+    "angular-mocks": "^1.7.8",
     "cross-env": "^5.2.0",
     "karma": "^4.1.0",
     "lodash": "^4.17.11"

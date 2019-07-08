@@ -1,6 +1,4 @@
 .oui-pagination {
-  #oui > .base-font();
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -12,11 +10,6 @@
     justify-content: inherit;
     align-items: center;
   });
-
-  .oui-button,
-  .oui-button-group {
-    margin-bottom: 0;
-  }
 
   .oui-button_link {
     padding-left: 0;
@@ -49,12 +42,6 @@
       margin-left: 0;
     });
 
-    // Fix weird padding on Firefox <=56
-    .oui-button_secondary {
-      padding-top: @oui-pagination-button-padding;
-      padding-bottom: @oui-pagination-button-padding;
-    }
-
     > .oui-button {
       &:first-child {
         margin-right: @oui-pagination-button-spacing;
@@ -85,8 +72,6 @@
 }
 
 .oui-pagination-menu {
-  #oui > .base-font();
-
   padding: @oui-pagination-menu-padding;
 
   &__group {

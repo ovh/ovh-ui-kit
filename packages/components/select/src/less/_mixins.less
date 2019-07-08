@@ -1,34 +1,93 @@
 #oui {
-  .select-error-style(
-    @select-selector: oui-select;
-    @icon-selector: oui-icon;
+  .select-base(
   ) {
-    @status: error;
-    @status-font-color: "oui-color-@{status}-dark";
-    @status-icon-color: "oui-color-@{status}-medium";
-    @status-border-color: "oui-color-@{status}-light";
-    @status-background-color: "oui-color-@{status}-fade";
+    #oui > .animate();
+    #oui > .text-ellipsis();
 
-    .@{select-selector}__input,
-    .@{select-selector}__input:hover,
-    .@{select-selector}__input:active,
-    .@{select-selector}__input:focus {
-      border-color: @@status-border-color;
-      background-color: @@status-background-color;
-      color: @@status-font-color;
+    cursor: pointer;
+    appearance: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    padding-left: @oui-select-padding-x;
+    padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
+    border: @oui-select-border-width solid @oui-select-border-color;
+    border-radius: @oui-select-border-radius;
+    background: @oui-select-background-color;
+    box-shadow: @oui-select-box-shadow;
+    color: @oui-select-font-color;
+    font-size: @oui-select-font-size;
+    font-family: inherit;
+    font-weight: @oui-select-font-weight;
+    letter-spacing: @oui-select-letter-spacing;
+    text-align: left;
+    white-space: normal;
 
-      ~ .@{icon-selector} {
-        box-shadow: none;
-        background-color: @@status-background-color;
+    // UI Select
+    .oui-icon-chevron-down {
+      margin-right: @oui-button-dropdown-margin-right;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      bottom: 1px;
+      text-align: center;
+      vertical-align: middle;
+      pointer-events: none;
 
-        &::before {
-          color: @@status-font-color;
-        }
+      &::before {
+        display: block;
+        font-size: @oui-button-dropdown-icon-size;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
 
-    .@{select-selector}__input:focus {
-      box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.35);
+    ~ .oui-icon,
+    .oui-icon-chevron-down {
+      color: @oui-select-font-color;
     }
-  }
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:hover {
+      background-color: @oui-select-background-color_hover;
+      border-color: @oui-select-border-color_hover;
+    }
+
+    // stylelint-disable no-descending-specificity
+    &:focus,
+    &_focus,
+    &_focus:hover,
+    &[aria-expanded="true"] {
+      border-color: @oui-select-border-color_focus;
+      outline: none;
+      box-shadow: @oui-select-box-shadow_focus;
+      background: @oui-select-background-color_focus;
+
+      ~ .oui-icon,
+      .oui-icon-chevron-down {
+        color: @oui-select-border-color_focus;
+      }
+    }
+
+    &:disabled,
+    &_disabled,
+    &_disabled:hover,
+    &_disabled:focus {
+      cursor: not-allowed;
+      border-color: @oui-select-border-color_disabled;
+      background-color: @oui-select-background-color_disabled;
+      box-shadow: none;
+      color: @oui-select-font-color_disabled;
+
+      ~ .oui-icon,
+      .oui-icon-chevron-down {
+        color: @oui-select-font-color_disabled;
+      }
+    }
+    // stylelint-enable no-descending-specificity
+  };
 }

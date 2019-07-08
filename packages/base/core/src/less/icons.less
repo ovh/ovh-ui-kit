@@ -12,51 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: 'liga';
 
-  &_circle {
-    width: @oui-icon-circle-size;
-    height: @oui-icon-circle-size;
-    border-radius: @oui-icon-circle-border-radius;
-    background: @oui-icon-circle-background;
-
-    &::before {
-      color: @oui-icon-circle-color;
-      font-size: ~"calc(@{oui-icon-circle-size} / 2)";
-      line-height: 2;
-      text-align: center;
-    }
-
-    // For better centering the icon
-    &.oui-icon-chevron-right {
-      letter-spacing: rem-calc(-2);
-    }
-  }
-
-  &_bicolor {
-    position: relative;
-    z-index: 1;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 90%;
-      height: 90%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      background: @oui-icon-char-color;
-      border-radius: 50%;
-      z-index: -1;
-    }
-
-    &.oui-icon-warning_circle::after {
-      width: 25%;
-      height: 75%;
-    }
-  }
-
   &_shake {
     animation-name: oui-shake;
     animation-duration: 1.5s;

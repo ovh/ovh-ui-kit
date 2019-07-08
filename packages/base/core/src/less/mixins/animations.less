@@ -1,5 +1,3 @@
-@import '../_variables';
-
 // Animations
 #oui {
   .animate-fast-out-slow-in(@duration: @oui-animation-default-timing) {
@@ -10,5 +8,6 @@
   .animate(@duration: @oui-animation-default-timing) {
     transition-duration: @duration;
     transition-timing-function: @oui-animation-default;
+    transition-property: background-color, border-color, box-shadow, color, fill;
   }
 }

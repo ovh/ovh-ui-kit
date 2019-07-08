@@ -1,6 +1,4 @@
 .oui-status {
-  #oui > .base-font();
-
   background: @oui-status-background-color;
   border: @oui-status-border;
   border-radius: @oui-status-border-radius;
@@ -17,18 +15,22 @@
   vertical-align: middle;
 
   &_success {
+    color: @oui-status-font-color_success;
     background-color: @oui-status-background-color_success;
   }
 
   &_info {
+    color: @oui-status-font-color_info;
     background-color: @oui-status-background-color_info;
   }
 
   &_warning {
+    color: @oui-status-font-color_warning;
     background-color: @oui-status-background-color_warning;
   }
 
   &_error {
+    color: @oui-status-font-color_error;
     background-color: @oui-status-background-color_error;
   }
 }

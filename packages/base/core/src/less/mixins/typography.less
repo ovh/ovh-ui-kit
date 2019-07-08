@@ -1,5 +1,3 @@
-@import '../_variables';
-
 // Typography
 #oui {
   .base-font(
@@ -28,18 +26,19 @@
     #oui > .headings(@index - 1);
 
     &@{index} {
-      #oui > .base-font();
-
+      color: extract(@oui-heading-colors, @index);
       font-size: extract(@oui-heading-font-sizes, @index);
       font-weight: extract(@oui-heading-font-weights, @index);
+      letter-spacing: extract(@oui-heading-letter-spacings, @index);
+      line-height: extract(@oui-heading-line-heights, @index);
       margin: extract(@oui-heading-margins, @index);
-      color: inherit;
     }
   }
 
   .link(
     @font-color: @oui-link-font-color,
     @font-color_hover: @oui-link-font-color_hover,
+    @font-weight: @oui-link-font-weight,
     @text-decoration: @oui-link-text-decoration,
     @text-decoration_hover: @oui-link-text-decoration_hover
   ) {
@@ -49,6 +48,7 @@
     border: none;
     background-color: transparent;
     color: @font-color;
+    font-weight: @font-weight;
     text-decoration: @text-decoration;
     line-height: inherit;
     cursor: pointer;

@@ -161,6 +161,31 @@ storiesOf('Components/Datagrid', module)
     },
   )
   .add(
+    'Expandable rows',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-datagrid
+      rows="$ctrl.data"
+      page-size="5">
+      <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+      <oui-datagrid-row-detail>
+        Birth date : <span ng-bind="$row.birth"></span>
+        <br />
+        Parents :
+        <span ng-bind="$row.parents.mother.firstName"></span> <span ng-bind="$row.parents.mother.lastName"></span> - <span ng-bind="$row.parents.father.firstName"></span> <span ng-bind="$row.parents.father.lastName"></span>
+      </oui-datagrid-row-detail>
+    </oui-datagrid>
+    `, {
+      $ctrl: {
+        data,
+      },
+    })), {
+      notes: 'This will expand datagrid rows when clicked.',
+    },
+  )
+  .add(
     'Row actions',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-datagrid

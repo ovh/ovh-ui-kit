@@ -14,7 +14,7 @@ storiesOf('Components/Back Button', module)
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`
       <oui-back-button
-        href=""
+        href="#"
         aria-label="Aria label for heading"
         on-click="$ctrl.onClick()">
         {{ $ctrl.text }}

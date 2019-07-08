@@ -63,6 +63,10 @@
     box-shadow: @oui-textarea-box-shadow_focus;
   }
 
+  &_active &__footer {
+    border-color: @oui-textarea-border-color_focus;
+  }
+
   &_disabled {
     background-color: @oui-textarea-background-color_disabled;
     border-color: @oui-textarea-border-color_disabled;
@@ -70,10 +74,18 @@
     color: @oui-textarea-font-color_disabled;
   }
 
+  &_disabled &__footer {
+    border-color: @oui-textarea-border-color_disabled;
+  }
+
   &_readonly {
     background-color: @oui-textarea-background-color_readonly;
     border-color: @oui-textarea-border-color_readonly;
     box-shadow: none;
+  }
+
+  &_readonly &__footer {
+    border-color: @oui-textarea-border-color_readonly;
   }
 
   &_error,
@@ -125,6 +137,11 @@ textarea.oui-textarea {
   &::selection {
     background: @oui-textarea-selection-background-color;
     color: @oui-textarea-selection-font-color;
+  }
+
+  &:hover {
+    border-color: @oui-textarea-border-color_hover;
+    background-color: @oui-textarea-background-color_hover;
   }
 
   &:focus {

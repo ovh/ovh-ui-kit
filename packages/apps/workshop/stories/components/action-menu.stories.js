@@ -17,14 +17,14 @@ storiesOf('Components/Action Menu', module)
         <oui-action-menu-item on-click="$ctrl.onActionClick('Action 1')">
           Action 1 (button)
         </oui-action-menu-item>
-        <oui-action-menu-item on-click="$ctrl.onActionClick('Action 2')" href="">
+        <oui-action-menu-item on-click="$ctrl.onActionClick('Action 2')" href="#">
           Action 2 (link)
         </oui-action-menu-item>
         <oui-action-menu-item disabled>
           Action 3 (disabled)
         </oui-action-menu-item>
         <oui-action-menu-divider></oui-action-menu-divider>
-        <oui-action-menu-item on-click="$ctrl.onActionClick('External link')" href="" external>
+        <oui-action-menu-item on-click="$ctrl.onActionClick('External link')" href="#" external>
           External link
         </oui-action-menu-item>
       </oui-action-menu>
@@ -43,14 +43,14 @@ storiesOf('Components/Action Menu', module)
         <oui-action-menu-item on-click="$ctrl.onActionClick('Action 1')">
           Action 1 (button)
         </oui-action-menu-item>
-        <oui-action-menu-item on-click="$ctrl.onActionClick('Action 2')" href="">
+        <oui-action-menu-item on-click="$ctrl.onActionClick('Action 2')" href="#">
           Action 2 (link)
         </oui-action-menu-item>
         <oui-action-menu-item disabled>
           Action 3 (disabled)
         </oui-action-menu-item>
         <oui-action-menu-divider></oui-action-menu-divider>
-        <oui-action-menu-item on-click="$ctrl.onActionClick('External link')" href="" external>
+        <oui-action-menu-item on-click="$ctrl.onActionClick('External link')" href="#" external>
           External link
         </oui-action-menu-item>
       </oui-action-menu>
