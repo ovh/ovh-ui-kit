@@ -1,3 +1,20 @@
+# [3.3.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.2...v3.3.0) (2019-07-08)
+
+
+### Bug Fixes
+
+* remove some one time bindings ([#459](https://github.com/ovh-ux/ovh-ui-kit/issues/459)) ([5e56d5b](https://github.com/ovh-ux/ovh-ui-kit/commit/5e56d5b))
+* **field:** display error even on field focus ([#461](https://github.com/ovh-ux/ovh-ui-kit/issues/461)) ([5276506](https://github.com/ovh-ux/ovh-ui-kit/commit/5276506))
+
+
+### Features
+
+* add themes files ([#460](https://github.com/ovh-ux/ovh-ui-kit/issues/460)) ([a2dc325](https://github.com/ovh-ux/ovh-ui-kit/commit/a2dc325))
+* **oui-datagrid:** add expandable row detail ([#462](https://github.com/ovh-ux/ovh-ui-kit/issues/462)) ([d14d008](https://github.com/ovh-ux/ovh-ui-kit/commit/d14d008))
+* **stepper:** add attribute to disable next button when invalid ([#457](https://github.com/ovh-ux/ovh-ui-kit/issues/457)) ([67dedae](https://github.com/ovh-ux/ovh-ui-kit/commit/67dedae))
+
+
+
 ## [3.2.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.1...v3.2.2) (2019-06-13)
 
 
