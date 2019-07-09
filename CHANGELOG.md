@@ -1,3 +1,13 @@
+<a name="2.33.4"></a>
+## [2.33.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.3...v2.33.4) (2019-07-09)
+
+
+### Bug Fixes
+
+* **oui-button:** remove full height when setting full width ([#471](https://github.com/ovh-ux/ovh-ui-kit/issues/471)) ([9d204e9](https://github.com/ovh-ux/ovh-ui-kit/commit/9d204e9))
+
+
+
 <a name="2.33.3"></a>
 ## [2.33.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.2...v2.33.3) (2019-06-11)
 

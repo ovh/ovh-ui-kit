@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.33.3") format("woff2"), url("./icons/icons.woff?v=2.33.3") format("woff");
+  src: url("./icons/icons.woff2?v=2.33.4") format("woff2"), url("./icons/icons.woff?v=2.33.4") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -2816,7 +2816,6 @@ oui-form-actions {
 .oui-file-selector__button_full-width {
   max-width: none;
   width: 100%;
-  height: 100%;
 }
 .oui-button_full-width .oui-icon::before,
 .oui-file-selector__button_full-width .oui-icon::before {
