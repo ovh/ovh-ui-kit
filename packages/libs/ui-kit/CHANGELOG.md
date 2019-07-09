@@ -1,3 +1,12 @@
+## [3.3.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.2...v3.3.3) (2019-07-09)
+
+
+### Bug Fixes
+
+* **button:** remove full height when setting full width ([#470](https://github.com/ovh-ux/ovh-ui-kit/issues/470)) ([f29e72f](https://github.com/ovh-ux/ovh-ui-kit/commit/f29e72f))
+
+
+
 ## [3.3.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.1...v3.3.2) (2019-07-09)
 
 
