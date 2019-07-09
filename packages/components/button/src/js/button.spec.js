@@ -63,6 +63,20 @@ describe('ouiButton', () => {
       expect(button.hasClass('oui-button_icon-right')).toBe(true);
     });
 
+    it('should have a small button', () => {
+      const component = testUtils.compileTemplate('<oui-button size="s">foo</oui-button>');
+      const button = component.find('button').eq(0);
+
+      expect(button.hasClass('oui-button_s')).toBe(true);
+    });
+
+    it('should have a large button', () => {
+      const component = testUtils.compileTemplate('<oui-button size="l">foo</oui-button>');
+      const button = component.find('button').eq(0);
+
+      expect(button.hasClass('oui-button_l')).toBe(true);
+    });
+
     it('should have a disabled submit button', () => {
       const component = testUtils.compileTemplate('<oui-button type="submit" disabled>foo</oui-button>');
       const button = component.find('button').eq(0);

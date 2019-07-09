@@ -46,6 +46,8 @@
   &:disabled {
     cursor: not-allowed;
   }
+
+  &__text { vertical-align: inherit; }
 }
 
 oui-button {
@@ -92,14 +94,14 @@ oui-button {
 
 // Deprecated: Support for old classname
 .oui-button_small-width,
-.oui-button_small {
+.oui-button_s {
   min-width: @oui-button-small-min-width;
   padding: @oui-button-small-padding;
 }
 
 // Deprecated: Support for old classname
 .oui-button_large-height,
-.oui-button_large {
+.oui-button_l {
   line-height: @oui-button-large-line-height;
   padding: @oui-button-large-padding;
   font-size: @oui-button-large-font-size;
@@ -131,9 +133,9 @@ oui-button {
   padding: @oui-button-primary-padding;
   border-width: @oui-button-primary-border-width;
 
-  &.oui-button_small { padding: @oui-button-primary-padding_small; }
+  &.oui-button_s { padding: @oui-button-primary-padding_small; }
 
-  &.oui-button_large { padding: @oui-button-primary-padding_large; }
+  &.oui-button_l { padding: @oui-button-primary-padding_large; }
 }
 
 .oui-button_secondary {
@@ -159,9 +161,9 @@ oui-button {
   padding: @oui-button-secondary-padding;
   border-width: @oui-button-secondary-border-width;
 
-  &.oui-button_small { padding: @oui-button-secondary-padding_small; }
+  &.oui-button_s { padding: @oui-button-secondary-padding_small; }
 
-  &.oui-button_large { padding: @oui-button-secondary-padding_large; }
+  &.oui-button_l { padding: @oui-button-secondary-padding_large; }
 }
 
 .oui-button_dropdown {
@@ -216,7 +218,7 @@ oui-button {
   }
 
   // No need to add a small variant
-  &.oui-button_large {
+  &.oui-button_l {
     padding: @oui-button-dropdown-padding_large;
     padding-right: @oui-button-dropdown-padding-right_large;
   }
@@ -258,7 +260,7 @@ oui-button {
     // stylelint-enable no-descending-specificity
   }
 
-  &.oui-button_small { padding: @oui-button-link-padding_small; }
+  &.oui-button_s { padding: @oui-button-link-padding_small; }
 
-  &.oui-button_large { padding: @oui-button-link-padding_large; }
+  &.oui-button_l { padding: @oui-button-link-padding_large; }
 }
