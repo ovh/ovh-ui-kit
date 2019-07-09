@@ -1,3 +1,12 @@
+## [3.3.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.1...v3.3.2) (2019-07-09)
+
+
+### Bug Fixes
+
+* **datagrid:** reflect scope change on row detail item ([#467](https://github.com/ovh-ux/ovh-ui-kit/issues/467)) ([56f76b3](https://github.com/ovh-ux/ovh-ui-kit/commit/56f76b3))
+
+
+
 ## [3.3.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.0...v3.3.1) (2019-07-08)
 
 
