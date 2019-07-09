@@ -63,4 +63,67 @@ storiesOf('Old|Components/Button', module)
         disabled: boolean('Disabled state', false),
       },
     })),
+  )
+  .add(
+    'Size variants',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <p>
+      <oui-button
+        size="l"
+        variant="primary"
+        disabled="$ctrl.disabled">
+        Call to action
+      </oui-button>
+      <oui-button
+        size="l"
+        disabled="$ctrl.disabled">
+        Call to action
+      </oui-button>
+      <oui-button
+        size="l"
+        variant="link"
+        disabled="$ctrl.disabled">
+        Call to action
+      </oui-button>
+    </p>
+    <p>
+      <oui-button
+        variant="primary"
+        disabled="$ctrl.disabled">
+        Call to action
+      </oui-button>
+      <oui-button
+        disabled="$ctrl.disabled">
+        Call to action
+      </oui-button>
+      <oui-button
+        variant="link"
+        disabled="$ctrl.disabled">
+        Call to action
+      </oui-button>
+    </p>
+    <p>
+    <oui-button
+      size="s"
+      variant="primary"
+      disabled="$ctrl.disabled">
+      <span class="oui-icon oui-icon-folder"></span>
+    </oui-button>
+      <oui-button
+        size="s"
+        disabled="$ctrl.disabled">
+        <span class="oui-icon oui-icon-folder"></span>
+      </oui-button>
+      <oui-button
+        size="s"
+        variant="link"
+        disabled="$ctrl.disabled">
+        <span class="oui-icon oui-icon-folder"></span>
+      </oui-button>
+    </p>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })),
   );

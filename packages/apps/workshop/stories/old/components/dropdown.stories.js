@@ -114,7 +114,7 @@ storiesOf('Old|Components/Dropdown', module)
     'Custom trigger button',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-dropdown>
-      <button type="button" class="oui-button oui-button_secondary oui-button_small" oui-dropdown-trigger>
+      <button type="button" class="oui-button oui-button_secondary oui-button_s" oui-dropdown-trigger>
         <span class="oui-icon oui-icon-settings" aria-hidden="true"></span>
       </button>
       <oui-dropdown-content>

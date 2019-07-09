@@ -1,16 +1,16 @@
-<button class="oui-button oui-button_large oui-button_primary"
+<button class="oui-button oui-button_l oui-button_primary"
     type="submit"
     ng-bind="::$ctrl.submitText"
     ng-click="$ctrl.onSubmit()"
     ng-disabled="$ctrl.disabled">
 </button>
-<button class="oui-button oui-button_large oui-button_link"
+<button class="oui-button oui-button_l oui-button_link"
     type="button"
     ng-if="::!$ctrl.href && !!$ctrl.onCancel"
     ng-bind="::$ctrl.cancelText"
     ng-click="$ctrl.onCancel()">
 </button>
-<a class="oui-button oui-button_large oui-button_link"
+<a class="oui-button oui-button_l oui-button_link"
     ng-if="::!!$ctrl.href"
     ng-bind="::$ctrl.cancelText"
     ng-click="$ctrl.onCancel()"

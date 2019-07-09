@@ -5,6 +5,7 @@ export default {
   bindings: {
     id: '@?',
     name: '@?',
+    size: '@?',
     type: '@?',
     variant: '@?',
     variantNav: '@?',
