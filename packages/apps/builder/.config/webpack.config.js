@@ -11,9 +11,6 @@ module.exports = merge(baseConfig, {
       './src/oui.js',
       './src/oui.less',
     ],
-
-    // Themes
-    'oui-b10': './src/oui-b10.less',
   },
   output: {
     path: path.resolve('.', 'dist', 'js'),

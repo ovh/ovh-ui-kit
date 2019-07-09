@@ -78,14 +78,6 @@ If you want to use the variables for your style, you can access it through `_var
 
 **Note**: Importing `_variables.less` will import `_constants.less` and `_icons.less` too.
 
-### Base 10px
-
-UI Kit use `rem` units and has for base `16px`. It could create size conflicts with others libraries using a base `10px`. In this case, you need to load `oui-b10.css` instead of `oui.css`.
-
-```html
-<link rel="stylesheet" href="path/to/@ovh-ux/ui-kit/dist/css/oui-b10.css">
-```
-
 ## Develop
 
 ### Run in development mode

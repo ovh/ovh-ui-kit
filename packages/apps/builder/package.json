@@ -15,8 +15,6 @@
     "build:less:icons": "lessc ./src/less/_icons.less ./dist/less/_icons.less",
     "build:less:variables": "lessc ./src/less/_variables.less ./dist/less/_variables.less",
     "build:less:tokens": "lessc ./src/less/_tokens.less ./dist/less/_tokens.less",
-    "build:less:tokens-css": "lessc ./src/less/_tokens-css.less ./dist/css/_tokens.css",
-    "build:less:tokens-scss": "lessc ./src/less/_tokens-scss.less ./dist/scss/_tokens.scss",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --colors --config ./.config/webpack.config.js",
     "clean": "rimraf ./dist ../../../dist ../../libs/ui-kit/dist",
     "copy": "run-p copy:*",
