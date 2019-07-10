@@ -11,7 +11,7 @@
     "copy": "cpx \"./docs/**/*\" \"../../../docs\"",
     "serve": "npx serve ./docs",
     "start": "yarn storybook",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 8080"
   },
   "dependencies": {
     "@ovh-ux/ui-kit-builder": "*",
