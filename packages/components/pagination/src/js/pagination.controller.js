@@ -117,6 +117,7 @@ export default class {
   }
 
   onPaginationChange() {
+    this.processTranslations();
     this.onChange({
       $event: {
         offset: this.currentOffset,

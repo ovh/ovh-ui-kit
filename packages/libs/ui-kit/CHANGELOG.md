@@ -1,3 +1,12 @@
+## [3.3.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.3...v3.3.4) (2019-07-10)
+
+
+### Bug Fixes
+
+* **pagination:** fix translation refresh on page change ([5584f92](https://github.com/ovh-ux/ovh-ui-kit/commit/5584f92))
+
+
+
 ## [3.3.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.2...v3.3.3) (2019-07-09)
 
 
