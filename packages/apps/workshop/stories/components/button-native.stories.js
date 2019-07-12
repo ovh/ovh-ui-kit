@@ -10,91 +10,57 @@ const state = {
   default: '',
 };
 
-storiesOf('Components|Buttons/Primary/Normal', module)
+storiesOf('Components|Buttons/Native/Primary', module)
   .add(
-    'Text',
+    'Default',
     () => `
     <button class="oui-button oui-button_primary" ${select(state.label, state.options, state.default)}>
       Call to action
-    </button>`,
-  )
-  .add(
-    'Text + Icon left',
-    () => `
+    </button>
     <button class="oui-button oui-button_primary oui-button_icon-left" ${select(state.label, state.options, state.default)}>
       <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
-    </button>`,
-  )
-  .add(
-    'Text + Icon right',
-    () => `
+    </button>
     <button class="oui-button oui-button_primary oui-button_icon-right" ${select(state.label, state.options, state.default)}>
       Call to action
       <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
     </button>`,
-  );
-
-storiesOf('Components|Buttons/Primary/Large', module)
+  )
   .add(
-    'Text',
+    'Large',
     () => `
     <button class="oui-button oui-button_l oui-button_primary" ${select(state.label, state.options, state.default)}>
       Call to action
-    </button>`,
-  )
-  .add(
-    'Text + Icon left',
-    () => `
+    </button>
     <button class="oui-button oui-button_l oui-button_primary oui-button_icon-left" ${select(state.label, state.options, state.default)}>
       <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
       Call to action
-    </button>`,
-  )
-  .add(
-    'Text + Icon right',
-    () => `
+    </button>
     <button class="oui-button oui-button_l oui-button_primary oui-button_icon-right" ${select(state.label, state.options, state.default)}>
       Call to action
       <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
     </button>`,
-  );
-
-storiesOf('Components|Buttons/Primary/Small', module)
+  )
   .add(
-    'Text',
+    'Small',
     () => `
     <button class="oui-button oui-button_s oui-button_primary" ${select(state.label, state.options, state.default)}>
       OK
-    </button>`,
-  )
-  .add(
-    'Icon',
-    () => `
+    </button>
     <button class="oui-button oui-button_s oui-button_primary" ${select(state.label, state.options, state.default)}>
       <span class="oui-icon oui-icon-folder"></span>
     </button>`,
-  );
-
-storiesOf('Components|Buttons/Primary/Block', module)
-  .add(
-    'Text',
-    () => `
-    <button class="oui-button oui-button_block oui-button_primary" ${select(state.label, state.options, state.default)}>
-    Call to action
-    </button>`,
   )
   .add(
-    'Text + Icon left',
+    'Block',
     () => `
+    <button class="oui-button oui-button_block oui-button_primary" ${select(state.label, state.options, state.default)}>
+      Call to action
+    </button>
     <button class="oui-button oui-button_block oui-button_primary oui-button_icon-left" ${select(state.label, state.options, state.default)}>
       <span class="oui-icon oui-icon-folder"></span>
       Call to action
-    </button>`,
-  )
-  .add(
-    'Text + Icon right',
-    () => `
+    </button>
     <button class="oui-button oui-button_block oui-button_primary oui-button_icon-right" ${select(state.label, state.options, state.default)}>
       Call to action
       <span class="oui-icon oui-icon-folder"></span>
