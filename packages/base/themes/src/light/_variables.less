@@ -559,22 +559,30 @@
 @oui-checkbox-m-icon-size: @oui-choice-m-icon-size;
 
 // Chips
-@oui-chip-height: rem-calc(30);
-@oui-chip-padding: 0 rem-calc(10);
-@oui-chip-border-radius: rem-calc(10);
-@oui-chip-font-color: @oui-color-sapphire;
-@oui-chip-font-size: rem-calc(16);
+@oui-chip-height: rem-calc(32);
+@oui-chip-padding-x: rem-calc(16);
+@oui-chip-padding-y: 0;
+@oui-chip-padding: @oui-chip-padding-y @oui-chip-padding-x;
+@oui-chip-border-radius: calc(@oui-chip-height / 2);
+@oui-chip-font-color: @p-800;
+@oui-chip-font-color_hover: @p-800;
+@oui-chip-font-color_active: @p-800;
+@oui-chip-font-size: rem-calc(14);
 @oui-chip-font-weight: @oui-font-regular;
-@oui-chip-background-color: @oui-color-foam;
+@oui-chip-background-color: @p-100;
+@oui-chip-background-color_hover: @p-200;
+@oui-chip-background-color_active: @p-300;
 
+@oui-chip-close-icon-color: inherit;
 @oui-chip-close-icon-size: rem-calc(16);
+@oui-chip-close-icon-spacing: rem-calc(4);
 
 @oui-chip-container-margin: 0 0 rem-calc(10);
-@oui-chip-container-padding: rem-calc(5) rem-calc(18);
-@oui-chip-container-item-spacing: rem-calc(5) rem-calc(2);
-@oui-chip-container-background-color: @oui-color-white;
-@oui-chip-container-border-color: @oui-color-nurse;
-@oui-chip-container-border-width: 1px;
+@oui-chip-container-padding: 0;
+@oui-chip-container-item-spacing: rem-calc(4) rem-calc(4);
+@oui-chip-container-background-color: transparent;
+@oui-chip-container-border-color: transparent;
+@oui-chip-container-border-width: 0;
 
 // Clipboard
 @oui-clipboard-font-color: @oui-input-font-color;
@@ -1574,13 +1582,16 @@
 @oui-ui-select-margin: @oui-select-margin;
 
 @oui-ui-select-button-height: @oui-select-height;
-@oui-ui-select-button-line-height: rem-calc(36);
+@oui-ui-select-button-line-height: rem-calc(30);
 @oui-ui-select-button-letter-spacing: @oui-select-letter-spacing;
 @oui-ui-select-button-font-color_error: @oui-select-font-color_error;
 @oui-ui-select-button-font-weight: @oui-select-font-weight;
 @oui-ui-select-button-border-color_error: @oui-select-border-color_error;
 @oui-ui-select-button-border-width: @oui-select-border-width;
 @oui-ui-select-button-background-color_error: @oui-select-background-color_error;
+
+@oui-ui-select-match-item-height: rem-calc(24);
+@oui-ui-select-match-item-spacing: rem-calc(4);
 
 @oui-ui-select-menu-min-width: @oui-dropdown-menu-min-width;
 @oui-ui-select-menu-max-height: rem-calc(200);

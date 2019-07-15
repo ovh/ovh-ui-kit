@@ -2,15 +2,15 @@ import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
-import { compileTemplate } from '../../../src/utils';
+import { compileTemplate } from '../../src/utils';
 
-import { items } from '../../_data/chips.data.json';
+import { items } from '../_data/chips.data.json';
 
 // Create mock module for the stories
 const moduleName = 'oui-chips-stories';
 angular.module(moduleName, ['oui.chips']);
 
-storiesOf('Old|Components/Chips', module)
+storiesOf('Components|Chips/Inline', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -22,7 +22,20 @@ storiesOf('Old|Components/Chips', module)
     })),
   )
   .add(
-    'Stacked',
+    'Closable',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-chips items="$ctrl.items" on-remove="$ctrl.onRemove(items, removed)" closable></oui-chips>
+    `, {
+      $ctrl: {
+        items,
+        onRemove: action('onRemove'),
+      },
+    })),
+  );
+
+storiesOf('Components|Chips/Stacked', module)
+  .add(
+    'Default',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-chips items="$ctrl.items" stacked></oui-chips>
     `, {
@@ -34,7 +47,7 @@ storiesOf('Old|Components/Chips', module)
   .add(
     'Closable',
     forModule(moduleName).createElement(() => compileTemplate(`
-    <oui-chips items="$ctrl.items" on-remove="$ctrl.onRemove(items, removed)" closable></oui-chips>
+    <oui-chips items="$ctrl.items" stacked on-remove="$ctrl.onRemove(items, removed)" closable></oui-chips>
     `, {
       $ctrl: {
         items,

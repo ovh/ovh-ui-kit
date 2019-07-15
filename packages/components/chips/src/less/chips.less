@@ -15,13 +15,17 @@ oui-chips {
 }
 
 .oui-chip {
+  #oui > .animate();
+  #oui > .base-font();
   #oui > .text-ellipsis();
 
+  min-width: @oui-chip-height;
   max-width: 100%;
   line-height: @oui-chip-height;
   display: inline-block;
   padding: @oui-chip-padding;
   position: relative;
+  text-align: left;
   font-size: @oui-chip-font-size;
   font-weight: @oui-chip-font-weight;
   color: @oui-chip-font-color;
@@ -32,21 +36,23 @@ oui-chips {
   &__container & { margin: @oui-chip-container-item-spacing; }
 
   &__close {
-    width: @oui-chip-height;
-    height: @oui-chip-height;
+    width: @oui-chip-close-icon-size;
+    height: @oui-chip-close-icon-size;
+    line-height: @oui-chip-close-icon-size;
     padding: 0;
     position: absolute;
     display: none;
-    top: 0;
-    right: 0;
-    color: inherit;
+    top: 50%;
+    margin-top: calc(-@oui-chip-close-icon-size / 2);
+    right: @oui-chip-padding-x;
+    color: @oui-chip-close-icon-color;
     text-align: center;
     font-size: @oui-chip-close-icon-size;
     border: none;
     background: none;
   }
 
-  &_closable { padding-right: @oui-chip-height; }
+  &_closable { padding-right: calc(@oui-chip-close-icon-size + @oui-chip-padding-x + @oui-chip-close-icon-spacing); }
 
   &_closable &__close {
     display: flex; // For a better vertical centering
@@ -59,9 +65,20 @@ oui-chips {
   &_full-width,
   &_block { width: 100%; }
 
-  button&:hover { cursor: pointer; }
+  button&:hover {
+    cursor: pointer;
+    color: @oui-chip-font-color_hover;
+    background-color: @oui-chip-background-color_hover;
+  }
 
   button&:focus {
-    #oui > .outline-border();
+    #oui > .outline-border(
+      @outline-radius: calc(@oui-chip-border-radius + @oui-a11y-outline-width + @oui-a11y-outline-offset);
+    );
+  }
+
+  button&:active {
+    color: @oui-chip-font-color_active;
+    background-color: @oui-chip-background-color_active;
   }
 }

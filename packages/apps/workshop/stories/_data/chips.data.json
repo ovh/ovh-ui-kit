@@ -3,16 +3,16 @@
         "title": "Lorem",
         "foo": "bar"
     }, {
-        "title": "Ipsum dolor",
+        "title": "Ipsum",
         "foo": "bar"
     }, {
-        "title": "Sit amet",
+        "title": "Dolor",
         "foo": "bar"
     }, {
-        "title": "Consectetur adipiscing elit",
+        "title": "Sit",
         "foo": "bar"
     }, {
-        "title": "Quisque sed massa quis turpis euismod commodo et lacus",
+        "title": "Amet",
         "foo": "bar"
     }]
 }
