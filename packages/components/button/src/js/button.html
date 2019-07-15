@@ -1,21 +1,32 @@
 <button
-  class="oui-button"
-  ng-attr-aria-label="{{::$ctrl.ariaLabel}}"
-  ng-attr-id="{{::$ctrl.id}}"
-  ng-attr-name="{{::$ctrl.name}}"
-  ng-attr-type="{{::$ctrl.type}}"
-  ng-class="[{
-    'oui-button_icon-left': $ctrl.variantNav === 'previous',
-    'oui-button_icon-right': $ctrl.variantNav === 'next'
-  },
-  !!$ctrl.size && ('oui-button_' + $ctrl.size),
-  !!$ctrl.variant && ('oui-button_' + $ctrl.variant)]"
-  ng-click="$ctrl.onClick()"
-  ng-disabled="$ctrl.disabled"
->
-  <span aria-hidden="true" class="oui-icon oui-icon_circle oui-icon-chevron-left"
-    ng-if="::$ctrl.variantNav === 'previous'"></span>
-  <span class="oui-button__text" ng-transclude></span>
-  <span aria-hidden="true" class="oui-icon oui-icon_circle oui-icon-chevron-right"
-    ng-if="::$ctrl.variantNav === 'next'"></span>
+    class="oui-button"
+    ng-attr-aria-label="{{::$ctrl.ariaLabel}}"
+    ng-attr-id="{{::$ctrl.id}}"
+    ng-attr-name="{{::$ctrl.name}}"
+    ng-attr-type="{{::$ctrl.type}}"
+    ng-class="[{
+        'oui-button_block': $ctrl.block,
+        'oui-button_icon-left': !!$ctrl.iconLeft || $ctrl.variantNav === 'previous',
+        'oui-button_icon-right': !!$ctrl.iconRight || $ctrl.variantNav === 'next'
+    },
+    !!$ctrl.size && ('oui-button_' + $ctrl.size),
+    !!$ctrl.variant && ('oui-button_' + $ctrl.variant)]"
+    ng-click="$ctrl.onClick()"
+    ng-disabled="$ctrl.disabled">
+    <span aria-hidden="true"
+        class="oui-icon"
+        ng-if="::!!$ctrl.iconLeft || $ctrl.variantNav === 'previous'"
+        ng-class="[
+            $ctrl.iconLeft,
+            ($ctrl.variantNav === 'previous') && 'oui-icon-chevron-left'
+        ]">
+    </span>
+    <span class="oui-button__text" ng-transclude></span>
+    <span aria-hidden="true"
+        class="oui-icon"
+        ng-class="[
+            $ctrl.iconRight,
+            ($ctrl.variantNav === 'next') && 'oui-icon-chevron-right'
+        ]"
+        ng-if="::!!$ctrl.iconRight || $ctrl.variantNav === 'next'"></span>
 </button>
