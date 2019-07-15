@@ -5,9 +5,9 @@
     }
   }
 
-  .color-badge-themes(@index: length(@oui-color-badge-themes)) when (@index > 0) {
+  .color-badge-themes(@index: length(@doc-color-badge-themes)) when (@index > 0) {
     .color-badge-themes(@index - 1);
-    @name: extract(@oui-color-badge-themes, @index);
+    @name: extract(@doc-color-badge-themes, @index);
     .color-badge-theme(@name, @@name);
   }
 }

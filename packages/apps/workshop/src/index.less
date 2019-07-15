@@ -2,25 +2,31 @@
 @import './_mixins';
 @import './_variables';
 
+.doc-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 // Color badges
-.oui-color-badge {
+.doc-color-badge {
   #oui > .color-badge-themes();
 
   position: relative;
-  border: 1px solid @oui-color-badge-border-color;
+  border: 1px solid @doc-color-badge-border-color;
   display: inline-block;
-  width: @oui-color-badge-palette-size;
+  width: @doc-color-badge-palette-size;
   max-width: 100%;
-  margin: @oui-color-badge-spacing;
+  margin: @doc-color-badge-spacing;
   padding: 0;
   padding-bottom: rem-calc(12);
-  box-shadow: @oui-color-badge-box-shadow;
+  box-shadow: @doc-color-badge-box-shadow;
 
   &::before {
     display: block;
     content: '';
     width: 100%;
-    height: @oui-color-badge-palette-size;
+    height: @doc-color-badge-palette-size;
   }
 
   &__prop {
@@ -28,7 +34,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     display: block;
-    font-size: @oui-color-badge-prop-font-size;
+    font-size: @doc-color-badge-prop-font-size;
     text-align: center;
 
     &:first-child,
@@ -43,20 +49,20 @@
 
     &::before {
       border-radius: 50%;
-      width: @oui-color-badge-palette-size;
-      height: @oui-color-badge-palette-size;
+      width: @doc-color-badge-palette-size;
+      height: @doc-color-badge-palette-size;
       top: rem-calc(-40);
       left: rem-calc(42);
     }
   }
 
   &_white::before {
-    border: solid 1px @oui-color-badge-palette-border-color;
+    border: solid 1px @doc-color-badge-palette-border-color;
   }
 }
 
 // Icon badges
-.oui-icon-badge {
+.doc-icon-badge {
   width: rem-calc(144);
   display: inline-block;
   border: 1px solid @oui-color-dusty;
