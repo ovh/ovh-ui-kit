@@ -37,7 +37,7 @@
     "mini-css-extract-plugin": "^0.7.0",
     "rimraf": "^2.6.3",
     "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5",
+    "webpack-cli": "^3.3.6",
     "webpack-extraneous-file-cleanup-plugin": "^2.0.0",
     "webpack-merge": "^4.2.1"
   }
