@@ -23,7 +23,7 @@ storiesOf('Internal/Criteria', module)
     <oui-criteria
       disabled="$ctrl.disabled"
       model="$ctrl.model"
-      on-change="onChange(modelValue)"
+      on-change="$ctrl.onChange(modelValue)"
       properties="$ctrl.properties">
     </oui-criteria>
     `, {
@@ -40,6 +40,7 @@ storiesOf('Internal/Criteria', module)
     <oui-criteria
       disabled="$ctrl.disabled"
       model="$ctrl.model"
+      on-change="$ctrl.onChange(modelValue)"
       properties="$ctrl.properties"
       searchable>
     </oui-criteria>
@@ -57,6 +58,7 @@ storiesOf('Internal/Criteria', module)
     <oui-criteria
       disabled="$ctrl.disabled"
       model="$ctrl.model"
+      on-change="$ctrl.onChange(modelValue)"
       properties="$ctrl.properties"
       searchable>
       <oui-action-menu text="Actions">
