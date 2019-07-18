@@ -59,11 +59,7 @@ storiesOf('Components/Tile', module)
     <oui-tile heading="Title" description="Lorem dolor sit amet" loading="$ctrl.loading">
       <oui-tile-definition
         term="Term"
-        description="This is a description">
-      </oui-tile-definition>
-      <oui-tile-definition
-        term="Term">
-        <oui-tile-description>This is a description</oui-tile-description>
+        description="This is a description that use the attribute">
       </oui-tile-definition>
       <oui-tile-definition
         term="Term"
@@ -71,17 +67,31 @@ storiesOf('Components/Tile', module)
         description="This is a description">
       </oui-tile-definition>
       <oui-tile-definition
+        term="Term"
+        description="This is a description with an action menu">
+        <oui-action-menu compact>
+          <oui-action-menu-item>Action 1</oui-action-menu-item>
+        </oui-action-menu>
+      </oui-tile-definition>
+      <oui-tile-definition>
+        <oui-tile-term>Term</oui-tile-term>
+        <oui-tile-description>This is a definition that use transcludes</oui-tile-description>
+        <oui-tile-actions>
+          <oui-dropdown placement="end">
+            <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
+            <oui-dropdown-content>
+              <oui-dropdown-item href="#">Action 1</oui-dropdown-item>
+              <oui-dropdown-item href="#">Action 2</oui-dropdown-item>
+              <oui-dropdown-item href="#">Action 3</oui-dropdown-item>
+            </oui-dropdown-content>
+          </oui-dropdown>
+        </oui-tile-actions>
+      </oui-tile-definition>
+      <oui-tile-definition
         term="Progress">
         <oui-tile-description>
           <progress class="oui-progress oui-progress_success" value="10" max="100"></progress>
         </oui-tile-description>
-      </oui-tile-definition>
-      <oui-tile-definition
-        term="Term"
-        description="This is a description">
-        <oui-action-menu compact>
-          <oui-action-menu-item>Action 1</oui-action-menu-item>
-        </oui-action-menu>
       </oui-tile-definition>
     </oui-tile>
     `, {

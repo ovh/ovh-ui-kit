@@ -31,3 +31,19 @@ angular.module('myModule', ['oui.tile']);
 | `term`            | string   | @?         | yes               | n/a               | n/a       | definition term item
 | `term-popover`    | string   | @?         | yes               | n/a               | n/a       | definition term item popover
 | `description`     | string   | @?         | yes               | n/a               | n/a       | definition description item
+
+### Transclude slots
+
+| Attribute                   | Description
+| ----                        | ----
+| `<oui-title-term>`          | definition term slot, override attribute `term`
+| `<oui-title-description>`   | definition description slot, override attribute `description`
+| `<oui-title-actions>`       | definition actions slot
+
+```html
+<oui-title-definition>
+    <oui-title-term>Term</oui-title-term>
+    <oui-title-description>Descriptions</oui-title-description>
+    <oui-title-actions>Actions</oui-title-actions>
+<oui-title-definition>
+```

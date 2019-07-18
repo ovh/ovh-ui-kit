@@ -10,7 +10,9 @@ export default {
     description: '@?',
   },
   transclude: {
+    actionMenuSlot: '?ouiActionMenu',
+    actionsSlot: '?ouiTileActions',
     descriptionSlot: '?ouiTileDescription',
-    actionSlot: '?ouiActionMenu',
+    termSlot: '?ouiTileTerm',
   },
 };

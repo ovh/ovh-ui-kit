@@ -15,6 +15,7 @@ describe('ouiTile', () => {
   const getTileButton = element => angular.element(element[0].querySelector('.oui-tile__button'));
   const getTileDefinitionTerm = element => angular.element(element[0].querySelector('.oui-tile__term'));
   const getTileDefinitionDesc = element => angular.element(element[0].querySelector('.oui-tile__description'));
+  const getTileDefinitionActions = element => angular.element(element[0].querySelector('.oui-tile__actions'));
   const getActionMenu = element => angular.element(element[0].querySelector('.oui-tile__actions'));
 
   describe('Component', () => {
@@ -43,8 +44,8 @@ describe('ouiTile', () => {
       const text = 'button text';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button>${text}</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button>${text}</oui-tile-button>
+        </oui-tile>`,
       );
 
       $timeout.flush();
@@ -58,8 +59,8 @@ describe('ouiTile', () => {
       const text = 'button text';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button>${text}</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button>${text}</oui-tile-button>
+        </oui-tile>`,
       );
 
       const button = getTileButton(element);
@@ -70,8 +71,8 @@ describe('ouiTile', () => {
       const text = 'button text';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button>${text}</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button>${text}</oui-tile-button>
+        </oui-tile>`,
       );
 
       const button = getTileButton(element);
@@ -82,8 +83,8 @@ describe('ouiTile', () => {
       const url = 'http://my.url';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button href="${url}">text</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button href="${url}">text</oui-tile-button>
+        </oui-tile>`,
       );
 
       const button = getTileButton(element);
@@ -95,8 +96,8 @@ describe('ouiTile', () => {
       const targetAttr = '_blank';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button href="http://myurl.com" external>text</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button href="http://myurl.com" external>text</oui-tile-button>
+        </oui-tile>`,
       );
 
       const button = getTileButton(element);
@@ -109,8 +110,8 @@ describe('ouiTile', () => {
       const clickSpy = jasmine.createSpy('click');
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button on-click="$ctrl.clickSpy()">text</oui-tile-button>
-                </oui-tile>`, {
+            <oui-tile-button on-click="$ctrl.clickSpy()">text</oui-tile-button>
+        </oui-tile>`, {
           clickSpy,
         },
       );
@@ -122,8 +123,8 @@ describe('ouiTile', () => {
     it('should disable the button', () => {
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button disabled>text</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button disabled>text</oui-tile-button>
+        </oui-tile>`,
       );
 
       expect(getTileButton(element).attr('disabled')).toBe('disabled');
@@ -132,8 +133,8 @@ describe('ouiTile', () => {
     it('should display a disabled button instead of a link', () => {
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-button href="#" disabled>text</oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-button href="#" disabled>text</oui-tile-button>
+        </oui-tile>`,
       );
 
       expect(getTileButton(element).attr('disabled')).toBe('disabled');
@@ -146,8 +147,8 @@ describe('ouiTile', () => {
       const description = 'my description';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-definition term="${term}" description="${description}"></oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-definition term="${term}" description="${description}"></oui-tile-definition>
+        </oui-tile>`,
       );
 
       $timeout.flush();
@@ -161,16 +162,17 @@ describe('ouiTile', () => {
       const description = 'my description';
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-definition term="${term}" description="${description}"></oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-definition term="${term}" description="${description}"></oui-tile-definition>
+        </oui-tile>`,
       );
 
       const element2 = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-definition term="${term}">
-                        <oui-tile-description>${description}</oui-tile-description>
-                    </oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-definition>
+                <oui-tile-term>${term}</oui-tile-term>
+                <oui-tile-description>${description}</oui-tile-description>
+            </oui-tile-button>
+        </oui-tile>`,
       );
 
       expect(getTileDefinitionTerm(element).html()).toContain(term);
@@ -180,12 +182,25 @@ describe('ouiTile', () => {
       expect(getTileDefinitionDesc(element2).html()).toContain(description);
     });
 
+    it('should display actions', () => {
+      const actions = 'my actions';
+      const element = TestUtils.compileTemplate(
+        `<oui-tile>
+            <oui-tile-definition>
+                <oui-tile-actions>${actions}</oui-tile-actions>
+            </oui-tile-definition>
+        </oui-tile>`,
+      );
+
+      expect(getTileDefinitionActions(element).html()).toContain(actions);
+    });
+
     it('should define a term-popover', () => {
       const termPopover = 'my popover';
 
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-          <oui-tile-definition term-popover="${termPopover}"></oui-tile-button>
+            <oui-tile-definition term-popover="${termPopover}"></oui-tile-button>
         </oui-tile>`,
       );
 
@@ -201,18 +216,18 @@ describe('ouiTile', () => {
     it('should define an action-menu', () => {
       const element = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-definition>
-                        <oui-action-menu>
-                            <oui-action-menu-item></oui-action-menu-item>
-                        </oui-action-menu>
-                    </oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-definition>
+                <oui-action-menu>
+                    <oui-action-menu-item></oui-action-menu-item>
+                </oui-action-menu>
+            </oui-tile-button>
+        </oui-tile>`,
       );
 
       const element2 = TestUtils.compileTemplate(
         `<oui-tile>
-                    <oui-tile-definition></oui-tile-button>
-                </oui-tile>`,
+            <oui-tile-definition></oui-tile-definition>
+        </oui-tile>`,
       );
 
       expect(getActionMenu(element).length).not.toBe(0);
