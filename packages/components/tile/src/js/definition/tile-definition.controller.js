@@ -9,7 +9,7 @@ export default class {
   }
 
   $onInit() {
-    this.transcludeAction = this.$transclude.isSlotFilled('actionSlot');
+    this.transcludeActions = this.$transclude.isSlotFilled('actionsSlot') || this.$transclude.isSlotFilled('actionMenuSlot');
   }
 
   $postLink() {
