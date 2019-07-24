@@ -1,45 +1,52 @@
 {
-    "properties": [{
-        "name": "example.string",
-        "title": "Example String",
-        "type": "string"
+  "properties": [
+    {
+      "name": "example.string",
+      "title": "Example String",
+      "type": "string"
     }, {
-        "name": "example.number",
-        "title": "Example Number",
-        "type": "number"
+      "name": "example.number",
+      "title": "Example Number",
+      "type": "number"
     }, {
-        "name": "example.boolean",
-        "title": "Example Boolean",
-        "type": "boolean"
+      "name": "example.boolean",
+      "title": "Example Boolean",
+      "type": "boolean"
     }, {
-        "name": "example.booleanCustom",
-        "title": "Example Boolean Custom",
-        "type": "boolean",
-        "typeOptions": {
-            "trueValue": "The True Label"
+      "name": "example.booleanCustom",
+      "title": "Example Boolean Custom",
+      "type": "boolean",
+      "typeOptions": {
+        "trueValue": "The True Label"
+      }
+    }, {
+      "name": "example.options",
+      "title": "Example Options",
+      "type": "options",
+      "typeOptions": {
+        "values": {
+          "foo": "Foo",
+          "bar": "Bar"
         }
+      }
     }, {
-        "name": "example.options",
-        "title": "Example Options",
-        "type": "options",
-        "typeOptions": {
-            "values": {
-                "foo": "Foo",
-                "bar": "Bar"
-            }
-        }
+      "name": "example.date",
+      "title": "Example Date",
+      "type": "date"
     }, {
-        "name": "example.date",
-        "title": "Example Date",
-        "type": "date"
+      "name": "example.string.containsOnly",
+      "title": "Example String With Contains Only",
+      "type": "string",
+      "typeOptions": {
+        "operators": [
+          "contains"
+        ]
+      }
     }, {
-        "name": "example.string.containsOnly",
-        "title": "Example String With Contains Only",
-        "type": "string",
-        "typeOptions": {
-            "operators": [
-                "contains"
-            ]
-        }
-    }]
+      "name": "example.string.noOperators",
+      "title": "Example String Without Operators",
+      "hideOperators": true,
+      "type": "string"
+    }
+  ]
 }

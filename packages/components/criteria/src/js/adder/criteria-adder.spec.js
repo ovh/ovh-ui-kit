@@ -124,6 +124,18 @@ describe('ouiCriteriaAdder', () => {
           title: 'contains',
         }]);
       });
+
+      it('should hide operators filed', () => {
+        const propertyMeta = find(mockData.properties, { name: 'example.string.noOperators' });
+        controller.columnModel = propertyMeta;
+        controller.onColumnChange();
+
+        // Must digest to apply ngHide
+        component.scope().$digest();
+
+        const fieldClassname = component.find('oui-field').eq(1).attr('class');
+        expect(fieldClassname).toContain('ng-hide');
+      });
     });
 
     describe('Column type = string', () => {
