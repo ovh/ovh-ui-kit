@@ -9,6 +9,9 @@
 <input class="oui-input oui-input_number"
     type="number"
     role="slider"
+    required
+    ng-attr-min="{{ $ctrl.min }}"
+    ng-attr-max="{{ $ctrl.max }}"
     ng-attr-id="{{:: $ctrl.id }}"
     ng-attr-name="{{:: $ctrl.name }}"
     ng-attr-aria-valuemin="{{ $ctrl.min }}"
