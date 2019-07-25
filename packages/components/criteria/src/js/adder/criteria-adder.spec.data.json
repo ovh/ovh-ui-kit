@@ -45,8 +45,10 @@
     }, {
       "name": "example.string.noOperators",
       "title": "Example String Without Operators",
-      "hideOperators": true,
-      "type": "string"
+      "type": "string",
+      "typeOptions": {
+        "hideOperators": true
+      }
     }
   ]
 }

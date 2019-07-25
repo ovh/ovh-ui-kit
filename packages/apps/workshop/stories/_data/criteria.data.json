@@ -25,7 +25,9 @@
     }, {
       "name": "example.noOperators",
       "title": "Example No operators",
-      "hideOperators": true,
-      "type": "string"
+      "type": "string",
+      "typeOptions": {
+        "hideOperators": true
+      }
   }]
 }

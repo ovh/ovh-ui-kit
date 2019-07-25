@@ -81,10 +81,10 @@ angular.module('myModule', ['oui.criteria'])
 
 `properties` is an array of objects defined as this:
 
-| Attribute       | Type      | Description
-| ----            | ----      | -----
-| `name`          | string    | Property to filter (can be a nested one)
-| `title`         | string    | Human readeable title for the property
-| `hideOperators` | boolean   | Hide operators field. If `true`, The first entry of the operators will be applied when submitted.
-| `type`          | string    | Data type
-| `typeOptions`   | object    | Specific options
+| Attribute                   | Type      | Description
+| ----                        | ----      | -----
+| `name`                      | string    | Property to filter (can be a nested one)
+| `title`                     | string    | Human readeable title for the property
+| `type`                      | string    | Data type
+| `typeOptions`               | object    | Specific options
+| `typeOptions.hideOperators` | boolean   | Hide operators field. If `true`, The first entry of the operators will be applied when submitted.
