@@ -35,7 +35,7 @@
       }
 
       .@{selector}__footer {
-        margin: @oui-choice-thumbnail-footer-margin-top-checked @oui-choice-thumbnail-footer-margin-bottom-checked @oui-choice-thumbnail-footer-margin-bottom-checked;
+        margin: @oui-radio-thumbnail-footer-margin-top-checked @oui-radio-thumbnail-footer-margin-bottom-checked @oui-radio-thumbnail-footer-margin-bottom-checked;
       }
     }
 
@@ -55,7 +55,7 @@
         }
 
         .@{selector}__footer {
-          background: @oui-choice-thumbnail-footer-background_disabled;
+          background: @oui-radio-thumbnail-footer-background_disabled;
         }
       }
 
@@ -96,6 +96,18 @@
         );
       }
     }
+
+    .@{selector}__footer {
+      background: @oui-radio-thumbnail-footer-background;
+      padding: @oui-radio-padding-left;
+      text-align: center;
+      font-weight: @oui-radio-thumbnail-footer-font-weight;
+      font-size: @oui-radio-thumbnail-footer-font-size;
+      line-height: @oui-radio-thumbnail-padding;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      margin: @oui-radio-thumbnail-footer-margin-top @oui-radio-thumbnail-footer-margin-bottom @oui-radio-thumbnail-footer-margin-bottom;
+    }
   }
 
   .radio-size(
@@ -130,18 +142,6 @@
     .@{selector}__label,
     .@{selector}__description {
       padding-left: @icon-size + @oui-radio-padding-left;
-    }
-
-    .@{selector}__footer {
-      background: @oui-choice-thumbnail-footer-background;
-      padding: @oui-radio-padding-left;
-      text-align: center;
-      font-weight: @oui-choice-thumbnail-footer-font-weight;
-      font-size: @oui-choice-thumbnail-footer-font-size;
-      line-height: @oui-choice-thumbnail-padding;
-      border-bottom-left-radius: inherit;
-      border-bottom-right-radius: inherit;
-      margin: @oui-choice-thumbnail-footer-margin-top @oui-choice-thumbnail-footer-margin-bottom @oui-choice-thumbnail-footer-margin-bottom;
     }
   }
 

@@ -89,6 +89,17 @@ storiesOf('Components/Checkbox', module)
     `)),
   )
   .add(
+    'With Footer',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." footer="Lorem ipsum dolor sit amet" model="$ctrl.model1" disabled="$ctrl.disabled" thumbnail>Thumbnail</oui-checkbox>
+    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." footer="Lorem ipsum dolor sit amet" model="$ctrl.model2" disabled="$ctrl.disabled" variant="light" thumbnail>Thumbnail Light</oui-checkbox>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })),
+  )
+  .add(
     'Size',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" size="m">Medium</oui-checkbox>

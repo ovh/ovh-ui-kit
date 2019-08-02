@@ -12,6 +12,7 @@ export default {
     id: '@?',
     name: '@?',
     description: '@?',
+    footer: '@?',
     size: '@?',
     variant: '@?',
     thumbnail: '<?',

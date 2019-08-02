@@ -26,6 +26,10 @@ describe('ouiCheckbox', () => {
     return element[0].querySelector('.oui-checkbox__description');
   }
 
+  function getCheckboxFooterElement(element) {
+    return element[0].querySelector('.oui-checkbox__footer');
+  }
+
   describe('Component', () => {
     it('should have an element with default classname', () => {
       const element = TestUtils.compileTemplate('<oui-checkbox></oui-checkbox>');
@@ -88,6 +92,29 @@ describe('ouiCheckbox', () => {
 
         const descriptionCheckboxElement = getCheckboxDescriptionElement(element);
         expect(angular.element(descriptionCheckboxElement).html()).toBe('test');
+      });
+    });
+
+    describe('footer attribute', () => {
+      it("should display the checkbox's footer container when empty", () => {
+        const element = TestUtils.compileTemplate('<oui-checkbox></oui-checkbox>');
+
+        const footerCheckboxElement = getCheckboxFooterElement(element);
+        expect(angular.element(footerCheckboxElement).length).toBe(0);
+      });
+
+      it("should not display the checkbox's footer container when not empty and not in thumbnail mode", () => {
+        const element = TestUtils.compileTemplate('<oui-checkbox footer="test"></oui-checkbox>');
+
+        const footerCheckboxElement = getCheckboxFooterElement(element);
+        expect(angular.element(footerCheckboxElement).length).toBe(0);
+      });
+
+      it("should display a text inside the checkbox's footer container", () => {
+        const element = TestUtils.compileTemplate('<oui-checkbox footer="test" thumbnail="true"></oui-checkbox>');
+
+        const footerCheckboxElement = getCheckboxFooterElement(element);
+        expect(angular.element(footerCheckboxElement).html()).toBe('test');
       });
     });
 

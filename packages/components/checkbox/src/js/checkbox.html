@@ -34,5 +34,11 @@
             ng-bind="$ctrl.description"
             ng-if="$ctrl.description">
         </span>
+        <span
+            id="{{:: $ctrl.id }}-footer"
+            class="oui-checkbox__footer"
+            ng-bind="$ctrl.footer"
+            ng-if="$ctrl.footer && $ctrl.thumbnail">
+    </span>
     </label>
 </div>
