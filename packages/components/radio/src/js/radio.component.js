@@ -11,6 +11,7 @@ export default {
   bindings: {
     model: '=?',
     description: '@?',
+    footer: '@?',
     id: '@?',
     name: '@?',
     size: '@?',

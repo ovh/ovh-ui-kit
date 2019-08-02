@@ -14,6 +14,7 @@ angular.module('myModule', ['oui.radio']);
 | `id`          | string    | @?        | yes               | n/a                 | n/a       | id attribute of the radio
 | `name`        | string    | @?        | yes               | n/a                 | n/a       | name attribute of the radio
 | `description` | string    | @?        | no                | n/a                 | n/a       | description text
+| `footer`      | string    | @?        | no                | n/a                 | n/a       | footer text
 | `size`        | string    | @?        | yes               | `m`                 | n/a       | radio size
 | `variant`     | string    | @?        | yes               | `default`, `light`  | `default` | used in conjunction with `thumbnail`. Defines specific style for the thumbnail  
 | `value`       | object    | <         | no                | n/a                 | n/a       | value of the radio
