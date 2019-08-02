@@ -135,6 +135,36 @@ storiesOf('Components/Radio', module)
     })),
   )
   .add(
+    'With Footer',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-radio
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      footer="Lorem ipsum dolor sit amet"
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      size="m"
+      thumbnail>
+      Thumbnail
+    </oui-radio>
+    <oui-radio
+      description="Pellentesque euismod magna rutrum lectus gravida semper."
+      footer="Lorem ipsum dolor sit amet"
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      name="oui-radio-1"
+      size="m"
+      variant="light"
+      thumbnail>
+      Thumbnail Light
+    </oui-radio>
+    `, {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    })),
+  )
+  .add(
     'In group',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-radio-group
