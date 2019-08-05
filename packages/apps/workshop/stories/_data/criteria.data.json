@@ -22,5 +22,12 @@
                 "others": "Other"
             }
         }
-    }]
+    }, {
+      "name": "example.noOperators",
+      "title": "Example No operators",
+      "type": "string",
+      "typeOptions": {
+        "hideOperators": true
+      }
+  }]
 }

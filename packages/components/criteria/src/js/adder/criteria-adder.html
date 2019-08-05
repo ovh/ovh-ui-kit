@@ -24,7 +24,8 @@
             <!-- /Column field -->
 
             <!-- Operator field -->
-            <oui-field label="{{::$ctrl.translations.operator_label}}" size="m">
+            <oui-field label="{{::$ctrl.translations.operator_label}}" size="m"
+                ng-hide="$ctrl.columnModel.typeOptions && $ctrl.columnModel.typeOptions.hideOperators">
                 <oui-select
                     ng-attr-id="{{::$ctrl.id}}Operator"
                     name="{{::$ctrl.name}}Operator"

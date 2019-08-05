@@ -9,7 +9,7 @@
 
     <!-- Step Header -->
     <header class="oui-stepper__header">
-        <span class="oui-stepper__title" ng-bind="$ctrl.header"></span>
+        <span class="oui-stepper__title" ng-bind-html="$ctrl.header | unsafe"></span>
         <span class="oui-stepper__label-optional"
             ng-if="$ctrl.skippable"
             ng-bind="::$ctrl.translations.optionalLabel">
@@ -25,7 +25,7 @@
     <fieldset class="oui-stepper__content"
         ng-disabled="$ctrl.disabled || $ctrl.stepper.disabled || !$ctrl.stepper.focused"
         ng-hide="$ctrl.stepper.disabled || $ctrl.disabled">
-        <legend class="oui-stepper__description" ng-bind="$ctrl.description"></legend>
+        <legend class="oui-stepper__description" ng-bind-html="$ctrl.description | unsafe"></legend>
 
         <!-- Step Loader -->
         <section class="oui-stepper__loader" ng-show="$ctrl.loading">

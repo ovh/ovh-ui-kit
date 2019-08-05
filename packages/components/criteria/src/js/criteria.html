@@ -9,7 +9,8 @@
         minlength="$ctrl.minLength"
         on-change="$ctrl.onCriterionChange(modelValue)"
         on-reset="$ctrl.onCriterionReset()"
-        on-submit="$ctrl.onCriterionSubmit(modelValue)">
+        on-submit="$ctrl.onCriterionSubmit(modelValue)"
+        reset-on-submit>
     </oui-search>
     <oui-criteria-adder
         ng-if="$ctrl.properties.length"

@@ -33,6 +33,10 @@
       .@{selector}__label::after {
         visibility: visible;
       }
+
+      .@{selector}__footer {
+        margin: @oui-radio-thumbnail-footer-margin-top-checked @oui-radio-thumbnail-footer-margin-bottom-checked @oui-radio-thumbnail-footer-margin-bottom-checked;
+      }
     }
 
     // Radio - Disabled state
@@ -48,6 +52,10 @@
         .@{selector}__description,
         .@{selector}__section {
           color: @oui-radio-font-color_disabled;
+        }
+
+        .@{selector}__footer {
+          background: @oui-radio-thumbnail-footer-background_disabled;
         }
       }
 
@@ -87,6 +95,18 @@
           @icon-outer-color: @oui-radio-icon-outer-color_checked-hover
         );
       }
+    }
+
+    .@{selector}__footer {
+      background: @oui-radio-thumbnail-footer-background;
+      padding: @oui-radio-padding-left;
+      text-align: center;
+      font-weight: @oui-radio-thumbnail-footer-font-weight;
+      font-size: @oui-radio-thumbnail-footer-font-size;
+      line-height: @oui-radio-thumbnail-padding;
+      border-bottom-left-radius: inherit;
+      border-bottom-right-radius: inherit;
+      margin: @oui-radio-thumbnail-footer-margin-top @oui-radio-thumbnail-footer-margin-bottom @oui-radio-thumbnail-footer-margin-bottom;
     }
   }
 

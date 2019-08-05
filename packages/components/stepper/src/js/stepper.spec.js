@@ -29,15 +29,18 @@ describe('ouiStepper', () => {
         expect(form.attr('id')).toBe('formId');
       });
 
-      it('should add a header to step', () => {
-        const title = 'my step title';
+      it('should add a header and a description to step', () => {
+        const header = 'Header';
+        const description = 'Description';
         const element = TestUtils.compileTemplate(`
-                    <oui-stepper>
-                        <oui-step-form header="${title}"></oui-step-form>
-                    </oui-stepper>`);
-        const span = angular.element(element[0].querySelector('.oui-stepper__title'));
+            <oui-stepper>
+              <oui-step-form header="${header}" description="${description}"></oui-step-form>
+            </oui-stepper>`);
+        const headerTag = angular.element(element[0].querySelector('.oui-stepper__title'));
+        const descriptionTag = angular.element(element[0].querySelector('.oui-stepper__description'));
 
-        expect(span.html()).toContain(title);
+        expect(headerTag.html()).toContain(header);
+        expect(descriptionTag.html()).toContain(description);
       });
 
       it('should display an active step', () => {

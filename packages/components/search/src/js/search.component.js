@@ -13,6 +13,7 @@ export default {
     maxlength: '<?',
     minlength: '<?',
     disabled: '<?',
+    resetOnSubmit: '<',
 
     onChange: '&',
     onReset: '&',

@@ -70,7 +70,7 @@ export default class DatagridController {
     this.firstLoading = true;
     this.pageSize = parseInt(this.pageSize, 10) || this.config.pageSize;
     this.filterableColumns = [];
-    this.criteria = [];
+    this.criteria = this.criteria || [];
 
     addBooleanParameter(this, 'selectableRows');
 
@@ -107,7 +107,11 @@ export default class DatagridController {
         this.rowLoader,
         this.rowsLoader,
       );
-      this.refreshData(() => this.paging.setOffset(1));
+      this.refreshData(() => {
+        this.paging.setOffset(1);
+        this.paging.setCriteria(this.criteria);
+        this.appliedCriteria = this.criteria;
+      });
     } else {
       this.paging = this.ouiDatagridPaging.createLocal(
         this.columns,
@@ -272,6 +276,9 @@ export default class DatagridController {
   onCriteriaChange(criteria) {
     // Preview criteria are visually filtered by oui-criteria
     this.criteria = criteria;
+    this.onCriteriaChanged({
+      $criteria: criteria,
+    });
     this.refreshData(() => {
       this.paging.setOffset(1);
       this.paging.setCriteria(criteria);
@@ -327,6 +334,13 @@ export default class DatagridController {
     }
 
     this.refreshData(() => this.paging.setSort(column.name));
+
+    this.onSortChange({
+      $sort: {
+        name: column.name,
+        order: this.paging.isSortAsc() ? 'ASC' : 'DESC',
+      },
+    });
   }
 
   getSortableClasses(column) {

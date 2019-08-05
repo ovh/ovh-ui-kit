@@ -18,6 +18,7 @@ describe('ouiRadio', () => {
       const getRadioLabelElement = element => element[0].querySelector('label');
       const getRadioTextContainerElement = element => element[0].querySelector('.oui-radio__label span:first-child');
       const getRadioDescriptionElement = element => element[0].querySelector('.oui-radio__description');
+      const getRadioFooterElement = element => element[0].querySelector('.oui-radio__footer');
 
       describe('id attribute', () => {
         it('should generate an id for the input and label when undefined', () => {
@@ -86,6 +87,28 @@ describe('ouiRadio', () => {
 
           const descriptionRadioElement = getRadioDescriptionElement(element);
           expect(angular.element(descriptionRadioElement).html()).toBe('test');
+        });
+      });
+
+      describe('footer attribute', () => {
+        it("should not display the radio's footer container when empty", () => {
+          const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');
+
+          const footerRadioElement = getRadioFooterElement(element);
+          expect(angular.element(footerRadioElement).length).toBe(0);
+        });
+        it("should not display the radio's footer container when not empty and not in thumbnail mode", () => {
+          const element = TestUtils.compileTemplate('<oui-radio footer="test"></oui-radio>');
+
+          const footerRadioElement = getRadioFooterElement(element);
+          expect(angular.element(footerRadioElement).length).toBe(0);
+        });
+
+        it("should display a text inside the radio's footer container", () => {
+          const element = TestUtils.compileTemplate('<oui-radio footer="test" thumbnail="true"></oui-radio>');
+
+          const footerRadioElement = getRadioFooterElement(element);
+          expect(angular.element(footerRadioElement).html()).toBe('test');
         });
       });
 

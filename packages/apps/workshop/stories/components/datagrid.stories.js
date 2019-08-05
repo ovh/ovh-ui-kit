@@ -103,7 +103,8 @@ storiesOf('Components/Datagrid', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-datagrid
       page-size="5"
-      rows="$ctrl.data">
+      rows="$ctrl.data"
+      on-sort-change="$ctrl.onSortChange($sort)">
       <oui-datagrid-column title="'First name'" property="firstName" sortable="asc"></oui-datagrid-column>
       <oui-datagrid-column title="'Last name'" property="lastName" sortable></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
@@ -112,6 +113,7 @@ storiesOf('Components/Datagrid', module)
     `, {
       $ctrl: {
         data,
+        onSortChange: action('onSortChange'),
       },
     })),
   )
@@ -120,7 +122,8 @@ storiesOf('Components/Datagrid', module)
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-datagrid
       page-size="5"
-      rows="$ctrl.data">
+      rows="$ctrl.data"
+      on-criteria-change="$ctrl.onCriteriaChange($criteria)">
       <oui-datagrid-column title="'First name'" property="firstName" searchable filterable></oui-datagrid-column>
       <oui-datagrid-column title="'Last name'" property="lastName" searchable filterable></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
@@ -129,6 +132,7 @@ storiesOf('Components/Datagrid', module)
     `, {
       $ctrl: {
         data,
+        onCriteriaChange: action('onCriteriaChange'),
       },
     })),
   )

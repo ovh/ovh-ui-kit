@@ -59,31 +59,32 @@ angular.module('myModule', ['oui.criteria'])
 
 ## Component `oui-criteria`
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
-| ----          | ----      | ----      | ----              | ----                      | ----      | ----
-| `model`       | object    | =         | no                | n/a                       | n/a       | model bound to component
-| `properties`  | array     | <?        | no                | n/a                       | n/a       | array of objects with columns informations
-| `disabled`    | boolean   | <?        | no                | `true`, `false`           | `false`   | disabled flag
-| `searchable`  | boolean   | <?        | no                | `true`, `false`           | `false`   | searchable flag
-| `on-change`   | function  | &         | no                | n/a                       | n/a       | handler triggered when model has changed
+| Attribute       | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
+| ----            | ----      | ----      | ----              | ----                      | ----      | ----
+| `model`         | object    | =         | no                | n/a                       | n/a       | model bound to component
+| `properties`    | array     | <?        | no                | n/a                       | n/a       | array of objects with columns informations
+| `disabled`      | boolean   | <?        | no                | `true`, `false`           | `false`   | disabled flag
+| `searchable`    | boolean   | <?        | no                | `true`, `false`           | `false`   | searchable flag
+| `on-change`     | function  | &         | no                | n/a                       | n/a       | handler triggered when model has changed
 
 ## Component `oui-criteria-adder`
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
-| ----          | ----      | ----      | ----              | ----                      | ----      | ----
-| `id`          | string    | @?        | yes               | n/a                       | n/a       | id attribute of the component
-| `name`        | string    | @         | yes               | n/a                       | n/a       | name attribute of the component
-| `placement`   | string    | @?        | yes               | `start`, `center`, `end`  | `center`  | placement of the dropdown menu
-| `properties`  | array     | <         | no                | n/a                       | n/a       | array of objects with columns informations
-| `on-submit`   | function  | &         | no                | n/a                       | n/a       | handler triggered when form is submitted
+| Attribute       | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
+| ----            | ----      | ----      | ----              | ----                      | ----      | ----
+| `id`            | string    | @?        | yes               | n/a                       | n/a       | id attribute of the component
+| `name`          | string    | @         | yes               | n/a                       | n/a       | name attribute of the component
+| `placement`     | string    | @?        | yes               | `start`, `center`, `end`  | `center`  | placement of the dropdown menu
+| `properties`    | array     | <         | no                | n/a                       | n/a       | array of objects with columns informations
+| `on-submit`     | function  | &         | no                | n/a                       | n/a       | handler triggered when form is submitted
 
 ### Attribute `properties`
 
 `properties` is an array of objects defined as this:
 
-| Attribute     | Type      | Description
-| ----          | ----      | -----
-| `name`        | string    | Property to filter (can be a nested one)
-| `title`       | string    | Human readeable title for the property
-| `type`        | string    | Data type
-| `typeOptions` | object    | Specific options
+| Attribute                   | Type      | Description
+| ----                        | ----      | -----
+| `name`                      | string    | Property to filter (can be a nested one)
+| `title`                     | string    | Human readeable title for the property
+| `type`                      | string    | Data type
+| `typeOptions`               | object    | Specific options
+| `typeOptions.hideOperators` | boolean   | Hide operators field. If `true`, The first entry of the operators will be applied when submitted.

@@ -18,8 +18,10 @@ export default () => {
       rowLoader: '&?',
       emptyPlaceholder: '@?',
       onColumnsParametersChange: '&',
+      onCriteriaChanged: '&onCriteriaChange',
       onPageChange: '&',
       onRowSelect: '&',
+      onSortChange: '&',
     },
     compile: (elm) => {
       // Transclude can't be used here otherwise transcluded
