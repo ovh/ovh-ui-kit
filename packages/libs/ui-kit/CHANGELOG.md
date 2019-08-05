@@ -1,3 +1,24 @@
+# [3.4.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.4...v3.4.0) (2019-08-05)
+
+
+### Bug Fixes
+
+* **eslint:** error on fade function ([#479](https://github.com/ovh-ux/ovh-ui-kit/issues/479)) ([f195c81](https://github.com/ovh-ux/ovh-ui-kit/commit/f195c81))
+* **numeric:** fix change value using keyboard ([#477](https://github.com/ovh-ux/ovh-ui-kit/issues/477)) ([98df32c](https://github.com/ovh-ux/ovh-ui-kit/commit/98df32c))
+* **stepper:** allow html for header and description ([43e66e2](https://github.com/ovh-ux/ovh-ui-kit/commit/43e66e2))
+
+
+### Features
+
+* **checkbox:** add ability to display a footer when in thumbnail mode ([fbe9ee8](https://github.com/ovh-ux/ovh-ui-kit/commit/fbe9ee8))
+* **criteria:** add ability to hide operators field ([#476](https://github.com/ovh-ux/ovh-ui-kit/issues/476)) ([fe035a5](https://github.com/ovh-ux/ovh-ui-kit/commit/fe035a5))
+* **datagrid:** add events onSortChange and onCriteriaChange ([#480](https://github.com/ovh-ux/ovh-ui-kit/issues/480)) ([6e30f05](https://github.com/ovh-ux/ovh-ui-kit/commit/6e30f05))
+* **radio:** add ability to display a footer when in thumbnail mode ([4f85f7a](https://github.com/ovh-ux/ovh-ui-kit/commit/4f85f7a))
+* **search:** add boolean attribute to reset on submit ([2f8d1eb](https://github.com/ovh-ux/ovh-ui-kit/commit/2f8d1eb))
+* **tile:** add transclude for term and actions ([#475](https://github.com/ovh-ux/ovh-ui-kit/issues/475)) ([0587035](https://github.com/ovh-ux/ovh-ui-kit/commit/0587035))
+
+
+
 ## [3.3.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.3...v3.3.4) (2019-07-10)
 
 
