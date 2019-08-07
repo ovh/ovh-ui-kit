@@ -12,8 +12,10 @@ describe('ouiDatagrid', () => {
 
   const getRows = element => element[0].querySelectorAll('.oui-datagrid__body .oui-datagrid__row:not(.oui-datagrid__row_loading)');
   const getRow = (element, lineNumber) => angular.element(getRows(element)[lineNumber]);
-  const getHeaderRow = element => angular.element(element[0].querySelector('.oui-datagrid__headers .oui-datagrid__row:not(.oui-datagrid__row_loading)'));
+  const getHeaderRow = element => angular.element(element[0].querySelector('.oui-datagrid__headers > tr'));
   const getHeaderCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__header')[columnNumber]);
+  const getFooterRow = element => angular.element(element[0].querySelector('.oui-datagrid__footers > tr'));
+  const getFooterCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__footer')[columnNumber]);
   const getCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__cell')[columnNumber]);
   const getPaginationOffset = element => angular.element(element[0].querySelector('.oui-pagination .oui-dropdown .oui-button span:first-child'));
   const getPaginationLastItemOffset = element => angular.element(element[0].querySelector('.oui-pagination .oui-dropdown .oui-button span:nth-child(2)'));
@@ -1398,13 +1400,13 @@ describe('ouiDatagrid', () => {
     describe('Columns', () => {
       it('should support dataset notation', () => {
         const element = TestUtils.compileTemplate(`
-                        <oui-datagrid data-rows="$ctrl.rows">
-                            <oui-datagrid-column data-property="firstName"
-                                data-sortable="asc"
-                                data-title="'First name'"></oui-datagrid-column>
+                        <oui-datagrid rows="$ctrl.rows">
+                            <oui-datagrid-column property="firstName"
+                                sortable="asc"
+                                title="'First name'"></oui-datagrid-column>
                             <oui-datagrid-column property="lastName"
-                                data-sortable
-                                data-title="'Last name'"></oui-datagrid-column>
+                                sortable
+                                title="'Last name'"></oui-datagrid-column>
                             <oui-action-menu>
                                 <oui-action-menu-item>Action 1</oui-action-menu-item>
                                 <oui-action-menu-item>Action 2</oui-action-menu-item>
@@ -1414,14 +1416,14 @@ describe('ouiDatagrid', () => {
           rows: fakeData.slice(0, 5),
         });
 
-        // Check data-sortable and data-title
+        // Check sortable and title
         const $headerRow = getHeaderRow(element);
         expect(getHeaderCell($headerRow, 0).text().trim()).toEqual('First name');
         expect(isSortableAscCell(getHeaderCell($headerRow, 0))).toBe(true);
         expect(getHeaderCell($headerRow, 1).text().trim()).toEqual('Last name');
         expect(isSortableCell(getHeaderCell($headerRow, 1))).toBe(true);
 
-        // Check data-property
+        // Check property
         const firstRow = getRow(element, 0);
         expect(getCell(firstRow, 0).text().trim()).toEqual('Ann');
         expect(getCell(firstRow, 1).text().trim()).toEqual('Cole');
@@ -1429,9 +1431,9 @@ describe('ouiDatagrid', () => {
 
       it('should not accept white spaces as template', () => {
         const element = TestUtils.compileTemplate(`
-                    <oui-datagrid data-rows="$ctrl.rows">
-                        <oui-datagrid-column data-property="firstName"
-                            data-title="'First name'">
+                    <oui-datagrid rows="$ctrl.rows">
+                        <oui-datagrid-column property="firstName"
+                            title="'First name'">
                         </oui-datagrid-column>
                     </oui-datagrid>
                 `, {
@@ -1441,6 +1443,30 @@ describe('ouiDatagrid', () => {
         // Check that property is still rendered in the cell.
         const firstRow = getRow(element, 0);
         expect(getCell(firstRow, 0).text().trim()).toEqual('Raymond');
+      });
+
+      it('should have a footer row with the propety value', () => {
+        const footerValue = 'test';
+        const element = TestUtils.compileTemplate(`
+          <oui-datagrid rows="$ctrl.rows">
+            <oui-datagrid-column property="firstName"
+              title="'First name'"
+              footer="${footerValue}">
+            </oui-datagrid-column>
+            <oui-datagrid-column property="lastName"
+              title="'Last name'">
+            </oui-datagrid-column>
+          </oui-datagrid>
+        `, {
+          rows: fakeData.slice(0, 5),
+        });
+
+        const footerRow = getFooterRow(element);
+        const footerCell = getFooterCell(element, 0);
+
+        expect(footerRow.length).toBe(1);
+        expect(footerCell.length).toBe(1);
+        expect(footerCell.text().trim()).toBe(footerValue);
       });
     });
   });

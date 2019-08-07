@@ -19,6 +19,7 @@ export default class DatagridColumnBuilder {
   }
 
   build(columnElements, $scope) {
+    let hasFooter = false;
     const columns = [];
     const currentSorting = {
       columnName: undefined,
@@ -82,6 +83,11 @@ export default class DatagridColumnBuilder {
         column.rawTitle = titleValue;
       }
 
+      if (hasAttribute(columnElement, 'footer')) {
+        hasFooter = true;
+        column.footer = getAttribute(columnElement, 'footer');
+      }
+
       if (!column.sortProperty) {
         column.sortProperty = column.name;
       }
@@ -101,10 +107,12 @@ export default class DatagridColumnBuilder {
     return {
       columns,
       currentSorting,
+      hasFooter,
     };
   }
 
   buildFromJs(columnsDescription) {
+    let hasFooter = false;
     const columns = [];
     const currentSorting = {
       columnName: undefined,
@@ -149,6 +157,11 @@ export default class DatagridColumnBuilder {
 
       column.title = columnDescription.title;
 
+      if (columnDescription.footer) {
+        hasFooter = true;
+        column.footer = columnDescription.footer;
+      }
+
       if (!column.sortProperty) {
         column.sortProperty = column.name;
       }
@@ -166,6 +179,7 @@ export default class DatagridColumnBuilder {
     return {
       columns,
       currentSorting,
+      hasFooter,
     };
   }
 

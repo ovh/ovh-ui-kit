@@ -65,6 +65,7 @@ export default class DatagridController {
 
   $onInit() {
     this.hasActionMenu = false;
+    this.hasFooter = false;
     this.scrollBegin = false;
     this.scrollEnd = false;
     this.firstLoading = true;
@@ -178,6 +179,8 @@ export default class DatagridController {
     const builtColumns = this.columnsDescription && this.columnsDescription.length
       ? this.ouiDatagridColumnBuilder.buildFromJs(this.columnsDescription, this.getParentScope())
       : this.ouiDatagridColumnBuilder.build(this.columnElements, this.getParentScope());
+
+    this.hasFooter = builtColumns.hasFooter;
 
     if (this.actionColumnElements.length) {
       // Set default value for the menu

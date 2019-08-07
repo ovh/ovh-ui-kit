@@ -8,8 +8,8 @@ storiesOf('Styles/Datagrid', module)
       <thead class="oui-datagrid__headers">
         <tr>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">First Name</th>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
-          <th class="oui-datagrid__header oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sorted oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
+          <th class="oui-datagrid__header oui-datagrid__header_sorted oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Father</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Email</th>
           <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Phone</th>
@@ -36,6 +36,17 @@ storiesOf('Styles/Datagrid', module)
           <td class="oui-datagrid__cell">Sep 27, 1974</td>
         </tr>
       </tbody>
+      <tfoot class="oui-datagrid__footers">
+        <tr>
+          <td class="oui-datagrid__footer">Lorem</td>
+          <td class="oui-datagrid__footer">Ipsum</td>
+          <td class="oui-datagrid__footer">Dolor</td>
+          <td class="oui-datagrid__footer">Sit</td>
+          <td class="oui-datagrid__footer">Amet</td>
+          <td class="oui-datagrid__footer">Consectetur</td>
+          <td class="oui-datagrid__footer">Adipiscing</td>
+        </tr>
+      </tfoot>
     </table>
     `,
   )
@@ -49,8 +60,8 @@ storiesOf('Styles/Datagrid', module)
             <thead class="oui-datagrid__headers">
               <tr>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">First Name</th>
-                <th class="oui-datagrid__header oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
-                <th class="oui-datagrid__header oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
+                <th class="oui-datagrid__header oui-datagrid__header_sorted oui-datagrid__header_sortable-asc" tabindex="0">Last Name</th>
+                <th class="oui-datagrid__header oui-datagrid__header_sorted oui-datagrid__header_sortable-desc" tabindex="0">Mother</th>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Father</th>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Email</th>
                 <th class="oui-datagrid__header oui-datagrid__header_sortable" tabindex="0">Phone</th>
@@ -77,6 +88,17 @@ storiesOf('Styles/Datagrid', module)
                 <td class="oui-datagrid__cell">Sep 27, 1974</td>
               </tr>
             </tbody>
+            <thead class="oui-datagrid__footers">
+              <tr>
+                <td class="oui-datagrid__footer">Lorem</td>
+                <td class="oui-datagrid__footer">Ipsum</td>
+                <td class="oui-datagrid__footer">Dolor</td>
+                <td class="oui-datagrid__footer">Sit</td>
+                <td class="oui-datagrid__footer">Amet</td>
+                <td class="oui-datagrid__footer">Consectetur</td>
+                <td class="oui-datagrid__footer">Adipiscing</td>
+              </tr>
+            </thead>
           </table>
         </div>
       </div>
@@ -118,6 +140,17 @@ storiesOf('Styles/Datagrid', module)
           <td class="oui-datagrid__cell">Sep 27, 1974</td>
         </tr>
       </tbody>
+      <tfoot class="oui-datagrid__footers">
+        <tr>
+          <td class="oui-datagrid__footer">Lorem</td>
+          <td class="oui-datagrid__footer">Ipsum</td>
+          <td class="oui-datagrid__footer">Dolor</td>
+          <td class="oui-datagrid__footer">Sit</td>
+          <td class="oui-datagrid__footer">Amet</td>
+          <td class="oui-datagrid__footer">Consectetur</td>
+          <td class="oui-datagrid__footer">Adipiscing</td>
+        </tr>
+      </tfoot>
     </table>
     `,
   );
