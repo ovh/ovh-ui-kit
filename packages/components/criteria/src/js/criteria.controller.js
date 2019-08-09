@@ -19,16 +19,18 @@ export default class {
     this.debounceDelay = 500;
   }
 
-  triggerChange(force = false) {
-    if (this.onChange || force) {
-      this.onChange({ modelValue: angular.copy(this.model) });
-      this.criteria = this.model
-        .filter(criterion => !criterion.preview)
-        .map(criterion => ({
-          title: this.buildTitle(criterion),
-          ...criterion,
-        }));
-    }
+  triggerChange(preview) {
+    this.onChange({
+      modelValue: angular.copy(this.model),
+      preview,
+    });
+
+    this.criteria = this.model
+      .filter(criterion => !criterion.preview)
+      .map(criterion => ({
+        title: this.buildTitle(criterion),
+        ...criterion,
+      }));
   }
 
   indexOfCriterion(criterion) {
@@ -47,14 +49,16 @@ export default class {
     } else {
       this.model.push(previewCriterion);
     }
-    this.triggerChange();
+    this.triggerChange(true);
   }
 
-  deletePreviewCriterion() {
+  deletePreviewCriterion(preview) {
     const previewCriterionIndex = findIndex(this.model, ['preview', true]);
     if (previewCriterionIndex > -1) {
       this.model.splice(previewCriterionIndex, 1);
-      this.triggerChange();
+
+      // We set the search reset as a preview
+      this.triggerChange(preview);
     }
   }
 
@@ -90,7 +94,7 @@ export default class {
     if (criterionIndex > -1) {
       this.model.splice(criterionIndex, 1);
     }
-    this.triggerChange(true);
+    this.triggerChange();
   }
 
   set(criteria) {
@@ -107,12 +111,12 @@ export default class {
     if (modelValue && modelValue.length >= this.minLength) {
       this.setPreviewCriterion(this.constructor.getCriterion(modelValue), true);
     } else {
-      this.deletePreviewCriterion();
+      this.deletePreviewCriterion(true);
     }
   }
 
   onCriterionReset() {
-    this.deletePreviewCriterion();
+    this.deletePreviewCriterion(true);
   }
 
   onCriterionSubmit(modelValue) {

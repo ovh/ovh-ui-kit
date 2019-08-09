@@ -63,7 +63,10 @@ describe('ouiCriteria', () => {
       expect(controller.model.length).toEqual(1);
       expect(controller.model[0]).toEqual(criterion);
 
-      expect(controller.onChange).toHaveBeenCalledWith({ modelValue: [criterion] });
+      expect(controller.onChange).toHaveBeenCalledWith({
+        modelValue: [criterion],
+        preview: undefined,
+      });
     });
 
     it('should not add an existing criteria', () => {
@@ -86,7 +89,10 @@ describe('ouiCriteria', () => {
       expect(controller.model.length).toEqual(1);
       expect(controller.model[0]).toEqual(criterion2);
 
-      expect(controller.onChange).toHaveBeenCalledWith({ modelValue: [criterion2] });
+      expect(controller.onChange).toHaveBeenCalledWith({
+        modelValue: [criterion2],
+        preview: undefined,
+      });
     });
 
     it('should not delete a nonexistent criteria', () => {
