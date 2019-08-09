@@ -276,12 +276,17 @@ export default class DatagridController {
     return hasProperty(obj, prop);
   }
 
-  onCriteriaChange(criteria) {
+  onCriteriaChange(criteria, preview) {
     // Preview criteria are visually filtered by oui-criteria
     this.criteria = criteria;
-    this.onCriteriaChanged({
-      $criteria: criteria,
-    });
+
+    // No need to trigger the callback if preview
+    if (!preview) {
+      this.onCriteriaChanged({
+        $criteria: criteria,
+      });
+    }
+
     this.refreshData(() => {
       this.paging.setOffset(1);
       this.paging.setCriteria(criteria);

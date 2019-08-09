@@ -1,3 +1,12 @@
+## [3.4.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.0...v3.4.1) (2019-08-09)
+
+
+### Bug Fixes
+
+* **datagrid:** fix preview search shouldn't trigger onCriteriaChange ([e49319d](https://github.com/ovh-ux/ovh-ui-kit/commit/e49319d))
+
+
+
 # [3.4.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.4...v3.4.0) (2019-08-05)
 
 
