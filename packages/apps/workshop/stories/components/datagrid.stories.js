@@ -99,6 +99,23 @@ storiesOf('Components/Datagrid', module)
     })),
   )
   .add(
+    'With footer',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-datagrid
+      page-size="5"
+      rows="$ctrl.data">
+      <oui-datagrid-column title="'First name'" property="firstName" footer="Lorem"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName" footer="Ipsum"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+    </oui-datagrid>
+    `, {
+      $ctrl: {
+        data,
+      },
+    })),
+  )
+  .add(
     'Sortable',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-datagrid
