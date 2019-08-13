@@ -15,8 +15,11 @@ module.exports = merge(baseConfig, {
     'oui-ods-dark': './src/oui-ods-dark.less',
   },
   output: {
-    path: path.resolve('.', 'dist', 'js'),
     filename: '[name].js',
+    library: 'oui',
+    libraryTarget: 'umd',
+    path: path.resolve('.', 'dist', 'js'),
+    // libraryTarget: 'umd',
   },
   plugins: [
     // Extract CSS to separate files
@@ -32,10 +35,35 @@ module.exports = merge(baseConfig, {
     }),
   ],
   externals: {
-    'bloodhound-js': 'Bloodhound',
-    clipboard: 'ClipboardJS',
-    flatpickr: 'flatpickr',
-    'popper.js': 'Popper',
-    'ui-select': '"ui.select"', // Doesn't support module import
+    'bloodhound-js': {
+      commonjs: 'bloodhound-js',
+      commonjs2: 'bloodhound-js',
+      amd: 'bloodhound-js',
+      root: 'Bloodhound',
+    },
+    clipboard: {
+      commonjs: 'clipboard',
+      commonjs2: 'clipboard',
+      amd: 'clipboard',
+      root: 'ClipboardJS',
+    },
+    flatpickr: {
+      commonjs: 'flatpickr',
+      commonjs2: 'flatpickr',
+      amd: 'flatpickr',
+      root: 'flatpickr',
+    },
+    'popper.js': {
+      commonjs: 'popper.js',
+      commonjs2: 'popper.js',
+      amd: 'popper.js',
+      root: 'Popper',
+    },
+    'ui-select': {
+      commonjs: 'ui-select',
+      commonjs2: 'ui-select',
+      amd: 'ui-select',
+      root: '"ui.select"', // Doesn't support module import
+    },
   },
 });
