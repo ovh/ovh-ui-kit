@@ -16,6 +16,20 @@
 
 
 
+# [3.5.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v3.5.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* fix webpack configuration for umd target ([#487](https://github.com/ovh-ux/ovh-ui-kit/issues/487)) ([1688038](https://github.com/ovh-ux/ovh-ui-kit/commit/1688038))
+
+
+### Features
+
+* **datagrid:** add footer attribute ([e407947](https://github.com/ovh-ux/ovh-ui-kit/commit/e407947))
+
+
+
 ## [3.4.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.0...v3.4.1) (2019-08-09)
 
 
