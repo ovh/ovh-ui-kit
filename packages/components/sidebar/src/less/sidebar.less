@@ -59,7 +59,9 @@
     }
 
     &:focus {
-      #oui > .outline-border();
+      #oui > .outline-border(
+        @outline-offset: @oui-sidebar-outline-offset
+      );
     }
   }
 }

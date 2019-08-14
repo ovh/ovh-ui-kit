@@ -25,8 +25,7 @@
   "dependencies": {
     "@ovh-ux/ui-kit.components": "*",
     "@ovh-ux/ui-kit.config": "*",
-    "@ovh-ux/ui-kit.core": "*",
-    "@ovh-ux/ui-kit.themes": "*"
+    "@ovh-ux/ui-kit.core": "*"
   },
   "devDependencies": {
     "angular": "^1.7.8",

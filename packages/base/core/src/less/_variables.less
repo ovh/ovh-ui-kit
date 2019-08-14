@@ -1,3 +1,7 @@
+@import './_constants';
+@import './_icons';
+@import './_tokens';
+
 /*
  * Core
  */
@@ -1176,6 +1180,7 @@
 @oui-navbar-background-color: @oui-color-zodiac;
 @oui-navbar-background-color_active: @oui-color-rhino;
 @oui-navbar-box-shadow: 0 2pt 4pt rgba(17, 63, 109, 0.15);
+@oui-navbar-outline-offset: -@oui-a11y-outline-width;
 @oui-navbar-z-index: 1030;
 
 // Navbar - Brand
@@ -1280,7 +1285,7 @@
 @oui-navbar-link-padding: @oui-navbar-link-padding-h @oui-navbar-link-padding-v;
 @oui-navbar-link-font-color: @oui-color-white;
 @oui-navbar-link-font-size: rem-calc(16);
-@oui-navbar-link-font-weight: 400;
+@oui-navbar-link-font-weight: @oui-font-regular;
 @oui-navbar-link-text-decoration: none;
 @oui-navbar-link-text-decoration_hover: underline;
 @oui-navbar-link-text-decoration_active: none;
@@ -1295,18 +1300,23 @@
 @oui-navbar-primary-font-color: @oui-color-white;
 @oui-navbar-primary-font-color_active: @oui-color-turquoise;
 @oui-navbar-primary-font-size: @oui-navbar-font-size_large;
-@oui-navbar-primary-font-weight: 600;
+@oui-navbar-primary-font-weight: @oui-font-semibold;
 
 @oui-navbar-secondary-font-color: @oui-color-ironlight;
 @oui-navbar-secondary-font-color_active: @oui-color-white;
 @oui-navbar-secondary-font-size: @oui-navbar-font-size_large;
-@oui-navbar-secondary-font-weight: 400;
+@oui-navbar-secondary-font-weight: @oui-font-regular;
+
+@oui-navbar-tertiary-font-color: @oui-color-ironlight;
+@oui-navbar-tertiary-font-color_active: @oui-color-white;
+@oui-navbar-tertiary-font-size: rem-calc(14);
+@oui-navbar-tertiary-font-weight: @oui-font-semibold;
 
 @oui-navbar-icon-line-height: 1;
 @oui-navbar-icon-size: rem-calc(30);
 @oui-navbar-icon-spacing: rem-calc(10);
 @oui-navbar-icon-font-size: rem-calc(14);
-@oui-navbar-icon-font-weight: 600;
+@oui-navbar-icon-font-weight: @oui-font-semibold;
 @oui-navbar-icon-color: @oui-color-silver;
 @oui-navbar-icon-color_active: @oui-color-white;
 
@@ -1314,7 +1324,7 @@
 @oui-navbar-badge-padding: 0 rem-calc(5);
 @oui-navbar-badge-font-color: @oui-color-white;
 @oui-navbar-badge-font-size: rem-calc(12);
-@oui-navbar-badge-font-weight: 600;
+@oui-navbar-badge-font-weight: @oui-font-semibold;
 @oui-navbar-badge-left-spacing: rem-calc(24);
 @oui-navbar-badge-radius: rem-calc(8);
 @oui-navbar-badge-background-color: @oui-color-error-medium;
@@ -1407,7 +1417,7 @@
 
 @oui-progress-bar-text-font-size: rem-calc(14px);
 @oui-progress-bar-compact-text-font-size: rem-calc(16px);
-@oui-progress-bar-text-font-weight: 400;
+@oui-progress-bar-text-font-weight: @oui-font-regular;
 @oui-progress-bar-text-color: @oui-color-shuttle;
 @oui-progress-bar-text-spacing: rem-calc(5);
 
@@ -1664,6 +1674,7 @@
 @oui-sidebar-box-shadow: none;
 @oui-sidebar-z-index: 1020;
 @oui-sidebar-transition-delay: 0.3s;
+@oui-sidebar-outline-offset: -@oui-a11y-outline-width;
 
 // Sidebar Menu
 @oui-sidebar-menu-width: rem-calc(300);
@@ -1692,7 +1703,7 @@
 @oui-sidebar-menu-title-line-height: 1.2;
 @oui-sidebar-menu-title-font-color: @oui-sidebar-menu-font-color_responsive;
 @oui-sidebar-menu-title-font-size: rem-calc(20);
-@oui-sidebar-menu-title-font-weight: 600;
+@oui-sidebar-menu-title-font-weight: @oui-font-semibold;
 
 @oui-sidebar-arrow-content: @oui-icon-index-chevron-down;
 @oui-sidebar-arrow-content_active: @oui-icon-index-chevron-up;
@@ -1717,7 +1728,7 @@
 @oui-sidebar-link-font-color_active: @oui-color-white;
 @oui-sidebar-link-font-color_responsive: @oui-sidebar-font-color_responsive;
 @oui-sidebar-link-font-size: rem-calc(16);
-@oui-sidebar-link-font-weight: 400;
+@oui-sidebar-link-font-weight: @oui-font-regular;
 @oui-sidebar-link-background-color: transparent;
 @oui-sidebar-link-background-color_responsive: transparent;
 @oui-sidebar-link-background-color_active: @oui-color-foam;
