@@ -31,7 +31,9 @@
       text-decoration: none;
 
       &:focus {
-        #oui > .outline-border();
+        #oui > .outline-border(
+          @outline-offset: @oui-header-tabs-item-outline-offset
+        );
       }
     }
 
@@ -47,6 +49,12 @@
       &:active,
       &:focus {
         background-color: transparent;
+      }
+
+      &:focus {
+        #oui > .outline-border(
+          @outline-offset: @oui-header-tabs-item-outline-offset
+        );
       }
     }
 

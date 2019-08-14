@@ -151,7 +151,9 @@
       cursor: pointer;
 
       &:focus {
-        #oui > .outline-border();
+        #oui > .outline-border(
+          @outline-offset: @oui-dropdown-item-outline-offset
+        );
       }
 
       &:hover,
