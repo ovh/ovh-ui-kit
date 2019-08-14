@@ -1,7 +1,10 @@
 import { getAttribute, hasAttribute } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 const copyValueProperties = ['hidden', 'title', 'type', 'type-options'];
-const searchableTypes = ['string'];
+const searchableTypes = [
+  'number',
+  'string',
+];
 const filterableTypes = [
   'boolean',
   'date',
