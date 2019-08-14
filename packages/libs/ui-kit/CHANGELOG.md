@@ -1,3 +1,12 @@
+# [4.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2019-08-14)
+
+
+### Bug Fixes
+
+* fix outline borders ([9c1e47d](https://github.com/ovh-ux/ovh-ui-kit/commit/9c1e47d))
+
+
+
 # [4.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2019-08-14)
 
 
