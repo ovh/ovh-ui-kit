@@ -36,17 +36,6 @@ describe('ouiPopover', () => {
         expect(popover.text().trim()).toBe('foo');
       });
 
-      it('should position the popover with right direction when trigger is clicked, if there is no placement defined', () => {
-        const component = testUtils.compileTemplate('<div><button class="trigger" oui-popover="foo"></button></div>');
-
-        $timeout.flush();
-
-        const trigger = angular.element(component[0].querySelector('.trigger')).triggerHandler('click');
-        const popover = trigger.next();
-
-        expect(popover.attr('x-placement')).toBe('right');
-      });
-
 
       it('should position the popover with placement attribute value, when trigger is clicked', () => {
         const component = testUtils.compileTemplate('<div><button class="trigger" oui-popover="foo" oui-popover-placement="bottom-start"></button></div>');

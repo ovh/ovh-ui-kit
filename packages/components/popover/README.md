@@ -12,7 +12,7 @@ angular.module('myModule', ['oui.popover']);
 | ----                      | ----      | ----      | ----              | ----                                                                                          | ----              | ----
 | `oui-popover`             | string    | @         | no                | n/a                                                                                           | `title` attribute | popover content
 | `oui-popover-id`          | string    | @?        | yes               | n/a                                                                                           | n/a               | popover content id
-| `oui-popover-placement`   | string    | @?        | yes               | See [Popper placements](https://popper.js.org/popper-documentation.html#Popper.placements)    | `right`           | modifier for alignment
+| `oui-popover-placement`   | string    | @?        | yes               | See [Popper placements](https://popper.js.org/popper-documentation.html#Popper.placements)    | `auto`            | modifier for alignment
 | `oui-popover-template`    | string    | @?        | no                | n/a                                                                                           | n/a               | id of the popover template
 | `oui-popover-scope`       | string    | <?        | no                | n/a                                                                                           | n/a               | scope of the popover template
 | `oui-popover-open`        | boolean   | <?        | no                | `true`, `false`                                                                               | `false`           | open or close the popover

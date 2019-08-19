@@ -20,7 +20,7 @@ export default class PopoverController {
     this.id = this.id || `ouiPopover${this.$scope.$id}`;
     this.isPopoverOpen = false;
 
-    addDefaultParameter(this, 'placement', 'right');
+    addDefaultParameter(this, 'placement', 'auto');
   }
 
   $postLink() {
