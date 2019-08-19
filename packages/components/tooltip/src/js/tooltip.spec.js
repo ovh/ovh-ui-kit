@@ -55,17 +55,6 @@ describe('ouiTooltip', () => {
       expect(trigger.attr('aria-label')).toBe('bar');
     });
 
-    it('should position the tooltip with top-center direction when trigger is focused, if there is no placement defined', () => {
-      const component = testUtils.compileTemplate('<div><button class="trigger" oui-tooltip="foo"></button></div>');
-
-      $timeout.flush();
-
-      const trigger = angular.element(component[0].querySelector('.trigger')).triggerHandler('focus');
-      const tooltip = trigger.next();
-
-      expect(tooltip.attr('x-placement')).toBe('top');
-    });
-
     it('should position the tooltip with placement attribute value, when trigger is focused', () => {
       const component = testUtils.compileTemplate('<div><button class="trigger" oui-tooltip="foo" oui-tooltip-placement="bottom-start"></button></div>');
 
