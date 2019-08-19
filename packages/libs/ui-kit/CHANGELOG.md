@@ -50,6 +50,15 @@
 
 
 
+## [3.5.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v3.5.1) (2019-08-19)
+
+
+### Bug Fixes
+
+* **datagrid:** allow searching in number columns ([#491](https://github.com/ovh-ux/ovh-ui-kit/issues/491)) ([144d737](https://github.com/ovh-ux/ovh-ui-kit/commit/144d737))
+
+
+
 # [3.5.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v3.5.0) (2019-08-13)
 
 
