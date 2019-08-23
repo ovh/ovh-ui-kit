@@ -137,8 +137,12 @@ oui-button {
   padding: @oui-button-primary-padding;
   border-width: @oui-button-primary-border-width;
 
+  // Deprecated: Support for old classname
+  &.oui-button_small-width,
   &.oui-button_s { padding: @oui-button-primary-padding_small; }
 
+  // Deprecated: Support for old classname
+  &.oui-button_large-height,
   &.oui-button_l { padding: @oui-button-primary-padding_large; }
 }
 
@@ -165,8 +169,12 @@ oui-button {
   padding: @oui-button-secondary-padding;
   border-width: @oui-button-secondary-border-width;
 
+  // Deprecated: Support for old classname
+  &.oui-button_small-width,
   &.oui-button_s { padding: @oui-button-secondary-padding_small; }
 
+  // Deprecated: Support for old classname
+  &.oui-button_large-height,
   &.oui-button_l { padding: @oui-button-secondary-padding_large; }
 }
 
@@ -222,6 +230,8 @@ oui-button {
   }
 
   // No need to add a small variant
+  // Deprecated: Support for old classname
+  &.oui-button_large-height,
   &.oui-button_l {
     padding: @oui-button-dropdown-padding_large;
     padding-right: @oui-button-dropdown-padding-right_large;
@@ -264,7 +274,11 @@ oui-button {
     // stylelint-enable no-descending-specificity
   }
 
+  // Deprecated: Support for old classname
+  &.oui-button_small-width,
   &.oui-button_s { padding: @oui-button-link-padding_small; }
 
+  // Deprecated: Support for old classname
+  &.oui-button_large-height,
   &.oui-button_l { padding: @oui-button-link-padding_large; }
 }
