@@ -39,12 +39,6 @@ export default class StepFormController {
     if (angular.isUndefined(this.$attrs.valid)) {
       this.valid = true;
     }
-
-    // Check if Stepper parent
-    if (this.stepperCtrl) {
-      this.stepper = {};
-      this.stepperCtrl.addStep(this);
-    }
   }
 
   $postLink() {
@@ -54,6 +48,12 @@ export default class StepFormController {
       .addClass('oui-stepper__step oui-stepper__step_form')
       .removeAttr('id')
       .removeAttr('name'));
+
+    // Check if Stepper parent
+    if (this.stepperCtrl) {
+      this.stepper = {};
+      this.stepperCtrl.addStep(this, this.getNodeIndex());
+    }
   }
 
   $onDestroy() {
@@ -62,18 +62,35 @@ export default class StepFormController {
     }
   }
 
+  getNodeIndex() {
+    let i = 0;
+    let item = this.$element[0];
+
+    // Calculate DOM node index
+    // To get position in parent ouiStepper
+    while (item.previousSibling) {
+      item = item.previousSibling;
+      if (item.nodeType === Node.ELEMENT_NODE) {
+        i += 1;
+      }
+    }
+
+    return i;
+  }
+
   onFormSubmit(form) {
     this.$scope.$emit('oui-step-form.submit', { form });
     this.onSubmit({ form });
 
     if (form.$valid && this.valid) {
-      // Focus next step
+      // Add form to forms array, and focus next step
       this.stepperCtrl.addForm(form, this.stepper.index);
     }
   }
 
   setFocus(form) {
-    this.stepperCtrl.focusStep(this.stepper.index);
+    // currentIndex is watched, and launch focusStep()
+    this.stepperCtrl.currentIndex = this.stepper.index;
     form.$setPristine();
   }
 }

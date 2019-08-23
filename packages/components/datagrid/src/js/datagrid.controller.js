@@ -143,7 +143,7 @@ export default class DatagridController {
     this.filterableColumns = this.columns.filter(column => column.filterable);
   }
 
-    $onChanges (changes) { // eslint-disable-line
+  $onChanges(changes) {
     if (changes.columnsDescription && !changes.columnsDescription.isFirstChange()) {
       this.buildColumns();
     }
@@ -176,9 +176,11 @@ export default class DatagridController {
   }
 
   buildColumns() {
-    const builtColumns = this.columnsDescription && this.columnsDescription.length
-      ? this.ouiDatagridColumnBuilder.buildFromJs(this.columnsDescription, this.getParentScope())
-      : this.ouiDatagridColumnBuilder.build(this.columnElements, this.getParentScope());
+    const builtColumns = this.ouiDatagridColumnBuilder.parseColumns(
+      this.columnElements,
+      this.columnsDescription,
+      this.getParentScope(),
+    );
 
     this.hasFooter = builtColumns.hasFooter;
 

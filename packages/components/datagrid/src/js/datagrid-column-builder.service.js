@@ -1,6 +1,5 @@
 import { getAttribute, hasAttribute } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
-const copyValueProperties = ['hidden', 'title', 'type', 'type-options'];
 const searchableTypes = [
   'number',
   'string',
@@ -21,120 +20,40 @@ export default class DatagridColumnBuilder {
     this.$compile = $compile;
   }
 
-  build(columnElements, $scope) {
-    let hasFooter = false;
+  parseColumns(_columnElements_, _columnDescription_, $scope) {
+    // Set columns number from arrays length
+    const columnElements = _columnElements_ || [];
+    const columnDescription = _columnDescription_ || [];
+    const columnsLength = Math.max(columnElements.length, columnDescription.length);
     const columns = [];
+
+    let hasFooter = false;
     const currentSorting = {
       columnName: undefined,
       dir: 0,
     };
 
-    angular.forEach(columnElements, (columnElement) => {
-      const column = {};
+    for (let i = 0; i < columnsLength; i += 1) {
+      const element = columnElements[i] || document.createElement('oui-datagrid-column');
+      const description = columnDescription[i] || {};
 
-      if (hasAttribute(columnElement, 'name')) {
-        column.name = getAttribute(columnElement, 'name');
-      }
+      const column = {
+        footer: description.footer || getAttribute(element, 'footer'),
+        hidden: description.hidden || hasAttribute(element, 'hidden'),
+        name: description.name || getAttribute(element, 'name'),
+        preventCustomization: description.preventCustomization || hasAttribute(element, 'prevent-customization'),
+        type: description.type || getAttribute(element, 'type') || 'string',
+        typeOptions: description.typeOptions || description['type-options'] || getAttribute(element, 'type-options'),
+      };
 
-      if (hasAttribute(columnElement, 'property')) {
-        const propertyValue = getAttribute(columnElement, 'property');
-
-        column.name = column.name || propertyValue;
-        column.getValue = this.$parse(propertyValue);
-
-        // A column can be sorted only if it has a "property" attribute.
-        if (hasAttribute(columnElement, 'sortable')) {
-          const sortableValue = getAttribute(columnElement, 'sortable');
-          column.sortable = !!sortableValue;
-
-          const sorting = DatagridColumnBuilder.defineDefaultSorting(column, sortableValue);
-          Object.assign(currentSorting, sorting);
-        }
-      }
-
-      if (!hasAttribute(columnElement, 'type')) {
-        column.type = 'string';
-      }
-
-      copyValueProperties.forEach((propertyName) => {
-        if (hasAttribute(columnElement, propertyName)) {
-          column[propertyName] = getAttribute(columnElement, propertyName);
-        }
-      });
-
-      column.filterable = DatagridColumnBuilder.isFilterable(column)
-                && hasAttribute(columnElement, 'filterable');
-      column.searchable = DatagridColumnBuilder.isSearchable(column)
-                && hasAttribute(columnElement, 'searchable');
-
-      if (column['type-options']) {
-        column.typeOptions = this.$parse(column['type-options'])($scope);
-      }
-
-      if (hasAttribute(columnElement, 'prevent-customization')) {
-        column.preventCustomization = true;
-      }
-
-      if (hasAttribute(columnElement, 'hidden')) {
-        column.hidden = true;
-      }
-
-      if (hasAttribute(columnElement, 'title')) {
-        const titleValue = getAttribute(columnElement, 'title');
-
-        column.title = this.buildTitle(titleValue, $scope);
-        column.rawTitle = titleValue;
-      }
-
-      if (hasAttribute(columnElement, 'footer')) {
-        hasFooter = true;
-        column.footer = getAttribute(columnElement, 'footer');
-      }
-
-      if (!column.sortProperty) {
-        column.sortProperty = column.name;
-      }
-
-      const htmlTemplate = columnElement.innerHTML.trim();
-      if (!column.template && htmlTemplate.length) {
-        column.template = htmlTemplate;
-      }
-
-      if (column.template) {
-        column.compiledTemplate = this.getColumnTemplate(column);
-      }
-
-      columns.push(column);
-    });
-
-    return {
-      columns,
-      currentSorting,
-      hasFooter,
-    };
-  }
-
-  buildFromJs(columnsDescription) {
-    let hasFooter = false;
-    const columns = [];
-    const currentSorting = {
-      columnName: undefined,
-      dir: 0,
-    };
-
-    angular.forEach(columnsDescription, (columnDescription) => {
-      const column = {};
-
-      column.name = columnDescription.name;
-
-      const propertyValue = columnDescription.property;
+      const propertyValue = description.property || getAttribute(element, 'property');
       if (propertyValue) {
         column.name = column.name || propertyValue;
         column.getValue = this.$parse(propertyValue);
 
         // A column can be sorted only if it has a "property" attribute.
-        const sortableValue = columnDescription.sortable;
-        if (columnDescription.sortable) {
+        const sortableValue = description.sortable || getAttribute(element, 'sortable') || hasAttribute(element, 'sortable');
+        if (sortableValue) {
           column.sortable = !!sortableValue;
 
           const sorting = DatagridColumnBuilder.defineDefaultSorting(column, sortableValue);
@@ -142,42 +61,39 @@ export default class DatagridColumnBuilder {
         }
       }
 
-      copyValueProperties.forEach((propertyName) => {
-        column[propertyName] = columnDescription[propertyName];
-      });
-
       column.filterable = DatagridColumnBuilder.isFilterable(column)
-                && columnDescription.filterable;
+        && (description.filterable || hasAttribute(element, 'filterable'));
       column.searchable = DatagridColumnBuilder.isSearchable(column)
-                && columnDescription.searchable;
+        && (description.searchable || hasAttribute(element, 'searchable'));
 
-
-      if (columnDescription.typeOptions) {
-        column.typeOptions = columnDescription.typeOptions;
+      if (column.typeOptions) {
+        column.typeOptions = this.$parse(column.typeOptions)($scope);
       }
 
-      column.preventCustomization = columnDescription.preventCustomization;
+      if (description.title) {
+        column.title = description.title;
+      } else if (hasAttribute(element, 'title')) {
+        column.rawTitle = description.title || getAttribute(element, 'title');
+        column.title = this.buildTitle(column.rawTitle, $scope);
+      }
 
-      column.title = columnDescription.title;
-
-      if (columnDescription.footer) {
+      // If one column has a footer, we set true for all
+      if (column.footer) {
         hasFooter = true;
-        column.footer = columnDescription.footer;
       }
 
       if (!column.sortProperty) {
         column.sortProperty = column.name;
       }
 
-      const htmlTemplate = columnDescription.template ? columnDescription.template.trim() : '';
-      column.template = htmlTemplate;
+      column.template = description.template
+        ? description.template.trim()
+        : element.innerHTML.trim();
 
-      if (column.template && column.template !== '') {
-        column.compiledTemplate = this.getColumnTemplate(column);
-      }
+      column.compiledTemplate = this.getColumnTemplate(column);
 
       columns.push(column);
-    });
+    }
 
     return {
       columns,
