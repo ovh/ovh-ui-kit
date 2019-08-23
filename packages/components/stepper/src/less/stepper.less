@@ -5,6 +5,7 @@
   &__steps { counter-reset: steps; }
 
   &__step {
+    counter-increment: steps;
     display: block;
     padding: @oui-stepper-step-padding;
     border-top: @oui-stepper-step-separator;
@@ -27,7 +28,6 @@
 
     &::before {
       content: counter(steps);
-      counter-increment: steps;
       width: @oui-stepper-step-bullet-size;
       height: @oui-stepper-step-bullet-size;
       line-height: @oui-stepper-step-bullet-size;

@@ -24,10 +24,11 @@ storiesOf('Components/Stepper', module)
       on-init="$ctrl.onInit()"
       on-finish="$ctrl.onFinish(forms)">
       <oui-step-form
+        name="step1"
         header="Step 1"
         description="This is a description"
         on-cancel="$ctrl.onCancel()"
-        on-focus="$ctrl.onFocus()"
+        on-focus="$ctrl.onFocus('step1')"
         on-submit="$ctrl.onSubmit(form)">
         <oui-field label="Email" size="xl">
           <input class="oui-input" type="email" name="email" ng-model="$ctrl.user.email" required>
@@ -35,10 +36,11 @@ storiesOf('Components/Stepper', module)
       </oui-step-form>
 
       <oui-step-form
+        name="step2"
         header="Step 2"
         description="This is a description"
         on-cancel="$ctrl.onCancel()"
-        on-focus="$ctrl.onFocus()"
+        on-focus="$ctrl.onFocus('step2')"
         on-submit="$ctrl.onSubmit(form)"
         skippable>
         <oui-field label="Firstname" size="xl">
@@ -47,10 +49,11 @@ storiesOf('Components/Stepper', module)
       </oui-step-form>
 
       <oui-step-form
+        name="step3"
         header="Step 3"
         description="This is a description"
         on-cancel="$ctrl.onCancel()"
-        on-focus="$ctrl.onFocus()"
+        on-focus="$ctrl.onFocus('step3')"
         on-submit="$ctrl.onSubmit(form)"
         skippable>
         <oui-field label="Lastname" size="xl">
