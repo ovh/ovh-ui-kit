@@ -8,8 +8,8 @@
 </button>
 <a class="oui-dropdown-option"
     role="menuitem"
-    ng-if=":: !!$ctrl.href && !$ctrl.disabled"
-    ng-href="{{::$ctrl.href}}"
+    ng-if="!!$ctrl.href"
+    ng-href="{{$ctrl.href}}"
     ng-attr-target="{{::$ctrl.linkTarget}}"
     ng-attr-rel="{{::$ctrl.linkRel}}"
     ng-click="$ctrl.onClick()">

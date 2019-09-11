@@ -59,7 +59,7 @@ angular.module('myModule', ['oui.dropdown']);
 | Attribute         | Type      | Binding   | One-time Binding  | Values                    | Default   | Description
 | ----              | ----      | ----      | ----              | ----                      | ----      | ----
 | `aria-label`      | string    | @?        | yes               | n/a                       | n/a       | accessibility label
-| `href`            | string    | @?        | yes               | n/a                       | n/a       | href of the item
+| `href`            | string    | @?        | no                | n/a                       | n/a       | href of the item
 | `state`           | string    | @?        | yes               | n/a                       | n/a       | state of the item
 | `state-params`    | object    | <?        | no                | n/a                       | n/a       | state-params of the item
 | `disabled`        | boolean   | <?        | no                | `true`, `false`           | `false`   | disabled flag
