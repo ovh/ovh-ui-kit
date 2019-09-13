@@ -472,6 +472,33 @@ describe('ouiNavbar', () => {
         const customHeader = angular.element(component.find('p')[0]);
         expect(customHeader.text().trim()).toEqual('This is a custom header');
       });
+
+      it('should have a header that is a link', () => {
+        component = testUtils.compileTemplate(`
+            <oui-navbar>
+                <oui-navbar-aside>
+                    <oui-navbar-dropdown
+                        name="{{$ctrl.name}}"
+                        text="{{$ctrl.title}}">
+                        <oui-navbar-menu
+                            name="{{$ctrl.name}}"
+                            header-title="'Title'"
+                            header-href="#/menu"
+                            fixed>
+                        </oui-navbar-menu>
+                    </oui-navbar-dropdown>
+                <oui-navbar-aside>
+            </oui-navbar>`, {
+          name: data.name,
+          title: data.title,
+          headerTitle: data.headerTitle,
+          subLinks: data.subLinks,
+        });
+
+        $timeout.flush();
+        const hrefHeader = angular.element(component.find('a')[0]);
+        expect(hrefHeader.attr('href')).toEqual('#/menu');
+      });
     });
 
     describe('Main links', () => {
