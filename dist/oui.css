@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.33.4") format("woff2"), url("./icons/icons.woff?v=2.33.4") format("woff");
+  src: url("./icons/icons.woff2?v=2.34.0") format("woff2"), url("./icons/icons.woff?v=2.34.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -7914,15 +7914,19 @@ oui-tabs-item {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  margin: 0 0 1.25rem;
   counter-reset: oui-progress-tracker;
+  margin: 0 0 1.25rem;
   font-size: 1rem;
   font-weight: 400;
+  /* stylelint-disable no-descending-specificity */
+  /* stylelint-enable no-descending-specificity */
 }
 .oui-progress-tracker__steps {
   display: flex;
+  flex-direction: row;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 .oui-progress-tracker__step {
   position: relative;
@@ -7939,7 +7943,7 @@ oui-tabs-item {
   height: 0.25rem;
   margin: 0 0.313rem;
   position: absolute;
-  top: 0.813rem;
+  top: calc((calc(1rem * 2) - 0.25rem) / 2);
   left: calc(1rem * 2);
   right: 0;
   background-color: #e9ebe7;
@@ -7978,12 +7982,17 @@ oui-tabs-item {
   hyphens: auto;
   font-weight: 600;
 }
+a.oui-progress-tracker__status {
+  text-decoration: none;
+}
+a.oui-progress-tracker__status:hover .oui-progress-tracker__label {
+  text-decoration: underline;
+}
 .oui-progress-tracker__step_complete .oui-progress-tracker__status {
   color: #113f6d;
-  font-weight: 600;
 }
 .oui-progress-tracker__step_complete .oui-progress-tracker__status::before {
-  content: "\f110";
+  content: "\f146";
   font-family: 'Oui Icons';
   font-size: 1.125rem;
   color: #fff;
@@ -7994,10 +8003,9 @@ oui-tabs-item {
 }
 .oui-progress-tracker__step_error .oui-progress-tracker__status {
   color: #b04020;
-  font-weight: 600;
 }
 .oui-progress-tracker__step_error .oui-progress-tracker__status::before {
-  content: "\f123";
+  content: "\f124";
   font-family: 'Oui Icons';
   font-size: 1.125rem;
   color: #fff;
@@ -8008,11 +8016,9 @@ oui-tabs-item {
 }
 .oui-progress-tracker__step_active .oui-progress-tracker__status {
   color: #113f6d;
-  font-weight: 600;
 }
 .oui-progress-tracker__step_active .oui-progress-tracker__status::before {
   color: #fff;
-  font-weight: 600;
   background-color: #113f6d;
 }
 @media only screen and (max-width: 1280px) {
@@ -8062,6 +8068,59 @@ oui-tabs-item {
   }
   .oui-progress-tracker__status::before {
     position: static;
+  }
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__steps {
+  flex-direction: column;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__status {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0.625rem;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__status::before {
+  position: static;
+  display: inline-block;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__label {
+  max-height: 100%;
+  display: inline-block;
+  flex: 1;
+  margin: 0;
+  margin-left: 0.625rem;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__step_active .oui-progress-tracker__label {
+  position: static;
+  text-align: left;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__step {
+  align-items: flex-start;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__step:not(:last-child)::after {
+  width: 0.25rem;
+  height: auto;
+  margin: 0.313rem 0;
+  left: calc((calc(1rem * 2) - 0.25rem) / 2);
+  right: auto;
+  top: calc(1rem * 2);
+  bottom: 0;
+}
+.oui-progress-tracker_vertical .oui-progress-tracker__step:last-child .oui-progress-tracker__status {
+  margin: 0;
+}
+@media only screen and (max-width: 1280px) {
+  .oui-progress-tracker_vertical .oui-progress-tracker__step {
+    position: relative;
+  }
+  .oui-progress-tracker_vertical .oui-progress-tracker__status {
+    flex: 1;
+  }
+  .oui-progress-tracker_vertical .oui-progress-tracker__step:not(:last-child)::after {
+    position: absolute;
   }
 }
 oui-spinner {

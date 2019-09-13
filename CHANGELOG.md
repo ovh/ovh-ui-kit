@@ -1,3 +1,13 @@
+<a name="2.34.0"></a>
+# [2.34.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.4...v2.34.0) (2019-09-13)
+
+
+### Features
+
+* **oui-progress-tracker:** add vertical variant ([5a6cf4f](https://github.com/ovh-ux/ovh-ui-kit/commit/5a6cf4f))
+
+
+
 <a name="2.33.4"></a>
 ## [2.33.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.3...v2.33.4) (2019-07-09)
 
