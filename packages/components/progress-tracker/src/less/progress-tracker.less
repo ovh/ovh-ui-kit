@@ -6,6 +6,7 @@
 
   &__steps {
     display: flex;
+    flex-direction: row;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -24,10 +25,10 @@
 
     &:not(:last-child)::after {
       content: "";
-      height: rem-calc(4);
+      height: @oui-progress-tracker-connector-size;
       margin: 0 @oui-progress-tracker-connector-spacing;
       position: absolute;
-      top: rem-calc(13);
+      top: calc((@oui-progress-tracker-status-height - @oui-progress-tracker-connector-size) / 2);
       left: @oui-progress-tracker-status-height;
       right: 0;
       background-color: @oui-progress-tracker-background-color;
@@ -36,7 +37,7 @@
 
   &__status {
     padding-right: @oui-progress-tracker-step-spacing;
-    margin-top: ~"calc(@{oui-progress-tracker-status-height} + @{oui-progress-tracker-status-spacing})";
+    margin-top: calc(@oui-progress-tracker-status-height + @oui-progress-tracker-status-spacing);
     display: block;
     text-align: left;
     color: @oui-progress-tracker-label-color;
@@ -62,13 +63,21 @@
 
   &__label {
     line-height: @oui-progress-tracker-label-line-height;
-    max-height: ~"calc(@{oui-progress-tracker-font-size} * @{oui-progress-tracker-label-line-height} * 2)";
+    max-height: calc(@oui-progress-tracker-font-size * @oui-progress-tracker-label-line-height * 2);
     overflow: hidden;
     display: block;
-    margin-top: rem-calc(10);
+    margin-top: @oui-progress-tracker-label-spacing;
     word-break: break-work;
     hyphens: auto;
     font-weight: @oui-progress-tracker-label-font-weight;
+  }
+
+  a&__status {
+    text-decoration: none;
+  }
+
+  a&__status:hover &__label {
+    text-decoration: underline;
   }
 
   // Status Complete/Success
@@ -161,6 +170,74 @@
       flex: 0;
 
       &::before { position: static; }
+    }
+  }
+
+  // Vertical variant
+  &_vertical &__steps {
+    flex-direction: column;
+  }
+
+  &_vertical &__status {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: @oui-progress-tracker-status-spacing;
+
+    &::before {
+      position: static;
+      display: inline-block;
+    }
+  }
+
+  /* stylelint-disable no-descending-specificity */
+  &_vertical &__label {
+    max-height: 100%;
+    display: inline-block;
+    flex: 1;
+    margin: 0;
+    margin-left: @oui-progress-tracker-label-spacing;
+    // white-space: normal;
+  }
+
+  &_vertical &__step_active &__label {
+    position: static;
+    text-align: left;
+  }
+  /* stylelint-enable no-descending-specificity */
+
+  &_vertical &__step {
+    align-items: flex-start;
+  }
+
+  &_vertical &__step:not(:last-child)::after {
+    width: @oui-progress-tracker-connector-size;
+    height: auto;
+    margin: @oui-progress-tracker-connector-spacing 0;
+    left: calc((@oui-progress-tracker-status-height - @oui-progress-tracker-connector-size) / 2);
+    right: auto;
+    top: @oui-progress-tracker-status-height;
+    bottom: 0;
+  }
+
+  &_vertical &__step:last-child &__status {
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    &_vertical &__step {
+      position: relative;
+    }
+
+    &_vertical &__status {
+      flex: 1;
+    }
+
+    &_vertical &__step:not(:last-child)::after {
+      position: absolute;
     }
   }
 }
