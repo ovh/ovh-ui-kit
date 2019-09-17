@@ -1,3 +1,13 @@
+<a name="2.34.1"></a>
+## [2.34.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.0...v2.34.1) (2019-09-17)
+
+
+### Bug Fixes
+
+* **oui-tile:** add spacing for actions ([5cd95aa](https://github.com/ovh-ux/ovh-ui-kit/commit/5cd95aa))
+
+
+
 <a name="2.34.0"></a>
 # [2.34.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.33.4...v2.34.0) (2019-09-13)
 
