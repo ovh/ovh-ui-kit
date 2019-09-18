@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-<g id="Page-1">
-	<g id="logo">
-		<path id="Shape" d="M59.9,15.4L53,27.6h-7.2l-8.5,14.7h7.2l-5.4,8.8h17.6c4.6-5.6,7.2-12.7,7.3-20C64,25.6,62.6,20.2,59.9,15.4
-			L59.9,15.4z M24.9,51.1l22-38.1H28.3l-12.6,22L4.2,15.1C1.4,19.9,0,25.3,0,30.8c0,7.4,2.6,14.5,7.2,20.2H24.9L24.9,51.1z"/>
-	</g>
-</g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Icons/System/ovh</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icons/System/ovh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M17.5671169,5 L9.33224444,19 L2.71003451,19 C-0.425810167,15.2451533 -0.882364261,9.99115413 1.56058357,5.77218225 L1.56058357,5.77218225 L5.86673562,13.0743405 L10.6017873,5 L17.5671169,5 Z M22.4394164,5.75539568 C24.8823643,9.97436756 24.4258102,15.2283667 21.2899655,18.9832134 L21.2899655,18.9832134 L14.6677556,18.9832134 L16.7093177,15.5251799 L14.0158282,15.5251799 L17.1553733,10.1366906 L19.8831748,10.1366906 Z" id="Color" fill="#0050D7"></path>
+    </g>
 </svg>
