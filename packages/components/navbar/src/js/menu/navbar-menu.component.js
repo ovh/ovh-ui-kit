@@ -10,6 +10,7 @@ export default {
     headerBreadcrumb: '@?',
     headerClass: '@?',
     headerTitle: '@?',
+    headerHref: '@?',
     menuLinks: '<links',
     menuName: '@name',
     placement: '@?',

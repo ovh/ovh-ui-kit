@@ -10,7 +10,17 @@
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
             </button>
         </div>
-        <div>
+        <a
+            ng-if="$ctrl.headerHref"
+            ng-href="{{ $ctrl.headerHref }}">
+            <span class="oui-navbar-menu__breadcrumb"
+                ng-if="::!!$ctrl.headerBreadcrumb"
+                ng-bind="::$ctrl.headerBreadcrumb">
+            </span>
+            <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle" title="{{::$ctrl.headerTitle}}"></h3>
+        </a>
+        <div
+            ng-if="!$ctrl.headerHref">
             <span class="oui-navbar-menu__breadcrumb"
                 ng-if="::!!$ctrl.headerBreadcrumb"
                 ng-bind="::$ctrl.headerBreadcrumb">
