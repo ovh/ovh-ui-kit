@@ -44,7 +44,7 @@ describe('ouiFormActions', () => {
       const cancelButton = component.find('button').eq(1);
 
       expect(submitButton.hasClass('oui-button_primary')).toBe(true);
-      expect(cancelButton.hasClass('oui-button_link')).toBe(true);
+      expect(cancelButton.hasClass('oui-button_ghost')).toBe(true);
     });
 
     it('should display buttons with default text values', () => {

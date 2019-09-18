@@ -76,23 +76,23 @@ storiesOf('Old|Styles/Button', module)
     'As links',
     () => `
     <div>
-      <button class="oui-button oui-button_link">Click me to get more information</button>
-      <button class="oui-button oui-button_link oui-button_icon-left">
+      <button class="oui-button oui-button_ghost">Click me to get more information</button>
+      <button class="oui-button oui-button_ghost oui-button_icon-left">
         <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Previous page
       </button>
-      <button class="oui-button oui-button_link oui-button_icon-right">
+      <button class="oui-button oui-button_ghost oui-button_icon-right">
         Next page
         <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
     </div>
     <div>
-      <button class="oui-button oui-button_link" disabled>Click me to get more information</button>
-      <button class="oui-button oui-button_link oui-button_icon-left" disabled>
+      <button class="oui-button oui-button_ghost" disabled>Click me to get more information</button>
+      <button class="oui-button oui-button_ghost oui-button_icon-left" disabled>
         <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
         Previous page
       </button>
-      <button class="oui-button oui-button_link oui-button_icon-right" disabled>
+      <button class="oui-button oui-button_ghost oui-button_icon-right" disabled>
         Next page
         <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>
@@ -104,7 +104,7 @@ storiesOf('Old|Styles/Button', module)
     () => `
     <div style="width: 40%; display: inline-block;">
       <button class="oui-button oui-button_block oui-button_primary">Primary Button Full width</button>
-      <button class="oui-button oui-button_block oui-button_link oui-button_icon-left">
+      <button class="oui-button oui-button_block oui-button_ghost oui-button_icon-left">
           <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
           Button link Full width Icon left
       </button>
@@ -119,7 +119,7 @@ storiesOf('Old|Styles/Button', module)
     </div>
     <div style="width: 40%; display: inline-block;">
       <button class="oui-button oui-button_block oui-button_secondary">Secondary Button Full width</button>
-      <button class="oui-button oui-button_block oui-button_link oui-button_icon-right">
+      <button class="oui-button oui-button_block oui-button_ghost oui-button_icon-right">
           Button link Full width Icon right
           <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
       </button>

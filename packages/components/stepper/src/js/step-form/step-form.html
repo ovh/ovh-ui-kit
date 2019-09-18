@@ -14,7 +14,7 @@
             ng-if="$ctrl.skippable"
             ng-bind="::$ctrl.translations.optionalLabel">
         </span>
-        <button class="oui-button oui-button_link" type="button"
+        <button class="oui-button oui-button_ghost" type="button"
             ng-if="$ctrl.stepper.index < $ctrl.stepperCtrl.currentIndex && !$ctrl.stepper.disabled && $ctrl.editable"
             ng-click="$ctrl.setFocus(this[$ctrl.name])"
             ng-bind="::$ctrl.translations.modifyThisStep"></button>
@@ -58,7 +58,7 @@
                 on-click="$ctrl.onCancel()">
                 {{::$ctrl.cancelText}}
             </oui-button>
-            <a class="oui-button oui-button_link"
+            <a class="oui-button oui-button_ghost"
                 ng-if="::!!$ctrl.cancelHref"
                 ng-bind="::$ctrl.cancelText"
                 ng-href="{{::$ctrl.cancelHref}}">
