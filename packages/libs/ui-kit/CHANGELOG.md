@@ -88,6 +88,20 @@
 
 
 
+# [3.6.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.1...v3.6.0) (2019-09-13)
+
+
+### Bug Fixes
+
+* **oui-dropdown:** remove one time binding of href attribute ([#500](https://github.com/ovh-ux/ovh-ui-kit/issues/500)) ([380ef80](https://github.com/ovh-ux/ovh-ui-kit/commit/380ef80))
+
+
+### Features
+
+* **progress-tracker:** add vertical variant ([ef42fd6](https://github.com/ovh-ux/ovh-ui-kit/commit/ef42fd6))
+
+
+
 ## [3.5.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v3.5.1) (2019-08-19)
 
 
