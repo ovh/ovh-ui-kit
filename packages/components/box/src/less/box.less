@@ -2,12 +2,21 @@
   background: @oui-box-background-color;
   border: @oui-box-border-width solid @oui-box-border-color;
   border-radius: @oui-box-border-radius;
-  margin-bottom: @oui-box-spacing;
   padding: @oui-box-padding;
   text-align: left;
 
+  &__heading {
+    color: @oui-box-heading-font-color;
+    font-size: @oui-box-heading-font-size;
+    padding-bottom: @oui-box-heading-padding-bottom;
+  }
+
+  &__body {
+    color: @oui-box-body-font-color;
+    font-size: @oui-box-body-font-size;
+  }
+
   &_light {
     background: @oui-box-light-background-color;
-    border: @oui-box-border-width solid @oui-box-light-border-color;
   }
 }

@@ -1,12 +1,12 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Styles/Box', module)
+storiesOf('Components|Box/Native', module)
   .add(
     'Default',
     () => `
     <div class="oui-box">
-      <h1>An awesome title for an awesome box</h1>
-      <p>
+      <div class="oui-box__heading">An awesome title for an awesome box</div>
+      <div class="oui-box__body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Sed tempus sapien erat, et molestie magna tristique non.
         Sed tincidunt eu augue tempor consectetur. Nullam iaculis,
@@ -16,7 +16,7 @@ storiesOf('Old|Styles/Box', module)
         ultricies lacus in, fermentum nisi. Cras sed neque id dui
         fermentum faucibus. Mauris mollis arcu justo, eget convallis
         massa volutpat ac.
-      </p>
+      </div>
     </div>
     `,
   )
@@ -24,8 +24,8 @@ storiesOf('Old|Styles/Box', module)
     'Light',
     () => `
     <div class="oui-box oui-box_light">
-      <h1>An awesome title for an awesome box</h1>
-      <p>
+      <div class="oui-box__heading">An awesome title for an awesome box</div>
+      <div class="oui-box__body">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         Sed tempus sapien erat, et molestie magna tristique non.
         Sed tincidunt eu augue tempor consectetur. Nullam iaculis,
@@ -35,7 +35,7 @@ storiesOf('Old|Styles/Box', module)
         ultricies lacus in, fermentum nisi. Cras sed neque id dui
         fermentum faucibus. Mauris mollis arcu justo, eget convallis
         massa volutpat ac.
-      </p>
+      </div>
     </div>
     `,
   );
