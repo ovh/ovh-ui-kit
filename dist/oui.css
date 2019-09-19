@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.34.1") format("woff2"), url("./icons/icons.woff?v=2.34.1") format("woff");
+  src: url("./icons/icons.woff2?v=2.34.2") format("woff2"), url("./icons/icons.woff?v=2.34.2") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -8021,7 +8021,7 @@ a.oui-progress-tracker__status:hover .oui-progress-tracker__label {
   color: #fff;
   background-color: #113f6d;
 }
-@media only screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   .oui-progress-tracker {
     margin-bottom: 3.25rem;
   }
@@ -8087,6 +8087,9 @@ a.oui-progress-tracker__status:hover .oui-progress-tracker__label {
   display: inline-block;
 }
 .oui-progress-tracker_vertical .oui-progress-tracker__label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   max-height: 100%;
   display: inline-block;
   flex: 1;
@@ -8112,7 +8115,7 @@ a.oui-progress-tracker__status:hover .oui-progress-tracker__label {
 .oui-progress-tracker_vertical .oui-progress-tracker__step:last-child .oui-progress-tracker__status {
   margin: 0;
 }
-@media only screen and (max-width: 1280px) {
+@media screen and (max-width: 1200px) {
   .oui-progress-tracker_vertical .oui-progress-tracker__step {
     position: relative;
   }

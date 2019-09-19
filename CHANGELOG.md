@@ -1,3 +1,13 @@
+<a name="2.34.2"></a>
+## [2.34.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.1...v2.34.2) (2019-09-19)
+
+
+### Bug Fixes
+
+* **oui-progress-tracker:** fix vertical responsive support ([7973ff3](https://github.com/ovh-ux/ovh-ui-kit/commit/7973ff3))
+
+
+
 <a name="2.34.1"></a>
 ## [2.34.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.0...v2.34.1) (2019-09-17)
 
