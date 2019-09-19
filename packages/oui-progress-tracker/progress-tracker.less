@@ -132,7 +132,7 @@
     }
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media screen and (max-width: @oui-responsive-breakpoint-medium) {
     margin-bottom: rem-calc(52);
 
     &__steps { position: relative; }
@@ -203,12 +203,13 @@
 
   /* stylelint-disable no-descending-specificity */
   &_vertical &__label {
+    #oui > .text-ellipsis();
+
     max-height: 100%;
     display: inline-block;
     flex: 1;
     margin: 0;
     margin-left: @oui-progress-tracker-label-spacing;
-    // white-space: normal;
   }
 
   &_vertical &__step_active &__label {
@@ -235,7 +236,7 @@
     margin: 0;
   }
 
-  @media only screen and (max-width: 1280px) {
+  @media screen and (max-width: @oui-responsive-breakpoint-medium) {
     &_vertical &__step {
       position: relative;
     }
