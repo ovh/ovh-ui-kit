@@ -1,10 +1,12 @@
 // Typography
 #oui {
   .base-font(
+    @color: @oui-global-base-font-color,
     @line-height: @oui-global-base-line-height,
     @letter-spacing: @oui-global-base-letter-spacing,
     @font-family: @oui-global-base-font-family
   ) {
+    color: @color;
     font-family: @font-family;
     line-height: @line-height;
     letter-spacing: @letter-spacing;
