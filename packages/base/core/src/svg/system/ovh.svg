@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
-    <title>Icons/System/ovh</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Icons/System/ovh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M17.5671169,5 L9.33224444,19 L2.71003451,19 C-0.425810167,15.2451533 -0.882364261,9.99115413 1.56058357,5.77218225 L1.56058357,5.77218225 L5.86673562,13.0743405 L10.6017873,5 L17.5671169,5 Z M22.4394164,5.75539568 C24.8823643,9.97436756 24.4258102,15.2283667 21.2899655,18.9832134 L21.2899655,18.9832134 L14.6677556,18.9832134 L16.7093177,15.5251799 L14.0158282,15.5251799 L17.1553733,10.1366906 L19.8831748,10.1366906 Z" id="Color" fill="#0050D7"></path>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path fill="#0050D7" fill-rule="evenodd" d="M17.567 5L9.332 19H2.71C-.426 15.245-.882 9.991 1.56 5.772l4.307 7.302L10.602 5h6.965zm4.872.755c2.443 4.22 1.987 9.473-1.149 13.228h-6.622l2.041-3.458h-2.693l3.14-5.388h2.727z"/>
 </svg>
