@@ -10,7 +10,13 @@
         <span class="oui-icon oui-icon-success"
             ng-if="::item.hasCheckmark">
         </span>
-        <span ng-bind="::item.heading"></span>
+        <span>
+            <span class="oui-tabs__tab-heading"
+                  ng-bind="::item.heading"></span>
+            <span class="oui-tabs__tab-subheading"
+                  ng-class="{ 'oui-tabs__tab-subheading_promotion': item.promotion }"
+                  ng-bind="::item.subheading"></span>
+        </span>
     </button>
 </div>
 <div class="oui-tabs__container"

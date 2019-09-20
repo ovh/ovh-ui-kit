@@ -8,6 +8,8 @@ export default {
   bindings: {
     id: '@?',
     heading: '@?',
+    subheading: '@?',
+    promotion: '<?',
     ariaLabel: '@?',
     checked: '<?',
     onActive: '&',
