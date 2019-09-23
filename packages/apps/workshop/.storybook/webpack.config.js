@@ -1,6 +1,8 @@
-const { styleLoader } = require('@ovh-ux/ui-kit.config/src/webpack.rules');
+const { babelLoader, styleLoader } = require('@ovh-ux/ui-kit.config/src/webpack.rules');
 
 module.exports = async ({ config }) => {
+  config.module.rules.push(babelLoader);
+
   // For @storybook/addon-storysource
   config.module.rules.push({
     test: /\.stories\.jsx?$/,

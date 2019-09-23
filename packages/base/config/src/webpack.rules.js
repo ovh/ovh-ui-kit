@@ -32,6 +32,7 @@ const babelLoader = {
           ],
         ],
         plugins: [
+          '@babel/plugin-proposal-object-rest-spread',
           '@babel/plugin-syntax-dynamic-import',
           '@babel/plugin-transform-runtime',
           'babel-plugin-angularjs-annotate',
