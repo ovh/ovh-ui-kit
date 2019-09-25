@@ -82,7 +82,7 @@ describe('ouiStepper', () => {
         stepForm.$submitted = true;
         element.scope().$digest();
 
-        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_link'));
+        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_ghost'));
         expect(editLink.length).toBe(1);
       });
 
@@ -105,7 +105,7 @@ describe('ouiStepper', () => {
         stepForm.$submitted = true;
         element.scope().$digest();
 
-        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_link'));
+        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_ghost'));
         expect(editLink.length).toBe(0);
       });
 

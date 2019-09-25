@@ -239,40 +239,30 @@ oui-button {
   // stylelint-enable no-descending-specificity
 }
 
-.oui-button_link {
+.oui-button_link,
+.oui-button_ghost {
   min-width: 0;
   padding: @oui-button-link-padding;
   border: 0;
-  background: none;
-  color: @oui-button-link-font-color;
-  font-weight: @oui-button-link-font-weight;
-  text-decoration: @oui-button-link-text-decoration;
 
-  // stylelint-disable no-descending-specificity
-  .oui-icon {
-    color: @oui-button-link-icon-color;
-  }
-  // stylelint-enable no-descending-specificity
-
-  &:hover,
-  &:focus {
-    background: none;
-    color: @oui-button-link-font-color_hover;
-    text-decoration: @oui-button-link-text-decoration_hover;
-  }
-
-  &:disabled,
-  &:disabled:active {
-    background: none;
-    color: @oui-button-link-font-color_disabled;
-    text-decoration: @oui-button-link-text-decoration;
-
-    // stylelint-disable no-descending-specificity
-    .oui-icon {
-      color: @oui-button-link-icon-color_disabled;
-    }
-    // stylelint-enable no-descending-specificity
-  }
+  #oui > .button-color(
+    @background-color: @oui-button-link-background-color,
+    @background-color_hover: @oui-button-link-background-color_hover,
+    @background-color_active: @oui-button-link-background-color_active,
+    @background-color_disabled: @oui-button-link-background-color_disabled,
+    @border-color: @oui-button-link-border-color,
+    @border-color_hover: @oui-button-link-border-color_hover,
+    @border-color_active: @oui-button-link-border-color_active,
+    @border-color_disabled: @oui-button-link-border-color_disabled,
+    @box-shadow: @oui-button-link-box-shadow,
+    @box-shadow_focus: @oui-button-link-box-shadow_focus,
+    @box-shadow_active: @oui-button-link-box-shadow_active,
+    @box-shadow_disabled: @oui-button-link-box-shadow_disabled,
+    @font-color: @oui-button-link-font-color,
+    @font-color_disabled: @oui-button-link-font-color_disabled,
+    @icon-color: @oui-button-link-icon-color,
+    @icon-color_disabled: @oui-button-link-icon-color_disabled
+  );
 
   // Deprecated: Support for old classname
   &.oui-button_small-width,

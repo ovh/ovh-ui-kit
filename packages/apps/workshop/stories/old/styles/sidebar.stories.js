@@ -183,7 +183,7 @@ storiesOf('Old|Styles/Sidebar', module)
             <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
               <header class="oui-sidebar-menu__header">
                 <div class="oui-sidebar-menu__back">
-                  <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
+                  <button type="button" class="oui-button oui-button_ghost oui-button_icon-left" aria-label="Return to previous navigation menu">
                     <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                   </button>
                 </div>
@@ -203,7 +203,7 @@ storiesOf('Old|Styles/Sidebar', module)
                   <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
                     <header class="oui-sidebar-menu__header">
                       <div class="oui-sidebar-menu__back">
-                        <button type="button" class="oui-button oui-button_link oui-button_icon-left" aria-label="Return to previous navigation menu">
+                        <button type="button" class="oui-button oui-button_ghost oui-button_icon-left" aria-label="Return to previous navigation menu">
                           <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
                         </button>
                       </div>

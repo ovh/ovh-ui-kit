@@ -184,7 +184,7 @@ storiesOf('Components|Buttons/WebComponent/Secondary', module)
     })),
   );
 
-storiesOf('Components|Buttons/WebComponent/Link', module)
+storiesOf('Components|Buttons/WebComponent/Ghost', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`
