@@ -1,9 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Icons/System/calendar</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Icons/System/calendar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M17,6 L17,7 C17,7.55228475 16.5522847,8 16,8 C15.4477153,8 15,7.55228475 15,7 L15,6 L9,6 L9,7 C9,7.55228475 8.55228475,8 8,8 C7.44771525,8 7,7.55228475 7,7 L7,6 L4,6 L4,9 L20,9 L20,6 L17,6 Z M17,4 L20,4 C21.1045695,4 22,4.8954305 22,6 L22,20 C22,21.1045695 21.1045695,22 20,22 L4,22 C2.8954305,22 2,21.1045695 2,20 L2,6 C2,4.8954305 2.8954305,4 4,4 L7,4 L7,3 C7,2.44771525 7.44771525,2 8,2 C8.55228475,2 9,2.44771525 9,3 L9,4 L15,4 L15,3 C15,2.44771525 15.4477153,2 16,2 C16.5522847,2 17,2.44771525 17,3 L17,4 Z M4,11 L4,20 L20,20 L20,11 L4,11 Z" id="Color" fill="#2859C0"></path>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <path fill="#0050D7" fill-rule="evenodd" d="M16 2a1 1 0 0 1 1 1v1h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h3V3a1 1 0 1 1 2 0v1h6V3a1 1 0 0 1 1-1zm4 9H4v9h16v-9zM7 6H4v3h16V6h-3v1a1 1 0 0 1-2 0V6H9v1a1 1 0 1 1-2 0V6z"/>
 </svg>

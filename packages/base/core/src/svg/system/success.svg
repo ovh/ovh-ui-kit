@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Icons/System/ok</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Icons/System/ok" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M9,16.5857864 L19.2928932,6.29289322 C19.6834175,5.90236893 20.3165825,5.90236893 20.7071068,6.29289322 C21.0976311,6.68341751 21.0976311,7.31658249 20.7071068,7.70710678 L9,19.4142136 L3.29289322,13.7071068 C2.90236893,13.3165825 2.90236893,12.6834175 3.29289322,12.2928932 C3.68341751,11.9023689 4.31658249,11.9023689 4.70710678,12.2928932 L9,16.5857864 Z" id="Color" fill="#2859C0"></path>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g fill="none" fill-rule="evenodd">
+        <g stroke="#6D3838" stroke-linecap="round" stroke-width="2">
+            <path d="M4 13l5 5M20 7L9 18"/>
+        </g>
+        <path fill="#0050D7" d="M19.293 6.293a1 1 0 0 1 1.414 1.414l-11 11a.995.995 0 0 1-.53.277l-.118.014h-.118a.996.996 0 0 1-.648-.29l-5-5a1 1 0 0 1 1.414-1.415L9 16.585z"/>
     </g>
 </svg>

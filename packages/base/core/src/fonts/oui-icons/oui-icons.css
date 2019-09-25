@@ -1,7 +1,7 @@
 @font-face {
     font-family: "oui-icons";
-    src: url("./oui-icons.woff2?6a61a18ac0b9bff33c81ac4c709caa58") format("woff2"),
-url("./oui-icons.woff?6a61a18ac0b9bff33c81ac4c709caa58") format("woff");
+    src: url("./oui-icons.woff2?f64db2ad8c9df6e9e0b4f74a91d8069e") format("woff2"),
+url("./oui-icons.woff?f64db2ad8c9df6e9e0b4f74a91d8069e") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -648,147 +648,135 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-close:before {
     content: "\f1d3";
 }
-.oui-icon-copy-error:before {
+.oui-icon-copy:before {
     content: "\f1d4";
 }
-.oui-icon-copy-normal:before {
+.oui-icon-ellipsis-vertical:before {
     content: "\f1d5";
 }
-.oui-icon-copy-success:before {
+.oui-icon-ellipsis:before {
     content: "\f1d6";
 }
-.oui-icon-copy:before {
+.oui-icon-error:before {
     content: "\f1d7";
 }
-.oui-icon-ellipsis-vertical:before {
+.oui-icon-error_circle:before {
     content: "\f1d8";
 }
-.oui-icon-ellipsis:before {
+.oui-icon-external-link:before {
     content: "\f1d9";
 }
-.oui-icon-error:before {
+.oui-icon-eye-blocked:before {
     content: "\f1da";
 }
-.oui-icon-error_circle:before {
+.oui-icon-eye:before {
     content: "\f1db";
 }
-.oui-icon-external-link:before {
+.oui-icon-file:before {
     content: "\f1dc";
 }
-.oui-icon-eye-blocked:before {
+.oui-icon-filter:before {
     content: "\f1dd";
 }
-.oui-icon-eye:before {
+.oui-icon-folder:before {
     content: "\f1de";
 }
-.oui-icon-file:before {
+.oui-icon-gear:before {
     content: "\f1df";
 }
-.oui-icon-filter:before {
+.oui-icon-guides:before {
     content: "\f1e0";
 }
-.oui-icon-folder:before {
+.oui-icon-hamburger:before {
     content: "\f1e1";
 }
-.oui-icon-gear:before {
+.oui-icon-help:before {
     content: "\f1e2";
 }
-.oui-icon-guides:before {
+.oui-icon-help_circle:before {
     content: "\f1e3";
 }
-.oui-icon-hamburger:before {
+.oui-icon-home:before {
     content: "\f1e4";
 }
-.oui-icon-help:before {
+.oui-icon-info:before {
     content: "\f1e5";
 }
-.oui-icon-help_circle:before {
+.oui-icon-info_circle:before {
     content: "\f1e6";
 }
-.oui-icon-home:before {
+.oui-icon-lightbulb:before {
     content: "\f1e7";
 }
-.oui-icon-info:before {
+.oui-icon-list:before {
     content: "\f1e8";
 }
-.oui-icon-info_circle:before {
+.oui-icon-location:before {
     content: "\f1e9";
 }
-.oui-icon-lightbulb:before {
+.oui-icon-minus:before {
     content: "\f1ea";
 }
-.oui-icon-list:before {
+.oui-icon-ok:before {
     content: "\f1eb";
 }
-.oui-icon-location:before {
+.oui-icon-ovh:before {
     content: "\f1ec";
 }
-.oui-icon-minus:before {
+.oui-icon-phone:before {
     content: "\f1ed";
 }
-.oui-icon-ok:before {
+.oui-icon-plus:before {
     content: "\f1ee";
 }
-.oui-icon-ovh:before {
+.oui-icon-refresh:before {
     content: "\f1ef";
 }
-.oui-icon-phone:before {
+.oui-icon-remove:before {
     content: "\f1f0";
 }
-.oui-icon-plus:before {
+.oui-icon-search:before {
     content: "\f1f1";
 }
-.oui-icon-refresh:before {
+.oui-icon-settings:before {
     content: "\f1f2";
 }
-.oui-icon-remove:before {
+.oui-icon-shape-circle:before {
     content: "\f1f3";
 }
-.oui-icon-search:before {
+.oui-icon-shape-dot:before {
     content: "\f1f4";
 }
-.oui-icon-settings:before {
+.oui-icon-success:before {
     content: "\f1f5";
 }
-.oui-icon-shape-circle:before {
+.oui-icon-success_circle:before {
     content: "\f1f6";
 }
-.oui-icon-shape-dot:before {
+.oui-icon-time:before {
     content: "\f1f7";
 }
-.oui-icon-success:before {
+.oui-icon-trash:before {
     content: "\f1f8";
 }
-.oui-icon-success_circle:before {
+.oui-icon-triangle-down:before {
     content: "\f1f9";
 }
-.oui-icon-time:before {
+.oui-icon-triangle-left:before {
     content: "\f1fa";
 }
-.oui-icon-time_extra-thin:before {
+.oui-icon-triangle-right:before {
     content: "\f1fb";
 }
-.oui-icon-trash:before {
+.oui-icon-triangle-up:before {
     content: "\f1fc";
 }
-.oui-icon-triangle-down:before {
+.oui-icon-user:before {
     content: "\f1fd";
 }
-.oui-icon-triangle-left:before {
+.oui-icon-warning:before {
     content: "\f1fe";
 }
-.oui-icon-triangle-right:before {
-    content: "\f1ff";
-}
-.oui-icon-triangle-up:before {
-    content: "\f200";
-}
-.oui-icon-user:before {
-    content: "\f201";
-}
-.oui-icon-warning:before {
-    content: "\f202";
-}
 .oui-icon-warning_circle:before {
-    content: "\f203";
+    content: "\f1ff";
 }

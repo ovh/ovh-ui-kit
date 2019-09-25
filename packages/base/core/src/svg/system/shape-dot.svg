@@ -1,1 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>notifications-read - source</title><g id="notifications"><circle cx="16" cy="16" r="16"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="11" fill="#0050D7" fill-rule="evenodd"/>
+</svg>
