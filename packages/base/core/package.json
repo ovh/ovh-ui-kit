@@ -9,8 +9,9 @@
     "tokens": "run-s tokens:dir tokens:download",
     "tokens:dir": "mkdirp ./src/css && mkdirp ./src/scss",
     "tokens:download": "node ./src/js/download-tokens.js",
+    "flags": "node ./src/js/generate-flags-indexes.js",
     "icons": "mkdirp ./src/fonts/oui-icons && yarn icons-generator && node ./src/js/generate-icons-indexes.js",
-    "icons-generator": "icon-font-generator ./src/svg/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types 'woff, woff2' --center --normalize"
+    "icons-generator": "icon-font-generator ./src/svg/icons/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types 'woff, woff2' --center --normalize"
   },
   "devDependencies": {
     "chalk": "^2.4.2",

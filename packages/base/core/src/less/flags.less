@@ -1,0 +1,27 @@
+.oui-flag {
+  display: inline-block;
+  font-size: 1.5em;
+
+  &::before {
+    content: '';
+    width: 1.5em;
+    height: 1em;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1em;
+  }
+
+  #oui .flags();
+}
+
+#oui {
+  .flags(@index: length(@oui-flag-index)) when(@index > 0) {
+    #oui .flags(@index - 1);
+
+    @flag: extract(@oui-flag-index, @index);
+
+    &_@{flag}::before {
+      background-image: url('../svg/flags/@{flag}.svg');
+    }
+  }
+}

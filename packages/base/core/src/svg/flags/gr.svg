@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57 (83077) - https://sketch.com -->
+    <title>oui-Flag/Greece</title>
+    <desc>Created with Sketch.</desc>
+    <g id="oui-Flag/Greece" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Greece" fill-rule="nonzero">
+            <rect id="Rectangle-path" fill="#222677" x="0" y="7.99164179" width="5.2434" height="5.34447761"></rect>
+            <rect id="Rectangle-path" fill="#222677" x="0" y="21.3528358" width="35.9712" height="2.64716418"></rect>
+            <polygon id="Shape" fill="#222677" points="32.94 0 31.0932 0 7.929 0 7.929 5.31940299 13.3002 5.31940299 13.3002 2.64716418 31.0932 2.64716418 35.9712 2.64716418 36 2.64716418 36 0"></polygon>
+            <rect id="Rectangle-path" fill="#222677" x="0" y="0" width="5.2434" height="5.31940299"></rect>
+            <polygon id="Shape" fill="#222677" points="0 16.0083582 0 18.680597 36 18.680597 36 16.0083582 22.6998 16.0083582"></polygon>
+            <rect id="Rectangle-path" fill="#222677" x="13.3002" y="5.31940299" width="22.6998" height="2.67223881"></rect>
+            <polygon id="Shape" fill="#222677" points="13.3002 7.99164179 7.929 7.99164179 7.929 13.3361194 22.6998 13.3361194 36 13.3361194 36 10.6638806 13.3002 10.6638806"></polygon>
+            <path d="M0,20.9552239 C0.00140243348,21.0882232 0.0110205736,21.221011 0.0288,21.3528358 L35.9712,21.3528358 C35.9889794,21.221011 35.9985976,21.0882232 36,20.9552239 L36,18.680597 L0,18.680597 L0,20.9552239 Z" id="Shape" fill="#FFFFFF"></path>
+            <path d="M13.3002,2.64716418 L13.3002,5.31940299 L36,5.31940299 L36,3.04477612 C35.9985976,2.9117768 35.9889794,2.77898905 35.9712,2.64716418 L13.3002,2.64716418 Z" id="Shape" fill="#FFFFFF"></path>
+            <rect id="Rectangle-path" fill="#FFFFFF" x="13.3002" y="7.99164179" width="22.6998" height="2.67223881"></rect>
+            <polygon id="Shape" fill="#FFFFFF" points="7.929 13.3361194 7.929 7.99164179 13.3002 7.99164179 13.3002 5.31940299 7.929 5.31940299 7.929 0 5.2434 0 5.2434 5.31940299 0 5.31940299 0 7.99164179 5.2434 7.99164179 5.2434 13.3361194 0 13.3361194 0 16.0083582 22.6998 16.0083582 36 16.0083582 36 13.3361194 22.6998 13.3361194"></polygon>
+        </g>
+    </g>
+</svg>
