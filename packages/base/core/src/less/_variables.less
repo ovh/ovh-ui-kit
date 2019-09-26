@@ -437,7 +437,7 @@
 @oui-button-large-min-height: rem-calc(50);
 @oui-button-large-line-height: rem-calc(18);
 @oui-button-large-font-size: rem-calc(18);
-@oui-button-large-font-weight: @oui-font-bold;
+@oui-button-large-font-weight: @oui-font-semibold;
 @oui-button-large-padding-x: rem-calc(16);
 @oui-button-large-padding-y: calc((@oui-button-large-min-height - @oui-button-large-line-height) / 2);
 @oui-button-large-padding: @oui-button-large-padding-y @oui-button-large-padding-x;
@@ -614,24 +614,39 @@
 @oui-clipboard-button-icon-size: @oui-input-group-button-icon-size;
 
 // Collapsible
-@oui-collapsible-margin: rem-calc(4);
-@oui-collapsible-padding: rem-calc(15);
-@oui-collapsible-border-color: @oui-color-charlotte;
+@oui-collapsible-min-height: rem-calc(50);
+@oui-collapsible-margin: rem-calc(16);
+@oui-collapsible-padding-base: rem-calc(16);
+@oui-collapsible-padding: calc(@oui-collapsible-padding-base - @oui-collapsible-border-width);
+@oui-collapsible-padding_hover: calc(@oui-collapsible-padding-base - @oui-collapsible-border-width_hover);
+@oui-collapsible-padding_active: calc(@oui-collapsible-padding-base - @oui-collapsible-border-width_active);
+@oui-collapsible-border-color: @p-100;
+@oui-collapsible-border-color_hover: @p-500;
+@oui-collapsible-border-color_active: @p-500;
 @oui-collapsible-border-width: 1px;
-@oui-collapsible-border-radius: @oui-global-base-radius;
-@oui-collapsible-background-color: @oui-color-foam;
-@oui-collapsible-background-color_active: @oui-color-charlotte;
+@oui-collapsible-border-width_hover: 2px;
+@oui-collapsible-border-width_active: 2px;
+@oui-collapsible-border-radius: rem-calc(8);
+@oui-collapsible-background-color: @p-000;
+@oui-collapsible-background-color_hover: @p-100;
+@oui-collapsible-background-color_active: @p-050;
+@oui-collapsible-transition-delay: 0.2s;
 
-@oui-collapsible-header-height: rem-calc(40);
-@oui-collapsible-header-padding: 0 rem-calc(14) 0 rem-calc(19);
-@oui-collapsible-header-font-color: @oui-color-sapphire;
-@oui-collapsible-header-font-color_active: @oui-color-sapphire;
+@oui-collapsible-header-height: @oui-collapsible-min-height;
+@oui-collapsible-header-font-color: @p-500;
+@oui-collapsible-header-font-color_active: @p-800-text;
+@oui-collapsible-header-font-size: rem-calc(18);
+@oui-collapsible-header-outline-offset: calc(-@oui-a11y-outline-offset - @oui-a11y-outline-width - @oui-collapsible-border-width);
+@oui-collapsible-header-transition_open: border-radius 0.001s linear, background-color @oui-animation-default-timing @oui-animation-default, border-color @oui-animation-default-timing @oui-animation-default, color @oui-animation-default-timing @oui-animation-default;
+@oui-collapsible-header-transition_close: border-radius 0.001s linear @oui-collapsible-transition-delay, background-color @oui-animation-default-timing @oui-animation-default, border-color @oui-animation-default-timing @oui-animation-default, color @oui-animation-default-timing @oui-animation-default;
 
 @oui-collapsible-label-color: @oui-color-sapphire;
 
-@oui-collapsible-icon-size: rem-calc(13);
-@oui-collapsible-icon-color: inherit;
-@oui-collapsible-icon-spacing: rem-calc(14);
+@oui-collapsible-icon-size: rem-calc(24);
+@oui-collapsible-icon-color: @p-500;
+@oui-collapsible-icon-spacing: @oui-collapsible-padding;
+@oui-collapsible-icon-spacing_hover: @oui-collapsible-padding_hover;
+@oui-collapsible-icon-spacing_active: @oui-collapsible-padding_active;
 
 // Criteria
 @oui-criteria-margin-bottom: rem-calc(10);
