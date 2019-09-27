@@ -37,11 +37,11 @@
   ) {
     #oui > .animate();
 
+    color: @font-color;
+    font-weight: @oui-font-bold;
     padding: @padding;
     white-space: nowrap;
     outline: none;
-    color: @font-color;
-    font-weight: @oui-font-regular;
 
     &[role="button"] {
       cursor: inherit;
@@ -66,16 +66,19 @@
       cursor: pointer;
     }
 
+    &::after {
+      .datagrid-header-arrow();
+
+      content: @oui-icon-index-triangle-up-down_extra-thin;
+      color: @oui-datagrid-header-font-color;
+      opacity: 0.5;
+    }
+
     &:hover,
     &:focus {
       background-color: @background-color-hover;
       color: @font-color-hover;
     }
-
-    #oui > .datagrid-arrow-asc(
-      @font-color: @oui-datagrid-header-font-color,
-      @font-weight: @oui-font-regular
-    );
   }
 
   .datagrid-header-arrow(
@@ -90,7 +93,7 @@
     font-family: @oui-global-base-font-family-icon;
     font-size: @arrow-size;
     line-height: 1;
-    font-weight: @oui-font-regular;
+    font-weight: @oui-font-bold;
     text-align: center;
   }
 
@@ -98,14 +101,14 @@
     @font-color: @oui-datagrid-header-font-color-sorted,
     @font-weight: @oui-font-semibold
   ) {
-    font-weight: @font-weight;
     color: @font-color;
 
-    &::after {
+
+    &::after{
       .datagrid-header-arrow();
 
-      opacity: 0;
-      content: @oui-icon-index-arrow-up;
+      color: @font-color;
+      content: @oui-icon-index-triangle-up_extra-thin;
     }
 
     &:hover::after {
@@ -125,14 +128,13 @@
   .datagrid-arrow-desc(
     @font-color: @oui-datagrid-header-font-color-sorted
   ) {
-    font-weight: @oui-font-semibold;
-    color: @font-color;
 
     &::after {
       .datagrid-header-arrow();
 
-      opacity: 0;
-      content: @oui-icon-index-arrow-down;
+      color: @font-color;
+      content: @oui-icon-index-triangle-down_extra-thin;
+      vertical-align: middle;
     }
 
     &:hover::after {
