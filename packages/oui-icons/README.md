@@ -550,6 +550,11 @@
   </div>
 
   <div class="oui-icon-badge">
+    <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-triangle-up-down_extra-thin" aria-hidden="true"></span></div>
+    <div class="oui-icon-badge__code"><code>.oui-icon-triangle-up-down_extra-thin</code></div>
+  </div>
+
+  <div class="oui-icon-badge">
     <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-user_extra-thin" aria-hidden="true"></span></div>
     <div class="oui-icon-badge__code"><code>.oui-icon-user_extra-thin</code></div>
   </div>
