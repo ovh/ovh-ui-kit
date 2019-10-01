@@ -93,10 +93,11 @@
     "icon-triangle-down_extra-thin": "\\f15c",
     "icon-triangle-left_extra-thin": "\\f15d",
     "icon-triangle-right_extra-thin": "\\f15e",
-    "icon-triangle-up_extra-thin": "\\f15f",
-    "icon-user": "\\f160",
-    "icon-user_extra-thin": "\\f161",
-    "icon-user_line": "\\f162",
-    "icon-warning_circle": "\\f163",
-    "icon-warning_extra-thin": "\\f164"
+    "icon-triangle-up-down_extra-thin": "\\f15f",
+    "icon-triangle-up_extra-thin": "\\f160",
+    "icon-user": "\\f161",
+    "icon-user_extra-thin": "\\f162",
+    "icon-user_line": "\\f163",
+    "icon-warning_circle": "\\f164",
+    "icon-warning_extra-thin": "\\f165"
 }

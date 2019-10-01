@@ -1,7 +1,7 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.woff2?bc3684861b7ae0fd8ff4543c87da72db") format("woff2"),
-url("./icons.woff?bc3684861b7ae0fd8ff4543c87da72db") format("woff");
+    src: url("./icons.woff2?d4eafcdd236d681af6b4ee03137a648d") format("woff2"),
+url("./icons.woff?d4eafcdd236d681af6b4ee03137a648d") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -297,21 +297,24 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-triangle-right_extra-thin:before {
     content: "\f15e";
 }
-.oui-icon-triangle-up_extra-thin:before {
+.oui-icon-triangle-up-down_extra-thin:before {
     content: "\f15f";
 }
-.oui-icon-user:before {
+.oui-icon-triangle-up_extra-thin:before {
     content: "\f160";
 }
-.oui-icon-user_extra-thin:before {
+.oui-icon-user:before {
     content: "\f161";
 }
-.oui-icon-user_line:before {
+.oui-icon-user_extra-thin:before {
     content: "\f162";
 }
-.oui-icon-warning_circle:before {
+.oui-icon-user_line:before {
     content: "\f163";
 }
-.oui-icon-warning_extra-thin:before {
+.oui-icon-warning_circle:before {
     content: "\f164";
+}
+.oui-icon-warning_extra-thin:before {
+    content: "\f165";
 }

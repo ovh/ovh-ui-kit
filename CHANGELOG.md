@@ -1,3 +1,13 @@
+<a name="2.34.3"></a>
+## [2.34.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.2...v2.34.3) (2019-10-01)
+
+
+### Features
+
+* **oui-datagrid:** display arrow to indicate sortable columns ([#513](https://github.com/ovh-ux/ovh-ui-kit/issues/513)) ([469e9e6](https://github.com/ovh-ux/ovh-ui-kit/commit/469e9e6))
+
+
+
 <a name="2.34.2"></a>
 ## [2.34.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.1...v2.34.2) (2019-09-19)
 

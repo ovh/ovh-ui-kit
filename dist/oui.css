@@ -1332,7 +1332,7 @@ p,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.34.2") format("woff2"), url("./icons/icons.woff?v=2.34.2") format("woff");
+  src: url("./icons/icons.woff2?v=2.34.3") format("woff2"), url("./icons/icons.woff?v=2.34.3") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -1781,29 +1781,33 @@ p,
   display: block;
   content: "\f15e";
 }
-.oui-icon.oui-icon-triangle-up_extra-thin::before {
+.oui-icon.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f15f";
 }
-.oui-icon.oui-icon-user::before {
+.oui-icon.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f160";
 }
-.oui-icon.oui-icon-user_extra-thin::before {
+.oui-icon.oui-icon-user::before {
   display: block;
   content: "\f161";
 }
-.oui-icon.oui-icon-user_line::before {
+.oui-icon.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f162";
 }
-.oui-icon.oui-icon-warning_circle::before {
+.oui-icon.oui-icon-user_line::before {
   display: block;
   content: "\f163";
 }
-.oui-icon.oui-icon-warning_extra-thin::before {
+.oui-icon.oui-icon-warning_circle::before {
   display: block;
   content: "\f164";
+}
+.oui-icon.oui-icon-warning_extra-thin::before {
+  display: block;
+  content: "\f165";
 }
 .oui-icon_circle::before {
   width: 1.5rem;
@@ -8229,11 +8233,11 @@ oui-criteria-adder {
 .oui-datagrid__header {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: #59697d;
+  font-weight: 700;
   padding: 0.125rem 0.625rem;
   white-space: nowrap;
   outline: none;
-  color: #59697d;
-  font-weight: 400;
 }
 .oui-datagrid__header[role="button"] {
   cursor: inherit;
@@ -8244,15 +8248,30 @@ oui-criteria-adder {
 .oui-datagrid__header_sortable,
 .oui-datagrid__header_sortable-asc,
 .oui-datagrid__header_sortable-desc {
-  padding-right: calc(0.625rem * 3);
+  padding-right: calc(1rem * 3);
   cursor: pointer;
-  font-weight: 400;
-  color: #59697d;
 }
 .oui-datagrid__header_sortable[role="button"],
 .oui-datagrid__header_sortable-asc[role="button"],
 .oui-datagrid__header_sortable-desc[role="button"] {
   cursor: pointer;
+}
+.oui-datagrid__header_sortable::after,
+.oui-datagrid__header_sortable-asc::after,
+.oui-datagrid__header_sortable-desc::after {
+  display: inline-block;
+  width: calc(1rem * 2);
+  height: 1rem;
+  margin: auto;
+  color: #113f6d;
+  font-family: 'Oui Icons';
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+  content: "\f15f";
+  color: #59697d;
+  opacity: 0.5;
 }
 .oui-datagrid__header_sortable:hover,
 .oui-datagrid__header_sortable-asc:hover,
@@ -8263,56 +8282,21 @@ oui-criteria-adder {
   background-color: #e1e3df;
   color: #113f6d;
 }
-.oui-datagrid__header_sortable::after,
-.oui-datagrid__header_sortable-asc::after,
-.oui-datagrid__header_sortable-desc::after {
-  display: inline-block;
-  width: calc(0.625rem * 2);
-  height: 0.625rem;
-  margin: auto;
-  color: #113f6d;
-  font-family: 'Oui Icons';
-  font-size: 0.625rem;
-  line-height: 1;
-  font-weight: 400;
-  text-align: center;
-  opacity: 0;
-  content: "\f106";
-}
-.oui-datagrid__header_sortable:hover::after,
-.oui-datagrid__header_sortable-asc:hover::after,
-.oui-datagrid__header_sortable-desc:hover::after {
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0.5;
-}
-.oui-datagrid__header_sortable:focus::after,
-.oui-datagrid__header_sortable-asc:focus::after,
-.oui-datagrid__header_sortable-desc:focus::after,
-.oui-datagrid__header_sortable:active::after,
-.oui-datagrid__header_sortable-asc:active::after,
-.oui-datagrid__header_sortable-desc:active::after {
-  transition-duration: 0.2s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
-}
 .oui-datagrid__header_sortable-asc {
-  font-weight: 600;
   color: #113f6d;
 }
 .oui-datagrid__header_sortable-asc::after {
   display: inline-block;
-  width: calc(0.625rem * 2);
-  height: 0.625rem;
+  width: calc(1rem * 2);
+  height: 1rem;
   margin: auto;
-  color: #113f6d;
   font-family: 'Oui Icons';
-  font-size: 0.625rem;
+  font-size: 1rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
-  opacity: 0;
-  content: "\f106";
+  color: #113f6d;
+  content: "\f160";
 }
 .oui-datagrid__header_sortable-asc:hover::after {
   transition-duration: 0.2s;
@@ -8331,23 +8315,19 @@ oui-criteria-adder {
 .oui-datagrid__header_sortable-asc.oui-datagrid__header:active::after {
   opacity: 1;
 }
-.oui-datagrid__header_sortable-desc {
-  font-weight: 600;
-  color: #113f6d;
-}
 .oui-datagrid__header_sortable-desc::after {
   display: inline-block;
-  width: calc(0.625rem * 2);
-  height: 0.625rem;
+  width: calc(1rem * 2);
+  height: 1rem;
   margin: auto;
-  color: #113f6d;
   font-family: 'Oui Icons';
-  font-size: 0.625rem;
+  font-size: 1rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
-  opacity: 0;
-  content: "\f102";
+  color: #113f6d;
+  content: "\f15c";
+  vertical-align: middle;
 }
 .oui-datagrid__header_sortable-desc:hover::after {
   transition-duration: 0.2s;
