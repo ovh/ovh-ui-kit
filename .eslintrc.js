@@ -20,12 +20,12 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/no-unresolved': 0,
   },
-  overrides: {
+  overrides: [{
     files: '*.spec.js',
     rules: {
       'no-magic-numbers': 0,
       'no-underscore-dangle': 0,
       'no-empty-function': 0,
     },
-  },
+  }],
 };
