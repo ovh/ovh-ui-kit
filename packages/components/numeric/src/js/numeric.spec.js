@@ -67,6 +67,29 @@ describe('ouiNumeric', () => {
       expect(scope.foo).toBe(undefined);
     });
 
+    it('should allow custom min and max values', () => {
+      const elt = angular.element('<oui-numeric model="foo" min="-10" max="100000"></oui-numeric>');
+      const scope = $rootScope.$new();
+      const value1 = -11;
+      const value2 = -5;
+      const value3 = 100000;
+      const value4 = 100001;
+      $compile(elt)(scope);
+      scope.$digest();
+      elt.find('input').controller('ngModel').$setViewValue('-1');
+      expect(scope.foo).toBe(-1);
+      elt.find('input').controller('ngModel').$setViewValue('hello');
+      expect(scope.foo).toBe(undefined);
+      elt.find('input').controller('ngModel').$setViewValue(value1);
+      expect(scope.foo).toBe(undefined);
+      elt.find('input').controller('ngModel').$setViewValue(value2);
+      expect(scope.foo).toBe(value2);
+      elt.find('input').controller('ngModel').$setViewValue(value3);
+      expect(scope.foo).toBe(value3);
+      elt.find('input').controller('ngModel').$setViewValue(value4);
+      expect(scope.foo).toBe(undefined);
+    });
+
     it('should decrement value when clicking first button', () => {
       const elt = angular.element('<oui-numeric model="foo"></oui-numeric>');
       const scope = $rootScope.$new();

@@ -1,5 +1,4 @@
 import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
-import clamp from 'lodash/clamp';
 
 // By design, value is restricted to [0, 99999] interval
 const MIN_VALUE = 0;
@@ -18,6 +17,8 @@ export default class {
 
   $onInit() {
     addDefaultParameter(this, 'id', `ouiNumeric${this.$id}`);
+    addDefaultParameter(this, 'min', MIN_VALUE);
+    addDefaultParameter(this, 'max', MAX_VALUE);
     addBooleanParameter(this, 'disabled');
 
     if (!angular.isNumber(this.min)) {
@@ -43,20 +44,9 @@ export default class {
       this.setModelValue(this.min);
     }
 
-    if (this.min < MIN_VALUE) {
-      this.$log.warn(`Invalid attribute min, value should be greater than '${MIN_VALUE}'`);
-    }
-
-    if (this.max > MAX_VALUE) {
-      this.$log.warn(`Invalid attribute max, value should be lower than '${MAX_VALUE}'`);
-    }
-
     if (angular.isDefined(this.$attrs.disabled) && angular.isUndefined(this.disabled)) {
       this.disabled = true;
     }
-
-    this.min = clamp(this.min, MIN_VALUE, MAX_VALUE);
-    this.max = clamp(this.max, this.min, MAX_VALUE);
 
     // used to trigger only onChange when necessary and
     // reset input if invalid characters are used
