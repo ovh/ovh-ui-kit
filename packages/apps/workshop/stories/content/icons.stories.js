@@ -323,6 +323,11 @@ storiesOf('Content|Icons', module)
       </div>
 
       <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-triangle-up-down" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-icon-triangle-up-down</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
         <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-user" aria-hidden="true"></span></div>
         <div class="doc-icon-badge__code"><code>.oui-icon-user</code></div>
       </div>
