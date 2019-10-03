@@ -1,7 +1,7 @@
 @font-face {
     font-family: "oui-icons";
-    src: url("./oui-icons.woff2?8d4705d8bb4e91935eb246a44c82f861") format("woff2"),
-url("./oui-icons.woff?8d4705d8bb4e91935eb246a44c82f861") format("woff");
+    src: url("./oui-icons.woff2?31194953f5546c674c60493c0d63a281") format("woff2"),
+url("./oui-icons.woff?31194953f5546c674c60493c0d63a281") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -768,15 +768,18 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-triangle-right:before {
     content: "\f1fb";
 }
-.oui-icon-triangle-up:before {
+.oui-icon-triangle-up-down:before {
     content: "\f1fc";
 }
-.oui-icon-user:before {
+.oui-icon-triangle-up:before {
     content: "\f1fd";
 }
-.oui-icon-warning:before {
+.oui-icon-user:before {
     content: "\f1fe";
 }
-.oui-icon-warning_circle:before {
+.oui-icon-warning:before {
     content: "\f1ff";
+}
+.oui-icon-warning_circle:before {
+    content: "\f200";
 }
