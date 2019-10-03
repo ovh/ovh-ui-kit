@@ -250,8 +250,9 @@
     "icon-triangle-down": "\\f1f9",
     "icon-triangle-left": "\\f1fa",
     "icon-triangle-right": "\\f1fb",
-    "icon-triangle-up": "\\f1fc",
-    "icon-user": "\\f1fd",
-    "icon-warning": "\\f1fe",
-    "icon-warning_circle": "\\f1ff"
+    "icon-triangle-up-down": "\\f1fc",
+    "icon-triangle-up": "\\f1fd",
+    "icon-user": "\\f1fe",
+    "icon-warning": "\\f1ff",
+    "icon-warning_circle": "\\f200"
 }
