@@ -209,7 +209,7 @@
     }
 
     &_sortable::after {
-      content: @oui-datagrid-arrow-content_asc;
+      content: @oui-datagrid-arrow-content;
     }
 
     &_sortable-asc::after {
@@ -218,6 +218,7 @@
 
     &_sortable-desc::after {
       content: @oui-datagrid-arrow-content_desc;
+      vertical-align: middle;
     }
 
     &_sortable,
@@ -244,20 +245,18 @@
         height: @oui-datagrid-arrow-size;
         line-height: 1;
         margin: auto;
-        opacity: 0;
+        opacity: 0.5;
         text-align: center;
-        color: @oui-datagrid-header-font-color_sorted;
+        color: @oui-datagrid-header-font-color;
         font-family: @oui-datagrid-arrow-font-family;
         font-size: @oui-datagrid-arrow-size;
         font-weight: @oui-datagrid-header-font-weight;
       }
 
-      &:hover::after {
-        opacity: 0.5;
-      }
-
+      &:hover::after,
       &:focus::after,
       &:active::after {
+        color: @oui-datagrid-header-font-color_hover;
         opacity: 1;
       }
     }
@@ -271,6 +270,7 @@
       &:focus,
       &:active {
         &::after {
+          color: @oui-datagrid-header-font-color_sorted;
           opacity: 1;
         }
       }
