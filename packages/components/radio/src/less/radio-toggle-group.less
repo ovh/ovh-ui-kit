@@ -1,6 +1,6 @@
 .oui-radio-toggle-group {
   display: flex;
-  max-width: @oui-ragio-toggle-group-max-width;
+  max-width: @oui-radio-toggle-group-max-width;
 }
 
 oui-radio-toggle-group {
@@ -13,15 +13,15 @@ oui-radio-toggle-group {
   &__label {
     display: inline-block;
     width: 100%;
-    height: @oui-ragio-toggle-group-height;
-    line-height: calc(@oui-ragio-toggle-group-height - @oui-ragio-toggle-group-border-width);
-    padding: @oui-ragio-toggle-group-padding;
-    border: @oui-ragio-toggle-group-border-width solid @oui-ragio-toggle-group-border-color;
+    height: @oui-radio-toggle-group-height;
+    line-height: calc(@oui-radio-toggle-group-height - @oui-radio-toggle-group-border-width);
+    padding: @oui-radio-toggle-group-padding;
+    border: @oui-radio-toggle-group-border-width solid @oui-radio-toggle-group-border-color;
     text-align: center;
-    font-size: @oui-ragio-toggle-group-font-size;
-    font-weight: @oui-ragio-toggle-group-font-weight;
-    background-color: @oui-ragio-toggle-group-background-color;
-    color: @oui-ragio-toggle-group-font-color;
+    font-size: @oui-radio-toggle-group-font-size;
+    font-weight: @oui-radio-toggle-group-font-weight;
+    background-color: @oui-radio-toggle-group-background-color;
+    color: @oui-radio-toggle-group-font-color;
     white-space: nowrap;
 
     &:hover {
@@ -30,14 +30,14 @@ oui-radio-toggle-group {
   }
 
   &:first-of-type &__label {
-    border-radius: @oui-ragio-toggle-group-border-radius 0 0 @oui-ragio-toggle-group-border-radius;
-    border-left-width: @oui-ragio-toggle-group-border-width;
+    border-radius: @oui-radio-toggle-group-border-radius 0 0 @oui-radio-toggle-group-border-radius;
+    border-left-width: @oui-radio-toggle-group-border-width;
     border-right-width: 0;
   }
 
   &:last-of-type &__label {
-    border-radius: 0 @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius 0;
-    border-right-width: @oui-ragio-toggle-group-border-width;
+    border-radius: 0 @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius 0;
+    border-right-width: @oui-radio-toggle-group-border-width;
     border-left-width: 0;
   }
 
@@ -50,12 +50,12 @@ oui-radio-toggle-group {
   }
 
   &__input:hover ~ &__label-container &__label {
-    background-color: @oui-ragio-toggle-group-background-color_hover;
+    background-color: @oui-radio-toggle-group-background-color_hover;
   }
 
   &__input:checked ~ &__label-container &__label {
-    background-color: @oui-ragio-toggle-group-background-color_checked;
-    color: @oui-ragio-toggle-group-font-color_checked;
+    background-color: @oui-radio-toggle-group-background-color_checked;
+    color: @oui-radio-toggle-group-font-color_checked;
     cursor: default;
   }
 
@@ -65,13 +65,13 @@ oui-radio-toggle-group {
 
   &__input:disabled ~ &__label-container &__label {
     cursor: default;
-    background-color: @oui-ragio-toggle-group-background-color_disabled;
-    color: @oui-ragio-toggle-group-font-color_disabled;
+    background-color: @oui-radio-toggle-group-background-color_disabled;
+    color: @oui-radio-toggle-group-font-color_disabled;
   }
 
   &__input:disabled:checked ~ &__label-container &__label {
-    background-color: @oui-ragio-toggle-group-background-color_checked-disabled;
-    color: @oui-ragio-toggle-group-font-color_checked-disabled;
+    background-color: @oui-radio-toggle-group-background-color_checked-disabled;
+    color: @oui-radio-toggle-group-font-color_checked-disabled;
     cursor: default;
   }
 }
