@@ -2,6 +2,7 @@ import '@ovh-ux/ui-kit.spinner';
 
 describe('ouiSlideshow', () => {
   let TestUtils;
+  let $document;
   let $timeout;
 
   const getSlideshow = element => angular.element(element[0].querySelector('.oui-slideshow'));
@@ -12,11 +13,16 @@ describe('ouiSlideshow', () => {
   const getFirstIndicator = element => angular.element(element[0].querySelector('.oui-slideshow__indicators > button'));
   const getLastIndicator = element => angular.element(element[0].querySelector('.oui-slideshow__indicators > button:last-child'));
 
+  const KEYBOARD_KEYS = {
+    ESC: 27,
+  };
+
   beforeEach(angular.mock.module('oui.slideshow'));
   beforeEach(angular.mock.module('oui.spinner'));
   beforeEach(angular.mock.module('oui.test-utils'));
 
-  beforeEach(inject((_TestUtils_, _$timeout_) => {
+  beforeEach(inject((_TestUtils_, _$document_, _$timeout_) => {
+    $document = _$document_;
     TestUtils = _TestUtils_;
     $timeout = _$timeout_;
   }));
@@ -54,7 +60,13 @@ describe('ouiSlideshow', () => {
           dismissSpy,
         });
         $timeout.flush();
+
+        // Button
         getDismissButton(element).triggerHandler('click');
+        expect(dismissSpy).toHaveBeenCalled();
+
+        // ESC
+        $document.triggerHandler({ type: 'keydown', which: KEYBOARD_KEYS.ESC });
         expect(dismissSpy).toHaveBeenCalled();
       });
 
