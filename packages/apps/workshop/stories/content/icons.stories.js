@@ -344,14 +344,286 @@ storiesOf('Content|Icons', module)
     },
   )
   .add(
-    'Manager',
-    () => `
-    <div class="row">
+    'Flags', () => `
       <div class="doc-icon-badge">
-        <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-domain-dns" aria-hidden="true"></span></div>
-        <div class="doc-icon-badge__code"><code>.oui-icon-domain-dns</code></div>
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ad" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ad</code></div>
       </div>
-    </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ae" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ae</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_am" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_am</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ar" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ar</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_at" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_at</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_au" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_au</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_az" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_az</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_bb" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_bb</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_be" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_be</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_bg" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_bg</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ca" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ca</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ch" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ch</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ci" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ci</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_cl" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_cl</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_cn" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_cn</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_cr" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_cr</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_cu" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_cu</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_cz" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_cz</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_de" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_de</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_dk" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_dk</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_es" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_es</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_eu" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_eu</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_fi" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_fi</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_fr" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_fr</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_gb" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_gb</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_gb-zet" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_gb-zet</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ge" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ge</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_gn" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_gn</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_gr" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_gr</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_gw" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_gw</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ie" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ie</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_it" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_it</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_jm" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_jm</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_jo" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_jo</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_jp" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_jp</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_lt" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_lt</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ma" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ma</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ne" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ne</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ng" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ng</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_nl" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_nl</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_pl" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_pl</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_pt" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_pt</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ro" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ro</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_se" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_se</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_sg" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_sg</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_sl" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_sl</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_sn" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_sn</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_tg" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_tg</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_th" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_th</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_tj" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_tj</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_tn" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_tn</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_tr" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_tr</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ua" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ua</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_us" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_us</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ve" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_ve</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_vn" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-flag_vn</code></div>
+      </div>
     `, {
       options: {
         showPanel: false,
