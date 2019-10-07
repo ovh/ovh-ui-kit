@@ -9,7 +9,7 @@ const moduleName = 'oui-radio-stories';
 angular.module(moduleName, ['oui.radio']);
 
 export default {
-  title: 'Version 3/Components/Radio',
+  title: 'Version 4/Components/Radio/WebComponent',
 
   parameters: {
     notes: readme,
@@ -60,6 +60,7 @@ export const WithDescription = forModule(moduleName).createElement(
       value="$ctrl.value1">
       Value A
     </oui-radio>
+
     <oui-radio
       description="Pellentesque euismod magna rutrum lectus gravida semper."
       disabled="$ctrl.disabled"
@@ -97,6 +98,7 @@ export const Thumbnails = forModule(moduleName).createElement(
       thumbnail>
       Thumbnail
     </oui-radio>
+
     <oui-radio
       description="Pellentesque euismod magna rutrum lectus gravida semper."
       disabled="$ctrl.disabled"
@@ -126,6 +128,7 @@ export const Size = forModule(moduleName).createElement(
       size="m">
       Medium
     </oui-radio>
+
     <oui-radio
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       disabled="$ctrl.disabled"
@@ -135,6 +138,7 @@ export const Size = forModule(moduleName).createElement(
       thumbnail>
       Thumbnail
     </oui-radio>
+
     <oui-radio
       description="Pellentesque euismod magna rutrum lectus gravida semper."
       disabled="$ctrl.disabled"
@@ -165,6 +169,7 @@ export const WithFooter = forModule(moduleName).createElement(
       thumbnail>
       Thumbnail
     </oui-radio>
+
     <oui-radio
       description="Pellentesque euismod magna rutrum lectus gravida semper."
       footer="Lorem ipsum dolor sit amet"
@@ -194,11 +199,13 @@ export const InGroup = forModule(moduleName).createElement(
         value="$ctrl.value1">
         Value A
       </oui-radio>
+
       <oui-radio
         disabled="$ctrl.disabled"
         value="$ctrl.value2">
         Value B
       </oui-radio>
+
       <oui-radio
         disabled="$ctrl.disabled"
         value="$ctrl.value3">
@@ -234,11 +241,13 @@ export const InToggleGroup = forModule(moduleName).createElement(
         value="$ctrl.value1">
         Value A
       </oui-radio>
+
       <oui-radio
         disabled="$ctrl.disabled"
         value="$ctrl.value2">
         Value B
       </oui-radio>
+
       <oui-radio
         disabled="$ctrl.disabled"
         value="$ctrl.value3">
