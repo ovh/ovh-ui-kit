@@ -1,10 +1,5 @@
 .oui-radio-toggle-group {
-  display: inline-flex;
-  flex-direction: row;
-}
-
-.oui-radio-toggle-group_column {
-  flex-direction: column;
+  display: flex;
 }
 
 oui-radio-toggle-group {
@@ -12,34 +7,20 @@ oui-radio-toggle-group {
 }
 
 .oui-radio-toggle {
-  margin-left: -@oui-radio-toggle-group-border-width;
-  flex: 1 1 auto;
-
-  &:first-child {
-    margin-left: 0;
-  }
-
-  .oui-radio-toggle-group_column & {
-    margin-left: 0;
-    margin-top: -@oui-radio-toggle-group-border-width;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   &__label {
+    #oui > .animate();
+
     display: inline-block;
     width: 100%;
-    height: @oui-radio-toggle-group-height;
-    line-height: calc(@oui-radio-toggle-group-height - @oui-radio-toggle-group-border-width);
-    padding: @oui-radio-toggle-group-padding;
-    border: @oui-radio-toggle-group-border-width solid @oui-radio-toggle-group-border-color;
-    text-align: center;
-    font-size: @oui-radio-toggle-group-font-size;
-    font-weight: @oui-radio-toggle-group-font-weight;
-    background-color: @oui-radio-toggle-group-background-color;
-    color: @oui-radio-toggle-group-font-color;
+    height: @oui-radio-toggle-height;
+    line-height: calc(@oui-radio-toggle-height - @oui-radio-toggle-border-width);
+    padding: @oui-radio-toggle-padding;
+    border: @oui-radio-toggle-border-width solid @oui-radio-toggle-border-color;
+    border-radius: @oui-radio-toggle-border-radius;
+    font-size: @oui-radio-toggle-font-size;
+    font-weight: @oui-radio-toggle-font-weight;
+    background-color: @oui-radio-toggle-background-color;
+    color: @oui-radio-toggle-font-color;
     white-space: nowrap;
 
     &:hover {
@@ -47,28 +28,7 @@ oui-radio-toggle-group {
     }
   }
 
-  &:first-of-type &__label {
-    border-radius: @oui-radio-toggle-group-border-radius 0 0 @oui-radio-toggle-group-border-radius;
-    border-left-width: @oui-radio-toggle-group-border-width;
-
-    .oui-radio-toggle-group_column & {
-      border-radius: @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius 0 0;
-      border-width: @oui-radio-toggle-group-border-width;
-    }
-  }
-
-  &:last-of-type &__label { // stylelint-disable-line no-descending-specificity
-    border-radius: 0 @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius 0;
-    border-right-width: @oui-radio-toggle-group-border-width;
-
-    .oui-radio-toggle-group_column & {
-      border-radius: 0 0 @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius;
-      border-width: @oui-radio-toggle-group-border-width;
-    }
-  }
-
   &__label-container {
-    width: 100%;
     margin: 0;
   }
 
@@ -76,29 +36,31 @@ oui-radio-toggle-group {
     #oui > .visually-hidden();
   }
 
-  &__input:hover ~ &__label-container &__label {
-    background-color: @oui-radio-toggle-group-background-color_hover;
+  &__input ~ &__label-container &__label {
+    box-shadow: @oui-radio-toggle-box-shadow;
   }
 
   &__input:checked ~ &__label-container &__label {
-    background-color: @oui-radio-toggle-group-background-color_checked;
-    color: @oui-radio-toggle-group-font-color_checked;
+    border-color: @oui-radio-toggle-border-color_checked;
+    background-color: @oui-radio-toggle-background-color_checked;
+    color: @oui-radio-toggle-font-color_checked;
     cursor: default;
-  }
-
-  &__input:not(:checked) ~ &__label-container &__label {
-    box-shadow: @oui-radio-toggle-group-box-shadow;
   }
 
   &__input:disabled ~ &__label-container &__label {
+    opacity: 0.5;
     cursor: default;
-    background-color: @oui-radio-toggle-group-background-color_disabled;
-    color: @oui-radio-toggle-group-font-color_disabled;
   }
 
-  &__input:disabled:checked ~ &__label-container &__label {
-    background-color: @oui-radio-toggle-group-background-color_checked-disabled;
-    color: @oui-radio-toggle-group-font-color_checked-disabled;
-    cursor: default;
+  &__input:not(:disabled):hover ~ &__label-container &__label,
+  &__input:not(:disabled):focus ~ &__label-container &__label {
+    border-color: @oui-radio-toggle-border-color_hover;
+    box-shadow: @oui-radio-toggle-box-shadow_hover;
+    background-color: @oui-radio-toggle-background-color_hover;
+    color: @oui-radio-toggle-font-color_hover;
+  }
+
+  & + & {
+    margin-left: @oui-radio-toggle-spacing;
   }
 }
