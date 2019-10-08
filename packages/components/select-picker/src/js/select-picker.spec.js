@@ -89,6 +89,24 @@ describe('ouiSelectPicker', () => {
         const pictureRadioElement = getRadioPictureElement(element);
         expect(angular.element(pictureRadioElement).html()).toMatch(/<img/);
       });
+
+      it("should display an icon inside the selector's picture container", () => {
+        const icon = 'oui-icon oui-icon-ovh';
+        const element = TestUtils.compileTemplate(`<oui-select-picker picture="${icon}"></oui-select-picker>`);
+
+        const pictureRadioElement = getRadioPictureElement(element);
+        expect(angular.element(pictureRadioElement).html()).toMatch(/<span/);
+      });
+
+      it("should display the transclude inside the selector's picture container", () => {
+        const transclude = 'foo';
+        const element = TestUtils.compileTemplate(`<oui-select-picker>
+          <oui-select-picker-picture>${transclude}</oui-select-picker-picture>
+        </oui-select-picker>`);
+
+        const pictureRadioElement = getRadioPictureElement(element);
+        expect(angular.element(pictureRadioElement).text()).toEqual(transclude);
+      });
     });
 
     describe('values attribute', () => {
