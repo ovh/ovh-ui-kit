@@ -143,7 +143,6 @@ storiesOf('Components/Radio', module)
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
-      size="m"
       thumbnail>
       Thumbnail
     </oui-radio>
@@ -153,7 +152,6 @@ storiesOf('Components/Radio', module)
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
-      size="m"
       variant="light"
       thumbnail>
       Thumbnail Light

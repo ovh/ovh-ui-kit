@@ -17,6 +17,7 @@ angular.module('myModule', ['oui.select-picker']);
 | `description` | string    | @?        | no                | n/a               | n/a       | description text
 | `placeholder` | string    | @?        | no                | n/a               | n/a       | initial label text of the select
 | `picture`     | string    | @?        | no                | n/a               | n/a       | picture path or icon class
+| `footer`      | string    | @?        | no                | n/a               | n/a       | footer text
 | `match`       | string    | @         | no                | n/a               | n/a       | object property matched to label
 | `variant`     | string    | @?        | yes               | `default`, `light`| `default` | define specific style
 | `values`      | array     | <         | no                | n/a               | n/a       | value of the radio or values of the select

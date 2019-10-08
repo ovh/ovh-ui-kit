@@ -240,6 +240,15 @@
 @oui-choice-thumbnail-border-color-light-checked_hover: @oui-color-turquoise;
 @oui-choice-thumbnail-border-color-light-checked_disabled: @oui-color-pacific;
 
+@oui-choice-thumbnail-footer-spacing: @oui-choice-section-spacing;
+@oui-choice-thumbnail-footer-line-height: 1.125;
+@oui-choice-thumbnail-footer-padding-x: @oui-choice-thumbnail-padding;
+@oui-choice-thumbnail-footer-padding-y: rem-calc(10);
+@oui-choice-thumbnail-footer-background: @oui-color-charlotte;
+@oui-choice-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
+@oui-choice-thumbnail-footer-font-weight: @oui-font-semibold;
+@oui-choice-thumbnail-footer-font-size: rem-calc(18);
+
 /*
  * Components
  */
@@ -509,16 +518,6 @@
 
 @oui-checkbox-box-shadow_focus: @oui-choice-box-shadow_focus;
 @oui-checkbox-box-shadow_error: @oui-choice-box-shadow_error;
-
-@oui-checkbox-thumbnail-padding: @oui-choice-thumbnail-padding;
-@oui-checkbox-thumbnail-footer-background: @oui-color-charlotte;
-@oui-checkbox-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
-@oui-checkbox-thumbnail-footer-font-weight: @oui-font-semibold;
-@oui-checkbox-thumbnail-footer-font-size: rem-calc(18);
-@oui-checkbox-thumbnail-footer-margin-top: rem-calc(10);
-@oui-checkbox-thumbnail-footer-margin-bottom: -@oui-choice-thumbnail-padding;
-@oui-checkbox-thumbnail-footer-margin-top-checked: calc(@oui-checkbox-thumbnail-footer-margin-top - @oui-choice-thumbnail-border-width);
-@oui-checkbox-thumbnail-footer-margin-bottom-checked: calc(-@oui-choice-thumbnail-padding + @oui-choice-thumbnail-border-width);
 
 // Checkbox - M Variant
 @oui-checkbox-m-line-height: @oui-choice-m-line-height;
@@ -1465,16 +1464,6 @@
 @oui-ragio-toggle-group-background-color_disabled: @oui-color-concrete;
 @oui-ragio-toggle-group-background-color_checked: @oui-color-sapphire;
 @oui-ragio-toggle-group-background-color_checked-disabled: @oui-color-ironlight;
-
-@oui-radio-thumbnail-padding: @oui-choice-thumbnail-padding;
-@oui-radio-thumbnail-footer-background: @oui-color-charlotte;
-@oui-radio-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
-@oui-radio-thumbnail-footer-font-weight: @oui-font-semibold;
-@oui-radio-thumbnail-footer-font-size: rem-calc(18);
-@oui-radio-thumbnail-footer-margin-top: rem-calc(10);
-@oui-radio-thumbnail-footer-margin-bottom: -@oui-choice-thumbnail-padding;
-@oui-radio-thumbnail-footer-margin-top-checked: calc(@oui-radio-thumbnail-footer-margin-top - @oui-choice-thumbnail-border-width);
-@oui-radio-thumbnail-footer-margin-bottom-checked: calc(-@oui-choice-thumbnail-padding + @oui-choice-thumbnail-border-width);
 
 // Search
 @oui-search-margin: 0;
