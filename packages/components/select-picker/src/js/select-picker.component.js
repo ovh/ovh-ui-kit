@@ -15,6 +15,7 @@ export default {
     name: '@?',
     label: '@',
     description: '@?',
+    footer: '@?',
     placeholder: '@?',
     picture: '@?',
     match: '@',

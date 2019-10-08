@@ -9,6 +9,8 @@
     ng-required="$ctrl.required"
     ng-value="$ctrl.selectedValue">
 <label class="oui-select-picker__label-container" for="{{:: $ctrl.id }}">
+
+    <!-- Picture -->
     <span class="oui-select-picker__picture-container"
         aria-hidden="true"
         ng-if="$ctrl.hasPicture()"
@@ -21,15 +23,22 @@
             ng-if="!$ctrl.isImgPath">
         </span>
     </span>
+
+    <!-- Label -->
     <span class="oui-select-picker__label">
         <span id="{{:: $ctrl.id }}Label"
             ng-bind="$ctrl.label">
         </span>
     </span>
+
+    <!-- Description -->
     <span class="oui-select-picker__description"
         id="{{:: $ctrl.id }}Description"
         ng-bind=":: $ctrl.description"
-        ng-if="$ctrl.description"></span>
+        ng-if="$ctrl.description">
+    </span>
+
+    <!-- Values -->
     <span class="oui-select-picker__value-container oui-select-picker__section"
         ng-if="$ctrl.values.length === 1 && $ctrl.match">
         <span class="oui-select-picker__value"
@@ -49,10 +58,14 @@
             <span ng-if="!$ctrl.match" ng-bind=":: $item"></span>
         </oui-select>
     </span>
+
+    <!-- Sections -->
     <span class="oui-select-picker__transclude-container"
         ng-if="$ctrl.hasSection()"
         ng-transclude="sectionSlot">
     </span>
+
+    <!-- Footer -->
     <span class="oui-select-picker__footer"
         ng-if="$ctrl.hasFooter()"
         ng-transclude="footerSlot">
