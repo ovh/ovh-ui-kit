@@ -45,34 +45,44 @@
     }
   }
 
-  &__picture {
-    display: block;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
   &__picture-container {
-    display: block;
-    width: @oui-select-picker-picture-max-width;
+    line-height: @oui-select-picker-picture-max-height;
     height: @oui-select-picker-picture-max-height;
+    display: block;
     position: absolute;
-    top: @oui-select-picker-picture-top;
-    right: @oui-select-picker-picture-right;
+    top: calc(@oui-select-picker-picture-top - @oui-select-picker-border-width);
+    right: calc(@oui-select-picker-picture-right - @oui-select-picker-border-width);
+
+    img {
+      width: auto;
+      height: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+    }
+
+    .oui-icon { // stylelint-disable-line no-descending-specificity
+      font-size: @oui-select-picker-picture-max-height;
+    }
 
     & ~ .oui-select-picker__label {
       padding-right: ~"calc(@{oui-select-picker-picture-max-width} + @{oui-select-picker-picture-spacing})";
     }
   }
 
-  &__input:checked ~ .oui-select-picker__label-container,
-  &__input:disabled ~ .oui-select-picker__label-container {
+  &__input:checked ~ &__label-container &__picture-container {
+    top: calc(@oui-select-picker-picture-top - @oui-select-picker-border-width-checked);
+    right: calc(@oui-select-picker-picture-right - @oui-select-picker-border-width-checked);
+  }
+
+  &__input:checked ~ &__label-container,
+  &__input:disabled ~ &__label-container {
     .oui-select-picker__value {
       opacity: 1;
     }
   }
 
-  &__input:disabled ~ .oui-select-picker__label-container {
+  &__input:disabled ~ &__label-container {
     .oui-select-picker__value {
       color: @oui-select-picker-label-color_disabled;
     }
@@ -83,7 +93,7 @@
     }
   }
 
-  &__input:not(:disabled) ~ .oui-select-picker__label-container {
+  &__input:not(:disabled) ~ &__label-container {
     .ui-select-match {
       #oui > .choice-thumbnail-color(
         @oui-select-picker-value-border-color,
@@ -114,7 +124,7 @@
   }
 
   // stylelint-disable no-descending-specificity
-  &__input:checked ~ .oui-select-picker__label-container,
+  &__input:checked ~ &__label-container,
   .ui-select-container.ui-select-container_open {
     .ui-select-match {
       background-color: @oui-select-picker-value-background-color_checked;

@@ -5,6 +5,8 @@ import { forModule } from 'storybook-addon-angularjs';
 
 import { compileTemplate } from '../../src/utils';
 
+import image from '../_assets/ovh.svg';
+
 // Create mock module for the stories
 const moduleName = 'oui-select-picker-stories';
 angular.module(moduleName, ['oui.select-picker']);
@@ -98,6 +100,43 @@ storiesOf('Components/Select Picker', module)
         values1: [{ id: 'a', name: 'Value A' }, { id: 'b', name: 'Value B' }],
         values2: [{ id: 'c', name: 'Value C' }],
         values3: [{ id: 'd', name: 'Value D' }, { id: 'e', name: 'Value E' }, { id: 'f', name: 'Value F' }],
+      },
+    })),
+  )
+  .add(
+    'With picture',
+    forModule(moduleName).createElement(() => compileTemplate(`
+      <oui-select-picker
+        label="Picture"
+        model="$ctrl.model"
+        name="ouiSelectPicker1"
+        picture="{{::$ctrl.image}}"
+        values="['picture']"
+        variant="light">
+      </oui-select-picker>
+
+      <oui-select-picker
+        label="Icon"
+        model="$ctrl.model"
+        name="ouiSelectPicker1"
+        picture="oui-icon oui-icon-ovh"
+        values="['icon']"
+        variant="light">
+      </oui-select-picker>
+
+      <oui-select-picker
+        label="Transclude"
+        model="$ctrl.model"
+        name="ouiSelectPicker1"
+        values="['transclude']"
+        variant="light">
+        <oui-select-picker-picture>
+          <span class="oui-status oui-status_success">Lorem ipsum</span>
+        </oui-select-picker-picture>
+      </oui-select-picker>
+    `, {
+      $ctrl: {
+        image,
       },
     })),
   )

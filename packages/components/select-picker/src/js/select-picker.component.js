@@ -5,6 +5,8 @@ export default {
   template,
   controller,
   transclude: {
+    footerSlot: '?ouiSelectPickerFooter',
+    pictureSlot: '?ouiSelectPickerPicture',
     sectionSlot: '?ouiSelectPickerSection',
   },
   bindings: {
