@@ -30,7 +30,7 @@
   "devDependencies": {
     "angular": "^1.7.8",
     "cpx": "^1.5.0",
-    "cross-env": "^6.0.2",
+    "cross-env": "^6.0.3",
     "less": "^3.10.3",
     "less-plugin-remcalc": "^0.1.0",
     "mini-css-extract-plugin": "^0.8.0",

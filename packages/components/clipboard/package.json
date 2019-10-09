@@ -19,11 +19,11 @@
     "clipboard": "^2.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/node": "^7.6.2",
+    "@babel/core": "^7.6.3",
+    "@babel/node": "^7.6.3",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.8",
-    "cross-env": "^6.0.2",
+    "cross-env": "^6.0.3",
     "karma": "^4.3.0",
     "lodash": "^4.17.15"
   }

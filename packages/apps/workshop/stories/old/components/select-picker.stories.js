@@ -5,7 +5,7 @@ import { forModule } from 'storybook-addon-angularjs';
 
 import { compileTemplate } from '../../../src/utils';
 
-import image from '../_assets/ovh.svg';
+import image from '../../_assets/ovh.svg';
 
 // Create mock module for the stories
 const moduleName = 'oui-select-picker-stories';
