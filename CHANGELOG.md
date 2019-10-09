@@ -1,3 +1,13 @@
+<a name="2.35.0"></a>
+# [2.35.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.3...v2.35.0) (2019-10-09)
+
+
+### Features
+
+* **oui-typography:** add description list ([#522](https://github.com/ovh-ux/ovh-ui-kit/issues/522)) ([f7fb7e7](https://github.com/ovh-ux/ovh-ui-kit/commit/f7fb7e7))
+
+
+
 <a name="2.34.3"></a>
 ## [2.34.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.2...v2.34.3) (2019-10-01)
 
