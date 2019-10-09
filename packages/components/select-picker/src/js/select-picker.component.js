@@ -5,6 +5,8 @@ export default {
   template,
   controller,
   transclude: {
+    footerSlot: '?ouiSelectPickerFooter',
+    pictureSlot: '?ouiSelectPickerPicture',
     sectionSlot: '?ouiSelectPickerSection',
   },
   bindings: {
@@ -13,6 +15,7 @@ export default {
     name: '@?',
     label: '@',
     description: '@?',
+    footer: '@?',
     placeholder: '@?',
     picture: '@?',
     match: '@',
