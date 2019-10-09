@@ -1,3 +1,21 @@
+# [3.7.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.6.0...v3.7.0) (2019-10-09)
+
+
+### Bug Fixes
+
+* **oui-numeric:** allow custom min and max values ([#514](https://github.com/ovh-ux/ovh-ui-kit/issues/514)) ([fe2f3d5](https://github.com/ovh-ux/ovh-ui-kit/commit/fe2f3d566b9428a869b8858af6722b95c4798ff6))
+* **progress-tracker:** fix vertical responsive support ([8461541](https://github.com/ovh-ux/ovh-ui-kit/commit/846154182170f06d2a92b63ca9f99e6539a817c6))
+* **tile:** add spacing for actions ([81bb693](https://github.com/ovh-ux/ovh-ui-kit/commit/81bb6930a66544994cab1757cd0b1b7d0c0f54e5))
+
+
+### Features
+
+* **select-picker:** add footer section ([74cc7e6](https://github.com/ovh-ux/ovh-ui-kit/commit/74cc7e6b73feb8525935d354798565ad27309be4))
+* **select-picker:** add picture transclude ([ea3ebab](https://github.com/ovh-ux/ovh-ui-kit/commit/ea3ebabb712e80acb0dd357e8c96d540689cbb5a))
+* **typography:** add description list ([#519](https://github.com/ovh-ux/ovh-ui-kit/issues/519)) ([cb4d9ee](https://github.com/ovh-ux/ovh-ui-kit/commit/cb4d9eea1da44bc710febed21e71f7e050e0faff))
+
+
+
 # [3.6.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.1...v3.6.0) (2019-09-13)
 
 
