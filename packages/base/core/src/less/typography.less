@@ -78,3 +78,39 @@ p,
   margin: @oui-paragraph-margin;
   word-break: normal;
 }
+
+dl,
+.oui-description {
+  dt {
+    font-weight: @oui-description-term-font-weight;
+  }
+
+  dd {
+    font-weight: @oui-description-description-font-weight;
+  }
+}
+
+.oui-description_horizontal {
+  margin: 0;
+  padding: 0;
+
+  &::after {
+    content: ' ';
+    display: block;
+    clear: left;
+  }
+
+  dt {
+    line-height: @oui-description-horizontal-line-height;
+    margin: 0;
+    padding: 0;
+    float: left;
+    clear: left;
+  }
+
+  dd {
+    line-height: @oui-description-horizontal-line-height;
+    margin: 0 0 @oui-description-horizontal-margin-bottom;
+    text-align: right;
+  }
+}
