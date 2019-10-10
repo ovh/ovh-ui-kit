@@ -1,28 +1,14 @@
-@import './_normalize';
+@import './_variables';
 
 .oui-header-tabs {
-  #oui > .header-tabs-normalize();
-
   display: block;
 
   &__nav {
     position: relative;
   }
 
-  &__divider {
-    background-color: @oui-color-silver;
-    display: block;
-    height: 1px;
-    margin: rem-calc(4) 0;
-
-    &:first-child,
-    &:last-child {
-      display: none;
-    }
-  }
-
   &__dropdown-container {
-    padding: rem-calc(4) 0;
+    padding: @oui-header-tabs-dropdown-padding;
     list-style: none;
     margin: 0;
   }
@@ -35,18 +21,21 @@
     .oui-button_dropdown {
       background-color: transparent;
       display: block;
-      font-size: rem-calc(16);
+      color: @oui-header-tabs-item-font-color;
+      font-size: @oui-header-tabs-item-font-size;
+      font-weight: @oui-header-tabs-item-font-weight;
+      box-shadow: none;
       margin: 0;
 
       .oui-icon {
         color: inherit;
-        font-size: rem-calc(12);
-        margin-left: rem-calc(10);
+        font-size: @oui-header-tabs-icon-font-size;
+        margin-left: @oui-header-tabs-icon-spacing;
+        margin-right: 0;
       }
     }
 
     & > a {
-      color: @oui-color-sapphire;
       text-decoration: none;
 
       &:focus {
@@ -58,10 +47,12 @@
     }
 
     .oui-button_dropdown {
-      border: 0 none;
+      border: none;
       border-radius: inherit;
-      font-weight: normal;
-      padding: rem-calc(10) rem-calc(30);
+      color: @oui-header-tabs-item-font-color;
+      font-size: @oui-header-tabs-item-font-size;
+      font-weight: @oui-header-tabs-item-font-weight;
+      padding: @oui-header-tabs-item-padding;
       transition: none;
 
       &:active,
@@ -82,40 +73,39 @@
     }
 
     &_disabled > span {
-      color: @oui-color-dusty;
+      color: @oui-header-tabs-item-font-color_disabled;
     }
 
-    /* stylelint-disable no-descending-specificity */
+    // stylelint-disable no-descending-specificity
     &_active .oui-button_dropdown {
-      border-bottom: 4px solid;
-      padding-bottom: ~"calc(1rem - 4px)";
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
-    /* stylelint-enable no-descending-specificity */
+    // stylelint-enable no-descending-specificity
 
-    :not(.oui-header-tabs__dropdown-container) > & {
+    :not(.oui-header-tabs__dropdown-container) & {
       & > a,
       & > span {
-        padding: rem-calc(10) rem-calc(30);
+        padding: @oui-header-tabs-item-padding;
         white-space: nowrap;
       }
 
       &_active > a {
-        border-bottom: 4px solid;
-        padding-bottom: ~"calc(1rem - 4px)";
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
       }
     }
 
-    .oui-header-tabs__dropdown-container > & {
+    .oui-header-tabs__dropdown-container & {
       & > a,
       & > span {
-        padding: rem-calc(8) rem-calc(20);
+        padding: @oui-header-tabs-dropdown-item-padding;
       }
 
       &_active > a,
       & > a:hover,
       & > a:focus,
       & > a:active {
-        background-color: @oui-color-foam;
+        border-bottom: none;
+        background-color: @oui-header-tabs-dropdown-item-background-color_active;
       }
     }
   }
@@ -124,28 +114,21 @@
     display: flex;
     flex-wrap: nowrap;
     list-style: none;
-    margin: 0 44px;
+    margin: @oui-header-tabs-margin;
     overflow: hidden;
     padding: 0;
-
-    & > .oui-header-tabs__item {
-      margin-left: rem-calc(4);
-
-      &:first-child {
-        margin-left: 0;
-      }
-    }
+    border-bottom: @oui-header-tabs-border-bottom;
   }
 
   &__slider {
-    background-color: darken(@oui-color-nurse, 6.75%);
-    border: 0 none;
+    background-color: @oui-header-tabs-slider-nav-background-color;
+    border: none;
     bottom: 0;
-    color: @oui-color-sapphire;
-    font-size: rem-calc(10);
+    color: @oui-header-tabs-slider-nav-font-color;
+    font-size: @oui-header-tabs-slider-nav-font-size;
     position: absolute;
     top: 0;
-    width: 44px;
+    width: @oui-header-tabs-slider-nav-width;
     z-index: 1;
 
     &_left {
@@ -159,8 +142,13 @@
 
   .oui-dropdown_active {
     .oui-button_dropdown {
-      border-bottom: 4px solid;
-      padding-bottom: rem-calc(6);
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
   }
+}
+
+oui-header-tabs {
+  &:extend(.oui-header-tabs);
+
+  &-item { display: block; }
 }
