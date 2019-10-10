@@ -1,3 +1,13 @@
+<a name="2.35.1"></a>
+## [2.35.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.0...v2.35.1) (2019-10-10)
+
+
+### Bug Fixes
+
+* **oui-header-tabs:** fix style of active item ([#523](https://github.com/ovh-ux/ovh-ui-kit/issues/523)) ([623cd09](https://github.com/ovh-ux/ovh-ui-kit/commit/623cd09))
+
+
+
 <a name="2.35.0"></a>
 # [2.35.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.34.3...v2.35.0) (2019-10-09)
 
