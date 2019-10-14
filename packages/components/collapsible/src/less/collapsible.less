@@ -74,8 +74,8 @@
     & ~ .oui-collapsible__wrapper .oui-collapsible__body { padding-top: 0; }
   }
 
-  &__header:hover,
-  &__header:focus {
+  // Hover only for collapsed box
+  &__header[aria-expanded="false"]:hover {
     .oui-collapsible__toggle-icon {
       right: @oui-collapsible-icon-spacing_hover;
     }
