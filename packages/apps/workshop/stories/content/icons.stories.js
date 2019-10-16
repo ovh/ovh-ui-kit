@@ -38,7 +38,13 @@ storiesOf('Content|Icons', module)
       </div>
 
       <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-arrow-down-right" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-icon-arrow-down-right</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
         <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-arrow-left" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-icon-arrow-left</code></div>
         <div class="doc-icon-badge__code"><code>.oui-icon-arrow-left</code></div>
       </div>
 
@@ -50,6 +56,11 @@ storiesOf('Content|Icons', module)
       <div class="doc-icon-badge">
         <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-arrow-up" aria-hidden="true"></span></div>
         <div class="doc-icon-badge__code"><code>.oui-icon-arrow-up</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-arrow-up-right" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-icon-arrow-up-right</code></div>
       </div>
 
       <div class="doc-icon-badge">
@@ -130,6 +141,11 @@ storiesOf('Content|Icons', module)
       <div class="doc-icon-badge">
         <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-ellipsis" aria-hidden="true"></span></div>
         <div class="doc-icon-badge__code"><code>.oui-icon-ellipsis</code></div>
+      </div>
+
+      <div class="doc-icon-badge">
+        <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-equal" aria-hidden="true"></span></div>
+        <div class="doc-icon-badge__code"><code>.oui-icon-equal</code></div>
       </div>
 
       <div class="doc-icon-badge">
