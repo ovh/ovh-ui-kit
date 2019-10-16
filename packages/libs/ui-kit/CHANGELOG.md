@@ -1,3 +1,14 @@
+## [3.7.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.0...v3.7.1) (2019-10-16)
+
+
+### Bug Fixes
+
+* **field:** checkAllErrors avoid undefined value ([#524](https://github.com/ovh-ux/ovh-ui-kit/issues/524)) ([dc96512](https://github.com/ovh-ux/ovh-ui-kit/commit/dc965129acfa9744a7543216a94c9ec7ea7f77c9))
+* **header-tabs:** fix border when dropdown item is active ([c01c5e0](https://github.com/ovh-ux/ovh-ui-kit/commit/c01c5e0e56ac42fc5b438f665274a1317b7c92d4))
+* **icons:** add missing icons ([#525](https://github.com/ovh-ux/ovh-ui-kit/issues/525)) ([01bfd78](https://github.com/ovh-ux/ovh-ui-kit/commit/01bfd7818da232c0ce5a46319f7985786f57a333))
+
+
+
 # [3.7.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.6.0...v3.7.0) (2019-10-09)
 
 
