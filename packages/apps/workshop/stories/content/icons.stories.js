@@ -213,8 +213,17 @@ storiesOf('Content/Icons', module)
     () => `
     <div class="row">
       <div class="oui-icon-badge">
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-arrow-down-right_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-arrow-down-right_extra-thin</code></div>
+      </div>
+
+      <div class="oui-icon-badge">
         <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-arrow-right_extra-thin" aria-hidden="true"></span></div>
         <div class="oui-icon-badge__code"><code>.oui-icon-arrow-right_extra-thin</code></div>
+      </div>
+      <div class="oui-icon-badge">
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-arrow-up-right_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-arrow-up-right_extra-thin</code></div>
       </div>
 
       <div class="oui-icon-badge">
@@ -275,6 +284,11 @@ storiesOf('Content/Icons', module)
       <div class="oui-icon-badge">
         <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-ellypsis_extra-thin" aria-hidden="true"></span></div>
         <div class="oui-icon-badge__code"><code>.oui-icon-ellypsis_extra-thin</code></div>
+      </div>
+
+      <div class="oui-icon-badge">
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-equal_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-equal_extra-thin</code></div>
       </div>
 
       <div class="oui-icon-badge">
