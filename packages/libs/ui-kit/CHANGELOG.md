@@ -1,3 +1,12 @@
+## [3.7.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.1...v3.7.2) (2019-10-16)
+
+
+### Bug Fixes
+
+* **icons:** fix icons alignment ([#527](https://github.com/ovh-ux/ovh-ui-kit/issues/527)) ([0113905](https://github.com/ovh-ux/ovh-ui-kit/commit/0113905b984eae552050cd22366b51813552055f))
+
+
+
 ## [3.7.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.0...v3.7.1) (2019-10-16)
 
 
