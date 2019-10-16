@@ -1,3 +1,13 @@
+<a name="2.35.2"></a>
+## [2.35.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.1...v2.35.2) (2019-10-16)
+
+
+### Features
+
+* **oui-criteria-adder:** update display to add elements ([#526](https://github.com/ovh-ux/ovh-ui-kit/issues/526)) ([6faf586](https://github.com/ovh-ux/ovh-ui-kit/commit/6faf586))
+
+
+
 <a name="2.35.1"></a>
 ## [2.35.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.0...v2.35.1) (2019-10-10)
 
