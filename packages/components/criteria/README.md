@@ -22,6 +22,7 @@ angular.module('myModule', ['oui.criteria'])
 
     // default translations
     ouiCriteriaAdderConfigurationProvider.setTranslations({
+      filter_label: 'Filter',
       column_label: 'Column',
       operator_label: 'Operator',
 
