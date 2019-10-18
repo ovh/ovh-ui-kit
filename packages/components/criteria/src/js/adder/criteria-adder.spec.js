@@ -65,7 +65,7 @@ describe('ouiCriteriaAdder', () => {
 
     it('should display a dropdown of a form with multiple fields and a submit button', () => {
       const form = component.find('form');
-      const triggerButton = component[0].querySelectorAll('.oui-button_s');
+      const triggerButton = component[0].querySelectorAll('.oui-criteria-adder__button');
       const submitButton = component[0].querySelectorAll('[type=submit]');
       const dropdown = component.find('oui-dropdown');
       const fields = component.find('oui-field');
