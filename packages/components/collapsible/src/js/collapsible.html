@@ -1,10 +1,10 @@
-<button class="oui-button oui-button_block oui-collapsible__header"
+<button class="oui-collapsible__header oui-button oui-button_l oui-button_block"
     type="button"
     ng-click="$ctrl.toggle()"
     aria-label="{{::$ctrl.ariaLabel}}"
     aria-expanded="{{$ctrl.expanded}}"
     aria-controls="{{::$ctrl.id}}">
-    {{::$ctrl.heading}}
+    <span ng-bind="::$ctrl.heading"></span>
     <span class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></span>
 </button>
 <div class="oui-collapsible__wrapper" ng-style="{ 'height': $ctrl.wrapperHeight }">

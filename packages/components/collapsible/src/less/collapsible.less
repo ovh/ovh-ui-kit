@@ -1,6 +1,6 @@
 .oui-collapsible {
   display: block;
-  margin: @oui-collapsible-margin;
+  margin-bottom: @oui-collapsible-margin;
 
   &__toggle-icon {
     height: @oui-collapsible-icon-size;
@@ -8,50 +8,89 @@
     right: @oui-collapsible-icon-spacing;
     font-size: @oui-collapsible-icon-size;
     color: @oui-collapsible-icon-color;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform @oui-collapsible-transition-delay cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__header {
-    text-align: left;
     height: @oui-collapsible-header-height;
-    margin: 0;
-    padding: @oui-collapsible-header-padding;
+    padding: @oui-collapsible-padding;
+    text-align: left;
+    font-size: @oui-collapsible-header-font-size;
     color: @oui-collapsible-header-font-color;
+    border: @oui-collapsible-border-width solid @oui-collapsible-border-color;
+    border-radius: @oui-collapsible-border-radius;
     background-color: @oui-collapsible-background-color;
+    transition: @oui-collapsible-header-transition_close;
 
-    &:hover {
-      color: @oui-collapsible-header-font-color_active;
-      background-color: @oui-collapsible-background-color_active;
+    &:focus {
+      #oui > .outline-border(
+        @outline-offset: @oui-collapsible-header-outline-offset
+      );
     }
   }
 
   &__wrapper {
     overflow: hidden;
-    transition: height 0.2s ease-out;
+    transition: height @oui-collapsible-transition-delay ease-out;
   }
 
   &__body {
+    #oui > .animate();
+
     padding: @oui-collapsible-padding;
+    padding-top: 0;
     border: @oui-collapsible-border-width solid @oui-collapsible-border-color;
     border-top: none;
     border-radius: 0 0 @oui-collapsible-border-radius @oui-collapsible-border-radius;
+    background-color: @oui-collapsible-background-color;
   }
-
-  &__header[aria-expanded="true"] {
-    background-color: @oui-collapsible-background-color_active;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-
-    &:hover { background-color: @oui-collapsible-background-color; }
-  }
-
-  &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
 
   &__header[aria-expanded="false"] ~ &__wrapper {
     // Priority over ngStyle's height
-    // stylelint-disable declaration-no-important
-    height: 0 !important;
-    // stylelint-enable declaration-no-important
+    height: 0 !important; // stylelint-disable-line declaration-no-important
+  }
+
+  &__header[aria-expanded="true"] {
+    border-bottom-style: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: @oui-collapsible-header-font-color_active;
+    transition: @oui-collapsible-header-transition_open;
+
+    .oui-collapsible__toggle-icon {
+      right: @oui-collapsible-icon-spacing_active;
+
+      &::before { transform: rotate(-180deg); }
+    }
+
+    &,
+    & ~ .oui-collapsible__wrapper .oui-collapsible__body {
+      padding: @oui-collapsible-padding_active;
+      border-color: @oui-collapsible-border-color_active;
+      border-width: @oui-collapsible-border-width_active;
+      background-color: @oui-collapsible-background-color_active;
+    }
+
+    & ~ .oui-collapsible__wrapper .oui-collapsible__body { padding-top: 0; }
+  }
+
+  // Hover only for collapsed box
+  &__header[aria-expanded="false"]:hover {
+    .oui-collapsible__toggle-icon {
+      right: @oui-collapsible-icon-spacing_hover;
+    }
+
+    &,
+    & ~ .oui-collapsible__wrapper .oui-collapsible__body {
+      padding: @oui-collapsible-padding_hover;
+      border-color: @oui-collapsible-border-color_hover;
+      border-width: @oui-collapsible-border-width_hover;
+      background-color: @oui-collapsible-background-color_hover;
+    }
+
+    & ~ .oui-collapsible__wrapper .oui-collapsible__body {
+      padding-top: 0;
+    }
   }
 }
 
