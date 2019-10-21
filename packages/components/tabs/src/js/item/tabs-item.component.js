@@ -8,8 +8,9 @@ export default {
   bindings: {
     id: '@?',
     heading: '@?',
+    subheading: '@?',
+    variant: '@?',
     ariaLabel: '@?',
-    checked: '<?',
     onActive: '&',
   },
   controller,

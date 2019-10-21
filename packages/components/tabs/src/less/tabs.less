@@ -1,58 +1,10 @@
 .oui-tabs {
   display: block;
-  margin: @oui-tabs-tab-margin;
-
-  &__tab {
-    height: @oui-tabs-tab-height;
-    margin-right: @oui-tabs-tab-spacing;
-    padding: @oui-tabs-tab-padding;
-    vertical-align: top;
-    font-size: @oui-tabs-tab-font-size;
-    font-weight: @oui-tabs-tab-font-weight;
-    color: @oui-tabs-tab-font-color;
-    border: @oui-tabs-tab-border;
-    border-radius: @oui-tabs-tab-border-radius;
-    box-shadow: @oui-tabs-tab-box-shadow;
-    background: @oui-tabs-tab-background-color;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-      box-shadow: @oui-tabs-tab-box-shadow_hover;
-      background: @oui-tabs-tab-background-color_hover;
-    }
-
-    &:focus {
-      #oui > .outline-border();
-    }
-
-    &[aria-selected="true"] {
-      height: @oui-tabs-tab-height_active;
-      padding: @oui-tabs-tab-padding_active;
-      border-bottom: none;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      box-shadow: @oui-tabs-tab-box-shadow_active;
-      background: @oui-tabs-tab-background-color_active;
-    }
-
-    .oui-icon {
-      margin-right: @oui-tabs-icon-spacing;
-      font-size: @oui-tabs-icon-size;
-      color: @oui-tabs-icon-color;
-    }
-
-    &_checked .oui-icon {
-      color: @oui-tabs-icon-color_checked;
-    }
-  }
 
   &__tablist {
     position: relative;
-    display: flex; // Avoid inline spacing
+    display: flex;
+    align-items: flex-end;
     margin-bottom: -1px;
 
     #oui > .phone({
@@ -63,6 +15,73 @@
 
 oui-tabs {
   &:extend(.oui-tabs);
+}
+
+.oui-tabs-tab {
+  height: @oui-tabs-tab-height;
+  line-height: @oui-tabs-tab-line-height;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: @oui-tabs-tab-padding;
+  vertical-align: top;
+  font-size: @oui-tabs-tab-font-size;
+  font-weight: @oui-tabs-tab-font-weight;
+  color: @oui-tabs-tab-font-color;
+  border: @oui-tabs-tab-border;
+  border-radius: @oui-tabs-tab-border-radius;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: @oui-tabs-tab-background-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: @oui-tabs-tab-font-color_hover;
+    background: @oui-tabs-tab-background-color_hover;
+  }
+
+  &:focus {
+    #oui > .outline-border(
+      @outline-offset: @oui-tabs-tab-outline-offset
+    );
+  }
+
+  &[aria-selected="true"] {
+    height: @oui-tabs-tab-height_active;
+    padding: @oui-tabs-tab-padding_active;
+    border-bottom: none;
+    color: @oui-tabs-tab-font-color_active;
+    font-weight: @oui-tabs-tab-font-weight_active;
+    background: @oui-tabs-tab-background-color_active;
+  }
+
+  &__subheading {
+    line-height: @oui-tabs-tab-subheading-line-height;
+    display: inline-block;
+    font-size: @oui-tabs-tab-subheading-font-size;
+    color: @oui-tabs-tab-subheading-font-color;
+  }
+
+  // Variant 'promotion'
+  &_promotion &__subheading {
+    background-color: @oui-tabs-tab-subheading-promotion-background-color;
+    color: @oui-tabs-tab-subheading-promotion-font-color;
+    padding: @oui-tabs-tab-subheading-promotion-padding;
+    border-radius: @oui-tabs-tab-subheading-promotion-border-radius;
+  }
+
+  &_promotion[aria-selected="true"] &__subheading {
+    background-color: @oui-tabs-tab-subheading-promotion-background-color_active;
+    color: @oui-tabs-tab-subheading-promotion-font-color_active;
+    padding: @oui-tabs-tab-subheading-promotion-padding_active;
+    border-radius: @oui-tabs-tab-subheading-promotion-border-radius_active;
+  }
 }
 
 .oui-tabs-item {
@@ -92,7 +111,9 @@ oui-tabs {
     #oui > .phone({ display: flex; });
 
     &:focus {
-      #oui > .outline-border();
+      #oui > .outline-border(
+        @outline-offset: @oui-tabs-tab-outline-offset
+      );
     }
 
     &[aria-expanded="true"] {
@@ -149,6 +170,8 @@ oui-tabs {
     > :first-child { margin-top: 0; }
     > :last-child { margin-bottom: 0; }
   }
+
+  // Variant 'promotion'
 }
 
 oui-tabs-item {

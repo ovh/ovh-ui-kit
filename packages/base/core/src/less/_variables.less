@@ -1912,33 +1912,52 @@
 @oui-switch-cursor-box-shadow_error: 0 1px 2px 0 @oui-color-error-medium;
 
 // Tabs
-@oui-tabs-tab-height: rem-calc(40);
-@oui-tabs-tab-height_active: rem-calc(45);
-@oui-tabs-tab-margin: 0 0 rem-calc(20);
-@oui-tabs-tab-padding: 0 rem-calc(12);
-@oui-tabs-tab-padding_active: 0 rem-calc(12) rem-calc(6) rem-calc(12);
+@oui-tabs-tab-height: rem-calc(50);
+@oui-tabs-tab-height_active: rem-calc(53);
+@oui-tabs-tab-padding: 0 rem-calc(16);
+@oui-tabs-tab-padding_active: @oui-tabs-tab-padding;
 @oui-tabs-tab-padding_mobile: 0 rem-calc(12);
 @oui-tabs-tab-spacing: rem-calc(4);
-@oui-tabs-tab-font-color: @oui-color-sapphire;
-@oui-tabs-tab-font-size: rem-calc(16);
+@oui-tabs-tab-font-color: @p-500;
+@oui-tabs-tab-font-color_hover: @text-color;
+@oui-tabs-tab-font-color_active: @oui-tabs-tab-font-color_hover;
+@oui-tabs-tab-font-size: rem-calc(18);
 @oui-tabs-tab-font-weight: @oui-font-semibold;
-@oui-tabs-tab-border: @oui-color-silver 1px solid;
-@oui-tabs-tab-border-radius: 3px;
-@oui-tabs-tab-box-shadow: inset 0 2px 1px 0 @oui-color-nurse;
-@oui-tabs-tab-box-shadow_hover: none;
-@oui-tabs-tab-box-shadow_active: none;
+@oui-tabs-tab-font-weight_active: @oui-font-bold;
+@oui-tabs-tab-line-height: 1.25;
+@oui-tabs-tab-border: @oui-tabs-tab-border-color @oui-tabs-tab-border-width solid;
+@oui-tabs-tab-border-color: @p-100;
+@oui-tabs-tab-border-width: 1px;
+@oui-tabs-tab-border-radius: @oui-global-base-radius;
 @oui-tabs-tab-background-color: @oui-color-white;
-@oui-tabs-tab-background-color_hover: @oui-color-concrete;
-@oui-tabs-tab-background-color_active: @oui-color-white;
+@oui-tabs-tab-background-color_hover: @p-100;
+@oui-tabs-tab-background-color_active: @oui-tabs-tab-background-color;
+@oui-tabs-tab-outline-offset: calc(-@oui-a11y-outline-offset - @oui-a11y-outline-width - @oui-tabs-tab-border-width);
+
+@oui-tabs-tab-subheading-line-height: @oui-tabs-tab-line-height;
+@oui-tabs-tab-subheading-font-size: rem-calc(12);
+@oui-tabs-tab-subheading-font-color: @success-color;
+@oui-tabs-tab-subheading-font-color_active: @oui-tabs-tab-subheading-font-color;
+
+@oui-tabs-tab-subheading-promotion-font-color: @oui-color-white;
+@oui-tabs-tab-subheading-promotion-font-color_active: @promotion-500;
+@oui-tabs-tab-subheading-promotion-background-color: @promotion-500;
+@oui-tabs-tab-subheading-promotion-background-color_active: transparent;
+@oui-tabs-tab-subheading-promotion-padding: 0 rem-calc(8);
+@oui-tabs-tab-subheading-promotion-padding_active: 0;
+@oui-tabs-tab-subheading-promotion-border-radius: rem-calc(12);
+@oui-tabs-tab-subheading-promotion-border-radius_active: 0;
 
 @oui-tabs-icon-size: rem-calc(16);
-@oui-tabs-icon-spacing: rem-calc(10);
+@oui-tabs-icon-spacing: rem-calc(16);
 @oui-tabs-icon-color: @oui-color-silver;
 @oui-tabs-icon-color_checked: @oui-color-atlantis;
 
-@oui-tabs-tabpanel-padding: rem-calc(25) rem-calc(30);
-@oui-tabs-tabpanel-padding_mobile: rem-calc(10) rem-calc(20) rem-calc(20) rem-calc(20);
-@oui-tabs-tabpanel-border: @oui-tabs-tab-border;
+@oui-tabs-tabpanel-padding: rem-calc(16);
+@oui-tabs-tabpanel-padding_mobile: rem-calc(16);
+@oui-tabs-tabpanel-border: @oui-tabs-tabpanel-border-color @oui-tabs-tabpanel-border-width solid;
+@oui-tabs-tabpanel-border-color: @oui-tabs-tab-border-color;
+@oui-tabs-tabpanel-border-width: @oui-tabs-tab-border-width;
 @oui-tabs-tabpanel-border-radius: @oui-global-base-radius;
 @oui-tabs-tabpanel-background-color: @oui-tabs-tab-background-color;
 

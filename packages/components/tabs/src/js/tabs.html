@@ -1,16 +1,19 @@
 <div class="oui-tabs__tablist" role="tablist"
     ng-attr-aria-label="{{::$ctrl.ariaLabel}}">
-    <button class="oui-tabs__tab" type="button" role="tab"
+    <button class="oui-tabs-tab" type="button" role="tab"
         ng-repeat="item in $ctrl.items"
         ng-attr-aria-controls="{{::item.id}}"
         ng-attr-aria-label="{{::item.ariaLabel}}"
         ng-attr-aria-selected="{{item.id === $ctrl.model}}"
-        ng-class="{ 'oui-tabs__tab_checked': item.checked }"
+        ng-class="!!item.variant && ('oui-tabs-tab_' + item.variant)"
         ng-click="$ctrl.setActiveTab(item)">
-        <span class="oui-icon oui-icon-success"
-            ng-if="::item.hasCheckmark">
+        <span class="oui-tabs-tab__heading"
+            ng-bind="::item.heading">
         </span>
-        <span ng-bind="::item.heading"></span>
+        <span class="oui-tabs-tab__subheading"
+            ng-class="{ 'oui-tabs-tab__subheading_promotion': item.promotion }"
+            ng-bind="::item.subheading">
+        </span>
     </button>
 </div>
 <div class="oui-tabs__container"

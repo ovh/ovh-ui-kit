@@ -13,9 +13,10 @@ describe('ouiTabs', () => {
   describe('Components', () => {
     it('should add default classname', () => {
       const element = TestUtils.compileTemplate(`
-                <oui-tabs>
-                    <oui-tabs-item></oui-tabs-item>
-                </oui-tabs>`);
+        <oui-tabs>
+          <oui-tabs-item></oui-tabs-item>
+        </oui-tabs>
+      `);
 
       $timeout.flush();
 
@@ -25,9 +26,10 @@ describe('ouiTabs', () => {
 
     it('should have accessibility attribute', () => {
       const element = TestUtils.compileTemplate(`
-                <oui-tabs aria-label="tablist">
-                    <oui-tabs-item aria-label="heading"></oui-tabs-item>
-                </oui-tabs>`);
+        <oui-tabs aria-label="tablist">
+          <oui-tabs-item aria-label="heading"></oui-tabs-item>
+        </oui-tabs>
+      `);
 
       $timeout.flush();
 
@@ -40,7 +42,7 @@ describe('ouiTabs', () => {
       expect(tablist.attr('role')).toBe('tablist');
       expect(tablist.attr('aria-label')).toBe('tablist');
 
-      const tab = angular.element(element[0].querySelector('.oui-tabs__tab'));
+      const tab = angular.element(element[0].querySelector('.oui-tabs-tab'));
       expect(tab.attr('aria-label')).toBe('heading');
       expect(tab.attr('aria-controls')).toBe(contentId);
       expect(tab.attr('aria-selected')).toBeDefined();
@@ -53,10 +55,11 @@ describe('ouiTabs', () => {
 
     it('should set tabs with heading', () => {
       const element = TestUtils.compileTemplate(`
-                <oui-tabs aria-label="tablist">
-                    <oui-tabs-item heading="lorem"></oui-tabs-item>
-                    <oui-tabs-item heading="ipsum"></oui-tabs-item>
-                </oui-tabs>`);
+        <oui-tabs aria-label="tablist">
+          <oui-tabs-item heading="lorem"></oui-tabs-item>
+          <oui-tabs-item heading="ipsum"></oui-tabs-item>
+        </oui-tabs>
+      `);
 
       $timeout.flush();
 
@@ -66,17 +69,60 @@ describe('ouiTabs', () => {
 
       angular.forEach(items, (item, index) => {
         const heading = angular.element(item).attr('heading');
+        const tab = angular.element(tabs[index]).text().trim();
+        expect(tab).toBe(heading);
+      });
+    });
+
+    it('should set tabs with subheading', () => {
+      const element = TestUtils.compileTemplate(`
+        <oui-tabs>
+          <oui-tabs-item subheading="lorem"></oui-tabs-item>
+          <oui-tabs-item subheading="ipsum"></oui-tabs-item>
+        </oui-tabs>
+      `);
+
+      $timeout.flush();
+
+      const items = element.find('oui-tabs-item');
+      const tabs = angular.element(element[0].querySelector('.oui-tabs__tablist')).find('button');
+      expect(tabs.length).toBe(items.length);
+
+      angular.forEach(items, (item, index) => {
+        const subheading = angular.element(item).attr('subheading');
+        const tab = angular.element(tabs[index]).text().trim();
+        expect(tab).toBe(subheading);
+      });
+    });
+
+    it('should set a variant', () => {
+      const element = TestUtils.compileTemplate(`
+        <oui-tabs>
+          <oui-tabs-item variant="lorem"></oui-tabs-item>
+          <oui-tabs-item variant="ipsum"></oui-tabs-item>
+        </oui-tabs>
+      `);
+
+      $timeout.flush();
+
+      const items = element.find('oui-tabs-item');
+      const tabs = angular.element(element[0].querySelector('.oui-tabs__tablist')).find('button');
+      expect(tabs.length).toBe(items.length);
+
+      angular.forEach(items, (item, index) => {
+        const classname = `oui-tabs-tab_${angular.element(item).attr('variant')}`;
         const tab = angular.element(tabs[index]);
-        expect(tab.text().trim()).toBe(heading);
+        expect(tab.hasClass(classname)).toBeTruthy();
       });
     });
 
     it('should update active tab', () => {
       const element = TestUtils.compileTemplate(`
-                <oui-tabs aria-label="tablist">
-                    <oui-tabs-item heading="lorem"></oui-tabs-item>
-                    <oui-tabs-item heading="ipsum"></oui-tabs-item>
-                </oui-tabs>`);
+        <oui-tabs aria-label="tablist">
+          <oui-tabs-item heading="lorem"></oui-tabs-item>
+          <oui-tabs-item heading="ipsum"></oui-tabs-item>
+        </oui-tabs>
+      `);
 
       $timeout.flush();
 
@@ -91,10 +137,10 @@ describe('ouiTabs', () => {
 
     it('should active default tab', () => {
       const element = TestUtils.compileTemplate(`
-                <oui-tabs aria-label="tablist" model="$ctrl.activeTab">
-                    <oui-tabs-item id="tab1" heading="lorem"></oui-tabs-item>
-                    <oui-tabs-item id="tab2" heading="ipsum"></oui-tabs-item>
-                </oui-tabs>`, {
+        <oui-tabs aria-label="tablist" model="$ctrl.activeTab">
+          <oui-tabs-item id="tab1" heading="lorem"></oui-tabs-item>
+          <oui-tabs-item id="tab2" heading="ipsum"></oui-tabs-item>
+        </oui-tabs>`, {
         activeTab: 'tab2',
       });
 
@@ -113,10 +159,10 @@ describe('ouiTabs', () => {
 
     it('should update model when active tab change', () => {
       const element = TestUtils.compileTemplate(`
-                <oui-tabs aria-label="tablist" model="$ctrl.activeTab">
-                    <oui-tabs-item id="tab1" heading="lorem"></oui-tabs-item>
-                    <oui-tabs-item id="tab2" heading="ipsum"></oui-tabs-item>
-                </oui-tabs>`, {
+        <oui-tabs aria-label="tablist" model="$ctrl.activeTab">
+          <oui-tabs-item id="tab1" heading="lorem"></oui-tabs-item>
+          <oui-tabs-item id="tab2" heading="ipsum"></oui-tabs-item>
+        </oui-tabs>`, {
         activeTab: 'tab1',
       });
 
@@ -127,23 +173,6 @@ describe('ouiTabs', () => {
       button.triggerHandler('click');
 
       expect(TestUtils.getElementController(element).activeTab).toEqual('tab2');
-    });
-
-    it('should update checkmark', () => {
-      const checked = [true, false];
-      const element = TestUtils.compileTemplate(`
-                <oui-tabs aria-label="tablist">
-                    <oui-tabs-item heading="lorem" checked="${checked[0]}"></oui-tabs-item>
-                    <oui-tabs-item heading="ipsum" checked="${checked[1]}"></oui-tabs-item>
-                </oui-tabs>`);
-
-      $timeout.flush();
-
-      const items = element.find('oui-tabs-item');
-      angular.forEach(items, (item, index) => {
-        const heading = angular.element(item).find('button');
-        expect(heading.hasClass('oui-tabs-item__button_checked')).toBe(checked[index]);
-      });
     });
   });
 
