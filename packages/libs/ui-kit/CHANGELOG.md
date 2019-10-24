@@ -1,3 +1,13 @@
+## [3.7.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.4...v3.7.5) (2019-10-24)
+
+
+### Bug Fixes
+
+* **select-picker:** add body for flex layout ([89e029c](https://github.com/ovh-ux/ovh-ui-kit/commit/89e029c0835683be2405692db01dba8fd234ea2a))
+* **select-picker:** fix flex component support ([#530](https://github.com/ovh-ux/ovh-ui-kit/issues/530)) ([fbaba48](https://github.com/ovh-ux/ovh-ui-kit/commit/fbaba48c802ce2b8e25a328c2975fd1e5e7728cb))
+
+
+
 ## [3.7.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.3...v3.7.4) (2019-10-24)
 
 
