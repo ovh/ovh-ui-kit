@@ -1,3 +1,13 @@
+<a name="2.35.3"></a>
+## [2.35.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.2...v2.35.3) (2019-10-24)
+
+
+### Bug Fixes
+
+* **oui-select-picker:** fix footer placement with dynamic height ([#531](https://github.com/ovh-ux/ovh-ui-kit/issues/531)) ([b1dbbaf](https://github.com/ovh-ux/ovh-ui-kit/commit/b1dbbaf))
+
+
+
 <a name="2.35.2"></a>
 ## [2.35.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.1...v2.35.2) (2019-10-16)
 

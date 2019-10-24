@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.35.2") format("woff2"), url("./icons/icons.woff?v=2.35.2") format("woff");
+  src: url("./icons/icons.woff2?v=2.35.3") format("woff2"), url("./icons/icons.woff?v=2.35.3") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -4072,6 +4072,19 @@ oui-select-picker-section {
   padding-bottom: 0.563rem;
   padding-top: 0.563rem;
   width: 100%;
+}
+.oui-select-picker__label-container {
+  display: flex;
+  flex-direction: column;
+  font-weight: inherit;
+  cursor: pointer;
+}
+.oui-select-picker__label-container::before,
+.oui-select-picker__label-container::after {
+  box-sizing: border-box;
+}
+.oui-select-picker__body {
+  flex: 1;
 }
 .oui-select-picker__input:checked ~ .oui-select-picker__label-container .oui-select-picker__picture-container {
   top: calc(0.625rem - 2px);
