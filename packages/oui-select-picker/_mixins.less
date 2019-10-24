@@ -75,6 +75,22 @@
       width: 100%;
     }
 
+    &__label-container {
+      display: flex;
+      flex-direction: column;
+      font-weight: inherit;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        box-sizing: border-box;
+      }
+    }
+
+    &__body {
+      flex: 1;
+    }
+
     &__input:checked ~ &__label-container &__picture-container {
       top: calc(@oui-select-picker-picture-top - @oui-select-picker-border-size-checked);
       right: calc(@oui-select-picker-picture-right - @oui-select-picker-border-size-checked);
