@@ -36,6 +36,8 @@
   }
 
   &__label-container {
+    display: flex;
+    flex-direction: column;
     font-weight: inherit;
     cursor: pointer;
 
@@ -141,6 +143,10 @@
     }
   }
   // stylelint-enable no-descending-specificity
+
+  &__transclude-container {
+    flex: 1;
+  }
 }
 
 oui-select-picker,
