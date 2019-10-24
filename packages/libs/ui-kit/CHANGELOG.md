@@ -1,3 +1,12 @@
+## [3.7.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.3...v3.7.4) (2019-10-24)
+
+
+### Bug Fixes
+
+* **header-tabs:** fix scroll checks ([be8ae96](https://github.com/ovh-ux/ovh-ui-kit/commit/be8ae96b145338d1911d81c5fd4b1278e90771cd))
+
+
+
 ## [3.7.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.2...v3.7.3) (2019-10-24)
 
 
