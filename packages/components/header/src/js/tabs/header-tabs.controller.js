@@ -101,7 +101,7 @@ export default class {
   }
 
   scrollToItem(direction, item) {
-    if (this.tabsElement || item || direction) {
+    if (!this.tabsElement || !item || !direction) {
       return;
     }
 
