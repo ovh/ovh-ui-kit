@@ -1,5 +1,4 @@
 import { storiesOf } from '@storybook/html';
-import { text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
 import { compileTemplate } from '../../src/utils';
@@ -38,9 +37,5 @@ storiesOf('Components/Header', module)
         <oui-header-tabs-item href="#">Datagrid</oui-header-tabs-item>
       </oui-header-tabs>
     </oui-header>
-    `, {
-      $ctrl: {
-        model: text('Model', 'Copy this text'),
-      },
-    })),
+    `)),
   );
