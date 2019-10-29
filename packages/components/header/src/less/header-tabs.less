@@ -106,13 +106,24 @@
   }
 
   &__container {
-    display: flex;
-    flex-wrap: nowrap;
     list-style: none;
     margin: @oui-header-tabs-margin;
     overflow: hidden;
     padding: 0;
     border-bottom: @oui-header-tabs-border-bottom;
+
+    ul& {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+    will-change: transform;
   }
 
   &__slider {
