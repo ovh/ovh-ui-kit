@@ -1,3 +1,4 @@
+import isUndefined from 'lodash/isUndefined';
 import get from 'lodash/get';
 
 export default class {
@@ -11,9 +12,10 @@ export default class {
   }
 
   $onInit() {
+    this.indexToFocus = get(this, 'indexToFocus', 0);
     this.forms = [];
     this.steps = [];
-    this.currentIndex = get(this, 'currentIndex', 0);
+
     this.onInit();
   }
 
@@ -24,8 +26,12 @@ export default class {
       .addClass('oui-stepper'));
 
     this.$scope.$watch(
-      () => this.currentIndex,
-      index => this.focusStep(index),
+      () => this.indexToFocus,
+      (index) => {
+        if (!isUndefined(index) && this.indexToFocus !== this.currentIndex) {
+          this.focusStep(index);
+        }
+      },
     );
   }
 
@@ -36,14 +42,14 @@ export default class {
       this.steps.splice(step.position - 1, 0, step);
     }
 
-    this.focusStep(this.currentIndex);
+    this.focusStep(this.indexToFocus);
   }
 
   removeStep(step) {
     const indexOfStep = this.steps.indexOf(step);
     if (indexOfStep > -1) {
       this.steps.splice(indexOfStep, 1);
-      this.focusStep(this.currentIndex);
+      this.focusStep(this.indexToFocus);
     }
   }
 
@@ -58,17 +64,16 @@ export default class {
   }
 
   nextStep() {
-    const indexToFocus = Math.min(this.currentIndex + 1, this.steps.length);
+    const indexToFocus = Math.min(this.indexToFocus + 1, this.steps.length);
     this.focusStep(indexToFocus);
   }
 
   prevStep() {
-    const indexToFocus = Math.max(this.currentIndex - 1, 0);
+    const indexToFocus = Math.max(this.indexToFocus - 1, 0);
     this.focusStep(indexToFocus);
   }
 
   focusStep(indexToFocus) {
-    this.currentIndex = indexToFocus;
     this.steps.forEach((_step_, index) => {
       const focused = index === indexToFocus;
       const step = _step_;
@@ -77,12 +82,15 @@ export default class {
       if (angular.isDefined(step.stepper)) {
         step.stepper.index = index;
         step.stepper.focused = focused;
-        step.stepper.disabled = index > this.currentIndex;
+        step.stepper.disabled = index > indexToFocus;
         step.stepper.last = index === this.steps.length - 1;
       }
 
       // Call onFocus step event
-      if (focused) {
+      if (focused && indexToFocus !== this.currentIndex) {
+        this.currentIndex = indexToFocus;
+        this.indexToFocus = indexToFocus;
+
         step.onFocus();
       }
     });
