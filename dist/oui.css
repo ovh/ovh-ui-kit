@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.35.3") format("woff2"), url("./icons/icons.woff?v=2.35.3") format("woff");
+  src: url("./icons/icons.woff2?v=2.36.0") format("woff2"), url("./icons/icons.woff?v=2.36.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -1875,6 +1875,12 @@ dl dd,
   animation-name: oui-shake;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
+}
+.oui-icon_inherit {
+  color: inherit;
+  font: normal normal normal 1.5rem/1 "Oui Icons", sans-serif;
+  font-size: inherit;
+  vertical-align: middle;
 }
 .oui-icon-eye-blocked::before {
   margin-top: -0.1em;

@@ -1,3 +1,13 @@
+<a name="2.36.0"></a>
+# [2.36.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.3...v2.36.0) (2019-11-06)
+
+
+### Features
+
+* **oui-icons:** add inherit size variant ([0da823e](https://github.com/ovh-ux/ovh-ui-kit/commit/0da823e))
+
+
+
 <a name="2.35.3"></a>
 ## [2.35.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.2...v2.35.3) (2019-10-24)
 
