@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.36.0") format("woff2"), url("./icons/icons.woff?v=2.36.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.36.1") format("woff2"), url("./icons/icons.woff?v=2.36.1") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -11907,14 +11907,14 @@ oui-popover-content {
 }
 .oui-popover__help-button,
 .oui-popover-button {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1em;
+  height: 1em;
   margin: 0 0 0 0.625rem;
-  line-height: 1;
   padding: 0;
-  vertical-align: middle;
   color: #113f6d;
-  font-size: 1.25rem;
+  font: normal normal normal 1.5rem/1 "Oui Icons", sans-serif;
+  font-size: inherit;
+  vertical-align: middle;
   border: none;
   background: none;
   cursor: help;
@@ -12462,7 +12462,7 @@ oui-tile-description {
 }
 .oui-tile__term {
   color: #999;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 .oui-tile__description {

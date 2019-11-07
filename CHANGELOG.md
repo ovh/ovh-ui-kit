@@ -1,3 +1,13 @@
+<a name="2.36.1"></a>
+## [2.36.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.36.0...v2.36.1) (2019-11-07)
+
+
+### Bug Fixes
+
+* **oui-popover:** fix popover icon size ([#534](https://github.com/ovh-ux/ovh-ui-kit/issues/534)) ([c98bce6](https://github.com/ovh-ux/ovh-ui-kit/commit/c98bce6))
+
+
+
 <a name="2.36.0"></a>
 # [2.36.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.35.3...v2.36.0) (2019-11-06)
 
