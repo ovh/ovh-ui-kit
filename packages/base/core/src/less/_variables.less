@@ -1339,12 +1339,15 @@
 @oui-popover-close-button-icon-color: @oui-color-info-dark;
 
 // Popover - Help button
+@oui-popover-button-width: 1em;
+@oui-popover-button-height: 1em;
 @oui-popover-button-line-height: 1;
 @oui-popover-button-spacing: rem-calc(10);
 @oui-popover-button-content: @oui-icon-index-help_circle;
+@oui-popover-button-font: normal normal normal rem-calc(16)/@oui-popover-button-line-height @oui-popover-button-font-family;
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
-@oui-popover-button-font-size: rem-calc(16);
+@oui-popover-button-font-size: inherit;
 @oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 
 // Progress
@@ -1915,7 +1918,7 @@
 @oui-tile-item-border-width: 1px;
 
 @oui-tile-definition-term-color: @oui-color-dusty;
-@oui-tile-definition-term-font-size: rem-calc(14);
+@oui-tile-definition-term-font-size: rem-calc(16);
 @oui-tile-definition-term-font-weight: @oui-font-regular;
 @oui-tile-definition-description-color: @oui-color-rhino;
 @oui-tile-definition-description-font-size: rem-calc(16);
