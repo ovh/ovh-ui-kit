@@ -32,6 +32,7 @@ export default class {
     };
 
     this.translations = {
+      filter_label: 'Filter',
       column_label: 'Column',
       operator_label: 'Operator',
 

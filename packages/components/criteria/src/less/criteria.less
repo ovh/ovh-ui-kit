@@ -8,18 +8,26 @@
   oui-dropdown { display: inline-block; }
 
   .oui-dropdown {
-    & > .oui-button .oui-icon {
-      height: @oui-criteria-adder-icon-size;
-      display: flex; // For a better vertical centering
-      flex-direction: row;
-      align-items: center;
+    > .oui-button {
+      display: flex;
 
-      &::before {
-        width: auto;
-        height: auto;
-        line-height: 1;
-        flex: 1;
-        font-size: @oui-button-icon-size_large;
+      span + span {
+        margin-left: @oui-criteria-adder-icon-spacing;
+      }
+
+      .oui-icon {
+        height: @oui-criteria-adder-icon-size;
+        display: flex; /* For a better vertical centering */
+        flex-direction: row;
+        align-items: center;
+
+        &::before {
+          width: auto;
+          height: auto;
+          line-height: 1;
+          flex: 1;
+          font-size: @oui-button-icon-size_large;
+        }
       }
     }
 
