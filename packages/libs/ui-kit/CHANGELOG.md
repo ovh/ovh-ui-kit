@@ -1,3 +1,21 @@
+# [3.8.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.5...v3.8.0) (2019-11-12)
+
+
+### Bug Fixes
+
+* **popover:** fix popover icon size ([a61ef71](https://github.com/ovh-ux/ovh-ui-kit/commit/a61ef7113385391e593b4830302658e8daa7eccf))
+* **stepper:** fix double onFocus call ([#533](https://github.com/ovh-ux/ovh-ui-kit/issues/533)) ([a46679b](https://github.com/ovh-ux/ovh-ui-kit/commit/a46679bfef273fe355918e0c88998a7d42408c1a))
+
+
+### Features
+
+* **header-tabs:** update tabs scrolling to allow scroll tab by tab ([#532](https://github.com/ovh-ux/ovh-ui-kit/issues/532)) ([62792bb](https://github.com/ovh-ux/ovh-ui-kit/commit/62792bb06191b9a3065bb1012ebf9ee7c525d330))
+* **icons:** add inherit size variant ([719dead](https://github.com/ovh-ux/ovh-ui-kit/commit/719dead72af7f29e4ffc20947663e05c84012322))
+* **oui-criteria:** add filter label ([70ab526](https://github.com/ovh-ux/ovh-ui-kit/commit/70ab5262eea4c737c3a8356d8a1fd1e45921c628))
+* **oui-select-picker:** add tranclude slot for description ([95dc9b8](https://github.com/ovh-ux/ovh-ui-kit/commit/95dc9b860b1167e8ccb5799ed0e18a3bf0fb70b0))
+
+
+
 ## [3.7.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.4...v3.7.5) (2019-10-24)
 
 
