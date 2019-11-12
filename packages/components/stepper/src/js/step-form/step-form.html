@@ -58,13 +58,14 @@
                 on-click="$ctrl.onCancel()">
                 {{::$ctrl.cancelText}}
             </oui-button>
-            <a class="oui-button oui-button_ghost"
+            <a class="oui-button oui-button_ghost oui-button_l"
                 ng-if="::!!$ctrl.cancelHref"
                 ng-bind="::$ctrl.cancelText"
                 ng-href="{{::$ctrl.cancelHref}}">
             </a>
             <oui-button class="oui-stepper__skippable-link" type="submit"
                 variant="link"
+                size="l"
                 ng-if="$ctrl.skippable">
                 {{::$ctrl.translations.skipThisStep}}
             </oui-button>

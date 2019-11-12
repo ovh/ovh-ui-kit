@@ -68,9 +68,11 @@
 @oui-icon-spacing: 0;
 @oui-icon-padding: 0;
 @oui-icon-size: 1.5em;
+@oui-icon-size_inherit: inherit;
 @oui-icon-color: inherit;
 @oui-icon-char-color: @oui-color-white;
 @oui-icon-line-height: inherit;
+@oui-icon-font: normal normal normal @oui-icon-size/1 @oui-global-base-font-family-icon;
 @oui-icon-font-family: @oui-global-base-font-family-icon;
 @oui-icon-vertical-align: inherit;
 
@@ -661,7 +663,8 @@
 
 // Criteria Adder
 @oui-criteria-adder-spacing: rem-calc(10);
-@oui-criteria-adder-icon-size: rem-calc(20); // Should be changed when updated with new icon
+@oui-criteria-adder-icon-size: rem-calc(16);
+@oui-criteria-adder-icon-spacing: rem-calc(12);
 @oui-criteria-adder-menu-width: rem-calc(300);
 
 @oui-criteria-adder-form-padding: rem-calc(20);
@@ -1436,12 +1439,15 @@
 @oui-popover-close-button-icon-color: @oui-color-info-dark;
 
 // Popover - Help button
+@oui-popover-button-width: 1em;
+@oui-popover-button-height: 1em;
 @oui-popover-button-line-height: 1;
 @oui-popover-button-spacing: rem-calc(10);
 @oui-popover-button-content: @oui-icon-index-help;
+@oui-popover-button-font: normal normal normal rem-calc(16)/@oui-popover-button-line-height @oui-popover-button-font-family;
 @oui-popover-button-font-family: @oui-global-base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
-@oui-popover-button-font-size: rem-calc(16);
+@oui-popover-button-font-size: inherit;
 @oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
 
 // Progress
@@ -1570,7 +1576,7 @@
 
 // Search
 @oui-search-margin: 0;
-@oui-search-padding-right: rem-calc(62);
+@oui-search-padding-right: calc(@oui-button-small-min-width * 2);
 @oui-search-border-radius: @oui-input-border-radius;
 
 @oui-search-input-font-color_disabled: @oui-color-shuttle;
@@ -1579,11 +1585,8 @@
 @oui-search-button-font-color_hover: @oui-color-sapphire;
 @oui-search-button-font-color_disabled: @oui-color-silver;
 
-@oui-search-reset-right: rem-calc(30);
-@oui-search-reset-icon-size: rem-calc(16);
-
+@oui-search-reset-right: @oui-button-small-min-width;
 @oui-search-submit-right: 0;
-@oui-search-submit-icon-size: rem-calc(16);
 
 // Select
 @oui-select-height: @oui-input-height;
@@ -2036,7 +2039,7 @@
 @oui-tile-item-border-width: 1px;
 
 @oui-tile-definition-term-color: @oui-color-dusty;
-@oui-tile-definition-term-font-size: rem-calc(14);
+@oui-tile-definition-term-font-size: rem-calc(16);
 @oui-tile-definition-term-font-weight: @oui-font-regular;
 @oui-tile-definition-description-color: @oui-color-rhino;
 @oui-tile-definition-description-font-size: rem-calc(16);

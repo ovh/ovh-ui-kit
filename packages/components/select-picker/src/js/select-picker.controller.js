@@ -41,6 +41,10 @@ export default class SelectPickerController {
     });
   }
 
+  hasDescription() {
+    return this.$transclude.isSlotFilled('descriptionSlot') || this.description;
+  }
+
   hasFooter() {
     return this.$transclude.isSlotFilled('footerSlot') || this.footer;
   }

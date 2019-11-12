@@ -15,6 +15,7 @@ export default class {
     this.steps = [];
     this.currentIndex = get(this, 'currentIndex', 0);
     this.onInit();
+    console.log('onInit');
   }
 
   $postLink() {
@@ -62,6 +63,7 @@ export default class {
 
     // Check index for onFinish event
     if (index === this.steps.length - 1) {
+      console.log('onFinish');
       this.onFinish({ forms: this.forms });
     }
   }
@@ -87,13 +89,14 @@ export default class {
       const step = _step_;
 
       if (focused && !noCallback) {
+        console.log('onFocus', indexToFocus);
         step.onFocus();
       }
 
       if (angular.isDefined(step.stepper)) {
         step.stepper.index = index;
         step.stepper.focused = focused;
-        step.stepper.disabled = index > this.currentIndex; // Minimize steps after our current index
+        step.stepper.disabled = index > indexToFocus; // Minimize steps after our current index
         step.stepper.last = index === this.steps.length - 1;
       }
     });

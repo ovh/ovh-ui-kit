@@ -34,6 +34,14 @@ storiesOf('Old|Directives/Popover', module)
     })),
   )
   .add(
+    'Help button',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <button type="button" class="oui-popover-button"
+      oui-popover="This is an awesome popover content.">
+    </button>
+    `)),
+  )
+  .add(
     'Open from another trigger',
     forModule(moduleName).createElement(() => compileTemplate(`
     <p>

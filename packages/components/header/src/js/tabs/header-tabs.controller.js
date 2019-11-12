@@ -1,28 +1,63 @@
-import findIndex from 'lodash/findIndex';
-
-const checkScrollDelay = 800;
+import filter from 'lodash/filter';
 
 export default class {
-  constructor($attrs, $element, $interval, $scope, $timeout, $window) {
+  constructor($element, $scope, $timeout, $window) {
     'ngInject';
 
-    this.$attrs = $attrs;
     this.$element = $element;
-    this.$interval = $interval;
     this.$scope = $scope;
     this.$timeout = $timeout;
     this.$window = $window;
   }
 
+  checkScroll() {
+    this.$timeout(() => {
+      this.canScroll = this.tabsList.clientWidth < this.tabsList.scrollWidth;
+
+      // Reset scroll value
+      this.canScrollLeft = false;
+      this.canScrollRight = true;
+      this.scrollIndex = 0;
+      this.tabsList.style.transform = 'translateX(0)';
+    });
+  }
+
+  getOffsetLeft() {
+    // Here we set temporary the position to 'relative',
+    // to get the right offsetLeft with for reference the list container.
+    // Because we could have dropdown, we can't set the position to 'relative' in the CSS,
+    // or else the overflow will hidden the dropdown menu
+    this.tabsList.style.position = 'relative';
+    const { offsetLeft } = this.tabs[this.scrollIndex];
+    this.tabsList.style.position = 'static';
+
+    return offsetLeft;
+  }
+
+  scrollTo(direction) {
+    const minIndex = 0;
+    const maxIndex = this.tabs.length - 1;
+
+    if (direction === 'left') {
+      this.scrollIndex = Math.max(this.scrollIndex - 1, minIndex);
+    } else {
+      this.scrollIndex = Math.min(this.scrollIndex + 1, maxIndex);
+    }
+
+    this.canScrollLeft = this.scrollIndex > minIndex;
+    this.canScrollRight = this.scrollIndex < maxIndex;
+
+    // The slide animation is done in the CSS
+    // with a transition targeting the transform property
+    this.tabsList.style.transform = `translateX(-${this.getOffsetLeft()}px)`;
+  }
+
   $onInit() {
-    this.scroll = {
-      begin: 0,
-      end: 0,
-    };
+    this.tabs = [];
   }
 
   $onDestroy() {
-    angular.element(this.tabsElement).off('scroll');
+    angular.element(this.tabsList).off('scroll');
     angular.element(this.$window).off('resize');
   }
 
@@ -31,99 +66,14 @@ export default class {
       this.$element
         .addClass('oui-header-tabs');
 
-      this.tabsElement = this.$element[0].querySelector('.oui-header-tabs__container');
-      angular.element(this.tabsElement).on('scroll', event => this.checkScroll(event));
-      angular.element(this.$window).on('resize', event => this.checkScroll(event));
-      this.initialCheck();
+      this.tabsList = this.$element[0].querySelector('.oui-header-tabs__list');
+      this.$scope.$watch(() => this.tabsList.childNodes.length, () => {
+        this.tabs = filter(this.tabsList.childNodes, node => node.nodeType === 1);
+        this.checkScroll();
+      });
     });
 
-    /* On initial render, we need to wait few seconds before calling
-           the checkScroll method otherwise panel size would be wrong. */
-    this.$timeout(() => this.initialCheck(), checkScrollDelay);
-  }
-
-  scrollLeft() {
-    this.scrollTo('left');
-  }
-
-  scrollRight() {
-    this.scrollTo('right');
-  }
-
-  initialCheck() {
-    const activeTab = this.$element[0].querySelector('.oui-header-tabs__item_active');
-    if (activeTab && activeTab.offsetLeft - this.tabsElement.offsetLeft > 0) {
-      this.tabsElement.scrollLeft = activeTab.offsetLeft - this.tabsElement.offsetLeft;
-    } else {
-      this.scroll.end = this.tabsElement.scrollWidth - this.tabsElement.offsetWidth;
-    }
-  }
-
-  scrollTo(direction) {
-    const itemToGo = this.findItemToGo(direction);
-    this.scrollToItem(direction, itemToGo);
-  }
-
-  checkScroll(e) {
-    if (e) {
-      e.preventDefault();
-    }
-
-    this.scroll.begin = this.tabsElement.scrollLeft;
-    this.scroll.end = this.tabsElement.scrollWidth
-      - this.tabsElement.offsetWidth
-      - this.tabsElement.scrollLeft;
-    this.$scope.$digest();
-  }
-
-  findItemToGo(direction) {
-    const tabsList = [].slice.call(this.tabsElement.querySelectorAll(':scope > .oui-header-tabs__item'));
-    const tabsOffset = this.tabsElement.offsetLeft;
-    const tabsStart = this.tabsElement.scrollLeft;
-    const tabsEnd = tabsStart + this.tabsElement.offsetWidth;
-
-    let itemGutter = 0;
-    if (tabsList && tabsList.length > 1) {
-      itemGutter = tabsList[1].offsetLeft - (tabsList[0].offsetLeft + tabsList[0].offsetWidth);
-    }
-
-    const index = findIndex(tabsList, (item) => {
-      const itemStart = item.offsetLeft - tabsOffset;
-      return !(direction === 'right' && itemStart <= tabsEnd + tabsOffset + itemGutter)
-        && !(direction === 'left' && itemStart < tabsStart);
-    });
-
-    return tabsList[Math.max(index - 1, 0)];
-  }
-
-  scrollToItem(direction, item) {
-    const duration = 500;
-    const stepDuration = 15;
-    const step = this.tabsElement.scrollWidth / (duration / stepDuration);
-
-    const itemStart = item.offsetLeft - this.tabsElement.offsetLeft;
-    const itemEnd = itemStart + item.offsetWidth;
-    const tabsWidth = this.tabsElement.offsetWidth;
-
-    const loop = this.$interval(() => {
-      const tabsStart = this.tabsElement.scrollLeft;
-      const tabsEnd = this.tabsElement.scrollWidth
-        - this.tabsElement.offsetWidth
-        - this.tabsElement.scrollLeft;
-      const screenEnd = tabsStart + this.tabsElement.offsetWidth;
-
-      if (direction === 'right' && tabsEnd > 0 && (tabsStart + step < itemStart || itemEnd > screenEnd)) {
-        this.tabsElement.scrollLeft += step;
-      } else if (direction === 'left' && tabsStart > 0 && (screenEnd - step > itemEnd || itemStart < tabsStart - step)) {
-        this.tabsElement.scrollLeft -= step;
-      } else {
-        if (direction === 'right') {
-          this.tabsElement.scrollLeft = tabsStart <= itemStart ? itemStart : itemEnd - tabsWidth;
-        } else {
-          this.tabsElement.scrollLeft = tabsStart >= itemStart ? itemStart : itemEnd - tabsWidth;
-        }
-        this.$interval.cancel(loop);
-      }
-    }, stepDuration);
+    angular.element(this.tabsList).on('scroll', () => this.checkScroll());
+    angular.element(this.$window).on('resize', () => this.checkScroll());
   }
 }

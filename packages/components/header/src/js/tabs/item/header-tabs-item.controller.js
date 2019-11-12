@@ -1,14 +1,10 @@
 import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
-  constructor($attrs, $compile, $element, $scope, $timeout) {
+  constructor($attrs) {
     'ngInject';
 
     this.$attrs = $attrs;
-    this.$compile = $compile;
-    this.$element = $element;
-    this.$scope = $scope;
-    this.$timeout = $timeout;
   }
 
   $onInit() {

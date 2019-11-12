@@ -36,6 +36,8 @@
   }
 
   &__label-container {
+    display: flex;
+    flex-direction: column;
     font-weight: inherit;
     cursor: pointer;
 
@@ -43,6 +45,10 @@
     &::after {
       box-sizing: border-box;
     }
+  }
+
+  &__body {
+    flex: 1;
   }
 
   &__picture-container {

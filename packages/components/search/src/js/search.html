@@ -16,13 +16,13 @@
         ng-change="$ctrl.onSearchChange()"
         ng-disabled="$ctrl.disabled"
         ng-keydown="$ctrl.onKeyDown($event)" />
-    <button class="oui-button" type="reset"
+    <button class="oui-button oui-button_s" type="reset"
         ng-click="$ctrl.onSearchReset()"
         ng-show="$ctrl.model.length"
         ng-disabled="$ctrl.disabled">
         <span class="oui-icon oui-icon-close"></span>
     </button>
-    <button class="oui-button" type="submit"
+    <button class="oui-button oui-button_s" type="submit"
         ng-disabled="$ctrl.disabled">
         <span class="oui-icon oui-icon-search"></span>
     </button>

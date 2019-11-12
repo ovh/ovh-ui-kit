@@ -88,6 +88,72 @@
 
 
 
+# [3.8.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.5...v3.8.0) (2019-11-12)
+
+
+### Bug Fixes
+
+* **popover:** fix popover icon size ([a61ef71](https://github.com/ovh-ux/ovh-ui-kit/commit/a61ef7113385391e593b4830302658e8daa7eccf))
+* **stepper:** fix double onFocus call ([#533](https://github.com/ovh-ux/ovh-ui-kit/issues/533)) ([a46679b](https://github.com/ovh-ux/ovh-ui-kit/commit/a46679bfef273fe355918e0c88998a7d42408c1a))
+
+
+### Features
+
+* **header-tabs:** update tabs scrolling to allow scroll tab by tab ([#532](https://github.com/ovh-ux/ovh-ui-kit/issues/532)) ([62792bb](https://github.com/ovh-ux/ovh-ui-kit/commit/62792bb06191b9a3065bb1012ebf9ee7c525d330))
+* **icons:** add inherit size variant ([719dead](https://github.com/ovh-ux/ovh-ui-kit/commit/719dead72af7f29e4ffc20947663e05c84012322))
+* **oui-criteria:** add filter label ([70ab526](https://github.com/ovh-ux/ovh-ui-kit/commit/70ab5262eea4c737c3a8356d8a1fd1e45921c628))
+* **oui-select-picker:** add tranclude slot for description ([95dc9b8](https://github.com/ovh-ux/ovh-ui-kit/commit/95dc9b860b1167e8ccb5799ed0e18a3bf0fb70b0))
+
+
+
+## [3.7.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.4...v3.7.5) (2019-10-24)
+
+
+### Bug Fixes
+
+* **select-picker:** add body for flex layout ([89e029c](https://github.com/ovh-ux/ovh-ui-kit/commit/89e029c0835683be2405692db01dba8fd234ea2a))
+* **select-picker:** fix flex component support ([#530](https://github.com/ovh-ux/ovh-ui-kit/issues/530)) ([fbaba48](https://github.com/ovh-ux/ovh-ui-kit/commit/fbaba48c802ce2b8e25a328c2975fd1e5e7728cb))
+
+
+
+## [3.7.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.3...v3.7.4) (2019-10-24)
+
+
+### Bug Fixes
+
+* **header-tabs:** fix scroll checks ([be8ae96](https://github.com/ovh-ux/ovh-ui-kit/commit/be8ae96b145338d1911d81c5fd4b1278e90771cd))
+
+
+
+## [3.7.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.2...v3.7.3) (2019-10-24)
+
+
+### Bug Fixes
+
+* **header-tabs:** fix scrolling in responsive ([#529](https://github.com/ovh-ux/ovh-ui-kit/issues/529)) ([5329d5d](https://github.com/ovh-ux/ovh-ui-kit/commit/5329d5d90873339fed1c6fc8cf06b858086f4c0a))
+
+
+
+## [3.7.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.1...v3.7.2) (2019-10-16)
+
+
+### Bug Fixes
+
+* **icons:** fix icons alignment ([#527](https://github.com/ovh-ux/ovh-ui-kit/issues/527)) ([0113905](https://github.com/ovh-ux/ovh-ui-kit/commit/0113905b984eae552050cd22366b51813552055f))
+
+
+
+## [3.7.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.0...v3.7.1) (2019-10-16)
+
+
+### Bug Fixes
+
+* **field:** checkAllErrors avoid undefined value ([#524](https://github.com/ovh-ux/ovh-ui-kit/issues/524)) ([dc96512](https://github.com/ovh-ux/ovh-ui-kit/commit/dc965129acfa9744a7543216a94c9ec7ea7f77c9))
+* **header-tabs:** fix border when dropdown item is active ([c01c5e0](https://github.com/ovh-ux/ovh-ui-kit/commit/c01c5e0e56ac42fc5b438f665274a1317b7c92d4))
+* **icons:** add missing icons ([#525](https://github.com/ovh-ux/ovh-ui-kit/issues/525)) ([01bfd78](https://github.com/ovh-ux/ovh-ui-kit/commit/01bfd7818da232c0ce5a46319f7985786f57a333))
+
+
+
 # [3.7.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.6.0...v3.7.0) (2019-10-09)
 
 

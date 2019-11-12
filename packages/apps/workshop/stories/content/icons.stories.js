@@ -12,10 +12,10 @@ storiesOf('Content|Icons', module)
     </p>
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="oui-icon oui-icon-error_circle"></span><br />
-      Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. <span class="oui-icon oui-icon-info_circle"></span><br />
-      Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. <span class="oui-icon oui-icon-success_circle"></span><br />
-      Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. <span class="oui-icon oui-icon-warning_circle"></span>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="oui-icon oui-icon_inherit oui-icon-error_circle"></span><br />
+      Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat. <span class="oui-icon oui-icon_inherit oui-icon-info_circle"></span><br />
+      Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu. <span class="oui-icon oui-icon_inherit oui-icon-success_circle"></span><br />
+      Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus. <span class="oui-icon oui-icon_inherit oui-icon-warning_circle"></span>
     </p>
     `, {
       options: {
@@ -369,6 +369,10 @@ storiesOf('Content|Icons', module)
       <div class="doc-icon-badge">
         <div class="doc-icon-badge__preview"><span class="oui-flag oui-flag_ad" aria-hidden="true"></span></div>
         <div class="doc-icon-badge__code"><code>.oui-flag_ad</code></div>
+      </div>
+      <div class="oui-icon-badge">
+        <div class="oui-icon-badge__preview"><span class="oui-icon oui-icon-arrow-up-right_extra-thin" aria-hidden="true"></span></div>
+        <div class="oui-icon-badge__code"><code>.oui-icon-arrow-up-right_extra-thin</code></div>
       </div>
 
       <div class="doc-icon-badge">
