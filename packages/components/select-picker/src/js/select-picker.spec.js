@@ -71,7 +71,17 @@ describe('ouiSelectPicker', () => {
         const element = TestUtils.compileTemplate('<oui-select-picker description="test"></oui-select-picker>');
 
         const descriptioninputElement = getDescriptionElement(element);
-        expect(angular.element(descriptioninputElement).html()).toBe('test');
+        expect(angular.element(descriptioninputElement).text().trim()).toBe('test');
+      });
+
+      it("should display the transclude inside the selector's description container", () => {
+        const transclude = 'foo';
+        const element = TestUtils.compileTemplate(`<oui-select-picker>
+          <oui-select-picker-description>${transclude}</oui-select-picker-description>
+        </oui-select-picker>`);
+
+        const descriptionElement = getDescriptionElement(element);
+        expect(angular.element(descriptionElement).text().trim()).toEqual(transclude);
       });
     });
 

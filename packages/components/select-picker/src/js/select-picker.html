@@ -35,8 +35,9 @@
         <!-- Description -->
         <span class="oui-select-picker__description"
             id="{{:: $ctrl.id }}Description"
-            ng-bind=":: $ctrl.description"
-            ng-if="$ctrl.description">
+            ng-transclude="descriptionSlot"
+            ng-if="$ctrl.hasDescription()">
+            <span ng-bind="$ctrl.description"></span>
         </span>
 
         <!-- Values -->
