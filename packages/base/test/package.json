@@ -6,10 +6,10 @@
   "author": "OVH SAS",
   "dependencies": {
     "@ovh-ux/ui-kit.config": "*",
-    "angular": "^1.7.8",
-    "angular-aria": "^1.7.8",
-    "angular-mocks": "^1.7.8",
-    "angular-sanitize": "^1.7.8"
+    "angular": "^1.7.9",
+    "angular-aria": "^1.7.9",
+    "angular-mocks": "^1.7.9",
+    "angular-sanitize": "^1.7.9"
   },
   "devDependencies": {
     "@babel/core": "^7.6.3",
@@ -24,6 +24,6 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^4.0.2",
-    "webpack": "^4.41.0"
+    "webpack": "^4.41.5"
   }
 }

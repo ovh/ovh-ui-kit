@@ -28,15 +28,15 @@
     "@ovh-ux/ui-kit.core": "*"
   },
   "devDependencies": {
-    "angular": "^1.7.8",
+    "angular": "^1.7.9",
     "cpx": "^1.5.0",
     "cross-env": "^6.0.3",
     "less": "^3.10.3",
     "less-plugin-remcalc": "^0.1.0",
     "mini-css-extract-plugin": "^0.8.0",
     "rimraf": "^3.0.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
     "webpack-extraneous-file-cleanup-plugin": "^2.0.0",
     "webpack-merge": "^4.2.2"
   }
