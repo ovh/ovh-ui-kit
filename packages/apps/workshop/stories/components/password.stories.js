@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.password/README.md';
 import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
@@ -15,6 +16,9 @@ angular.module(moduleName, [
 ]);
 
 storiesOf('Components/Password', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Normal',
     forModule(moduleName).createElement(() => compileTemplate(`

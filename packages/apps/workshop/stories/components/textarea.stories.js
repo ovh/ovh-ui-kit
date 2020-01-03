@@ -3,12 +3,16 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.textarea/README.md';
 import { compileTemplate } from '../../src/utils';
 
 const moduleName = 'oui-textarea-stories';
 angular.module(moduleName, ['oui.textarea']);
 
 storiesOf('Components/Textarea', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

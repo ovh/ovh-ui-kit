@@ -2,12 +2,16 @@ import { storiesOf } from '@storybook/html';
 import { boolean, text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.tabs/README.md';
 import { compileTemplate } from '../../src/utils';
 
 const moduleName = 'oui-tabs-stories';
 angular.module(moduleName, ['oui.tabs']);
 
 storiesOf('Components/Tabs', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`

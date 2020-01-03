@@ -1,12 +1,16 @@
 import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.spinner/README.md';
 import { compileTemplate } from '../../src/utils';
 
 const moduleName = 'oui-spinner-stories';
 angular.module(moduleName, ['oui.spinner']);
 
 storiesOf('Components/Spinner', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

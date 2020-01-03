@@ -1,6 +1,7 @@
 import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.navbar/README.md';
 import { compileTemplate } from '../../src/utils';
 
 import {
@@ -17,6 +18,9 @@ angular.module(moduleName, [
 ]);
 
 storiesOf('Components/Navbar', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -34,9 +38,7 @@ storiesOf('Components/Navbar', module)
         mainLinks,
         togglerLinks: mainLinks,
       },
-    })), {
-      notes: 'If there is no `toggler-links` attribute, it will use `main-links` instead to build the toggler menu.',
-    },
+    })),
   )
   .add(
     'Advanced',
@@ -137,7 +139,5 @@ storiesOf('Components/Navbar', module)
       $ctrl: {
         placeholderNotification,
       },
-    })), {
-      notes: 'In the notification submenu, a placeholder is shown depending if there’s no notification or if variable `subLinks` is not defined inside an `aside-links`.',
-    },
+    })),
   );
