@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.dual-list/README.md';
 import { compileTemplate } from '../../src/utils';
 
 import data from '../_data/dual-list.data.json';
@@ -12,6 +13,9 @@ const moduleName = 'oui-dual-list-stories';
 angular.module(moduleName, ['oui.dual-list']);
 
 storiesOf('Components/Dual List', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Array of strings',
     forModule(moduleName).createElement(() => compileTemplate(`

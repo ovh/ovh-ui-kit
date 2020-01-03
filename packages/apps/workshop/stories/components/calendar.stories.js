@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.calendar/README.md';
 import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
@@ -10,6 +11,9 @@ const moduleName = 'oui-calendar-stories';
 angular.module(moduleName, ['oui.calendar']);
 
 storiesOf('Components/Calendar', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple date selector',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -73,9 +77,7 @@ storiesOf('Components/Calendar', module)
       format="Y-m-d H:i"
       enable-time>
     </oui-calendar>
-    `)), {
-      notes: 'Use `enable-time` to show time selection after a date is selected.<br />See [Flatpickr documentation](https://flatpickr.js.org/examples/#time-picker) for more information.',
-    },
+    `)),
   )
   .add(
     'Disabling dates',
@@ -96,9 +98,7 @@ storiesOf('Components/Calendar', module)
           this.disableDate = [yesterday, today, tomorrow];
         }
       }(),
-    })), {
-      notes: 'Use `enable-date` to make certain dates only available for selection.<br />See [Flatpickr documentation](https://flatpickr.js.org/examples/#time-picker) for more information.',
-    },
+    })),
   )
   .add(
     'Disabling all dates except select few',
@@ -119,9 +119,7 @@ storiesOf('Components/Calendar', module)
           this.enableDate = [yesterday, today, tomorrow];
         }
       }(),
-    })), {
-      notes: 'Use `enable-date` to make certain dates only available for selection.<br />See [Flatpickr documentation](https://flatpickr.js.org/examples/#time-picker) for more information.',
-    },
+    })),
   )
   .add(
     'Date formatting',
@@ -131,9 +129,7 @@ storiesOf('Components/Calendar', module)
       format="d-m-Y"
       model="$ctrl.model">
     </oui-calendar>
-    `)), {
-      notes: 'See [Formatting Tokens](https://flatpickr.js.org/formatting/) for more information.',
-    },
+    `)),
   )
   .add(
     'Range mode',
