@@ -61,6 +61,7 @@ export default class {
 
   afterClose() {
     this.$trigger.attr('aria-expanded', false);
+    this.$trigger[0].blur();
     this.$trigger.off('keydown');
   }
 }
