@@ -1,3 +1,12 @@
+## [3.8.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.8.0...v3.8.1) (2020-01-06)
+
+
+### Bug Fixes
+
+* **dropdown:** afterClose should remove the focus ([99d8c65](https://github.com/ovh-ux/ovh-ui-kit/commit/99d8c653266c8e86332e3efbfe2465c902cf5afb))
+
+
+
 # [3.8.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.5...v3.8.0) (2019-11-12)
 
 
