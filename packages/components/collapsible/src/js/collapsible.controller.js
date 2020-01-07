@@ -1,4 +1,4 @@
-import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter, removeHtmlTags } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
   constructor($attrs, $element, $scope, $timeout, $window) {
@@ -22,6 +22,12 @@ export default class {
         this.wrapperHeight = `${newHeight}px`;
       }
     });
+  }
+
+  $onChanges({ heading }) {
+    if (heading && heading.currentValue) {
+      this.heading = removeHtmlTags(heading.currentValue);
+    }
   }
 
   $postLink() {
