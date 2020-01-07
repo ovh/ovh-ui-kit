@@ -221,6 +221,27 @@ storiesOf('Components/Radio', module)
         Value C
       </oui-radio>
     </oui-radio-toggle-group>
+
+    <oui-radio-toggle-group
+      direction="column"
+      model="$ctrl.model"
+      on-change="$ctrl.onChange(modelValue)">
+      <oui-radio
+        disabled="$ctrl.disabled"
+        value="$ctrl.value1">
+        Value A
+      </oui-radio>
+      <oui-radio
+        disabled="$ctrl.disabled"
+        value="$ctrl.value2">
+        Value B
+      </oui-radio>
+      <oui-radio
+        disabled="$ctrl.disabled"
+        value="$ctrl.value3">
+        Value C
+      </oui-radio>
+    </oui-radio-toggle-group>
     `, {
       $ctrl: {
         disabled: boolean('Disabled state', false),

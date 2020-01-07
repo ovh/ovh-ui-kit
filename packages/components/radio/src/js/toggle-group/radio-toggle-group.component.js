@@ -1,10 +1,17 @@
 import controller from '../group/radio-group.controller';
 
 export default {
-  template: "<div ng-transclude class='oui-radio-toggle-group'></div>",
+  template: `<div
+    class="oui-radio-toggle-group"
+    ng-class="{
+      'oui-radio-toggle-group_column': $ctrl.direction === 'column',
+    }"
+    ng-transclude>
+  </div>`,
   controller,
   bindings: {
     name: '@?',
+    direction: '@?',
     model: '=?',
     onChange: '&',
   },
