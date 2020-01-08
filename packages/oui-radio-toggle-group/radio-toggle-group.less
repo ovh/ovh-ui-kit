@@ -4,15 +4,32 @@
 @import './_normalize';
 
 .oui-radio-toggle-group {
-  display: flex;
-  max-width: 300px;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.oui-radio-toggle-group_column {
+  flex-direction: column;
 }
 
 .oui-radio-toggle {
-
   #oui > .radio-toggle-normalize();
 
+  margin-left: -1px;
   flex: 1 1 auto;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .oui-radio-toggle-group_column & {
+    margin-left: 0;
+    margin-top: -1px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   &__label {
     display: inline-block;
@@ -36,17 +53,26 @@
   &:first-of-type &__label {
     border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
     border-left-width: 1px;
-    border-right-width: 0;
+
+    .oui-radio-toggle-group_column & {
+      border-radius: @oui-global-base-radius @oui-global-base-radius 0 0;
+      border-width: 1px;
+    }
   }
 
-  &:last-of-type &__label {
+  &:last-of-type &__label { // stylelint-disable-line no-descending-specificity
     border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
     border-right-width: 1px;
-    border-left-width: 0;
+
+    .oui-radio-toggle-group_column & {
+      border-radius: 0 0 @oui-global-base-radius @oui-global-base-radius;
+      border-width: 1px;
+    }
   }
 
   &__label-container {
     width: 100%;
+    margin: 0;
   }
 
   &__input {
