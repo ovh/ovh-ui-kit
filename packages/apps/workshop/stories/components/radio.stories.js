@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
-import { boolean } from '@storybook/addon-knobs';
+import { boolean, radios } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
 import readme from '@ovh-ux/ui-kit.radio/README.md';
@@ -203,6 +203,7 @@ storiesOf('Components/Radio', module)
     'In toggle group',
     forModule(moduleName).createElement(() => compileTemplate(`
     <oui-radio-toggle-group
+      direction="{{$ctrl.direction}}"
       model="$ctrl.model"
       on-change="$ctrl.onChange(modelValue)">
       <oui-radio
@@ -224,6 +225,10 @@ storiesOf('Components/Radio', module)
     `, {
       $ctrl: {
         disabled: boolean('Disabled state', false),
+        direction: radios('Direction', {
+          Column: 'column',
+          Row: 'row',
+        }, 'row'),
         model: 'a',
         value1: 'a',
         value2: 'b',
