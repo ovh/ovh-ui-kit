@@ -8,12 +8,13 @@ angular.module('myModule', ['oui.collapsible']);
 
 ## Component `oui-collapsible`
 
-| Attribute     | Type      | Binding | One-time binding    | Values    | Default   | Description
-| ----          | ----      | ----    | ----                | ----      | ----      | ----
-| `heading`     | string    | @       | no                  | n/a       | n/a       | text of the heading
-| `aria-label`  | string    | @?      | yes                 | n/a       | n/a       | accessibility label
-| `expanded`    | boolean   | <?      | yes                 | n/a       | `false`   | initial expanded state
-| `on-toggle`   | function  | &       | no                  | n/a       | n/a       | on collapsible state changed event handler
+| Attribute     | Type      | Binding | One-time binding    | Values          | Default   | Description
+| ----          | ----      | ----    | ----                | ----            | ----      | ----
+| `heading`     | string    | @       | no                  | n/a             | n/a       | text of the heading
+| `aria-label`  | string    | @?      | yes                 | n/a             | n/a       | accessibility label
+| `expanded`    | boolean   | <?      | no                  | `true`, `false` | `false`   | initial expanded state
+| `loading`     | boolean   | <?      | no                  | `true`, `false` | `false`   | loading state, disable toggle when `true`
+| `on-toggle`   | function  | &       | no                  | n/a             | n/a       | on collapsible state changed event handler
 
 ### Attribute `on-toggle`
 
