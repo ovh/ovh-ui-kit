@@ -1,5 +1,5 @@
 .oui-radio-toggle-group {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
 }
 
@@ -8,15 +8,25 @@
 }
 
 oui-radio-toggle-group {
-  display: inline-block;
-
-  .oui-radio-toggle-group {
-    width: 100%;
-  }
+  display: block;
 }
 
 .oui-radio-toggle {
+  margin-left: -@oui-ragio-toggle-group-border-width;
   flex: 1 1 auto;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .oui-radio-toggle-group_column & {
+    margin-left: 0;
+    margin-top: -@oui-ragio-toggle-group-border-width;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   &__label {
     display: inline-block;
@@ -40,24 +50,20 @@ oui-radio-toggle-group {
   &:first-of-type &__label {
     border-radius: @oui-ragio-toggle-group-border-radius 0 0 @oui-ragio-toggle-group-border-radius;
     border-left-width: @oui-ragio-toggle-group-border-width;
-    border-right-width: 0;
 
     .oui-radio-toggle-group_column & {
       border-radius: @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius 0 0;
       border-width: @oui-ragio-toggle-group-border-width;
-      border-bottom-width: 0;
     }
   }
 
   &:last-of-type &__label { // stylelint-disable-line no-descending-specificity
     border-radius: 0 @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius 0;
     border-right-width: @oui-ragio-toggle-group-border-width;
-    border-left-width: 0;
 
     .oui-radio-toggle-group_column & {
       border-radius: 0 0 @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius;
       border-width: @oui-ragio-toggle-group-border-width;
-      border-top-width: 0;
     }
   }
 

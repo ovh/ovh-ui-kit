@@ -36,12 +36,11 @@ Model will not be refreshed until the `on-change` callback hasn't returned. If y
 
 ## Component `oui-radio-group`
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values            | Default   | Description
-| ----          | ----      | ----      | ----              | ----              | ----      | ----
-| `model`       | Object    | =?        | no                | n/a               | n/a       | current value of the radio
-| `direction`   | string    | @?        | no                | `row`, `column`   | `row`     | flex direction of the radio
-| `name`        | string    | @?        | yes               | n/a               | n/a       | name attribute of the radio
-| `on-change`   | function  | &         | no                | n/a               | n/a       | handler triggered when model has changed
+| Attribute     | Type      | Binding   | One-time Binding  | Values  | Default | Description
+| ----          | ----      | ----      | ----              | ----    | ----    | ----
+| `model`       | Object    | =?        | no                | n/a     | n/a     | current value of the radio
+| `name`        | string    | @?        | yes               | n/a     | n/a     | name attribute of the radio
+| `on-change`   | function  | &         | no                | n/a     | n/a     | handler triggered when model has changed
 
 ### Attribute `on-change`
 
@@ -59,11 +58,12 @@ Model will not be refreshed until the `on-change` callback hasn't returned. If y
 
 ## Component `oui-radio-toggle-group`
 
-| Attribute     | Type      | Binding   | One-time Binding  | Values    | Default   | Description
-| ----          | ----      | ----      | ----              | ----      | ----      | ----
-| `model`       | Object    | =?        | no                | n/a       | n/a       | current value of the radio
-| `name`        | string    | @?        | yes               | n/a       | n/a       | name attribute of the radio
-| `on-change`   | function  | &         | no                | n/a       | n/a       | handler triggered when model has changed
+| Attribute     | Type      | Binding   | One-time Binding  | Values          | Default | Description
+| ----          | ----      | ----      | ----              | ----            | ----    | ----
+| `model`       | Object    | =?        | no                | n/a             | n/a     | current value of the radio
+| `direction`   | string    | @?        | no                | `row`, `column` | `row`   | flex direction of the radio
+| `name`        | string    | @?        | yes               | n/a             | n/a     | name attribute of the radio
+| `on-change`   | function  | &         | no                | n/a             | n/a     | handler triggered when model has changed
 
 ### Attribute `on-change`
 
