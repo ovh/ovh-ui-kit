@@ -1,11 +1,12 @@
 <button class="oui-button oui-button_full-width oui-collapsible__header"
     type="button"
-    ng-click="$ctrl.toggle()"
+    ng-click="!$ctrl.loading && $ctrl.toggle()"
     aria-label="{{::$ctrl.ariaLabel}}"
-    aria-expanded="{{$ctrl.expanded}}"
+    aria-expanded="{{!$ctrl.loading && $ctrl.expanded}}"
     aria-controls="{{::$ctrl.id}}">
     <span ng-bind="$ctrl.heading"></span>
-    <span class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" aria-hidden="true"></span>
+    <span class="oui-icon oui-icon-chevron-down oui-collapsible__toggle-icon" ng-hide="$ctrl.loading" aria-hidden="true"></span>
+    <oui-spinner class="oui-collapsible__loading-icon" ng-show="$ctrl.loading" size="s"></oui-spinner>
 </button>
 <div class="oui-collapsible__wrapper" ng-style="{ 'height': $ctrl.wrapperHeight }">
     <div class="oui-collapsible__body" ng-transclude></div>

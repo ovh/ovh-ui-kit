@@ -9,6 +9,7 @@ export default {
     heading: '@',
     ariaLabel: '@?',
     expanded: '<?',
+    loading: '<?',
     onToggle: '&',
   },
   transclude: true,

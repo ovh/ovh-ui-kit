@@ -58,6 +58,35 @@ describe('ouiCollapsible', () => {
       expect(headerEl.attr('aria-expanded')).toBe('true');
     });
 
+    it('should expand on header click when loading is false', () => {
+      const onToggle = jasmine.createSpy('onToggle');
+      const element = TestUtils.compileTemplate(`
+        <oui-collapsible heading="Title" aria-label="Action" loading="false" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
+        onToggle,
+      });
+
+      const headerEl = angular.element(getHeaderElement(element));
+
+      headerEl.triggerHandler('click');
+      expect(onToggle).toHaveBeenCalledWith(true);
+
+      headerEl.triggerHandler('click');
+      expect(onToggle).toHaveBeenCalledWith(false);
+    });
+
+    it('should not expand on header click when loading is true', () => {
+      const onToggle = jasmine.createSpy('onToggle');
+      const element = TestUtils.compileTemplate(`
+        <oui-collapsible heading="Title" aria-label="Action" loading="true" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
+        onToggle,
+      });
+
+      const headerEl = angular.element(getHeaderElement(element));
+
+      headerEl.triggerHandler('click');
+      expect(onToggle).not.toHaveBeenCalled();
+    });
+
     it('should transclude the contents into the collapsible body', () => {
       const element = TestUtils.compileTemplate(`
                 <oui-collapsible heading="Title" aria-label="Action" expanded="true">
