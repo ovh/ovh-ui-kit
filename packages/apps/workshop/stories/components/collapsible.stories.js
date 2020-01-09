@@ -72,6 +72,9 @@ storiesOf('Components/Collapsible', module)
         }
 
         onToggle(expanded, scope) {
+          // Knobs for Storybook
+          action('onToggle')(expanded);
+
           if (!this.content && expanded) {
             this.loading = true;
 
@@ -82,10 +85,61 @@ storiesOf('Components/Collapsible', module)
                 this.content = content;
 
                 // Need to $digest to apply the changes with the timeout
+                // Could be resolved with $timeout or $q too
                 scope.$digest();
               });
           }
         }
       }(),
+    })),
+  )
+  .add(
+    'Group (Accordion)',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <div style="max-width: 300px;">
+      <oui-collapsible
+        heading="Title"
+        group="lorem"
+        on-toggle="$ctrl.onToggle('Collapsible 1', expanded)">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Veniam eveniet, commodi nisi officia iusto minus repellat
+        magnam in vel? Nisi, ea? Nam cupiditate sint ullam temporibus
+        perspiciatis, nostrum pariatur amet?
+      </oui-collapsible>
+
+      <oui-collapsible
+        heading="Title"
+        group="lorem"
+        on-toggle="$ctrl.onToggle('Collapsible 2', expanded)">
+        Corporis dicta porro labore repellendus accusantium.
+        Aperiam dolore velit corrupti ex accusantium nihil doloremque
+        rerum voluptate reprehenderit cum molestias cumque mollitia obcaecati,
+        est saepe quod dolorum magni non quidem aliquid?
+      </oui-collapsible>
+
+      <oui-collapsible
+        heading="Title"
+        group="lorem"
+        on-toggle="$ctrl.onToggle('Collapsible 3', expanded)">
+        Ut dolore commodi dolorem veniam. Fugiat tempora sunt officiis
+        dolores officia eveniet blanditiis minus nisi quaerat voluptate
+        maxime necessitatibus voluptas qui rerum, incidunt illo amet
+        quae eius error. Autem, impedit.
+      </oui-collapsible>
+
+      <oui-collapsible
+        heading="Title"
+        group="lorem"
+        on-toggle="$ctrl.onToggle('Collapsible 4', expanded)">
+        Non, laborum enim. Magni commodi dolorem sit necessitatibus incidunt,
+        iste rerum est mollitia quod voluptatem autem aspernatur illum obcaecati
+        quos laboriosam, repudiandae numquam nostrum voluptate,
+        in adipisci? Quis, autem repudiandae!
+      </oui-collapsible>
+    </div>
+    `, {
+      $ctrl: {
+        onToggle: action('onToggle'),
+      },
     })),
   );

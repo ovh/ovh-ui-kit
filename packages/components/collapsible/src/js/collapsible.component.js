@@ -7,6 +7,7 @@ export default {
   bindings: {
     id: '@',
     heading: '@',
+    group: '@?',
     ariaLabel: '@?',
     expanded: '<?',
     loading: '<?',
