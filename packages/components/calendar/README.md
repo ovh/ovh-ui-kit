@@ -16,7 +16,7 @@ angular.module('myModule', ['oui.calendar'])
 
     // default options
     ouiCalendarConfigurationProvider.setOptions({
-      altInputClass: 'oui-calendar__control_alt',
+      altInputClass: 'oui-calendar__control oui-calendar__control_alt',
       allowInput: true,
       dateFormat: 'Y-m-d',
       disableMobile: true,

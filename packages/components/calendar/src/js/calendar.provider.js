@@ -4,7 +4,7 @@ export default class {
   constructor() {
     this.locale = 'en';
     this.options = {
-      altInputClass: 'oui-calendar__control_alt',
+      altInputClass: 'oui-calendar__control oui-calendar__control_alt',
       allowInput: false,
       dateFormat: 'Y-m-d',
       disableMobile: true,
