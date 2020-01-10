@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.36.1") format("woff2"), url("./icons/icons.woff?v=2.36.1") format("woff");
+  src: url("./icons/icons.woff2?v=2.37.0") format("woff2"), url("./icons/icons.woff?v=2.37.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -10872,10 +10872,14 @@ oui-radio-toggle-group {
   display: block;
 }
 .oui-radio-toggle-group {
-  display: flex;
-  max-width: 300px;
+  display: inline-flex;
+  flex-direction: row;
+}
+.oui-radio-toggle-group_column {
+  flex-direction: column;
 }
 .oui-radio-toggle {
+  margin-left: -1px;
   flex: 1 1 auto;
 }
 .oui-radio-toggle__label {
@@ -10887,6 +10891,16 @@ oui-radio-toggle-group {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+.oui-radio-toggle:first-child {
+  margin-left: 0;
+}
+.oui-radio-toggle-group_column .oui-radio-toggle {
+  margin-left: 0;
+  margin-top: -1px;
+}
+.oui-radio-toggle-group_column .oui-radio-toggle:first-child {
+  margin-top: 0;
 }
 .oui-radio-toggle__label {
   display: inline-block;
@@ -10908,15 +10922,22 @@ oui-radio-toggle-group {
 .oui-radio-toggle:first-of-type .oui-radio-toggle__label {
   border-radius: 3px 0 0 3px;
   border-left-width: 1px;
-  border-right-width: 0;
+}
+.oui-radio-toggle-group_column .oui-radio-toggle:first-of-type .oui-radio-toggle__label {
+  border-radius: 3px 3px 0 0;
+  border-width: 1px;
 }
 .oui-radio-toggle:last-of-type .oui-radio-toggle__label {
   border-radius: 0 3px 3px 0;
   border-right-width: 1px;
-  border-left-width: 0;
+}
+.oui-radio-toggle-group_column .oui-radio-toggle:last-of-type .oui-radio-toggle__label {
+  border-radius: 0 0 3px 3px;
+  border-width: 1px;
 }
 .oui-radio-toggle__label-container {
   width: 100%;
+  margin: 0;
 }
 .oui-radio-toggle__input {
   position: absolute;
@@ -11964,6 +11985,12 @@ oui-collapsible {
   right: 0.875rem;
   height: 0.625rem;
   line-height: 0.625rem;
+}
+.oui-collapsible__loading-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.875rem;
+  transform: translateY(-50%);
 }
 .oui-collapsible__header {
   text-align: left;

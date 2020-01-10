@@ -1,3 +1,14 @@
+<a name="2.37.0"></a>
+# [2.37.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.36.1...v2.37.0) (2020-01-10)
+
+
+### Features
+
+* **oui-collapsible:** add loading attribute ([f1a2b4d](https://github.com/ovh-ux/ovh-ui-kit/commit/f1a2b4d))
+* **oui-radio-toggle-group:** add column direction ([#543](https://github.com/ovh-ux/ovh-ui-kit/issues/543)) ([1d33e3c](https://github.com/ovh-ux/ovh-ui-kit/commit/1d33e3c))
+
+
+
 <a name="2.36.1"></a>
 ## [2.36.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.36.0...v2.36.1) (2019-11-07)
 
