@@ -6,6 +6,7 @@ import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.datagrid/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 import data from '../../_data/datagrid/index.data.json';
@@ -20,6 +21,9 @@ angular.module(moduleName, [
 ]);
 
 storiesOf('Old|Components/Datagrid', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -177,9 +181,7 @@ storiesOf('Old|Components/Datagrid', module)
         data,
         onRowSelect: action('onRowSelect'),
       },
-    })), {
-      notes: 'This will create a sticky column at the start of your datagrid.',
-    },
+    })),
   )
   .add(
     'Expandable rows',
@@ -202,9 +204,7 @@ storiesOf('Old|Components/Datagrid', module)
       $ctrl: {
         data,
       },
-    })), {
-      notes: 'This will expand datagrid rows when clicked.',
-    },
+    })),
   )
   .add(
     'Row actions',
@@ -228,9 +228,7 @@ storiesOf('Old|Components/Datagrid', module)
         data,
         onActionClick: action('onActionClick'),
       },
-    })), {
-      notes: 'This will create a sticky column at the end of your datagrid.<br />Rows action menu will be automatically set to `compact` with a placement to `end`.',
-    },
+    })),
   )
   .add(
     'Customizable columns display',
@@ -249,9 +247,7 @@ storiesOf('Old|Components/Datagrid', module)
         data,
         onColumnsParametersChange: action('onColumnsParametersChange'),
       },
-    })), {
-      notes: 'This will create a sticky column at the end of your datagrid.',
-    },
+    })),
   )
   .add(
     'Customizable cells template',
@@ -278,9 +274,7 @@ storiesOf('Old|Components/Datagrid', module)
       $ctrl: {
         data,
       },
-    })), {
-      notes: 'You can use `$row` to get values of the current row, `$rowIndex` to get index of the current row, `$value` to get value of the cell',
-    },
+    })),
   )
   .add(
     'Dynamic columns',
@@ -322,9 +316,7 @@ storiesOf('Old|Components/Datagrid', module)
         data,
         showParents: false,
       },
-    })), {
-      notes: 'Columns can be dynamically rendered using the `columns` attribute of datagrid. Using this attribute, a new column property `hidden` is available.',
-    },
+    })),
   )
   .add(
     'Remote data',

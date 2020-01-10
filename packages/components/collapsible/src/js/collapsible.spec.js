@@ -89,4 +89,79 @@ describe('ouiCollapsible', () => {
       expect(onToggle).toHaveBeenCalledWith(false);
     });
   });
+
+  describe('Loading', () => {
+    it('should expand on header click when loading is false', () => {
+      const onToggle = jasmine.createSpy('onToggle');
+      const element = TestUtils.compileTemplate(`
+        <oui-collapsible heading="Title" aria-label="Action" loading="false" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
+        onToggle,
+      });
+
+      const headerEl = angular.element(getHeaderElement(element));
+
+      headerEl.triggerHandler('click');
+      expect(onToggle).toHaveBeenCalledWith(true);
+
+      headerEl.triggerHandler('click');
+      expect(onToggle).toHaveBeenCalledWith(false);
+    });
+
+    it('should not expand on header click when loading is true', () => {
+      const onToggle = jasmine.createSpy('onToggle');
+      const element = TestUtils.compileTemplate(`
+        <oui-collapsible heading="Title" aria-label="Action" loading="true" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
+        onToggle,
+      });
+
+      const headerEl = angular.element(getHeaderElement(element));
+
+      headerEl.triggerHandler('click');
+      expect(onToggle).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('Group', () => {
+    it('should close the collapsible panel', () => {
+      const onToggle = jasmine.createSpy('onToggle');
+      const element = TestUtils.compileTemplate(`
+        <oui-collapsible heading="Title" expanded="true" on-toggle="$ctrl.onToggle(expanded)"></oui-collapsible>`, {
+        onToggle,
+      });
+
+      const controller = element.controller('ouiCollapsible');
+      controller.close();
+
+      expect(onToggle).toHaveBeenCalledWith(false);
+      expect(controller.expanded).toBe(false);
+    });
+
+    it('should close opened from the group', () => {
+      const onToggle1 = jasmine.createSpy('onToggle1');
+      const onToggle2 = jasmine.createSpy('onToggle2');
+      const onToggle3 = jasmine.createSpy('onToggle3');
+
+      const element = TestUtils.compileTemplate(`
+        <div>
+          <oui-collapsible heading="Title" group="foo" on-toggle="$ctrl.onToggle1(expanded)"></oui-collapsible>
+          <oui-collapsible heading="Title" group="foo" on-toggle="$ctrl.onToggle2(expanded)" expanded="true"></oui-collapsible>
+          <oui-collapsible heading="Title" group="bar" on-toggle="$ctrl.onToggle3(expanded)" expanded="true"></oui-collapsible>
+        </div>`, {
+        onToggle1,
+        onToggle2,
+        onToggle3,
+      });
+
+      // Mock $document to get items for querySelectorAll in controller
+      const $document = angular.element(document); // This is exactly what Angular does
+      $document.find('body').append(element);
+
+      const headerEl = angular.element(getHeaderElement(element));
+      headerEl.triggerHandler('click');
+
+      expect(onToggle1).toHaveBeenCalledWith(true);
+      expect(onToggle2).toHaveBeenCalledWith(false);
+      expect(onToggle3).not.toHaveBeenCalled();
+    });
+  });
 });

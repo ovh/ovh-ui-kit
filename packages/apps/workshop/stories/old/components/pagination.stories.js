@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.pagination/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
@@ -9,6 +10,9 @@ const moduleName = 'oui-pagination-stories';
 angular.module(moduleName, ['oui.pagination']);
 
 storiesOf('Old|Internal/Pagination', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'One page',
     forModule(moduleName).createElement(() => compileTemplate(`

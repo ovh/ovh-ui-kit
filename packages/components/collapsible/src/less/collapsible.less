@@ -11,6 +11,13 @@
     transition: transform @oui-collapsible-transition-delay cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  &__loading-icon {
+    position: absolute;
+    top: 50%;
+    right: @oui-collapsible-icon-spacing;
+    transform: translateY(-50%);
+  }
+
   &__header {
     height: @oui-collapsible-header-height;
     padding: @oui-collapsible-padding;

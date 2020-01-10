@@ -13,6 +13,7 @@
   "dependencies": {
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.core": "*",
+    "@ovh-ux/ui-kit.spinner": "*",
     "angular": "^1.7.9"
   },
   "devDependencies": {

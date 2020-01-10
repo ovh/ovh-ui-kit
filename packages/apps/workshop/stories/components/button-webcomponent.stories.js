@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.button/README.md';
 import { compileTemplate } from '../../src/utils';
 
 // Create mock module for the stories
@@ -9,6 +10,9 @@ const moduleName = 'oui-button-stories';
 angular.module(moduleName, ['oui.button']);
 
 storiesOf('Components|Buttons/WebComponent/Primary', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

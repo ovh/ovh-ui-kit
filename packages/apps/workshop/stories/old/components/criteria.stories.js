@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.criteria/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 import { properties } from '../../_data/criteria.data.json';
@@ -17,6 +18,9 @@ angular.module(moduleName, [
 ]);
 
 storiesOf('Old|Internal/Criteria', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

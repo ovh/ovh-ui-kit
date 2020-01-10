@@ -31,7 +31,7 @@ angular.module('myModule', ['oui.datagrid'])
 | `page-size`                       | number    | @?        | no                  | n/a              | `25`         | maximum number of rows to show on each pages
 | `rows`                            | array     | <?        | yes                 | n/a              | n/a          | local rows to load in the datagrid
 | `empty-placeholder`               | string    | @?        | yes                 | n/a              | n/a          | custom placeholder text when there is no data
-| `selectable-rows`                 | boolean   | <?        | no                  | `true`, `false`  | `false`      | allow rows to be selected
+| `selectable-rows`                 | boolean   | <?        | no                  | `true`, `false`  | `false`      | allow rows to be selected. Create a sticky column a the start of the datagrid.
 | `on-criteria-change`              | function  | &         | no                  | n/a              | n/a          | triggered when criteria changed. Use `$criteria` in your callback to get the result
 | `on-page-change`                  | function  | &         | no                  | n/a              | n/a          | triggered when pagination is changed
 | `on-row-select`                   | function  | &         | no                  | n/a              | n/a          | triggered when a row is selected
@@ -75,10 +75,42 @@ And if `selectable-rows` is enabled:
 </oui-datagrid>
 ```
 
+### Actions
+
+This will create a sticky column at the end of your datagrid.
+Rows action menu will be automatically set to `compact` with a placement to `end`.
+
+```html
+<oui-datagrid rows-loader="$ctrl.loadPartialData($config)" row-loader="$ctrl.loadRow($row)" page-size="5">
+    <oui-column title="'First name'" property="firstName" sortable="asc"></oui-column>
+    <oui-column title="'Last name'" property="lastName" sortable></oui-column>
+    <oui-column title="'Mother'" property="parents.mother.lastName" sortable>
+        {{$row.parents.mother.lastName}}, {{$row.parents.mother.firstName}}
+    </oui-column>
+    <oui-column title="'Father'" property="parents.father.lastName" sortable>
+        {{$row.parents.father.lastName}}, {{$row.parents.father.firstName}}
+    </oui-column>
+    <oui-column title="'Email'" property="email" sortable>
+        <a href="mailto:{{$value}}">{{$ctrl.label}}: {{$value}}</a>
+    </oui-column>
+    <oui-column title="'Phone'" property="phone"></oui-column>
+    <oui-column title="'Birth'" property="birth" sortable>
+        {{$value|date:short}}
+    </oui-column>
+    <oui-action-menu align="end" compact>
+        <oui-action-menu-item text="Action 1" on-click="$ctrl.action1Row = $row">
+        </oui-action-menu-item>
+        <oui-action-menu-divider></oui-action-menu-divider>
+        <oui-action-menu-item text="External link" href="#" external>
+        </oui-action-menu-item>
+    </oui-action-menu>
+</oui-datagrid>
+```
+
 ### Row detail template
 
 Add an element `oui-datagrid-row-detail` to add row detail
-The template inside the element will be placed at the bottom of each row
+The template inside the element will be placed at the bottom of each row, making it expandable.
 
 ```html
 <oui-datagrid rows="$ctrl.data">
@@ -185,7 +217,7 @@ You can use `row-loader` with the current row as `$row` argument. Your method mu
 | ----                              | ----      | ----      | ----                | ----                | ----         | ----
 | `columns`                         | array     | <?        | no                  | _see example above_ | `undefined`  | columns attributes (see oui-datagrid-column below)
 | `columns-parameters`              | array     | <?        | no                  | _see example above_ | `undefined`  | columns customization parameters
-| `customizable`                    | boolean   | <?        | no                  | `true`, `false`     | `false`      | display a dropdown menu to select columns to show/hide
+| `customizable`                    | boolean   | <?        | no                  | `true`, `false`     | `false`      | display a dropdown menu to select columns to show/hide. This will create a sticky column at the end of the datagrid.
 | `on-columns-parameters-change`    | function  | &         | no                  | n/a                 | n/a          | triggered on column parameter change when datagrid is customizable
 
 ### Attribute `columns`

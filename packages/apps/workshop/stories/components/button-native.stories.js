@@ -1,6 +1,8 @@
 import { storiesOf } from '@storybook/html';
 import { select } from '@storybook/addon-knobs';
 
+import readme from '@ovh-ux/ui-kit.button/README.md';
+
 const state = {
   label: 'State',
   options: {
@@ -11,6 +13,9 @@ const state = {
 };
 
 storiesOf('Components|Buttons/Native/Primary', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Default',
     () => `

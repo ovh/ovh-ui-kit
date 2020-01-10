@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.form-actions/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
@@ -10,6 +11,9 @@ const moduleName = 'oui-form-actions-stories';
 angular.module(moduleName, ['oui.form-actions']);
 
 storiesOf('Old|Components/Form Actions', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -18,9 +22,7 @@ storiesOf('Old|Components/Form Actions', module)
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })), {
-      notes: 'Cancel button is hidden if there is no `href` or `on-cancel` attributes.',
-    },
+    })),
   )
   .add(
     'Custom naming',

@@ -1,10 +1,11 @@
-import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter, removeHtmlTags } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
-  constructor($attrs, $element, $scope, $timeout, $window) {
+  constructor($attrs, $document, $element, $scope, $timeout, $window) {
     'ngInject';
 
     this.$attrs = $attrs;
+    this.$document = $document;
     this.$element = $element;
     this.$scope = $scope;
     this.$timeout = $timeout;
@@ -24,6 +25,12 @@ export default class {
     });
   }
 
+  $onChanges({ heading }) {
+    if (heading && heading.currentValue) {
+      this.heading = removeHtmlTags(heading.currentValue);
+    }
+  }
+
   $postLink() {
     this.$timeout(() => this.$element
       .addClass('oui-collapsible')
@@ -35,7 +42,21 @@ export default class {
       .on('resize', () => this.$scope.$apply());
   }
 
+  close() {
+    if (this.expanded) {
+      this.toggle();
+    }
+  }
+
   toggle() {
+    // Close opened items from the same group before opening this one
+    if (this.group && !this.expanded) {
+      const items = this.$document[0].querySelectorAll(`oui-collapsible[group="${this.group}"]`);
+
+      // `items` is a jqLite Array
+      angular.forEach(items, item => angular.element(item).controller('ouiCollapsible').close());
+    }
+
     this.expanded = !this.expanded;
     this.onToggle({ expanded: this.expanded });
   }

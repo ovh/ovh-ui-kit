@@ -1,6 +1,10 @@
 .oui-radio-toggle-group {
-  display: flex;
-  max-width: @oui-radio-toggle-group-max-width;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.oui-radio-toggle-group_column {
+  flex-direction: column;
 }
 
 oui-radio-toggle-group {
@@ -8,7 +12,21 @@ oui-radio-toggle-group {
 }
 
 .oui-radio-toggle {
+  margin-left: -@oui-radio-toggle-group-border-width;
   flex: 1 1 auto;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .oui-radio-toggle-group_column & {
+    margin-left: 0;
+    margin-top: -@oui-radio-toggle-group-border-width;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
   &__label {
     display: inline-block;
@@ -32,17 +50,26 @@ oui-radio-toggle-group {
   &:first-of-type &__label {
     border-radius: @oui-radio-toggle-group-border-radius 0 0 @oui-radio-toggle-group-border-radius;
     border-left-width: @oui-radio-toggle-group-border-width;
-    border-right-width: 0;
+
+    .oui-radio-toggle-group_column & {
+      border-radius: @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius 0 0;
+      border-width: @oui-radio-toggle-group-border-width;
+    }
   }
 
-  &:last-of-type &__label {
+  &:last-of-type &__label { // stylelint-disable-line no-descending-specificity
     border-radius: 0 @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius 0;
     border-right-width: @oui-radio-toggle-group-border-width;
-    border-left-width: 0;
+
+    .oui-radio-toggle-group_column & {
+      border-radius: 0 0 @oui-radio-toggle-group-border-radius @oui-radio-toggle-group-border-radius;
+      border-width: @oui-radio-toggle-group-border-width;
+    }
   }
 
   &__label-container {
     width: 100%;
+    margin: 0;
   }
 
   &__input {

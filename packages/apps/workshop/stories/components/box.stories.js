@@ -1,6 +1,11 @@
 import { storiesOf } from '@storybook/html';
 
+import readme from '@ovh-ux/ui-kit.box/README.md';
+
 storiesOf('Components|Box/Native', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Default',
     () => `

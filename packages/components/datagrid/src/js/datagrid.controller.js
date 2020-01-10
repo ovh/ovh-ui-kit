@@ -1,6 +1,6 @@
 import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 import find from 'lodash/find';
-import { hasProperty } from './util';
+import hasIn from 'lodash/hasIn';
 
 import template from './datagrid.html';
 
@@ -275,7 +275,7 @@ export default class DatagridController {
       return false;
     }
 
-    return hasProperty(obj, prop);
+    return hasIn(obj, prop);
   }
 
   onCriteriaChange(criteria, preview) {

@@ -7,8 +7,10 @@ export default {
   bindings: {
     id: '@',
     heading: '@',
+    group: '@?',
     ariaLabel: '@?',
     expanded: '<?',
+    loading: '<?',
     onToggle: '&',
   },
   transclude: true,

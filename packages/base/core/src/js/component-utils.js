@@ -68,10 +68,19 @@ export function getAttribute(element, attributeName) {
   return element.getAttribute(attributeName) || element.getAttribute(`data-${attributeName}`);
 }
 
+export function removeHtmlTags(text) {
+  if (text && typeof text === 'string') {
+    return text.replace(/(<([^>]+)>)/ig, '');
+  }
+
+  return text;
+}
+
 export default {
   addBooleanParameter,
   addDefaultParameter,
   hasAttribute,
   hasAttributeValue,
   getAttribute,
+  removeHtmlTags,
 };

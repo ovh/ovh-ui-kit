@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import readme from '@ovh-ux/ui-kit.file/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
@@ -15,6 +16,9 @@ angular.module(moduleName, [
 ]);
 
 storiesOf('Old|Components/File', module)
+  .addParameters({
+    notes: readme,
+  })
   .add(
     'Simple file selector ',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -51,9 +55,7 @@ storiesOf('Old|Components/File', module)
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })), {
-      notes: '`maxsize` support form validators.',
-    },
+    })),
   )
   .add(
     'Multiple files',

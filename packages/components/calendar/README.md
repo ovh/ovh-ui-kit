@@ -16,7 +16,7 @@ angular.module('myModule', ['oui.calendar'])
 
     // default options
     ouiCalendarConfigurationProvider.setOptions({
-      altInputClass: 'oui-calendar__control_alt',
+      altInputClass: 'oui-calendar__control oui-calendar__control_alt',
       allowInput: true,
       dateFormat: 'Y-m-d',
       disableMobile: true,
@@ -52,7 +52,7 @@ angular.module('myModule', ['oui.calendar'])
 | `min-date`        | object    | <?        | yes               | See [Supplying Dates](https://flatpickr.js.org/examples/#supplying-dates-for-flatpickr)   | n/a       | specifies the minimum/earliest date (inclusively) allowed for selection
 | `disable-date`    | array     | <?        | yes               | See [Supplying Dates](https://flatpickr.js.org/examples/#supplying-dates-for-flatpickr)   | n/a       | make certain dates unavailable for selection
 | `enable-date`     | array     | <?        | yes               | See [Supplying Dates](https://flatpickr.js.org/examples/#supplying-dates-for-flatpickr)   | n/a       | make certain dates only available for selection
-| `enable-time`     | boolean   | <?        | yes               | `true`, `false`                                                                           | `false`   | show time selection after a date is selected
+| `enable-time`     | boolean   | <?        | yes               | `true`, `false`                                                                           | `false`   | show time selection after a date is selected. See [Time picker examples](https://flatpickr.js.org/examples/#time-picker) for more information.
 | `week-numbers`    | boolean   | <?        | yes               | `true`, `false`                                                                           | `false`   | week numbers flag
 | `options`         | object    | <?        | yes               | See [Options](https://flatpickr.js.org/options/)                                          | n/a       | flatpickr options for more advanced configuration
 | `disabled`        | boolean   | <?        | no                | `true`, `false`                                                                           | `false`   | disabled flag

@@ -1,4 +1,4 @@
-import { hasProperty } from '../util';
+import hasIn from 'lodash/hasIn';
 
 export default class DatagridPagingAbstract {
   constructor(columns, currentSorting, pageSize, rowLoader, pagingService) {
@@ -110,7 +110,7 @@ export default class DatagridPagingAbstract {
      * @return {Boolean}     true if loaded
      */
   isRowLoaded(row) {
-    return this.columns.map(column => hasProperty(row, column.name))
+    return this.columns.map(column => hasIn(row, column.name))
       .reduce((a, b) => a && b, true);
   }
 
