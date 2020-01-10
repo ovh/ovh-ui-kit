@@ -1,3 +1,22 @@
+# [3.9.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.8.1...v3.9.0) (2020-01-10)
+
+
+### Bug Fixes
+
+* **calendar:** dynamic changes for min and max date ([#539](https://github.com/ovh-ux/ovh-ui-kit/issues/539)) ([e7835ab](https://github.com/ovh-ux/ovh-ui-kit/commit/e7835abc39f0394b6d47f4b107106922c21e81bb))
+* **calendar:** support flatpickr v4.6.3 ([#547](https://github.com/ovh-ux/ovh-ui-kit/issues/547)) ([5b8a5b5](https://github.com/ovh-ux/ovh-ui-kit/commit/5b8a5b5d310e918db452695bac99b48df7493a65))
+* **collapsible:** add helper to remove html on heading ([#540](https://github.com/ovh-ux/ovh-ui-kit/issues/540)) ([3fe0358](https://github.com/ovh-ux/ovh-ui-kit/commit/3fe03589578566e34f2869ecdac16d694627c548))
+* **oui-datagrid:** use lodash hasIn to check properties ([#544](https://github.com/ovh-ux/ovh-ui-kit/issues/544)) ([df679af](https://github.com/ovh-ux/ovh-ui-kit/commit/df679af727a7c4dad42b2bade2c1ec8a6de2fc72))
+
+
+### Features
+
+* **collapsible:** add group attribute for accordion mode ([771a101](https://github.com/ovh-ux/ovh-ui-kit/commit/771a10140b03a2d9af42dd7540b7107c4c11c20e))
+* **collapsible:** add loading attribute ([2e4bbbf](https://github.com/ovh-ux/ovh-ui-kit/commit/2e4bbbfdc33491ec2e6a73d8a28b6a9cd069286d))
+* **radio-toggle-group:** add direction attribute ([#541](https://github.com/ovh-ux/ovh-ui-kit/issues/541)) ([3358a59](https://github.com/ovh-ux/ovh-ui-kit/commit/3358a59bc0605359efb3cf5af37d6cd045fa00c7))
+
+
+
 ## [3.8.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.8.0...v3.8.1) (2020-01-06)
 
 
