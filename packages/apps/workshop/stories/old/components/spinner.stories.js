@@ -7,7 +7,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-spinner-stories';
 angular.module(moduleName, ['oui.spinner']);
 
-storiesOf('Old|Components/Spinner', module)
+storiesOf('Old/Components/Spinner', module)
   .addParameters({
     notes: readme,
   })

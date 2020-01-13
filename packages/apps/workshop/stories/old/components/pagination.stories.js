@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-pagination-stories';
 angular.module(moduleName, ['oui.pagination']);
 
-storiesOf('Old|Internal/Pagination', module)
+storiesOf('Old/Internal/Pagination', module)
   .addParameters({
     notes: readme,
   })

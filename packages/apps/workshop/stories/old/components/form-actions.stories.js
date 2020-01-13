@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-form-actions-stories';
 angular.module(moduleName, ['oui.form-actions']);
 
-storiesOf('Old|Components/Form Actions', module)
+storiesOf('Old/Components/Form Actions', module)
   .addParameters({
     notes: readme,
   })

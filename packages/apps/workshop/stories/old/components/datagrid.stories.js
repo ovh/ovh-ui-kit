@@ -20,7 +20,7 @@ angular.module(moduleName, [
   'oui.action-menu',
 ]);
 
-storiesOf('Old|Components/Datagrid', module)
+storiesOf('Old/Components/Datagrid', module)
   .addParameters({
     notes: readme,
   })

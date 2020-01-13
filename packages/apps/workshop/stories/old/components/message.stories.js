@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-message-stories';
 angular.module(moduleName, ['oui.message']);
 
-storiesOf('Old|Components/Message', module)
+storiesOf('Old/Components/Message', module)
   .addParameters({
     notes: readme,
   })

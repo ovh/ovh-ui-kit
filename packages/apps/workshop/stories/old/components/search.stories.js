@@ -11,7 +11,7 @@ import { objects } from '../../_data/autocomplete.data.json';
 const moduleName = 'oui-search-stories';
 angular.module(moduleName, ['oui.search']);
 
-storiesOf('Old|Components/Search', module)
+storiesOf('Old/Components/Search', module)
   .addParameters({
     notes: readme,
   })

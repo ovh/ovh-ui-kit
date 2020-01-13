@@ -7,7 +7,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-skeleton-stories';
 angular.module(moduleName, ['oui.skeleton']);
 
-storiesOf('Old|Components/Skeleton', module)
+storiesOf('Old/Components/Skeleton', module)
   .addParameters({
     notes: readme,
   })

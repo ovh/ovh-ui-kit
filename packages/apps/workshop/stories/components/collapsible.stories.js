@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-collapsible-stories';
 angular.module(moduleName, ['oui.collapsible']);
 
-storiesOf('Components|Collapsible/WebComponent', module)
+storiesOf('Components/Collapsible/WebComponent', module)
   .addParameters({
     notes: readme,
   })

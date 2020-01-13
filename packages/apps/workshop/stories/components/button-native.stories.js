@@ -12,7 +12,7 @@ const state = {
   default: '',
 };
 
-storiesOf('Components|Buttons/Native/Primary', module)
+storiesOf('Components/Buttons/Native/Primary', module)
   .addParameters({
     notes: readme,
   })
@@ -72,7 +72,7 @@ storiesOf('Components|Buttons/Native/Primary', module)
     </button>`,
   );
 
-storiesOf('Components|Buttons/Native/Secondary', module)
+storiesOf('Components/Buttons/Native/Secondary', module)
   .add(
     'Default',
     () => `
@@ -129,7 +129,7 @@ storiesOf('Components|Buttons/Native/Secondary', module)
     </button>`,
   );
 
-storiesOf('Components|Buttons/Native/Ghost', module)
+storiesOf('Components/Buttons/Native/Ghost', module)
   .add(
     'Default',
     () => `

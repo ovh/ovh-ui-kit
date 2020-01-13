@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Content/Color', module)
+storiesOf('Old/Content/Color', module)
   .add(
     'Usage',
     () => `

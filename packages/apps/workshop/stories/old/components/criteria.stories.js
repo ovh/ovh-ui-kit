@@ -17,7 +17,7 @@ angular.module(moduleName, [
   'oui.action-menu',
 ]);
 
-storiesOf('Old|Internal/Criteria', module)
+storiesOf('Old/Internal/Criteria', module)
   .addParameters({
     notes: readme,
   })

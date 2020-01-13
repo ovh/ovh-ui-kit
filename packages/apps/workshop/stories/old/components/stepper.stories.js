@@ -17,7 +17,7 @@ angular.module(moduleName, [
   'oui.select',
 ]);
 
-storiesOf('Old|Components/Stepper', module)
+storiesOf('Old/Components/Stepper', module)
   .addParameters({
     notes: readme,
   })

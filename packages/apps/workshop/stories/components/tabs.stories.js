@@ -8,7 +8,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-tabs-stories';
 angular.module(moduleName, ['oui.tabs']);
 
-storiesOf('Components|Tabs/WebComponent', module)
+storiesOf('Components/Tabs/WebComponent', module)
   .addParameters({
     notes: readme,
   })

@@ -15,7 +15,7 @@ angular.module(moduleName, [
   'oui.field',
 ]);
 
-storiesOf('Old|Components/Password', module)
+storiesOf('Old/Components/Password', module)
   .addParameters({
     notes: readme,
   })

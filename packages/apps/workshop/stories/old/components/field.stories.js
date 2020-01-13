@@ -22,7 +22,7 @@ angular.module(moduleName, [
   'oui.calendar',
 ]);
 
-storiesOf('Old|Components/Field', module)
+storiesOf('Old/Components/Field', module)
   .addParameters({
     notes: readme,
   })

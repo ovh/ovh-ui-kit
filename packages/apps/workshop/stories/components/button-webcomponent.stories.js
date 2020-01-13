@@ -9,7 +9,7 @@ import { compileTemplate } from '../../src/utils';
 const moduleName = 'oui-button-stories';
 angular.module(moduleName, ['oui.button']);
 
-storiesOf('Components|Buttons/WebComponent/Primary', module)
+storiesOf('Components/Buttons/WebComponent/Primary', module)
   .addParameters({
     notes: readme,
   })
@@ -100,7 +100,7 @@ storiesOf('Components|Buttons/WebComponent/Primary', module)
     })),
   );
 
-storiesOf('Components|Buttons/WebComponent/Secondary', module)
+storiesOf('Components/Buttons/WebComponent/Secondary', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`
@@ -188,7 +188,7 @@ storiesOf('Components|Buttons/WebComponent/Secondary', module)
     })),
   );
 
-storiesOf('Components|Buttons/WebComponent/Ghost', module)
+storiesOf('Components/Buttons/WebComponent/Ghost', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

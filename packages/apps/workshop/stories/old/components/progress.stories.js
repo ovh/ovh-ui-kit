@@ -8,7 +8,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-progress-stories';
 angular.module(moduleName, ['oui.progress']);
 
-storiesOf('Old|Components/Progress', module)
+storiesOf('Old/Components/Progress', module)
   .addParameters({
     notes: readme,
   })

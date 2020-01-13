@@ -11,7 +11,7 @@ import { items } from '../_data/chips.data.json';
 const moduleName = 'oui-chips-stories';
 angular.module(moduleName, ['oui.chips']);
 
-storiesOf('Components|Chips/Inline', module)
+storiesOf('Components/Chips/Inline', module)
   .addParameters({
     notes: readme,
   })
@@ -37,7 +37,7 @@ storiesOf('Components|Chips/Inline', module)
     })),
   );
 
-storiesOf('Components|Chips/Stacked', module)
+storiesOf('Components/Chips/Stacked', module)
   .add(
     'Default',
     forModule(moduleName).createElement(() => compileTemplate(`

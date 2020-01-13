@@ -17,7 +17,7 @@ angular.module(moduleName, [
   'oui.radio',
 ]);
 
-storiesOf('Old|Components/Navbar', module)
+storiesOf('Old/Components/Navbar', module)
   .addParameters({
     notes: readme,
   })

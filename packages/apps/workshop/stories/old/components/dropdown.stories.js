@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-dropdown-stories';
 angular.module(moduleName, ['oui.dropdown']);
 
-storiesOf('Old|Components/Dropdown', module)
+storiesOf('Old/Components/Dropdown', module)
   .addParameters({
     notes: readme,
   })

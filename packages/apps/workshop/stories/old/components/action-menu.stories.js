@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-action-menu-stories';
 angular.module(moduleName, ['oui.action-menu']);
 
-storiesOf('Old|Components/Action Menu', module)
+storiesOf('Old/Components/Action Menu', module)
   .addParameters({
     notes: readme,
   })

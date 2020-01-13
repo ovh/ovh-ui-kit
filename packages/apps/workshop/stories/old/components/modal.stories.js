@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-modal-stories';
 angular.module(moduleName, ['oui.modal']);
 
-storiesOf('Old|Components/Modal', module)
+storiesOf('Old/Components/Modal', module)
   .addParameters({
     notes: readme,
   })

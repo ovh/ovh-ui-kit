@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-clipboard-stories';
 angular.module(moduleName, ['oui.clipboard']);
 
-storiesOf('Old|Components/Clipboard', module)
+storiesOf('Old/Components/Clipboard', module)
   .addParameters({
     notes: readme,
   })

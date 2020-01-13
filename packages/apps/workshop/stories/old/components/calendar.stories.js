@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-calendar-stories';
 angular.module(moduleName, ['oui.calendar']);
 
-storiesOf('Old|Components/Calendar', module)
+storiesOf('Old/Components/Calendar', module)
   .addParameters({
     notes: readme,
   })
