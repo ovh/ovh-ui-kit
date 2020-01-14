@@ -1,1 +1,0 @@
-{"version":3,"file":"main.d283920ee5892bdbee4f.bundle.js","sources":["webpack:///./src/utils.js"],"sourcesContent":["export function compileTemplate(template, scope = {}) {\n  return { template, scope };\n}\n\nexport default {\n  compileTemplate,\n};\n"],"mappings":"AAAA","sourceRoot":""}
