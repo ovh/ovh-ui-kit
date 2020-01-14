@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Styles/Radio', module)
+storiesOf('Old/Styles/Radio', module)
   .add(
     'Simple',
     () => `

@@ -14,7 +14,7 @@ angular.module(moduleName, [
   'oui.action-menu',
 ]);
 
-storiesOf('Old|Components/Tile', module)
+storiesOf('Old/Components/Tile', module)
   .addParameters({
     notes: readme,
   })

@@ -2,7 +2,7 @@ import { storiesOf } from '@storybook/html';
 
 import readme from '@ovh-ux/ui-kit.status/README.md';
 
-storiesOf('Components|Status/Native', module)
+storiesOf('Components/Status/Native', module)
   .addParameters({
     notes: readme,
   })

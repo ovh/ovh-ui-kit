@@ -12,7 +12,7 @@ import image from '../../_assets/ovh.svg';
 const moduleName = 'oui-select-picker-stories';
 angular.module(moduleName, ['oui.select-picker']);
 
-storiesOf('Old|Components/Select Picker', module)
+storiesOf('Old/Components/Select Picker', module)
   .addParameters({
     notes: readme,
   })

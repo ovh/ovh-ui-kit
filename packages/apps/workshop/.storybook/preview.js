@@ -1,10 +1,8 @@
 import '@storybook/addon-console';
-import { addParameters, addDecorator, configure } from "@storybook/html";
+import { addParameters, addDecorator } from "@storybook/html";
 import { withA11y } from '@storybook/addon-a11y';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
-
-// import { withCenteredLayout } from '../src/vcentered-addon/index'
 
 import 'angular';
 import 'angular-aria';
@@ -17,7 +15,6 @@ import '../src/index.less';
 // Addons
 addDecorator(withA11y);
 addDecorator(withKnobs);
-// addDecorator(withCenteredLayout);
 
 // Options
 addParameters({
@@ -30,9 +27,3 @@ addParameters({
     panelPosition: 'bottom',
   },
 });
-
-// Automatically import all files supported by Storybook
-configure(
-  require.context("../stories", true, /\.stories\.(js|jsx|ts|tsx|mdx)$/),
-  module,
-);

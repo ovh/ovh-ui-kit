@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Styles/Datagrid', module)
+storiesOf('Old/Styles/Datagrid', module)
   .add(
     'Simple',
     () => `

@@ -19,12 +19,12 @@
     "ui-select": "^0.19.8"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.3",
-    "@babel/node": "^7.6.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.9",
     "cross-env": "^6.0.3",
-    "karma": "^4.3.0",
+    "karma": "^4.4.1",
     "lodash": "^4.17.15"
   }
 }

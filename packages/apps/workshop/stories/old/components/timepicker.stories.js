@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-timepicker-stories';
 angular.module(moduleName, ['oui.timepicker']);
 
-storiesOf('Old|Components/Timepicker', module)
+storiesOf('Old/Components/Timepicker', module)
   .addParameters({
     notes: readme,
   })

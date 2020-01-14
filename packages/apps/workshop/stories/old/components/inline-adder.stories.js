@@ -15,7 +15,7 @@ angular.module(moduleName, [
   'oui.numeric',
 ]);
 
-storiesOf('Old|Components/Inline Adder', module)
+storiesOf('Old/Components/Inline Adder', module)
   .addParameters({
     notes: readme,
   })

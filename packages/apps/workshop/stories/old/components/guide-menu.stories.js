@@ -14,7 +14,7 @@ angular.module(moduleName, [
   'oui.header',
 ]);
 
-storiesOf('Old|Components/Guide Menu', module)
+storiesOf('Old/Components/Guide Menu', module)
   .addParameters({
     notes: readme,
   })

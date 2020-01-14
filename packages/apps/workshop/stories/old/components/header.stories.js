@@ -8,7 +8,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-header-stories';
 angular.module(moduleName, ['oui.header']);
 
-storiesOf('Old|Components/Header', module)
+storiesOf('Old/Components/Header', module)
   .addParameters({
     notes: readme,
   })

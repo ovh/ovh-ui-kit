@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Styles/Textarea', module)
+storiesOf('Old/Styles/Textarea', module)
   .add(
     'Native',
     () => `

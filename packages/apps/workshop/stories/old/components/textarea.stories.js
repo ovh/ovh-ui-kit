@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-textarea-stories';
 angular.module(moduleName, ['oui.textarea']);
 
-storiesOf('Old|Components/Textarea', module)
+storiesOf('Old/Components/Textarea', module)
   .addParameters({
     notes: readme,
   })

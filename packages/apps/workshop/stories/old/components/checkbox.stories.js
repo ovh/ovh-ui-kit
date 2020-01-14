@@ -15,7 +15,7 @@ angular.module(moduleName, [
   'oui.radio',
 ]);
 
-storiesOf('Old|Components/Checkbox', module)
+storiesOf('Old/Components/Checkbox', module)
   .addParameters({
     notes: readme,
   })

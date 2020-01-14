@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-slideshow-stories';
 angular.module(moduleName, ['oui.slideshow']);
 
-storiesOf('Old|Components/Slideshow', module)
+storiesOf('Old/Components/Slideshow', module)
   .addParameters({
     notes: readme,
   })

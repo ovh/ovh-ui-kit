@@ -11,7 +11,7 @@ import countries from '../../_data/countries.data.json';
 const moduleName = 'oui-select-stories';
 angular.module(moduleName, ['oui.select']);
 
-storiesOf('Old|Components/Select', module)
+storiesOf('Old/Components/Select', module)
   .addParameters({
     notes: readme,
   })

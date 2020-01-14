@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-switch-stories';
 angular.module(moduleName, ['oui.switch']);
 
-storiesOf('Old|Components/Switch', module)
+storiesOf('Old/Components/Switch', module)
   .addParameters({
     notes: readme,
   })

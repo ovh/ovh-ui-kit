@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Styles/Message', module)
+storiesOf('Old/Styles/Message', module)
   .add(
     'No icon',
     () => `

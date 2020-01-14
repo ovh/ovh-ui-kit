@@ -7,7 +7,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-typography-stories';
 angular.module(moduleName, ['oui.tooltip']);
 
-storiesOf('Old|Content/Typography', module)
+storiesOf('Old/Content/Typography', module)
   .add(
     'Headings',
     () => `

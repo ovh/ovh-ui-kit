@@ -9,7 +9,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-radio-stories';
 angular.module(moduleName, ['oui.radio']);
 
-storiesOf('Old|Components/Radio', module)
+storiesOf('Old/Components/Radio', module)
   .addParameters({
     notes: readme,
   })

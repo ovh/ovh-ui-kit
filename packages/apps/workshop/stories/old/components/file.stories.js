@@ -15,7 +15,7 @@ angular.module(moduleName, [
   'oui.button',
 ]);
 
-storiesOf('Old|Components/File', module)
+storiesOf('Old/Components/File', module)
   .addParameters({
     notes: readme,
   })

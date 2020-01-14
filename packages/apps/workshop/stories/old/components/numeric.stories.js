@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-numeric-stories';
 angular.module(moduleName, ['oui.numeric']);
 
-storiesOf('Old|Components/Numeric', module)
+storiesOf('Old/Components/Numeric', module)
   .addParameters({
     notes: readme,
   })

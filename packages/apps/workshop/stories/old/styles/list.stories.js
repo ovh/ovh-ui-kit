@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/html';
 
-storiesOf('Old|Styles/List', module)
+storiesOf('Old/Styles/List', module)
   .add(
     'Normal',
     () => `
