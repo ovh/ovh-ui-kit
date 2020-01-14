@@ -64,9 +64,7 @@ export default class DatagridPagingAbstract {
 
   getSortingConfiguration() {
     const selectedColumn = this.getColumn(this.currentSorting.columnName);
-    return Object.assign({
-      property: selectedColumn && selectedColumn.sortProperty,
-    }, this.currentSorting);
+    return { property: selectedColumn && selectedColumn.sortProperty, ...this.currentSorting };
   }
 
   getColumn(name) {
@@ -83,14 +81,14 @@ export default class DatagridPagingAbstract {
       return this.$q.when();
     }
 
-    return this.$q.all(rows.map(row => this.loadRowData(row)));
+    return this.$q.all(rows.map((row) => this.loadRowData(row)));
   }
 
   loadRowData(_row_) {
     const row = _row_;
     if (!this.isRowLoaded(row) && !row.$promise) {
       row.$promise = this.$q.when(this.rowLoader({ $row: row }))
-        .then(fullRow => Object.assign(row, fullRow))
+        .then((fullRow) => Object.assign(row, fullRow))
         .finally(() => {
           delete row.$promise;
         });
@@ -110,7 +108,7 @@ export default class DatagridPagingAbstract {
      * @return {Boolean}     true if loaded
      */
   isRowLoaded(row) {
-    return this.columns.map(column => hasIn(row, column.name))
+    return this.columns.map((column) => hasIn(row, column.name))
       .reduce((a, b) => a && b, true);
   }
 

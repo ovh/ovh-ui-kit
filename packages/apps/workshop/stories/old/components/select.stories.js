@@ -156,7 +156,7 @@ storiesOf('Old/Components/Select', module)
     `, {
       $ctrl: {
         items: countries,
-        groupByFirstLetter: item => item.country.name.substr(0, 1).toUpperCase(),
+        groupByFirstLetter: (item) => item.country.name.substr(0, 1).toUpperCase(),
         placeholder: 'Select a country...',
       },
     })),
@@ -179,7 +179,7 @@ storiesOf('Old/Components/Select', module)
     `, {
       $ctrl: {
         items: countries,
-        groupByFirstLetter: item => item.country.name.substr(0, 1).toUpperCase(),
+        groupByFirstLetter: (item) => item.country.name.substr(0, 1).toUpperCase(),
         placeholder: 'Select a country...',
       },
     })), {

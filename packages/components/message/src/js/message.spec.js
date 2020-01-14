@@ -1,7 +1,7 @@
 import filter from 'lodash/filter';
 
 function getElementsByClassName(element, tag, className) {
-  return filter(element.find(tag), x => angular.element(x).hasClass(className));
+  return filter(element.find(tag), (x) => angular.element(x).hasClass(className));
 }
 
 function getCloseButton(element) {

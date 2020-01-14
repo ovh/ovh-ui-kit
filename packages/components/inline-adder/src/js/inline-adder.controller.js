@@ -26,7 +26,7 @@ export default class {
 
   onFormsChange() {
     // Filter boolean values used for ngShow
-    const forms = filter(this.forms, item => angular.isObject(item));
+    const forms = filter(this.forms, (item) => angular.isObject(item));
     this.onChange({ forms });
   }
 

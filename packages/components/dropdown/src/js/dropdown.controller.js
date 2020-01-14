@@ -107,7 +107,7 @@ export default class {
     this.updatePopper();
 
     this.$document.on('click', this.documentClickHandler);
-    this.$document.on('keydown', evt => this.triggerKeyHandler(evt));
+    this.$document.on('keydown', (evt) => this.triggerKeyHandler(evt));
 
     // Update trigger
     if (this.triggerCtrl.afterOpen) {

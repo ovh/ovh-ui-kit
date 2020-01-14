@@ -25,5 +25,12 @@ addParameters({
   options: {
     name: 'OVH UI Kit',
     panelPosition: 'bottom',
+    storySort: (a, b) => {
+      if (a[0].includes('old-')) {
+        return 1;
+      }
+
+      return 0;
+    },
   },
 });

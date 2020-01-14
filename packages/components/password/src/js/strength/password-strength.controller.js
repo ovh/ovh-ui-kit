@@ -60,7 +60,7 @@ export default class {
 
     this.$scope.$watch(
       () => this.score,
-      score => this.updateStrength(score),
+      (score) => this.updateStrength(score),
     );
   }
 }

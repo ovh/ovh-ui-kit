@@ -14,11 +14,11 @@ describe('ouiRadio', () => {
 
   describe('Component', () => {
     describe('Radio', () => {
-      const getRadioInputElement = element => element[0].querySelector('input[type=radio]');
-      const getRadioLabelElement = element => element[0].querySelector('label');
-      const getRadioTextContainerElement = element => element[0].querySelector('.oui-radio__label span:first-child');
-      const getRadioDescriptionElement = element => element[0].querySelector('.oui-radio__description');
-      const getRadioFooterElement = element => element[0].querySelector('.oui-radio__footer');
+      const getRadioInputElement = (element) => element[0].querySelector('input[type=radio]');
+      const getRadioLabelElement = (element) => element[0].querySelector('label');
+      const getRadioTextContainerElement = (element) => element[0].querySelector('.oui-radio__label span:first-child');
+      const getRadioDescriptionElement = (element) => element[0].querySelector('.oui-radio__description');
+      const getRadioFooterElement = (element) => element[0].querySelector('.oui-radio__footer');
 
       describe('id attribute', () => {
         it('should generate an id for the input and label when undefined', () => {
@@ -311,10 +311,10 @@ describe('ouiRadio', () => {
   });
 
   describe('Radio Group', () => {
-    const getRadioInputElement = element => angular.element(element[0].querySelector('input[type=radio]'));
+    const getRadioInputElement = (element) => angular.element(element[0].querySelector('input[type=radio]'));
     const getElementByClass = (element, value) => angular.element(element[0].querySelector(value));
     const getRadioInputElementByValue = (element, value) => angular.element(element[0].querySelector(`input[type=radio][value=${value}]`));
-    const getRadioGroupElement = element => angular.element(element[0]);
+    const getRadioGroupElement = (element) => angular.element(element[0]);
     const clickRadio = (radioToCheck) => {
       radioToCheck.prop('checked', true);
       radioToCheck.triggerHandler('click'); // NG 1.6
@@ -440,10 +440,10 @@ describe('ouiRadio', () => {
   });
 
   describe('Radio Toggle Group', () => {
-    const getRadioInputElement = element => angular.element(element[0].querySelector('input[type=radio]'));
+    const getRadioInputElement = (element) => angular.element(element[0].querySelector('input[type=radio]'));
     const getElementByClass = (element, value) => angular.element(element[0].querySelector(value));
     const getRadioInputElementByValue = (element, value) => angular.element(element[0].querySelector(`input[type=radio][value=${value}]`));
-    const getRadioGroupElement = element => angular.element(element[0]);
+    const getRadioGroupElement = (element) => angular.element(element[0]);
     const clickRadio = (radioToCheck) => {
       radioToCheck.prop('checked', true);
       radioToCheck.triggerHandler('click'); // NG 1.6

@@ -11,7 +11,7 @@ const folder = './src/svg/flags/';
 
 // List all filenames in flags folder
 fs.readdir(folder, (err, files) => {
-  const flags = files.map(file => file.replace(/\.svg/, ''));
+  const flags = files.map((file) => file.replace(/\.svg/, ''));
 
   // Init less file (relative path from the package root, not this file)
   const file = fs.createWriteStream('src/less/_flags.less');
@@ -19,7 +19,7 @@ fs.readdir(folder, (err, files) => {
   log(chalk.blue('Generated'), chalk.cyan(path.resolve(file.path)));
 
   const flagsIndexes = ['@oui-flag-index:'];
-  flags.forEach(flag => flagsIndexes.push(`  ~"${flag}"`));
+  flags.forEach((flag) => flagsIndexes.push(`  ~"${flag}"`));
 
   const lastIndex = flagsIndexes.length;
   flagsIndexes[lastIndex - 1] += ';';

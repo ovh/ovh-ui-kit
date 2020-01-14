@@ -4,12 +4,12 @@ describe('ouiFile', () => {
   let $timeout;
   let TestUtils;
 
-  const getAttachments = element => element[0].querySelector('.oui-file-attachments');
-  const getDropArea = element => element[0].querySelector('.oui-file-droparea');
-  const getInputFile = element => element[0].querySelector('.oui-file__input_file');
-  const getInputHidden = element => element[0].querySelector('.oui-file__input_hidden');
-  const getMultipleSelector = element => element[0].querySelector('.oui-file-multiple');
-  const getCustomSelector = element => element[0].querySelector('.oui-file-selector');
+  const getAttachments = (element) => element[0].querySelector('.oui-file-attachments');
+  const getDropArea = (element) => element[0].querySelector('.oui-file-droparea');
+  const getInputFile = (element) => element[0].querySelector('.oui-file__input_file');
+  const getInputHidden = (element) => element[0].querySelector('.oui-file__input_hidden');
+  const getMultipleSelector = (element) => element[0].querySelector('.oui-file-multiple');
+  const getCustomSelector = (element) => element[0].querySelector('.oui-file-selector');
 
   const mockFile = {
     name: 'test.png',

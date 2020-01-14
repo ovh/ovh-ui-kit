@@ -138,9 +138,9 @@ export default class DatagridController {
 
     // Manage filter configuration
     this.isSearchTextVisible = this.columns
-      .filter(column => column.searchable)
+      .filter((column) => column.searchable)
       .length > 0;
-    this.filterableColumns = this.columns.filter(column => column.filterable);
+    this.filterableColumns = this.columns.filter((column) => column.filterable);
   }
 
   $onChanges(changes) {
@@ -218,7 +218,7 @@ export default class DatagridController {
       });
 
     this.columns = this.availableColumns
-      .filter(column => !column.hidden);
+      .filter((column) => !column.hidden);
 
     this.columns.forEach((_column_) => {
       const column = _column_;
@@ -242,10 +242,10 @@ export default class DatagridController {
 
   onColumnsChange(columns) {
     this.availableColumns = angular.copy(columns);
-    this.columns = columns.filter(column => !column.hidden);
+    this.columns = columns.filter((column) => !column.hidden);
 
     const columnsParameters = this.availableColumns
-      .filter(column => column.name)
+      .filter((column) => column.name)
       .map((column) => {
         const cleanColumn = {
           name: column.name,

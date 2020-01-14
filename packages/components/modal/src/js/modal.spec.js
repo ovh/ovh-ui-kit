@@ -1,13 +1,13 @@
 describe('ouiModal', () => {
   let TestUtils;
 
-  const getModal = element => angular.element(element[0].querySelector('.oui-modal'));
-  const getBody = element => angular.element(element[0].querySelector('.oui-modal__body'));
-  const getTitle = element => angular.element(element[0].querySelector('.oui-modal__title'));
-  const getFooter = element => angular.element(element[0].querySelector('.oui-modal__footer'));
-  const getPrimaryButton = element => angular.element(element[0].querySelector('.oui-button_primary'));
-  const getSecondaryButton = element => angular.element(element[0].querySelector('.oui-button_secondary'));
-  const getDismissButton = element => angular.element(element[0].querySelector('.oui-modal__header .oui-icon'));
+  const getModal = (element) => angular.element(element[0].querySelector('.oui-modal'));
+  const getBody = (element) => angular.element(element[0].querySelector('.oui-modal__body'));
+  const getTitle = (element) => angular.element(element[0].querySelector('.oui-modal__title'));
+  const getFooter = (element) => angular.element(element[0].querySelector('.oui-modal__footer'));
+  const getPrimaryButton = (element) => angular.element(element[0].querySelector('.oui-button_primary'));
+  const getSecondaryButton = (element) => angular.element(element[0].querySelector('.oui-button_secondary'));
+  const getDismissButton = (element) => angular.element(element[0].querySelector('.oui-modal__header .oui-icon'));
 
   const title = 'Modal title';
   const body = 'This is the modal content';

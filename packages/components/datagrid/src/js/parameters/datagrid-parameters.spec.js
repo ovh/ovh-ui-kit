@@ -5,7 +5,7 @@ describe('ouiDatagridParameters', () => {
   let $timeout;
   let TestUtils;
 
-  const getColumns = element => element[0].querySelectorAll('.oui-datagrid-parameters__column');
+  const getColumns = (element) => element[0].querySelectorAll('.oui-datagrid-parameters__column');
   const getCheckbox = (columnsElements, index) => angular.element(columnsElements[index]).find('input');
 
   beforeEach(angular.mock.module('oui.datagrid'));

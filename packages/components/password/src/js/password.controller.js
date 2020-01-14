@@ -47,7 +47,7 @@ export default class {
       if ('confirm' in this.$attrs) {
         this.$scope.$watch(
           () => this.confirm === this.model,
-          value => this.updateValidity('confirm', value),
+          (value) => this.updateValidity('confirm', value),
         );
       }
     });

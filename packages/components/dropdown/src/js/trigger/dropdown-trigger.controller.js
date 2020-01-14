@@ -37,7 +37,7 @@ export default class {
             'aria-expanded': false,
           })
           .on('click', () => !this.disabled && this.dropdown.onTriggerClick())
-          .on('blur', evt => this.dropdown.triggerBlurHandler(evt));
+          .on('blur', (evt) => this.dropdown.triggerBlurHandler(evt));
 
         this.$trigger = this.$element;
       }
@@ -56,7 +56,7 @@ export default class {
   afterOpen() {
     this.$trigger.attr('aria-expanded', true);
     this.$trigger[0].focus();
-    this.$trigger.on('keydown', evt => this.dropdown.triggerKeyHandler(evt));
+    this.$trigger.on('keydown', (evt) => this.dropdown.triggerKeyHandler(evt));
   }
 
   afterClose() {

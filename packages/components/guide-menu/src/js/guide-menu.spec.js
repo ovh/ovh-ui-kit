@@ -8,7 +8,7 @@ describe('ouiGuideMenu', () => {
     TestUtils = _TestUtils_;
   }));
 
-  const getButtonTextEl = element => angular.element(element[0].querySelector('.oui-guide-button__text'));
+  const getButtonTextEl = (element) => angular.element(element[0].querySelector('.oui-guide-button__text'));
 
   describe('Component', () => {
     it('should display a guide menu', () => {

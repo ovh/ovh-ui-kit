@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import zxcvbn from 'zxcvbn';
 import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
@@ -149,3 +150,4 @@ storiesOf('Old/Components/Password', module)
       }(),
     })),
   );
+/* eslint-enable max-classes-per-file */

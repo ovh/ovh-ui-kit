@@ -17,16 +17,16 @@ describe('ouiSelect', () => {
 
   const selectedItemClass = 'ui-select-choices-row_selected';
 
-  const getContainer = element => element[0].querySelector('.ui-select-container');
-  const getDropdownButton = element => element[0].querySelector('.ui-select-match');
-  const getMultipleDropdownButton = element => element[0].querySelector('.ui-select-match-container');
-  const getMultipleMatchItem = element => element[0].querySelectorAll('.ui-select-match-item');
-  const getDropdown = element => element[0].querySelector('.ui-select-choices-content');
-  const getFocusser = element => element[0].querySelector('.ui-select-focusser');
-  const getItemsGroups = element => element[0].querySelectorAll('.ui-select-choices-group');
+  const getContainer = (element) => element[0].querySelector('.ui-select-container');
+  const getDropdownButton = (element) => element[0].querySelector('.ui-select-match');
+  const getMultipleDropdownButton = (element) => element[0].querySelector('.ui-select-match-container');
+  const getMultipleMatchItem = (element) => element[0].querySelectorAll('.ui-select-match-item');
+  const getDropdown = (element) => element[0].querySelector('.ui-select-choices-content');
+  const getFocusser = (element) => element[0].querySelector('.ui-select-focusser');
+  const getItemsGroups = (element) => element[0].querySelectorAll('.ui-select-choices-group');
   const getItemsGroup = (element, index) => element[0].querySelectorAll('.ui-select-choices-group')[index];
-  const getItemsGroupLabel = groupElement => groupElement.querySelector('.ui-select-choices-group-label');
-  const getDropdownItems = element => element[0].querySelectorAll('.ui-select-choices-row');
+  const getItemsGroupLabel = (groupElement) => groupElement.querySelector('.ui-select-choices-group-label');
+  const getDropdownItems = (element) => element[0].querySelectorAll('.ui-select-choices-row');
   const getDropdownItem = (element, index) => element[0].querySelectorAll('.ui-select-choices-row')[index];
 
   describe('Component', () => {
@@ -256,7 +256,7 @@ describe('ouiSelect', () => {
 
     describe('Grouped', () => {
       it('should display all the choices', () => {
-        const groupByFirstLetter = item => item.country.name.substr(0, 1).toUpperCase();
+        const groupByFirstLetter = (item) => item.country.name.substr(0, 1).toUpperCase();
         const element = TestUtils.compileTemplate(`
                     <oui-select name="country"
                         model="$ctrl.country"
@@ -375,7 +375,7 @@ describe('ouiSelect', () => {
 
     describe('Disable options', () => {
       it('should disable corresponding items', () => {
-        const disableCountry = item => item.country.name === data[3].country.name;
+        const disableCountry = (item) => item.country.name === data[3].country.name;
         const element = TestUtils.compileTemplate(`
                     <oui-select name="country"
                         model="$ctrl.country"
@@ -398,7 +398,7 @@ describe('ouiSelect', () => {
 
       it('should update item', () => {
         const countries = data.concat({ name: 'Imaginary country', code: 'IC' });
-        const disableCountry = item => item.code === '';
+        const disableCountry = (item) => item.code === '';
         const element = TestUtils.compileTemplate(`
                     <oui-select name="country"
                         model="$ctrl.country"

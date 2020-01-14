@@ -3,9 +3,9 @@ describe('ouiTextarea', () => {
   let $timeout;
   let TestUtils;
 
-  const getController = elm => elm.controller('ouiTextarea');
-  const getTextarea = elm => elm[0].querySelector('textarea');
-  const getFooter = elm => elm[0].querySelector('.oui-textarea__footer');
+  const getController = (elm) => elm.controller('ouiTextarea');
+  const getTextarea = (elm) => elm[0].querySelector('textarea');
+  const getFooter = (elm) => elm[0].querySelector('.oui-textarea__footer');
 
   const disabledClass = 'oui-textarea_disabled';
   const readonlyClass = 'oui-textarea_readonly';

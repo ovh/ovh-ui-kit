@@ -10,13 +10,13 @@ describe('ouiTile', () => {
     TestUtils = _TestUtils_;
   }));
 
-  const getTileHeading = element => angular.element(element[0].querySelector('.oui-tile__title'));
-  const getTileDesc = element => angular.element(element[0].querySelector('.oui-tile__legend'));
-  const getTileButton = element => angular.element(element[0].querySelector('.oui-tile__button'));
-  const getTileDefinitionTerm = element => angular.element(element[0].querySelector('.oui-tile__term'));
-  const getTileDefinitionDesc = element => angular.element(element[0].querySelector('.oui-tile__description'));
-  const getTileDefinitionActions = element => angular.element(element[0].querySelector('.oui-tile__actions'));
-  const getActionMenu = element => angular.element(element[0].querySelector('.oui-tile__actions'));
+  const getTileHeading = (element) => angular.element(element[0].querySelector('.oui-tile__title'));
+  const getTileDesc = (element) => angular.element(element[0].querySelector('.oui-tile__legend'));
+  const getTileButton = (element) => angular.element(element[0].querySelector('.oui-tile__button'));
+  const getTileDefinitionTerm = (element) => angular.element(element[0].querySelector('.oui-tile__term'));
+  const getTileDefinitionDesc = (element) => angular.element(element[0].querySelector('.oui-tile__description'));
+  const getTileDefinitionActions = (element) => angular.element(element[0].querySelector('.oui-tile__actions'));
+  const getActionMenu = (element) => angular.element(element[0].querySelector('.oui-tile__actions'));
 
   describe('Component', () => {
     it('should have the default classname', () => {

@@ -9,16 +9,15 @@ export default class DatagridRemotePaging extends DatagridPagingAbstract {
 
   loadData(skipSort) {
     return this.rowsLoader({
-      $config: Object.assign({
+      $config: {
         offset: this.offset,
         pageSize: this.pageSize,
         sort: this.getSortingConfiguration(),
         criteria: this.criteria,
-      }, {
         skipSort,
-      }),
+      },
     })
-      .then(result => this.loadRows(result));
+      .then((result) => this.loadRows(result));
   }
 
   loadRows(pageResult) {

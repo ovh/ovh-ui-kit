@@ -2,7 +2,7 @@ export default ($sce) => {
   'ngInject';
 
   const highlight = '<mark class="oui-autocomplete-highlight">$&</mark>';
-  const escapeRegexp = query => query.replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1');
+  const escapeRegexp = (query) => query.replace(/([.?*+^$[\]\\(){}|-])/g, '\\$1');
 
   // Highlight query in the beginning of each matching words
   return (matchItem, query) => {

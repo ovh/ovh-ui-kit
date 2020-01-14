@@ -21,7 +21,7 @@ export default class {
 
   moveToSource(item) {
     if (angular.isArray(this.source)) {
-      remove(this.target, source => source === item);
+      remove(this.target, (source) => source === item);
       this.source.push(item);
 
       // Callbacks
@@ -39,7 +39,7 @@ export default class {
 
   moveToTarget(item) {
     if (angular.isArray(this.target)) {
-      remove(this.source, source => source === item);
+      remove(this.source, (source) => source === item);
       this.target.push(item);
 
       // Callbacks

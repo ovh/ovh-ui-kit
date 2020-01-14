@@ -2,9 +2,9 @@ describe('ouiPassword', () => {
   let $timeout;
   let TestUtils;
 
-  const getInput = element => angular.element(element[0].querySelector('.oui-password__input'));
-  const getStrengthMeter = element => angular.element(element[0].querySelector('.oui-progress'));
-  const getVisibilityButton = element => angular.element(element[0].querySelector('.oui-password__visibility'));
+  const getInput = (element) => angular.element(element[0].querySelector('.oui-password__input'));
+  const getStrengthMeter = (element) => angular.element(element[0].querySelector('.oui-progress'));
+  const getVisibilityButton = (element) => angular.element(element[0].querySelector('.oui-password__visibility'));
 
   beforeEach(angular.mock.module('oui.password'));
   beforeEach(angular.mock.module('oui.password.configuration'));
@@ -209,7 +209,7 @@ describe('ouiPassword', () => {
     });
 
     describe('Strength', () => {
-      const compileStrength = score => TestUtils.compileTemplate(`
+      const compileStrength = (score) => TestUtils.compileTemplate(`
         <oui-password id="foo" name="bar" model="$ctrl.model">
           <oui-password-strength score="$ctrl.score"></oui-password-strength>
         </oui-password>`, {

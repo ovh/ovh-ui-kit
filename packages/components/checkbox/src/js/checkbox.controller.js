@@ -22,7 +22,7 @@ export default class {
     // $watch is required because there is no other way
     // to be notified when the value has changed from the
     // outside
-    this.$scope.$watch('$ctrl.model', newValue => this.updateIndeterminateState(newValue));
+    this.$scope.$watch('$ctrl.model', (newValue) => this.updateIndeterminateState(newValue));
   }
 
   $onInit() {

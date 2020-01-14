@@ -354,7 +354,7 @@ storiesOf('Old/Components/Datagrid', module)
           return new Promise((resolve) => {
             setTimeout(() => {
               resolve({
-                data: map(page, line => pick(line, ['firstName', 'lastName'])),
+                data: map(page, (line) => pick(line, ['firstName', 'lastName'])),
                 meta: {
                   currentOffset: offset,
                   pageCount: Math.ceil(data.length / pageSize),

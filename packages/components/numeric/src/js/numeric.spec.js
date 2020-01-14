@@ -4,9 +4,9 @@ describe('ouiNumeric', () => {
   let $rootScope;
   let $compile;
 
-  const getDecrementBtn = elt => angular.element(elt.find('button')[0]);
-  const getIncrementBtn = elt => angular.element(elt.find('button')[1]);
-  const getInput = elt => angular.element(elt.find('input')[0]);
+  const getDecrementBtn = (elt) => angular.element(elt.find('button')[0]);
+  const getIncrementBtn = (elt) => angular.element(elt.find('button')[1]);
+  const getInput = (elt) => angular.element(elt.find('input')[0]);
 
   beforeEach(angular.mock.module('oui.numeric'));
 

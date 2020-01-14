@@ -1,5 +1,9 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.js'],
+  stories: [
+    '../stories/content/**/*.stories.js',
+    '../stories/components/**/*.stories.js',
+    '../stories/old/**/*.stories.js',
+  ],
   addons: [
     // For panels
     // Order of imports defined tabs order in Storybook

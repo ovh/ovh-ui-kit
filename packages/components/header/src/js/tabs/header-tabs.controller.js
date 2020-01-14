@@ -68,7 +68,7 @@ export default class {
 
       this.tabsList = this.$element[0].querySelector('.oui-header-tabs__list');
       this.$scope.$watch(() => this.tabsList.childNodes.length, () => {
-        this.tabs = filter(this.tabsList.childNodes, node => node.nodeType === 1);
+        this.tabs = filter(this.tabsList.childNodes, (node) => node.nodeType === 1);
         this.checkScroll();
       });
     });

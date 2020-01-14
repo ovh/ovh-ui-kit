@@ -19,11 +19,11 @@ describe('ouiField', () => {
     TestUtils = _TestUtils_;
   }));
 
-  const getField = elt => elt.find('oui-field');
-  const getLabel = elt => elt[0].querySelector('label');
-  const getPopover = elt => elt[0].querySelector('.oui-popover');
-  const getError = elt => elt[0].querySelector('.oui-field__error');
-  const getHelper = elt => elt[0].querySelector('.oui-field__helper');
+  const getField = (elt) => elt.find('oui-field');
+  const getLabel = (elt) => elt[0].querySelector('label');
+  const getPopover = (elt) => elt[0].querySelector('.oui-popover');
+  const getError = (elt) => elt[0].querySelector('.oui-field__error');
+  const getHelper = (elt) => elt[0].querySelector('.oui-field__helper');
   const getElementByClass = (element, value) => angular.element(element[0].querySelector(value));
   const getControl = (controller, name) => angular.element(controller.controls[name][0]);
 
@@ -478,8 +478,8 @@ describe('ouiField', () => {
     });
 
     describe('with oui-select', () => {
-      const getDropdownButton = element => element[0].querySelector('.ui-select-match');
-      const getSelectController = element => element.find('oui-select').controller('ouiSelect');
+      const getDropdownButton = (element) => element[0].querySelector('.ui-select-match');
+      const getSelectController = (element) => element.find('oui-select').controller('ouiSelect');
 
       it('should give focus to oui-select after on label click', () => {
         const element = TestUtils.compileTemplate(`

@@ -26,7 +26,7 @@ export default class {
 
       if (angular.isNumber(this.pageSizeMax)) {
         this.pageSizeList = this.pageSizeList
-          .filter(pageSize => pageSize <= this.pageSizeMax);
+          .filter((pageSize) => pageSize <= this.pageSizeMax);
 
         // ... and add the max page size if necessary.
         if (this.pageSizeList.indexOf(this.pageSizeMax) < 0) {

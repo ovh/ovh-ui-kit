@@ -87,7 +87,7 @@ export default class {
     if (angular.isArray(files)) {
       files.forEach((file) => {
         // Check for duplicate before adding
-        if (!find(this.model, item => file.name === item.name)) {
+        if (!find(this.model, (item) => file.name === item.name)) {
           this.getFileInfos(file);
           this.checkFileValidity(file);
           this.loadFilePreview(file);
@@ -102,7 +102,7 @@ export default class {
 
   removeFile(file) {
     if (angular.isArray(this.model)) {
-      remove(this.model, item => item === file);
+      remove(this.model, (item) => item === file);
     }
   }
 

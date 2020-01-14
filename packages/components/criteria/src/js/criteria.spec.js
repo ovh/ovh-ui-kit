@@ -146,7 +146,7 @@ describe('ouiCriteria', () => {
       });
 
       it('should be deleted if an equivalent non-preview criterion is added', () => {
-        const nonPreviewCriterion = Object.assign({}, previewCriterion);
+        const nonPreviewCriterion = { ...previewCriterion };
         nonPreviewCriterion.preview = false;
 
         // Initial state

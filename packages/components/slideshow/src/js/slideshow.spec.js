@@ -5,13 +5,13 @@ describe('ouiSlideshow', () => {
   let $document;
   let $timeout;
 
-  const getSlideshow = element => angular.element(element[0].querySelector('.oui-slideshow'));
-  const getBody = element => angular.element(element[0].querySelector('.oui-slideshow__body'));
-  const getFirstPanel = element => angular.element(element[0].querySelector('.oui-slideshow-panel'));
-  const getDismissButton = element => angular.element(element[0].querySelector('.oui-slideshow__header .oui-icon'));
-  const getNextButton = element => angular.element(element[0].querySelector('.oui-slideshow__next-button'));
-  const getFirstIndicator = element => angular.element(element[0].querySelector('.oui-slideshow__indicators > button'));
-  const getLastIndicator = element => angular.element(element[0].querySelector('.oui-slideshow__indicators > button:last-child'));
+  const getSlideshow = (element) => angular.element(element[0].querySelector('.oui-slideshow'));
+  const getBody = (element) => angular.element(element[0].querySelector('.oui-slideshow__body'));
+  const getFirstPanel = (element) => angular.element(element[0].querySelector('.oui-slideshow-panel'));
+  const getDismissButton = (element) => angular.element(element[0].querySelector('.oui-slideshow__header .oui-icon'));
+  const getNextButton = (element) => angular.element(element[0].querySelector('.oui-slideshow__next-button'));
+  const getFirstIndicator = (element) => angular.element(element[0].querySelector('.oui-slideshow__indicators > button'));
+  const getLastIndicator = (element) => angular.element(element[0].querySelector('.oui-slideshow__indicators > button:last-child'));
 
   const KEYBOARD_KEYS = {
     ESC: 27,

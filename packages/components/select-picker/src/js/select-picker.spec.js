@@ -11,12 +11,12 @@ describe('ouiSelectPicker', () => {
     $timeout = _$timeout_;
   }));
 
-  const getInputElement = element => element[0].querySelector('input[type=radio]');
-  const getLabelElement = element => element[0].querySelector('label');
-  const getTextContainerElement = element => element[0].querySelector('.oui-select-picker__label span:first-child');
-  const getDescriptionElement = element => element[0].querySelector('.oui-select-picker__description');
-  const getPictureElement = element => element[0].querySelector('.oui-select-picker__picture-container');
-  const getFooterElement = element => element[0].querySelector('.oui-select-picker__footer');
+  const getInputElement = (element) => element[0].querySelector('input[type=radio]');
+  const getLabelElement = (element) => element[0].querySelector('label');
+  const getTextContainerElement = (element) => element[0].querySelector('.oui-select-picker__label span:first-child');
+  const getDescriptionElement = (element) => element[0].querySelector('.oui-select-picker__description');
+  const getPictureElement = (element) => element[0].querySelector('.oui-select-picker__picture-container');
+  const getFooterElement = (element) => element[0].querySelector('.oui-select-picker__footer');
 
   describe('Component', () => {
     describe('id attribute', () => {

@@ -34,7 +34,7 @@ export default class Filter {
   applyCriteria(collection, criterion) {
     // Text search
     if (criterion.property === null && criterion.operator === 'contains') {
-      return collection.filter(item => this.itemContainsText(item, criterion.value));
+      return collection.filter((item) => this.itemContainsText(item, criterion.value));
     }
 
     const propertyMeta = find(this.columns, ['name', criterion.property]);
@@ -76,7 +76,7 @@ export default class Filter {
 
   getSearchableColumns() {
     return this.columns
-      .filter(column => column.searchable)
-      .map(column => column.name);
+      .filter((column) => column.searchable)
+      .map((column) => column.name);
   }
 }

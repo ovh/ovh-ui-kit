@@ -67,7 +67,7 @@ export default class SelectPickerController {
         .removeAttr('name');
 
       this.labelElement = this.$element.find('label');
-      this.labelElement.on('click', event => this.openSelectMenu(event));
+      this.labelElement.on('click', (event) => this.openSelectMenu(event));
 
       // Prevent click propagation on parent label (Safari)
       this.dropdownElement = angular.element(this.$element[0].querySelectorAll('.ui-select-match'));

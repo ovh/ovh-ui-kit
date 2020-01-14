@@ -1,3 +1,4 @@
+/* eslint-disable max-classes-per-file */
 import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
@@ -143,3 +144,4 @@ storiesOf('Old/Components/Calendar', module)
     <oui-calendar model="$ctrl.model" mode="multiple"></oui-calendar>
     `)),
   );
+/* eslint-enable max-classes-per-file */

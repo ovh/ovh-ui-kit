@@ -10,7 +10,7 @@ describe('ouiSwitch', () => {
     $timeout = _$timeout_;
   }));
 
-  const getSwitchInputElement = element => element[0].querySelector('input[type=checkbox]');
+  const getSwitchInputElement = (element) => element[0].querySelector('input[type=checkbox]');
 
   describe('Component', () => {
     describe('input checkbox', () => {
