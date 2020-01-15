@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean, radios } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -9,13 +8,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-radio-stories';
 angular.module(moduleName, ['oui.radio']);
 
-storiesOf('Old/Components/Radio', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Radio',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio
       disabled="$ctrl.disabled"
       model="$ctrl.model"
@@ -32,8 +35,8 @@ storiesOf('Old/Components/Radio', module)
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2">
       Value B
-    </oui-radio>
-    `, {
+    </oui-radio>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'a',
@@ -41,11 +44,13 @@ storiesOf('Old/Components/Radio', module)
         value2: 'b',
         onChange: action('onChange'),
       },
-    })),
-  )
-  .add(
-    'With description',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const WithDescription = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       disabled="$ctrl.disabled"
@@ -63,8 +68,8 @@ storiesOf('Old/Components/Radio', module)
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2">
       Value B
-    </oui-radio>
-    `, {
+    </oui-radio>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'a',
@@ -72,11 +77,17 @@ storiesOf('Old/Components/Radio', module)
         value2: 'b',
         onChange: action('onChange'),
       },
-    })),
-  )
-  .add(
-    'Thumbnails',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithDescription.story = {
+  name: 'With description',
+};
+
+export const Thumbnails = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       disabled="$ctrl.disabled"
@@ -95,16 +106,18 @@ storiesOf('Old/Components/Radio', module)
       value="b"
       thumbnail>
       Thumbnail Light
-    </oui-radio>
-    `, {
+    </oui-radio>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'Size',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Size = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio
       description="Pellentesque euismod magna rutrum lectus gravida semper."
       disabled="$ctrl.disabled"
@@ -131,16 +144,18 @@ storiesOf('Old/Components/Radio', module)
       variant="light"
       thumbnail>
       Thumbnail Light
-    </oui-radio>
-    `, {
+    </oui-radio>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'With Footer',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const WithFooter = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio
       description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       footer="Lorem ipsum dolor sit amet"
@@ -159,16 +174,18 @@ storiesOf('Old/Components/Radio', module)
       variant="light"
       thumbnail>
       Thumbnail Light
-    </oui-radio>
-    `, {
+    </oui-radio>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'In group',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const InGroup = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio-group
       model="$ctrl.model"
       on-change="$ctrl.onChange(modelValue)">
@@ -187,8 +204,8 @@ storiesOf('Old/Components/Radio', module)
         value="$ctrl.value3">
         Value C
       </oui-radio>
-    </oui-radio-group>
-    `, {
+    </oui-radio-group>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'a',
@@ -197,11 +214,17 @@ storiesOf('Old/Components/Radio', module)
         value3: 'c',
         onChange: action('onChange'),
       },
-    })),
-  )
-  .add(
-    'In toggle group',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+InGroup.story = {
+  name: 'In group',
+};
+
+export const InToggleGroup = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-radio-toggle-group
       direction="{{$ctrl.direction}}"
       model="$ctrl.model"
@@ -221,19 +244,28 @@ storiesOf('Old/Components/Radio', module)
         value="$ctrl.value3">
         Value C
       </oui-radio>
-    </oui-radio-toggle-group>
-    `, {
+    </oui-radio-toggle-group>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
-        direction: radios('Direction', {
-          Column: 'column',
-          Row: 'row',
-        }, 'row'),
+        direction: radios(
+          'Direction',
+          {
+            Column: 'column',
+            Row: 'row',
+          },
+          'row',
+        ),
         model: 'a',
         value1: 'a',
         value2: 'b',
         value3: 'c',
         onChange: action('onChange'),
       },
-    })),
-  );
+    },
+  ),
+);
+
+InToggleGroup.story = {
+  name: 'In toggle group',
+};

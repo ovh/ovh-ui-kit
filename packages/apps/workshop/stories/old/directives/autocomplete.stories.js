@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -10,27 +9,36 @@ import { strings, objects } from '../../_data/autocomplete.data.json';
 const moduleName = 'oui-autocomplete-stories';
 angular.module(moduleName, ['oui.autocomplete']);
 
-storiesOf('Old/Directives/Autocomplete', module)
-  .add(
-    'Array of strings',
-    forModule(moduleName).createElement(() => compileTemplate(`
+export default {
+  title: 'Old/Directives/Autocomplete',
+};
+
+export const ArrayOfStrings = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <input
       type="text"
       class="oui-input oui-input_inline"
       placeholder="Search country name"
       ng-model="$ctrl.model"
       oui-autocomplete="$ctrl.suggestions"
-      oui-autocomplete-on-select="$ctrl.onAutocomplete(value)">
-    `, {
+      oui-autocomplete-on-select="$ctrl.onAutocomplete(value)">`,
+    {
       $ctrl: {
         suggestions: strings,
         onAutocomplete: action('onAutocomplete'),
       },
-    })),
-  )
-  .add(
-    'Array of objects',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+ArrayOfStrings.story = {
+  name: 'Array of strings',
+};
+
+export const ArrayOfObjects = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <input
       type="text"
       class="oui-input oui-input_inline"
@@ -38,11 +46,16 @@ storiesOf('Old/Directives/Autocomplete', module)
       ng-model="$ctrl.model"
       oui-autocomplete="$ctrl.suggestions"
       oui-autocomplete-property="country.name"
-      oui-autocomplete-on-select="$ctrl.onAutocomplete(value)">
-    `, {
+      oui-autocomplete-on-select="$ctrl.onAutocomplete(value)">`,
+    {
       $ctrl: {
         suggestions: objects,
         onAutocomplete: action('onAutocomplete'),
       },
-    })),
-  );
+    },
+  ),
+);
+
+ArrayOfObjects.story = {
+  name: 'Array of objects',
+};

@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -15,27 +14,37 @@ angular.module(moduleName, [
   'oui.button',
 ]);
 
-storiesOf('Old/Components/File', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/File',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple file selector ',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const SimpleFileSelector = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-file
       disabled="$ctrl.disabled"
       placeholder="Select a file..."
       model="$ctrl.model">
-    </oui-file>
-    `, {
+    </oui-file>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'File restriction ',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+SimpleFileSelector.story = {
+  name: 'Simple file selector ',
+};
+
+export const FileRestriction = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="fileForm">
       <oui-field label="Upload file" help-text="image/jpeg, image/png, image/gif (max size 150 KB)">
         <oui-file name="fileUpload"
@@ -50,76 +59,109 @@ storiesOf('Old/Components/File', module)
       <p><strong>fileForm.$submitted value:</strong> {{fileForm.$submitted | json}}</p>
       <p><strong>fileForm["fileUpload"].$error value:</strong> {{fileForm["fileUpload"].$error | json}}</p>
       <oui-button type="submit">Submit</oui-button>
-    </form>
-    `, {
+    </form>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'Multiple files',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+FileRestriction.story = {
+  name: 'File restriction ',
+};
+
+export const MultipleFiles = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-file
       disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
       multiple>
-    </oui-file>
-    `, {
+    </oui-file>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'Multiple with preview',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+MultipleFiles.story = {
+  name: 'Multiple files',
+};
+
+export const MultipleWithPreview = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-file
       disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
       multiple
       preview>
-    </oui-file>
-    `, {
+    </oui-file>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })), {
-      notes: 'Preview works only with `image/*` files.',
     },
-  )
-  .add(
-    'Drag & Drop area',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  ),
+);
+
+MultipleWithPreview.story = {
+  name: 'Multiple with preview',
+
+  parameters: {
+    notes: 'Preview works only with `image/*` files.',
+  },
+};
+
+export const DragDropArea = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-file
       disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
       droparea>
-    </oui-file>
-    `, {
+    </oui-file>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'Drag & Drop with preview',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+DragDropArea.story = {
+  name: 'Drag & Drop area',
+};
+
+export const DragDropWithPreview = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-file
       disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
       droparea
       preview>
-    </oui-file>
-    `, {
+    </oui-file>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })), {
-      notes: 'Preview works only with `image/*` files.',
     },
-  );
+  ),
+);
+
+DragDropWithPreview.story = {
+  name: 'Drag & Drop with preview',
+
+  parameters: {
+    notes: 'Preview works only with `image/*` files.',
+  },
+};

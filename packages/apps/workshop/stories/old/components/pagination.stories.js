@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -9,65 +8,91 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-pagination-stories';
 angular.module(moduleName, ['oui.pagination']);
 
-storiesOf('Old/Internal/Pagination', module)
-  .addParameters({
+export default {
+  title: 'Old/Internal/Pagination',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'One page',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const OnePage = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-pagination
       current-offset="1"
       page-size="100"
       total-items="12">
-    </oui-pagination>
-    `)),
-  )
-  .add(
-    'A few pages',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-pagination>`,
+  ),
+);
+
+OnePage.story = {
+  name: 'One page',
+};
+
+export const AFewPages = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-pagination
       current-offset="$ctrl.offset"
       total-items="$ctrl.totalItems"
       on-change="$ctrl.onChange($event)">
-    </oui-pagination>
-    `, {
+    </oui-pagination>`,
+    {
       $ctrl: {
         offset: 1,
         totalItems: 100,
         onChange: action('onChange'),
       },
-    })),
-  )
-  .add(
-    'Lots of pages',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+AFewPages.story = {
+  name: 'A few pages',
+};
+
+export const LotsOfPages = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-pagination
       current-offset="$ctrl.offset"
       total-items="$ctrl.totalItems"
       on-change="$ctrl.onChange($event)">
-    </oui-pagination>
-    `, {
+    </oui-pagination>`,
+    {
       $ctrl: {
         offset: 1,
         totalItems: 500,
         onChange: action('onChange'),
       },
-    })),
-  )
-  .add(
-    'Huge amount of pages',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+LotsOfPages.story = {
+  name: 'Lots of pages',
+};
+
+export const HugeAmountOfPages = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-pagination
       current-offset="$ctrl.offset"
       total-items="$ctrl.totalItems"
       on-change="$ctrl.onChange($event)">
-    </oui-pagination>
-    `, {
+    </oui-pagination>`,
+    {
       $ctrl: {
         offset: 1,
         totalItems: 5000000,
         onChange: action('onChange'),
       },
-    })),
-  );
+    },
+  ),
+);
+
+HugeAmountOfPages.story = {
+  name: 'Huge amount of pages',
+};

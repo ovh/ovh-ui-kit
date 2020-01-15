@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { boolean, number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
@@ -17,13 +16,17 @@ angular.module(moduleName, [
   'oui.select',
 ]);
 
-storiesOf('Old/Components/Stepper', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Stepper',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple ',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-stepper
       on-init="$ctrl.onInit()"
       on-finish="$ctrl.onFinish(forms)">
@@ -64,8 +67,8 @@ storiesOf('Old/Components/Stepper', module)
           <input class="oui-input" type="text" name="lastname" ng-model="$ctrl.user.lastname" maxlength="32">
         </oui-field>
       </oui-step-form>
-    </oui-stepper>
-    `, {
+    </oui-stepper>`,
+    {
       $ctrl: {
         onCancel: action('onCancel'),
         onFinish: action('onFinish'),
@@ -73,11 +76,17 @@ storiesOf('Old/Components/Stepper', module)
         onInit: action('onInit'),
         onSubmit: action('onSubmit'),
       },
-    })),
-  )
-  .add(
-    'Step form states',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+Simple.story = {
+  name: 'Simple ',
+};
+
+export const StepFormStates = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-stepper>
       <oui-step-form
         header="States"
@@ -95,17 +104,23 @@ storiesOf('Old/Components/Stepper', module)
           In et elit ipsum.
         </p>
       </oui-step-form>
-    </oui-stepper>
-    `, {
+    </oui-stepper>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         loading: boolean('Loading state', true),
       },
-    })),
-  )
-  .add(
-    'Disable next button',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+StepFormStates.story = {
+  name: 'Step form states',
+};
+
+export const DisableNextButton = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-stepper>
       <oui-step-form
         header="Favorite ice cream flavor"
@@ -119,16 +134,22 @@ storiesOf('Old/Components/Stepper', module)
           </oui-select>
         </oui-field>
       </oui-step-form>
-    </oui-stepper>
-    `, {
+    </oui-stepper>`,
+    {
       $ctrl: {
         favorite: null,
       },
-    })),
-  )
-  .add(
-    'Controlling opened step index',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+DisableNextButton.story = {
+  name: 'Disable next button',
+};
+
+export const ControllingOpenedStepIndex = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-stepper
       current-index="$ctrl.currentStep">
       <oui-step-form
@@ -146,10 +167,15 @@ storiesOf('Old/Components/Stepper', module)
         </oui-button>
         <p>Cras sagittis felis enim, ut pharetra arcu ultrices non. Aliquam iaculis magna eget nibh laoreet, ac dapibus diam rutrum. Donec vel vehicula quam. Pellentesque at justo ut quam molestie rutrum in eget orci. Sed mollis nisl ac massa tristique, egestas pellentesque libero sodales. Morbi luctus iaculis mauris eu lobortis. Vestibulum nec aliquam metus. Sed mollis risus ipsum, vel consequat nulla aliquam sed. Phasellus tempor nunc at purus interdum euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a fringilla elit. Etiam blandit turpis risus, sit amet sodales leo auctor ac.</p>
       </oui-step-form>
-    </oui-stepper>
-    `, {
+    </oui-stepper>`,
+    {
       $ctrl: {
         currentStep: number('Opened step index', 1),
       },
-    })),
-  );
+    },
+  ),
+);
+
+ControllingOpenedStepIndex.story = {
+  name: 'Controlling opened step index',
+};

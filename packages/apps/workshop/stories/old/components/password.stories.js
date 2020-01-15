@@ -1,6 +1,5 @@
 /* eslint-disable max-classes-per-file */
 import zxcvbn from 'zxcvbn';
-import { storiesOf } from '@storybook/html';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -16,27 +15,33 @@ angular.module(moduleName, [
   'oui.field',
 ]);
 
-storiesOf('Old/Components/Password', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Password',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Normal',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Normal = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-password
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       placeholder="Password">
-    </oui-password>
-    `, {
+    </oui-password>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'Form validation',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const FormValidation = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form name="form" novalidate>
       <oui-field label="Password">
         <oui-password
@@ -48,16 +53,22 @@ storiesOf('Old/Components/Password', module)
           required>
         </oui-password>
       </oui-field>
-    </form>
-    `, {
+    </form>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
-    })),
-  )
-  .add(
-    'Password rules & strength',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+FormValidation.story = {
+  name: 'Form validation',
+};
+
+export const PasswordRulesStrength = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form name="form2" novalidate>
       <oui-field label="Password">
         <oui-password model="$ctrl.model" on-change="$ctrl.getPasswordScore(modelValue)">
@@ -73,9 +84,9 @@ storiesOf('Old/Components/Password', module)
           </oui-password-rule>
         </oui-password>
       </oui-field>
-    </form>
-    `, {
-      $ctrl: new class {
+    </form>`,
+    {
+      $ctrl: new (class {
         constructor() {
           this.minLength = 8;
           this.maxLength = 30;
@@ -88,16 +99,24 @@ storiesOf('Old/Components/Password', module)
         }
 
         checkPasswordLength(password) {
-          return angular.isString(password)
+          return (
+            angular.isString(password)
             && password.length >= this.minLength
-            && password.length <= this.maxLength;
+            && password.length <= this.maxLength
+          );
         }
-      }(),
-    })),
-  )
-  .add(
-    'Custom strength feedback',
-    forModule(moduleName).createElement(() => compileTemplate(`
+      })(),
+    },
+  ),
+);
+
+PasswordRulesStrength.story = {
+  name: 'Password rules & strength',
+};
+
+export const CustomStrengthFeedback = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form name="form" novalidate>
       <oui-password model="$ctrl.model" on-change="$ctrl.getPasswordScore(modelValue)">
         <oui-password-strength score="$ctrl.passwordScore" ng-switch="$ctrl.passwordScore">
@@ -108,20 +127,26 @@ storiesOf('Old/Components/Password', module)
           <span ng-switch-default="">Score 0: Lorem ipsum dolor sit amet.</span>
         </oui-password-strength>
       </oui-password>
-    </form>
-    `, {
-      $ctrl: new class {
+    </form>`,
+    {
+      $ctrl: new (class {
         getPasswordScore(password) {
           const result = zxcvbn(password);
           this.passwordFeedback = result.feedback.suggestions.join(' ');
           this.passwordScore = result.score;
         }
-      }(),
-    })),
-  )
-  .add(
-    'Confirm validation',
-    forModule(moduleName).createElement(() => compileTemplate(`
+      })(),
+    },
+  ),
+);
+
+CustomStrengthFeedback.story = {
+  name: 'Custom strength feedback',
+};
+
+export const ConfirmValidation = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form name="form3" novalidate>
       <oui-field label="Password" size="xl">
         <oui-password model="$ctrl.model1">
@@ -134,20 +159,26 @@ storiesOf('Old/Components/Password', module)
         <oui-password model="$ctrl.model2" confirm="$ctrl.model1">
         </oui-password>
       </oui-field>
-    </form>
-    `, {
-      $ctrl: new class {
+    </form>`,
+    {
+      $ctrl: new (class {
         constructor() {
           this.minLength = 8;
           this.maxLength = 30;
         }
 
         checkPasswordLength(password) {
-          return angular.isString(password)
+          return (
+            angular.isString(password)
             && password.length >= this.minLength
-            && password.length <= this.maxLength;
+            && password.length <= this.maxLength
+          );
         }
-      }(),
-    })),
-  );
-/* eslint-enable max-classes-per-file */
+      })(),
+    },
+  ),
+);
+
+ConfirmValidation.story = {
+  name: 'Confirm validation',
+};

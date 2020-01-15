@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
 import readme from '@ovh-ux/ui-kit.header/README.md';
@@ -8,22 +7,27 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-header-stories';
 angular.module(moduleName, ['oui.header']);
 
-storiesOf('Old/Components/Header', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Header',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-header
       heading="My title"
       description="My subtitle">
-    </oui-header>
-    `)),
-  )
-  .add(
-    'With tabs',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-header>`,
+  ),
+);
+
+export const WithTabs = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-header
       heading="My title"
       description="My subtitle">
@@ -40,6 +44,10 @@ storiesOf('Old/Components/Header', module)
         <oui-header-tabs-item href="#" disabled>Pagination</oui-header-tabs-item>
         <oui-header-tabs-item href="#">Datagrid</oui-header-tabs-item>
       </oui-header-tabs>
-    </oui-header>
-    `)),
-  );
+    </oui-header>`,
+  ),
+);
+
+WithTabs.story = {
+  name: 'With tabs',
+};

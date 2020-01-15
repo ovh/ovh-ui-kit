@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -15,13 +14,17 @@ angular.module(moduleName, [
   'oui.numeric',
 ]);
 
-storiesOf('Old/Components/Inline Adder', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Inline Adder',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-inline-adder
       on-add="$ctrl.onAdd(form)"
       on-change="$ctrl.onChange(form)"
@@ -52,18 +55,20 @@ storiesOf('Old/Components/Inline Adder', module)
           </oui-field>
         </oui-inline-adder-field>
       </oui-inline-adder-row>
-    </oui-inline-adder>
-    `, {
+    </oui-inline-adder>`,
+    {
       $ctrl: {
         onAdd: action('onAdd'),
         onChange: action('onChange'),
         onRemove: action('onRemove'),
       },
-    })),
-  )
-  .add(
-    'Multiple rows',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const MultipleRows = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-inline-adder
       on-add="$ctrl.onAdd(form)"
       on-change="$ctrl.onChange(form)"
@@ -92,12 +97,17 @@ storiesOf('Old/Components/Inline Adder', module)
           </oui-field>
         </oui-inline-adder-field>
       </oui-inline-adder-row>
-    </oui-inline-adder>
-    `, {
+    </oui-inline-adder>`,
+    {
       $ctrl: {
         onAdd: action('onAdd'),
         onChange: action('onChange'),
         onRemove: action('onRemove'),
       },
-    })),
-  );
+    },
+  ),
+);
+
+MultipleRows.story = {
+  name: 'Multiple rows',
+};

@@ -1,5 +1,4 @@
 /* eslint-disable max-classes-per-file */
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -11,13 +10,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-calendar-stories';
 angular.module(moduleName, ['oui.calendar']);
 
-storiesOf('Old/Components/Calendar', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Calendar',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple date selector',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const SimpleDateSelector = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-calendar
       disabled="$ctrl.disabled"
       model="$ctrl.model"
@@ -25,38 +28,60 @@ storiesOf('Old/Components/Calendar', module)
       on-close="$ctrl.onClose(selectedDates, dateStr)"
       on-open="$ctrl.onOpen(selectedDates, dateStr)"
       placeholder="YYYY-MM-DD">
-    </oui-calendar>
-    `, {
+    </oui-calendar>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         onChange: action('onChange'),
         onClose: action('onClose'),
         onOpen: action('onOpen'),
       },
-    })),
-  )
-  .add(
-    'Full calendar in-place',
-    forModule(moduleName).createElement(() => compileTemplate(`
-    <oui-calendar model="$ctrl.model" inline></oui-calendar>
-    `)),
-  )
-  .add(
-    'With week numbers',
-    forModule(moduleName).createElement(() => compileTemplate(`
-    <oui-calendar model="$ctrl.model" week-numbers></oui-calendar>
-    `)),
-  )
-  .add(
-    'Limited range of dates',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+SimpleDateSelector.story = {
+  name: 'Simple date selector',
+};
+
+export const FullCalendarInPlace = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-calendar
+      model="$ctrl.model"
+      inline>
+    </oui-calendar>`,
+  ),
+);
+
+FullCalendarInPlace.story = {
+  name: 'Full calendar in-place',
+};
+
+export const WithWeekNumbers = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-calendar
+      model="$ctrl.model"
+      week-numbers>
+    </oui-calendar>`,
+  ),
+);
+
+WithWeekNumbers.story = {
+  name: 'With week numbers',
+};
+
+export const LimitedRangeOfDates = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-calendar
       model="$ctrl.model"
       min-date="$ctrl.minDate"
       max-date="$ctrl.maxDate">
-    </oui-calendar>
-    `, {
-      $ctrl: new class {
+    </oui-calendar>`,
+    {
+      $ctrl: new (class {
         constructor() {
           const today = new Date();
           const day = 24 * 60 * 60 * 1000;
@@ -67,28 +92,39 @@ storiesOf('Old/Components/Calendar', module)
           this.minDate = today;
           this.maxDate = nextWeek;
         }
-      }(),
-    })),
-  )
-  .add(
-    'Enable timepicker',
-    forModule(moduleName).createElement(() => compileTemplate(`
+      })(),
+    },
+  ),
+);
+
+LimitedRangeOfDates.story = {
+  name: 'Limited range of dates',
+};
+
+export const EnableTimepicker = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-calendar
       model="$ctrl.model"
       format="Y-m-d H:i"
       enable-time>
-    </oui-calendar>
-    `)),
-  )
-  .add(
-    'Disabling dates',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-calendar>`,
+  ),
+);
+
+EnableTimepicker.story = {
+  name: 'Enable timepicker',
+};
+
+export const DisablingDates = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-calendar
       model="$ctrl.model"
       disable-date="$ctrl.disableDate">
-    </oui-calendar>
-    `, {
-      $ctrl: new class {
+    </oui-calendar>`,
+    {
+      $ctrl: new (class {
         constructor() {
           const today = new Date();
           const day = 24 * 60 * 60 * 1000;
@@ -98,18 +134,24 @@ storiesOf('Old/Components/Calendar', module)
           // Disable example
           this.disableDate = [yesterday, today, tomorrow];
         }
-      }(),
-    })),
-  )
-  .add(
-    'Disabling all dates except select few',
-    forModule(moduleName).createElement(() => compileTemplate(`
+      })(),
+    },
+  ),
+);
+
+DisablingDates.story = {
+  name: 'Disabling dates',
+};
+
+export const DisablingAllDatesExceptSelectFew = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-calendar
       model="$ctrl.model"
       enable-date="$ctrl.enableDate">
-    </oui-calendar>
-    `, {
-      $ctrl: new class {
+    </oui-calendar>`,
+    {
+      $ctrl: new (class {
         constructor() {
           const today = new Date();
           const day = 24 * 60 * 60 * 1000;
@@ -119,29 +161,54 @@ storiesOf('Old/Components/Calendar', module)
           // Disable example
           this.enableDate = [yesterday, today, tomorrow];
         }
-      }(),
-    })),
-  )
-  .add(
-    'Date formatting',
-    forModule(moduleName).createElement(() => compileTemplate(`
+      })(),
+    },
+  ),
+);
+
+DisablingAllDatesExceptSelectFew.story = {
+  name: 'Disabling all dates except select few',
+};
+
+export const DateFormatting = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-calendar
       alt-format="F j, Y"
       format="d-m-Y"
       model="$ctrl.model">
-    </oui-calendar>
-    `)),
-  )
-  .add(
-    'Range mode',
-    forModule(moduleName).createElement(() => compileTemplate(`
-    <oui-calendar model="$ctrl.model" mode="range"></oui-calendar>
-    `)),
-  )
-  .add(
-    'Multiple mode',
-    forModule(moduleName).createElement(() => compileTemplate(`
-    <oui-calendar model="$ctrl.model" mode="multiple"></oui-calendar>
-    `)),
-  );
-/* eslint-enable max-classes-per-file */
+    </oui-calendar>`,
+  ),
+);
+
+DateFormatting.story = {
+  name: 'Date formatting',
+};
+
+export const RangeMode = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-calendar
+      model="$ctrl.model"
+      mode="range">
+    </oui-calendar>`,
+  ),
+);
+
+RangeMode.story = {
+  name: 'Range mode',
+};
+
+export const MultipleMode = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-calendar
+      model="$ctrl.model"
+      mode="multiple">
+    </oui-calendar>`,
+  ),
+);
+
+MultipleMode.story = {
+  name: 'Multiple mode',
+};

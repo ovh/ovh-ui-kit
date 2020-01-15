@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -14,13 +13,17 @@ angular.module(moduleName, [
   'oui.header',
 ]);
 
-storiesOf('Old/Components/Guide Menu', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Guide Menu',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-guide-menu text="Guides">
       <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
         Guide 2 (button)
@@ -32,16 +35,18 @@ storiesOf('Old/Components/Guide Menu', module)
       <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#" external>
         External link
       </oui-guide-menu-item>
-    </oui-guide-menu>
-    `, {
+    </oui-guide-menu>`,
+    {
       $ctrl: {
         onGuideClick: action('onGuideClick'),
       },
-    })),
-  )
-  .add(
-    'With sections',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const WithSections = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-guide-menu text="Guides">
       <oui-guide-menu-group label="Section 1">
         <oui-guide-menu-item on-click="$ctrl.onGuideClick()">
@@ -63,16 +68,22 @@ storiesOf('Old/Components/Guide Menu', module)
       <oui-guide-menu-item on-click="$ctrl.onGuideClick()" href="#" external>
         External link
       </oui-guide-menu-item>
-    </oui-guide-menu>
-    `, {
+    </oui-guide-menu>`,
+    {
       $ctrl: {
         onGuideClick: action('onGuideClick'),
       },
-    })),
-  )
-  .add(
-    'In header',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithSections.story = {
+  name: 'With sections',
+};
+
+export const InHeader = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-header heading="My title" description="My subtitle">
       <oui-guide-menu text="Guides">
         <oui-guide-menu-group label="Section 1">
@@ -96,10 +107,15 @@ storiesOf('Old/Components/Guide Menu', module)
           External link
         </oui-guide-menu-item>
       </oui-guide-menu>
-    </oui-header>
-    `, {
+    </oui-header>`,
+    {
       $ctrl: {
         onGuideClick: action('onGuideClick'),
       },
-    })),
-  );
+    },
+  ),
+);
+
+InHeader.story = {
+  name: 'In header',
+};

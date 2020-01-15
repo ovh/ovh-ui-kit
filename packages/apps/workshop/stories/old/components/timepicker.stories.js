@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -9,13 +8,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-timepicker-stories';
 angular.module(moduleName, ['oui.timepicker']);
 
-storiesOf('Old/Components/Timepicker', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Timepicker',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-timepicker
       disabled="$ctrl.disabled"
       model="$ctrl.model"
@@ -23,19 +26,21 @@ storiesOf('Old/Components/Timepicker', module)
       on-close="$ctrl.onClose(modelValue)"
       on-open="$ctrl.onOpen(modelValue)"
       placeholder="HH:MM">
-    </oui-timepicker>
-    `, {
+    </oui-timepicker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         onChange: action('onChange'),
         onClose: action('onClose'),
         onOpen: action('onOpen'),
       },
-    })),
-  )
-  .add(
-    'Inline',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Inline = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <p>
         <oui-timepicker model="$ctrl.inlineModel" inline></oui-timepicker>
     </p>
@@ -47,6 +52,6 @@ storiesOf('Old/Components/Timepicker', module)
     </p>
     <p>
         <oui-timepicker model="$ctrl.inlineModel" inline enable-seconds enable-am-pm></oui-timepicker>
-    </p>
-    `)),
-  );
+    </p>`,
+  ),
+);

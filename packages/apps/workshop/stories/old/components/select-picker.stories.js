@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -12,13 +11,17 @@ import image from '../../_assets/ovh.svg';
 const moduleName = 'oui-select-picker-stories';
 angular.module(moduleName, ['oui.select-picker']);
 
-storiesOf('Old/Components/Select Picker', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Select Picker',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Basic',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Basic = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -44,8 +47,8 @@ storiesOf('Old/Components/Select Picker', module)
       label="Value C"
       on-change="$ctrl.onChange(modelValue)"
       values="$ctrl.values3">
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'Value A',
@@ -54,11 +57,13 @@ storiesOf('Old/Components/Select Picker', module)
         values2: ['Value B'],
         values3: ['Value C'],
       },
-    })),
-  )
-  .add(
-    'Multiple values',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const MultipleValues = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -88,21 +93,34 @@ storiesOf('Old/Components/Select Picker', module)
       label="Value C"
       on-change="$ctrl.onChange(modelValue)"
       values="$ctrl.values3">
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: { id: 'a1', name: 'Value A (Variant 1)' },
         onChange: action('onChange'),
-        values1: [{ id: 'a1', name: 'Value A (Variant 1)' }, { id: 'a2', name: 'Value A (Variant 2)' }],
+        values1: [
+          { id: 'a1', name: 'Value A (Variant 1)' },
+          { id: 'a2', name: 'Value A (Variant 2)' },
+        ],
         values2: [{ id: 'b1', name: 'Value B (Variant 1)' }],
-        values3: [{ id: 'c1', name: 'Value C (Variant 1)' }, { id: 'c2', name: 'Value C (Variant 2)' }, { id: 'c3', name: 'Value C (Variant 3)' }],
+        values3: [
+          { id: 'c1', name: 'Value C (Variant 1)' },
+          { id: 'c2', name: 'Value C (Variant 2)' },
+          { id: 'c3', name: 'Value C (Variant 3)' },
+        ],
       },
-    })),
-  )
-  .add(
-    'With description',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+MultipleValues.story = {
+  name: 'Multiple values',
+};
+
+export const WithDescription = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -119,19 +137,25 @@ storiesOf('Old/Components/Select Picker', module)
       label="Value B"
       description="Donec bibendum, dolor vel interdum volutpat, dolor elit porta nisi, ac tincidunt lorem ante at libero. Etiam dolor lectus, convallis a enim nec, tincidunt pharetra libero. Vestibulum placerat tortor ac orci pulvinar sodales eget sed odio. Aenean fermentum libero ex, porta sagittis orci mollis id."
       values="$ctrl.values2">
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'Value A',
         values1: ['Value A'],
         values2: ['Value B'],
       },
-    })),
-  )
-  .add(
-    'With picture',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithDescription.story = {
+  name: 'With description',
+};
+
+export const WithPicture = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
       <oui-select-picker
         disabled="$ctrl.disabled"
         label="Picture"
@@ -159,18 +183,24 @@ storiesOf('Old/Components/Select Picker', module)
         <oui-select-picker-picture>
           <span class="oui-status oui-status_success">Lorem ipsum</span>
         </oui-select-picker-picture>
-      </oui-select-picker>
-    `, {
+      </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'picture',
         image,
       },
-    })),
-  )
-  .add(
-    'With section',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithPicture.story = {
+  name: 'With picture',
+};
+
+export const WithSection = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -191,19 +221,25 @@ storiesOf('Old/Components/Select Picker', module)
       values="$ctrl.values2">
       <oui-select-picker-section>Section 1</oui-select-picker-section>
       <oui-select-picker-section>Section 2</oui-select-picker-section>
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'Value A',
         values1: ['Value A'],
         values2: ['Value B'],
       },
-    })),
-  )
-  .add(
-    'With footer',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithSection.story = {
+  name: 'With section',
+};
+
+export const WithFooter = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -223,19 +259,25 @@ storiesOf('Old/Components/Select Picker', module)
         Lorem ipsum<br />
         <small>Dolor sit amet</small>
       </oui-select-picker-footer>
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: 'Value A',
         values1: ['Value A'],
         values2: ['Value B'],
       },
-    })),
-  )
-  .add(
-    'Variant (Light)',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithFooter.story = {
+  name: 'With footer',
+};
+
+export const VariantLight = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -268,21 +310,34 @@ storiesOf('Old/Components/Select Picker', module)
       on-change="$ctrl.onChange(modelValue)"
       values="$ctrl.values3"
       variant="light">
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: { id: 'a1', name: 'Value A (Variant 1)' },
         onChange: action('onChange'),
-        values1: [{ id: 'a1', name: 'Value A (Variant 1)' }, { id: 'a2', name: 'Value A (Variant 2)' }],
+        values1: [
+          { id: 'a1', name: 'Value A (Variant 1)' },
+          { id: 'a2', name: 'Value A (Variant 2)' },
+        ],
         values2: [{ id: 'b1', name: 'Value B (Variant 1)' }],
-        values3: [{ id: 'c1', name: 'Value C (Variant 1)' }, { id: 'c2', name: 'Value C (Variant 2)' }, { id: 'c3', name: 'Value C (Variant 3)' }],
+        values3: [
+          { id: 'c1', name: 'Value C (Variant 1)' },
+          { id: 'c2', name: 'Value C (Variant 2)' },
+          { id: 'c3', name: 'Value C (Variant 3)' },
+        ],
       },
-    })),
-  )
-  .add(
-    'Full example',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+VariantLight.story = {
+  name: 'Variant (Light)',
+};
+
+export const FullExample = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select-picker
       disabled="$ctrl.disabled"
       name="ouiSelectPicker1"
@@ -320,14 +375,22 @@ storiesOf('Old/Components/Select Picker', module)
         Lorem ipsum<br />
         <small>Dolor sit amet</small>
       </oui-select-picker-footer>
-    </oui-select-picker>
-    `, {
+    </oui-select-picker>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         model: { id: 'a1', name: 'Value A (Variant 1)' },
         onChange: action('onChange'),
-        values1: [{ id: 'a1', name: 'Value A (Variant 1)' }, { id: 'a2', name: 'Value A (Variant 2)' }],
+        values1: [
+          { id: 'a1', name: 'Value A (Variant 1)' },
+          { id: 'a2', name: 'Value A (Variant 2)' },
+        ],
         values2: [{ id: 'b1', name: 'Value B (Variant 1)' }],
       },
-    })),
-  );
+    },
+  ),
+);
+
+FullExample.story = {
+  name: 'Full example',
+};

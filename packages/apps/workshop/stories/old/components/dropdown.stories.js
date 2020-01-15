@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -10,13 +9,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-dropdown-stories';
 angular.module(moduleName, ['oui.dropdown']);
 
-storiesOf('Old/Components/Dropdown', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Dropdown',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dropdown>
       <oui-dropdown-trigger
         disabled="$ctrl.disabled"
@@ -43,18 +46,19 @@ storiesOf('Old/Components/Dropdown', module)
         <oui-dropdown-item href="#" sticky>
           Start guided tour
         </oui-dropdown-item>
-      </oui-dropdown-content>
-    </oui-dropdown>
-    `, {
+      </oui-dropdown-content></oui-dropdown>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         onActionClick: action('onActionClick'),
       },
-    })),
-  )
-  .add(
-    'Placement',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Placement = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dropdown placement="start">
       <oui-dropdown-trigger text="Start"></oui-dropdown-trigger>
       <oui-dropdown-content>
@@ -80,12 +84,13 @@ storiesOf('Old/Components/Dropdown', module)
         <oui-dropdown-item href="#">Action 2</oui-dropdown-item>
         <oui-dropdown-item href="#">Action 3</oui-dropdown-item>
       </oui-dropdown-content>
-    </oui-dropdown>
-    `)),
-  )
-  .add(
-    'With arrow',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-dropdown>`,
+  ),
+);
+
+export const WithArrow = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dropdown placement="start" arrow>
       <oui-dropdown-trigger text="Start"></oui-dropdown-trigger>
       <oui-dropdown-content>
@@ -111,12 +116,17 @@ storiesOf('Old/Components/Dropdown', module)
         <oui-dropdown-item href="#">Action 2</oui-dropdown-item>
         <oui-dropdown-item href="#">Action 3</oui-dropdown-item>
       </oui-dropdown-content>
-    </oui-dropdown>
-    `)),
-  )
-  .add(
-    'Custom trigger button',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-dropdown>`,
+  ),
+);
+
+WithArrow.story = {
+  name: 'With arrow',
+};
+
+export const CustomTriggerButton = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dropdown>
       <button type="button" class="oui-button oui-button_secondary oui-button_s" oui-dropdown-trigger>
         <span class="oui-icon oui-icon-settings" aria-hidden="true"></span>
@@ -134,12 +144,17 @@ storiesOf('Old/Components/Dropdown', module)
         <oui-dropdown-item href="#" external>External link</oui-dropdown-item>
         <oui-dropdown-item href="#" sticky>Start guided tour</oui-dropdown-item>
       </oui-dropdown-content>
-    </oui-dropdown>
-    `)),
-  )
-  .add(
-    'Custom content menu',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-dropdown>`,
+  ),
+);
+
+CustomTriggerButton.story = {
+  name: 'Custom trigger button',
+};
+
+export const CustomContentMenu = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dropdown>
       <oui-dropdown-trigger text="Custom menu"></oui-dropdown-trigger>
       <div class="oui-dropdown-menu" oui-dropdown-content>
@@ -155,6 +170,10 @@ storiesOf('Old/Components/Dropdown', module)
         <oui-dropdown-item href="#" external>External link</oui-dropdown-item>
         <oui-dropdown-item href="#" sticky>Start guided tour</oui-dropdown-item>
       </div>
-    </oui-dropdown>
-    `)),
-  );
+    </oui-dropdown>`,
+  ),
+);
+
+CustomContentMenu.story = {
+  name: 'Custom content menu',
+};

@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -10,13 +9,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-slideshow-stories';
 angular.module(moduleName, ['oui.slideshow']);
 
-storiesOf('Old/Components/Slideshow', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Slideshow',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-slideshow
       loading="$ctrl.loading"
       loop="$ctrl.loop"
@@ -47,8 +50,8 @@ storiesOf('Old/Components/Slideshow', module)
         label="Discover">
         Designed to help you synchronize your local Active Directory with your OVH Active Directory.
       </oui-slideshow-panel>
-    </oui-slideshow>
-    `, {
+    </oui-slideshow>`,
+    {
       $ctrl: {
         loading: boolean('Loading state', false),
         loop: boolean('Loop panels'),
@@ -56,5 +59,6 @@ storiesOf('Old/Components/Slideshow', module)
         onPanelChange: action('onPanelChange'),
         onPanelClick: action('onPanelClick'),
       },
-    })),
-  );
+    },
+  ),
+);

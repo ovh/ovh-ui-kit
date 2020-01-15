@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -22,13 +21,17 @@ angular.module(moduleName, [
   'oui.calendar',
 ]);
 
-storiesOf('Old/Components/Field', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Field',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Input',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Input = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="inputForm">
       <oui-field label="Lastname"
         help-text="At least 3 chars"
@@ -68,17 +71,19 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `, {
+    </form>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         onActionClick: action('onActionClick'),
       },
-    })),
-  )
-  .add(
-    'Label popover',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const LabelPopover = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="inputForm">
       <oui-field label="Lastname"
         help-text="At least 3 chars"
@@ -96,12 +101,17 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `)),
-  )
-  .add(
-    'Checkbox',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </form>`,
+  ),
+);
+
+LabelPopover.story = {
+  name: 'Label popover',
+};
+
+export const Checkbox = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="checkboxForm">
       <oui-field label="Server options">
         <oui-checkbox
@@ -118,12 +128,13 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `)),
-  )
-  .add(
-    'Radio',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </form>`,
+  ),
+);
+
+export const Radio = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="radioForm">
       <oui-field label="Protocol">
         <oui-radio
@@ -150,12 +161,13 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `)),
-  )
-  .add(
-    'Switch',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </form>`,
+  ),
+);
+
+export const Switch = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="switchForm">
       <oui-field label="Switch options" help-text="Helper text">
         <oui-switch
@@ -166,12 +178,13 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `)),
-  )
-  .add(
-    'Textarea',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </form>`,
+  ),
+);
+
+export const Textarea = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="textareaForm">
       <oui-field label="Server description" size="xl">
         <textarea
@@ -195,12 +208,13 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `)),
-  )
-  .add(
-    'Select',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </form>`,
+  ),
+);
+
+export const Select = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="selectForm">
       <oui-field label="OS" size="m">
         <label class="oui-select">
@@ -245,28 +259,35 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `, {
+    </form>`,
+    {
       $ctrl: {
-        osList: [{
-          name: 'freebsd',
-          label: 'FreeBSD',
-        }, {
-          name: 'linux',
-          label: 'Linux',
-        }, {
-          name: 'osx',
-          label: 'OSX',
-        }, {
-          name: 'windows',
-          label: 'Windows',
-        }],
+        osList: [
+          {
+            name: 'freebsd',
+            label: 'FreeBSD',
+          },
+          {
+            name: 'linux',
+            label: 'Linux',
+          },
+          {
+            name: 'osx',
+            label: 'OSX',
+          },
+          {
+            name: 'windows',
+            label: 'Windows',
+          },
+        ],
       },
-    })),
-  )
-  .add(
-    'Numeric',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Numeric = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="numericForm">
       <oui-field label="Number of servers"
         help-text="Select the number of servers in your cluster">
@@ -279,12 +300,13 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    </form>
-    `)),
-  )
-  .add(
-    'Calendar',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </form>`,
+  ),
+);
+
+export const Calendar = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <form novalidate name="calendarForm">
       <oui-field label="Automatic renewal"
         size="xl">
@@ -297,6 +319,6 @@ storiesOf('Old/Components/Field', module)
       </oui-field>
 
       <oui-form-actions></oui-form-actions>
-    <form>
-    `)),
-  );
+    <form>`,
+  ),
+);

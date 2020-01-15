@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -11,13 +10,17 @@ import { objects } from '../../_data/autocomplete.data.json';
 const moduleName = 'oui-search-stories';
 angular.module(moduleName, ['oui.search']);
 
-storiesOf('Old/Components/Search', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Search',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-search
       disabled="$ctrl.disabled"
       model="$ctrl.model"
@@ -25,19 +28,21 @@ storiesOf('Old/Components/Search', module)
       on-reset="$ctrl.onReset()"
       on-submit="$ctrl.onSubmit(modelValue)"
       placeholder="Placeholder example">
-    </oui-search>
-    `, {
+    </oui-search>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         onChange: action('onChange'),
         onReset: action('onReset'),
         onSubmit: action('onSubmit'),
       },
-    })),
-  )
-  .add(
-    'Autocomplete',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Autocomplete = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-search
       autocomplete="$ctrl.autocomplete"
       autocomplete-property="country.name"
@@ -46,13 +51,14 @@ storiesOf('Old/Components/Search', module)
       on-reset="$ctrl.onReset()"
       on-submit="$ctrl.onSubmit(modelValue)"
       placeholder="Search country name">
-    </oui-search>
-    `, {
+    </oui-search>`,
+    {
       $ctrl: {
         autocomplete: objects,
         onChange: action('onChange'),
         onReset: action('onReset'),
         onSubmit: action('onSubmit'),
       },
-    })),
-  );
+    },
+  ),
+);

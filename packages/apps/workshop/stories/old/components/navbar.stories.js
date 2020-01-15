@@ -1,11 +1,13 @@
-import { storiesOf } from '@storybook/html';
 import { forModule } from 'storybook-addon-angularjs';
 
 import readme from '@ovh-ux/ui-kit.navbar/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 import {
-  brand, asideLinks, mainLinks, placeholderNotification,
+  brand,
+  asideLinks,
+  mainLinks,
+  placeholderNotification,
 } from '../../_data/navbar.data.json';
 
 // Create mock module for the stories
@@ -17,33 +19,38 @@ angular.module(moduleName, [
   'oui.radio',
 ]);
 
-storiesOf('Old/Components/Navbar', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Navbar',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-navbar
       brand="$ctrl.brand"
       active-link="lorem"
       main-links="$ctrl.mainLinks"
       aside-links="$ctrl.asideLinks"
       toggler-links="$ctrl.togglerLinks">
-    </oui-navbar>
-    `, {
+    </oui-navbar>`,
+    {
       $ctrl: {
         brand,
         asideLinks,
         mainLinks,
         togglerLinks: mainLinks,
       },
-    })),
-  )
-  .add(
-    'Advanced',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
 
+export const Advanced = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-navbar
       active-link="lorem">
       <oui-navbar-toggler
@@ -111,19 +118,21 @@ storiesOf('Old/Components/Navbar', module)
           </oui-navbar-menu>
         </oui-navbar-dropdown>
       </oui-navbar-aside>
-    </oui-navbar>
-    `, {
+    </oui-navbar>`,
+    {
       $ctrl: {
         brand,
         asideLinks,
         mainLinks,
         togglerLinks: mainLinks,
       },
-    })),
-  )
-  .add(
-    'Placeholder for notification',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const PlaceholderForNotification = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <p>
       <oui-radio-toggle-group
         model="$ctrl.placeholderNotification[0].subLinks">
@@ -134,10 +143,15 @@ storiesOf('Old/Components/Navbar', module)
 
     <oui-navbar
       aside-links="$ctrl.placeholderNotification">
-    </oui-navbar>
-    `, {
+    </oui-navbar>`,
+    {
       $ctrl: {
         placeholderNotification,
       },
-    })),
-  );
+    },
+  ),
+);
+
+PlaceholderForNotification.story = {
+  name: 'Placeholder for notification',
+};

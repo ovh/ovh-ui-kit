@@ -2,7 +2,6 @@ import find from 'lodash/find';
 import map from 'lodash/map';
 import pick from 'lodash/pick';
 
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -20,13 +19,17 @@ angular.module(moduleName, [
   'oui.action-menu',
 ]);
 
-storiesOf('Old/Components/Datagrid', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Datagrid',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data">
@@ -34,16 +37,18 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
       },
-    })),
-  )
-  .add(
-    'Pagination',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Pagination = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data"
@@ -52,17 +57,19 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         onPageChange: action('onPageChange'),
       },
-    })),
-  )
-  .add(
-    'Empty placeholer',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const EmptyPlaceholer = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       empty-placeholder="{{ $ctrl.placeholder }}"
       page-size="5"
@@ -71,17 +78,23 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data: [],
         placeholder: 'There’s no bananas here, sorry :(',
       },
-    })),
-  )
-  .add(
-    'With topbar',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+EmptyPlaceholer.story = {
+  name: 'Empty placeholer',
+};
+
+export const WithTopbar = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data">
@@ -95,16 +108,22 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
       },
-    })),
-  )
-  .add(
-    'With footer',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithTopbar.story = {
+  name: 'With topbar',
+};
+
+export const WithFooter = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data">
@@ -112,16 +131,22 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName" footer="Ipsum"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
       },
-    })),
-  )
-  .add(
-    'Sortable',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithFooter.story = {
+  name: 'With footer',
+};
+
+export const Sortable = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data"
@@ -130,17 +155,19 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName" sortable></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         onSortChange: action('onSortChange'),
       },
-    })),
-  )
-  .add(
-    'Search and filtering',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const SearchAndFiltering = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data"
@@ -149,17 +176,23 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName" searchable filterable></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         onCriteriaChange: action('onCriteriaChange'),
       },
-    })),
-  )
-  .add(
-    'Selectable rows',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+SearchAndFiltering.story = {
+  name: 'Search and filtering',
+};
+
+export const SelectableRows = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data"
@@ -175,17 +208,23 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-action-menu align="end" compact>
         <oui-action-menu-item disabled="$isSelected">Disabled if selected</oui-action-menu-item>
       </oui-action-menu>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         onRowSelect: action('onRowSelect'),
       },
-    })),
-  )
-  .add(
-    'Expandable rows',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+SelectableRows.story = {
+  name: 'Selectable rows',
+};
+
+export const ExpandableRows = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       rows="$ctrl.data"
       page-size="5">
@@ -199,16 +238,22 @@ storiesOf('Old/Components/Datagrid', module)
         Parents :
         <span ng-bind="$row.parents.mother.firstName"></span> <span ng-bind="$row.parents.mother.lastName"></span> - <span ng-bind="$row.parents.father.firstName"></span> <span ng-bind="$row.parents.father.lastName"></span>
       </oui-datagrid-row-detail>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
       },
-    })),
-  )
-  .add(
-    'Row actions',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+ExpandableRows.story = {
+  name: 'Expandable rows',
+};
+
+export const RowActions = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data">
@@ -222,17 +267,23 @@ storiesOf('Old/Components/Datagrid', module)
           Action
         </oui-action-menu-item>
       </oui-action-menu>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         onActionClick: action('onActionClick'),
       },
-    })),
-  )
-  .add(
-    'Customizable columns display',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+RowActions.story = {
+  name: 'Row actions',
+};
+
+export const CustomizableColumnsDisplay = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data"
@@ -241,17 +292,23 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Last name'" property="lastName" prevent-customization></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         onColumnsParametersChange: action('onColumnsParametersChange'),
       },
-    })),
-  )
-  .add(
-    'Customizable cells template',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+CustomizableColumnsDisplay.story = {
+  name: 'Customizable columns display',
+};
+
+export const CustomizableCellsTemplate = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows="$ctrl.data"
@@ -269,16 +326,22 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Birth'" property="birth">
         {{$value | date:short}}
       </oui-datagrid-column>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
       },
-    })),
-  )
-  .add(
-    'Dynamic columns',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+CustomizableCellsTemplate.story = {
+  name: 'Customizable cells template',
+};
+
+export const DynamicColumns = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid rows="$ctrl.data" page-size="5" columns="[{
         title: 'First name',
         property: 'firstName',
@@ -310,17 +373,23 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-topbar>
         <oui-checkbox model="$ctrl.showParents">Show parents</oui-checkbox>
       </oui-datagrid-topbar>
-    </oui-datagrid>
-    `, {
+    </oui-datagrid>`,
+    {
       $ctrl: {
         data,
         showParents: false,
       },
-    })),
-  )
-  .add(
-    'Remote data',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+DynamicColumns.story = {
+  name: 'Dynamic columns',
+};
+
+export const RemoteData = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-datagrid
       page-size="5"
       rows-loader="$ctrl.loadPartialData($config)"
@@ -340,9 +409,9 @@ storiesOf('Old/Components/Datagrid', module)
       <oui-datagrid-column title="'Birth'" property="birth">
         {{$value|date:short}}
       </oui-datagrid-column>
-    </oui-datagrid>
-    `, {
-      $ctrl: new class {
+    </oui-datagrid>`,
+    {
+      $ctrl: new (class {
         constructor() {
           this.delay = 500;
         }
@@ -374,6 +443,11 @@ storiesOf('Old/Components/Datagrid', module)
             }, this.delay + 1000 * Math.random());
           });
         }
-      }(),
-    })),
-  );
+      })(),
+    },
+  ),
+);
+
+RemoteData.story = {
+  name: 'Remote data',
+};

@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -11,13 +10,17 @@ import countries from '../../_data/countries.data.json';
 const moduleName = 'oui-select-stories';
 angular.module(moduleName, ['oui.select']);
 
-storiesOf('Old/Components/Select', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Select',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Array of strings',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const ArrayOfStrings = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       disabled="$ctrl.disabled"
       items="['a', 'b', 'c']"
@@ -27,8 +30,8 @@ storiesOf('Old/Components/Select', module)
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()">
-    </oui-select>
-    `, {
+    </oui-select>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         placeholder: 'Select a letter...',
@@ -36,11 +39,17 @@ storiesOf('Old/Components/Select', module)
         onChange: action('onChange'),
         onFocus: action('onFocus'),
       },
-    })),
-  )
-  .add(
-    'Array of objects',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+ArrayOfStrings.story = {
+  name: 'Array of strings',
+};
+
+export const ArrayOfObjects = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       disabled="$ctrl.disabled"
       items="$ctrl.items"
@@ -51,8 +60,8 @@ storiesOf('Old/Components/Select', module)
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()">
-    </oui-select>
-    `, {
+    </oui-select>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         items: countries,
@@ -61,11 +70,17 @@ storiesOf('Old/Components/Select', module)
         onChange: action('onChange'),
         onFocus: action('onFocus'),
       },
-    })),
-  )
-  .add(
-    'Searchable',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+ArrayOfObjects.story = {
+  name: 'Array of objects',
+};
+
+export const Searchable = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       disabled="$ctrl.disabled"
       items="$ctrl.items"
@@ -77,8 +92,8 @@ storiesOf('Old/Components/Select', module)
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()"
       searchable>
-    </oui-select>
-    `, {
+    </oui-select>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         items: countries,
@@ -87,11 +102,13 @@ storiesOf('Old/Components/Select', module)
         onChange: action('onChange'),
         onFocus: action('onFocus'),
       },
-    })),
-  )
-  .add(
-    'Multiple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Multiple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       disabled="$ctrl.disabled"
       items="$ctrl.items"
@@ -103,8 +120,8 @@ storiesOf('Old/Components/Select', module)
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()"
       multiple>
-    </oui-select>
-    `, {
+    </oui-select>`,
+    {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         items: countries,
@@ -113,11 +130,13 @@ storiesOf('Old/Components/Select', module)
         onChange: action('onChange'),
         onFocus: action('onFocus'),
       },
-    })),
-  )
-  .add(
-    'Disable items',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const DisableItems = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       disable-items="$ctrl.disableItems($item)"
       items="$ctrl.items"
@@ -125,9 +144,9 @@ storiesOf('Old/Components/Select', module)
       model="$ctrl.model"
       name="country"
       placeholder="{{ $ctrl.placeholder }}">
-    </oui-select>
-    `, {
-      $ctrl: new class {
+    </oui-select>`,
+    {
+      $ctrl: new (class {
         constructor() {
           this.items = countries;
           this.placeholder = 'Select a country...';
@@ -137,14 +156,23 @@ storiesOf('Old/Components/Select', module)
           const modulo = 2;
           return this.items.indexOf($item) % modulo === 1;
         }
-      }(),
-    })), {
-      notes: 'For each `$item` in `items` array, `disable-item` will be called with current `$item` as an argument.<br />If it returns true, `$item` will be disabled.',
+      })(),
     },
-  )
-  .add(
-    'Grouping',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  ),
+);
+
+DisableItems.story = {
+  name: 'Disable items',
+
+  parameters: {
+    notes:
+      'For each `$item` in `items` array, `disable-item` will be called with current `$item` as an argument.<br />If it returns true, `$item` will be disabled.',
+  },
+};
+
+export const Grouping = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       group-by="$ctrl.groupByFirstLetter"
       items="$ctrl.items"
@@ -152,18 +180,20 @@ storiesOf('Old/Components/Select', module)
       model="$ctrl.model"
       name="country"
       placeholder="{{ $ctrl.placeholder }}">
-    </oui-select>
-    `, {
+    </oui-select>`,
+    {
       $ctrl: {
         items: countries,
         groupByFirstLetter: (item) => item.country.name.substr(0, 1).toUpperCase(),
         placeholder: 'Select a country...',
       },
-    })),
-  )
-  .add(
-    'Custom option template',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const CustomOptionTemplate = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-select
       group-by="$ctrl.groupByFirstLetter"
       items="$ctrl.items"
@@ -175,14 +205,22 @@ storiesOf('Old/Components/Select', module)
       <small>
         Code: <span ng-bind="$item.country.code"></span>
       </small>
-    </oui-select>
-    `, {
+    </oui-select>`,
+    {
       $ctrl: {
         items: countries,
         groupByFirstLetter: (item) => item.country.name.substr(0, 1).toUpperCase(),
         placeholder: 'Select a country...',
       },
-    })), {
-      notes: 'Template inside `oui-select` component will be used as the content of each option.<br />You can use `$item` variable to get option value for your template.',
     },
-  );
+  ),
+);
+
+CustomOptionTemplate.story = {
+  name: 'Custom option template',
+
+  parameters: {
+    notes:
+      'Template inside `oui-select` component will be used as the content of each option.<br />You can use `$item` variable to get option value for your template.',
+  },
+};

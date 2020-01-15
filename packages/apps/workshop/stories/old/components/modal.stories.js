@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -10,13 +9,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-modal-stories';
 angular.module(moduleName, ['oui.modal']);
 
-storiesOf('Old/Components/Modal', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Modal',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Simple',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Simple = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-modal
       heading="Modal title"
       loading="$ctrl.isLoading"
@@ -29,17 +32,19 @@ storiesOf('Old/Components/Modal', module)
       rhoncus vitae ut justo. Ut dignissim varius est in consequat.
       Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.
       In et elit ipsum.
-    </oui-modal>
-    `, {
+    </oui-modal>`,
+    {
       $ctrl: {
         isLoading: boolean('Loading state', false),
         onDismiss: action('onDismiss'),
       },
-    })),
-  )
-  .add(
-    'With actions',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const WithActions = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-modal
       heading="Modal title"
       loading="$ctrl.isLoading"
@@ -60,8 +65,8 @@ storiesOf('Old/Components/Modal', module)
         Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.
         In et elit ipsum.
       </p>
-    </oui-modal>
-    `, {
+    </oui-modal>`,
+    {
       $ctrl: {
         isLoading: boolean('Loading state', false),
         primaryDisabled: boolean('Primary disabled', false),
@@ -70,11 +75,17 @@ storiesOf('Old/Components/Modal', module)
         onPrimaryAction: action('onPrimaryAction'),
         onSecondaryAction: action('onSecondaryAction'),
       },
-    })),
-  )
-  .add(
-    'With icons',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithActions.story = {
+  name: 'With actions',
+};
+
+export const WithIcons = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-modal
       heading="Modal title"
       type="info">
@@ -123,6 +134,10 @@ storiesOf('Old/Components/Modal', module)
         Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.
         Phasellus vel ipsum vitae neque varius luctus.
       </p>
-    </oui-modal>
-    `)),
-  );
+    </oui-modal>`,
+  ),
+);
+
+WithIcons.story = {
+  name: 'With icons',
+};

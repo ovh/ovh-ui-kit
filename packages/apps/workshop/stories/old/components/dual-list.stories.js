@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
@@ -12,13 +11,17 @@ import data from '../../_data/dual-list.data.json';
 const moduleName = 'oui-dual-list-stories';
 angular.module(moduleName, ['oui.dual-list']);
 
-storiesOf('Old/Components/Dual List', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Dual List',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Array of strings',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const ArrayOfStrings = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dual-list
       on-add="$ctrl.onAdd(item)"
       on-change="$ctrl.onChange(item)"
@@ -33,8 +36,8 @@ storiesOf('Old/Components/Dual List', module)
         loading="$ctrl.targetLoading"
         searchable="$ctrl.targetSearchable">
       </oui-dual-list-target>
-    </oui-dual-list>
-    `, {
+    </oui-dual-list>`,
+    {
       $ctrl: {
         onAdd: action('onAdd'),
         onChange: action('onChange'),
@@ -46,11 +49,17 @@ storiesOf('Old/Components/Dual List', module)
         targetLoading: boolean('Target loading', false),
         targetSearchable: boolean('Target searchable', false),
       },
-    })),
-  )
-  .add(
-    'Array of objects',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+ArrayOfStrings.story = {
+  name: 'Array of strings',
+};
+
+export const ArrayOfObjects = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dual-list
       on-add="$ctrl.onAdd(item)"
       on-change="$ctrl.onChange(item)"
@@ -66,8 +75,8 @@ storiesOf('Old/Components/Dual List', module)
         loading="$ctrl.targetLoading"
         searchable="$ctrl.targetSearchable">
       </oui-dual-list-target>
-    </oui-dual-list>
-    `, {
+    </oui-dual-list>`,
+    {
       $ctrl: {
         onAdd: action('onAdd'),
         onChange: action('onChange'),
@@ -79,11 +88,17 @@ storiesOf('Old/Components/Dual List', module)
         targetLoading: boolean('Target loading', false),
         targetSearchable: boolean('Target searchable', false),
       },
-    })),
-  )
-  .add(
-    'Deep nested property',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+ArrayOfObjects.story = {
+  name: 'Array of objects',
+};
+
+export const DeepNestedProperty = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-dual-list
       on-add="$ctrl.onAdd(item)"
       on-change="$ctrl.onChange(item)"
@@ -99,8 +114,8 @@ storiesOf('Old/Components/Dual List', module)
         loading="$ctrl.targetLoading"
         searchable="$ctrl.targetSearchable">
       </oui-dual-list-target>
-    </oui-dual-list>
-    `, {
+    </oui-dual-list>`,
+    {
       $ctrl: {
         onAdd: action('onAdd'),
         onChange: action('onChange'),
@@ -112,5 +127,10 @@ storiesOf('Old/Components/Dual List', module)
         targetLoading: boolean('Target loading', false),
         targetSearchable: boolean('Target searchable', false),
       },
-    })),
-  );
+    },
+  ),
+);
+
+DeepNestedProperty.story = {
+  name: 'Deep nested property',
+};

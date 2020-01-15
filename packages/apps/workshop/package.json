@@ -11,6 +11,7 @@
     "copy": "cpx \"./docs/**/*\" \"../../../docs\"",
     "serve": "npx serve ./docs",
     "start": "yarn storybook",
+    "storiesof-to-csf": "sb migrate storiesof-to-csf --glob \"stories/**/*.stories.js\"",
     "storybook": "start-storybook -p 8080"
   },
   "dependencies": {

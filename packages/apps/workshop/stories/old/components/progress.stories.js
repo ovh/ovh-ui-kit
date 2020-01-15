@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/html';
 import { number } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -8,13 +7,17 @@ import { compileTemplate } from '../../../src/utils';
 const moduleName = 'oui-progress-stories';
 angular.module(moduleName, ['oui.progress']);
 
-storiesOf('Old/Components/Progress', module)
-  .addParameters({
+export default {
+  title: 'Old/Components/Progress',
+
+  parameters: {
     notes: readme,
-  })
-  .add(
-    'Variants',
-    forModule(moduleName).createElement(() => compileTemplate(`
+  },
+};
+
+export const Variants = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-progress>
       <oui-progress-bar type="info" value="$ctrl.percentage"></oui-progress-bar>
     </oui-progress>
@@ -29,25 +32,28 @@ storiesOf('Old/Components/Progress', module)
 
     <oui-progress>
       <oui-progress-bar type="error" value="$ctrl.percentage"></oui-progress-bar>
-    </oui-progress>
-    `, {
+    </oui-progress>`,
+    {
       $ctrl: {
         percentage: number('Value', 50),
       },
-    })),
-  )
-  .add(
-    'Stacked',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+export const Stacked = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-progress>
       <oui-progress-bar type="success" value="30"></oui-progress-bar>
       <oui-progress-bar type="error" value="15"></oui-progress-bar>
-    </oui-progress>
-    `)),
-  )
-  .add(
-    'With thresholds',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-progress>`,
+  ),
+);
+
+export const WithThresholds = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-progress max-value="200">
       <oui-progress-bar type="success"
         value="139">
@@ -67,27 +73,38 @@ storiesOf('Old/Components/Progress', module)
       <oui-progress-threshold value="20"></oui-progress-threshold>
       <oui-progress-threshold value="50"></oui-progress-threshold>
       <oui-progress-threshold value="80"></oui-progress-threshold>
-    </oui-progress>
-    `)),
-  )
-  .add(
-    'With custom label',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    </oui-progress>`,
+  ),
+);
+
+WithThresholds.story = {
+  name: 'With thresholds',
+};
+
+export const WithCustomLabel = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-progress>
       <oui-progress-bar type="info"
         value="$ctrl.percentage">
         Progress: {{$ctrl.percentage}}%
       </oui-progress-bar>
-    </oui-progress>
-    `, {
+    </oui-progress>`,
+    {
       $ctrl: {
         percentage: number('Value', 50),
       },
-    })),
-  )
-  .add(
-    'Compact',
-    forModule(moduleName).createElement(() => compileTemplate(`
+    },
+  ),
+);
+
+WithCustomLabel.story = {
+  name: 'With custom label',
+};
+
+export const Compact = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
     <oui-progress compact>
       <oui-progress-bar type="info"
         value="$ctrl.percentage">
@@ -112,10 +129,11 @@ storiesOf('Old/Components/Progress', module)
         value="$ctrl.percentage">
         {{$ctrl.percentage}}% complete
       </oui-progress-bar>
-    </oui-progress>
-    `, {
+    </oui-progress>`,
+    {
       $ctrl: {
         percentage: number('Value', 50),
       },
-    })),
-  );
+    },
+  ),
+);
