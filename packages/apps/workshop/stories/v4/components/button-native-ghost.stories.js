@@ -105,3 +105,12 @@ export const Block = () => `
     Call to action
     <span class="oui-icon oui-icon-folder"></span>
   </button>`;
+
+export const Group = () => `
+<div class="oui-button-group">
+  <button class="oui-button oui-button_ghost">Lorem</button>
+  <button class="oui-button oui-button_ghost">Ipsum</button>
+  <button class="oui-button oui-button_ghost">Dolor</button>
+  <button class="oui-button oui-button_ghost">Sit</button>
+  <button class="oui-button oui-button_ghost">Amet</button>
+</div>`;
