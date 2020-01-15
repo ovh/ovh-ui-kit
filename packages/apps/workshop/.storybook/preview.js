@@ -25,8 +25,9 @@ addParameters({
   options: {
     name: 'OVH UI Kit',
     panelPosition: 'bottom',
+    showRoots: true,
     storySort: (a, b) => {
-      if (a[0].includes('old-')) {
+      if (a[0].includes('version-3-')) {
         return 1;
       }
 
