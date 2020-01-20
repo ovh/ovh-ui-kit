@@ -1,90 +1,9 @@
-# [4.0.0-rc.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.1...v4.0.0-rc.4) (2019-08-19)
-
-
-
-# [4.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2019-08-14)
-
-
-### Bug Fixes
-
-* fix outline borders ([9c1e47d](https://github.com/ovh-ux/ovh-ui-kit/commit/9c1e47d))
-
-
-
-# [4.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2019-08-14)
-
-
-
-# [4.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v4.0.0-rc.1) (2019-08-13)
-
-
-
-# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
-
-
-### Bug Fixes
-
-* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50))
+# [3.10.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.9.0...v3.10.0) (2020-01-20)
 
 
 ### Features
 
-* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579c))
-* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cd))
-* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f))
-* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dad))
-
-
-
-# [4.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2019-08-14)
-
-
-### Bug Fixes
-
-* fix outline borders ([9c1e47d](https://github.com/ovh-ux/ovh-ui-kit/commit/9c1e47d))
-
-
-
-# [4.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2019-08-14)
-
-
-
-# [4.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v4.0.0-rc.1) (2019-08-13)
-
-
-
-# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
-
-
-### Bug Fixes
-
-* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50))
-
-
-### Features
-
-* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579c))
-* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cd))
-* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f))
-* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dad))
-
-
-
-# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
-
-
-### Bug Fixes
-
-* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50))
-
-
-### Features
-
-* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579c))
-* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cd))
-* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f))
-* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dad))
-* **datagrid:** add footer attribute ([e407947](https://github.com/ovh-ux/ovh-ui-kit/commit/e407947))
+* **icons:** add concept icons from design system ([#551](https://github.com/ovh-ux/ovh-ui-kit/issues/551)) ([6c049a5](https://github.com/ovh-ux/ovh-ui-kit/commit/6c049a514bb8374d4f8ae390cb226de1b0e79a09))
 
 
 
@@ -214,12 +133,102 @@
 
 
 
+# [4.0.0-rc.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.1...v4.0.0-rc.4) (2019-08-19)
+
+
+
 ## [3.5.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v3.5.1) (2019-08-19)
 
 
 ### Bug Fixes
 
 * **datagrid:** allow searching in number columns ([#491](https://github.com/ovh-ux/ovh-ui-kit/issues/491)) ([144d737](https://github.com/ovh-ux/ovh-ui-kit/commit/144d737))
+
+
+
+# [4.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2019-08-14)
+
+
+### Bug Fixes
+
+* fix outline borders ([9c1e47d](https://github.com/ovh-ux/ovh-ui-kit/commit/9c1e47d))
+
+
+
+# [4.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2019-08-14)
+
+
+
+# [4.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v4.0.0-rc.1) (2019-08-13)
+
+
+
+# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50))
+
+
+### Features
+
+* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579c))
+* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cd))
+* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f))
+* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dad))
+
+
+
+# [4.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2019-08-14)
+
+
+### Bug Fixes
+
+* fix outline borders ([9c1e47d](https://github.com/ovh-ux/ovh-ui-kit/commit/9c1e47d))
+
+
+
+# [4.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2019-08-14)
+
+
+
+# [4.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v4.0.0-rc.1) (2019-08-13)
+
+
+
+# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50))
+
+
+### Features
+
+* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579c))
+* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cd))
+* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f))
+* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dad))
+
+
+
+# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50))
+
+
+### Features
+
+* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579c))
+* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cd))
+* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f))
+* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dad))
+* **datagrid:** add footer attribute ([e407947](https://github.com/ovh-ux/ovh-ui-kit/commit/e407947))
 
 
 
