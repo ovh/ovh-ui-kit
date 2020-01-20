@@ -1,3 +1,12 @@
+# [3.10.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.9.0...v3.10.0) (2020-01-20)
+
+
+### Features
+
+* **icons:** add concept icons from design system ([#551](https://github.com/ovh-ux/ovh-ui-kit/issues/551)) ([6c049a5](https://github.com/ovh-ux/ovh-ui-kit/commit/6c049a514bb8374d4f8ae390cb226de1b0e79a09))
+
+
+
 # [3.9.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.8.1...v3.9.0) (2020-01-10)
 
 
