@@ -14,9 +14,7 @@ angular.module('myModule', ['oui.checkbox']);
 | `id`          | string                  | @?      | yes               | n/a                     | n/a       | id attribute of the checkbox
 | `name`        | string                  | @?      | yes               | n/a                     | n/a       | name attribute of the checkbox
 | `description` | string                  | @?      | no                | n/a                     | n/a       | description text
-| `footer`      | string                  | @?      | no                | n/a                     | n/a       | description text
-| `size`        | string                  | @?      | yes               | `m`                     | n/a       | checkbox size
-| `variant`     | string                  | @?      | yes               | `default`, `light`      | `default` | checkbox modifier, used in conjunction with `thumbnail`
+| `footer`      | string                  | @?      | no                | n/a                     | n/a       | footer text
 | `disabled`    | boolean                 | <?      | no                | `true`, `false`         | `false`   | disabled flag
 | `required`    | boolean                 | <?      | no                | `true`, `false`         | `false`   | required flag
 | `thumbnail`   | boolean                 | <?      | no                | `true`, `false`         | `false`   | thumbnail style of the checkbox

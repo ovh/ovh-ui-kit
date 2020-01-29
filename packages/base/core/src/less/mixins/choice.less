@@ -136,41 +136,6 @@
     }
   }
 
-  .choice-thumbnail_light(@selector) {
-    .@{selector}__label-container {
-      #oui > .choice-thumbnail-base(
-        @oui-choice-thumbnail-border-color-light,
-        @oui-choice-thumbnail-background-light
-      );
-    }
-
-    .@{selector}__input:disabled {
-      ~ .@{selector}__label-container {
-        #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color-light_disabled,
-          @oui-choice-thumbnail-background-light_disabled
-        );
-      }
-
-      &:checked ~ .@{selector}__label-container {
-        #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color-light-checked_disabled,
-          @oui-choice-thumbnail-background-light-checked_disabled,
-          @oui-choice-thumbnail-border-width-checked
-        );
-      }
-    }
-
-    .@{selector}__input:not(:disabled) {
-      ~ .@{selector}__label-container:hover {
-        #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color-light_hover,
-          @oui-choice-thumbnail-background-light_hover
-        );
-      }
-    }
-  }
-
   .choice-thumbnail_error(@selector) {
     .@{selector}__input:not(:disabled) ~ .@{selector}__label-container,
     .@{selector}__input:checked:not(:disabled) ~ .@{selector}__label-container {

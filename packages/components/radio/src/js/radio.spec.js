@@ -189,24 +189,6 @@ describe('ouiRadio', () => {
         });
       });
 
-
-      describe('size attribute', () => {
-        it('should display a classic radio when no attribute', () => {
-          const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');
-
-          $timeout.flush();
-          expect(angular.element(element).hasClass('oui-radio_m')).toBeFalsy();
-        });
-
-        it('should display a medium radio when value is m', () => {
-          const element = TestUtils.compileTemplate('<oui-radio size="m"></oui-radio>');
-
-          $timeout.flush();
-          expect(angular.element(element).hasClass('oui-radio_m')).toBeTruthy();
-        });
-      });
-
-
       describe('thumbnail attribute', () => {
         it('should display a classic radio when no attribute', () => {
           const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');

@@ -1,9 +1,7 @@
 <div class="oui-checkbox"
     ng-class="{
         'oui-checkbox_error': $ctrl.hasError(),
-        'oui-checkbox_m': $ctrl.size === 'm',
-        'oui-checkbox_thumbnail': !!$ctrl.thumbnail && $ctrl.variant === 'default',
-        'oui-checkbox_thumbnail-light': !!$ctrl.thumbnail && $ctrl.variant === 'light'
+        'oui-checkbox_thumbnail': !!$ctrl.thumbnail,
     }">
     <input class="oui-checkbox__input"
         type="checkbox"

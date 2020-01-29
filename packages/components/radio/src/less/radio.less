@@ -16,25 +16,9 @@ oui-radio-group {
   margin-right: @oui-radio-inline-spacing;
 }
 
-// Radio - Medium
-.oui-radio_m {
-  #oui > .radio-size(
-    @line-height: @oui-radio-m-line-height,
-    @font-size: @oui-radio-m-font-size,
-    @icon-size: @oui-radio-m-icon-size
-  );
-}
-
 // Radio - Thumbnail
 .oui-radio_thumbnail {
   #oui > .choice-thumbnail(oui-radio);
-}
-
-// Radio - Thumbnail light
-.oui-radio_thumbnail-light {
-  &:extend(.oui-radio_thumbnail all);
-
-  #oui > .choice-thumbnail_light(oui-radio);
 }
 
 // Radio - Error

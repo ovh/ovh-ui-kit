@@ -26,12 +26,14 @@ addParameters({
     name: 'OVH UI Kit',
     panelPosition: 'bottom',
     showRoots: true,
-    storySort: (a, b) => {
-      if (a[0].includes('version-3-')) {
-        return 1;
-      }
+    storySort: ([first], [second]) => {
+      const [firstType] = first.split('-');
+      const [secondType] = second.split('-');
 
-      return 0;
+      if (firstType === 'introduction') return -1;
+      if (firstType === secondType) return 0;
+
+      return 1;
     },
   },
 });
