@@ -147,25 +147,9 @@ oui-checkbox {
   margin-right: @oui-checkbox-inline-spacing;
 }
 
-// Checkbox - Medium
-.oui-checkbox_m {
-  #oui > .checkbox-size(
-    @line-height: @oui-checkbox-m-line-height,
-    @font-size: @oui-checkbox-m-font-size,
-    @icon-size: @oui-checkbox-m-icon-size
-  );
-}
-
 // Checkbox - Thumbnail
 .oui-checkbox_thumbnail {
   #oui > .choice-thumbnail(oui-checkbox);
-}
-
-// Checkbox - Thumbnail light
-.oui-checkbox_thumbnail-light {
-  &:extend(.oui-checkbox_thumbnail all);
-
-  #oui > .choice-thumbnail_light(oui-checkbox);
 }
 
 // Checkbox - Error

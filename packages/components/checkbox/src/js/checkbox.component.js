@@ -13,8 +13,6 @@ export default {
     name: '@?',
     description: '@?',
     footer: '@?',
-    size: '@?',
-    variant: '@?',
     thumbnail: '<?',
     disabled: '<?',
     required: '<?',

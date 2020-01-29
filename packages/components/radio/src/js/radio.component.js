@@ -14,8 +14,6 @@ export default {
     footer: '@?',
     id: '@?',
     name: '@?',
-    size: '@?',
-    variant: '@?',
     value: '<',
     thumbnail: '<?',
     disabled: '<?',

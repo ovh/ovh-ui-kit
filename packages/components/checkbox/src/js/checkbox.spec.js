@@ -215,25 +215,11 @@ describe('ouiCheckbox', () => {
       });
     });
 
-    describe('size attribute', () => {
-      it('should have an element with `oui-checkbox_m` classname', () => {
-        const element = TestUtils.compileTemplate('<oui-checkbox size="m"></oui-checkbox>');
-
-        expect(element.find('div').eq(0).hasClass('oui-checkbox_m')).toBeTruthy();
-      });
-    });
-
     describe('thumbnail attribute', () => {
       it('should have an element with `oui-checkbox_thumbnail` classname', () => {
         const element = TestUtils.compileTemplate('<oui-checkbox thumbnail></oui-checkbox>');
 
         expect(element.find('div').eq(0).hasClass('oui-checkbox_thumbnail')).toBeTruthy();
-      });
-
-      it('should have an element with `oui-checkbox_thumbnail` classname', () => {
-        const element = TestUtils.compileTemplate('<oui-checkbox variant="light" thumbnail></oui-checkbox>');
-
-        expect(element.find('div').eq(0).hasClass('oui-checkbox_thumbnail-light')).toBeTruthy();
       });
     });
 

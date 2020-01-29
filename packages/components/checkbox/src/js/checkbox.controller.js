@@ -30,7 +30,6 @@ export default class {
     addBooleanParameter(this, 'required');
     addBooleanParameter(this, 'thumbnail');
     addDefaultParameter(this, 'id', `ouiCheckbox${this.$scope.$id}`);
-    addDefaultParameter(this, 'variant', 'default');
   }
 
   hasError() {

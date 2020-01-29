@@ -115,29 +115,18 @@ WithDescription.story = {
 export const Thumbnails = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model1" thumbnail>Thumbnail</oui-checkbox>
-    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" variant="light" thumbnail>Thumbnail Light</oui-checkbox>`,
+    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model1" thumbnail>Thumbnail</oui-checkbox>`,
   ),
 );
 
 export const WithFooter = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." footer="Lorem ipsum dolor sit amet" model="$ctrl.model1" disabled="$ctrl.disabled" thumbnail>Thumbnail</oui-checkbox>
-    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." footer="Lorem ipsum dolor sit amet" model="$ctrl.model2" disabled="$ctrl.disabled" variant="light" thumbnail>Thumbnail Light</oui-checkbox>`,
+    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." footer="Lorem ipsum dolor sit amet" model="$ctrl.model1" disabled="$ctrl.disabled" thumbnail>Thumbnail</oui-checkbox>`,
     {
       $ctrl: {
         disabled: boolean('Disabled state', false),
       },
     },
-  ),
-);
-
-export const Size = forModule(moduleName).createElement(
-  () => compileTemplate(
-    `
-    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" size="m">Medium</oui-checkbox>
-    <oui-checkbox description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." model="$ctrl.model1" size="m" thumbnail>Thumbnail</oui-checkbox>
-    <oui-checkbox description="Pellentesque euismod magna rutrum lectus gravida semper." model="$ctrl.model2" size="m" variant="light" thumbnail>Thumbnail Light</oui-checkbox>`,
   ),
 );
