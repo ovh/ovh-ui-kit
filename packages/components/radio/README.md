@@ -18,6 +18,7 @@ angular.module('myModule', ['oui.radio']);
 | `value`       | object    | <         | no                | n/a                 | n/a       | value of the radio
 | `disabled`    | boolean   | <?        | no                | `true`, `false`     | `false`   | disabled flag
 | `required`    | boolean   | <?        | no                | `true`, `false`     | `false`   | required flag
+| `inline`      | boolean   | <?        | no                | `true`, `false`     | `false`   | inline style of the radio
 | `thumbnail`   | boolean   | <?        | no                | `true`, `false`     | `false`   | thumbnail style of the radio
 | `on-change`   | function  | &?        | no                | n/a                 | n/a       | handler triggered when value has changed
 

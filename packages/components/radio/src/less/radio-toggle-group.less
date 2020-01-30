@@ -1,5 +1,10 @@
 .oui-radio-toggle-group {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.oui-radio-toggle-group_column {
+  flex-direction: column;
 }
 
 oui-radio-toggle-group {
@@ -7,6 +12,8 @@ oui-radio-toggle-group {
 }
 
 .oui-radio-toggle {
+  flex: 1 1 auto;
+
   &__label {
     #oui > .animate();
 
@@ -62,5 +69,10 @@ oui-radio-toggle-group {
 
   & + & {
     margin-left: @oui-radio-toggle-spacing;
+  }
+
+  .oui-radio-toggle-group_column & + & {
+    margin-left: 0;
+    margin-top: @oui-radio-toggle-spacing;
   }
 }

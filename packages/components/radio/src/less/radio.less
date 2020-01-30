@@ -3,6 +3,10 @@
 // Radio - Base
 .oui-radio {
   #oui > .radio-base();
+
+  & + &:not(.oui-radio_inline) {
+    margin-top: @oui-radio-spacing;
+  }
 }
 
 oui-radio,
@@ -16,17 +20,12 @@ oui-radio-group {
   margin-right: @oui-radio-inline-spacing;
 }
 
-// Radio - Thumbnail
-.oui-radio_thumbnail {
-  #oui > .choice-thumbnail(oui-radio);
-}
-
 // Radio - Error
 // stylelint-disable no-descending-specificity
 .oui-radio_error,
 .oui-field_error .oui-radio {
-  .oui-radio__input:not(:disabled) ~ .oui-radio__label-container,
-  .oui-radio__input:checked:not(:disabled) ~ .oui-radio__label-container {
+  .oui-radio__input ~ .oui-radio__label-container,
+  .oui-radio__input:checked ~ .oui-radio__label-container {
     &,
     &:hover,
     &:active,
@@ -39,16 +38,11 @@ oui-radio-group {
     }
   }
 
-  .oui-radio__input:not(:disabled):focus ~ .oui-radio__label-container,
-  .oui-radio__input:checked:not(:disabled):focus ~ .oui-radio__label-container {
+  .oui-radio__input:focus ~ .oui-radio__label-container,
+  .oui-radio__input:checked:focus ~ .oui-radio__label-container {
     .oui-radio__label::before {
       box-shadow: @oui-radio-box-shadow_error;
     }
-  }
-
-  // Thumbnail variant
-  &.oui-radio_thumbnail {
-    #oui > .choice-thumbnail_error(oui-radio);
   }
 }
 // stylelint-enable no-descending-specificity

@@ -175,80 +175,79 @@
 // Choice
 //
 // Common style for checkboxes, radios and select-picker
-@oui-choice-min-height: rem-calc(30);
+@oui-choice-min-height: rem-calc(24);
 @oui-choice-line-height: 1.5;
 @oui-choice-font-size: rem-calc(16);
-@oui-choice-font-color: @oui-color-sapphire;
-@oui-choice-font-color_disabled: @oui-color-sapphire;
+@oui-choice-font-color: @p-800-text;
+@oui-choice-font-color_disabled: @p-800-text;
+@oui-choice-font-weight: @oui-font-regular;
+@oui-choice-font-weight_checked: @oui-font-bold;
 @oui-choice-margin: 0;
-@oui-choice-padding-left: rem-calc(9);
+@oui-choice-padding-left: rem-calc(12);
+@oui-choice-spacing: rem-calc(8);
 
-@oui-choice-description-spacing: rem-calc(5);
+@oui-choice-description-spacing: rem-calc(4);
 @oui-choice-description-font-size: rem-calc(14);
 
-@oui-choice-section-spacing: rem-calc(9);
+@oui-choice-section-spacing: rem-calc(8);
 @oui-choice-section-border-color: @oui-choice-thumbnail-border-color;
 
-@oui-choice-inline-spacing: rem-calc(20);
+@oui-choice-inline-spacing: rem-calc(16);
 
 // Choice - Custom icon
-@oui-choice-icon-size: rem-calc(16);
+@oui-choice-icon-size: rem-calc(20);
+@oui-choice-icon-border-width: 2px;
 
-@oui-choice-icon-background-color: @oui-color-white;
-@oui-choice-icon-background-color_active: @oui-color-foam;
-@oui-choice-icon-background-color_disabled: @oui-color-concrete;
-@oui-choice-icon-background-color_error: @oui-color-white;
+@oui-choice-icon-background-color: @p-000;
+@oui-choice-icon-background-color_active: @p-000;
+@oui-choice-icon-background-color_error: @p-000;
 
-@oui-choice-icon-outer-color: @oui-color-dusty;
-@oui-choice-icon-outer-color_active: @oui-color-pacific;
-@oui-choice-icon-outer-color_disabled: @oui-color-silver;
-@oui-choice-icon-outer-color_error: @oui-color-error-light;
-@oui-choice-icon-outer-color_focus: @oui-color-sapphire;
-@oui-choice-icon-outer-color_hover: @oui-color-sapphire;
-@oui-choice-icon-outer-color_checked: @oui-color-sapphire;
-@oui-choice-icon-outer-color_checked-hover: @oui-color-info-light;
+@oui-choice-icon-outer-color: @p-500;
+@oui-choice-icon-outer-color_active: @p-700;
+@oui-choice-icon-outer-color_error: @ae-500;
+@oui-choice-icon-outer-color_focus: @p-700;
+@oui-choice-icon-outer-color_hover: @p-700;
+@oui-choice-icon-outer-color_checked: @p-500;
+@oui-choice-icon-outer-color_checked-hover: @p-700;
 
-@oui-choice-icon-inner-color: @oui-color-sapphire;
-@oui-choice-icon-inner-color_active: @oui-color-pacific;
-@oui-choice-icon-inner-color_disabled: @oui-color-silver;
-@oui-choice-icon-inner-color_error: @oui-color-error-medium;
+@oui-choice-icon-inner-color: @p-500;
+@oui-choice-icon-inner-color_active: @p-700;
+@oui-choice-icon-inner-color_error: @ae-500;
+@oui-choice-icon-inner-color_checked: @p-500;
+@oui-choice-icon-inner-color_checked-hover: @p-700;
 
-@oui-choice-box-shadow_focus: 0 0 3px 1px rgba(0, 0, 0, 0.2);
-@oui-choice-box-shadow_error: 0 0 3px 1px @oui-color-error-light;
+@oui-choice-box-shadow_focus: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+@oui-choice-box-shadow_error: @oui-choice-box-shadow_focus;
 
 // Choice - Thumbnail
-@oui-choice-thumbnail-padding: rem-calc(20);
-@oui-choice-thumbnail-border-width: 1px;
-@oui-choice-thumbnail-border-width-checked: 2px;
-@oui-choice-thumbnail-border-radius: rem-calc(4);
-@oui-choice-thumbnail-box-shadow_focus: 0 0 3px 1px rgba(102, 199, 214, 0.6);
-@oui-choice-thumbnail-box-shadow_error: 0 0 3px 0 @oui-color-error-light;
-@oui-choice-thumbnail-box-shadow-checked: 0 4px 6px 1px @oui-color-info-fade;
+@oui-choice-thumbnail-padding: rem-calc(22); // calc(24px - border-width)
+@oui-choice-thumbnail-border-width: 2px;
+@oui-choice-thumbnail-border-width-checked: @oui-choice-thumbnail-border-width;
+@oui-choice-thumbnail-border-radius: @oui-global-base-radius-medium;
+@oui-choice-thumbnail-box-shadow_focus: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+@oui-choice-thumbnail-box-shadow_error: @oui-choice-thumbnail-box-shadow_focus;
+@oui-choice-thumbnail-box-shadow-checked: @oui-choice-thumbnail-box-shadow_focus;
 
-@oui-choice-thumbnail-background: @oui-color-foam;
-@oui-choice-thumbnail-background_hover: @oui-color-foam;
-@oui-choice-thumbnail-background_disabled: @oui-color-polar;
-@oui-choice-thumbnail-background_error: @oui-color-error-fade;
-@oui-choice-thumbnail-border-color: @oui-color-turquoise;
-@oui-choice-thumbnail-border-color_hover: @oui-color-turquoise;
-@oui-choice-thumbnail-border-color_disabled: @oui-color-charlotte;
-@oui-choice-thumbnail-border-color_error: @oui-color-error-light;
+@oui-choice-thumbnail-background: @p-000;
+@oui-choice-thumbnail-background_hover: @p-100;
+@oui-choice-thumbnail-background_error: @ae-300;
+@oui-choice-thumbnail-border-color: @p-100;
+@oui-choice-thumbnail-border-color_hover: @p-500;
+@oui-choice-thumbnail-border-color_error: @ae-500;
 
-@oui-choice-thumbnail-background-checked: @oui-color-foam;
-@oui-choice-thumbnail-background-checked_hover: @oui-color-foam;
-@oui-choice-thumbnail-background-checked_disabled: @oui-color-foam;
-@oui-choice-thumbnail-border-color-checked: @oui-color-pacific;
-@oui-choice-thumbnail-border-color-checked_hover: @oui-color-turquoise;
-@oui-choice-thumbnail-border-color-checked_disabled: @oui-color-pacific;
+@oui-choice-thumbnail-background-checked: @p-075;
+@oui-choice-thumbnail-background-checked_hover: @oui-choice-thumbnail-background_hover;
+@oui-choice-thumbnail-border-color-checked: @p-500;
+@oui-choice-thumbnail-border-color-checked_hover: @oui-choice-thumbnail-border-color_hover;
 
-@oui-choice-thumbnail-footer-spacing: @oui-choice-section-spacing;
-@oui-choice-thumbnail-footer-line-height: 1.125;
+@oui-choice-thumbnail-footer-spacing: @oui-choice-thumbnail-padding;
+@oui-choice-thumbnail-footer-line-height: 1.5;
 @oui-choice-thumbnail-footer-padding-x: @oui-choice-thumbnail-padding;
-@oui-choice-thumbnail-footer-padding-y: rem-calc(10);
-@oui-choice-thumbnail-footer-background: @oui-color-charlotte;
-@oui-choice-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
-@oui-choice-thumbnail-footer-font-weight: @oui-font-semibold;
-@oui-choice-thumbnail-footer-font-size: rem-calc(18);
+@oui-choice-thumbnail-footer-padding-y: rem-calc(8);
+@oui-choice-thumbnail-footer-background: transparent;
+@oui-choice-thumbnail-footer-border-width: 1px;
+@oui-choice-thumbnail-footer-font-weight: @oui-font-regular;
+@oui-choice-thumbnail-footer-font-size: rem-calc(12);
 
 /*
  * Components
@@ -525,7 +524,10 @@
 @oui-checkbox-font-size: @oui-choice-font-size;
 @oui-checkbox-font-color: @oui-choice-font-color;
 @oui-checkbox-font-color_disabled: @oui-choice-font-color_disabled;
+@oui-checkbox-font-weight: @oui-choice-font-weight;
+@oui-checkbox-font-weight_checked: @oui-choice-font-weight_checked;
 @oui-checkbox-padding-left: @oui-choice-padding-left;
+@oui-checkbox-spacing: @oui-choice-spacing;
 
 @oui-checkbox-description-spacing: @oui-choice-description-spacing;
 @oui-checkbox-description-font-size: @oui-choice-description-font-size;
@@ -534,15 +536,15 @@
 
 // Checkbox - Custom icon
 @oui-checkbox-icon-size: @oui-choice-icon-size;
+@oui-checkbox-icon-border-width: @oui-choice-icon-border-width;
+@oui-checkbox-icon-border-radius: rem-calc(2);
 
 @oui-checkbox-icon-background-color: @oui-choice-icon-background-color;
 @oui-checkbox-icon-background-color_active: @oui-choice-icon-background-color_active;
-@oui-checkbox-icon-background-color_disabled: @oui-choice-icon-background-color_disabled;
 @oui-checkbox-icon-background-color_error: @oui-choice-icon-background-color_error;
 
 @oui-checkbox-icon-outer-color: @oui-choice-icon-outer-color;
 @oui-checkbox-icon-outer-color_active: @oui-choice-icon-outer-color_active;
-@oui-checkbox-icon-outer-color_disabled: @oui-choice-icon-outer-color_disabled;
 @oui-checkbox-icon-outer-color_error: @oui-choice-icon-outer-color_error;
 @oui-checkbox-icon-outer-color_focus: @oui-choice-icon-outer-color_focus;
 @oui-checkbox-icon-outer-color_hover: @oui-choice-icon-outer-color_hover;
@@ -551,8 +553,9 @@
 
 @oui-checkbox-icon-inner-color: @oui-choice-icon-inner-color;
 @oui-checkbox-icon-inner-color_active: @oui-choice-icon-inner-color_active;
-@oui-checkbox-icon-inner-color_disabled: @oui-choice-icon-inner-color_disabled;
 @oui-checkbox-icon-inner-color_error: @oui-choice-icon-inner-color_error;
+@oui-checkbox-icon-inner-color_checked: @oui-choice-icon-inner-color_checked;
+@oui-checkbox-icon-inner-color_checked-hover: @oui-choice-icon-inner-color_checked-hover;
 
 @oui-checkbox-box-shadow_focus: @oui-choice-box-shadow_focus;
 @oui-checkbox-box-shadow_error: @oui-choice-box-shadow_error;
@@ -1493,7 +1496,10 @@
 @oui-radio-font-size: @oui-choice-font-size;
 @oui-radio-font-color: @oui-choice-font-color;
 @oui-radio-font-color_disabled: @oui-choice-font-color_disabled;
+@oui-radio-font-weight: @oui-choice-font-weight;
+@oui-radio-font-weight_checked: @oui-choice-font-weight_checked;
 @oui-radio-padding-left: @oui-choice-padding-left;
+@oui-radio-spacing: @oui-choice-spacing;
 
 @oui-radio-description-spacing: @oui-choice-description-spacing;
 @oui-radio-description-font-size: @oui-choice-description-font-size;
@@ -1502,15 +1508,15 @@
 
 // Radio - Custom icon
 @oui-radio-icon-size: @oui-choice-icon-size;
+@oui-radio-icon-border-width: @oui-choice-icon-border-width;
+@oui-radio-icon-border-radius: 50%;
 
 @oui-radio-icon-background-color: @oui-choice-icon-background-color;
 @oui-radio-icon-background-color_active: @oui-choice-icon-background-color_active;
-@oui-radio-icon-background-color_disabled: @oui-choice-icon-background-color_disabled;
 @oui-radio-icon-background-color_error: @oui-choice-icon-background-color_error;
 
 @oui-radio-icon-outer-color: @oui-choice-icon-outer-color;
 @oui-radio-icon-outer-color_active: @oui-choice-icon-outer-color_active;
-@oui-radio-icon-outer-color_disabled: @oui-choice-icon-outer-color_disabled;
 @oui-radio-icon-outer-color_error: @oui-choice-icon-outer-color_error;
 @oui-radio-icon-outer-color_focus: @oui-choice-icon-outer-color_focus;
 @oui-radio-icon-outer-color_hover: @oui-choice-icon-outer-color_hover;
@@ -1519,8 +1525,9 @@
 
 @oui-radio-icon-inner-color: @oui-choice-icon-inner-color;
 @oui-radio-icon-inner-color_active: @oui-choice-icon-inner-color_active;
-@oui-radio-icon-inner-color_disabled: @oui-choice-icon-inner-color_disabled;
 @oui-radio-icon-inner-color_error: @oui-choice-icon-inner-color_error;
+@oui-radio-icon-inner-color_checked: @oui-choice-icon-inner-color_checked;
+@oui-radio-icon-inner-color_checked-hover: @oui-choice-icon-inner-color_checked-hover;
 
 @oui-radio-box-shadow_focus: @oui-choice-box-shadow_focus;
 @oui-radio-box-shadow_error: @oui-choice-box-shadow_error;
@@ -1644,8 +1651,6 @@
 @oui-select-picker-padding: @oui-choice-thumbnail-padding;
 @oui-select-picker-border-width: @oui-choice-thumbnail-border-width;
 @oui-select-picker-border-width-checked: @oui-choice-thumbnail-border-width-checked;
-@oui-select-picker-border-color: @oui-choice-thumbnail-border-color;
-@oui-select-picker-border-color_disabled: @oui-choice-thumbnail-border-color_disabled;
 
 @oui-select-picker-label-color: @oui-choice-font-color;
 @oui-select-picker-label-color_disabled: @oui-choice-font-color_disabled;
@@ -1817,7 +1822,7 @@
 // Status
 @oui-status-line-height: 1;
 @oui-status-max-width: rem-calc(200);
-@oui-status-padding: rem-calc(2) rem-calc(8) ;
+@oui-status-padding: 0 rem-calc(8) ;
 @oui-status-font-color: @text-color;
 @oui-status-font-color_info: @info-color;
 @oui-status-font-color_success: @success-color;
