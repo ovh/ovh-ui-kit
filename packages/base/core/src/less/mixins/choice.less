@@ -4,7 +4,8 @@
     @min-height: @oui-choice-min-height,
     @margin: @oui-choice-margin,
     @font-color: @oui-choice-font-color,
-    @font-size: @oui-choice-font-size,
+    @font-weight: @oui-choice-font-weight,
+    @font-weight_checked: @oui-choice-font-weight_checked,
     @description-spacing: @oui-choice-description-spacing,
     @description-font-size: @oui-choice-description-font-size,
     @section-spacing: @oui-choice-section-spacing,
@@ -24,7 +25,6 @@
       cursor: pointer;
     }
 
-    &__label,
     &__description,
     &__section {
       display: block;
@@ -32,8 +32,11 @@
     }
 
     &__label {
+      display: flex;
+      align-items: center;
       position: relative;
-      font-weight: @oui-font-semibold;
+      font-weight: @font-weight;
+      color: @font-color;
     }
 
     &__description {
@@ -49,6 +52,10 @@
 
     &__input {
       #oui > .visually-hidden();
+    }
+
+    &__input:checked ~ &__label-container &__label {
+      font-weight: @font-weight_checked;
     }
   }
 
@@ -70,75 +77,60 @@
       font-size: @oui-choice-thumbnail-footer-font-size;
       border-bottom-left-radius: inherit;
       border-bottom-right-radius: inherit;
+      border-top: @oui-choice-thumbnail-footer-border-width solid @oui-choice-thumbnail-border-color;
       background: @oui-choice-thumbnail-footer-background;
     }
 
-    .@{selector}__input:checked ~ .@{selector}__label-container {
-      @border-diff: calc(@oui-choice-thumbnail-border-width-checked - @oui-choice-thumbnail-border-width);
-
-      box-shadow: @oui-choice-thumbnail-box-shadow-checked;
-      padding: calc(@oui-choice-thumbnail-padding - @border-diff);
-
-      .@{selector}__footer {
-        padding: @oui-choice-thumbnail-footer-padding-y calc(@oui-choice-thumbnail-footer-padding-x - @border-diff) calc(@oui-choice-thumbnail-footer-padding-y - @border-diff);
-        margin: @oui-choice-thumbnail-footer-spacing calc(-@oui-choice-thumbnail-padding + @border-diff) calc(-@oui-choice-thumbnail-padding + @border-diff);
-      }
-    }
-
-    .@{selector}__input:disabled {
-      ~ .@{selector}__label-container {
-        #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color_disabled,
-          @oui-choice-thumbnail-background_disabled
-        );
-
-        .@{selector}__footer {
-          background: @oui-choice-thumbnail-footer-background_disabled;
-        }
-      }
-
-      &:checked ~ .@{selector}__label-container {
-        #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color-checked_disabled,
-          @oui-choice-thumbnail-background-checked_disabled,
-          @oui-choice-thumbnail-border-width-checked
-        );
-      }
-    }
-
-    .@{selector}__input:not(:disabled) {
+    .@{selector}__input {
       ~ .@{selector}__label-container:hover {
         #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color_hover,
-          @oui-choice-thumbnail-background_hover
+          @selector,
+          @border-color: @oui-choice-thumbnail-border-color_hover,
+          @background-color: @oui-choice-thumbnail-background_hover
         );
       }
 
       &:focus ~ .@{selector}__label-container .@{selector}__label::before {
-        box-shadow: @oui-choice-thumbnail-box-shadow_focus;
+        box-shadow: none;
       }
 
       &:checked ~ .@{selector}__label-container {
+        @border-diff: calc(@oui-choice-thumbnail-border-width-checked - @oui-choice-thumbnail-border-width);
+
+        box-shadow: @oui-choice-thumbnail-box-shadow-checked;
+        padding: calc(@oui-choice-thumbnail-padding - @border-diff);
+
         #oui > .choice-thumbnail-color(
-          @oui-choice-thumbnail-border-color-checked,
-          @oui-choice-thumbnail-background-checked,
-          @oui-choice-thumbnail-border-width-checked
+          @selector,
+          @background-color: @oui-choice-thumbnail-background-checked,
+          @border-color: @oui-choice-thumbnail-border-color-checked,
+          @border-width: @oui-choice-thumbnail-border-width-checked
         );
+
+        .@{selector}__footer {
+          padding: @oui-choice-thumbnail-footer-padding-y calc(@oui-choice-thumbnail-footer-padding-x - @border-diff) calc(@oui-choice-thumbnail-footer-padding-y - @border-diff);
+          margin: @oui-choice-thumbnail-footer-spacing calc(-@oui-choice-thumbnail-padding + @border-diff) calc(-@oui-choice-thumbnail-padding + @border-diff);
+        }
 
         &:hover {
           #oui > .choice-thumbnail-color(
-            @oui-choice-thumbnail-border-color-checked_hover,
-            @oui-choice-thumbnail-background-checked_hover,
-            @oui-choice-thumbnail-border-width-checked
+            @selector,
+            @background-color: @oui-choice-thumbnail-background-checked_hover,
+            @border-color: @oui-choice-thumbnail-border-color-checked_hover,
+            @border-width: @oui-choice-thumbnail-border-width-checked
           );
         }
+      }
+
+      &:disabled ~ .@{selector}__label-container {
+        opacity: 0.5;
       }
     }
   }
 
   .choice-thumbnail_error(@selector) {
-    .@{selector}__input:not(:disabled) ~ .@{selector}__label-container,
-    .@{selector}__input:checked:not(:disabled) ~ .@{selector}__label-container {
+    .@{selector}__input ~ .@{selector}__label-container,
+    .@{selector}__input:checked ~ .@{selector}__label-container {
       &,
       &:hover,
       &:active,
@@ -153,32 +145,37 @@
       }
     }
 
-    .@{selector}__input:not(:disabled):focus ~ .@{selector}__label-container,
-    .@{selector}__input:checked:not(:disabled):focus ~ .@{selector}__label-container {
+    .@{selector}__input:focus ~ .@{selector}__label-container,
+    .@{selector}__input:checked:focus ~ .@{selector}__label-container {
       border-color: @oui-choice-thumbnail-border-color_error;
       box-shadow: @oui-choice-thumbnail-box-shadow_error;
     }
   }
 
   .choice-thumbnail-base(
+    @background-color: @oui-choice-thumbnail-background,
     @border-color: @oui-choice-thumbnail-border-color,
-    @background: @oui-choice-thumbnail-background,
     @border-width: @oui-choice-thumbnail-border-width,
     @padding: @oui-choice-thumbnail-padding
   ) {
     padding: @padding;
     border: @border-width solid @border-color;
     border-radius: @oui-global-base-radius-medium;
-    background: @background;
+    background: @background-color;
     cursor: pointer;
   }
 
   .choice-thumbnail-color(
-    @border-hover-color: @oui-choice-thumbnail-border-hover-color,
-    @background: @oui-choice-thumbnail-background,
+    @selector,
+    @background-color: @oui-choice-thumbnail-background,
+    @border-color: @oui-choice-thumbnail-border-color,
     @border-width: @oui-choice-thumbnail-border-width
   ) {
-    border: @border-width solid @border-hover-color;
-    background: @background;
+    border: @border-width solid @border-color;
+    background: @background-color;
+
+    .@{selector}__footer {
+      border-top-color: @border-color;
+    }
   }
 }

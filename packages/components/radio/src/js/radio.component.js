@@ -15,10 +15,13 @@ export default {
     id: '@?',
     name: '@?',
     value: '<',
+    inline: '<?',
     thumbnail: '<?',
     disabled: '<?',
     required: '<?',
     onChange: '&?',
   },
-  transclude: true,
+  transclude: {
+    slot: '?transcludeSlot',
+  },
 };

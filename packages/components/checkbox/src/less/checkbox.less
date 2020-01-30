@@ -57,7 +57,8 @@ oui-checkbox {
 // Checkbox - Checked state
 .oui-checkbox__input:checked ~ .oui-checkbox__label-container {
   #oui > .checkbox-color(
-    @icon-outer-color: @oui-checkbox-icon-outer-color_checked
+    @icon-outer-color: @oui-checkbox-icon-outer-color_checked,
+    @icon-inner-color: @oui-checkbox-icon-inner-color_checked
   );
 
   .oui-checkbox__icon {
@@ -91,11 +92,7 @@ oui-checkbox {
 // Checkbox - Disabled state
 .oui-checkbox__input:disabled {
   ~ .oui-checkbox__label-container {
-    #oui > .checkbox-color(
-      @icon-background-color: @oui-checkbox-icon-background-color_disabled,
-      @icon-outer-color: @oui-checkbox-icon-outer-color_disabled,
-      @icon-inner-color: @oui-checkbox-icon-inner-color_disabled
-    );
+    opacity: 0.5;
 
     .oui-checkbox__label,
     .oui-checkbox__description {
@@ -136,7 +133,8 @@ oui-checkbox {
 
   &:checked ~ .oui-checkbox__label-container:not(:active):hover {
     #oui > .checkbox-color(
-      @icon-outer-color: @oui-checkbox-icon-outer-color_checked-hover
+      @icon-outer-color: @oui-checkbox-icon-outer-color_checked-hover,
+      @icon-inner-color: @oui-checkbox-icon-inner-color_checked-hover
     );
   }
 }

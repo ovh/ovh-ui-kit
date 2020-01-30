@@ -16,7 +16,7 @@ describe('ouiRadio', () => {
     describe('Radio', () => {
       const getRadioInputElement = (element) => element[0].querySelector('input[type=radio]');
       const getRadioLabelElement = (element) => element[0].querySelector('label');
-      const getRadioTextContainerElement = (element) => element[0].querySelector('.oui-radio__label span:first-child');
+      const getRadioTextContainerElement = (element) => element[0].querySelector('.oui-radio__text');
       const getRadioDescriptionElement = (element) => element[0].querySelector('.oui-radio__description');
       const getRadioFooterElement = (element) => element[0].querySelector('.oui-radio__footer');
 
@@ -220,6 +220,15 @@ describe('ouiRadio', () => {
 
           $timeout.flush();
           expect(angular.element(element).hasClass('oui-radio_thumbnail')).toBe(true);
+        });
+      });
+
+      describe('inline attribute', () => {
+        it('should display an inline radio', () => {
+          const element = TestUtils.compileTemplate('<oui-radio inline></oui-radio>');
+
+          $timeout.flush();
+          expect(angular.element(element).hasClass('oui-radio_inline')).toBe(true);
         });
       });
 
