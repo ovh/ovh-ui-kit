@@ -1,3 +1,13 @@
+<a name="2.39.0"></a>
+# [2.39.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.38.0...v2.39.0) (2020-01-31)
+
+
+### Features
+
+* **oui-datagrid:** refresh datagrid ([#555](https://github.com/ovh-ux/ovh-ui-kit/issues/555)) ([733d3f7](https://github.com/ovh-ux/ovh-ui-kit/commit/733d3f7))
+
+
+
 <a name="2.38.0"></a>
 # [2.38.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.37.0...v2.38.0) (2020-01-20)
 

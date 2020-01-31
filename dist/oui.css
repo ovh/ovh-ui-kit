@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.38.0") format("woff2"), url("./icons/icons.woff?v=2.38.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.39.0") format("woff2"), url("./icons/icons.woff?v=2.39.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -9301,10 +9301,23 @@ oui-criteria-adder {
   margin-bottom: 0.625rem;
 }
 .oui-datagrid-topbar__slot {
+  display: flex;
   flex: 1 0;
 }
 .oui-datagrid-topbar__slot oui-action-menu {
   margin-bottom: 0.625rem;
+}
+.oui-datagrid-topbar__refresh {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+  margin-left: auto;
+  padding: 0.9rem 0rem;
+}
+.oui-datagrid-topbar__refresh .oui-icon::before {
+  width: auto;
+  height: auto;
+  font-size: 1.25rem;
 }
 oui-modal {
   display: block;
