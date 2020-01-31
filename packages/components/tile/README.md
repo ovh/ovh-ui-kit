@@ -36,14 +36,14 @@ angular.module('myModule', ['oui.tile']);
 
 | Attribute                   | Description
 | ----                        | ----
-| `<oui-title-term>`          | definition term slot, override attribute `term`
-| `<oui-title-description>`   | definition description slot, override attribute `description`
-| `<oui-title-actions>`       | definition actions slot
+| `<oui-tile-term>`          | definition term slot, override attribute `term`
+| `<oui-tile-description>`   | definition description slot, override attribute `description`
+| `<oui-tile-actions>`       | definition actions slot
 
 ```html
-<oui-title-definition>
-    <oui-title-term>Term</oui-title-term>
-    <oui-title-description>Descriptions</oui-title-description>
-    <oui-title-actions>Actions</oui-title-actions>
-<oui-title-definition>
+<oui-tile-definition>
+    <oui-tile-term>Term</oui-tile-term>
+    <oui-tile-description>Descriptions</oui-tile-description>
+    <oui-tile-actions>Actions</oui-tile-actions>
+<oui-tile-definition>
 ```

@@ -33,6 +33,22 @@ Model will not be refreshed until the `on-change` callback hasn't returned. If y
 </oui-radio>
 ```
 
+### Transclude slots
+
+| Attribute                 | Description
+| ----                      | ----
+| `<oui-radio-label>`       | definition label slot, override text transclude
+| `<oui-radio-description>` | definition description slot, override attribute `description`
+| `<oui-radio-footer>`      | definition footer slot
+
+```html
+<oui-radio>
+    <oui-radio-label>Label</oui-radio-label>
+    <oui-radio-description>Description</oui-radio-description>
+    <oui-radio-footer>Footer</oui-radio-footer>
+<oui-radio>
+```
+
 ## Component `oui-radio-group`
 
 | Attribute     | Type      | Binding   | One-time Binding  | Values  | Default | Description

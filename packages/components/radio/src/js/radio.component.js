@@ -23,5 +23,9 @@ export default {
   },
   transclude: {
     slot: '?transcludeSlot',
+    descriptionSlot: '?ouiRadioDescription',
+    labelSlot: '?ouiRadioLabel',
+    footerSlot: '?ouiRadioFooter',
+    sectionSlot: '?ouiRadioSection',
   },
 };

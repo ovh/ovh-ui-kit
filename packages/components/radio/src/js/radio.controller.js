@@ -11,6 +11,33 @@ export default class {
     this.$transclude = $transclude;
   }
 
+  hasDescription() {
+    return this.$transclude.isSlotFilled('descriptionSlot') || this.description;
+  }
+
+  hasFooter() {
+    if (!this.thumbnail) {
+      return false;
+    }
+
+    return this.$transclude.isSlotFilled('footerSlot') || this.footer;
+  }
+
+  hasLabel() {
+    return this.$transclude.isSlotFilled('labelSlot');
+  }
+
+  // Support for simple text transclude
+  hasTextTransclude() {
+    let hasText;
+
+    this.$transclude((clone) => {
+      hasText = clone.length === 1 && !!clone.text().trim().length;
+    });
+
+    return hasText;
+  }
+
   $onInit() {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'inline');
@@ -18,11 +45,6 @@ export default class {
     addBooleanParameter(this, 'required');
     addDefaultParameter(this, 'id', `ouiRadio${this.$scope.$id}`);
 
-    this.$transclude((clone) => {
-      const isEmpty = !clone.text().trim().length;
-      this.transcludeSlot = !isEmpty;
-    });
-    // console.log(this.$transclude, this.$transclude.isSlotFilled('slot'));
     this.group = this.radioGroup || this.radioToggleGroup;
     if (this.group) {
       this.name = this.group.name;

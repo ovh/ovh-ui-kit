@@ -86,23 +86,23 @@ export const WithDescription = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-radio
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value1">
-      Value A
+      <oui-radio-label>Value A</oui-radio-label>
+      <oui-radio-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</oui-radio-description>
     </oui-radio>
 
     <oui-radio
-      description="Pellentesque euismod magna rutrum lectus gravida semper."
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2">
-      Value B
+      <oui-radio-label>Value B</oui-radio-label>
+      <oui-radio-description>Pellentesque euismod magna rutrum lectus gravida semper.</oui-radio-description>
     </oui-radio>`,
     {
       $ctrl: {
