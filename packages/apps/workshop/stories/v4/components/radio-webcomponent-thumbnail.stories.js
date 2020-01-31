@@ -36,7 +36,7 @@ export const Default = forModule(moduleName).createElement(
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2"
       thumbnail>
-      Value B
+      <oui-radio-label>Value B</oui-radio-label>
     </oui-radio>`,
     {
       $ctrl: {
@@ -65,14 +65,14 @@ export const WithDescription = forModule(moduleName).createElement(
     </oui-radio>
 
     <oui-radio
-      description="Pellentesque euismod magna rutrum lectus gravida semper."
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2"
       thumbnail>
-      Value B
+      <oui-radio-label>Value B</oui-radio-label>
+      <oui-radio-description>Pellentesque euismod magna rutrum lectus gravida semper.</oui-radio-description>
     </oui-radio>`,
     {
       $ctrl: {
@@ -94,25 +94,25 @@ export const WithFooter = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-radio
-      footer="Lorem ipsum dolor sit amet"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value1"
       thumbnail>
-      Value A
+      <oui-radio-label>Value A</oui-radio-label>
+      <oui-radio-footer>Lorem ipsum dolor sit amet</oui-radio-footer>
     </oui-radio>
 
     <oui-radio
-      footer="Pellentesque habitant morbi tristique"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2"
       thumbnail>
-      Value B
+      <oui-radio-label>Value B</oui-radio-label>
+      <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
     </oui-radio>`,
     {
       $ctrl: {
@@ -134,27 +134,27 @@ export const FullExample = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-radio
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-      footer="Lorem ipsum dolor sit amet"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value1"
       thumbnail>
-      Value A
+      <oui-radio-label>Value A</oui-radio-label>
+      <oui-radio-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</oui-radio-description>
+      <oui-radio-footer>Lorem ipsum dolor sit amet</oui-radio-footer>
     </oui-radio>
 
     <oui-radio
-      description="Pellentesque euismod magna rutrum lectus gravida semper."
-      footer="Pellentesque habitant morbi tristique"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       name="oui-radio-1"
       on-change="$ctrl.onChange(modelValue)"
       value="$ctrl.value2"
       thumbnail>
-      Value B
+      <oui-radio-label>Value B</oui-radio-label>
+      <oui-radio-description>Pellentesque euismod magna rutrum lectus gravida semper.</oui-radio-description>
+      <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
     </oui-radio>`,
     {
       $ctrl: {

@@ -70,7 +70,7 @@ describe('ouiRadio', () => {
           const element = TestUtils.compileTemplate('<oui-radio>test</oui-radio>');
 
           const textContainerRadioElement = getRadioTextContainerElement(element);
-          expect(angular.element(textContainerRadioElement).html()).toBe('test');
+          expect(angular.element(textContainerRadioElement).text().trim()).toBe('test');
         });
       });
 
@@ -86,7 +86,7 @@ describe('ouiRadio', () => {
           const element = TestUtils.compileTemplate('<oui-radio description="test"></oui-radio>');
 
           const descriptionRadioElement = getRadioDescriptionElement(element);
-          expect(angular.element(descriptionRadioElement).html()).toBe('test');
+          expect(angular.element(descriptionRadioElement).text().trim()).toBe('test');
         });
       });
 
@@ -108,7 +108,7 @@ describe('ouiRadio', () => {
           const element = TestUtils.compileTemplate('<oui-radio footer="test" thumbnail="true"></oui-radio>');
 
           const footerRadioElement = getRadioFooterElement(element);
-          expect(angular.element(footerRadioElement).html()).toBe('test');
+          expect(angular.element(footerRadioElement).text().trim()).toBe('test');
         });
       });
 
