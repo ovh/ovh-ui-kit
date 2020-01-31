@@ -161,10 +161,25 @@
   }
 
   &__slot {
+    display: flex;
     flex: 1 0;
 
     oui-action-menu {
       margin-bottom: rem-calc(10);
+    }
+  }
+
+  &__refresh {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.625rem;
+    margin-left: auto;
+    padding: 0.9rem 0rem;
+
+    .oui-icon::before {
+      width: auto;
+      height: auto;
+      font-size: 1.25rem;
     }
   }
 }
