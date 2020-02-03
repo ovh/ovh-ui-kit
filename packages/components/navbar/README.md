@@ -318,6 +318,7 @@ The property `name` **must be** `"user"`.
 | `header-breadcrumb`   | string    | @?        | yes               | n/a                                   | n/a       | text of the header breadcrumb
 | `placement`           | string    | @?        | yes               | `start`, `end`                        | `start`   | placement of the menu to his trigger
 | `back-button`         | boolean   | <?        | yes               | `true`, `false`                       | `false`   | display a back button in the header title
+| `variant`             | string    | @?        | no                | `panel`                               | n/a       | variant of the menu
 | `fixed`               | boolean   | <?        | yes               | `true`, `false`                       | `false`   | flag for responsive menu
 
 ## Component `oui-navbar-notification`
@@ -333,6 +334,7 @@ The property `name` **must be** `"user"`.
 | `footer-title`        | string    | @?        | yes               | n/a                                   | n/a       | text of the footer link
 | `footer-href`         | string    | @?        | yes               | n/a                                   | n/a       | url of the footer link
 | `placement`           | string    | @?        | yes               | `start`, `end`                        | `start`   | placement of the menu to his trigger
+| `variant`             | string    | @?        | no                | `panel`                               | n/a       | variant of the menu
 | `fixed`               | boolean   | <?        | yes               | `true`, `false`                       | `false`   | flag for responsive menu
 
 ## Component `oui-navbar-toggler`

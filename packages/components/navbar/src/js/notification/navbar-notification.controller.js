@@ -27,6 +27,10 @@ export default class {
         .addClass('oui-navbar-menu')
         .addClass('oui-navbar-menu_notifications');
 
+      if (this.variant) {
+        this.$element.addClass(`oui-navbar-menu_${this.variant}`);
+      }
+
       if (this.fixed) {
         this.$element.addClass('oui-navbar-menu_fixed');
       }
