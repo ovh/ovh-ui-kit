@@ -43,7 +43,6 @@ storiesOf('Components/Navbar', module)
   .add(
     'Advanced',
     forModule(moduleName).createElement(() => compileTemplate(`
-
     <oui-navbar
       active-link="lorem">
       <oui-navbar-toggler
@@ -120,6 +119,35 @@ storiesOf('Components/Navbar', module)
         togglerLinks: mainLinks,
       },
     })),
+  )
+  .add(
+    'Custom menus',
+    forModule(moduleName).createElement(() => compileTemplate(`
+    <oui-navbar>
+      <oui-navbar-aside>
+        <oui-navbar-dropdown
+          name="custom"
+          text="Custom menu with a badge"
+          icon-badge="3"
+          icon-class="oui-icon oui-icon-bell">
+
+          <div class="oui-navbar-menu oui-navbar-menu_panel oui-navbar-menu_end">
+            <nav class="oui-list oui-list_nav">
+              <ul class="oui-list__items">
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 1</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 2</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 3</a></li>
+                <li class="oui-list__item oui-list__item_current"><a href="" class="oui-list__link">Item 4</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 5</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 6</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </oui-navbar-dropdown>
+      </oui-navbar-aside>
+    </oui-navbar>
+    `)),
   )
   .add(
     'Placeholder for notification',
