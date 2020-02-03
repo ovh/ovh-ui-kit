@@ -40,6 +40,7 @@ describe('ouiNavbar', () => {
     const navbarDropdownClass = `${navbarClass}-dropdown`;
     const navbarMenuClass = `${navbarClass}-menu`;
     const navbarMenuFixedClass = `${navbarMenuClass}_fixed`;
+    const navbarMenuPanelClass = `${navbarMenuClass}_panel`;
     const navbarMenuEndClass = `${navbarMenuClass}_end`;
     const navbarListItemClass = `${navbarClass}-list__item`;
 
@@ -307,6 +308,7 @@ describe('ouiNavbar', () => {
 
         expect(dropdownMenu.hasClass(navbarMenuClass)).toBeTruthy();
         expect(dropdownMenu.hasClass(navbarMenuFixedClass)).toBeTruthy();
+        expect(dropdownMenu.hasClass(navbarMenuPanelClass)).toBeFalsy();
       });
 
       it('should have content transcluded', () => {
@@ -381,6 +383,7 @@ describe('ouiNavbar', () => {
       it('should have default classname', () => {
         expect(menu.hasClass(navbarMenuClass)).toBeTruthy();
         expect(menu.hasClass(navbarMenuFixedClass)).toBeFalsy();
+        expect(menu.hasClass(navbarMenuPanelClass)).toBeFalsy();
         expect(menu.hasClass(navbarMenuEndClass)).toBeFalsy();
       });
 
@@ -440,6 +443,33 @@ describe('ouiNavbar', () => {
 
         menu = component.find('oui-navbar-menu');
         expect(menu.hasClass(navbarMenuFixedClass)).toBeTruthy();
+      });
+
+      it("should have a variant 'panel' classname", () => {
+        component = testUtils.compileTemplate(`
+          <oui-navbar>
+              <oui-navbar-aside>
+                  <oui-navbar-dropdown
+                      name="{{$ctrl.name}}"
+                      text="{{$ctrl.title}}">
+                      <oui-navbar-menu
+                          name="{{$ctrl.name}}"
+                          links="$ctrl.subLinks"
+                          variant="panel">
+                      </oui-navbar-menu>
+                  </oui-navbar-dropdown>
+              <oui-navbar-aside>
+          </oui-navbar>`, {
+          name: data.name,
+          title: data.title,
+          headerTitle: data.headerTitle,
+          subLinks: data.subLinks,
+        });
+
+        $timeout.flush();
+
+        menu = component.find('oui-navbar-menu');
+        expect(menu.hasClass(navbarMenuPanelClass)).toBeTruthy();
       });
 
       it('should have custom content', () => {

@@ -13,6 +13,7 @@ export default {
     menuLinks: '<links',
     menuName: '@name',
     placement: '@?',
+    variant: '@?',
     fixed: '<?',
   },
   transclude: {
