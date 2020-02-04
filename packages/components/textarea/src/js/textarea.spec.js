@@ -296,6 +296,18 @@ describe('ouiTextarea', () => {
       });
     });
 
+    describe('Inline', () => {
+      it('should have inline classname', () => {
+        const element = TestUtils.compileTemplate(`
+          <oui-textarea inline></oui-textarea>
+        `);
+
+        $timeout.flush();
+
+        expect(element.hasClass('oui-textarea__wrapper_inline')).toBeTruthy();
+      });
+    });
+
     describe('onChange', () => {
       it('should be required without provider value', () => {
         const newValue = 'new value';

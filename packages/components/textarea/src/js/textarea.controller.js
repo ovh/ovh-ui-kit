@@ -14,6 +14,7 @@ export default class {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'required');
     addBooleanParameter(this, 'readonly');
+    addBooleanParameter(this, 'inline');
   }
 
   $postLink() {
@@ -23,6 +24,10 @@ export default class {
       this.$element
         .removeAttr('id')
         .removeAttr('name');
+
+      if (this.inline) {
+        this.$element.addClass('oui-textarea__wrapper_inline');
+      }
 
       this.textarea = this.$element[0].querySelector('textarea');
       this.updateErrorState();

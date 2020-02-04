@@ -51,7 +51,6 @@ export const WithMaxlength = forModule(moduleName).createElement(
     {
       $ctrl: {
         disabled: boolean('Disabled state', false),
-        readonly: boolean('Read-only state', false),
         model: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         onChange: action('onChange'),
       },
@@ -62,3 +61,23 @@ export const WithMaxlength = forModule(moduleName).createElement(
 WithMaxlength.story = {
   name: 'With maxlength',
 };
+
+export const Inline = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-textarea
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      maxlength="250"
+      placeholder="Please insert your text..."
+      rows="5"
+      inline>
+    </oui-textarea>`,
+    {
+      $ctrl: {
+        model: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        onChange: action('onChange'),
+      },
+    },
+  ),
+);
