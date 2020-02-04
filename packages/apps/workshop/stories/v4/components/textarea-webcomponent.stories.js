@@ -9,14 +9,14 @@ const moduleName = 'oui-textarea-stories';
 angular.module(moduleName, ['oui.textarea']);
 
 export default {
-  title: 'Version 3/Components/Textarea',
+  title: 'Version 4/Components/Textarea/WebComponent',
 
   parameters: {
     notes: readme,
   },
 };
 
-export const Simple = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-textarea
@@ -25,27 +25,40 @@ export const Simple = forModule(moduleName).createElement(
       on-change="$ctrl.onChange(modelValue)"
       placeholder="Please insert your text..."
       readonly="$ctrl.readonly"
-      rows="7">
+      rows="5">
     </oui-textarea>`,
     {
       $ctrl: {
         disabled: boolean('Disabled state', false),
         readonly: boolean('Read-only state', false),
-        model: 'Lorem ipsum dolor sit amet',
-        onChange: action('onClick'),
+        model: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        onChange: action('onChange'),
       },
     },
   ),
 );
 
-export const Validations = forModule(moduleName).createElement(
+export const WithMaxlength = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-textarea
-      maxlength="250"
+      disabled="$ctrl.disabled"
       model="$ctrl.model"
+      maxlength="250"
       placeholder="Please insert your text..."
-      rows="7">
+      rows="5">
     </oui-textarea>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        readonly: boolean('Read-only state', false),
+        model: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        onChange: action('onChange'),
+      },
+    },
   ),
 );
+
+WithMaxlength.story = {
+  name: 'With maxlength',
+};
