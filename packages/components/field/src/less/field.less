@@ -29,6 +29,9 @@
   &__control {
     width: @oui-field-control-width;
     margin-bottom: @oui-field-control-spacing;
+
+    // Field - Size variants
+    #oui > .control-sizes();
   }
 
   &__helper {
@@ -62,9 +65,6 @@
 oui-field {
   display: block;
 }
-
-// Field - Size variants
-#oui > .control-sizes(oui-field__control);
 
 // Field - Error
 .oui-field_error .oui-field__error {

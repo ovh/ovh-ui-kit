@@ -103,7 +103,6 @@
       transition-property: border-color, box-shadow, background-color;
       border-color: @oui-file-input-border-color_focus;
       outline: none;
-      box-shadow: @oui-file-input-box-shadow_focus;
       background-color: @oui-file-input-background-color_focus;
       text-decoration: none;
     }
@@ -152,11 +151,6 @@
       background-color: @oui-file-input-background-color_error;
       color: @oui-file-input-font-color_error;
       font-weight: @oui-file-input-font-weight;
-      box-shadow: @oui-file-input-box-shadow_error;
-    }
-
-    &:not(:disabled):focus {
-      box-shadow: @oui-file-input-box-shadow_error-focus;
     }
   }
 

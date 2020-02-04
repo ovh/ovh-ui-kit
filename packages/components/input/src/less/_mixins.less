@@ -16,7 +16,6 @@
     @border-radius: @oui-input-border-radius,
     @border-width: @oui-input-border-width,
     @box-shadow: @oui-input-box-shadow,
-    @box-shadow_focus: @oui-input-box-shadow_focus,
     @background-color: @oui-input-background-color,
     @background-color_hover: @oui-input-background-color_hover,
     @background-color_focus: @oui-input-background-color_focus,
@@ -66,7 +65,6 @@
     &:focus {
       border-color: @border-color_focus;
       outline: none;
-      box-shadow: @box-shadow_focus;
       background-color: @background-color_focus;
       text-decoration: none;
     }
@@ -99,12 +97,6 @@
       border-color: @oui-input-border-color_error;
       background-color: @oui-input-background-color_error;
       color: @oui-input-font-color_error;
-      font-weight: @oui-input-font-weight_error;
-      box-shadow: @oui-input-box-shadow_error;
-    }
-
-    &:not(:disabled):focus {
-      box-shadow: @oui-input-box-shadow_error-focus;
     }
 
     &::selection {
