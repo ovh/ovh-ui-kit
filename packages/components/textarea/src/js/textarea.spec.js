@@ -3,13 +3,9 @@ describe('ouiTextarea', () => {
   let $timeout;
   let TestUtils;
 
-  const getController = (elm) => elm.controller('ouiTextarea');
   const getTextarea = (elm) => elm[0].querySelector('textarea');
   const getFooter = (elm) => elm[0].querySelector('.oui-textarea__footer');
 
-  const disabledClass = 'oui-textarea_disabled';
-  const readonlyClass = 'oui-textarea_readonly';
-  const focusClass = 'oui-textarea_active';
   const errorClass = 'oui-textarea_error';
 
   beforeEach(angular.mock.module('oui.textarea'));
@@ -87,21 +83,6 @@ describe('ouiTextarea', () => {
       expect(textarea.getAttribute('rows')).toEqual(rows);
     });
 
-    it('should react to focus and blur', () => {
-      const element = TestUtils.compileTemplate(`
-                <oui-textarea></oui-textarea>
-            `);
-
-      const $textarea = angular.element(getTextarea(element));
-      expect(element.hasClass(focusClass)).toBeFalsy();
-
-      $textarea.triggerHandler('focus');
-      expect(element.hasClass(focusClass)).toBeTruthy();
-
-      $textarea.triggerHandler('blur');
-      expect(element.hasClass(focusClass)).toBeFalsy();
-    });
-
     describe('Disabled state', () => {
       it('should be disabled without provided value', () => {
         const element = TestUtils.compileTemplate(`
@@ -110,16 +91,6 @@ describe('ouiTextarea', () => {
 
         const $textarea = angular.element(getTextarea(element));
         expect($textarea.prop('disabled')).toBeTruthy();
-      });
-
-      it('should show a disabled looking component', () => {
-        const element = TestUtils.compileTemplate(`
-                    <oui-textarea disabled></oui-textarea>
-                `);
-
-        $timeout.flush();
-
-        expect(element.hasClass(disabledClass)).toBeTruthy();
       });
 
       it('should be disabled with the binding set to true', () => {
@@ -152,7 +123,6 @@ describe('ouiTextarea', () => {
         $timeout.flush();
 
         expect($textarea.prop('disabled')).toBeFalsy();
-        expect(element.hasClass(disabledClass)).toBeFalsy();
 
         $scope.$ctrl.disabled = true;
 
@@ -160,7 +130,6 @@ describe('ouiTextarea', () => {
         $scope.$apply();
 
         expect($textarea.prop('disabled')).toBeTruthy();
-        expect(element.hasClass(disabledClass)).toBeTruthy();
       });
     });
 
@@ -172,16 +141,6 @@ describe('ouiTextarea', () => {
 
         const $textarea = angular.element(getTextarea(element));
         expect($textarea.prop('readonly')).toBeTruthy();
-      });
-
-      it('should show a readonly looking component', () => {
-        const element = TestUtils.compileTemplate(`
-                    <oui-textarea readonly></oui-textarea>
-                `);
-
-        $timeout.flush();
-
-        expect(element.hasClass(readonlyClass)).toBeTruthy();
       });
 
       it('should be readonly with the binding set to true', () => {
@@ -214,7 +173,6 @@ describe('ouiTextarea', () => {
         $timeout.flush();
 
         expect($textarea.prop('readonly')).toBeFalsy();
-        expect(element.hasClass(readonlyClass)).toBeFalsy();
 
         $scope.$ctrl.readonly = true;
 
@@ -222,7 +180,6 @@ describe('ouiTextarea', () => {
         $scope.$apply();
 
         expect($textarea.prop('readonly')).toBeTruthy();
-        expect(element.hasClass(readonlyClass)).toBeTruthy();
       });
     });
 
@@ -278,11 +235,11 @@ describe('ouiTextarea', () => {
 
         $textarea.val(validValue);
         $textarea.triggerHandler($sniffer.hasEvent('input') ? 'input' : 'change');
-        expect(element.hasClass(errorClass)).toBeFalsy();
+        expect($textarea.hasClass(errorClass)).toBeFalsy();
 
         $textarea.val(invalidValue);
         $textarea.triggerHandler($sniffer.hasEvent('input') ? 'input' : 'change');
-        expect(element.hasClass(errorClass)).toBeTruthy();
+        expect($textarea.hasClass(errorClass)).toBeTruthy();
       });
     });
 
@@ -307,23 +264,6 @@ describe('ouiTextarea', () => {
         $textarea.triggerHandler($sniffer.hasEvent('input') ? 'input' : 'change');
 
         expect(footer.innerHTML.trim()).toContain(`${value.length}/${maxlength}`);
-      });
-
-      it('should give the focus to textarea if clicked', () => {
-        const maxlength = 12;
-        const element = TestUtils.compileTemplate(`
-                    <oui-textarea maxlength="${maxlength}"></oui-textarea>
-                `);
-
-        const footer = getFooter(element);
-        const controller = getController(element);
-
-        $timeout.flush();
-
-        // Mock textarea
-        controller.textarea.focus = jasmine.createSpy('focus');
-        angular.element(footer).triggerHandler('click');
-        expect(controller.textarea.focus).toHaveBeenCalled();
       });
     });
 
