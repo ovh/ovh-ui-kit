@@ -46,23 +46,6 @@
 @oui-color-secondary: @oui-color-turquoise;
 @oui-color-tertiary: @oui-color-pacific;
 
-// Forms
-@oui-form-control-default-size: rem-calc(250);
-@oui-form-control-sizes:
-  xs rem-calc(75),
-  s rem-calc(150),
-  m rem-calc(250),
-  l rem-calc(350),
-  xl rem-calc(500),
-  auto 100%;
-@oui-form-control-phone-sizes:
-  xs rem-calc(75),
-  s rem-calc(150),
-  m rem-calc(250),
-  l rem-calc(300),
-  xl rem-calc(300),
-  auto 100%;
-
 // Icons
 @oui-icon-dist-folder: "../fonts/oui-icons";
 @oui-icon-spacing: 0;
@@ -269,6 +252,89 @@
 @oui-choice-thumbnail-footer-background_disabled: fade(@oui-color-charlotte, 50%);
 @oui-choice-thumbnail-footer-font-weight: @oui-font-semibold;
 @oui-choice-thumbnail-footer-font-size: rem-calc(18);
+
+// Form control
+//
+// Common style for input, select and textarea
+@oui-form-control-default-size: rem-calc(250);
+@oui-form-control-sizes:
+  xs rem-calc(75),
+  s rem-calc(150),
+  m rem-calc(250),
+  l rem-calc(350),
+  xl rem-calc(500),
+  auto 100%;
+@oui-form-control-phone-sizes:
+  xs rem-calc(75),
+  s rem-calc(150),
+  m rem-calc(250),
+  l rem-calc(300),
+  xl rem-calc(300),
+  auto 100%;
+
+@oui-form-control-line-height: 1.2;
+@oui-form-control-margin: 0;
+@oui-form-control-padding-x: rem-calc(6px);
+@oui-form-control-padding-y: rem-calc(6px);
+@oui-form-control-padding: @oui-form-control-padding-x @oui-form-control-padding-y;
+@oui-form-control-box-shadow: none;
+@oui-form-control-outline: none;
+
+@oui-form-control-font-size: rem-calc(16);
+@oui-form-control-font-weight: @oui-font-regular;
+@oui-form-control-font-color: @p-800-text;
+@oui-form-control-font-color_hover: @p-800-text;
+@oui-form-control-font-color_focus: @p-800-text;
+@oui-form-control-font-color_readonly: @p-800-text;
+@oui-form-control-font-color_disabled: @p-800-text;
+@oui-form-control-font-color_error: @p-800-text;
+@oui-form-control-font-color_warning: @p-800-text;
+@oui-form-control-font-color_success: @p-800-text;
+
+@oui-form-control-icon-color: @p-500;
+@oui-form-control-icon-color_error: @ae-500;
+@oui-form-control-icon-color_warning: @aw-500;
+@oui-form-control-icon-color_success: @as-500;
+
+@oui-form-control-border-color: @p-100;
+@oui-form-control-border-color_hover: @p-100;
+@oui-form-control-border-color_focus: @p-100;
+@oui-form-control-border-color_readonly: #f2f2f2;
+@oui-form-control-border-color_disabled: @p-100;
+@oui-form-control-border-color_error: @ae-300;
+@oui-form-control-border-color_warning: @aw-300;
+@oui-form-control-border-color_success: @as-300;
+@oui-form-control-border-radius: 2px 2px 0 0;
+@oui-form-control-border-width: 1px;
+
+@oui-form-control-border-bottom-color: @oui-form-control-border-color;
+@oui-form-control-border-bottom-color_hover: @p-500;
+@oui-form-control-border-bottom-color_focus: @p-500;
+@oui-form-control-border-bottom-color_readonly: @p-500;
+@oui-form-control-border-bottom-color_disabled: @oui-form-control-border-color;
+@oui-form-control-border-bottom-color_error: @ae-500;
+@oui-form-control-border-bottom-color_warning: @aw-500;
+@oui-form-control-border-bottom-color_success: @as-500;
+
+@oui-form-control-background-color: @p-000;
+@oui-form-control-background-color_hover: @p-100;
+@oui-form-control-background-color_focus: @p-050;
+@oui-form-control-background-color_disabled: @p-000;
+@oui-form-control-background-color_readonly: #f2f2f2;
+@oui-form-control-background-color_error: @ae-100;
+@oui-form-control-background-color_warning: @aw-100;
+@oui-form-control-background-color_success: @as-100;
+
+// Form selection
+@oui-form-selection-font-color: @oui-form-control-background-color_focus;
+@oui-form-selection-font-color_error: @oui-form-control-background-color_error;
+@oui-form-selection-font-color_warning: @oui-form-control-background-color_warning;
+@oui-form-selection-font-color_success: @oui-form-control-background-color_success;
+
+@oui-form-selection-background-color: @oui-form-control-border-bottom-color_focus;
+@oui-form-selection-background-color_error: @oui-form-control-border-bottom-color_error;
+@oui-form-selection-background-color_warning: @oui-form-control-border-bottom-color_warning;
+@oui-form-selection-background-color_success: @oui-form-control-border-bottom-color_success;
 
 /*
  * Components
@@ -510,10 +576,10 @@
 @oui-calendar-icon-size: rem-calc(20);
 @oui-calendar-icon-spacing: rem-calc(12);
 
-@oui-calendar-input-font-color: @oui-input-font-color;
-@oui-calendar-input-border-color: @oui-input-border-color;
-@oui-calendar-input-background-color: @oui-input-background-color;
-@oui-calendar-input-background-color_hover: @oui-color-charlotte;
+@oui-calendar-input-font-color: @oui-form-control-font-color;
+@oui-calendar-input-border-color: @oui-form-control-border-color;
+@oui-calendar-input-background-color: @oui-form-control-background-color;
+@oui-calendar-input-background-color_hover: @oui-form-control-background-color_hover;
 
 @oui-calendar-button-font-color: @oui-button-primary-font-color;
 @oui-calendar-button-background-color: @oui-button-primary-background-color;
@@ -610,15 +676,14 @@
 @oui-chip-container-border-width: 0;
 
 // Clipboard
-@oui-clipboard-font-color: @oui-input-font-color;
-@oui-clipboard-box-shadow: @oui-input-box-shadow;
-@oui-clipboard-box-shadow_focus: @oui-input-box-shadow_focus;
-@oui-clipboard-border-color: @oui-input-border-color;
-@oui-clipboard-border-color_hover: @oui-input-border-color_hover;
-@oui-clipboard-border-color_focus: @oui-input-border-color_focus;
-@oui-clipboard-border-radius: @oui-input-border-radius;
-@oui-clipboard-background-color: @oui-input-background-color;
-@oui-clipboard-background-color_focus: @oui-input-background-color_focus;
+@oui-clipboard-font-color: @oui-form-control-font-color;
+@oui-clipboard-box-shadow: @oui-form-control-box-shadow;
+@oui-clipboard-border-color: @oui-form-control-border-color;
+@oui-clipboard-border-color_hover: @oui-form-control-border-color_hover;
+@oui-clipboard-border-color_focus: @oui-form-control-border-color_focus;
+@oui-clipboard-border-radius: @oui-form-control-border-radius;
+@oui-clipboard-background-color: @oui-form-control-background-color;
+@oui-clipboard-background-color_focus: @oui-form-control-background-color_focus;
 
 // Clipboard - Button
 @oui-clipboard-button-width: @oui-input-group-button-min-width;
@@ -850,18 +915,15 @@
 @oui-file-ellipsis-size-spacing: rem-calc(5);
 
 @oui-file-input-font-weight: @oui-font-regular;
-@oui-file-input-font-color_disabled: @oui-input-font-color_disabled;
-@oui-file-input-font-color_error: @oui-color-error-dark;
-@oui-file-input-box-shadow_focus: @oui-input-box-shadow_focus;
-@oui-file-input-box-shadow_error: @oui-input-box-shadow_error;
-@oui-file-input-box-shadow_error-focus: 0 0 3px 0 rgba(0, 0, 0, 0.35);
-@oui-file-input-border-color_hover: @oui-input-border-color_hover;
-@oui-file-input-border-color_focus: @oui-input-border-color_focus;
-@oui-file-input-border-color_disabled: @oui-input-border-color_disabled;
-@oui-file-input-border-color_error: @oui-color-error-medium;
-@oui-file-input-background-color_focus: @oui-input-background-color_focus;
-@oui-file-input-background-color_disabled: @oui-input-background-color_disabled;
-@oui-file-input-background-color_error: @oui-color-error-fade;
+@oui-file-input-font-color_disabled: @oui-form-control-font-color_disabled;
+@oui-file-input-font-color_error: @oui-form-control-font-color_error;
+@oui-file-input-border-color_hover: @oui-form-control-border-color_hover;
+@oui-file-input-border-color_focus: @oui-form-control-border-color_focus;
+@oui-file-input-border-color_disabled: @oui-form-control-border-color_disabled;
+@oui-file-input-border-color_error: @oui-form-control-border-color_error;
+@oui-file-input-background-color_focus: @oui-form-control-background-color_focus;
+@oui-file-input-background-color_disabled: @oui-form-control-background-color_disabled;
+@oui-file-input-background-color_error: @oui-form-control-background-color_error;
 
 @oui-file-button-spacing: rem-calc(10);
 
@@ -990,31 +1052,27 @@
 @oui-input-padding-x: rem-calc(8);
 @oui-input-padding-y: 0;
 @oui-input-padding: @oui-input-padding-y @oui-input-padding-x;
-@oui-input-font-color: #1c3193;
-@oui-input-font-color_disabled: @oui-color-silver;
-@oui-input-font-color_readonly: @oui-color-gothic;
-@oui-input-font-color_error: @oui-color-error-dark;
-@oui-input-font-size: rem-calc(16);
-@oui-input-font-weight: @oui-font-semibold;
-@oui-input-font-weight_error: @oui-font-semibold;
-@oui-input-border-color: #89d7f8;
-@oui-input-border-color_hover: @oui-input-border-color;
-@oui-input-border-color_focus: #1c3193;
-@oui-input-border-color_disabled: @oui-color-silver;
-@oui-input-border-color_readonly: @oui-color-nurse;
-@oui-input-border-color_error: #c11b1b;
-@oui-input-border-radius: 0;
-@oui-input-border-width: 2px;
-@oui-input-box-shadow: none;
-@oui-input-box-shadow_focus: none;
-@oui-input-box-shadow_error: none;
-@oui-input-box-shadow_error-focus: none;
-@oui-input-background-color: @oui-color-white;
-@oui-input-background-color_hover: #eff9fd;
-@oui-input-background-color_focus: @oui-input-background-color_hover;
-@oui-input-background-color_disabled: @oui-color-concrete;
-@oui-input-background-color_readonly: @oui-color-concrete;
-@oui-input-background-color_error: #ffd2dd;
+@oui-input-font-color: @oui-form-control-font-color;
+@oui-input-font-color_disabled: @oui-form-control-font-color_disabled;
+@oui-input-font-color_readonly: @oui-form-control-font-color_readonly;
+@oui-input-font-color_error: @oui-form-control-font-color_error;
+@oui-input-font-size: @oui-form-control-font-size;
+@oui-input-font-weight: @oui-form-control-font-weight;
+@oui-input-border-color: @oui-form-control-border-color;
+@oui-input-border-color_hover: @oui-form-control-border-color_hover;
+@oui-input-border-color_focus: @oui-form-control-border-color_focus;
+@oui-input-border-color_disabled: @oui-form-control-border-color_disabled;
+@oui-input-border-color_readonly: @oui-form-control-border-color_readonly;
+@oui-input-border-color_error: @oui-form-control-border-color_error;
+@oui-input-border-radius: @oui-form-control-border-radius;
+@oui-input-border-width: @oui-form-control-border-width;
+@oui-input-box-shadow: @oui-form-control-box-shadow;
+@oui-input-background-color: @oui-form-control-background-color;
+@oui-input-background-color_hover: @oui-form-control-background-color_hover;
+@oui-input-background-color_focus: @oui-form-control-background-color_focus;
+@oui-input-background-color_disabled: @oui-form-control-background-color_disabled;
+@oui-input-background-color_readonly: @oui-form-control-background-color_readonly;
+@oui-input-background-color_error: @oui-form-control-background-color_error;
 
 @oui-input-placeholder-font-color: @oui-color-silver;
 
@@ -1025,8 +1083,6 @@
 
 // Input Group
 @oui-input-group-margin: 0;
-// @oui-input-group-border-radius: @oui-input-border-radius;
-// @oui-input-group-border-width: @oui-input-border-width;
 @oui-input-group-spacing: rem-calc(10);
 
 @oui-input-group-button-min-width: rem-calc(50);
@@ -1040,7 +1096,7 @@
 @oui-input-group-button-border-color: @oui-button-secondary-border-color;
 @oui-input-group-button-border-color_hover: @oui-button-secondary-border-color_hover;
 @oui-input-group-button-border-color_active: @oui-button-secondary-border-color_active;
-@oui-input-group-button-border-color_disabled: @oui-input-border-color_disabled;
+@oui-input-group-button-border-color_disabled: @oui-form-control-border-color_disabled;
 @oui-input-group-button-border-width: @oui-button-secondary-border-width;
 @oui-input-group-button-box-shadow: @oui-button-secondary-box-shadow;
 @oui-input-group-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
@@ -1579,9 +1635,9 @@
 // Search
 @oui-search-margin: 0;
 @oui-search-padding-right: calc(@oui-button-small-min-width * 2);
-@oui-search-border-radius: @oui-input-border-radius;
+@oui-search-border-radius: @oui-form-control-border-radius;
 
-@oui-search-input-font-color_disabled: @oui-color-shuttle;
+@oui-search-input-font-color_disabled: @oui-form-control-font-color_disabled;
 
 @oui-search-button-padding-x: rem-calc(10);
 @oui-search-button-font-color_hover: @oui-color-sapphire;
@@ -1595,28 +1651,24 @@
 @oui-select-margin: @oui-input-margin;
 @oui-select-padding-x: rem-calc(12);
 @oui-select-letter-spacing: @oui-global-base-letter-spacing;
-@oui-select-font-color: @oui-input-font-color;
-@oui-select-font-color_disabled: @oui-input-font-color_disabled;
-@oui-select-font-color_error: @oui-input-font-color_error;
-@oui-select-font-size: @oui-input-font-size;
-@oui-select-font-weight: @oui-input-font-weight;
-@oui-select-font-weight_error: @oui-input-font-weight_error;
-@oui-select-border-color: @oui-input-border-color;
-@oui-select-border-color_hover: @oui-input-border-color_hover;
-@oui-select-border-color_focus: @oui-input-border-color_focus;
-@oui-select-border-color_disabled: @oui-input-border-color_disabled;
-@oui-select-border-color_error: @oui-input-border-color_error;
-@oui-select-border-radius: @oui-input-border-radius;
-@oui-select-border-width: @oui-input-border-width;
-@oui-select-box-shadow: @oui-input-box-shadow;
-@oui-select-box-shadow_focus: @oui-input-box-shadow_focus;
-@oui-select-box-shadow_error: none;
-@oui-select-box-shadow_error-focus: none;
-@oui-select-background-color: @oui-input-background-color;
-@oui-select-background-color_hover: @oui-input-background-color_hover;
-@oui-select-background-color_focus: @oui-input-background-color_focus;
-@oui-select-background-color_disabled: @oui-input-background-color_disabled;
-@oui-select-background-color_error: @oui-input-background-color_error;
+@oui-select-font-color: @oui-form-control-font-color;
+@oui-select-font-color_disabled: @oui-form-control-font-color_disabled;
+@oui-select-font-color_error: @oui-form-control-font-color_error;
+@oui-select-font-size: @oui-form-control-font-size;
+@oui-select-font-weight: @oui-form-control-font-weight;
+@oui-select-border-color: @oui-form-control-border-color;
+@oui-select-border-color_hover: @oui-form-control-border-color_hover;
+@oui-select-border-color_focus: @oui-form-control-border-color_focus;
+@oui-select-border-color_disabled: @oui-form-control-border-color_disabled;
+@oui-select-border-color_error: @oui-form-control-border-color_error;
+@oui-select-border-radius: @oui-form-control-border-radius;
+@oui-select-border-width: @oui-form-control-border-width;
+@oui-select-box-shadow: @oui-form-control-box-shadow;
+@oui-select-background-color: @oui-form-control-background-color;
+@oui-select-background-color_hover: @oui-form-control-background-color_hover;
+@oui-select-background-color_focus: @oui-form-control-background-color_focus;
+@oui-select-background-color_disabled: @oui-form-control-background-color_disabled;
+@oui-select-background-color_error: @oui-form-control-background-color_error;
 
 @oui-select-icon-size: @oui-button-icon-size;
 @oui-select-icon-spacing: @oui-button-icon-offset;
@@ -1982,41 +2034,9 @@
 @oui-tabs-tabpanel-background-color: @oui-tabs-tab-background-color;
 
 // Textarea
-@oui-textarea-line-height: rem-calc(20);
-@oui-textarea-margin: @oui-input-margin;
-@oui-textarea-border-radius: @oui-input-border-radius;
-@oui-textarea-font-size: @oui-input-font-size;
-@oui-textarea-font-weight: @oui-font-regular;
-@oui-textarea-font-color: @oui-color-sapphire;
-@oui-textarea-font-color_disabled: @oui-color-dusty;
-@oui-textarea-font-color_error: @oui-color-error-dark;
-@oui-textarea-box-shadow: @oui-input-box-shadow;
-@oui-textarea-box-shadow_focus: @oui-input-box-shadow_focus;
-@oui-textarea-box-shadow_error: @oui-input-box-shadow_error;
-@oui-textarea-border-color: @oui-input-border-color;
-@oui-textarea-border-color_hover: @oui-input-border-color_hover;
-@oui-textarea-border-color_focus: @oui-input-border-color_focus;
-@oui-textarea-border-color_readonly: @oui-color-alabaster;
-@oui-textarea-border-color_disabled: @oui-color-alabaster;
-@oui-textarea-border-color_error: @oui-color-error-medium;
-@oui-textarea-border-width: @oui-input-border-width;
-@oui-textarea-background-color: @oui-input-background-color;
-@oui-textarea-background-color_hover: @oui-input-background-color_hover;
-@oui-textarea-background-color_focus: @oui-input-background-color_focus;
-@oui-textarea-background-color_readonly: @oui-input-background-color_readonly;
-@oui-textarea-background-color_disabled: @oui-input-background-color_disabled;
-@oui-textarea-background-color_error: @oui-input-background-color_error;
-
-@oui-textarea-selection-font-color: @oui-color-white;
-@oui-textarea-selection-font-color_error: @oui-color-white;
-@oui-textarea-selection-background-color: @oui-color-pacific;
-@oui-textarea-selection-background-color_error: @oui-color-error-dark;
-
-@oui-textarea-field-padding: rem-calc(14) rem-calc(19);
-
-@oui-textarea-footer-padding: rem-calc(4) rem-calc(9);
+@oui-textarea-footer-padding: rem-calc(4) 0;
 @oui-textarea-footer-font-size: rem-calc(14);
-@oui-textarea-footer-color: @oui-color-shuttle;
+@oui-textarea-footer-color: @p-800-text;
 
 // Tile
 @oui-tile-margin: 0;
