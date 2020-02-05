@@ -20,7 +20,7 @@
         <span class="oui-radio__icon"></span>
         <span class="oui-radio__text" id="{{:: $ctrl.id }}Label">
             <span ng-if="$ctrl.hasLabel()" ng-transclude="labelSlot"></span>
-            <span ng-if="!!$ctrl.hasTextTransclude()" ng-transclude></span>
+            <ng-transclude></ng-transclude>
         </span>
     </span>
     <span
