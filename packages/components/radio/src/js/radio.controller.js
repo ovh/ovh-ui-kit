@@ -27,17 +27,6 @@ export default class {
     return this.$transclude.isSlotFilled('labelSlot');
   }
 
-  // Support for simple text transclude
-  hasTextTransclude() {
-    let hasText;
-
-    this.$transclude((clone) => {
-      hasText = clone.length === 1 && !!clone.text().trim().length;
-    });
-
-    return hasText;
-  }
-
   $onInit() {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'inline');
