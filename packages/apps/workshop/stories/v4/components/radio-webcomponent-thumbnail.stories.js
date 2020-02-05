@@ -6,7 +6,13 @@ import readme from '@ovh-ux/ui-kit.radio/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 const moduleName = 'oui-radio-stories';
-angular.module(moduleName, ['oui.radio']);
+angular.module(moduleName, [
+  'oui.radio',
+
+  // For examples
+  'oui.field',
+  'oui.form-actions',
+]);
 
 export default {
   title: 'Version 4/Components/Radio/WebComponent/Thumbnail',
@@ -171,3 +177,61 @@ export const FullExample = forModule(moduleName).createElement(
 FullExample.story = {
   name: 'Full example',
 };
+
+export const Validation = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <form novalidate name="form">
+      <oui-field>
+        <oui-radio-group
+          name="ram"
+          model="$ctrl.model"
+          on-change="$ctrl.onChange(modelValue)">
+
+          <oui-radio
+            disabled="$ctrl.disabled"
+            value="$ctrl.value1"
+            thumbnail
+            required>
+            <oui-radio-label>32 GB RAM</oui-radio-label>
+            <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
+          </oui-radio>
+
+          <oui-radio
+            disabled="$ctrl.disabled"
+            value="$ctrl.value2"
+            thumbnail
+            required>
+            <oui-radio-label>64 GB RAM</oui-radio-label>
+            <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
+          </oui-radio>
+
+          <oui-radio
+            disabled="$ctrl.disabled"
+            value="$ctrl.value3"
+            thumbnail
+            required>
+            <oui-radio-label>
+              128 GB RAM
+              <span class="oui-status oui-status_info">New</span>
+            </oui-radio-label>
+            <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
+          </oui-radio>
+
+        </oui-radio-group>
+      </oui-field>
+
+      <oui-form-actions></oui-form-actions>
+    </form>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        model: undefined,
+        value1: '32',
+        value2: '64',
+        value3: '128',
+        onChange: action('onChange'),
+      },
+    },
+  ),
+);
