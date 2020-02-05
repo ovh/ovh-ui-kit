@@ -6,7 +6,13 @@ import readme from '@ovh-ux/ui-kit.radio/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 const moduleName = 'oui-radio-stories';
-angular.module(moduleName, ['oui.radio']);
+angular.module(moduleName, [
+  'oui.radio',
+
+  // For examples
+  'oui.form-actions',
+  'oui.field',
+]);
 
 export default {
   title: 'Version 4/Components/Radio/WebComponent/Simple',
@@ -119,3 +125,53 @@ export const WithDescription = forModule(moduleName).createElement(
 WithDescription.story = {
   name: 'With description',
 };
+
+export const Validation = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <form novalidate name="form">
+      <oui-field>
+        <oui-radio-group
+          name="ram"
+          model="$ctrl.model"
+          on-change="$ctrl.onChange(modelValue)">
+
+          <oui-radio
+            disabled="$ctrl.disabled"
+            value="$ctrl.value1"
+            required>
+            32 GB RAM
+          </oui-radio>
+
+          <oui-radio
+            disabled="$ctrl.disabled"
+            value="$ctrl.value2"
+            required>
+            64 GB RAM
+          </oui-radio>
+
+          <oui-radio
+            disabled="$ctrl.disabled"
+            value="$ctrl.value3"
+            required>
+            128 GB RAM
+            <span class="oui-status oui-status_info">New</span>
+          </oui-radio>
+
+        </oui-radio-group>
+      </oui-field>
+
+      <oui-form-actions></oui-form-actions>
+    </form>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        model: undefined,
+        value1: '32',
+        value2: '64',
+        value3: '128',
+        onChange: action('onChange'),
+      },
+    },
+  ),
+);
