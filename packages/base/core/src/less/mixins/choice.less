@@ -77,7 +77,7 @@
       font-size: @oui-choice-thumbnail-footer-font-size;
       border-bottom-left-radius: inherit;
       border-bottom-right-radius: inherit;
-      border-top: @oui-choice-thumbnail-footer-border-width solid @oui-choice-thumbnail-border-color;
+      border-top: @oui-choice-thumbnail-footer-border-width solid @oui-choice-thumbnail-footer-border-color;
       background: @oui-choice-thumbnail-footer-background;
     }
 
@@ -85,8 +85,9 @@
       ~ .@{selector}__label-container:hover {
         #oui > .choice-thumbnail-color(
           @selector,
+          @background-color: @oui-choice-thumbnail-background_hover,
           @border-color: @oui-choice-thumbnail-border-color_hover,
-          @background-color: @oui-choice-thumbnail-background_hover
+          @footer-border-color: @oui-choice-thumbnail-footer-border-color_hover,
         );
       }
 
@@ -104,7 +105,8 @@
           @selector,
           @background-color: @oui-choice-thumbnail-background-checked,
           @border-color: @oui-choice-thumbnail-border-color-checked,
-          @border-width: @oui-choice-thumbnail-border-width-checked
+          @border-width: @oui-choice-thumbnail-border-width-checked,
+          @footer-border-color: @oui-choice-thumbnail-footer-border-color-checked
         );
 
         .@{selector}__footer {
@@ -117,7 +119,8 @@
             @selector,
             @background-color: @oui-choice-thumbnail-background-checked_hover,
             @border-color: @oui-choice-thumbnail-border-color-checked_hover,
-            @border-width: @oui-choice-thumbnail-border-width-checked
+            @border-width: @oui-choice-thumbnail-border-width-checked,
+            @footer-border-color: @oui-choice-thumbnail-footer-border-color-checked_hover
           );
         }
       }
@@ -139,7 +142,8 @@
         background: @oui-choice-thumbnail-background_error;
 
         .@{selector}__description,
-        .@{selector}__section {
+        .@{selector}__section,
+        .@{selector}__footer {
           border-color: @oui-choice-thumbnail-border-color_error;
         }
       }
@@ -149,6 +153,12 @@
     .@{selector}__input:checked:focus ~ .@{selector}__label-container {
       border-color: @oui-choice-thumbnail-border-color_error;
       box-shadow: @oui-choice-thumbnail-box-shadow_error;
+
+      .@{selector}__description,
+      .@{selector}__section,
+      .@{selector}__footer {
+        border-color: @oui-choice-thumbnail-border-color_error;
+      }
     }
   }
 
@@ -169,13 +179,14 @@
     @selector,
     @background-color: @oui-choice-thumbnail-background,
     @border-color: @oui-choice-thumbnail-border-color,
-    @border-width: @oui-choice-thumbnail-border-width
+    @border-width: @oui-choice-thumbnail-border-width,
+    @footer-border-color: @oui-choice-thumbnail-footer-border-color
   ) {
     border: @border-width solid @border-color;
     background: @background-color;
 
     .@{selector}__footer {
-      border-top-color: @border-color;
+      border-top-color: @footer-border-color;
     }
   }
 }
