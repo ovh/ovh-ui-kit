@@ -108,7 +108,11 @@ oui-tabs {
     background: @oui-tabs-tabpanel-background-color;
     cursor: pointer;
 
-    #oui > .phone({ display: flex; });
+    #oui > .phone({
+      display: flex;
+      min-height: @oui-tabs-tab-height;
+      height: auto;
+    });
 
     &:focus {
       #oui > .outline-border(
@@ -134,6 +138,7 @@ oui-tabs {
   }
 
   &__heading {
+    line-height: @oui-header-tabs-item-line-height;
     flex: 1;
     text-align: left;
   }

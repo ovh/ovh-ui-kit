@@ -7,6 +7,10 @@
     <span class="oui-tabs-item__heading" role="heading"
         ng-bind="::$ctrl.heading">
     </span>
+    <span class="oui-tabs-tab__subheading"
+        ng-class="{ 'oui-tabs-tab__subheading_promotion': $ctrl.promotion }"
+        ng-bind="::$ctrl.subheading">
+    </span>
     <span class="oui-icon oui-icon-chevron-down oui-tabs-item__toggle-icon" aria-hidden="true"></span>
 </button>
 <div class="oui-tabs-item__content" role="tabpanel"
