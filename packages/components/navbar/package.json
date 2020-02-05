@@ -19,8 +19,8 @@
     "angular-sanitize": "^1.7.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.3",
-    "@babel/node": "^7.8.3",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.9",
     "cross-env": "^6.0.3",
