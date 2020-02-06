@@ -155,7 +155,7 @@ export const Validation = forModule(moduleName).createElement(
             value="$ctrl.value3"
             required>
             128 GB RAM
-            <span class="oui-badge oui-badge_info">New</span>
+            <span class="oui-badge oui-badge_new">New</span>
           </oui-radio>
 
         </oui-radio-group>

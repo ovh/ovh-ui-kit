@@ -1,42 +1,42 @@
 // Support for old classnames
 .oui-status,
 .oui-badge {
-  background: @oui-badge-background-color;
-  border: @oui-badge-border;
-  border-radius: @oui-badge-border-radius;
-  color: @oui-badge-font-color;
-  display: inline;
-  font-size: @oui-badge-font-size;
-  font-weight: @oui-badge-font-weight;
-  line-height: @oui-badge-line-height;
   max-width: @oui-badge-max-width;
+  line-height: @oui-badge-line-height;
+  display: inline;
   overflow: hidden;
+  margin: @oui-badge-margin;
   padding: @oui-badge-padding;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: @oui-badge-font-size;
+  font-weight: @oui-badge-font-weight;
+  color: @oui-badge-font-color;
+  border: @oui-badge-border;
+  border-radius: @oui-badge-border-radius;
+  background: @oui-badge-background-color;
 
-  &_success {
-    color: @oui-badge-font-color_success;
-    background-color: @oui-badge-background-color_success;
+  // Variants
+  .make-badge-variants(@i: 1) when (@i <= length(@oui-badge-variants)) {
+    .make-badge-variants(@i + 1);
+
+    @pair: extract(@oui-badge-variants, @i);
+    @key: extract(@pair, 1);
+    @background-color: extract(@pair, 2);
+    @font-color: extract(@pair, 3);
+
+    &_@{key} {
+      background-color: @background-color;
+      color: @font-color;
+    }
   }
 
-  &_info {
-    color: @oui-badge-font-color_info;
-    background-color: @oui-badge-background-color_info;
-  }
+  .make-badge-variants();
 
-  &_warning {
-    color: @oui-badge-font-color_warning;
-    background-color: @oui-badge-background-color_warning;
-  }
-
-  &_error {
-    color: @oui-badge-font-color_error;
-    background-color: @oui-badge-background-color_error;
-  }
-
+  // Sizes
   &_s {
     line-height: @oui-badge-s-line-height;
+    margin: @oui-badge-s-margin;
     padding: @oui-badge-s-padding;
     font-size: @oui-badge-s-font-size;
     font-weight: @oui-badge-s-font-weight;
