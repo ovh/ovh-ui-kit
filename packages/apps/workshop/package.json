@@ -90,7 +90,7 @@
     "@ovh-ux/ui-kit.skeleton": "*",
     "@ovh-ux/ui-kit.slideshow": "*",
     "@ovh-ux/ui-kit.spinner": "*",
-    "@ovh-ux/ui-kit.status": "*",
+    "@ovh-ux/ui-kit.badge": "*",
     "@ovh-ux/ui-kit.stepper": "*",
     "@ovh-ux/ui-kit.switch": "*",
     "@ovh-ux/ui-kit.tabs": "*",

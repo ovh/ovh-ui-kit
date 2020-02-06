@@ -181,7 +181,7 @@ export const WithPicture = forModule(moduleName).createElement(
         name="ouiSelectPicker1"
         values="['transclude']">
         <oui-select-picker-picture>
-          <span class="oui-status oui-status_success">Lorem ipsum</span>
+          <span class="oui-badge oui-badge_success">Lorem ipsum</span>
         </oui-select-picker-picture>
       </oui-select-picker>`,
     {
@@ -305,7 +305,7 @@ export const FullExample = forModule(moduleName).createElement(
       on-change="$ctrl.onChange(modelValue)"
       values="$ctrl.values2">
       <oui-select-picker-picture>
-        <span class="oui-status oui-status_success">Best seller</span>
+        <span class="oui-badge oui-badge_success">Best seller</span>
       </oui-select-picker-picture>
       <oui-select-picker-section>Section 1</oui-select-picker-section>
       <oui-select-picker-section>Section 2</oui-select-picker-section>

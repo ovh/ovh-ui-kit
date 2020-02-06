@@ -2,6 +2,7 @@
 import ActionMenu from '@ovh-ux/ui-kit.action-menu';
 import Autocomplete from '@ovh-ux/ui-kit.autocomplete';
 import BackButton from '@ovh-ux/ui-kit.back-button';
+import Badge from '@ovh-ux/ui-kit.badge';
 import Box from '@ovh-ux/ui-kit.box';
 import Button from '@ovh-ux/ui-kit.button';
 import Calendar from '@ovh-ux/ui-kit.calendar';
@@ -38,7 +39,6 @@ import Sidebar from '@ovh-ux/ui-kit.sidebar';
 import Skeleton from '@ovh-ux/ui-kit.skeleton';
 import Slideshow from '@ovh-ux/ui-kit.slideshow';
 import Spinner from '@ovh-ux/ui-kit.spinner';
-import Status from '@ovh-ux/ui-kit.status';
 import Stepper from '@ovh-ux/ui-kit.stepper';
 import Switch from '@ovh-ux/ui-kit.switch';
 import Tabs from '@ovh-ux/ui-kit.tabs';
@@ -54,6 +54,7 @@ angular
     ActionMenu,
     Autocomplete,
     BackButton,
+    Badge,
     Box,
     Button,
     Calendar,
@@ -90,7 +91,6 @@ angular
     Skeleton,
     Slideshow,
     Spinner,
-    Status,
     Stepper,
     Switch,
     Tabs,
