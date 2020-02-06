@@ -1,4 +1,8 @@
-// Primary color chart
+/*
+ * Colors
+ */
+
+// Primary
 @p-000: #fff;
 @p-050: #f5feff;
 @p-075: #def8ff;
@@ -12,9 +16,12 @@
 @p-800: #00185e; // Title color
 @p-900: #000d1f;
 
+// Primary variants
+@p-000-white: @p-000;
 @p-800-text: #4d5592; // Text color
+@p-800-use-for-text: @p-800-text;
 
-// Gray color chart
+// Gray
 @g-050: #f2f2f2;
 @g-100: #e6e6e6;
 @g-200: #cccccc;
@@ -26,37 +33,46 @@
 @g-800: #333333;
 @g-900: #1a1a1a;
 
-// Error color chart
+// Error
 @ae-100: #faefef;
 @ae-300: #ffd2dd;
 @ae-400: #e0777c;
 @ae-500: #c11b1b;
 
-// Warning color chart
+// Warning
 @aw-100: #faf6ef;
 @aw-300: #ffed96;
 @aw-400: #fa9b3e;
 @aw-500: #8b6111;
 
-// Success color chart
+// Success
 @as-100: #f3faef;
 @as-300: #ecffd1;
 @as-400: #88c169;
 @as-500: #268403;
 
-// Promotion color chart
+// Promotion
 @promotion-300: #ffd1f3;
-@promotion-500: #8e47ae;
-@promotion-700: #6c009e;
-@promotion-900: #49006b;
+@promotion-500: #ac246f;
+@promotion-700: #770040;
+@promotion-900: #420023;
 
-// Status color chart
+// Promotion variants
+@promotion-500-text: #fbe155;
+
+// Status
 @status-alpha: #fbff47;
 @status-beta: #47ff78;
+@status-new: #47fffa;
+@status-soon: @p-000;
+@status-promotion: @promotion-500;
+
+@status-price-drop: #ffc800;
+@status-sold-out: #d4d5de;
+@status-best-seller: @p-200;
+@status-limited-edition: #ff4400;
+
 @status-delivery-120-seconds: #268403;
 @status-delivery-24-hours: #268403;
 @status-delivery-72-hours: #b6c511;
 @status-delivery-10-days: #ffc800;
-@status-limited-edition: #ff4400;
-@status-new: #47fffa;
-@status-price-drop: #ffc800;

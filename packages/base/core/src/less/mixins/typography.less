@@ -1,21 +1,21 @@
 // Typography
 #oui {
   .base-font(
-    @color: @oui-global-base-font-color,
-    @line-height: @oui-global-base-line-height,
-    @letter-spacing: @oui-global-base-letter-spacing,
-    @font-family: @oui-global-base-font-family
+    @line-height: @earth-line-height,
+    @letter-spacing: @earth-letter-spacing,
+    @font-family: @earth-font-family,
+    @font-weight: @earth-font-weight,
+    @font-size: @earth-font-size,
+    @font-color: @earth-color,
+    @text-align: @earth-text-align,
   ) {
-    color: @color;
-    font-family: @font-family;
     line-height: @line-height;
     letter-spacing: @letter-spacing;
-    text-align: left;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    font-family: @font-family;
+    font-weight: @font-weight;
+    font-size: @font-size;
+    color: @font-color;
+    text-align: @text-align;
   }
 
   .text-ellipsis() {
@@ -48,7 +48,7 @@
     @text-decoration: @oui-link-text-decoration,
     @text-decoration_hover: @oui-link-text-decoration_hover
   ) {
-    .base-font();
+    #oui > .base-font();
 
     padding: 0;
     border: none;
