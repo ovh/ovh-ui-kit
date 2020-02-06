@@ -1,0 +1,44 @@
+// Support for old classnames
+.oui-status,
+.oui-badge {
+  background: @oui-badge-background-color;
+  border: @oui-badge-border;
+  border-radius: @oui-badge-border-radius;
+  color: @oui-badge-font-color;
+  display: inline;
+  font-size: @oui-badge-font-size;
+  font-weight: @oui-badge-font-weight;
+  line-height: @oui-badge-line-height;
+  max-width: @oui-badge-max-width;
+  overflow: hidden;
+  padding: @oui-badge-padding;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &_success {
+    color: @oui-badge-font-color_success;
+    background-color: @oui-badge-background-color_success;
+  }
+
+  &_info {
+    color: @oui-badge-font-color_info;
+    background-color: @oui-badge-background-color_info;
+  }
+
+  &_warning {
+    color: @oui-badge-font-color_warning;
+    background-color: @oui-badge-background-color_warning;
+  }
+
+  &_error {
+    color: @oui-badge-font-color_error;
+    background-color: @oui-badge-background-color_error;
+  }
+
+  &_s {
+    line-height: @oui-badge-s-line-height;
+    padding: @oui-badge-s-padding;
+    font-size: @oui-badge-s-font-size;
+    font-weight: @oui-badge-s-font-weight;
+  }
+}

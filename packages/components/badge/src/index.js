@@ -1,4 +1,4 @@
-const moduleName = 'oui.status';
+const moduleName = 'oui.badge';
 
 angular
   .module(moduleName, []);
