@@ -15,8 +15,6 @@
     "storybook": "start-storybook -p 8080"
   },
   "dependencies": {
-    "@ovh-ux/ui-kit-builder": "*",
-    "@ovh-ux/ui-kit.core": "*",
     "angular": "^1.7.9",
     "angular-aria": "^1.7.9",
     "angular-sanitize": "^1.7.9",
@@ -60,7 +58,9 @@
     "@ovh-ux/ui-kit.chips": "*",
     "@ovh-ux/ui-kit.clipboard": "*",
     "@ovh-ux/ui-kit.collapsible": "*",
+    "@ovh-ux/ui-kit.components": "*",
     "@ovh-ux/ui-kit.config": "*",
+    "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.criteria": "*",
     "@ovh-ux/ui-kit.datagrid": "*",
     "@ovh-ux/ui-kit.dropdown": "*",

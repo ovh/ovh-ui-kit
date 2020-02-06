@@ -1,11 +1,13 @@
 import { forModule } from 'storybook-addon-angularjs';
 
+import Header from '@ovh-ux/ui-kit.header';
+
 import readme from '@ovh-ux/ui-kit.header/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-header-stories';
-angular.module(moduleName, ['oui.header']);
+angular.module(moduleName, [Header]);
 
 export default {
   title: 'Version 3/Components/Header',

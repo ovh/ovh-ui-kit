@@ -1,16 +1,19 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import GuideMenu from '@ovh-ux/ui-kit.guide-menu';
+import Header from '@ovh-ux/ui-kit.header';
+
 import readme from '@ovh-ux/ui-kit.guide-menu/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-guide-menu-stories';
 angular.module(moduleName, [
-  'oui.guide-menu',
+  GuideMenu,
 
   // For examples
-  'oui.header',
+  Header,
 ]);
 
 export default {

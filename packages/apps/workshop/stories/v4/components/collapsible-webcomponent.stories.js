@@ -1,12 +1,14 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Collapsible from '@ovh-ux/ui-kit.collapsible';
+
 import readme from '@ovh-ux/ui-kit.collapsible/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
-const moduleName = 'oui-collapsible-stories';
-angular.module(moduleName, ['oui.collapsible']);
+const moduleName = 'collapsible-webcomponent.stories';
+angular.module(moduleName, [Collapsible]);
 
 export default {
   title: 'Version 4/Components/Collapsible/WebComponent',

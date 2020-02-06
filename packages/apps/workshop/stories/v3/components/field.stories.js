@@ -2,23 +2,33 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Calendar from '@ovh-ux/ui-kit.calendar';
+import Checkbox from '@ovh-ux/ui-kit.checkbox';
+import Field from '@ovh-ux/ui-kit.field';
+import FormActions from '@ovh-ux/ui-kit.form-actions';
+import Numeric from '@ovh-ux/ui-kit.numeric';
+import Radio from '@ovh-ux/ui-kit.radio';
+import Select from '@ovh-ux/ui-kit.select';
+import Switch from '@ovh-ux/ui-kit.switch';
+import Textarea from '@ovh-ux/ui-kit.textarea';
+
 import readme from '@ovh-ux/ui-kit.field/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-field-stories';
 angular.module(moduleName, [
-  'oui.field',
+  Field,
 
   // For examples
-  'oui.form-actions',
-  'oui.checkbox',
-  'oui.radio',
-  'oui.switch',
-  'oui.textarea',
-  'oui.select',
-  'oui.numeric',
-  'oui.calendar',
+  FormActions,
+  Checkbox,
+  Radio,
+  Switch,
+  Textarea,
+  Select,
+  Numeric,
+  Calendar,
 ]);
 
 export default {
@@ -29,7 +39,7 @@ export default {
   },
 };
 
-export const Input = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="inputForm">
@@ -109,7 +119,7 @@ LabelPopover.story = {
   name: 'Label popover',
 };
 
-export const Checkbox = forModule(moduleName).createElement(
+export const WithCheckbox = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="checkboxForm">
@@ -132,7 +142,7 @@ export const Checkbox = forModule(moduleName).createElement(
   ),
 );
 
-export const Radio = forModule(moduleName).createElement(
+export const WithRadio = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="radioForm">
@@ -165,7 +175,7 @@ export const Radio = forModule(moduleName).createElement(
   ),
 );
 
-export const Switch = forModule(moduleName).createElement(
+export const WithSwitch = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="switchForm">
@@ -182,7 +192,7 @@ export const Switch = forModule(moduleName).createElement(
   ),
 );
 
-export const Textarea = forModule(moduleName).createElement(
+export const WithTextarea = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="textareaForm">
@@ -212,7 +222,7 @@ export const Textarea = forModule(moduleName).createElement(
   ),
 );
 
-export const Select = forModule(moduleName).createElement(
+export const WithSelect = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="selectForm">
@@ -285,7 +295,7 @@ export const Select = forModule(moduleName).createElement(
   ),
 );
 
-export const Numeric = forModule(moduleName).createElement(
+export const WithNumeric = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="numericForm">
@@ -304,7 +314,7 @@ export const Numeric = forModule(moduleName).createElement(
   ),
 );
 
-export const Calendar = forModule(moduleName).createElement(
+export const WithCalendar = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="calendarForm">

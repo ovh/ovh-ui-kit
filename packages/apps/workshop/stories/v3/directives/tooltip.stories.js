@@ -1,10 +1,12 @@
 import { text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Tooltip from '@ovh-ux/ui-kit.tooltip';
+
 import { compileTemplate } from '../../../src/utils';
 
 const moduleName = 'oui-tooltip-stories';
-angular.module(moduleName, ['oui.tooltip']);
+angular.module(moduleName, [Tooltip]);
 
 export default {
   title: 'Version 3/Directives/Tooltip',

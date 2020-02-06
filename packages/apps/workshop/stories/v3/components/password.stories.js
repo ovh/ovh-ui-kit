@@ -3,16 +3,19 @@ import zxcvbn from 'zxcvbn';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Field from '@ovh-ux/ui-kit.field';
+import Password from '@ovh-ux/ui-kit.password';
+
 import readme from '@ovh-ux/ui-kit.password/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-password-stories';
 angular.module(moduleName, [
-  'oui.password',
+  Password,
 
   // For examples
-  'oui.field',
+  Field,
 ]);
 
 export default {

@@ -1,12 +1,14 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Pagination from '@ovh-ux/ui-kit.pagination';
+
 import readme from '@ovh-ux/ui-kit.pagination/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-pagination-stories';
-angular.module(moduleName, ['oui.pagination']);
+angular.module(moduleName, [Pagination]);
 
 export default {
   title: 'Version 3/Internal/Pagination',

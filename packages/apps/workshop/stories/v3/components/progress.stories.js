@@ -1,11 +1,13 @@
 import { number } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Progress from '@ovh-ux/ui-kit.progress';
+
 import readme from '@ovh-ux/ui-kit.progress/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 const moduleName = 'oui-progress-stories';
-angular.module(moduleName, ['oui.progress']);
+angular.module(moduleName, [Progress]);
 
 export default {
   title: 'Version 3/Components/Progress',

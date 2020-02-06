@@ -2,15 +2,18 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import ActionMenu from '@ovh-ux/ui-kit.action-menu';
+import Tile from '@ovh-ux/ui-kit.tile';
+
 import readme from '@ovh-ux/ui-kit.tile/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 const moduleName = 'oui-tile-stories';
 angular.module(moduleName, [
-  'oui.tile',
+  Tile,
 
   // For examples
-  'oui.action-menu',
+  ActionMenu,
 ]);
 
 export default {

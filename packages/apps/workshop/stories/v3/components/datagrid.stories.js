@@ -2,6 +2,9 @@ import find from 'lodash/find';
 import map from 'lodash/map';
 import pick from 'lodash/pick';
 
+import ActionMenu from '@ovh-ux/ui-kit.action-menu';
+import Datagrid from '@ovh-ux/ui-kit.datagrid';
+
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
@@ -13,10 +16,10 @@ import data from '../../_data/datagrid/index.data.json';
 // Create mock module for the stories
 const moduleName = 'oui-datagrid-stories';
 angular.module(moduleName, [
-  'oui.datagrid',
+  Datagrid,
 
   // For examples
-  'oui.action-menu',
+  ActionMenu,
 ]);
 
 export default {

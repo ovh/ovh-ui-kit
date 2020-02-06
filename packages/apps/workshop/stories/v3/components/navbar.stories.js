@@ -1,5 +1,8 @@
 import { forModule } from 'storybook-addon-angularjs';
 
+import Navbar from '@ovh-ux/ui-kit.navbar';
+import Radio from '@ovh-ux/ui-kit.radio';
+
 import readme from '@ovh-ux/ui-kit.navbar/README.md';
 import { compileTemplate } from '../../../src/utils';
 
@@ -13,10 +16,10 @@ import {
 // Create mock module for the stories
 const moduleName = 'oui-navbar-stories';
 angular.module(moduleName, [
-  'oui.navbar',
+  Navbar,
 
   // For examples
-  'oui.radio',
+  Radio,
 ]);
 
 export default {

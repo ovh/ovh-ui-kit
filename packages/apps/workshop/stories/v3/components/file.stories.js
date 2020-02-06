@@ -1,17 +1,21 @@
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Button from '@ovh-ux/ui-kit.button';
+import Field from '@ovh-ux/ui-kit.field';
+import File from '@ovh-ux/ui-kit.file';
+
 import readme from '@ovh-ux/ui-kit.file/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-file-stories';
 angular.module(moduleName, [
-  'oui.file',
+  File,
 
   // For examples
-  'oui.field',
-  'oui.button',
+  Field,
+  Button,
 ]);
 
 export default {

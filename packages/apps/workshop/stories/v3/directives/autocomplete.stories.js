@@ -1,13 +1,15 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Autocomplete from '@ovh-ux/ui-kit.autocomplete';
+
 import { compileTemplate } from '../../../src/utils';
 
 import { strings, objects } from '../../_data/autocomplete.data.json';
 
 // Create mock module for the stories
 const moduleName = 'oui-autocomplete-stories';
-angular.module(moduleName, ['oui.autocomplete']);
+angular.module(moduleName, [Autocomplete]);
 
 export default {
   title: 'Version 3/Directives/Autocomplete',

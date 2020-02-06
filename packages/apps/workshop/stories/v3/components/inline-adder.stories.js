@@ -1,17 +1,21 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
+import Field from '@ovh-ux/ui-kit.field';
+import InlineAdder from '@ovh-ux/ui-kit.inline-adder';
+import Numeric from '@ovh-ux/ui-kit.numeric';
+
 import readme from '@ovh-ux/ui-kit.inline-adder/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'oui-inline-adder-stories';
 angular.module(moduleName, [
-  'oui.inline-adder',
+  InlineAdder,
 
   // For examples
-  'oui.field',
-  'oui.numeric',
+  Field,
+  Numeric,
 ]);
 
 export default {
