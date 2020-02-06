@@ -213,7 +213,7 @@ export const Validation = forModule(moduleName).createElement(
             required>
             <oui-radio-label>
               128 GB RAM
-              <span class="oui-badge oui-badge_info">New</span>
+              <span class="oui-badge oui-badge_new">New</span>
             </oui-radio-label>
             <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
           </oui-radio>
