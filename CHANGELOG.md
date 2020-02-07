@@ -1,3 +1,13 @@
+<a name="2.40.0"></a>
+# [2.40.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.39.0...v2.40.0) (2020-02-07)
+
+
+### Features
+
+* **oui-navbar:** add variant attribute on menu ([#557](https://github.com/ovh-ux/ovh-ui-kit/issues/557)) ([6110d01](https://github.com/ovh-ux/ovh-ui-kit/commit/6110d01))
+
+
+
 <a name="2.39.0"></a>
 # [2.39.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.38.0...v2.39.0) (2020-01-31)
 
