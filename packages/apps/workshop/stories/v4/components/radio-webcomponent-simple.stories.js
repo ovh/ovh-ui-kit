@@ -134,7 +134,7 @@ export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="form">
-      <oui-field>
+      <oui-field label="Label">
         <oui-radio-group
           name="ram"
           model="$ctrl.model"
