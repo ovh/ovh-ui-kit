@@ -7,82 +7,22 @@
   max-width: 100%;
   margin: @oui-input-group-margin;
 
-  > .oui-input {
-    display: table-cell;
-    border-radius: 0;
-    margin: 0;
-    flex: 2 1 auto;
-    z-index: 1; // Set border priority on inputs
-
-    &_number {
-      appearance: textfield;
-
-      &::-webkit-outer-spin-button,
-      &::-webkit-inner-spin-button {
-        appearance: none;
-        margin: 0;
-      }
-    }
+  .oui-input {
+    flex: 1;
   }
 
-  > .oui-button + .oui-input,
-  > .oui-button + .oui-button,
-  > .oui-input + .oui-input,
-  > .oui-input + .oui-button {
-    margin-left: @oui-input-group-spacing;
+  .oui-button,
+  .oui-input {
+    + .oui-button,
+    + .oui-input { margin-left: @oui-input-group-spacing; }
+  }
+
+  // Inline variant
+  &_inline {
+    display: inline-flex;
+    width: auto;
   }
 
   // Size variants
   #oui > .control-sizes();
-}
-
-// Button variant
-.oui-input-group.oui-input-group_button {
-  position: relative;
-
-  .oui-input,
-  .oui-input:first-child {
-    padding-right: @oui-input-group-button-min-width;
-    // border-radius: @oui-input-group-border-radius;
-  }
-
-  .oui-icon {
-    color: @oui-input-group-button-font-color;
-    font-size: @oui-input-group-button-icon-size;
-  }
-
-  .oui-button,
-  .oui-button:hover,
-  .oui-button:focus {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    min-width: @oui-input-group-button-min-width;
-    width: auto;
-    border-color: transparent;
-    background: transparent;
-    box-shadow: none;
-    z-index: 2; // Avoid to be hidden by inputs
-  }
-
-  .oui-button:focus {
-    .oui-icon {
-      color: @oui-input-group-button-font-color_focus;
-      text-shadow: @oui-input-group-button-icon-shadow_focus;
-    }
-  }
-
-  .oui-button:hover,
-  .oui-input:focus ~ .oui-button {
-    .oui-icon {
-      color: @oui-input-group-button-font-color_hover;
-    }
-  }
-}
-
-// Inline variant
-.oui-input-group.oui-input-group_inline {
-  display: inline-flex;
-  width: auto;
 }
