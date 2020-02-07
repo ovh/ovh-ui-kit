@@ -123,7 +123,8 @@
   }
 
   .control-validation() {
-    &_success {
+    &_success,
+    .oui-field_success & {
       &,
       &:hover,
       &:focus {
@@ -139,7 +140,8 @@
       }
     }
 
-    &_warning {
+    &_warning,
+    .oui-field_warning & {
       &,
       &:hover,
       &:focus {
@@ -155,7 +157,8 @@
       }
     }
 
-    &_error {
+    &_error,
+    .oui-field_error & {
       &,
       &:hover,
       &:focus {
