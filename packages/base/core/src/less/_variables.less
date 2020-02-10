@@ -316,8 +316,8 @@
 @oui-form-control-height: rem-calc(32);
 @oui-form-control-line-height: 1.2;
 @oui-form-control-margin: 0;
-@oui-form-control-padding-x: rem-calc(6px);
-@oui-form-control-padding-y: rem-calc(6px);
+@oui-form-control-padding-x: rem-calc(6);
+@oui-form-control-padding-y: rem-calc(6);
 @oui-form-control-padding: @oui-form-control-padding-x @oui-form-control-padding-y;
 @oui-form-control-box-shadow: none;
 @oui-form-control-outline: none;
@@ -657,6 +657,7 @@
 @oui-calendar-icon-size: rem-calc(20);
 @oui-calendar-icon-spacing: rem-calc(12);
 
+@oui-calendar-input-margin: @oui-form-control-margin;
 @oui-calendar-input-font-color: @oui-form-control-font-color;
 @oui-calendar-input-border-color: @oui-form-control-border-color;
 @oui-calendar-input-background-color: @oui-form-control-background-color;
@@ -753,20 +754,6 @@
 @oui-chip-container-background-color: transparent;
 @oui-chip-container-border-color: transparent;
 @oui-chip-container-border-width: 0;
-
-// Clipboard
-// @oui-clipboard-font-color: @oui-form-control-font-color;
-// @oui-clipboard-box-shadow: @oui-form-control-box-shadow;
-// @oui-clipboard-border-color: @oui-form-control-border-color;
-// @oui-clipboard-border-color_hover: @oui-form-control-border-color_hover;
-// @oui-clipboard-border-color_focus: @oui-form-control-border-color_focus;
-// @oui-clipboard-border-radius: @oui-form-control-border-radius;
-// @oui-clipboard-background-color: @oui-form-control-background-color;
-// @oui-clipboard-background-color_focus: @oui-form-control-background-color_focus;
-
-// Clipboard - Button
-// @oui-clipboard-button-width: @oui-input-overlay-size;
-// @oui-clipboard-button-icon-size: @oui-input-overlay-icon-size;
 
 // Collapsible
 @oui-collapsible-min-height: rem-calc(50);
@@ -1126,64 +1113,23 @@
 @oui-inline-adder-action-padding-x: @oui-button-small-padding-x;
 @oui-inline-adder-action-icon-size: rem-calc(16);
 
-// Input
-// TODO: To clean
-// @oui-input-height: @oui-form-control-height;
-@oui-input-margin: 0;
-@oui-input-padding-x: rem-calc(8);
-@oui-input-padding-y: 0;
-@oui-input-padding: @oui-input-padding-y @oui-input-padding-x;
-@oui-input-font-color: @oui-form-control-font-color;
-@oui-input-font-color_disabled: @oui-form-control-font-color_disabled;
-@oui-input-font-color_readonly: @oui-form-control-font-color_readonly;
-@oui-input-font-color_error: @oui-form-control-font-color_error;
-@oui-input-font-size: @oui-form-control-font-size;
-@oui-input-font-weight: @oui-form-control-font-weight;
-@oui-input-border-color: @oui-form-control-border-color;
-@oui-input-border-color_hover: @oui-form-control-border-color_hover;
-@oui-input-border-color_focus: @oui-form-control-border-color_focus;
-@oui-input-border-color_disabled: @oui-form-control-border-color_disabled;
-@oui-input-border-color_readonly: @oui-form-control-border-color_readonly;
-@oui-input-border-color_error: @oui-form-control-border-color_error;
-@oui-input-border-radius: @oui-form-control-border-radius;
-@oui-input-border-width: @oui-form-control-border-width;
-@oui-input-box-shadow: @oui-form-control-box-shadow;
-@oui-input-background-color: @oui-form-control-background-color;
-@oui-input-background-color_hover: @oui-form-control-background-color_hover;
-@oui-input-background-color_focus: @oui-form-control-background-color_focus;
-@oui-input-background-color_disabled: @oui-form-control-background-color_disabled;
-@oui-input-background-color_readonly: @oui-form-control-background-color_readonly;
-@oui-input-background-color_error: @oui-form-control-background-color_error;
-
-@oui-input-placeholder-font-color: @oui-color-silver;
-
-@oui-input-selection-background-color: @oui-color-pacific;
-@oui-input-selection-background-color_error: @oui-color-error-dark;
-@oui-input-selection-font-color: @oui-color-white;
-@oui-input-selection-font-color_error: @oui-color-white;
-
 // Input - Overlay
-@oui-input-overlay-size: rem-calc(32);
+@oui-input-overlay-size: @oui-form-control-height;
 @oui-input-overlay-icon-size: rem-calc(24);
-@oui-input-overlay-margin: 0;
+@oui-input-overlay-margin: @oui-form-control-margin;
 @oui-input-overlay-padding-x: rem-calc(4);
 @oui-input-overlay-padding-y: 0;
 @oui-input-overlay-padding: @oui-input-overlay-padding-y @oui-input-overlay-padding-x;
-@oui-input-overlay-font-color: @p-500;
-@oui-input-overlay-font-color_error: @ae-500;
-@oui-input-overlay-font-color_warning: @aw-500;
-@oui-input-overlay-font-color_success: @as-500;
+@oui-input-overlay-font-color: @oui-form-control-icon-color;
+@oui-input-overlay-font-color_error: @oui-form-control-icon-color_error;
+@oui-input-overlay-font-color_warning: @oui-form-control-icon-color_warning;
+@oui-input-overlay-font-color_success: @oui-form-control-icon-color_success;
 @oui-input-overlay-border-color: transparent;
 @oui-input-overlay-box-shadow: none;
 @oui-input-overlay-background-color: transparent;
 
-// TODO: To remove
-@oui-input-overlay-border-width: @oui-button-secondary-border-width;
-@oui-input-overlay-font-size: @oui-button-large-font-size;
-@oui-input-overlay-font-weight: @oui-button-large-font-weight;
-
 // Input - Group
-@oui-input-group-margin: 0;
+@oui-input-group-margin: @oui-form-control-margin;
 @oui-input-group-spacing: rem-calc(4);
 
 // List
@@ -1702,7 +1648,7 @@
 @oui-radio-toggle-box-shadow_hover: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
 @oui-radio-toggle-background-color: @p-000;
 @oui-radio-toggle-background-color_hover: @p-100;
-@oui-radio-toggle-background-color_checked: #def8ff; // WARNING: Unlisted color
+@oui-radio-toggle-background-color_checked: @p-075;
 
 // Search
 @oui-search-margin: 0;
@@ -1720,7 +1666,7 @@
 
 // Select
 @oui-select-height: @oui-form-control-height;
-@oui-select-margin: @oui-input-margin;
+@oui-select-margin: @oui-form-control-margin;
 @oui-select-padding-x: rem-calc(12);
 @oui-select-letter-spacing: @oui-global-base-letter-spacing;
 @oui-select-font-color: @oui-form-control-font-color;
@@ -2111,7 +2057,7 @@
 @oui-tile-definition-actions-spacing: rem-calc(10);
 
 // Timepicker
-@oui-timepicker-margin: @oui-input-margin;
+@oui-timepicker-margin: @oui-form-control-margin;
 
 // Tooltip
 @oui-tooltip-min-width: rem-calc(50);

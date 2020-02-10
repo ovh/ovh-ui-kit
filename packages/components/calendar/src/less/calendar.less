@@ -1,6 +1,6 @@
 .oui-calendar {
   display: block;
-  margin: @oui-input-margin;
+  margin: @oui-form-control-margin;
   position: relative;
 
   &_inline { display: inline-block; }
@@ -9,8 +9,7 @@
   & &__control {
     #oui > .control-base();
     #oui > .control-color();
-
-    // margin: 0;
+    #oui > .control-validation();
   }
 
   &__control-wrapper {
@@ -35,9 +34,4 @@
     }
     // stylelint-enable declaration-no-important
   }
-}
-
-// Calendar - Error
-.oui-field_error .oui-calendar__control {
-  #oui > .input-error-style();
 }
