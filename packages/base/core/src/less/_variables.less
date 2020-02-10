@@ -312,6 +312,8 @@
   xl rem-calc(300),
   auto 100%;
 
+@oui-form-control-min-height: rem-calc(32);
+@oui-form-control-height: rem-calc(32);
 @oui-form-control-line-height: 1.2;
 @oui-form-control-margin: 0;
 @oui-form-control-padding-x: rem-calc(6px);
@@ -753,18 +755,18 @@
 @oui-chip-container-border-width: 0;
 
 // Clipboard
-@oui-clipboard-font-color: @oui-form-control-font-color;
-@oui-clipboard-box-shadow: @oui-form-control-box-shadow;
-@oui-clipboard-border-color: @oui-form-control-border-color;
-@oui-clipboard-border-color_hover: @oui-form-control-border-color_hover;
-@oui-clipboard-border-color_focus: @oui-form-control-border-color_focus;
-@oui-clipboard-border-radius: @oui-form-control-border-radius;
-@oui-clipboard-background-color: @oui-form-control-background-color;
-@oui-clipboard-background-color_focus: @oui-form-control-background-color_focus;
+// @oui-clipboard-font-color: @oui-form-control-font-color;
+// @oui-clipboard-box-shadow: @oui-form-control-box-shadow;
+// @oui-clipboard-border-color: @oui-form-control-border-color;
+// @oui-clipboard-border-color_hover: @oui-form-control-border-color_hover;
+// @oui-clipboard-border-color_focus: @oui-form-control-border-color_focus;
+// @oui-clipboard-border-radius: @oui-form-control-border-radius;
+// @oui-clipboard-background-color: @oui-form-control-background-color;
+// @oui-clipboard-background-color_focus: @oui-form-control-background-color_focus;
 
 // Clipboard - Button
-@oui-clipboard-button-width: @oui-input-group-button-min-width;
-@oui-clipboard-button-icon-size: @oui-input-group-button-icon-size;
+// @oui-clipboard-button-width: @oui-input-overlay-size;
+// @oui-clipboard-button-icon-size: @oui-input-overlay-icon-size;
 
 // Collapsible
 @oui-collapsible-min-height: rem-calc(50);
@@ -1125,7 +1127,8 @@
 @oui-inline-adder-action-icon-size: rem-calc(16);
 
 // Input
-@oui-input-height: rem-calc(32);
+// TODO: To clean
+// @oui-input-height: @oui-form-control-height;
 @oui-input-margin: 0;
 @oui-input-padding-x: rem-calc(8);
 @oui-input-padding-y: 0;
@@ -1159,37 +1162,29 @@
 @oui-input-selection-font-color: @oui-color-white;
 @oui-input-selection-font-color_error: @oui-color-white;
 
+// Input - Overlay
+@oui-input-overlay-size: rem-calc(32);
+@oui-input-overlay-icon-size: rem-calc(24);
+@oui-input-overlay-margin: 0;
+@oui-input-overlay-padding-x: rem-calc(4);
+@oui-input-overlay-padding-y: 0;
+@oui-input-overlay-padding: @oui-input-overlay-padding-y @oui-input-overlay-padding-x;
+@oui-input-overlay-font-color: @p-500;
+@oui-input-overlay-font-color_error: @ae-500;
+@oui-input-overlay-font-color_warning: @aw-500;
+@oui-input-overlay-font-color_success: @as-500;
+@oui-input-overlay-border-color: transparent;
+@oui-input-overlay-box-shadow: none;
+@oui-input-overlay-background-color: transparent;
+
+// TODO: To remove
+@oui-input-overlay-border-width: @oui-button-secondary-border-width;
+@oui-input-overlay-font-size: @oui-button-large-font-size;
+@oui-input-overlay-font-weight: @oui-button-large-font-weight;
+
 // Input - Group
 @oui-input-group-margin: 0;
 @oui-input-group-spacing: rem-calc(4);
-
-@oui-input-group-button-min-width: rem-calc(50);
-@oui-input-group-button-min-height: @oui-button-min-height;
-@oui-input-group-button-line-height: @oui-button-line-height;
-@oui-input-group-button-padding: @oui-button-secondary-padding_large;
-@oui-input-group-button-background-color: @oui-input-background-color;
-@oui-input-group-button-background-color_hover: @oui-button-secondary-background-color_hover;
-@oui-input-group-button-background-color_active: @oui-button-secondary-background-color_active;
-@oui-input-group-button-background-color_disabled: @oui-button-secondary-background-color_disabled;
-@oui-input-group-button-border-color: @oui-button-secondary-border-color;
-@oui-input-group-button-border-color_hover: @oui-button-secondary-border-color_hover;
-@oui-input-group-button-border-color_active: @oui-button-secondary-border-color_active;
-@oui-input-group-button-border-color_disabled: @oui-form-control-border-color_disabled;
-@oui-input-group-button-border-width: @oui-button-secondary-border-width;
-@oui-input-group-button-box-shadow: @oui-button-secondary-box-shadow;
-@oui-input-group-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
-@oui-input-group-button-box-shadow_active: @oui-button-secondary-box-shadow_active;
-@oui-input-group-button-box-shadow_disabled: @oui-button-secondary-box-shadow_disabled;
-@oui-input-group-button-font-color: @oui-button-secondary-font-color;
-@oui-input-group-button-font-color_hover: @oui-color-pacific;
-@oui-input-group-button-font-color_focus: @oui-input-group-button-font-color_hover;
-@oui-input-group-button-font-color_disabled: @oui-button-secondary-font-color_disabled;
-@oui-input-group-button-font-size: @oui-button-large-font-size;
-@oui-input-group-button-font-weight: @oui-button-large-font-weight;
-@oui-input-group-button-icon-color: @oui-button-secondary-icon-color;
-@oui-input-group-button-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
-@oui-input-group-button-icon-size: rem-calc(20);
-@oui-input-group-button-icon-shadow_focus: 0 1px 1px rgba(0, 0, 0, 0.15);
 
 // List
 @oui-list-font-size: rem-calc(16);
@@ -1724,7 +1719,7 @@
 @oui-search-submit-right: 0;
 
 // Select
-@oui-select-height: @oui-input-height;
+@oui-select-height: @oui-form-control-height;
 @oui-select-margin: @oui-input-margin;
 @oui-select-padding-x: rem-calc(12);
 @oui-select-letter-spacing: @oui-global-base-letter-spacing;

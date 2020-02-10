@@ -7,13 +7,10 @@
 
   // Need to override read-only style of oui-input
   & &__control {
-    #oui > .input-base(
-      @background-color_readonly: @oui-input-background-color,
-      @border-color_readonly: @oui-calendar-input-border-color,
-      @font-color_readonly: @oui-calendar-input-font-color
-    );
+    #oui > .control-base();
+    #oui > .control-color();
 
-    margin: 0;
+    // margin: 0;
   }
 
   &__control-wrapper {
