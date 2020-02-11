@@ -1,33 +1,34 @@
 <div class="oui-field"
-    ng-class="{ 'oui-field_error': $ctrl.isErrorVisible() }">
-    <label class="oui-field__label oui-label"
-        ng-attr-for="{{ ::$ctrl.for }}"
-        ng-if="!!$ctrl.label && !$ctrl.labelPopover"
-        ng-bind="$ctrl.label"></label>
-    <div class="oui-field__label-container"
-         ng-if="!!$ctrl.label && !!$ctrl.labelPopover">
-        <label class="oui-field__label oui-label"
-               ng-attr-for="{{ ::$ctrl.for }}"
-               ng-bind="$ctrl.label">
+    ng-class="[
+        { 'oui-field_error': $ctrl.isErrorVisible() },
+        (!!$ctrl.size && 'oui-field_' + $ctrl.size),
+    ]">
+    <div class="oui-field__header">
+        <label class="oui-field__label"
+            ng-attr-for="{{ ::$ctrl.for }}"
+            ng-bind="$ctrl.label">
         </label>
         <button type="button" class="oui-popover-button"
             aria-label="Help"
+            ng-if="!!$ctrl.labelPopover"
             oui-popover="{{$ctrl.labelPopover}}"
-            oui-popover-id="{{::$ctrl.popoverId}}"></button>
+            oui-popover-id="{{::$ctrl.popoverId}}">
+        </button>
     </div>
-    <div ng-class=":: 'oui-field__control oui-field__control_' + $ctrl.size" ng-transclude></div>
-    <div class="oui-field__error"
-        ng-if="$ctrl.isErrorVisible()">
-        <span ng-messages="$ctrl.getFirstError()" role="alert">
-            <span class="oui-icon oui-icon-error" aria-hidden="true"></span>
-            <span ng-repeat="errorKey in $ctrl.getMessagesOrder()"
-                  ng-message="{{ :: errorKey }}"
-                  ng-bind="$ctrl.getErrorMessage(errorKey)">
+    <div class="oui-field__control" ng-transclude></div>
+    <div class="oui-field__footer">
+        <div class="oui-field__error"
+            ng-if="$ctrl.isErrorVisible()">
+            <span ng-messages="$ctrl.getFirstError()" role="alert">
+                <span ng-repeat="errorKey in $ctrl.getMessagesOrder()"
+                    ng-message="{{ :: errorKey }}"
+                    ng-bind="$ctrl.getErrorMessage(errorKey)">
+                </span>
             </span>
-        </span>
-    </div>
-    <div class="oui-field__helper"
-        ng-if="!!$ctrl.helpText"
-        ng-bind="$ctrl.helpText">
+        </div>
+        <div class="oui-field__helper"
+            ng-if="!!$ctrl.helpText"
+            ng-bind="$ctrl.helpText">
+        </div>
     </div>
 </div>
