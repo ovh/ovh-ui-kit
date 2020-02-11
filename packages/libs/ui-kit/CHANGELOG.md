@@ -1,3 +1,17 @@
+# [3.11.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.10.0...v3.11.0) (2020-02-07)
+
+
+### Bug Fixes
+
+* **datagrid:** always call row-loader ([#559](https://github.com/ovh-ux/ovh-ui-kit/issues/559)) ([cab1a41](https://github.com/ovh-ux/ovh-ui-kit/commit/cab1a41c5fc166569721abec7f423504c1a7b032))
+
+
+### Features
+
+* **navbar:** add variant attribute onto menus ([#558](https://github.com/ovh-ux/ovh-ui-kit/issues/558)) ([658b558](https://github.com/ovh-ux/ovh-ui-kit/commit/658b558d56fb7b6c2b24173415782a926d94f5a8))
+
+
+
 # [3.10.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.9.0...v3.10.0) (2020-01-20)
 
 

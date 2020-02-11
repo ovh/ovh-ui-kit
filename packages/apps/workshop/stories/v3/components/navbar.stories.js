@@ -38,9 +38,10 @@ export const Simple = forModule(moduleName).createElement(
       active-link="lorem"
       main-links="$ctrl.mainLinks"
       aside-links="$ctrl.asideLinks"
-      toggler-links="$ctrl.togglerLinks">
-    </oui-navbar>`,
-    {
+      toggler-links="$ctrl.togglerLinks"
+      fixed>
+    </oui-navbar>
+    `, {
       $ctrl: {
         brand,
         asideLinks,
@@ -55,7 +56,8 @@ export const Advanced = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-navbar
-      active-link="lorem">
+      active-link="lorem"
+      fixed>
       <oui-navbar-toggler
         links="$ctrl.togglerLinks">
       </oui-navbar-toggler>
@@ -133,6 +135,111 @@ export const Advanced = forModule(moduleName).createElement(
   ),
 );
 
+
+export const CustomPanels = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-navbar
+      active-link="lorem"
+      fixed>
+      <oui-navbar-aside>
+        <oui-navbar-dropdown
+          name="{{asideLink.name}}"
+          text="{{asideLink.title}}"
+          aria-label="{{asideLink.label}}"
+          icon-badge="(asideLink.subLinks | filter: {
+            isActive: 'true',
+            acknowledged: '!true'
+          }).length"
+          icon-class="{{asideLink.iconClass}}"
+          on-click="asideLink.onClick"
+          ng-repeat="asideLink in $ctrl.asideLinks track by $index"
+          ng-class="asideLink.class">
+          <oui-navbar-notification
+            ng-if="asideLink.name === 'notifications'"
+            name="{{asideLink.name}}"
+            links="asideLink.subLinks"
+            limit-to="asideLink.limitTo"
+            header-template="asideLink.headerTemplate"
+            header-title="{{asideLink.headerTitle}}"
+            footer-template="asideLink.footerTemplate"
+            footer-title="{{asideLink.footerTitle}}"
+            footer-href="{{asideLink.footerUrl}}"
+            placement="end"
+            variant="panel">
+          </oui-navbar-notification>
+          <oui-navbar-menu
+            ng-if="asideLink.name === 'user'"
+            header-breadcrumb="{{asideLink.nichandle}}"
+            header-title="{{asideLink.fullName}}"
+            name="{{asideLink.name}}"
+            links="asideLink.subLinks"
+            placement="end"
+            variant="panel">
+          </oui-navbar-menu>
+          <oui-navbar-menu
+            ng-if="asideLink.name !== 'notifications' && asideLink.name !== 'user'"
+            header-class="oui-navbar_mobile-only"
+            header-breadcrumb="{{asideLink.headerBreadcrumb}}"
+            header-title="{{asideLink.headerTitle}}"
+            name="{{asideLink.name}}"
+            links="asideLink.subLinks"
+            placement="end"
+            variant="panel">
+          </oui-navbar-menu>
+        </oui-navbar-dropdown>
+      </oui-navbar-aside>
+    </oui-navbar>
+    `, {
+      $ctrl: {
+        brand,
+        asideLinks,
+        mainLinks,
+        togglerLinks: mainLinks,
+      },
+    },
+  ),
+);
+
+CustomPanels.story = {
+  name: 'Custom panels',
+};
+
+export const CustomMenus = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-navbar fixed>
+      <oui-navbar-aside>
+        <oui-navbar-dropdown
+          name="custom"
+          text="Custom menu with a badge"
+          icon-badge="3"
+          icon-class="oui-icon oui-icon-bell">
+
+          <div class="oui-navbar-menu oui-navbar-menu_panel oui-navbar-menu_end">
+            <nav class="oui-list oui-list_nav">
+              <ul class="oui-list__items">
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 1</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 2</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 3</a></li>
+                <li class="oui-list__item oui-list__item_current"><a href="" class="oui-list__link">Item 4</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 5</a></li>
+                <li class="oui-list__item"><a href="" class="oui-list__link">Item 6</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </oui-navbar-dropdown>
+      </oui-navbar-aside>
+    </oui-navbar>
+    `,
+  ),
+);
+
+CustomMenus.story = {
+  name: 'Custom menus',
+};
+
 export const PlaceholderForNotification = forModule(moduleName).createElement(
   () => compileTemplate(
     `
@@ -145,9 +252,10 @@ export const PlaceholderForNotification = forModule(moduleName).createElement(
     </p>
 
     <oui-navbar
-      aside-links="$ctrl.placeholderNotification">
-    </oui-navbar>`,
-    {
+      aside-links="$ctrl.placeholderNotification"
+      fixed>
+    </oui-navbar>
+    `, {
       $ctrl: {
         placeholderNotification,
       },

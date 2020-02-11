@@ -71,7 +71,7 @@
       margin: auto;
     }
 
-    .oui-icon { // stylelint-disable-line no-descending-specificity
+    .oui-icon {
       font-size: @oui-select-picker-picture-max-height;
     }
 
@@ -133,7 +133,6 @@
     }
   }
 
-  // stylelint-disable no-descending-specificity
   &__input:checked ~ &__label-container,
   .ui-select-container.ui-select-container_open {
     .ui-select-match {
@@ -150,7 +149,6 @@
       }
     }
   }
-  // stylelint-enable no-descending-specificity
 }
 
 oui-select-picker,
@@ -164,7 +162,6 @@ oui-select-picker-section {
 
   .oui-select-picker__input + .oui-select-picker__label-container,
   .oui-select-picker__input:checked + .oui-select-picker__label-container {
-    // stylelint-disable no-descending-specificity
     &,
     &:hover,
     &:active,
@@ -181,6 +178,5 @@ oui-select-picker-section {
       background-color: @oui-select-picker-value-background-color_error;
       border-color: @oui-select-picker-value-border-color_error;
     }
-    // stylelint-enable no-descending-specificity
   }
 }

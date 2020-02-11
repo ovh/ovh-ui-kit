@@ -3,6 +3,7 @@
   "rules": {
     "indentation": [2, { "ignore": ["inside-parens"] }],
     "function-calc-no-invalid": null,
+    "no-descending-specificity": null,
     "selector-type-no-unknown": [true, { "ignore": ["custom-elements"] }]
   }
 }

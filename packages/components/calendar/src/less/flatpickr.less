@@ -136,11 +136,9 @@
       box-sizing: content-box;
       text-align: center;
 
-      // stylelint-disable no-descending-specificity
       ~ span {
         margin-right: -@oui-calendar-title-button-width;
       }
-      // stylelint-enable no-descending-specificity
     }
   }
 
@@ -217,7 +215,6 @@
       color: @oui-calendar-cell-font-color_disabled;
     }
 
-    // stylelint-disable no-descending-specificity
     &,
     &.prevMonthDay,
     &.nextMonthDay {
@@ -229,7 +226,6 @@
         background-color: @oui-calendar-cell-background-color_hover;
       }
     }
-    // stylelint-enable no-descending-specificity
 
     &:focus {
       #oui > .outline-border();
@@ -289,7 +285,6 @@
       &.nextMonthDay.inRange { border-color: @oui-calendar-today-border-color; }
     }
 
-    // stylelint-disable no-descending-specificity
     // Disabled
     &.disabled,
     &.disabled:hover,
@@ -304,7 +299,6 @@
 
       &.today { border-color: @oui-calendar-today-border-color_disabled; }
     }
-    // stylelint-enable no-descending-specificity
   }
 
   // Timepicker
@@ -317,14 +311,12 @@
     align-items: stretch;
     justify-content: center;
 
-    // stylelint-disable no-descending-specificity
     .numInputWrapper {
       width: ~"calc(@{oui-calendar-cell-width} * 3)";
       max-width: ~"calc(@{oui-calendar-cell-width} * 3)";
       height: 100%;
       flex: auto;
     }
-    // stylelint-enable no-descending-specificity
 
     .numInput {
       border-radius: @oui-calendar-cell-border-radius;

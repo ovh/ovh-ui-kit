@@ -57,6 +57,10 @@ export default class {
       // Add classnames on root $element
       this.$element.addClass('oui-navbar-menu');
 
+      if (this.variant) {
+        this.$element.addClass(`oui-navbar-menu_${this.variant}`);
+      }
+
       if (this.fixed) {
         this.$element.addClass('oui-navbar-menu_fixed');
       }

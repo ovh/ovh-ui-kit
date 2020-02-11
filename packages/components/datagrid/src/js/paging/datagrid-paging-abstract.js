@@ -1,5 +1,3 @@
-import hasIn from 'lodash/hasIn';
-
 export default class DatagridPagingAbstract {
   constructor(columns, currentSorting, pageSize, rowLoader, pagingService) {
     this.columns = columns;
@@ -86,7 +84,7 @@ export default class DatagridPagingAbstract {
 
   loadRowData(_row_) {
     const row = _row_;
-    if (!this.isRowLoaded(row) && !row.$promise) {
+    if (!row.$promise) {
       row.$promise = this.$q.when(this.rowLoader({ $row: row }))
         .then((fullRow) => Object.assign(row, fullRow))
         .finally(() => {
@@ -94,22 +92,9 @@ export default class DatagridPagingAbstract {
         });
 
       return row.$promise;
-
-      // TODO: Find a way to forward those error to datagrid
-      /* .catch(this.handleError.bind(this)) */
     }
 
     return this.$q.when();
-  }
-
-  /**
-     * Check if all data is loaded on this row
-     * @param  {object}  row a row
-     * @return {Boolean}     true if loaded
-     */
-  isRowLoaded(row) {
-    return this.columns.map((column) => hasIn(row, column.name))
-      .reduce((a, b) => a && b, true);
   }
 
   reloadRows() {
