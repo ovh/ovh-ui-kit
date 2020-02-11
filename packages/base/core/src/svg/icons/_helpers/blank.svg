@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Define the base icon size for the generator:
+
+  `icon-font-generator` normalize the size of all icons, based on the size of the first parsed.
+  With this workaround, we don't need to resize all icons used for the webfont.
+
+  A lower size result in bad/weird rendered icons.
+  A higher size result with better shaped icons, but increase the font size.
+  `128px` value seems a good compromise for the concept icons, that are very thin.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">></svg>
