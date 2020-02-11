@@ -3,7 +3,8 @@
         { 'oui-field_error': $ctrl.isErrorVisible() },
         (!!$ctrl.size && 'oui-field_' + $ctrl.size),
     ]">
-    <div class="oui-field__header">
+    <div class="oui-field__header"
+        ng-if="!!$ctrl.label">
         <label class="oui-field__label"
             ng-attr-for="{{ ::$ctrl.for }}"
             ng-bind="$ctrl.label">

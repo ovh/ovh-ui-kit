@@ -77,7 +77,7 @@ describe('ouiField', () => {
                 `);
         $timeout.flush();
 
-        expect(getElementByClass(element, '.oui-field__control_auto').length).toEqual(1);
+        expect(getElementByClass(element, '.oui-field_auto').length).toEqual(1);
       });
 
       it('should set defined size as field size', () => {
@@ -89,7 +89,7 @@ describe('ouiField', () => {
                 `);
         $timeout.flush();
 
-        expect(getElementByClass(element, `.oui-field__control_${size}`).length).toEqual(1);
+        expect(getElementByClass(element, `.oui-field_${size}`).length).toEqual(1);
       });
 
       it('should not add popover if label is not defined', () => {
