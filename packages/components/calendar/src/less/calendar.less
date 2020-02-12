@@ -1,19 +1,15 @@
 .oui-calendar {
   display: block;
-  margin: @oui-input-margin;
+  margin: @oui-form-control-margin;
   position: relative;
 
   &_inline { display: inline-block; }
 
   // Need to override read-only style of oui-input
   & &__control {
-    #oui > .input-base(
-      @background-color_readonly: @oui-input-background-color,
-      @border-color_readonly: @oui-calendar-input-border-color,
-      @font-color_readonly: @oui-calendar-input-font-color
-    );
-
-    margin: 0;
+    #oui > .control-base();
+    #oui > .control-color();
+    #oui > .control-validation();
   }
 
   &__control-wrapper {
@@ -38,9 +34,4 @@
     }
     // stylelint-enable declaration-no-important
   }
-}
-
-// Calendar - Error
-.oui-field_error .oui-calendar__control {
-  #oui > .input-error-style();
 }

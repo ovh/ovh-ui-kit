@@ -1,0 +1,90 @@
+.oui-input-overlay {
+  position: relative;
+  z-index: 0;
+
+  .oui-input {
+    padding-right: @oui-input-overlay-size;
+  }
+
+  > .oui-button,
+  > .oui-icon {
+    width: auto;
+    height: auto;
+    min-width: @oui-input-overlay-size;
+    margin: @oui-input-overlay-margin;
+    padding: @oui-input-overlay-padding;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; // Avoid to be hidden by inputs
+
+    &,
+    &:hover,
+    &:focus,
+    &:disabled {
+      color: @oui-input-overlay-font-color;
+      border-color: @oui-input-overlay-border-color;
+      background: @oui-input-overlay-background-color;
+      box-shadow: @oui-input-overlay-box-shadow;
+    }
+  }
+
+  > .oui-button .oui-icon {
+    color: inherit !important;
+  }
+
+  // Disabled state
+  .oui-input:disabled {
+    ~ .oui-button,
+    ~ .oui-icon {
+      opacity: 0.5;
+    }
+  }
+
+  // Inline variant
+  &_inline {
+    display: inline-flex;
+    width: auto;
+  }
+
+  // Sizes
+  #oui > .control-sizes();
+
+  // Validation
+  .oui-input_error,
+  .oui-field_error & .oui-input {
+    ~ .oui-button,
+    ~ .oui-icon {
+      &,
+      &:hover,
+      &:focus {
+        color: @oui-input-overlay-font-color_error;
+      }
+    }
+  }
+
+  .oui-input_warning,
+  .oui-field_warning & .oui-input {
+    ~ .oui-button,
+    ~ .oui-icon {
+      &,
+      &:hover,
+      &:focus {
+        color: @oui-input-overlay-font-color_warning;
+      }
+    }
+  }
+
+  .oui-input_success,
+  .oui-field_success & .oui-input {
+    ~ .oui-button,
+    ~ .oui-icon {
+      &,
+      &:hover,
+      &:focus {
+        color: @oui-input-overlay-font-color_success;
+      }
+    }
+  }
+}

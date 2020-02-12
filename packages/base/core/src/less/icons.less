@@ -2,7 +2,9 @@
   #oui > .icon-type();
 
   line-height: @oui-icon-line-height;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: @oui-icon-spacing;
   padding: @oui-icon-padding;
   vertical-align: @oui-icon-vertical-align;
@@ -23,7 +25,7 @@
 
   &::before {
     line-height: inherit;
-    vertical-align: inherit;
+    display: block;
   }
 
   &_shake {
