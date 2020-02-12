@@ -1,72 +1,75 @@
 .oui-field {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: @oui-field-spacing;
+  margin-bottom: @oui-field-margin;
 
-  .oui-label {
+  &__header {
+    margin-bottom: @oui-field-header-spacing;
+  }
+
+  &__label {
+    display: inline-block;
+    margin: 0;
+    color: @oui-field-label-font-color;
     font-size: @oui-field-label-font-size;
-
-    &_focus {
-      color: @oui-field-label-font-color;
-    }
+    font-weight: @oui-field-label-font-weight;
   }
 
-  &__label-container {
-    .oui-label {
-      display: inline-block;
-    }
-  }
-
-  &__content {
-    display: flex;
-    align-items: center;
-
-    #oui > .tablet({
-      display: block;
-    });
-  }
-
-  &__control {
-    width: @oui-field-control-width;
-    margin-bottom: @oui-field-control-spacing;
-
-    // Field - Size variants
-    #oui > .control-sizes();
+  &__footer {
+    margin-top: @oui-field-footer-spacing;
   }
 
   &__helper {
-    color: @oui-field-helper-color;
+    color: @oui-field-helper-font-color;
     font-size: @oui-field-helper-font-size;
+    font-size: @oui-field-helper-font-weight;
     text-align: justify;
-
-    &_top {
-      align-self: flex-start;
-    }
-
-    #oui > .tablet({
-      margin-left: 0;
-    });
   }
 
   &__error {
     display: none;
-    color: @oui-field-error-color;
-    font-size: @oui-field-error-font-size;
+    color: @oui-field-helper-font-color_error;
+    font-size: @oui-field-helper-font-size;
     text-align: justify;
+  }
 
-    .oui-icon-error {
-      color: @oui-field-error-icon-color;
-      font-size: @oui-field-error-icon-font-size;
-      vertical-align: sub;
+  // Sizes
+  #oui > .control-sizes();
+
+  // Validation
+  &_error {
+    .oui-field__label {
+      color: @oui-field-label-font-color_error;
+    }
+
+    .oui-field__helper {
+      color: @oui-field-helper-font-color_error;
+    }
+
+    .oui-field__error {
+      display: block;
+    }
+  }
+
+  &_warning {
+    .oui-field__label {
+      color: @oui-field-label-font-color_warning;
+    }
+
+    .oui-field__helper {
+      color: @oui-field-helper-font-color_warning;
+    }
+  }
+
+  &_success {
+    .oui-field__label {
+      color: @oui-field-label-font-color_success;
+    }
+
+    .oui-field__helper {
+      color: @oui-field-helper-font-color_success;
     }
   }
 }
 
 oui-field {
-  display: block;
-}
-
-// Field - Error
-.oui-field_error .oui-field__error {
   display: block;
 }
