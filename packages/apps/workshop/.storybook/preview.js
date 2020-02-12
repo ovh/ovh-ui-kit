@@ -23,7 +23,7 @@ addParameters({
   },
   options: {
     name: 'OVH UI Kit',
-    panelPosition: 'bottom',
+    panelPosition: 'right',
     showRoots: true,
     storySort: ([first], [second]) => {
       const [firstType] = first.split('-');

@@ -4,19 +4,23 @@ import template from './checkbox.html';
 export default {
   template,
   controller,
-  require: {
-    form: '?^^form',
-  },
   bindings: {
     model: '=?',
     id: '@?',
     name: '@?',
     description: '@?',
     footer: '@?',
+    inline: '<?',
     thumbnail: '<?',
     disabled: '<?',
     required: '<?',
     onChange: '&',
   },
-  transclude: true,
+  transclude: {
+    slot: '?transcludeSlot',
+    descriptionSlot: '?ouiCheckboxDescription',
+    labelSlot: '?ouiCheckboxLabel',
+    footerSlot: '?ouiCheckboxFooter',
+    sectionSlot: '?ouiCheckboxSection',
+  },
 };

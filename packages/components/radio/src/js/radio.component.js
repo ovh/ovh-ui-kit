@@ -10,10 +10,10 @@ export default {
   controller,
   bindings: {
     model: '=?',
-    description: '@?',
-    footer: '@?',
     id: '@?',
     name: '@?',
+    description: '@?',
+    footer: '@?',
     value: '<',
     inline: '<?',
     thumbnail: '<?',

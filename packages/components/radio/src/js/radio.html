@@ -18,8 +18,10 @@
     ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + 'Description' || undefined }}">
     <span class="oui-radio__label">
         <span class="oui-radio__icon"></span>
-        <span class="oui-radio__text" id="{{:: $ctrl.id }}Label">
-            <span ng-if="$ctrl.hasLabel()" ng-transclude="labelSlot"></span>
+        <span class="oui-radio__text"
+            id="{{:: $ctrl.id }}Label"
+            ng-show="$ctrl.hasLabel()">
+            <span ng-transclude="labelSlot"></span>
             <ng-transclude></ng-transclude>
         </span>
     </span>

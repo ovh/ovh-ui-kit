@@ -24,7 +24,10 @@ export default class {
   }
 
   hasLabel() {
-    return this.$transclude.isSlotFilled('labelSlot');
+    const transclude = angular.element(this.$element[0].querySelector('.oui-radio__text')).text().trim();
+    const isEmpty = !transclude.length;
+
+    return this.$transclude.isSlotFilled('labelSlot') || !isEmpty;
   }
 
   $onInit() {

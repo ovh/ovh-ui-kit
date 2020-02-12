@@ -235,7 +235,7 @@
 
 // Choice - Custom icon
 @oui-choice-icon-size: rem-calc(20);
-@oui-choice-icon-border-width: 2px;
+@oui-choice-icon-border-width: rem-calc(2);
 
 @oui-choice-icon-background-color: @p-000;
 @oui-choice-icon-background-color_active: @p-000;
@@ -261,23 +261,23 @@
 // Choice - Thumbnail
 @oui-choice-thumbnail-padding: rem-calc(22); // calc(24px - border-width)
 @oui-choice-thumbnail-border-width: 2px;
-@oui-choice-thumbnail-border-width-checked: @oui-choice-thumbnail-border-width;
+@oui-choice-thumbnail-border-width_checked: @oui-choice-thumbnail-border-width;
 @oui-choice-thumbnail-border-radius: @oui-global-base-radius-medium;
-@oui-choice-thumbnail-box-shadow_focus: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
-@oui-choice-thumbnail-box-shadow_error: @oui-choice-thumbnail-box-shadow_focus;
-@oui-choice-thumbnail-box-shadow-checked: @oui-choice-thumbnail-box-shadow_focus;
+@oui-choice-thumbnail-box-shadow_focus: 0 0 6px 0 rgba(0, 14, 156, 0.2);
 
 @oui-choice-thumbnail-background: @p-000;
 @oui-choice-thumbnail-background_hover: @p-100;
-@oui-choice-thumbnail-background_error: @ae-300;
+@oui-choice-thumbnail-background_checked: @p-075;
+@oui-choice-thumbnail-background_checked-hover: @oui-choice-thumbnail-background_hover;
+@oui-choice-thumbnail-background_error: @ae-100;
+@oui-choice-thumbnail-background_error-hover: @ae-300;
+
 @oui-choice-thumbnail-border-color: @p-100;
 @oui-choice-thumbnail-border-color_hover: @p-500;
-@oui-choice-thumbnail-border-color_error: @ae-500;
-
-@oui-choice-thumbnail-background-checked: @p-075;
-@oui-choice-thumbnail-background-checked_hover: @oui-choice-thumbnail-background_hover;
-@oui-choice-thumbnail-border-color-checked: @p-500;
-@oui-choice-thumbnail-border-color-checked_hover: @oui-choice-thumbnail-border-color_hover;
+@oui-choice-thumbnail-border-color_checked: @p-500;
+@oui-choice-thumbnail-border-color_checked-hover: @oui-choice-thumbnail-border-color_hover;
+@oui-choice-thumbnail-border-color_error: @ae-300;
+@oui-choice-thumbnail-border-color_error-hover: @ae-500;
 
 @oui-choice-thumbnail-footer-spacing: @oui-choice-thumbnail-padding;
 @oui-choice-thumbnail-footer-line-height: 1.5;
@@ -288,8 +288,8 @@
 @oui-choice-thumbnail-footer-border-color: @oui-choice-thumbnail-border-color;
 @oui-choice-thumbnail-footer-border-color_hover: @p-200;
 @oui-choice-thumbnail-footer-border-color_focus: @p-200;
-@oui-choice-thumbnail-footer-border-color-checked: @p-200;
-@oui-choice-thumbnail-footer-border-color-checked_hover: @p-200;
+@oui-choice-thumbnail-footer-border-color_checked: @p-200;
+@oui-choice-thumbnail-footer-border-color_checked-hover: @p-200;
 @oui-choice-thumbnail-footer-font-weight: @oui-font-regular;
 @oui-choice-thumbnail-footer-font-size: rem-calc(12);
 
@@ -708,26 +708,35 @@
 @oui-checkbox-icon-border-width: @oui-choice-icon-border-width;
 @oui-checkbox-icon-border-radius: rem-calc(2);
 
-@oui-checkbox-icon-background-color: @oui-choice-icon-background-color;
-@oui-checkbox-icon-background-color_active: @oui-choice-icon-background-color_active;
-@oui-checkbox-icon-background-color_error: @oui-choice-icon-background-color_error;
+@oui-checkbox-icon-background-color: @p-000;
+@oui-checkbox-icon-background-color_hover: @p-000;
+@oui-checkbox-icon-background-color_active: @p-000;
+@oui-checkbox-icon-background-color_error: @p-000;
+@oui-checkbox-icon-background-color_checked: @p-500;
+@oui-checkbox-icon-background-color_checked-hover: @p-700;
+@oui-checkbox-icon-background-color_checked-error: @ae-500;
 
-@oui-checkbox-icon-outer-color: @oui-choice-icon-outer-color;
-@oui-checkbox-icon-outer-color_active: @oui-choice-icon-outer-color_active;
-@oui-checkbox-icon-outer-color_error: @oui-choice-icon-outer-color_error;
-@oui-checkbox-icon-outer-color_focus: @oui-choice-icon-outer-color_focus;
-@oui-checkbox-icon-outer-color_hover: @oui-choice-icon-outer-color_hover;
-@oui-checkbox-icon-outer-color_checked: @oui-choice-icon-outer-color_checked;
-@oui-checkbox-icon-outer-color_checked-hover: @oui-choice-icon-outer-color_checked-hover;
+@oui-checkbox-icon-outer-color: @p-500;
+@oui-checkbox-icon-outer-color_hover: @p-700;
+@oui-checkbox-icon-outer-color_active: @p-700;
+@oui-checkbox-icon-outer-color_error: @ae-500;
+@oui-checkbox-icon-outer-color_checked: @p-500;
+@oui-checkbox-icon-outer-color_checked-hover: @p-700;
+@oui-checkbox-icon-outer-color_checked-error: @ae-500;
 
-@oui-checkbox-icon-inner-color: @oui-choice-icon-inner-color;
-@oui-checkbox-icon-inner-color_active: @oui-choice-icon-inner-color_active;
-@oui-checkbox-icon-inner-color_error: @oui-choice-icon-inner-color_error;
-@oui-checkbox-icon-inner-color_checked: @oui-choice-icon-inner-color_checked;
-@oui-checkbox-icon-inner-color_checked-hover: @oui-choice-icon-inner-color_checked-hover;
+@oui-checkbox-icon-inner-color: @p-000;
+@oui-checkbox-icon-inner-color_hover: @p-000;
+@oui-checkbox-icon-inner-color_active: @p-000;
+@oui-checkbox-icon-inner-color_error: @p-000;
+@oui-checkbox-icon-inner-color_checked: @p-000;
+@oui-checkbox-icon-inner-color_checked-hover: @p-000;
+@oui-checkbox-icon-inner-color_checked-error: @p-000;
 
 @oui-checkbox-box-shadow_focus: @oui-choice-box-shadow_focus;
 @oui-checkbox-box-shadow_error: @oui-choice-box-shadow_error;
+
+// Checkbox - Thumbnail
+@oui-checkbox-thumbnail-border-color_checked-hover: @p-700;
 
 // Chips
 @oui-chip-height: rem-calc(32);
@@ -1746,7 +1755,7 @@
 // Select Picker
 @oui-select-picker-padding: @oui-choice-thumbnail-padding;
 @oui-select-picker-border-width: @oui-choice-thumbnail-border-width;
-@oui-select-picker-border-width-checked: @oui-choice-thumbnail-border-width-checked;
+@oui-select-picker-border-width_checked: @oui-choice-thumbnail-border-width_checked;
 
 @oui-select-picker-label-color: @oui-choice-font-color;
 @oui-select-picker-label-color_disabled: @oui-choice-font-color_disabled;

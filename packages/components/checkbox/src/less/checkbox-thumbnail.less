@@ -1,0 +1,17 @@
+// Checkbox - Thumbnail
+.oui-checkbox_thumbnail {
+  #oui > .choice-thumbnail(oui-checkbox);
+
+  // Only for the checkbox
+  .oui-checkbox__input:checked ~ .oui-checkbox__label-container:hover,
+  .oui-checkbox__input:indeterminate ~ .oui-checkbox__label-container:hover {
+    border-color: @oui-checkbox-thumbnail-border-color_checked-hover;
+  }
+}
+
+.oui-checkbox_error,
+.oui-field_error .oui-checkbox {
+  &.oui-checkbox_thumbnail {
+    #oui > .choice-thumbnail_error(oui-checkbox);
+  }
+}
