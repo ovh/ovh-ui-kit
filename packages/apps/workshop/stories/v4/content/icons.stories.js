@@ -21,7 +21,6 @@ export const System = () => `
 <div class="doc-icon-badge">
   <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-arrow-left" aria-hidden="true"></span></div>
   <div class="doc-icon-badge__code"><code>.oui-icon-arrow-left</code></div>
-  <div class="doc-icon-badge__code"><code>.oui-icon-arrow-left</code></div>
 </div>
 
 <div class="doc-icon-badge">
@@ -192,6 +191,11 @@ export const System = () => `
 <div class="doc-icon-badge">
   <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-home" aria-hidden="true"></span></div>
   <div class="doc-icon-badge__code"><code>.oui-icon-home</code></div>
+</div>
+
+<div class="doc-icon-badge">
+  <div class="doc-icon-badge__preview"><span class="oui-icon oui-icon-indeterminate" aria-hidden="true"></span></div>
+  <div class="doc-icon-badge__code"><code>.oui-icon-indeterminate</code></div>
 </div>
 
 <div class="doc-icon-badge">
