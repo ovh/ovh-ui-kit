@@ -2,25 +2,33 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Select from '@ovh-ux/ui-kit.select-picker';
+import Field from '@ovh-ux/ui-kit.field';
+import FormActions from '@ovh-ux/ui-kit.form-actions';
+import Select from '@ovh-ux/ui-kit.select';
 
 import readme from '@ovh-ux/ui-kit.select/README.md';
 import { compileTemplate } from '../../../src/utils';
 
 import countries from '../../_data/countries.data.json';
 
-const moduleName = 'oui-select-stories';
-angular.module(moduleName, [Select]);
+const moduleName = 'select-webcomponent.stories';
+angular.module(moduleName, [
+  Select,
+
+  // For examples
+  FormActions,
+  Field,
+]);
 
 export default {
-  title: 'Version 3/Components/Select',
+  title: 'Version 4/Components/Select/WebComponent',
 
   parameters: {
     notes: readme,
   },
 };
 
-export const ArrayOfStrings = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-select
@@ -28,7 +36,7 @@ export const ArrayOfStrings = forModule(moduleName).createElement(
       items="['a', 'b', 'c']"
       model="$ctrl.model"
       name="letter"
-      placeholder="{{ $ctrl.placeholder }}"
+      placeholder="Select a letter..."
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()">
@@ -36,7 +44,6 @@ export const ArrayOfStrings = forModule(moduleName).createElement(
     {
       $ctrl: {
         disabled: boolean('Disabled state', false),
-        placeholder: 'Select a letter...',
         onBlur: action('onBlur'),
         onChange: action('onChange'),
         onFocus: action('onFocus'),
@@ -44,10 +51,6 @@ export const ArrayOfStrings = forModule(moduleName).createElement(
     },
   ),
 );
-
-ArrayOfStrings.story = {
-  name: 'Array of strings',
-};
 
 export const ArrayOfObjects = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -58,7 +61,7 @@ export const ArrayOfObjects = forModule(moduleName).createElement(
       match="country.name"
       model="$ctrl.model"
       name="country"
-      placeholder="{{ $ctrl.placeholder }}"
+      placeholder="Select a country..."
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()">
@@ -67,7 +70,6 @@ export const ArrayOfObjects = forModule(moduleName).createElement(
       $ctrl: {
         disabled: boolean('Disabled state', false),
         items: countries,
-        placeholder: 'Select a country...',
         onBlur: action('onBlur'),
         onChange: action('onChange'),
         onFocus: action('onFocus'),
@@ -89,7 +91,7 @@ export const Searchable = forModule(moduleName).createElement(
       match="country.name"
       model="$ctrl.model"
       name="country"
-      placeholder="{{ $ctrl.placeholder }}"
+      placeholder="Select a country..."
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()"
@@ -99,7 +101,6 @@ export const Searchable = forModule(moduleName).createElement(
       $ctrl: {
         disabled: boolean('Disabled state', false),
         items: countries,
-        placeholder: 'Select a country...',
         onBlur: action('onBlur'),
         onChange: action('onChange'),
         onFocus: action('onFocus'),
@@ -117,7 +118,7 @@ export const Multiple = forModule(moduleName).createElement(
       match="country.name"
       model="$ctrl.model"
       name="country"
-      placeholder="{{ $ctrl.placeholder }}"
+      placeholder="Select a country..."
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
       on-focus="$ctrl.onFocus()"
@@ -127,7 +128,6 @@ export const Multiple = forModule(moduleName).createElement(
       $ctrl: {
         disabled: boolean('Disabled state', false),
         items: countries,
-        placeholder: 'Select a country...',
         onBlur: action('onBlur'),
         onChange: action('onChange'),
         onFocus: action('onFocus'),
@@ -145,13 +145,12 @@ export const DisableItems = forModule(moduleName).createElement(
       match="country.name"
       model="$ctrl.model"
       name="country"
-      placeholder="{{ $ctrl.placeholder }}">
+      placeholder="Select a country...">
     </oui-select>`,
     {
       $ctrl: new (class {
         constructor() {
           this.items = countries;
-          this.placeholder = 'Select a country...';
         }
 
         disableItems($item) {
@@ -165,11 +164,6 @@ export const DisableItems = forModule(moduleName).createElement(
 
 DisableItems.story = {
   name: 'Disable items',
-
-  parameters: {
-    notes:
-      'For each `$item` in `items` array, `disable-item` will be called with current `$item` as an argument.<br />If it returns true, `$item` will be disabled.',
-  },
 };
 
 export const Grouping = forModule(moduleName).createElement(
@@ -181,13 +175,12 @@ export const Grouping = forModule(moduleName).createElement(
       match="country.name"
       model="$ctrl.model"
       name="country"
-      placeholder="{{ $ctrl.placeholder }}">
+      placeholder="Select a country...">
     </oui-select>`,
     {
       $ctrl: {
         items: countries,
         groupByFirstLetter: (item) => item.country.name.substr(0, 1).toUpperCase(),
-        placeholder: 'Select a country...',
       },
     },
   ),
@@ -202,7 +195,7 @@ export const CustomOptionTemplate = forModule(moduleName).createElement(
       match="country.name"
       model="$ctrl.model"
       name="country"
-      placeholder="{{ $ctrl.placeholder }}">
+      placeholder="Select a country...">
       <span ng-bind="$item.country.name"></span><br />
       <small>
         Code: <span ng-bind="$item.country.code"></span>
@@ -212,17 +205,36 @@ export const CustomOptionTemplate = forModule(moduleName).createElement(
       $ctrl: {
         items: countries,
         groupByFirstLetter: (item) => item.country.name.substr(0, 1).toUpperCase(),
-        placeholder: 'Select a country...',
       },
     },
   ),
 );
 
 CustomOptionTemplate.story = {
-  name: 'Custom option template',
-
-  parameters: {
-    notes:
-      'Template inside `oui-select` component will be used as the content of each option.<br />You can use `$item` variable to get option value for your template.',
-  },
+  name: 'Option template',
 };
+
+export const Validation = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <form novalidate name="form">
+      <oui-field label="Label">
+        <oui-select
+          disabled="$ctrl.disabled"
+          items="['a', 'b', 'c']"
+          model="$ctrl.model"
+          name="letter"
+          placeholder="Select a letter..."
+          required>
+        </oui-select>
+      </oui-field>
+
+      <oui-form-actions></oui-form-actions>
+    </form>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    },
+  ),
+);
