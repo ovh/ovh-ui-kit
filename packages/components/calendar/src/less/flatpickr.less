@@ -2,13 +2,14 @@
 
 .flatpickr {
   &-calendar {
-    #oui > .base-font();
+    #oui > .base-font(
+      @font-color: @oui-calendar-font-color,
+      @font-size: @oui-calendar-font-size,
+      @font-weight: @oui-calendar-font-weight
+    );
 
     // Fix calendar's width inline style
     width: auto !important;
-    color: @oui-calendar-font-color;
-    font-size: @oui-calendar-font-size;
-    font-weight: @oui-calendar-font-weight;
     border: @oui-calendar-border;
     border-radius: @oui-calendar-border-radius;
     box-shadow: @oui-calendar-box-shadow;

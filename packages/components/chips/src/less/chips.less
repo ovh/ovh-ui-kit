@@ -16,19 +16,20 @@ oui-chips {
 
 .oui-chip {
   #oui > .animate();
-  #oui > .base-font();
+  #oui > .base-font(
+    @line-height: @oui-chip-height,
+    @font-color: @oui-chip-font-color,
+    @font-size: @oui-chip-font-size,
+    @font-weight: @oui-chip-font-weight
+  );
   #oui > .text-ellipsis();
 
   min-width: @oui-chip-height;
   max-width: 100%;
-  line-height: @oui-chip-height;
   display: inline-block;
   padding: @oui-chip-padding;
   position: relative;
   text-align: left;
-  font-size: @oui-chip-font-size;
-  font-weight: @oui-chip-font-weight;
-  color: @oui-chip-font-color;
   border: none;
   border-radius: @oui-chip-border-radius;
   background-color: @oui-chip-background-color;

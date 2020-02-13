@@ -15,6 +15,7 @@ export default class {
 
   $onInit() {
     addBooleanParameter(this, 'disabled');
+    addBooleanParameter(this, 'inline');
     addBooleanParameter(this, 'required');
     addBooleanParameter(this, 'multiple');
     addBooleanParameter(this, 'searchable');
@@ -33,8 +34,13 @@ export default class {
 
     this.$timeout(() => {
       this.$element
+        .addClass('oui-select')
         .removeAttr('name')
         .removeAttr('title');
+
+      if (this.inline) {
+        this.$element.addClass('oui-select_inline');
+      }
 
       if (this.$select.focusInput) {
         this.$select.focusInput

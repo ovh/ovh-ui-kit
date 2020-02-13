@@ -2,67 +2,162 @@
 
 // Select
 .oui-select {
-  #oui > .base-font();
-
-  position: relative;
-  display: block;
-  border-radius: @oui-select-border-radius;
   margin: @oui-select-margin;
+  display: block;
+  position: relative;
 
-  .oui-icon {
-    position: absolute;
-    top: @oui-select-border-width;
-    right: @oui-select-border-width;
-    bottom: @oui-select-border-width;
-    margin-right: @oui-select-icon-spacing;
-    display: flex;
-    align-items: center;
-    pointer-events: none;
-    font-size: @oui-select-icon-size;
-    cursor: pointer;
+  // Native Select
+  // WARNING: Most styles couldn't work on some browsers,
+  // especially for the dropdown menu
+  select.oui-select__input {
+    #oui > .select-base();
+
+    // Dropdown Menu
+    option {
+      margin: 0;
+      padding: 0;
+      background: @oui-select-option-background-color;
+      color: @oui-select-option-font-color;
+      font-size: @oui-select-option-font-size;
+      font-style: normal;
+      font-weight: @oui-select-option-font-weight;
+
+      &:hover,
+      &:focus {
+        background: @oui-select-option-background-color_hover;
+        color: @oui-select-option-font-color_hover;
+      }
+
+      &:checked {
+        background: @oui-select-option-background-color_checked;
+        color: @oui-select-option-font-color_checked;
+      }
+    }
+
+    optgroup {
+      color: @oui-select-group-font-color;
+      font-size: @oui-select-group-font-size;
+      font-style: normal;
+      font-weight: @oui-select-group-font-weight;
+      background-color: @oui-select-group-background-color;
+    }
+
+    // Multiple variant
+    &[multiple] {
+      overflow: auto;
+      padding: @oui-select-list-padding;
+
+      ~ .oui-icon { display: none; }
+
+      // Dropdown Menu
+      option {
+        background: transparent;
+        color: @oui-select-option-font-color;
+
+        &:hover,
+        &:focus {
+          background: @oui-select-option-background-color_hover;
+          color: @oui-select-option-font-color_hover;
+        }
+
+        &:checked {
+          background: @oui-select-option-background-color_checked;
+          color: @oui-select-option-font-color_checked;
+        }
+      }
+
+      optgroup { background: transparent; }
+
+      // Use focus colors when select[multiple] is hovered
+      &:hover {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_focus,
+          @border-color: @oui-select-border-color_focus,
+          @border-bottom-color: @oui-select-border-bottom-color_focus,
+          @background-color: @oui-select-background-color_focus,
+        );
+      }
+    }
   }
 
-  // Size variants
+  // Inline variant
+  &_inline {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+  }
+
+  // Sizes
   #oui > .control-sizes();
-}
 
-.oui-select__input {
-  #oui > .select-base();
+  // Validation
+  &_success,
+  .oui-field_success & {
+    select.oui-select__input {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_success,
+          @border-color: @oui-select-border-color_success,
+          @border-bottom-color: @oui-select-border-bottom-color_success,
+          @background-color: @oui-select-background-color_success,
+          @selection-font-color: @oui-form-selection-font-color_success,
+          @selection-background-color: @oui-form-selection-background-color_success,
+        );
 
-  height: @oui-select-height;
-}
-
-oui-select {
-  display: block;
-}
-
-// Select - Inline
-.oui-select_inline {
-  display: inline-block;
-  vertical-align: top;
-  width: auto;
-}
-
-// Select - Error
-.oui-select_error,
-.oui-field_error .oui-select {
-  .oui-select__input {
-    &:not(:disabled),
-    &:not(:disabled):hover,
-    &:not(:disabled):active,
-    &:not(:disabled):focus {
-      border-color: @oui-select-border-color_error;
-      background-color: @oui-select-background-color_error;
-      color: @oui-select-font-color_error;
-
-      ~ .oui-icon {
-        box-shadow: none;
-        background-color: @oui-select-background-color_error;
-
-        &::before {
-          color: @oui-select-font-color_error;
+        ~ .oui-icon {
+          color: @oui-select-icon-color_success;
         }
       }
     }
   }
+
+  &_warning,
+  .oui-field_warning & {
+    select.oui-select__input {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_warning,
+          @border-color: @oui-select-border-color_warning,
+          @border-bottom-color: @oui-select-border-bottom-color_warning,
+          @background-color: @oui-select-background-color_warning,
+          @selection-font-color: @oui-form-selection-font-color_warning,
+          @selection-background-color: @oui-form-selection-background-color_warning,
+        );
+
+        ~ .oui-icon {
+          color: @oui-select-icon-color_warning;
+        }
+      }
+    }
+  }
+
+  &_error,
+  .oui-field_error & {
+    select.oui-select__input {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_error,
+          @border-color: @oui-select-border-color_error,
+          @border-bottom-color: @oui-select-border-bottom-color_error,
+          @background-color: @oui-select-background-color_error,
+          @selection-font-color: @oui-form-selection-font-color_error,
+          @selection-background-color: @oui-form-selection-background-color_error,
+        );
+
+        ~ .oui-icon {
+          color: @oui-select-icon-color_error;
+        }
+      }
+    }
+  }
+}
+
+oui-select {
+  display: block;
 }

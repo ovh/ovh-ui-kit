@@ -2,14 +2,16 @@
 #oui {
   .control-base() {
     #oui > .animate();
+    #oui > .base-font(
+      @line-height: @oui-form-control-line-height,
+      @font-weight: @oui-form-control-font-weight,
+      @font-size: @oui-form-control-font-size,
+      @font-color: @oui-form-control-font-color,
+    );
 
-    line-height: @oui-form-control-line-height;
     min-height: @oui-form-control-min-height;
     margin: @oui-form-control-margin;
     padding: @oui-form-control-padding;
-    font-size: @oui-form-control-font-size;
-    font-weight: @oui-form-control-font-weight;
-    color: @oui-form-control-font-color;
     border: @oui-form-control-border-color solid @oui-form-control-border-width;
     border-bottom-color: @oui-form-control-border-bottom-color;
     border-radius: @oui-form-control-border-radius;
@@ -31,7 +33,6 @@
 
   .control-color(
     @font-color: @oui-form-control-font-color,
-    @icon-color: @oui-form-control-icon-color,
     @border-color: @oui-form-control-border-color,
     @border-bottom-color: @oui-form-control-border-bottom-color,
     @background-color: @oui-form-control-background-color,
@@ -131,7 +132,6 @@
       &:focus {
         #oui > .control-color(
           @font-color: @oui-form-control-font-color_success,
-          @icon-color: @oui-form-control-icon-color_success,
           @border-color: @oui-form-control-border-color_success,
           @border-bottom-color: @oui-form-control-border-bottom-color_success,
           @background-color: @oui-form-control-background-color_success,
@@ -148,7 +148,6 @@
       &:focus {
         #oui > .control-color(
           @font-color: @oui-form-control-font-color_warning,
-          @icon-color: @oui-form-control-icon-color_warning,
           @border-color: @oui-form-control-border-color_warning,
           @border-bottom-color: @oui-form-control-border-bottom-color_warning,
           @background-color: @oui-form-control-background-color_warning,
@@ -165,7 +164,6 @@
       &:focus {
         #oui > .control-color(
           @font-color: @oui-form-control-font-color_error,
-          @icon-color: @oui-form-control-icon-color_error,
           @border-color: @oui-form-control-border-color_error,
           @border-bottom-color: @oui-form-control-border-bottom-color_error,
           @background-color: @oui-form-control-background-color_error,

@@ -3,17 +3,15 @@
         ng-hide="!$select.isEmpty() || ($select.searchEnabled && $select.open)"
         ng-bind="::$select.placeholder">
     </span>
-    <span class="ui-select-match-items">
-        <button type="button" class="oui-chip ui-select-match-item"
-            ng-class="{ 'oui-chip_closable': !$select.disabled }"
-            ng-click="$ctrl.removeChoice($event, $index, $selectMultiple.removeChoice)"
-            ng-repeat="$item in $select.selected track by $index"
-            ng-disabled="$select.disabled"
-            ui-select-sort="$select.selected"
-            tabindex="-1">
-            <span uis-transclude-append></span>
-            <span class="oui-chip__close oui-icon oui-icon-close" aria-hidden="true"></span>
-        </button>
-    </span>
+    <button type="button" class="oui-chip ui-select-match-item"
+        ng-class="{ 'oui-chip_closable': !$select.disabled }"
+        ng-click="$ctrl.removeChoice($event, $index, $selectMultiple.removeChoice)"
+        ng-repeat="$item in $select.selected track by $index"
+        ng-disabled="$select.disabled"
+        ui-select-sort="$select.selected"
+        tabindex="-1">
+        <span uis-transclude-append></span>
+        <span class="oui-chip__close oui-icon oui-icon-close" aria-hidden="true"></span>
+    </button>
     <span class="ui-select-match-icon oui-icon oui-icon-chevron-down"></span>
 </span>

@@ -20,6 +20,7 @@ angular.module('myModule', ['oui.select']);
 | `required`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the field is required
 | `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the field is disabled
 | `multiple`        | boolean   | <?        | yes               | `true`, `false`   | `false`   | allow multiple selection
+| `inline`          | boolean   | <?        | no                | `true`, `false`   | `false`   | enable inline style
 | `group-by`        | function  | <?        | no                | n/a               | n/a       | function taking an item as parameter and returning the group name as as string
 | `on-blur`         | function  | &         | no                | n/a               | n/a       | called focus is lost
 | `on-focus`        | function  | &         | no                | n/a               | n/a       | called on focus

@@ -35,7 +35,6 @@ export const Default = forModule(moduleName).createElement(
       disabled="$ctrl.disabled"
       items="['a', 'b', 'c']"
       model="$ctrl.model"
-      name="letter"
       placeholder="Select a letter..."
       on-blur="$ctrl.onBlur()"
       on-change="$ctrl.onChange(modelValue)"
@@ -47,6 +46,24 @@ export const Default = forModule(moduleName).createElement(
         onBlur: action('onBlur'),
         onChange: action('onChange'),
         onFocus: action('onFocus'),
+      },
+    },
+  ),
+);
+
+export const Inline = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-select
+      disabled="$ctrl.disabled"
+      items="['a', 'b', 'c']"
+      model="$ctrl.model"
+      placeholder="Select a letter..."
+      inline>
+    </oui-select>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
       },
     },
   ),

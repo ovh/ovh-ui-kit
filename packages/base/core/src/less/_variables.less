@@ -313,9 +313,9 @@
 
 @oui-form-control-min-height: rem-calc(32);
 @oui-form-control-height: rem-calc(32);
-@oui-form-control-line-height: 1.2;
+@oui-form-control-line-height: rem-calc(20);
 @oui-form-control-margin: 0;
-@oui-form-control-padding-x: rem-calc(6);
+@oui-form-control-padding-x: rem-calc(5);
 @oui-form-control-padding-y: rem-calc(6);
 @oui-form-control-padding: @oui-form-control-padding-x @oui-form-control-padding-y;
 @oui-form-control-box-shadow: none;
@@ -1679,77 +1679,105 @@
 @oui-select-margin: @oui-form-control-margin;
 @oui-select-padding-x: rem-calc(12);
 @oui-select-letter-spacing: @oui-global-base-letter-spacing;
+@oui-select-box-shadow: @oui-form-control-box-shadow;
+
 @oui-select-font-color: @oui-form-control-font-color;
+@oui-select-font-color_hover: @oui-form-control-font-color_hover;
+@oui-select-font-color_focus: @oui-form-control-font-color_focus;
 @oui-select-font-color_disabled: @oui-form-control-font-color_disabled;
 @oui-select-font-color_error: @oui-form-control-font-color_error;
+@oui-select-font-color_warning: @oui-form-control-font-color_warning;
+@oui-select-font-color_success: @oui-form-control-font-color_success;
 @oui-select-font-size: @oui-form-control-font-size;
 @oui-select-font-weight: @oui-form-control-font-weight;
+
 @oui-select-border-color: @oui-form-control-border-color;
 @oui-select-border-color_hover: @oui-form-control-border-color_hover;
 @oui-select-border-color_focus: @oui-form-control-border-color_focus;
 @oui-select-border-color_disabled: @oui-form-control-border-color_disabled;
 @oui-select-border-color_error: @oui-form-control-border-color_error;
+@oui-select-border-color_warning: @oui-form-control-border-color_warning;
+@oui-select-border-color_success: @oui-form-control-border-color_success;
 @oui-select-border-radius: @oui-form-control-border-radius;
 @oui-select-border-width: @oui-form-control-border-width;
-@oui-select-box-shadow: @oui-form-control-box-shadow;
+
+@oui-select-border-bottom-color: @oui-form-control-border-bottom-color;
+@oui-select-border-bottom-color_hover: @oui-form-control-border-bottom-color_hover;
+@oui-select-border-bottom-color_focus: @oui-form-control-border-bottom-color_focus;
+@oui-select-border-bottom-color_disabled: @oui-form-control-border-bottom-color_disabled;
+@oui-select-border-bottom-color_error: @oui-form-control-border-bottom-color_error;
+@oui-select-border-bottom-color_warning: @oui-form-control-border-bottom-color_warning;
+@oui-select-border-bottom-color_success: @oui-form-control-border-bottom-color_success;
+
 @oui-select-background-color: @oui-form-control-background-color;
 @oui-select-background-color_hover: @oui-form-control-background-color_hover;
 @oui-select-background-color_focus: @oui-form-control-background-color_focus;
 @oui-select-background-color_disabled: @oui-form-control-background-color_disabled;
 @oui-select-background-color_error: @oui-form-control-background-color_error;
+@oui-select-background-color_warning: @oui-form-control-background-color_warning;
+@oui-select-background-color_success: @oui-form-control-background-color_success;
 
+// Select - Icon
 @oui-select-icon-size: @oui-button-icon-size;
 @oui-select-icon-spacing: @oui-button-icon-offset;
 
-// Select - Ui-Select
-@oui-ui-select-margin: @oui-select-margin;
+@oui-select-icon-color: @oui-form-control-icon-color;
+@oui-select-icon-color_error: @oui-form-control-icon-color_error;
+@oui-select-icon-color_warning: @oui-form-control-icon-color_warning;
+@oui-select-icon-color_success: @oui-form-control-icon-color_success;
 
-@oui-ui-select-button-height: @oui-select-height;
-@oui-ui-select-button-line-height: rem-calc(30);
-@oui-ui-select-button-letter-spacing: @oui-select-letter-spacing;
-@oui-ui-select-button-font-color_error: @oui-select-font-color_error;
-@oui-ui-select-button-font-weight: @oui-select-font-weight;
-@oui-ui-select-button-border-color_error: @oui-select-border-color_error;
-@oui-ui-select-button-border-width: @oui-select-border-width;
-@oui-ui-select-button-background-color_error: @oui-select-background-color_error;
+// Select - Menu
+@oui-select-menu-min-width: 0;
+@oui-select-menu-max-height: rem-calc(200);
+@oui-select-menu-padding: 0;
+@oui-select-menu-z-index: 100;
 
-@oui-ui-select-match-item-height: rem-calc(24);
-@oui-ui-select-match-item-spacing: rem-calc(4);
+@oui-select-menu-background-color: @p-000;
+@oui-select-menu-box-shadow: 0 0 6px 0 rgba(0, 14, 156, 0.2);
 
-@oui-ui-select-menu-min-width: @oui-dropdown-menu-min-width;
-@oui-ui-select-menu-max-height: rem-calc(200);
-@oui-ui-select-menu-padding: @oui-dropdown-menu-spacing 0;
-@oui-ui-select-menu-box-shadow: @oui-dropdown-menu-box-shadow;
-@oui-ui-select-menu-border-color: @oui-dropdown-menu-border-color;
-@oui-ui-select-menu-border-width: @oui-dropdown-menu-border-width;
-@oui-ui-select-menu-background-color: @oui-dropdown-menu-background-color;
-@oui-ui-select-menu-z-index: @oui-dropdown-menu-z-index;
+// Select - Option
+@oui-select-option-line-height: 1.25;
+@oui-select-option-padding: rem-calc(4) rem-calc(8);
 
-@oui-ui-select-item-line-height: @oui-dropdown-item-line-height;
-@oui-ui-select-item-padding: @oui-dropdown-item-padding;
-@oui-ui-select-item-font-color: @oui-dropdown-item-font-color;
-@oui-ui-select-item-font-color_active: @oui-dropdown-item-font-color_active;
-@oui-ui-select-item-font-color_disabled: @oui-dropdown-item-font-color_disabled;
-@oui-ui-select-item-font-color_selected: @oui-dropdown-item-font-color;
-@oui-ui-select-item-font-size: @oui-dropdown-item-font-size;
-@oui-ui-select-item-font-weight: @oui-dropdown-item-font-weight;
-@oui-ui-select-item-background-color: @oui-dropdown-item-background-color;
-@oui-ui-select-item-background-color_active: @oui-dropdown-item-background-color_active;
-@oui-ui-select-item-background-color_disabled: @oui-dropdown-item-background-color;
-@oui-ui-select-item-background-color_selected: @oui-color-charlotte;
+@oui-select-option-background-color: @p-000;
+@oui-select-option-background-color_hover: @p-100;
+@oui-select-option-background-color_checked: @p-500;
+@oui-select-option-font-color: @p-800-text;
+@oui-select-option-font-color_hover: @p-800-text;
+@oui-select-option-font-color_checked: @p-000;
+@oui-select-option-font-size: rem-calc(16);
+@oui-select-option-font-weight: @oui-font-regular;
 
-@oui-ui-select-item-icon-spacing-right: rem-calc(12);
-@oui-ui-select-item-icon-size: inherit;
-@oui-ui-select-item-icon-color: inherit;
+// Select - Group
+@oui-select-group-background-color: @p-000;
+@oui-select-group-indent: 0;
+@oui-select-group-font-color: @p-800-text;
+@oui-select-group-font-size: rem-calc(16);
+@oui-select-group-font-weight: @oui-font-bold;
 
-@oui-ui-select-group-padding: rem-calc(4) rem-calc(20);
-@oui-ui-select-group-font-color: @oui-ui-select-item-font-color;
-@oui-ui-select-group-font-size: rem-calc(14);
-@oui-ui-select-group-font-weight: @oui-ui-select-item-font-weight;
+@oui-select-group-label-padding: @oui-select-option-padding;
 
-@oui-ui-select-item-grouped-padding-left: rem-calc(30);
+// Select - List
+@oui-select-list-padding: @oui-form-control-padding;
 
-@oui-ui-select-highlight-font-weight: @oui-font-bold;
+// Select - Multiple
+@oui-select-multiple-line-height: rem-calc(28);
+@oui-select-multiple-padding-y: 1px;
+
+// Select - Highlight
+@oui-select-highlight-font-color: @p-500;
+@oui-select-highlight-font-color_hover: @p-500;
+@oui-select-highlight-font-color_checked: @p-000;
+@oui-select-highlight-font-weight: @oui-font-semibold;
+
+// Select - Chip
+@oui-select-chip-height: rem-calc(24);
+@oui-select-chip-margin: rem-calc(2) rem-calc(4) rem-calc(2) 0;
+@oui-select-chip-padding-x: rem-calc(8);
+@oui-select-chip-padding-y: 0;
+@oui-select-chip-padding-icon: calc(@oui-chip-close-icon-size + @oui-select-chip-padding-x + @oui-chip-close-icon-spacing);
+@oui-select-chip-padding: @oui-select-chip-padding-y @oui-select-chip-padding-icon @oui-select-chip-padding-y @oui-select-chip-padding-x;
+@oui-select-chip-border-radius: calc(@oui-chip-height / 2);
 
 // Select Picker
 @oui-select-picker-padding: @oui-choice-thumbnail-padding;

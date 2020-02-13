@@ -424,5 +424,27 @@ describe('ouiSelect', () => {
         expect(angular.element(getDropdownItem(element, data.length - 1)).prop('disabled')).toBeTruthy();
       });
     });
+
+    describe('Inline attribute', () => {
+      it('should display an inline select', () => {
+        const title = 'Select a country';
+        const placeholder = 'Select a country...';
+
+        const element = TestUtils.compileTemplate(`
+          <oui-select name="country"
+              model="$ctrl.country"
+              title="${title}"
+              placeholder="${placeholder}"
+              items="$ctrl.countries"
+              match="country.name"
+              inline>
+          </oui-select>`, {
+          countries: data,
+        });
+
+        $timeout.flush();
+        expect(angular.element(element).hasClass('oui-select_inline')).toBe(true);
+      });
+    });
   });
 });

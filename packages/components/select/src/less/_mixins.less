@@ -2,78 +2,136 @@
   .select-base(
     @icon-selector: oui-icon
   ) {
-    #oui > .animate();
+    #oui > .control-base();
     #oui > .text-ellipsis();
 
     cursor: pointer;
     appearance: none;
     width: 100%;
-    max-width: 100%;
-    padding: 0;
-    padding-left: @oui-select-padding-x;
-    padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
-    border: none;
-    border-bottom: @oui-select-border-width solid @oui-select-border-color;
-    border-radius: @oui-select-border-radius;
-    background: @oui-select-background-color;
-    box-shadow: @oui-select-box-shadow;
-    color: @oui-select-font-color;
-    font-size: @oui-select-font-size;
-    font-family: inherit;
-    font-weight: @oui-select-font-weight;
-    letter-spacing: @oui-select-letter-spacing;
+    display: block;
+    position: relative;
+    padding-right: @oui-select-height;
     text-align: left;
     white-space: normal;
 
-    // UI Select
-    .@{icon-selector} {
-      margin-right: @oui-select-icon-spacing;
+    // Icon could be aside (native) or inside (ui-select)
+    .@{icon-selector},
+    ~ .@{icon-selector} {
+      width: auto;
+      height: auto;
+      min-width: @oui-select-height;
+      margin: 0;
+      padding: 0;
       position: absolute;
-      right: 1px;
-      top: 1px;
-      bottom: 1px;
-      text-align: center;
-      vertical-align: middle;
-      pointer-events: none;
-
-      &::before {
-        display: block;
-        font-size: @oui-select-icon-size;
-      }
-    }
-
-    ~ .@{icon-selector},
-    .@{icon-selector} {
-      color: inherit;
-    }
-
-    &::-ms-expand {
-      display: none;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      color: @oui-select-icon-color;
+      pointer-events: none; // Avoid to be clickable
     }
 
     &:hover {
-      background-color: @oui-select-background-color_hover;
-      border-color: @oui-select-border-color_hover;
+      #oui > .control-color(
+        @font-color: @oui-select-font-color_hover,
+        @border-color: @oui-select-border-color_hover,
+        @border-bottom-color: @oui-select-border-bottom-color_hover,
+        @background-color: @oui-select-background-color_hover,
+      );
     }
 
     &:focus,
     &_focus,
     &_focus:hover,
     &[aria-expanded="true"] {
-      border-color: @oui-select-border-color_focus;
-      outline: none;
-      background: @oui-select-background-color_focus;
+      #oui > .control-color(
+        @font-color: @oui-select-font-color_focus,
+        @border-color: @oui-select-border-color_focus,
+        @border-bottom-color: @oui-select-border-bottom-color_focus,
+        @background-color: @oui-select-background-color_focus,
+      );
     }
 
     &:disabled,
     &_disabled,
     &_disabled:hover,
     &_disabled:focus {
-      cursor: not-allowed;
-      border-color: @oui-select-border-color_disabled;
-      background-color: @oui-select-background-color_disabled;
-      box-shadow: none;
-      color: @oui-select-font-color_disabled;
+      #oui > .control-color(
+        @font-color: @oui-select-font-color_disabled,
+        @border-color: @oui-select-border-color_disabled,
+        @border-bottom-color: @oui-select-border-bottom-color_disabled,
+        @background-color: @oui-select-background-color_disabled,
+      );
+
+      &,
+      .@{icon-selector},
+      ~ .@{icon-selector} {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .select-validation(
+    @icon-selector: oui-icon
+  ) {
+    .oui-field_success & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_success,
+          @border-color: @oui-select-border-color_success,
+          @border-bottom-color: @oui-select-border-bottom-color_success,
+          @background-color: @oui-select-background-color_success,
+          @selection-font-color: @oui-form-selection-font-color_success,
+          @selection-background-color: @oui-form-selection-background-color_success,
+        );
+
+        .@{icon-selector},
+        ~ .@{icon-selector} {
+          color: @oui-select-icon-color_success;
+        }
+      }
+    }
+
+    .oui-field_warning & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_warning,
+          @border-color: @oui-select-border-color_warning,
+          @border-bottom-color: @oui-select-border-bottom-color_warning,
+          @background-color: @oui-select-background-color_warning,
+          @selection-font-color: @oui-form-selection-font-color_warning,
+          @selection-background-color: @oui-form-selection-background-color_warning,
+        );
+
+        .@{icon-selector},
+        ~ .@{icon-selector} {
+          color: @oui-select-icon-color_warning;
+        }
+      }
+    }
+
+    .oui-field_error & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-select-font-color_error,
+          @border-color: @oui-select-border-color_error,
+          @border-bottom-color: @oui-select-border-bottom-color_error,
+          @background-color: @oui-select-background-color_error,
+          @selection-font-color: @oui-form-selection-font-color_error,
+          @selection-background-color: @oui-form-selection-background-color_error,
+        );
+
+        .@{icon-selector},
+        ~ .@{icon-selector} {
+          color: @oui-select-icon-color_error;
+        }
+      }
     }
   }
 }
