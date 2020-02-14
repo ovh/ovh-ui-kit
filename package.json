@@ -4,6 +4,10 @@
   "version": "0.0.0",
   "description": "A set of maintainable components for the OVH ecosystem",
   "license": "BSD-3-Clause",
+  "engines" : {
+    "node" : ">=12.14.0",
+    "yarn": ">=1.21.1"
+  },
   "workspaces": [
     "packages/apps/*",
     "packages/base/*",
