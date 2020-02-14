@@ -1,15 +1,13 @@
 .oui-flag {
+  width: @oui-icon-size;
+  height: @oui-icon-size;
   display: inline-block;
-  font-size: 1.5em;
-
-  &::before {
-    content: '';
-    width: 1.5em;
-    height: 1em;
-    display: block;
-    background-repeat: no-repeat;
-    background-size: 1.5em 1em;
-  }
+  margin: @oui-icon-spacing;
+  padding: @oui-icon-padding;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 
   #oui .flags();
 }
@@ -20,7 +18,7 @@
 
     @flag: extract(@oui-flag-index, @index);
 
-    &_@{flag}::before {
+    &_@{flag} {
       background-image: url('../svg/flags/@{flag}.svg');
     }
   }

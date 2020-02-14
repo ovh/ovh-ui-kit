@@ -60,24 +60,29 @@
 
 // Icon badges
 .doc-icon-badge {
-  width: rem-calc(144);
+  width: rem-calc(160);
   display: inline-block;
-  border: 1px solid @oui-color-dusty;
-  margin: rem-calc(15);
+  margin: rem-calc(12) 0;
   padding: 0;
   vertical-align: top;
   background-color: #fff;
-  box-shadow: 0 rem-calc(4) rem-calc(6) rgba(0, 0, 0, 0.06);
 
   &__preview {
-    height: rem-calc(144);
-    line-height: rem-calc(144);
-    background-color: @oui-color-iron;
+    width: rem-calc(64);
+    height: rem-calc(64);
+    line-height: rem-calc(64);
+    margin: auto;
+    border-radius: rem-calc(2);
+    box-sizing: content-box;
+    box-shadow: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+    border: solid 1px #bef1ff;
+    background-color: #f5feff;
     text-align: center;
   }
 
   &__code {
-    padding: rem-calc(8);
+    line-height: 1.2;
+    margin-top: rem-calc(12);
     font-size: rem-calc(12);
     text-align: center;
   }
