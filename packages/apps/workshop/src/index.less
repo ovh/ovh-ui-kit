@@ -2,59 +2,51 @@
 
 @import '~@ovh-ux/ui-kit.core/src/index';
 @import '~@ovh-ux/ui-kit.components/src/index';
-@import './_mixins';
-@import './_variables';
 
 // Color badges
-.doc-color-badge {
-  #oui > .color-badge-themes();
+.doc-badges {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
 
-  position: relative;
-  border: 1px solid @doc-color-badge-border-color;
-  display: inline-block;
-  width: @doc-color-badge-palette-size;
-  max-width: 100%;
-  margin: @doc-color-badge-spacing;
+.doc-badge {
+  width: rem-calc(160);
+  margin: rem-calc(12) 0;
   padding: 0;
-  padding-bottom: rem-calc(12);
-  box-shadow: @doc-color-badge-box-shadow;
+  vertical-align: top;
 
-  &::before {
-    display: block;
-    content: '';
-    width: 100%;
-    height: @doc-color-badge-palette-size;
-  }
-
-  &__prop {
+  &__preview {
+    width: rem-calc(128);
+    height: rem-calc(128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: rem-calc(4);
+    box-sizing: content-box;
+    box-shadow: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+    background-color: #f5feff;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: @doc-color-badge-prop-font-size;
     text-align: center;
 
-    &:first-child,
-    &:last-child {
-      margin: rem-calc(5) 0 0;
+    &_s {
+      width: rem-calc(64);
+      height: rem-calc(64);
+      line-height: rem-calc(64);
     }
   }
 
-  &_variant {
-    margin-top: rem-calc(50);
-    padding-top: rem-calc(22);
+  &__code {
+    line-height: 1.2;
+    margin-top: rem-calc(12);
+    font-size: rem-calc(12);
+    text-align: center;
 
-    &::before {
-      border-radius: 50%;
-      width: @doc-color-badge-palette-size;
-      height: @doc-color-badge-palette-size;
-      top: rem-calc(-40);
-      left: rem-calc(42);
-    }
-  }
+    code { display: block; }
 
-  &_white::before {
-    border: solid 1px @doc-color-badge-palette-border-color;
+    code + code { margin-top: rem-calc(4); }
   }
 }
 
@@ -65,7 +57,6 @@
   margin: rem-calc(12) 0;
   padding: 0;
   vertical-align: top;
-  background-color: #fff;
 
   &__preview {
     width: rem-calc(64);
@@ -82,6 +73,7 @@
 
   &__code {
     line-height: 1.2;
+    display: block;
     margin-top: rem-calc(12);
     font-size: rem-calc(12);
     text-align: center;
