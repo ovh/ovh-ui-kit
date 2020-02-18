@@ -37,7 +37,7 @@ Model will not be refreshed until the `on-change` callback hasn't returned. If y
 
 | Attribute                 | Description
 | ----                      | ----
-| `<oui-radio-label>`       | definition label slot, override text transclude
+| `<oui-radio-label>`       | definition label slot
 | `<oui-radio-description>` | definition description slot, override attribute `description`
 | `<oui-radio-footer>`      | definition footer slot
 

@@ -91,22 +91,26 @@
         );
       }
 
-      &:focus ~ .@{selector}__label-container .@{selector}__label::before {
+      &:focus ~ .@{selector}__label-container .@{selector}__icon::before {
         box-shadow: none;
       }
 
-      &:checked ~ .@{selector}__label-container {
-        @border-diff: calc(@oui-choice-thumbnail-border-width-checked - @oui-choice-thumbnail-border-width);
+      &:focus ~ .@{selector}__label-container,
+      & ~ .@{selector}__label-container:hover {
+        box-shadow: @oui-choice-thumbnail-box-shadow_focus;
+      }
 
-        box-shadow: @oui-choice-thumbnail-box-shadow-checked;
+      &:checked ~ .@{selector}__label-container {
+        @border-diff: calc(@oui-choice-thumbnail-border-width_checked - @oui-choice-thumbnail-border-width);
+
         padding: calc(@oui-choice-thumbnail-padding - @border-diff);
 
         #oui > .choice-thumbnail-color(
           @selector,
-          @background-color: @oui-choice-thumbnail-background-checked,
-          @border-color: @oui-choice-thumbnail-border-color-checked,
-          @border-width: @oui-choice-thumbnail-border-width-checked,
-          @footer-border-color: @oui-choice-thumbnail-footer-border-color-checked
+          @background-color: @oui-choice-thumbnail-background_checked,
+          @border-color: @oui-choice-thumbnail-border-color_checked,
+          @border-width: @oui-choice-thumbnail-border-width_checked,
+          @footer-border-color: @oui-choice-thumbnail-footer-border-color_checked
         );
 
         .@{selector}__footer {
@@ -117,10 +121,10 @@
         &:hover {
           #oui > .choice-thumbnail-color(
             @selector,
-            @background-color: @oui-choice-thumbnail-background-checked_hover,
-            @border-color: @oui-choice-thumbnail-border-color-checked_hover,
-            @border-width: @oui-choice-thumbnail-border-width-checked,
-            @footer-border-color: @oui-choice-thumbnail-footer-border-color-checked_hover
+            @background-color: @oui-choice-thumbnail-background_checked-hover,
+            @border-color: @oui-choice-thumbnail-border-color_checked-hover,
+            @border-width: @oui-choice-thumbnail-border-width_checked,
+            @footer-border-color: @oui-choice-thumbnail-footer-border-color_checked-hover
           );
         }
       }
@@ -132,32 +136,35 @@
   }
 
   .choice-thumbnail_error(@selector) {
-    .@{selector}__input ~ .@{selector}__label-container,
-    .@{selector}__input:checked ~ .@{selector}__label-container {
-      &,
-      &:hover,
-      &:active,
-      &:focus {
-        border-color: @oui-choice-thumbnail-border-color_error;
-        background: @oui-choice-thumbnail-background_error;
+    .@{selector}__input,
+    .@{selector}__input:checked,
+    .@{selector}__input:indeterminate {
+      ~ .@{selector}__label-container {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+          border-color: @oui-choice-thumbnail-border-color_error;
+          background: @oui-choice-thumbnail-background_error;
+
+          .@{selector}__description,
+          .@{selector}__section,
+          .@{selector}__footer {
+            border-color: @oui-choice-thumbnail-border-color_error;
+          }
+        }
+      }
+
+      &:not(:disabled):focus ~ .@{selector}__label-container,
+      &:not(:disabled) ~ .@{selector}__label-container:hover {
+        border-color: @oui-choice-thumbnail-border-color_error-hover;
+        background: @oui-choice-thumbnail-background_error-hover;
 
         .@{selector}__description,
         .@{selector}__section,
         .@{selector}__footer {
-          border-color: @oui-choice-thumbnail-border-color_error;
+          border-color: @oui-choice-thumbnail-border-color_error-hover;
         }
-      }
-    }
-
-    .@{selector}__input:focus ~ .@{selector}__label-container,
-    .@{selector}__input:checked:focus ~ .@{selector}__label-container {
-      border-color: @oui-choice-thumbnail-border-color_error;
-      box-shadow: @oui-choice-thumbnail-box-shadow_error;
-
-      .@{selector}__description,
-      .@{selector}__section,
-      .@{selector}__footer {
-        border-color: @oui-choice-thumbnail-border-color_error;
       }
     }
   }
