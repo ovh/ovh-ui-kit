@@ -1,0 +1,18 @@
+@import './_helpers';
+
+.make-helpers(@index: length(@oui-helper-names)) when (@index > 0) {
+  .make-helpers(@index - 1);
+
+  @color-name: extract(@oui-helper-names, @index);
+  @color-value: @@color-name;
+
+  .oui-background-@{color-name} {
+    background-color: @color-value !important;
+  }
+
+  .oui-color-@{color-name} {
+    color: @color-value !important;
+  }
+}
+
+.make-helpers();
