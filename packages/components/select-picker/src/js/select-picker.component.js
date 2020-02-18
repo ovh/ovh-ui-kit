@@ -7,6 +7,7 @@ export default {
   transclude: {
     descriptionSlot: '?ouiSelectPickerDescription',
     footerSlot: '?ouiSelectPickerFooter',
+    labelSlot: "?ouiSelectPickerLabel",
     pictureSlot: '?ouiSelectPickerPicture',
     sectionSlot: '?ouiSelectPickerSection',
   },

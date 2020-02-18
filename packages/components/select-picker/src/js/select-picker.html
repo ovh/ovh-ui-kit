@@ -26,9 +26,10 @@
         </span>
 
         <!-- Label -->
-        <span class="oui-select-picker__label">
-            <span id="{{:: $ctrl.id }}Label"
-                ng-bind="$ctrl.label">
+        <span class="oui-select-picker__label"
+              id="{{:: $ctrl.id }}Label"
+              ng-transclude="labelSlot">
+            <span ng-bind="$ctrl.label">
             </span>
         </span>
 
