@@ -22,6 +22,7 @@ export default () => ({
     disabled: '<?',
     multiple: '<?',
     searchable: '<?',
+    inline: '<?',
     onBlur: '&',
     onFocus: '&',
     onChange: '&',
