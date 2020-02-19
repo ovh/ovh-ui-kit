@@ -29,13 +29,39 @@
       color: @oui-select-icon-color;
       pointer-events: none; // Avoid to be clickable
     }
+  }
 
+  .select-color(
+    @icon-selector: oui-icon,
+    @font-color: @oui-select-font-color,
+    @border-color: @oui-select-border-color,
+    @border-bottom-color: @oui-select-border-bottom-color,
+    @background-color: @oui-select-background-color,
+    @icon-color: @oui-select-icon-color
+  ) {
+    #oui > .control-color(
+      @font-color: @font-color,
+      @border-color: @border-color,
+      @border-bottom-color: @border-bottom-color,
+      @background-color: @background-color
+    );
+
+    .@{icon-selector},
+    ~ .@{icon-selector} {
+      color: @icon-color;
+    }
+  }
+
+  .select-states(
+    @icon-selector: oui-icon
+  ) {
     &:hover {
-      #oui > .control-color(
+      #oui > .select-color(
+        @icon-selector: @icon-selector,
         @font-color: @oui-select-font-color_hover,
         @border-color: @oui-select-border-color_hover,
         @border-bottom-color: @oui-select-border-bottom-color_hover,
-        @background-color: @oui-select-background-color_hover,
+        @background-color: @oui-select-background-color_hover
       );
     }
 
@@ -43,11 +69,12 @@
     &_focus,
     &_focus:hover,
     &[aria-expanded="true"] {
-      #oui > .control-color(
+      #oui > .select-color(
+        @icon-selector: @icon-selector,
         @font-color: @oui-select-font-color_focus,
         @border-color: @oui-select-border-color_focus,
         @border-bottom-color: @oui-select-border-bottom-color_focus,
-        @background-color: @oui-select-background-color_focus,
+        @background-color: @oui-select-background-color_focus
       );
     }
 
@@ -55,11 +82,12 @@
     &_disabled,
     &_disabled:hover,
     &_disabled:focus {
-      #oui > .control-color(
+      #oui > .select-color(
+        @icon-selector: @icon-selector,
         @font-color: @oui-select-font-color_disabled,
         @border-color: @oui-select-border-color_disabled,
         @border-bottom-color: @oui-select-border-bottom-color_disabled,
-        @background-color: @oui-select-background-color_disabled,
+        @background-color: @oui-select-background-color_disabled
       );
 
       &,
@@ -74,63 +102,51 @@
   .select-validation(
     @icon-selector: oui-icon
   ) {
+    &_success,
     .oui-field_success & {
       &,
       &:hover,
       &:focus {
-        #oui > .control-color(
+        #oui > .select-color(
+          @icon-selector: @icon-selector,
           @font-color: @oui-select-font-color_success,
           @border-color: @oui-select-border-color_success,
           @border-bottom-color: @oui-select-border-bottom-color_success,
           @background-color: @oui-select-background-color_success,
-          @selection-font-color: @oui-form-selection-font-color_success,
-          @selection-background-color: @oui-form-selection-background-color_success,
+          @icon-color: @oui-select-icon-color_success
         );
-
-        .@{icon-selector},
-        ~ .@{icon-selector} {
-          color: @oui-select-icon-color_success;
-        }
       }
     }
 
+    &_warning,
     .oui-field_warning & {
       &,
       &:hover,
       &:focus {
-        #oui > .control-color(
+        #oui > .select-color(
+          @icon-selector: @icon-selector,
           @font-color: @oui-select-font-color_warning,
           @border-color: @oui-select-border-color_warning,
           @border-bottom-color: @oui-select-border-bottom-color_warning,
           @background-color: @oui-select-background-color_warning,
-          @selection-font-color: @oui-form-selection-font-color_warning,
-          @selection-background-color: @oui-form-selection-background-color_warning,
+          @icon-color: @oui-select-icon-color_warning
         );
-
-        .@{icon-selector},
-        ~ .@{icon-selector} {
-          color: @oui-select-icon-color_warning;
-        }
       }
     }
 
+    &_error,
     .oui-field_error & {
       &,
       &:hover,
       &:focus {
-        #oui > .control-color(
+        #oui > .select-color(
+          @icon-selector: @icon-selector,
           @font-color: @oui-select-font-color_error,
           @border-color: @oui-select-border-color_error,
           @border-bottom-color: @oui-select-border-bottom-color_error,
           @background-color: @oui-select-background-color_error,
-          @selection-font-color: @oui-form-selection-font-color_error,
-          @selection-background-color: @oui-form-selection-background-color_error,
+          @icon-color: @oui-select-icon-color_error
         );
-
-        .@{icon-selector},
-        ~ .@{icon-selector} {
-          color: @oui-select-icon-color_error;
-        }
       }
     }
   }

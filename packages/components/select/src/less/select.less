@@ -87,6 +87,9 @@
     width: auto;
   }
 
+  // States
+  #oui > .select-states();
+
   // Sizes
   #oui > .control-sizes();
 
@@ -97,18 +100,13 @@
       &,
       &:hover,
       &:focus {
-        #oui > .control-color(
+        #oui > .select-color(
           @font-color: @oui-select-font-color_success,
           @border-color: @oui-select-border-color_success,
           @border-bottom-color: @oui-select-border-bottom-color_success,
           @background-color: @oui-select-background-color_success,
-          @selection-font-color: @oui-form-selection-font-color_success,
-          @selection-background-color: @oui-form-selection-background-color_success,
+          @icon-color: @oui-select-icon-color_success
         );
-
-        ~ .oui-icon {
-          color: @oui-select-icon-color_success;
-        }
       }
     }
   }
@@ -119,18 +117,13 @@
       &,
       &:hover,
       &:focus {
-        #oui > .control-color(
+        #oui > .select-color(
           @font-color: @oui-select-font-color_warning,
           @border-color: @oui-select-border-color_warning,
           @border-bottom-color: @oui-select-border-bottom-color_warning,
           @background-color: @oui-select-background-color_warning,
-          @selection-font-color: @oui-form-selection-font-color_warning,
-          @selection-background-color: @oui-form-selection-background-color_warning,
+          @icon-color: @oui-select-icon-color_warning
         );
-
-        ~ .oui-icon {
-          color: @oui-select-icon-color_warning;
-        }
       }
     }
   }
@@ -141,18 +134,13 @@
       &,
       &:hover,
       &:focus {
-        #oui > .control-color(
+        #oui > .select-color(
           @font-color: @oui-select-font-color_error,
           @border-color: @oui-select-border-color_error,
           @border-bottom-color: @oui-select-border-bottom-color_error,
           @background-color: @oui-select-background-color_error,
-          @selection-font-color: @oui-form-selection-font-color_error,
-          @selection-background-color: @oui-form-selection-background-color_error,
+          @icon-color: @oui-select-icon-color_error
         );
-
-        ~ .oui-icon {
-          color: @oui-select-icon-color_error;
-        }
       }
     }
   }
