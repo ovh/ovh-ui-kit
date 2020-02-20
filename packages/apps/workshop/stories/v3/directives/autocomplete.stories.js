@@ -13,6 +13,12 @@ angular.module(moduleName, [Autocomplete]);
 
 export default {
   title: 'Version 3/Directives/Autocomplete',
+
+  parameters: {
+    options: {
+      showPanel: true,
+    },
+  },
 };
 
 export const ArrayOfStrings = forModule(moduleName).createElement(

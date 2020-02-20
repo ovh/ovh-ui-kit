@@ -1,5 +1,6 @@
 export default {
   title: 'Version 4/Helpers/Backgrounds',
+
   parameters: {
     options: {
       showPanel: false,

@@ -10,6 +10,12 @@ angular.module(moduleName, [Tooltip]);
 
 export default {
   title: 'Version 3/Directives/Tooltip',
+
+  parameters: {
+    options: {
+      showPanel: true,
+    },
+  },
 };
 
 export const StaticTitleAttribute = forModule(moduleName).createElement(

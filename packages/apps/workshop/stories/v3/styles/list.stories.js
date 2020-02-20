@@ -1,5 +1,11 @@
 export default {
   title: 'Version 3/Styles/List',
+
+  parameters: {
+    options: {
+      showPanel: true,
+    },
+  },
 };
 
 export const Normal = () => `

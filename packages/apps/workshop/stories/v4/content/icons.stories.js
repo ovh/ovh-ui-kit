@@ -1,5 +1,6 @@
 export default {
   title: 'Version 4/Content/Icons',
+
   parameters: {
     options: {
       showPanel: false,

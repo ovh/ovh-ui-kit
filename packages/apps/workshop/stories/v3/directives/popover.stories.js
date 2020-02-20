@@ -10,6 +10,12 @@ angular.module(moduleName, [Popover]);
 
 export default {
   title: 'Version 3/Directives/Popover',
+
+  parameters: {
+    options: {
+      showPanel: true,
+    },
+  },
 };
 
 export const StaticTitleAttribute = forModule(moduleName).createElement(

@@ -8,6 +8,12 @@ angular.module(moduleName, ['oui.tooltip']);
 
 export default {
   title: 'Version 3/Content/Typography',
+
+  parameters: {
+    options: {
+      showPanel: false,
+    },
+  },
 };
 
 export const Headings = () => `

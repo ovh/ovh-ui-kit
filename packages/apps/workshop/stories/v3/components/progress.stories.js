@@ -14,6 +14,9 @@ export default {
 
   parameters: {
     notes: readme,
+    options: {
+      showPanel: true,
+    },
   },
 };
 

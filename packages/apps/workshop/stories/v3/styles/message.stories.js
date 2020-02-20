@@ -1,5 +1,11 @@
 export default {
   title: 'Version 3/Styles/Message',
+
+  parameters: {
+    options: {
+      showPanel: true,
+    },
+  },
 };
 
 export const NoIcon = () => `
