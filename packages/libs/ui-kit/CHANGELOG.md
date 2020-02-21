@@ -1,3 +1,12 @@
+## [3.11.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.0...v3.11.1) (2020-02-21)
+
+
+### Features
+
+* **oui-select-picker:** add transclusion for label ([#569](https://github.com/ovh-ux/ovh-ui-kit/issues/569)) ([c416546](https://github.com/ovh-ux/ovh-ui-kit/commit/c4165465a4f04016daa04d30459004cb9bfbf369))
+
+
+
 # [3.11.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.10.0...v3.11.0) (2020-02-07)
 
 
