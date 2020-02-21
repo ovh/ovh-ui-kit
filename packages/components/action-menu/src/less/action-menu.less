@@ -7,6 +7,7 @@
   height: @oui-action-button-size;
   padding: 0;
   overflow: visible;
+  color: @oui-action-button-foreground-color;
   border: @oui-action-button-border-width solid @oui-action-button-border-color;
   border-radius: @oui-action-button-border-radius;
   background-color: @oui-action-button-background-color;
@@ -15,7 +16,7 @@
     #oui > .animate();
 
     display: block;
-    color: @oui-action-button-foreground-color;
+    font-size: @oui-action-button-icon-size;
   }
 
   &[aria-expanded="true"] {
@@ -24,12 +25,9 @@
   }
 
   &:hover {
+    color: @oui-action-button-foreground-color_hover;
     border-color: @oui-action-button-border-color_hover;
     background-color: @oui-action-button-background-color_hover;
-
-    .oui-icon {
-      color: @oui-action-button-foreground-color_hover;
-    }
   }
 
   &:focus {

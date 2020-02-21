@@ -1,46 +1,29 @@
 @import './_icons';
 
 .oui-icon {
-  #oui > .icon-type();
-
-  line-height: @oui-icon-line-height;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: @oui-icon-spacing;
-  padding: @oui-icon-padding;
   vertical-align: @oui-icon-vertical-align;
-  color: @oui-icon-color;
   font-family: @oui-icon-font-family;
-  font-feature-settings: 'liga';
-  font-size: @oui-icon-size;
   font-weight: normal;
   font-style: normal;
   text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
 
   &::before {
-    line-height: inherit;
     display: block;
   }
+
+  // Variants
+  #oui > .icon-type();
 
   &_shake {
     animation-name: oui-shake;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
-  }
-
-  &_inherit {
-    color: @oui-icon-color;
-    font: @oui-icon-font;
-    font-size: @oui-icon-size_inherit;
-    vertical-align: middle;
   }
 
   // Deprecated: Support for old/duplicate classnames
