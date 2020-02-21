@@ -48,7 +48,10 @@
     @text-decoration: @oui-link-text-decoration,
     @text-decoration_hover: @oui-link-text-decoration_hover
   ) {
-    #oui > .base-font();
+    // #oui > .base-font(
+    //   @font-color: @font-color,
+    //   @font-weight: @font-weight
+    // );
 
     padding: 0;
     border: none;
@@ -56,7 +59,7 @@
     color: @font-color;
     font-weight: @font-weight;
     text-decoration: @text-decoration;
-    line-height: inherit;
+    // line-height: inherit;
     cursor: pointer;
     -webkit-text-decoration-skip: objects;
 
