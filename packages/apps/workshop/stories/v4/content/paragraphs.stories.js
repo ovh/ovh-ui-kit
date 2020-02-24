@@ -3,7 +3,7 @@ export default {
 
   parameters: {
     options: {
-      showPanel: false,
+      showPanel: true,
     },
   },
 };
