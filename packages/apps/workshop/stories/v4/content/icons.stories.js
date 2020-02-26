@@ -297,6 +297,26 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort" aria-hidden="true"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-sort</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort-down" aria-hidden="true"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-sort-down</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort-inactive" aria-hidden="true"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-sort-inactive</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort-up" aria-hidden="true"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-sort-up</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-time" aria-hidden="true"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-time</code></div>
   </div>
