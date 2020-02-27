@@ -36,28 +36,28 @@ NoIcon.story = {
 
 export const NoBorder = () => `
 <div class="oui-message oui-message_info oui-message_no-border" role="alert">
-  <span class="oui-message__icon oui-icon oui-icon-info_circle oui-icon_bicolor" aria-hidden="true"></span>
+  <span class="oui-message__icon oui-icon oui-icon-info_circle" aria-hidden="true"></span>
   <p class="oui-message__body">Info message no border</p>
 </div>
 <div class="oui-message oui-message_info oui-message_no-icon oui-message_no-border" role="alert">
   <p class="oui-message__body"><strong>Info message</strong> no border</p>
 </div>
 <div class="oui-message oui-message_success oui-message_no-border" role="alert">
-  <span class="oui-message__icon oui-icon oui-icon-success_circle oui-icon_bicolor" aria-hidden="true"></span>
+  <span class="oui-message__icon oui-icon oui-icon-success_circle" aria-hidden="true"></span>
   <p class="oui-message__body">Success message no border</p>
 </div>
 <div class="oui-message oui-message_success oui-message_no-icon oui-message_no-border" role="alert">
   <p class="oui-message__body"><strong>Success message</strong> no border</p>
 </div>
 <div class="oui-message oui-message_warning oui-message_no-border" role="alert">
-  <span class="oui-message__icon oui-icon oui-icon-warning_circle oui-icon_bicolor" aria-hidden="true"></span>
+  <span class="oui-message__icon oui-icon oui-icon-warning_circle" aria-hidden="true"></span>
   <p class="oui-message__body">Warning message no border</p>
 </div>
 <div class="oui-message oui-message_warning oui-message_no-icon oui-message_no-border" role="alert">
   <p class="oui-message__body"><strong>Warning message</strong> no border</p>
 </div>
 <div class="oui-message oui-message_error oui-message_no-border" role="alert">
-  <span class="oui-message__icon oui-icon oui-icon-error_circle oui-icon_bicolor" aria-hidden="true"></span>
+  <span class="oui-message__icon oui-icon oui-icon-error_circle" aria-hidden="true"></span>
   <p class="oui-message__body">Error message no border</p>
 </div>
 <div class="oui-message oui-message_error oui-message_no-icon oui-message_no-border" role="alert">

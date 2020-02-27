@@ -103,15 +103,6 @@
       );
     }
 
-    &:read-only {
-      #oui > .control-color(
-        @font-color: @oui-form-control-font-color_readonly,
-        @border-color: @oui-form-control-border-color_readonly,
-        @border-bottom-color: @oui-form-control-border-bottom-color_readonly,
-        @background-color: @oui-form-control-background-color_readonly,
-      );
-    }
-
     &:disabled {
       #oui > .control-color(
         @font-color: @oui-form-control-font-color_disabled,
@@ -121,6 +112,17 @@
       );
 
       opacity: 0.5;
+    }
+  }
+
+  .control-readonly() {
+    &:read-only {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_readonly,
+        @border-color: @oui-form-control-border-color_readonly,
+        @border-bottom-color: @oui-form-control-border-bottom-color_readonly,
+        @background-color: @oui-form-control-background-color_readonly,
+      );
     }
   }
 

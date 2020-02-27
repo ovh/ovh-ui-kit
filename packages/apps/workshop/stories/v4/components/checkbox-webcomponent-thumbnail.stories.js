@@ -178,7 +178,7 @@ export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <form novalidate name="form">
-      <oui-field label="Label">
+      <oui-field>
 
           <oui-checkbox
             name="oui-checkbox-1"

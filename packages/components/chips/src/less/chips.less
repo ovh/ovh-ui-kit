@@ -45,7 +45,7 @@ oui-chips {
     display: none;
     top: 50%;
     margin-top: calc(-@oui-chip-close-icon-size / 2);
-    right: @oui-chip-padding-x;
+    right: @oui-chip-padding-x_closable;
     color: @oui-chip-close-icon-color;
     text-align: center;
     font-size: @oui-chip-close-icon-size;
@@ -53,7 +53,7 @@ oui-chips {
     background: none;
   }
 
-  &_closable { padding-right: calc(@oui-chip-close-icon-size + @oui-chip-padding-x + @oui-chip-close-icon-spacing); }
+  &_closable { padding-right: calc(@oui-chip-close-icon-size + @oui-chip-padding-x_closable + @oui-chip-close-icon-spacing); }
 
   &_closable &__close {
     display: flex; // For a better vertical centering

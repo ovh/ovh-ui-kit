@@ -53,12 +53,11 @@
   }
 
   &__header[aria-expanded="false"] ~ &__wrapper {
-    // Priority over ngStyle's height
-    height: 0 !important; // stylelint-disable-line declaration-no-important
+    height: 0 !important; // Priority over ngStyle's height
   }
 
   &__header[aria-expanded="true"] {
-    border-bottom-style: none;
+    border-bottom-color: transparent !important; // Force the style for all states
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     color: @oui-collapsible-header-font-color_active;
@@ -81,8 +80,7 @@
     & ~ .oui-collapsible__wrapper .oui-collapsible__body { padding-top: 0; }
   }
 
-  // Hover only for collapsed box
-  &__header[aria-expanded="false"]:hover {
+  &__header:hover {
     .oui-collapsible__toggle-icon {
       right: @oui-collapsible-icon-spacing_hover;
     }

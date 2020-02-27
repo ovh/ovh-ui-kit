@@ -10,9 +10,8 @@
     <li class="oui-navbar-menu__item oui-navbar-notification"
         ng-repeat="menuLink in ::$ctrl.menuLinks track by $index | limitTo: $ctrl.limitTo"
         ng-class="!!menuLink.isActive ? 'oui-navbar-menu__item_active' : null">
-        <span class="oui-icon oui-icon_bicolor oui-navbar-notification__icon"
+        <span class="oui-icon oui-navbar-notification__icon"
             ng-class=":: {
-                'oui-icon_bicolor': menuLink.level !== 'incident',
                 'oui-icon-error_circle': menuLink.level === 'error',
                 'oui-icon-success_circle': menuLink.level === 'success',
                 'oui-icon-info_circle': menuLink.level === 'info',
@@ -76,7 +75,7 @@
     <li class="oui-navbar-menu__item oui-navbar-notification oui-navbar-notification-placeholder"
         ng-if="$ctrl.menuLinks.length === 0">
         <div class="oui-navbar-notification-placeholder__content">
-            <span class="oui-icon oui-icon_bicolor oui-icon-success_circle oui-navbar-notification__icon"
+            <span class="oui-icon oui-icon-success_circle oui-navbar-notification__icon"
                 aria-hidden="true">
             </span>
             <div>
@@ -91,7 +90,7 @@
     <li class="oui-navbar-menu__item oui-navbar-notification oui-navbar-notification-placeholder"
         ng-if="!$ctrl.menuLinks">
         <div class="oui-navbar-notification-placeholder__content">
-            <span class="oui-icon oui-icon_bicolor oui-icon-error_circle oui-navbar-notification__icon"
+            <span class="oui-icon oui-icon-error_circle oui-navbar-notification__icon"
                 aria-hidden="true">
             </span>
             <div>

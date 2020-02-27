@@ -3,29 +3,6 @@
   #oui > .radio-base(oui-select-picker);
   #oui > .choice-thumbnail(oui-select-picker);
 
-  // sub components exceptions
-  .oui-select,
-  .ui-select-container {
-    margin-bottom: 0;
-  }
-
-  .oui-select > .oui-icon {
-    background-color: inherit;
-  }
-
-  .ui-select-container {
-    .ui-select-match {
-      margin-bottom: 0;
-      text-align: left;
-      width: 100%;
-    }
-
-    .ui-select-match,
-    .ui-select-choices {
-      min-width: 100%;
-    }
-  }
-
   & &__description {
     padding-left: 0;
   }
@@ -80,36 +57,6 @@
     }
   }
 
-  &__input ~ &__label-container {
-    .ui-select-match {
-      #oui > .choice-thumbnail-color(
-        @oui-select-picker-value-border-color,
-        @oui-select-picker-value-background-color,
-        1px
-      );
-
-      > span,
-      > i {
-        opacity: 0.5;
-      }
-
-      &:focus {
-        background-color: @oui-select-picker-value-background-color_checked;
-        border-color: @oui-select-picker-value-border-color_checked;
-      }
-
-      &:focus > span,
-      &:focus > i {
-        opacity: 1;
-      }
-
-      &:hover {
-        background-color: @oui-select-picker-value-background-color_hover;
-        border-color: @oui-select-picker-value-border-color_hover;
-      }
-    }
-  }
-
   &__input:checked ~ &__label-container &__picture-container {
     top: calc(@oui-select-picker-picture-top - @oui-select-picker-border-width_checked);
     right: calc(@oui-select-picker-picture-right - @oui-select-picker-border-width_checked);
@@ -130,23 +77,6 @@
     .oui-select-picker__picture-container {
       opacity: 0.3;
       filter: grayscale(0.6);
-    }
-  }
-
-  &__input:checked ~ &__label-container,
-  .ui-select-container.ui-select-container_open {
-    .ui-select-match {
-      background-color: @oui-select-picker-value-background-color_checked;
-      border-color: @oui-select-picker-value-border-color_checked;
-
-      &:hover {
-        border-color: @oui-select-picker-value-border-color_checked;
-      }
-
-      > span,
-      > i {
-        opacity: 1;
-      }
     }
   }
 }
@@ -172,11 +102,6 @@ oui-select-picker-section {
         @icon-outer-color: @oui-radio-icon-outer-color_error,
         @icon-inner-color: @oui-radio-icon-inner-color_error
       );
-    }
-
-    .ui-select-match {
-      background-color: @oui-select-picker-value-background-color_error;
-      border-color: @oui-select-picker-value-border-color_error;
     }
   }
 }

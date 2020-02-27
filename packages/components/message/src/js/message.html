@@ -1,5 +1,5 @@
 <div ng-if="!$ctrl.dismissed" ng-class=":: 'oui-message oui-message_' + $ctrl.type" role="alert">
-    <span class="oui-message__icon oui-icon oui-icon_bicolor" ng-class=":: 'oui-icon-' + $ctrl.type + '_circle'" aria-hidden="true"></span>
+    <span class="oui-message__icon oui-icon" ng-class=":: 'oui-icon-' + $ctrl.type + '_circle'" aria-hidden="true"></span>
     <div class="oui-message__body" ng-class=":: 'oui-message__body_' + $ctrl.type" ng-transclude></div>
     <button ng-if="::!!$ctrl.dismissable"
         class="oui-icon oui-icon-close oui-message__close-button"

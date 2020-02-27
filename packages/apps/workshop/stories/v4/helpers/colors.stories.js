@@ -199,68 +199,68 @@ export const Status = () => `
 <div class="doc-badges">
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-alpha">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-alpha</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-alpha">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-alpha</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-beta">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-beta</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-beta">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-beta</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-new">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-new</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-new">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-new</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-soon">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-soon</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-soon">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-soon</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-promotion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-promotion</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-promotion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-promotion</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-price-drop">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-price-drop</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-price-drop">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-price-drop</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-sold-out">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-sold-out</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-sold-out">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-sold-out</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-best-seller">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-best-seller</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-best-seller">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-best-seller</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-limited-edition">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-limited-edition</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-product-limited-edition">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-product-limited-edition</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-delivery-120-seconds">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-delivery-120-seconds</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-delivery-120-seconds">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-delivery-120-seconds</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-delivery-24-hours">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-delivery-24-hours</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-delivery-24-hours">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-delivery-24-hours</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-delivery-72-hours">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-delivery-72-hours</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-delivery-72-hours">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-delivery-72-hours</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview"><span class="oui-color-status-delivery-10-days">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
-    <div class="doc-badge__code"><code>.oui-color-status-delivery-10-days</code></div>
+    <div class="doc-badge__preview"><span class="oui-color-delivery-10-days">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></div>
+    <div class="doc-badge__code"><code>.oui-color-delivery-10-days</code></div>
   </div>
 
 </div>`;

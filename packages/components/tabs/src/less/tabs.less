@@ -52,6 +52,10 @@ oui-tabs {
     );
   }
 
+  & + & {
+    margin-left: -@oui-tabs-tab-border-width;
+  }
+
   &[aria-selected="true"] {
     height: @oui-tabs-tab-height_active;
     padding: @oui-tabs-tab-padding_active;

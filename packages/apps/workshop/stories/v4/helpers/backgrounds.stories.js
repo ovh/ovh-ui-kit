@@ -199,68 +199,68 @@ export const Status = () => `
 <div class="doc-badges">
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-alpha"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-alpha</code></div>
+    <div class="doc-badge__preview oui-background-product-alpha"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-alpha</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-beta"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-beta</code></div>
+    <div class="doc-badge__preview oui-background-product-beta"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-beta</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-new"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-new</code></div>
+    <div class="doc-badge__preview oui-background-product-new"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-new</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-soon"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-soon</code></div>
+    <div class="doc-badge__preview oui-background-product-soon"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-soon</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-promotion"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-promotion</code></div>
+    <div class="doc-badge__preview oui-background-product-promotion"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-promotion</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-price-drop"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-price-drop</code></div>
+    <div class="doc-badge__preview oui-background-product-price-drop"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-price-drop</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-sold-out"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-sold-out</code></div>
+    <div class="doc-badge__preview oui-background-product-sold-out"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-sold-out</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-best-seller"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-best-seller</code></div>
+    <div class="doc-badge__preview oui-background-product-best-seller"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-best-seller</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-limited-edition"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-limited-edition</code></div>
+    <div class="doc-badge__preview oui-background-product-limited-edition"></div>
+    <div class="doc-badge__code"><code>.oui-background-product-limited-edition</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-delivery-120-seconds"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-delivery-120-seconds</code></div>
+    <div class="doc-badge__preview oui-background-delivery-120-seconds"></div>
+    <div class="doc-badge__code"><code>.oui-background-delivery-120-seconds</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-delivery-24-hours"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-delivery-24-hours</code></div>
+    <div class="doc-badge__preview oui-background-delivery-24-hours"></div>
+    <div class="doc-badge__code"><code>.oui-background-delivery-24-hours</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-delivery-72-hours"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-delivery-72-hours</code></div>
+    <div class="doc-badge__preview oui-background-delivery-72-hours"></div>
+    <div class="doc-badge__code"><code>.oui-background-delivery-72-hours</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview oui-background-status-delivery-10-days"></div>
-    <div class="doc-badge__code"><code>.oui-background-status-delivery-10-days</code></div>
+    <div class="doc-badge__preview oui-background-delivery-10-days"></div>
+    <div class="doc-badge__code"><code>.oui-background-delivery-10-days</code></div>
   </div>
 
 </div>`;
