@@ -77,7 +77,6 @@ export const EmptyPlaceholer = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-datagrid
-      empty-placeholder="{{ $ctrl.placeholder }}"
       page-size="5"
       rows="$ctrl.data">
       <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
@@ -88,7 +87,6 @@ export const EmptyPlaceholer = forModule(moduleName).createElement(
     {
       $ctrl: {
         data: [],
-        placeholder: 'There’s no bananas here, sorry :(',
       },
     },
   ),
@@ -233,15 +231,11 @@ export const ExpandableRows = forModule(moduleName).createElement(
     `
     <oui-datagrid
       rows="$ctrl.data"
-      page-size="5"
-      selectable-rows>
+      page-size="5">
       <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-      <oui-action-menu align="end" compact>
-        <oui-action-menu-item disabled="$isSelected">Disabled if selected</oui-action-menu-item>
-      </oui-action-menu>
       <oui-datagrid-row-detail>
         Birth date : <span ng-bind="$row.birth"></span>
         <br />

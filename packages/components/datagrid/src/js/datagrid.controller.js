@@ -1,4 +1,4 @@
-import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 import find from 'lodash/find';
 import hasIn from 'lodash/hasIn';
 
@@ -6,14 +6,10 @@ import template from './datagrid.html';
 
 const cssSorted = 'oui-datagrid__header_sorted';
 const cssSortable = 'oui-datagrid__header_sortable';
-const cssSortableAsc = 'oui-datagrid__header_sortable-asc';
-const cssSortableDesc = 'oui-datagrid__header_sortable-desc';
 
-// On initial render we need to wait few seconds before calling
-// the checkScroll method otherwise panel size would be wrong.
-// This timing is not perfect, if the page render takes more time
-// than usual the scroll position could be miscalculated.
-const checkScrollOnRefreshDataDelay = 1000;
+const iconSortable = 'oui-icon-sort-inactive';
+const iconSortableAsc = 'oui-icon-sort-up';
+const iconSortableDesc = 'oui-icon-sort-down';
 
 export default class DatagridController {
   constructor($attrs, $compile, $element, $transclude, $q, $scope, $window, $timeout,
@@ -40,40 +36,18 @@ export default class DatagridController {
     this.expandedRows = [];
 
     this.config = ouiDatagridConfiguration;
-
-    this.checkScroll = () => {
-      const panel = this.scrollablePanel;
-      const stickyBorderWidth = 10;
-
-      // Ugly and not efficient way to instantly add or remove classes because
-      // checkScroll is run thousands times.
-      this.$scope.$apply(() => {
-        if (panel.scrollWidth - panel.scrollLeft - stickyBorderWidth <= panel.clientWidth) {
-          this.scrollBegin = false;
-        } else {
-          this.scrollBegin = true;
-        }
-
-        if (panel.scrollLeft <= stickyBorderWidth) {
-          this.scrollEnd = false;
-        } else {
-          this.scrollEnd = true;
-        }
-      });
-    };
   }
 
   $onInit() {
     this.hasActionMenu = false;
     this.hasFooter = false;
-    this.scrollBegin = false;
-    this.scrollEnd = false;
     this.firstLoading = true;
     this.pageSize = parseInt(this.pageSize, 10) || this.config.pageSize;
     this.filterableColumns = [];
     this.criteria = this.criteria || [];
 
     addBooleanParameter(this, 'selectableRows');
+    addDefaultParameter(this, 'emptyPlaceholder', this.config.translations.emptyPlaceholder);
 
     if (this.id) {
       this.ouiDatagridService.registerDatagrid(this);
@@ -127,15 +101,6 @@ export default class DatagridController {
       }
     }
 
-    // Manage responsiveness
-    if (this.hasActionMenu || this.customizable || this.selectableRows) {
-      this.scrollablePanel = this.$element[0].querySelector('.oui-datagrid-responsive-container__overflow-container');
-      if (this.scrollablePanel) {
-        angular.element(this.$window).on('resize', this.checkScroll);
-        angular.element(this.scrollablePanel).on('scroll', this.checkScroll);
-      }
-    }
-
     // Manage filter configuration
     this.isSearchTextVisible = this.columns
       .filter((column) => column.searchable)
@@ -165,11 +130,6 @@ export default class DatagridController {
   }
 
   $onDestroy() {
-    if (this.hasActionMenu) {
-      angular.element(this.$window).off('resize', this.checkScroll);
-      angular.element(this.scrollablePanel).off('scroll');
-    }
-
     if (this.id) {
       this.ouiDatagridService.unregisterDatagrid(this.id);
     }
@@ -266,6 +226,24 @@ export default class DatagridController {
     }
   }
 
+  getPlaceholderColspan() {
+    if (!this.columns) {
+      return undefined;
+    }
+
+    let colspan = this.columns.length;
+
+    if (this.selectableRows) {
+      colspan += 1;
+    }
+
+    if (this.hasActionMenu || this.customizable) {
+      colspan += 1;
+    }
+
+    return colspan;
+  }
+
   getParentScope() {
     return this.$scope.$parent;
   }
@@ -325,9 +303,6 @@ export default class DatagridController {
       .then(() => this.paging.loadData(skipSortAndFilter, forceLoadRows))
       .then((result) => {
         this.displayedRows = result.data;
-        if (this.hasActionMenu) {
-          setTimeout(() => this.checkScroll(), checkScrollOnRefreshDataDelay);
-        }
       })
       .finally(() => {
         this.loading = false;
@@ -354,16 +329,23 @@ export default class DatagridController {
   }
 
   getSortableClasses(column) {
-    if (column.name !== this.paging.getSortColumnName()) {
-      return {
-        [cssSortable]: !!column.sortable,
-      };
-    }
     return {
       [cssSortable]: !!column.sortable,
-      [cssSorted]: true,
-      [cssSortableAsc]: this.paging.isSortAsc(),
-      [cssSortableDesc]: this.paging.isSortDesc(),
+      [cssSorted]: column.name === this.paging.getSortColumnName(),
+    };
+  }
+
+  getSortableIcons(column) {
+    return {
+      [iconSortable]: column.name !== this.paging.getSortColumnName(),
+      [iconSortableAsc]: (
+        column.name === this.paging.getSortColumnName()
+        && this.paging.isSortAsc()
+      ),
+      [iconSortableDesc]: (
+        column.name === this.paging.getSortColumnName()
+        && this.paging.isSortDesc()
+      ),
     };
   }
 

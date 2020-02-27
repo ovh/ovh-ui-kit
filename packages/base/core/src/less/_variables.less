@@ -375,30 +375,9 @@
  */
 
 // Action-Menu
-@oui-action-button-size: rem-calc(36);
-
-@oui-action-button-background-color: @oui-color-white;
-@oui-action-button-background-color_active: @oui-color-concrete;
-@oui-action-button-background-color_hover: @p-500;
-@oui-action-button-background-color_disabled: @oui-color-concrete;
-
-@oui-action-button-border-color: @oui-color-silver;
-@oui-action-button-border-color_active: @oui-color-dusty;
-@oui-action-button-border-color_hover: @p-500;
-@oui-action-button-border-color_disabled: @oui-color-concrete;
-
+@oui-action-button-size: rem-calc(32);
 @oui-action-button-border-radius: 50%;
-@oui-action-button-border-width: 1px;
-
-@oui-action-button-box-shadow_focus: 0 0 3px 1px fade(@oui-color-pacific, 60%);
-@oui-action-button-box-shadow_active: inset 1px 1px 4px 0 fade(@oui-color-black, 33%);
-
-@oui-action-button-foreground-color: @p-500;
-@oui-action-button-foreground-color_active: @oui-color-sapphire;
-@oui-action-button-foreground-color_hover: @oui-color-white;
-@oui-action-button-foreground-color_disabled: @oui-color-silver;
-
-@oui-action-button-icon-size: rem-calc(24);
+@oui-action-button-icon-size: rem-calc(20);
 
 // Autocomplete
 @oui-autocomplete-items-displayed: 5;
@@ -799,7 +778,7 @@
 @oui-criteria-actions-margin-bottom: rem-calc(10);
 
 // Criteria Adder
-@oui-criteria-adder-spacing: rem-calc(10);
+@oui-criteria-adder-spacing: rem-calc(12);
 @oui-criteria-adder-icon-size: rem-calc(16);
 @oui-criteria-adder-icon-spacing: rem-calc(12);
 @oui-criteria-adder-menu-width: rem-calc(300);
@@ -810,70 +789,80 @@
 
 // Datagrid
 @oui-datagrid-width: 100%;
-@oui-datagrid-margin: 0 0 rem-calc(20);
+@oui-datagrid-margin: 0 0 rem-calc(12);
 @oui-datagrid-font-size: rem-calc(16);
-@oui-datagrid-border-color: @oui-color-nurse;
+@oui-datagrid-border-color: @p-100;
+@oui-datagrid-border-width: 1px;
 
-@oui-datagrid-arrow-content: @oui-icon-index-triangle-up-down;
-@oui-datagrid-arrow-content_asc: @oui-icon-index-triangle-up;
-@oui-datagrid-arrow-content_desc: @oui-icon-index-triangle-down;
-@oui-datagrid-arrow-font-family: @oui-global-base-font-family-icon;
 @oui-datagrid-arrow-size: rem-calc(16);
+@oui-datagrid-arrow-spacing: rem-calc(8);
 
-@oui-datagrid-row-background-color_even: @oui-color-alabaster;
-@oui-datagrid-row-background-color_odd: @oui-color-white;
+@oui-datagrid-row-outline-offset: -@oui-a11y-outline-width;
+@oui-datagrid-row-background-color_even: @p-000;
+@oui-datagrid-row-background-color_odd: @p-000;
 
-@oui-datagrid-header-background-color: @oui-color-nurse;
-@oui-datagrid-header-background-color_hover: mix(@oui-color-dusty, @oui-color-nurse, 10%);
-@oui-datagrid-header-background-color_sorted: mix(@oui-color-dusty, @oui-color-nurse, 10%);
-@oui-datagrid-header-font-color: @oui-color-shuttle;
+@oui-datagrid-cell-background-color: @p-000;
+@oui-datagrid-cell-border-color: @p-100;
+@oui-datagrid-cell-border-width: 1px;
+@oui-datagrid-cell-font-color: @p-800-text;
+@oui-datagrid-cell-padding: 0 rem-calc(8);
+@oui-datagrid-cell-padding_s: 0;
+@oui-datagrid-cell-height: rem-calc(40);
+@oui-datagrid-cell-width_s: rem-calc(52);
+
+@oui-datagrid-header-background-color: @p-100;
+@oui-datagrid-header-background-color_hover: @p-100;
+@oui-datagrid-header-background-color_sorted: @p-100;
+@oui-datagrid-header-font-color: @p-800-text;
 @oui-datagrid-header-font-color_hover: @p-500;
 @oui-datagrid-header-font-color_sorted: @p-500;
 @oui-datagrid-header-font-weight: @oui-font-bold;
 @oui-datagrid-header-font-weight_sorted: @oui-font-bold;
-@oui-datagrid-header-padding: rem-calc(2) rem-calc(10);
-@oui-datagrid-header-height: rem-calc(44);
+@oui-datagrid-header-padding: rem-calc(4) rem-calc(8);
+@oui-datagrid-header-padding_s: 0;
+@oui-datagrid-header-height: rem-calc(42);
+@oui-datagrid-header-width_s: rem-calc(52);
 
-@oui-datagrid-footer-background-color: @oui-datagrid-header-background-color;
-@oui-datagrid-footer-font-color: @oui-datagrid-header-font-color;
-@oui-datagrid-footer-font-weight: @oui-datagrid-header-font-weight;
-@oui-datagrid-footer-padding: @oui-datagrid-header-padding;
-@oui-datagrid-footer-height: @oui-datagrid-header-height;
+@oui-datagrid-footer-background-color: @p-100;
+@oui-datagrid-footer-font-color: @p-800-text;
+@oui-datagrid-footer-font-weight: @oui-font-regular;
+@oui-datagrid-footer-padding: rem-calc(4) rem-calc(8);
+@oui-datagrid-footer-padding_s: 0;
+@oui-datagrid-footer-height: rem-calc(42);
+@oui-datagrid-footer-width_s: rem-calc(52);
 
-@oui-datagrid-cell-background-color: @oui-color-white;
-@oui-datagrid-cell-border-color: @oui-color-nurse;
-@oui-datagrid-cell-font-color: @oui-color-shuttle;
-@oui-datagrid-cell-padding: rem-calc(5) rem-calc(10);
-@oui-datagrid-cell-height: rem-calc(56);
+// Datagrid - Expandable rows
+@oui-datagrid-row-detail-spacing: @oui-datagrid-cell-width_s;
+@oui-datagrid-row-detail-padding: rem-calc(8);
 
-// Datagrid - Sticky columns
-@oui-datagrid-sticky-column-border: 1px solid #e4e4e4;
+// Datagrid - Placeholder
+@oui-datagrid-empty-padding: rem-calc(32);
 
-@oui-datagrid-action-column-width: rem-calc(80);
-@oui-datagrid-action-column-margin-top: rem-calc(5);
-@oui-datagrid-action-column-box-shadow: -10px 0 10px -5px rgba(0, 0, 0, 0.08);
+@oui-datagrid-empty-icon-width: rem-calc(108);
+@oui-datagrid-empty-icon-height: rem-calc(108);
+@oui-datagrid-empty-icon-spacing: rem-calc(24);
+@oui-datagrid-empty-icon-size: rem-calc(54);
+@oui-datagrid-empty-icon-color: @ae-500;
+@oui-datagrid-empty-icon-border-radius: 50%;
+@oui-datagrid-empty-icon-background-color: @ae-300;
 
-@oui-datagrid-checkbox-column-width: rem-calc(44);
-@oui-datagrid-checkbox-column-margin-top: rem-calc(5);
-@oui-datagrid-checkbox-column-box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.08);
+@oui-datagrid-empty-placeholder-letter-spacing: @jupiter-letter-spacing;
+@oui-datagrid-empty-placeholder-line-height: @jupiter-line-height;
+@oui-datagrid-empty-placeholder-font-color: @jupiter-color;
+@oui-datagrid-empty-placeholder-font-size: @jupiter-font-size;
+@oui-datagrid-empty-placeholder-font-weight: @jupiter-font-weight;
 
 // Datagrid - Parameters
-@oui-datagrid-parameters-button-width: rem-calc(36);
-@oui-datagrid-parameters-button-line-height: rem-calc(26);
-@oui-datagrid-parameters-button-padding: rem-calc(6) 0;
-@oui-datagrid-parameters-button-font-color: @oui-color-sapphire;
-@oui-datagrid-parameters-button-font-color_hover: @oui-color-sapphire;
-@oui-datagrid-parameters-button-icon-size: rem-calc(20);
+@oui-datagrid-parameters-button-width: rem-calc(32);
+@oui-datagrid-parameters-button-line-height: rem-calc(32);
+@oui-datagrid-parameters-button-padding: 0;
+@oui-datagrid-parameters-button-font-color: @p-500;
+@oui-datagrid-parameters-button-font-color_hover: @p-800;
+@oui-datagrid-parameters-button-icon-size: rem-calc(24);
 @oui-datagrid-parameters-button-border: none;
 @oui-datagrid-parameters-button-background-color: transparent;
 
-@oui-datagrid-parameters-header-line-height: rem-calc(40);
-@oui-datagrid-parameters-header-font-color: @oui-color-dusty;
-@oui-datagrid-parameters-header-font-size: rem-calc(14);
-
-@oui-datagrid-parameters-body-padding: 0 rem-calc(18) rem-calc(4) rem-calc(18);
-
-@oui-datagrid-parameters-column-spacing: rem-calc(18);
+@oui-datagrid-parameters-body-padding: rem-calc(8) rem-calc(16);
 
 // Dropdown
 @oui-dropdown-menu-background-color: @oui-color-white;
@@ -1462,7 +1451,7 @@
 
 // Pagination
 @oui-pagination-font-size: rem-calc(16);
-@oui-pagination-margin: 0 0 rem-calc(20);
+@oui-pagination-margin: 0 0 rem-calc(12);
 
 @oui-pagination-progress-text-font-color: @oui-color-sapphire;
 
@@ -1664,8 +1653,8 @@
 @oui-search-input-font-color_disabled: @oui-form-control-font-color_disabled;
 
 @oui-search-button-padding-x: rem-calc(10);
-@oui-search-button-font-color_hover: @oui-color-sapphire;
-@oui-search-button-font-color_disabled: @oui-color-silver;
+@oui-search-button-font-color: @oui-form-control-icon-color;
+@oui-search-button-font-color_disabled: @oui-form-control-icon-color;
 
 @oui-search-reset-right: @oui-button-small-min-width;
 @oui-search-submit-right: 0;

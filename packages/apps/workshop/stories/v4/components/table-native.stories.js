@@ -22,7 +22,7 @@ angular.module(moduleName, [
 
 export const Simple = () => `
 <table class="oui-table">
-  <thead class="oui-table__headers">
+  <thead>
     <tr>
       <th class="oui-table__header">Header</th>
       <th class="oui-table__header">Header</th>
@@ -62,7 +62,7 @@ export const Simple = () => `
       <td class="oui-table__cell">Column</td>
     </tr>
   </tbody>
-  <tfoot class="oui-table__footers">
+  <tfoot>
     <tr>
       <td class="oui-table__footer">Footer</td>
       <td class="oui-table__footer">Footer</td>
@@ -78,7 +78,7 @@ export const Selectable = forModule(moduleName).createElement(
     <table class="oui-table">
       <thead class="oui-table__headers">
         <tr>
-          <th class="oui-table__header oui-table__cell_s"></th>
+          <th class="oui-table__header oui-table__header_s"></th>
           <th class="oui-table__header">Header</th>
           <th class="oui-table__header">Header</th>
           <th class="oui-table__header">Header</th>
@@ -134,7 +134,7 @@ export const Selectable = forModule(moduleName).createElement(
       </tbody>
       <tfoot class="oui-table__footers">
         <tr>
-          <td class="oui-table__footer oui-table__cell_s"></td>
+          <td class="oui-table__footer oui-table__footer_s"></td>
           <td class="oui-table__footer">Footer</td>
           <td class="oui-table__footer">Footer</td>
           <td class="oui-table__footer">Footer</td>
@@ -149,16 +149,16 @@ export const Sortable = () => `
 <table class="oui-table">
   <thead class="oui-table__headers">
     <tr>
-      <th class="oui-table__header" tabindex="0">Header</th>
+      <th class="oui-table__header">Header</th>
       <th class="oui-table__header oui-table__header_sortable" tabindex="0">
         Header
         <span class="oui-icon oui-icon-sort-inactive" aria-hidden="true"></span>
       </th>
-      <th class="oui-table__header oui-table__header_sorted" tabindex="0">
+      <th class="oui-table__header oui-table__header_sortable oui-table__header_sorted" tabindex="0">
         Header
         <span class="oui-icon oui-icon-sort-down" aria-hidden="true"></span>
       </th>
-      <th class="oui-table__header" tabindex="0">Header</th>
+      <th class="oui-table__header">Header</th>
     </tr>
   </thead>
   <tbody>

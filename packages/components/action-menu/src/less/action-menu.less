@@ -7,10 +7,7 @@
   height: @oui-action-button-size;
   padding: 0;
   overflow: visible;
-  color: @oui-action-button-foreground-color;
-  border: @oui-action-button-border-width solid @oui-action-button-border-color;
   border-radius: @oui-action-button-border-radius;
-  background-color: @oui-action-button-background-color;
 
   .oui-icon {
     #oui > .animate();
@@ -19,35 +16,10 @@
     font-size: @oui-action-button-icon-size;
   }
 
-  &[aria-expanded="true"] {
-    border-color: @oui-action-button-border-color_active;
-    background-color: @oui-action-button-background-color_active;
-  }
-
-  &:hover {
-    color: @oui-action-button-foreground-color_hover;
-    border-color: @oui-action-button-border-color_hover;
-    background-color: @oui-action-button-background-color_hover;
-  }
-
   &:focus {
-    outline: none;
-    box-shadow: @oui-action-button-box-shadow_focus;
-  }
+    #oui > .outline-border();
 
-  &:active {
-    box-shadow: @oui-action-button-box-shadow_active;
-  }
-
-  &:disabled {
-    cursor: default;
-    box-shadow: none;
-    border-color: @oui-action-button-border-color_disabled;
-    background-color: @oui-action-button-background-color_disabled;
-
-    .oui-icon {
-      color: @oui-action-button-foreground-color_disabled;
-    }
+    z-index: 1; // Avoid the outline to be cropped
   }
 }
 
