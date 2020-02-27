@@ -17,6 +17,30 @@
     display: block;
   }
 
+  // Sort icons
+  &-sort-inactive::before {
+    opacity: 0.5;
+  }
+
+  &-sort-up,
+  &-sort-down {
+    &::before {
+      position: absolute;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &-sort-up::after {
+    content: @oui-icon-index-sort-down;
+  }
+
+  &-sort-down::after {
+    content: @oui-icon-index-sort-up;
+  }
+
   // Variants
   #oui > .icon-type();
 

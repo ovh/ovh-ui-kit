@@ -1,347 +1,91 @@
+@import './_mixins';
+
 .oui-datagrid {
-  width: @oui-datagrid-width;
-  border: 0;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: @oui-datagrid-margin;
-  text-align: left;
-  font-size: @oui-datagrid-font-size;
+  #oui > .table-base(oui-datagrid);
 
-  &__cell {
-    padding: @oui-datagrid-cell-padding;
-    height: @oui-datagrid-cell-height;
-    white-space: nowrap;
-    border-top: 1px solid @oui-datagrid-cell-border-color;
-    outline: none;
-    color: @oui-datagrid-cell-font-color;
-    cursor: default;
-
-    .oui-spinner__container {
-      margin: 0;
-    }
-
-    &-short {
-      width: 1rem;
-    }
-  }
-
-  // Compact variant
-  &_compact &__cell {
-    height: auto;
-  }
-
-  &-row-detail {
-    &__container {
-      display: block;
-      color: @oui-datagrid-cell-font-color;
-      margin: 0 1rem 1rem;
-      padding: 0 0 0 2.5rem;
-    }
-
-    & > .oui-datagrid__cell-sticky {
-      height: 20%;
-      border: 0;
-    }
-  }
-
-  &-responsive-container {
-    position: relative;
-    margin: @oui-datagrid-margin;
-
-    &_sticky-checkbox {
-      padding-left: @oui-datagrid-checkbox-column-width;
-
-      oui-checkbox { margin-top: @oui-datagrid-checkbox-column-margin-top; }
-    }
-
-    &_sticky-actions {
-      padding-right: @oui-datagrid-action-column-width;
-
-      oui-action-menu { margin-top: @oui-datagrid-action-column-margin-top; }
-    }
-
-    &__sticky-container {
-      &::before,
-      &::after {
-        #oui > .animate();
-
-        content: "";
-        height: 100%;
-        position: absolute;
-        top: 0;
-        pointer-events: none;
-        opacity: 0;
-      }
-
-      &::before {
-        width: @oui-datagrid-action-column-width;
-        right: 0;
-        border-left: @oui-datagrid-sticky-column-border;
-        box-shadow: @oui-datagrid-action-column-box-shadow;
-      }
-
-      &::after {
-        width: @oui-datagrid-checkbox-column-width;
-        left: 0;
-        border-right: @oui-datagrid-sticky-column-border;
-        box-shadow: @oui-datagrid-checkbox-column-box-shadow;
-      }
-
-      &_scroll-begin::before {
-        opacity: 1;
-        z-index: 1;
-      }
-
-      &_scroll-end::after {
-        opacity: 1;
-        z-index: 1;
-      }
-
-      .oui-datagrid__cell-sticky {
-        position: absolute;
-        top: auto;
-
-        &:first-child {
-          left: 0;
-          width: @oui-datagrid-checkbox-column-width;
-        }
-
-        &:last-child {
-          right: 0;
-          width: @oui-datagrid-action-column-width;
-          text-align: center;
-        }
-
-        .oui-dropdown-menu {
-          width: @oui-dropdown-menu-max-width;
-        }
-      }
-
-      .oui-datagrid__row .oui-datagrid__cell-sticky {
-        height: @oui-datagrid-cell-height;
-        padding: @oui-datagrid-cell-padding;
-      }
-
-      .oui-datagrid__headers .oui-datagrid__cell-sticky {
-        height: @oui-datagrid-header-height;
-        padding: @oui-datagrid-header-padding;
-      }
-
-      .oui-datagrid__footers .oui-datagrid__cell-sticky {
-        height: @oui-datagrid-footer-height;
-        padding: @oui-datagrid-footer-padding;
-      }
-    }
-
-    &__overflow-container {
-      max-width: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
-    }
-
-    .oui-datagrid {
-      margin: 0;
-    }
-  }
-
-  &__row {
-    &:nth-child(odd) {
-      .oui-datagrid__cell {
-        background-color: @oui-datagrid-row-background-color_odd;
-      }
-    }
-
-    &:nth-child(even) {
-      .oui-datagrid__cell {
-        background-color: @oui-datagrid-row-background-color_even;
-      }
-    }
-
-    &_expandable {
-      th,
-      td {
-        position: inherit;
-      }
-
-      td {
-        cursor: pointer;
-      }
-
-      &:nth-child(4n+1) {
-        .oui-datagrid__cell,
-        .oui-datagrid-row-detail__cell {
-          background-color: @oui-datagrid-row-background-color_odd;
-        }
-      }
-
-      &:nth-child(4n+3),
-      &:nth-child(4n+3) + .oui-datagrid-row-detail {
-        .oui-datagrid__cell,
-        .oui-datagrid__cell-sticky,
-        .oui-datagrid-row-detail__cell {
-          background-color: @oui-datagrid-row-background-color_even;
-        }
-      }
-    }
-  }
-
-  &__expand-button .oui-icon {
-    color: @oui-datagrid-cell-font-color;
-  }
-
-  &__header {
-    #oui > .animate();
-
-    height: @oui-datagrid-header-height;
-    padding: @oui-datagrid-header-padding;
-    white-space: nowrap;
-    outline: none;
-    color: @oui-datagrid-header-font-color;
-    font-weight: @oui-datagrid-header-font-weight;
-    background-color: @oui-datagrid-header-background-color;
-
-    &[role="button"] {
-      cursor: inherit;
-    }
-
-    &_expandable {
-      position: inherit;
-    }
-
-    &_sortable::after {
-      content: @oui-datagrid-arrow-content;
-    }
-
-    &_sortable-asc::after {
-      content: @oui-datagrid-arrow-content_asc;
-    }
-
-    &_sortable-desc::after {
-      content: @oui-datagrid-arrow-content_desc;
-      vertical-align: middle;
-    }
-
-    &_sortable,
-    &_sortable-asc,
-    &_sortable-desc {
-      padding-right: ~"calc(@{oui-datagrid-arrow-size} * 3)";
+  // Expandable row
+  &__row_expandable {
+    .oui-datagrid__cell {
       cursor: pointer;
-
-      &[role="button"] {
-        cursor: pointer;
-      }
-
-      &:hover,
-      &:focus {
-        background-color: @oui-datagrid-header-background-color_hover;
-        color: @oui-datagrid-header-font-color_hover;
-      }
-
-      &::after {
-        #oui > .animate();
-
-        display: inline-block;
-        width: ~"calc(@{oui-datagrid-arrow-size} * 2)";
-        height: @oui-datagrid-arrow-size;
-        line-height: 1;
-        margin: auto;
-        opacity: 0.5;
-        text-align: center;
-        color: @oui-datagrid-header-font-color;
-        font-family: @oui-datagrid-arrow-font-family;
-        font-size: @oui-datagrid-arrow-size;
-        font-weight: @oui-datagrid-header-font-weight;
-      }
-
-      &:hover::after,
-      &:focus::after,
-      &:active::after {
-        color: @oui-datagrid-header-font-color_hover;
-        opacity: 1;
-      }
     }
 
-    &_sorted {
-      font-weight: @oui-datagrid-header-font-weight_sorted;
-      color: @oui-datagrid-header-font-color_sorted;
-
-      &,
-      &:hover,
-      &:focus,
-      &:active {
-        &::after {
-          color: @oui-datagrid-header-font-color_sorted;
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  &__footer {
-    height: @oui-datagrid-header-height;
-    padding: @oui-datagrid-header-padding;
-    white-space: nowrap;
-    outline: none;
-    color: @oui-datagrid-header-font-color;
-    font-weight: @oui-datagrid-header-font-weight;
-    background-color: @oui-datagrid-header-background-color;
-  }
-
-  &-parameters {
-    display: inline-block;
-
-    &__button {
-      margin: 0;
-      padding: @oui-datagrid-parameters-button-padding;
-      width: @oui-datagrid-parameters-button-width;
-      border: @oui-datagrid-parameters-button-border;
-      background-color: @oui-datagrid-parameters-button-background-color;
-
-      .oui-icon {
-        line-height: @oui-datagrid-parameters-button-line-height;
-        font-size: @oui-datagrid-parameters-button-icon-size;
-        color: @oui-datagrid-parameters-button-font-color;
-
-        &:hover {
-          color: @oui-datagrid-parameters-button-font-color_hover;
-        }
-      }
-
-      &:focus {
-        #oui > .outline-border();
-      }
+    &:focus {
+      #oui > .outline-border(
+        @outline-offset: @oui-datagrid-row-outline-offset
+      );
     }
 
-    &__body {
-      padding: @oui-datagrid-parameters-body-padding;
+    &:nth-child(4n+1) {
+      background-color: @oui-datagrid-row-background-color_odd;
     }
 
-    &__headers {
-      display: flex;
-      line-height: @oui-datagrid-parameters-header-line-height;
-      font-size: @oui-datagrid-parameters-header-font-size;
-      color: @oui-datagrid-parameters-header-font-color;
-    }
-
-    &__column {
-      display: flex;
-      white-space: nowrap;
-    }
-
-    &__column-column {
-      flex: 1;
-
-      &:not(:last-child) {
-        padding-right: @oui-datagrid-parameters-column-spacing;
-      }
-    }
-
-    &__order-column {
-      text-align: right;
+    &:nth-child(4n+3),
+    &:nth-child(4n+3) + .oui-datagrid-row-detail {
+      background-color: @oui-datagrid-row-background-color_even;
     }
   }
 }
 
 oui-datagrid {
-  &:extend(.oui-datagrid);
+  display: block;
+}
+
+// Parameters dropdown
+.oui-datagrid-parameters {
+  display: inline-block;
+
+  &__button {
+    margin: 0;
+    padding: @oui-datagrid-parameters-button-padding;
+    width: @oui-datagrid-parameters-button-width;
+    font-size: @oui-datagrid-parameters-button-icon-size;
+    color: @oui-datagrid-parameters-button-font-color;
+    border: @oui-datagrid-parameters-button-border;
+    background-color: @oui-datagrid-parameters-button-background-color;
+
+    .oui-icon {
+      line-height: @oui-datagrid-parameters-button-line-height;
+    }
+
+    &:focus {
+      #oui > .outline-border();
+    }
+  }
+
+  &__body {
+    padding: @oui-datagrid-parameters-body-padding;
+  }
+}
+
+// Expandable rows
+.oui-datagrid-row-detail {
+  &__cell {
+    border-bottom: @oui-datagrid-cell-border-width solid @oui-datagrid-cell-border-color;
+  }
+
+  &__container {
+    display: block;
+    color: @oui-datagrid-cell-font-color;
+    margin-left: @oui-datagrid-row-detail-spacing;
+    padding: @oui-datagrid-row-detail-padding;
+  }
+}
+
+// Empty placeholder
+.oui-datagrid-empty {
+  padding: @oui-datagrid-empty-padding;
+  text-align: center;
+
+  &__placeholder {
+    letter-spacing: @oui-datagrid-empty-placeholder-letter-spacing;
+    line-height: @oui-datagrid-empty-placeholder-line-height;
+    color: @oui-datagrid-empty-placeholder-font-color;
+    font-size: @oui-datagrid-empty-placeholder-font-size;
+    font-weight: @oui-datagrid-empty-placeholder-font-weight;
+  }
+}
+
+// Overflow container
+.oui-datagrid-responsive {
+  #oui > .table-responsive(oui-datagrid);
 }

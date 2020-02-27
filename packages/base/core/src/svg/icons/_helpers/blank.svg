@@ -9,4 +9,4 @@
   A higher size result with better shaped icons, but increase the font size.
   `128px` value seems a good compromise for the concept icons, that are very thin.
 -->
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"></svg>

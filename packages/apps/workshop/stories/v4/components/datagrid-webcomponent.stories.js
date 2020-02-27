@@ -14,7 +14,7 @@ import { compileTemplate } from '../../../src/utils';
 import data from '../../_data/datagrid/index.data.json';
 
 // Create mock module for the stories
-const moduleName = 'oui-datagrid-stories';
+const moduleName = 'datagrid-webcomponent.stories';
 angular.module(moduleName, [
   Datagrid,
 
@@ -23,7 +23,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Version 3/Components/Datagrid',
+  title: 'Version 4/Components/Datagrid/WebComponent',
 
   parameters: {
     notes: readme,
@@ -77,7 +77,6 @@ export const EmptyPlaceholer = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-datagrid
-      empty-placeholder="{{ $ctrl.placeholder }}"
       page-size="5"
       rows="$ctrl.data">
       <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
@@ -88,7 +87,6 @@ export const EmptyPlaceholer = forModule(moduleName).createElement(
     {
       $ctrl: {
         data: [],
-        placeholder: 'There’s no bananas here, sorry :(',
       },
     },
   ),

@@ -11,18 +11,15 @@
     align-items: center;
   });
 
-  .oui-button_link,
-  .oui-button_ghost {
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: @oui-pagination-link-spacing;
-  }
-
   &__progress {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     white-space: nowrap;
+
+    .oui-button {
+      margin-right: @oui-pagination-link-spacing;
+    }
   }
 
   &__progress-text {

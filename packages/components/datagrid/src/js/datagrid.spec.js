@@ -10,21 +10,30 @@ describe('ouiDatagrid', () => {
   let ouiDatagridService;
   let fakeData;
 
-  const getRows = (element) => element[0].querySelectorAll('.oui-datagrid__body .oui-datagrid__row:not(.oui-datagrid__row_loading)');
+  const getRows = (element) => element[0].querySelectorAll('.oui-datagrid__row:not(.oui-datagrid__row_placeholder)');
   const getRow = (element, lineNumber) => angular.element(getRows(element)[lineNumber]);
-  const getHeaderRow = (element) => angular.element(element[0].querySelector('.oui-datagrid__headers > tr'));
+  const getHeaderRow = (element) => angular.element(element[0].querySelector('thead > tr'));
   const getHeaderCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__header')[columnNumber]);
-  const getFooterRow = (element) => angular.element(element[0].querySelector('.oui-datagrid__footers > tr'));
+  const getFooterRow = (element) => angular.element(element[0].querySelector('tfoot > tr'));
   const getFooterCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__footer')[columnNumber]);
   const getCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__cell')[columnNumber]);
   const getPaginationOffset = (element) => angular.element(element[0].querySelector('.oui-pagination .oui-dropdown .oui-button span:first-child'));
   const getPaginationLastItemOffset = (element) => angular.element(element[0].querySelector('.oui-pagination .oui-dropdown .oui-button span:nth-child(2)'));
   const getNextPagePaginationButton = (element) => angular.element(element[0].querySelector('.oui-pagination__selector > .oui-button:last-child'));
   const isSortableCell = (element) => element.hasClass('oui-datagrid__header_sortable');
-  const isSortableAscCell = (element) => element.hasClass('oui-datagrid__header_sortable-asc');
-  const isSortableDescCell = (element) => element.hasClass('oui-datagrid__header_sortable-desc');
+  const isSortableAscCell = (element) => {
+    const isSortable = isSortableCell(element);
+    const isSortableDesc = angular.element(element[0].querySelector('.oui-icon')).hasClass('oui-icon-sort-up');
+
+    return isSortable && isSortableDesc;
+  };
+  const isSortableDescCell = (element) => {
+    const isSortable = isSortableCell(element);
+    const isSortableDesc = angular.element(element[0].querySelector('.oui-icon')).hasClass('oui-icon-sort-down');
+
+    return isSortable && isSortableDesc;
+  };
   const getActionMenu = (element) => element.find('oui-action-menu');
-  const isStickyCell = (element) => element.hasClass('oui-datagrid__cell-sticky');
   const getDatagridParameters = (element) => element.find('oui-datagrid-parameters');
   const getColumnsInDatagridParameters = (element) => angular.element(element[0].querySelectorAll('oui-datagrid-parameters .oui-datagrid-parameters__column'));
 
@@ -1345,7 +1354,6 @@ describe('ouiDatagrid', () => {
       const $actionCell = getCell($firstRow, 2);
 
       expect(getActionMenu($actionCell)).toBeDefined();
-      expect(isStickyCell($actionCell)).toBe(true);
     });
 
     it('should support ng-repeat', () => {

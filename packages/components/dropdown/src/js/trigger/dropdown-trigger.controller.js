@@ -36,7 +36,18 @@ export default class {
             'aria-haspopup': true,
             'aria-expanded': false,
           })
-          .on('click', () => !this.disabled && this.dropdown.onTriggerClick())
+          .on('click', (evt) => {
+            evt.stopPropagation();
+
+            if (!this.disabled) {
+              this.dropdown.onTriggerClick();
+            }
+          })
+          .on('keydown', (evt) => {
+            evt.stopPropagation();
+
+            this.dropdown.triggerKeyHandler(evt);
+          })
           .on('blur', (evt) => this.dropdown.triggerBlurHandler(evt));
 
         this.$trigger = this.$element;
@@ -56,12 +67,10 @@ export default class {
   afterOpen() {
     this.$trigger.attr('aria-expanded', true);
     this.$trigger[0].focus();
-    this.$trigger.on('keydown', (evt) => this.dropdown.triggerKeyHandler(evt));
   }
 
   afterClose() {
     this.$trigger.attr('aria-expanded', false);
     this.$trigger[0].blur();
-    this.$trigger.off('keydown');
   }
 }
