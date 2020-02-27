@@ -157,7 +157,7 @@
         <!-- Placeholder Body -->
         <tbody
             ng-show="!$ctrl.displayedRows.length || $ctrl.loading || $ctrl.firstLoading">
-            <tr class="oui-datagrid__row">
+            <tr class="oui-datagrid__row oui-datagrid__row_placeholder">
                 <td class="oui-datagrid__cell oui-datagrid-empty"
                     ng-attr-colspan="{{ $ctrl.getPlaceholderColspan() }}">
                     <div ng-if="!$ctrl.loading && !$ctrl.firstLoading">
