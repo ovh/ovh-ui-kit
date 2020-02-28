@@ -1,8 +1,8 @@
 <dl class="oui-tile__definition">
     <dt class="oui-tile__term" ng-transclude="termSlot">
         <span ng-bind="::$ctrl.term"></span>
-        <button type="button" class="oui-popover-button"
-            aria-label="Help"
+        <button type="button"
+            class="oui-popover-button"
             ng-if="::!!$ctrl.termPopover"
             oui-popover="{{::$ctrl.termPopover}}">
         </button>
