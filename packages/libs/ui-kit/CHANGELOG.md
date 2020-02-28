@@ -1,3 +1,99 @@
+# [4.0.0-ods.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.1...v4.0.0-ods.0) (2020-02-28)
+
+
+### Bug Fixes
+
+* **button:** add support for old classnames ([3703807](https://github.com/ovh-ux/ovh-ui-kit/commit/3703807824bbf0297aa4bd9066b5d83f43cd598b))
+* **field:** add validation status ([be90137](https://github.com/ovh-ux/ovh-ui-kit/commit/be901371ba4f7c3884b81ca9f87fef3abb75ad7b))
+* **icons:** add missing icons ([616364b](https://github.com/ovh-ux/ovh-ui-kit/commit/616364b164d741bdbc97d61231f90c5644586f3a))
+* **icons:** fix icons alignment ([c3d7152](https://github.com/ovh-ux/ovh-ui-kit/commit/c3d71524768a5e50f3af75c169fa3a866f1f11d3))
+* **icons:** increase base size for icons generator ([#564](https://github.com/ovh-ux/ovh-ui-kit/issues/564)) ([d17689d](https://github.com/ovh-ux/ovh-ui-kit/commit/d17689ddc8f63920977f384047aaa2a9bd76feb1))
+* **oui-datagrid:** allow columns configuration from attribute and tag ([72b262f](https://github.com/ovh-ux/ovh-ui-kit/commit/72b262f41e8324d4f7b0f229ab07428d5e4f9431))
+* **oui-dropdown:** afterClose should remove the focus ([#538](https://github.com/ovh-ux/ovh-ui-kit/issues/538)) ([7cbf191](https://github.com/ovh-ux/ovh-ui-kit/commit/7cbf19197eed4ee0f81317b2601ec0b420c35060)), closes [ovh-ux/ovh-ui-angular#449](https://github.com/ovh-ux/ovh-ui-angular/issues/449)
+* **oui-dropdown:** display button when item has href and is disabled ([#499](https://github.com/ovh-ux/ovh-ui-kit/issues/499)) ([9e2a8ed](https://github.com/ovh-ux/ovh-ui-kit/commit/9e2a8ed532685b278c8041a9b84df464da1eac49))
+* **oui-numeric:** allow custom min and max values ([#514](https://github.com/ovh-ux/ovh-ui-kit/issues/514)) ([#516](https://github.com/ovh-ux/ovh-ui-kit/issues/516)) ([08c326b](https://github.com/ovh-ux/ovh-ui-kit/commit/08c326b8af7baa5078fac197acaf6339d687b3f6))
+* **radio:** remove transclude check ([3d4f726](https://github.com/ovh-ux/ovh-ui-kit/commit/3d4f726d139ca3383705e088133103a0ddb45319))
+* **radio:** update color changes ([e92fa30](https://github.com/ovh-ux/ovh-ui-kit/commit/e92fa30a45f92a57299de2d0973f66f14f5eb75b))
+* **stepper:** fix onFocus callback launched multiple times ([#495](https://github.com/ovh-ux/ovh-ui-kit/issues/495)) ([f83dd90](https://github.com/ovh-ux/ovh-ui-kit/commit/f83dd903142b8428e95f30bddb2408af1db0263e))
+* **tabs:** add subheading in responsive ([b96dca1](https://github.com/ovh-ux/ovh-ui-kit/commit/b96dca163e0d59f3c72581e67a887f0b9a5b2816))
+
+
+### Code Refactoring
+
+* remove size and variant attributes ([e6132c0](https://github.com/ovh-ux/ovh-ui-kit/commit/e6132c046534c6f06b1523e04fcea3957059309f))
+
+
+### Features
+
+* **badge:** add new variants ([5d64788](https://github.com/ovh-ux/ovh-ui-kit/commit/5d6478838376266b3033e7dc5d4c02b3d9b03d0f))
+* **box:** apply ODS theme ([#507](https://github.com/ovh-ux/ovh-ui-kit/issues/507)) ([fa4c76e](https://github.com/ovh-ux/ovh-ui-kit/commit/fa4c76ee7b02db3cd5a14648e3c38d38642b8ccb))
+* **button:** apply ODS theme for secondary & link variant ([#503](https://github.com/ovh-ux/ovh-ui-kit/issues/503)) ([be069f4](https://github.com/ovh-ux/ovh-ui-kit/commit/be069f49b2bdb9d6e323242a27b0f2beaddb2c14))
+* **checkbox:** apply ODS theme ([#567](https://github.com/ovh-ux/ovh-ui-kit/issues/567)) ([14a987f](https://github.com/ovh-ux/ovh-ui-kit/commit/14a987f9f829d98ac142ca34a47395fe405c1445))
+* **collapsible:** apply ODS theme ([#511](https://github.com/ovh-ux/ovh-ui-kit/issues/511)) ([6bfb644](https://github.com/ovh-ux/ovh-ui-kit/commit/6bfb644e05cffe07e82189f6e20726668f7fd91a))
+* **core:** add triangle-up-down icon ([30daed2](https://github.com/ovh-ux/ovh-ui-kit/commit/30daed29925ff020c648f097159f4b0c7569fb16))
+* **datagrid:** apply ODS theme ([#572](https://github.com/ovh-ux/ovh-ui-kit/issues/572)) ([f6b61ae](https://github.com/ovh-ux/ovh-ui-kit/commit/f6b61aecb36828932a619d8aba291be5ab3b8c10))
+* **field:** apply ODS theme ([#565](https://github.com/ovh-ux/ovh-ui-kit/issues/565)) ([343b595](https://github.com/ovh-ux/ovh-ui-kit/commit/343b595166103590f867959d464a56b4c950c73b))
+* **flags:** add flag icons ([#510](https://github.com/ovh-ux/ovh-ui-kit/issues/510)) ([f6ddcda](https://github.com/ovh-ux/ovh-ui-kit/commit/f6ddcdafa2952bb13e3b94cdd3a625415defa3d4))
+* **icons:** add missing system icons ([#505](https://github.com/ovh-ux/ovh-ui-kit/issues/505)) ([f50c221](https://github.com/ovh-ux/ovh-ui-kit/commit/f50c2215baf501cce8ff0535caa6ad71e8fde0a9))
+* **oui-criteria-adder:** add button description ([#528](https://github.com/ovh-ux/ovh-ui-kit/issues/528)) ([2f21b65](https://github.com/ovh-ux/ovh-ui-kit/commit/2f21b65bc134b2c98014af357bad5e8b8e005f96))
+* **oui-navbar:** allow to create link as menu header ([#504](https://github.com/ovh-ux/ovh-ui-kit/issues/504)) ([d56f30a](https://github.com/ovh-ux/ovh-ui-kit/commit/d56f30aa33ddf0cb95c22b4eef8cc59e7fc4ec73))
+* **oui-radio:** add transclude slots ([baea469](https://github.com/ovh-ux/ovh-ui-kit/commit/baea4695a8282ff02998b3e11b767fcf61bfac9b))
+* **radio:** apply ODS theme ([b335433](https://github.com/ovh-ux/ovh-ui-kit/commit/b335433d0438c19625354c2587d4651afedd4cdb))
+* **radio-toggle-group:** apply ODS theme ([6a4457e](https://github.com/ovh-ux/ovh-ui-kit/commit/6a4457e598583afe570e804d08b73f4a89e11f6a))
+* **select:** apply ODS theme ([#570](https://github.com/ovh-ux/ovh-ui-kit/issues/570)) ([43aa4c9](https://github.com/ovh-ux/ovh-ui-kit/commit/43aa4c9c5ebb0a96cc2c33f5119d5a7edfcd2d43))
+* **status:** apply ODS theme & add small size ([#506](https://github.com/ovh-ux/ovh-ui-kit/issues/506)) ([e5a76bd](https://github.com/ovh-ux/ovh-ui-kit/commit/e5a76bdfea1428dba810e29488c9f5c74cda3792))
+* **tabs:** apply ODS theme ([#512](https://github.com/ovh-ux/ovh-ui-kit/issues/512)) ([1a843f7](https://github.com/ovh-ux/ovh-ui-kit/commit/1a843f71c75c791fca85bef851b603606788ff84))
+* **textarea:** add inline attribute ([3797f74](https://github.com/ovh-ux/ovh-ui-kit/commit/3797f743657c153ccd8d4bf195505905f5e38c5a))
+* update display for sortable headers ([e8e15eb](https://github.com/ovh-ux/ovh-ui-kit/commit/e8e15ebb2aa6a74d9a7b1ba39f34e94639e3a10e))
+
+
+### BREAKING CHANGES
+
+* remove size and variant attributes for `checkbox`, `radio` and `select-picker`
+
+Signed-off-by: Axel Peter <axel.peter@live.com>
+* **tabs:** The attribute 'checked' is not used anymore and has been removed.
+
+
+
+# [4.0.0-rc.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.1...v4.0.0-rc.4) (2019-08-19)
+
+
+
+# [4.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.2...v4.0.0-rc.3) (2019-08-14)
+
+
+### Bug Fixes
+
+* fix outline borders ([9c1e47d](https://github.com/ovh-ux/ovh-ui-kit/commit/9c1e47d76fc5a7621008e9be26d6c7682d35efbc))
+
+
+
+# [4.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0-rc.1...v4.0.0-rc.2) (2019-08-14)
+
+
+
+# [4.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v4.0.0-rc.1) (2019-08-13)
+
+
+
+# [4.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v4.0.0-rc.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* **icons:** fix name typo and add missing book icon ([0f60c50](https://github.com/ovh-ux/ovh-ui-kit/commit/0f60c50467a2ddd361928ff52af15cc968a8dc36))
+
+
+### Features
+
+* **button:** add block and icon attribute ([002579c](https://github.com/ovh-ux/ovh-ui-kit/commit/002579cf0908a1cc5ae8af84dd6cb90928a45602))
+* **button:** add size attribute ([80801cd](https://github.com/ovh-ux/ovh-ui-kit/commit/80801cdc94986881b41d441e2d88aea5062d013f))
+* **button:** update primary style for ODS theme ([2c59e0f](https://github.com/ovh-ux/ovh-ui-kit/commit/2c59e0f110fc2a9263265138431fc95aaf067c6e))
+* **chips:** update style for ODS theme ([84f2dad](https://github.com/ovh-ux/ovh-ui-kit/commit/84f2dadb92a910b3990abf0ef82b4c65db2f19ce))
+
+
+
 ## [3.11.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.0...v3.11.1) (2020-02-21)
 
 
