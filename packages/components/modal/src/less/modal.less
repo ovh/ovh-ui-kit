@@ -56,10 +56,12 @@
   }
 
   &__title {
-    margin-top: 0;
     color: @oui-modal-title-color;
-    font-size: @oui-modal-header-font-size;
-    font-weight: @oui-modal-header-font-weight;
+    font-size: @oui-modal-title-font-size;
+    font-weight: @oui-modal-title-font-weight;
+    letter-spacing: @oui-modal-title-letter-spacing;
+    line-height: @oui-modal-title-line-height;
+    margin: @oui-modal-title-margin;
   }
 
   &__loader {
@@ -87,6 +89,9 @@
   }
 
   &__icon {
+    width: @oui-modal-icon-font-size;
+    height: @oui-modal-icon-font-size;
+    line-height: @oui-modal-icon-font-size;
     position: absolute;
     display: block;
     top: @oui-modal-icon-position-top;

@@ -1,6 +1,8 @@
 # Breaking Changes
 
-With this major update, we apply the new guidelines of our [Design System](https://design.cxprojects.ovh/). The application of those guidelines will be done in multiple batch of changes. The v4.0.x consists of the first batch of changes.
+With this major update, we apply the new guidelines from our [Design System](https://design.cxprojects.ovh/). The application of those guidelines will be done in multiple batch of changes. The v4.0.x consists of the first batch of changes.
+
+The following batches will be released as minor versions and will not be breaking like this one.
 
 ## Stable changes
 
