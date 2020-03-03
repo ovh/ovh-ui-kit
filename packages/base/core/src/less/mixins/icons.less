@@ -8,15 +8,34 @@
     @content: "oui-icon-index-@{name}";
   }
 
-  .icon-type() {
-    #oui > .for(@oui-icon-index); .-each(@index) {
+  .icon-type(
+    @icon-array: @oui-icon-index
+  ) {
+    #oui > .for(@icon-array); .-each(@index) {
       #oui > .define(@index);
 
-      &.oui-icon-@{index}::before,
-      &.oui-icon-@{index}_extra-thin::before { // Deprecated: Support for old classnames
-        display: block;
+      &.oui-icon-@{index}::before {
         content: @@content;
       }
     }
+  }
+
+  .icon-content(
+    @icon-array: @oui-icon-content
+  ) {
+    .make-icon-content(@i: 1) when (@i <= length(@icon-array)) {
+      .make-icon-content(@i + 1);
+
+      @pair: extract(@icon-array, @i);
+      @key: extract(@pair, 1);
+      @extend: extract(@pair, 2);
+      @content: "oui-icon-index-@{extend}";
+
+      .oui-icon-@{key}::before {
+        content: @@content;
+      }
+    }
+
+    .make-icon-content();
   }
 }

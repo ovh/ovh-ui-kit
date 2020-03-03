@@ -69,7 +69,7 @@ export const WithLinksVariant = () => `
     </li>
     <li class="oui-navbar-list__item">
       <a class="oui-navbar-link oui-navbar-link_tertiary oui-navbar-link_icon" href>
-        <span class="oui-icon oui-icon-info_circle" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-info-circle" aria-hidden="true"></span>
         Adipiscing elit
       </a>
     </li>

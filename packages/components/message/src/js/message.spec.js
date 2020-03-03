@@ -41,7 +41,7 @@ describe('ouiMessage', () => {
       it('should display info icon', () => {
         const element = TestUtils.compileTemplate('<oui-message type="info"></oui-message>');
 
-        expect(getIcons(element, 'oui-icon-info_circle').length).toBe(1);
+        expect(getIcons(element, 'oui-icon-info-circle').length).toBe(1);
       });
     });
 
@@ -49,7 +49,7 @@ describe('ouiMessage', () => {
       it('should display success icon', () => {
         const element = TestUtils.compileTemplate('<oui-message type="success"></oui-message>');
 
-        expect(getIcons(element, 'oui-icon-success_circle').length).toBe(1);
+        expect(getIcons(element, 'oui-icon-success-circle').length).toBe(1);
       });
     });
 
@@ -57,7 +57,7 @@ describe('ouiMessage', () => {
       it('should display error icon', () => {
         const element = TestUtils.compileTemplate('<oui-message type="error"></oui-message>');
 
-        expect(getIcons(element, 'oui-icon-error_circle').length).toBe(1);
+        expect(getIcons(element, 'oui-icon-error-circle').length).toBe(1);
       });
     });
 
@@ -65,7 +65,7 @@ describe('ouiMessage', () => {
       it('should display warning icon', () => {
         const element = TestUtils.compileTemplate('<oui-message type="warning"></oui-message>');
 
-        expect(getIcons(element, 'oui-icon-warning_circle').length).toBe(1);
+        expect(getIcons(element, 'oui-icon-warning-circle').length).toBe(1);
       });
     });
 

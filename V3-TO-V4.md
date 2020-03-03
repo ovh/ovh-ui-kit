@@ -25,9 +25,48 @@ We aim with this version to be as less breaking as possible with the functioning
 ### Icons
 
 * Icons default `font-size` has been changed from `1.5em` to `1em`.
+
+There is now only 2 sets of icons: `concept` and `system`.
+
 * Icons set `oui-icon-*_thin`, `oui-icon-*_extra-thin` has been removed. Use corresponding `oui-icon-*` icons instead.
-* Icons set `oui-icon-*_line` has been removed. Use corresponding `oui-icon-*_concept` icons instead.
-* Modifier `oui-icon-*_bicolor` is not used anymore and has been removed.
+* Icons set `oui-icon-*_line` has been removed. Use corresponding `oui-icon-*` or `oui-icon-*_concept` icons instead.
+* Modifier classname `oui-icon-*_bicolor` is not used anymore and has been removed.
+
+These changes impact the `concept` icons:
+
+* Icon `.oui-icon-minus_concept` has been removed. Use `.oui-icon-minus` icon instead.
+* Icon `.oui-icon-chrono-on-off-quickstart_concept` has been renamed to `.oui-icon-chrono_concept`.
+* Icon `.oui-icon-cloudhand_concept` has been renamed to `.oui-icon-cloud-hand_concept`.
+* Icon `.oui-icon-gear_2_concept` has been renamed to `.oui-icon-server-gear_concept`.
+* Icon `.oui-icon-gpu_concept` has been renamed to `.oui-icon-hardware-gpu_concept`.
+* Icon `.oui-icon-hands_concept` has been renamed to `.oui-icon-handshake_concept`.
+* Icon `.oui-icon-loc-ovh_concept` has been renamed to `.oui-icon-geolocalisation-ovhcloud_concept`.
+* Icon `.oui-icon-on_concept` has been renamed to `.oui-icon-speaker-on_concept`.
+* Icon `.oui-icon-none_concept` has been renamed to `.oui-icon-speaker-off_concept`.
+* Icon `.oui-icon-pay-as-you-go_concept` has been renamed to `.oui-icon-calendar-pay-as-you-go_concept`.
+* Icon `.oui-icon-phone-mobile_concept` has been renamed to `.oui-icon-device-mobile_concept`.
+* Icon `.oui-icon-phone-tablet_concept` has been renamed to `.oui-icon-device-tablet_concept`.
+* Icon `.oui-icon-plan_concept` has been renamed to `.oui-icon-geolocalisation-plan_concept`.
+* Icon `.oui-icon-replication-application_concept` has been renamed to `.oui-icon-app-replication_concept`.
+* Icon `.oui-icon-sata_concept` has been renamed to `.oui-icon-hardware-sata_concept`.
+* Icon `.oui-icon-ssd_concept` has been renamed to `.oui-icon-hardware-ssd_concept`.
+* Icon `.oui-icon-symmetrical-lines_concept` has been renamed to `.oui-icon-lines-symmetrical_concept`.
+* Icon `.oui-icon-transit-padlock_concept` has been renamed to `.oui-icon-padlock-transit_concept`.
+
+These changes impact the `system` icons:
+
+* Icons `.oui-icon-copy-error`, `.oui-icon-copy-normal`, and `.oui-icon-copy-success` have been removed. Use `.oui-icon-copy` icon instead.
+* Icon `.oui-icon-error_circle` has been renamed to `.oui-icon-error-circle`.
+* Icon `.oui-icon-external_link` has been renamed to `.oui-icon-external-link`.
+* Icon `.oui-icon-eye` has been renamed to `.oui-icon-eye-open`.
+* Icon `.oui-icon-eye-blocked` has been renamed to `.oui-icon-eye-closed`.
+* Icon `.oui-icon-help_circle` has been renamed to `.oui-icon-help-circle`.
+* Icon `.oui-icon-info_circle` has been renamed to `.oui-icon-info-circle`.
+* Icon `.oui-icon-success_circle` has been renamed to `.oui-icon-success-circle`.
+* Icon `.oui-icon-triangle-up-down` has been renamed to `.oui-icon-sort`.
+* Icon `.oui-icon-warning_circle` has been renamed to `.oui-icon-warning-circle`.
+
+Previous classnames are still supported with this version.
 
 ## Components
 

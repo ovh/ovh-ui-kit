@@ -42,7 +42,7 @@ export const Default = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>`;
 
 export const Inline = () => `
@@ -51,7 +51,7 @@ export const Inline = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>`;
 
 export const Sizes = () => `
@@ -60,7 +60,7 @@ export const Sizes = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>
 
   <div class="oui-input-overlay oui-input-overlay_s">
@@ -68,7 +68,7 @@ export const Sizes = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>
 
   <div class="oui-input-overlay oui-input-overlay_m">
@@ -76,7 +76,7 @@ export const Sizes = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>
 
   <div class="oui-input-overlay oui-input-overlay_l">
@@ -84,7 +84,7 @@ export const Sizes = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>
 
   <div class="oui-input-overlay oui-input-overlay_xl">
@@ -92,7 +92,7 @@ export const Sizes = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-help_circle"></span>
+    <span class="oui-icon oui-icon-help-circle"></span>
   </div>`;
 
 export const Validation = () => `
@@ -101,7 +101,7 @@ export const Validation = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-error_circle"></span>
+    <span class="oui-icon oui-icon-error-circle"></span>
   </div>
 
   <div class="oui-input-overlay">
@@ -109,7 +109,7 @@ export const Validation = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-warning_circle"></span>
+    <span class="oui-icon oui-icon-warning-circle"></span>
   </div>
 
   <div class="oui-input-overlay">
@@ -117,7 +117,7 @@ export const Validation = () => `
       placeholder="Please insert your text..."
       type="text"
       ${select(state.label, state.options, state.default)}>
-    <span class="oui-icon oui-icon-success_circle"></span>
+    <span class="oui-icon oui-icon-success-circle"></span>
   </div>`;
 
 export const WithTooltip = forModule(moduleName).createElement(
@@ -128,7 +128,7 @@ export const WithTooltip = forModule(moduleName).createElement(
         placeholder="Please insert your text..."
         type="text"
         ${select(state.label, state.options, state.default)}>
-      <span class="oui-icon oui-icon-help_circle"
+      <span class="oui-icon oui-icon-help-circle"
         title="Lorem ipsum dolor sit amet"
         oui-tooltip>
       </span>
@@ -149,7 +149,7 @@ export const WithPopover = forModule(moduleName).createElement(
         oui-popover
         oui-popover-placement="left-start"
         ${select(state.label, state.options, state.default)}>
-        <span class="oui-icon oui-icon-help_circle"></span>
+        <span class="oui-icon oui-icon-help-circle"></span>
       </button>
     </div>`,
   ),

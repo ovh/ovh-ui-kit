@@ -151,7 +151,7 @@ describe('ouiModal', () => {
       const $body = getBody(element);
 
       expect($body.html()).not.toContain('oui-modal__body_no-icon');
-      expect($body.html()).toContain('oui-icon-warning_circle');
+      expect($body.html()).toContain('oui-icon-warning-circle');
     });
 
     it('should disable buttons when loading', () => {

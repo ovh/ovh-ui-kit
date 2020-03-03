@@ -43,7 +43,7 @@
             "class": "navbar-notification__list",
             "title": "<div class=\"oui-color-gothic\">Your</div><span>notifications</span>",
             "headerTitle": "Your notifications",
-            "iconClass": "oui-icon oui-icon-info_circle",
+            "iconClass": "oui-icon oui-icon-info-circle",
             "iconAnimated": true,
             "subLinks": [
               {
@@ -128,7 +128,7 @@
         {
             "name": "user",
             "title": "<div class=\"oui-color-text_oui-color-gothic\">Hello Username</div><span>your account</span>",
-            "iconClass": "oui-icon oui-icon-info_circle",
+            "iconClass": "oui-icon oui-icon-info-circle",
             "subLinks": [
                 {
                     "name": "user.adipiscing",
@@ -408,7 +408,7 @@
         "name": "notifications",
         "class": "navbar-notification__list",
         "title": "Notifications",
-        "iconClass": "oui-icon oui-icon-info_circle",
+        "iconClass": "oui-icon oui-icon-info-circle",
         "subLinks": null,
         "limitTo": 10
     }]

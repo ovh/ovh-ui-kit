@@ -137,8 +137,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-error_circle"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-error_circle</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-error-circle"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-error-circle</code></div>
   </div>
 
   <div class="doc-badge">
@@ -147,13 +147,13 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-eye-blocked"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-eye-blocked</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-eye-closed"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-eye-closed</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-eye"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-eye</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-eye-open"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-eye-open</code></div>
   </div>
 
   <div class="doc-badge">
@@ -192,8 +192,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-help_circle"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-help_circle</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-help-circle"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-help-circle</code></div>
   </div>
 
   <div class="doc-badge">
@@ -212,8 +212,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-info_circle"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-info_circle</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-info-circle"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-info-circle</code></div>
   </div>
 
   <div class="doc-badge">
@@ -292,8 +292,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-success_circle"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-success_circle</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-success-circle"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-success-circle</code></div>
   </div>
 
   <div class="doc-badge">
@@ -347,11 +347,6 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-triangle-up-down"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-triangle-up-down</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-user"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-user</code></div>
   </div>
@@ -362,8 +357,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-warning_circle"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-warning_circle</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-warning-circle"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-warning-circle</code></div>
   </div>
 
 </div>`;
@@ -384,6 +379,11 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-application_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-application_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-app-replication_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-app-replication_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -477,6 +477,11 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-calendar-pay-as-you-go_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-calendar-pay-as-you-go_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-camera_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-camera_concept</code></div>
   </div>
@@ -497,8 +502,8 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chrono-on-off-quickstart_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-chrono-on-off-quickstart_concept</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chrono_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-chrono_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -532,6 +537,11 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cloud-hand_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-cloud-hand_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cloud-hybrid_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-cloud-hybrid_concept</code></div>
   </div>
@@ -549,11 +559,6 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cloud-server_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-cloud-server_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cloudhand_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-cloudhand_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -657,6 +662,16 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-device-mobile_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-device-mobile_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-device-tablet_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-device-tablet_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-diamond_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-diamond_concept</code></div>
   </div>
@@ -752,11 +767,6 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-gear_2_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-gear_2_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-gear-arrow_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-gear-arrow_concept</code></div>
   </div>
@@ -767,13 +777,23 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-gift_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-gift_concept</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-gear-dollar_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-gear-dollar_concept</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-gpu_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-gpu_concept</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-geolocalisation-ovhcloud_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-geolocalisation-ovhcloud_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-geolocalisation-plan_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-geolocalisation-plan_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-gift_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-gift_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -787,8 +807,8 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-hands_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-hands_concept</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-handshake_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-handshake_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -797,8 +817,18 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-happy_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-happy_concept</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-hardware-gpu_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-hardware-gpu_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-hardware-sata_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-hardware-sata_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-hardware-ssd_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-hardware-ssd_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -872,8 +902,8 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-loc-ovh_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-loc-ovh_concept</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-lines-symmetrical_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-lines-symmetrical_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -912,11 +942,6 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-minus_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-minus_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-modem_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-modem_concept</code></div>
   </div>
@@ -937,18 +962,8 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-none_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-none_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-nra_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-nra_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-on_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-on_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -969,6 +984,11 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-padlock-opened_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-padlock-opened_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-padlock-transit_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-padlock-transit_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -1004,11 +1024,6 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-pause_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-pause_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-pay-as-you-go_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-pay-as-you-go_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -1052,23 +1067,8 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-phone-mobile_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-phone-mobile_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-phone-tablet_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-phone-tablet_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-pig_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-pig_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-plan_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-plan_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -1112,11 +1112,6 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-replication-application_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-replication-application_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-replication_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-replication_concept</code></div>
   </div>
@@ -1124,16 +1119,6 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-rss_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-rss_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sad_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-sad_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sata_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-sata_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -1152,6 +1137,11 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-server-managed_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-server-managed_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-share_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-share_concept</code></div>
   </div>
@@ -1159,6 +1149,16 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-shield_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-shield_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-smiley-happy_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-smiley-happy_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-smiley-sad_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-smiley-sad_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -1192,11 +1192,6 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-ssd_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-ssd_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-star_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-star_concept</code></div>
   </div>
@@ -1209,11 +1204,6 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sub-repartitor_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-sub-repartitor_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-symmetrical-lines_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-symmetrical-lines_concept</code></div>
   </div>
 
   <div class="doc-badge">
@@ -1239,11 +1229,6 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-transfer_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-transfer_concept</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-transit-padlock_concept"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-transit-padlock_concept</code></div>
   </div>
 
   <div class="doc-badge">
