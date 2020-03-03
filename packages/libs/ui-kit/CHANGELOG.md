@@ -1,3 +1,12 @@
+## [3.11.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.1...v3.11.2) (2020-03-03)
+
+
+### Bug Fixes
+
+* **oui-select:** trigger onChange when element is removed ([#573](https://github.com/ovh-ux/ovh-ui-kit/issues/573)) ([449f338](https://github.com/ovh-ux/ovh-ui-kit/commit/449f338e1207713d173dd03f64e2a3416daa1378))
+
+
+
 ## [3.11.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.0...v3.11.1) (2020-02-21)
 
 
