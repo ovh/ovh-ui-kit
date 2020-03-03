@@ -205,6 +205,32 @@ describe('ouiSelect', () => {
 
         expect(matchItems.length).toBe(1);
       });
+
+
+      it('should trigger onChange callback if an item is removed', () => {
+        const onChange = jasmine.createSpy();
+        const element = TestUtils.compileTemplate(`
+            <oui-select name="country"
+                model="$ctrl.country"
+                title="Select a country"
+                placeholder="Select a country..."
+                items="$ctrl.countries"
+                match="country.name"
+                multiple
+                on-change="$ctrl.onChange()">
+            </oui-select>`, {
+          countries: data,
+          onChange,
+          country: data.slice(0, 4),
+        });
+
+        const items = angular.element(getMultipleMatchItem(element));
+        const $triggerButton = angular.element(items[0]);
+        $triggerButton.triggerHandler('click');
+        $timeout.flush();
+
+        expect(onChange).toHaveBeenCalled();
+      });
     });
 
     describe('Not grouped', () => {
