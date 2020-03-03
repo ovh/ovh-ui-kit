@@ -32,6 +32,7 @@
 
     &.oui-button_block.oui-button_icon-right {
       .oui-icon {
+        &:not(.oui-icon-external_link)::before, /* Deprecated: Support for old classname */
         &:not(.oui-icon-external-link)::before {
           right: @oui-tile-item-side-spacing;
         }

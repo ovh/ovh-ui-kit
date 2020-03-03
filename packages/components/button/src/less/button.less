@@ -31,6 +31,7 @@
     font-size: @oui-button-icon-size;
   }
 
+  .oui-icon-external_link, /* Deprecated: Support for old classname */
   .oui-icon-external-link {
     font-size: @oui-button-external-icon-size;
   }
@@ -68,8 +69,7 @@ oui-button {
 }
 
 // Sizes variants
-// Deprecated: Support for old classname
-.oui-button_full-width,
+.oui-button_full-width, /* Deprecated: Support for old classname */
 .oui-button_block {
   max-width: none;
   width: 100%;
@@ -87,24 +87,24 @@ oui-button {
     left: @oui-button-icon-offset;
   }
 
+  &.oui-button_icon-right .oui-icon:not(.oui-icon-external_link), /* Deprecated: Support for old classname */
   &.oui-button_icon-right .oui-icon:not(.oui-icon-external-link) {
     right: @oui-button-icon-offset;
   }
 
+  .oui-icon-external_link, /* Deprecated: Support for old classname */
   .oui-icon-external-link {
     margin-left: @oui-button-external-icon-spacing;
   }
 }
 
-// Deprecated: Support for old classname
-.oui-button_small-width,
+.oui-button_small-width, /* Deprecated: Support for old classname */
 .oui-button_s {
   min-width: @oui-button-small-min-width;
   padding: @oui-button-small-padding;
 }
 
-// Deprecated: Support for old classname
-.oui-button_large-height,
+.oui-button_large-height, /* Deprecated: Support for old classname */
 .oui-button_l {
   line-height: @oui-button-large-line-height;
   padding: @oui-button-large-padding;
@@ -137,13 +137,15 @@ oui-button {
   padding: @oui-button-primary-padding;
   border-width: @oui-button-primary-border-width;
 
-  // Deprecated: Support for old classname
-  &.oui-button_small-width,
-  &.oui-button_s { padding: @oui-button-primary-padding_small; }
+  &.oui-button_small-width, /* Deprecated: Support for old classname */
+  &.oui-button_s {
+    padding: @oui-button-primary-padding_small;
+  }
 
-  // Deprecated: Support for old classname
-  &.oui-button_large-height,
-  &.oui-button_l { padding: @oui-button-primary-padding_large; }
+  &.oui-button_large-height, /* Deprecated: Support for old classname */
+  &.oui-button_l {
+    padding: @oui-button-primary-padding_large;
+  }
 }
 
 .oui-button_secondary {
@@ -169,13 +171,15 @@ oui-button {
   padding: @oui-button-secondary-padding;
   border-width: @oui-button-secondary-border-width;
 
-  // Deprecated: Support for old classname
-  &.oui-button_small-width,
-  &.oui-button_s { padding: @oui-button-secondary-padding_small; }
+  &.oui-button_small-width, /* Deprecated: Support for old classname */
+  &.oui-button_s {
+    padding: @oui-button-secondary-padding_small;
+  }
 
-  // Deprecated: Support for old classname
-  &.oui-button_large-height,
-  &.oui-button_l { padding: @oui-button-secondary-padding_large; }
+  &.oui-button_large-height, /* Deprecated: Support for old classname */
+  &.oui-button_l {
+    padding: @oui-button-secondary-padding_large;
+  }
 }
 
 .oui-button_dropdown {
@@ -225,8 +229,7 @@ oui-button {
   }
 
   // No need to add a small variant
-  // Deprecated: Support for old classname
-  &.oui-button_large-height,
+  &.oui-button_large-height, /* Deprecated: Support for old classname */
   &.oui-button_l {
     padding: @oui-button-dropdown-padding_large;
     padding-right: @oui-button-dropdown-padding-right_large;
@@ -258,11 +261,13 @@ oui-button {
     @icon-color_disabled: @oui-button-link-icon-color_disabled
   );
 
-  // Deprecated: Support for old classname
-  &.oui-button_small-width,
-  &.oui-button_s { padding: @oui-button-link-padding_small; }
+  &.oui-button_small-width, /* Deprecated: Support for old classname */
+  &.oui-button_s {
+    padding: @oui-button-link-padding_small;
+  }
 
-  // Deprecated: Support for old classname
-  &.oui-button_large-height,
-  &.oui-button_l { padding: @oui-button-link-padding_large; }
+  &.oui-button_large-height, /* Deprecated: Support for old classname */
+  &.oui-button_l {
+    padding: @oui-button-link-padding_large;
+  }
 }
