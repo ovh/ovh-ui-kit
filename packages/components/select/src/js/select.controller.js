@@ -124,6 +124,12 @@ export default class {
     });
   }
 
+  onUiSelectRemove() {
+    if (this.multiple) {
+      this.onChange({ modelValue: this.$select.selected });
+    }
+  }
+
   getPropertyValue(item) {
     return get(item, this.match, item);
   }
