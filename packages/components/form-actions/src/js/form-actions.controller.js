@@ -15,7 +15,7 @@ export default class {
   }
 
   processTranslations() {
-    this.translations = Object.assign({}, this.config.translations);
+    this.translations = { ...this.config.translations };
 
     if (angular.isUndefined(this.submitText)) {
       this.submitText = this.translations.submit;

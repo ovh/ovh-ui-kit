@@ -50,7 +50,9 @@
     }
 
     &:focus {
-      #oui > .outline-border();
+      #oui > .outline-border(
+        @outline-offset: @oui-navbar-outline-offset
+      );
     }
 
     .oui-icon {
@@ -85,11 +87,11 @@
     z-index: @oui-navbar-backdrop-z-index;
 
     &_active {
-      #oui > .tablet({
+      @media screen and (max-width: @device-breakpoint-tablet-max-width) {
         opacity: @oui-navbar-backdrop-opacity;
         pointer-events: auto;
         z-index: @oui-navbar-z-index;
-      });
+      }
     }
   }
 
@@ -151,28 +153,7 @@
       );
     }
 
-    &_tertiary {
-      #oui > .navbar-link_variant(
-        @font-size: @oui-navbar-icon-font-size,
-        @font-weight: @oui-navbar-icon-font-weight
-      );
-    }
-
-    &_tertiary:hover,
-    &_tertiary:focus,
-    &_tertiary&_active,
-    &_tertiary[aria-expanded="true"] {
-      #oui > .navbar-link_variant(
-        @background-color: @oui-navbar-background-color_active,
-        @font-color: @oui-navbar-font-color,
-        @font-size: @oui-navbar-icon-font-size,
-        @font-weight: @oui-navbar-icon-font-weight
-      );
-    }
-
     &_dropdown {
-      &:extend(.oui-navbar-link_tertiary all);
-
       text-decoration: none !important;
 
       .oui-navbar-link__text { text-decoration: @oui-navbar-link-text-decoration !important; }
@@ -180,6 +161,26 @@
       &:hover .oui-navbar-link__text,
       &:focus .oui-navbar-link__text {
         text-decoration: @oui-navbar-link-text-decoration_hover !important;
+      }
+    }
+
+    &_dropdown,
+    &_tertiary {
+      #oui > .navbar-link_variant(
+        @font-size: @oui-navbar-tertiary-font-size,
+        @font-weight: @oui-navbar-tertiary-font-weight
+      );
+
+      &:hover,
+      &:focus,
+      &_active,
+      &[aria-expanded="true"] {
+        #oui > .navbar-link_variant(
+          @background-color: @oui-navbar-background-color_active,
+          @font-color: @oui-navbar-tertiary-font-color,
+          @font-size: @oui-navbar-tertiary-font-size,
+          @font-weight: @oui-navbar-tertiary-font-weight
+        );
       }
     }
 
@@ -241,9 +242,9 @@
     margin-right: @oui-navbar-toggler-margin-right;
     text-align: center;
 
-    #oui > .tablet({
+    @media screen and (max-width: @device-breakpoint-tablet-max-width) {
       display: flex;
-    });
+    }
 
     &__hamburger {
       width: @oui-navbar-hamburger-width;
@@ -351,9 +352,9 @@
     }
 
     &_notifications&_fixed > .oui-navbar-list {
-      #oui > .desktop({
+      @media screen and (min-width: @device-breakpoint-tablet-min-width) {
         max-height: @oui-navbar-notification-max-height;
-      });
+      }
     }
 
     // Variant 'right' for Menus
@@ -379,7 +380,9 @@
       }
 
       &:focus {
-        #oui > .outline-border();
+        #oui > .outline-border(
+          @outline-offset: @oui-navbar-outline-offset
+        );
       }
     }
 
@@ -490,7 +493,7 @@
     // Add arrow for button with popup
     &[aria-haspopup="true"]::after {
       content: @oui-icon-index-chevron-right;
-      font-family: @oui-global-base-font-family-icon;
+      font-family: @base-font-family-icon;
       font-size: @oui-navbar-arrow-size;
       color: @oui-navbar-arrow-color;
       padding: 0;
@@ -505,15 +508,15 @@
   #oui > .navbar-menu_panel(panel);
 
   // Menu variant 'fixed', for mobile only
-  @media screen and (max-width: (@oui-responsive-breakpoint-tablet - 1px)) {
+  @media screen and (max-width: @device-breakpoint-tablet-max-width) {
     #oui > .navbar-menu_panel(fixed);
   }
 
   &-menu_notifications,
   &-menu__wrapper > &-menu_notifications {
-    #oui > .tablet({
+    @media screen and (max-width: @device-breakpoint-tablet-max-width) {
       max-width: @oui-navbar-menu-width_large;
-    });
+    }
   }
 
   &-notification {
@@ -537,9 +540,9 @@
     }
 
     & > &__action {
-      #oui > .desktop({
+      @media screen and (min-width: @device-breakpoint-tablet-min-width) {
         visibility: hidden;
-      });
+      }
     }
 
     &:hover > &__action {
@@ -565,19 +568,23 @@
       max-height: @oui-navbar-notification-icon-font-size;
       margin: @oui-navbar-notification-icon-margin;
 
-      &.oui-icon-info_circle {
+      &.oui-icon-info_circle, /* Deprecated: Support for old classname */
+      &.oui-icon-info-circle {
         color: @oui-navbar-notification-icon-color_info;
       }
 
-      &.oui-icon-success_circle {
+      &.oui-icon-success_circle, /* Deprecated: Support for old classname */
+      &.oui-icon-success-circle {
         color: @oui-navbar-notification-icon-color_success;
       }
 
-      &.oui-icon-warning_circle {
+      &.oui-icon-warning_circle, /* Deprecated: Support for old classname */
+      &.oui-icon-warning-circle {
         color: @oui-navbar-notification-icon-color_warning;
       }
 
-      &.oui-icon-error_circle {
+      &.oui-icon-error_circle, /* Deprecated: Support for old classname */
+      &.oui-icon-error-circle {
         color: @oui-navbar-notification-icon-color_error;
       }
 
@@ -631,13 +638,13 @@
 
   // Helper for responsive
   &_desktop-only {
-    @media screen and (max-width: (@oui-responsive-breakpoint-tablet - 1px)) {
+    @media screen and (max-width: @device-breakpoint-tablet-max-width) {
       display: none !important;
     }
   }
 
   &_mobile-only {
-    @media screen and (min-width: @oui-responsive-breakpoint-tablet) {
+    @media screen and (min-width: @device-breakpoint-tablet-min-width) {
       display: none !important;
     }
   }

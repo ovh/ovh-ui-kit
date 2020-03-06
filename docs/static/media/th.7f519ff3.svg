@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57 (83077) - https://sketch.com -->
+    <title>oui-Flag/Thaïlande</title>
+    <desc>Created with Sketch.</desc>
+    <g id="oui-Flag/Thaïlande" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Thaïlande" fill-rule="nonzero">
+            <rect id="Rectangle-path" fill="#FF2830" x="0" y="20" width="36" height="4"></rect>
+            <polygon id="Shape" fill="#FF2830" points="36 0 0 0 0 4 36 4 36 0"></polygon>
+            <rect id="Rectangle-path" fill="#F9F9F9" x="0" y="4" width="36" height="4"></rect>
+            <rect id="Rectangle-path" fill="#F9F9F9" x="0" y="16" width="36" height="4"></rect>
+            <rect id="Rectangle-path" fill="#1A3179" x="0" y="8" width="36" height="8"></rect>
+        </g>
+    </g>
+</svg>

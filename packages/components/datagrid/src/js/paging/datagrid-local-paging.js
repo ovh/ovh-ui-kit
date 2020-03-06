@@ -37,7 +37,7 @@ export default class DatagridLocalPaging extends DatagridPagingAbstract {
         totalCount: this.sortedRows.length,
       },
     })
-      .then(result => this.loadRows(result));
+      .then((result) => this.loadRows(result));
   }
 
   loadRows(pageResult) {

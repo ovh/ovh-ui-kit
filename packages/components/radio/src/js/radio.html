@@ -2,31 +2,52 @@
     id="{{:: $ctrl.id }}"
     name="{{:: $ctrl.name }}"
     ng-class=":: $ctrl.radioToggleGroup ? 'oui-radio-toggle__input' : 'oui-radio__input'"
-    ng-attr-aria-labelledby="{{:: $ctrl.id }}-text"
-    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}"
+    ng-attr-aria-labelledby="{{:: $ctrl.id }}Label"
+    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + 'Description' || undefined }}"
     ng-model="$ctrl.model"
     ng-value="$ctrl.value"
     ng-change="$ctrl.onRadioModelChange({ modelValue: $ctrl.model })"
     ng-disabled="$ctrl.disabled"
     ng-required="$ctrl.required">
+
+<!-- Label for oui-radio -->
 <label for="{{:: $ctrl.id }}"
-    ng-class=":: $ctrl.radioToggleGroup ? 'oui-radio-toggle__label-container' : 'oui-radio__label-container'"
-    ng-attr-aria-labelledby="{{:: $ctrl.id }}-text"
-    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}">
-    <span ng-class=":: $ctrl.radioToggleGroup ? 'oui-radio-toggle__label' : 'oui-radio__label'">
-        <span id="{{:: $ctrl.id }}-text" ng-transclude></span>
+    class="oui-radio__label-container"
+    ng-if="::!$ctrl.radioToggleGroup"
+    ng-attr-aria-labelledby="{{:: $ctrl.id }}Label"
+    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + 'Description' || undefined }}">
+    <span class="oui-radio__label">
+        <span class="oui-radio__icon"></span>
+        <span class="oui-radio__text"
+            id="{{:: $ctrl.id }}Label"
+            ng-show="$ctrl.hasLabel()">
+            <span ng-transclude="labelSlot"></span>
+            <ng-transclude></ng-transclude>
+        </span>
     </span>
     <span
-        id="{{:: $ctrl.id }}-description"
+        id="{{:: $ctrl.id }}Description"
         class="oui-radio__description"
-        ng-bind="$ctrl.description"
-        ng-if="$ctrl.description">
+        ng-if="$ctrl.hasDescription()"
+        ng-transclude="descriptionSlot">
+        <span ng-bind="$ctrl.description"></span>
     </span>
     <span
-        id="{{:: $ctrl.id }}-footer"
+        id="{{:: $ctrl.id }}Footer"
         class="oui-radio__footer"
-        ng-bind="$ctrl.footer"
-        ng-if="$ctrl.footer && $ctrl.thumbnail">
+        ng-if="$ctrl.hasFooter()"
+        ng-transclude="footerSlot">
+        <span ng-bind="$ctrl.footer"></span>
     </span>
 </label>
 
+<!-- Label for oui-radio-toggle -->
+<label for="{{:: $ctrl.id }}"
+    class="oui-radio-toggle__label-container"
+    ng-if="::!!$ctrl.radioToggleGroup"
+    ng-attr-aria-labelledby="{{:: $ctrl.id }}Label">
+    <span class="oui-radio-toggle__label"
+        id="{{:: $ctrl.id }}Label"
+        ng-transclude>
+    </span>
+</label>

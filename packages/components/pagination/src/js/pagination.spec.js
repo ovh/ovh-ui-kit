@@ -4,12 +4,12 @@ describe('ouiPagination', () => {
   const customPageSize = 50;
   const customPageSizesList = [25, 50, 100, 200];
 
-  const getPagination = elt => elt[0].querySelector('.oui-pagination');
-  const getProgress = elt => elt[0].querySelector('.oui-pagination__progress');
-  const getSelector = elt => elt[0].querySelector('.oui-pagination__selector');
-  const getPreviousButton = elt => elt[0].querySelectorAll('.oui-pagination__selector > button')[0];
-  const getNextButton = elt => elt[0].querySelectorAll('.oui-pagination__selector > button')[1];
-  const getPageSizeButtons = elt => getProgress(elt).querySelectorAll('.oui-pagination-menu__items-list .oui-pagination-menu__item');
+  const getPagination = (elt) => elt[0].querySelector('.oui-pagination');
+  const getProgress = (elt) => elt[0].querySelector('.oui-pagination__progress');
+  const getSelector = (elt) => elt[0].querySelector('.oui-pagination__selector');
+  const getPreviousButton = (elt) => elt[0].querySelectorAll('.oui-pagination__selector > button')[0];
+  const getNextButton = (elt) => elt[0].querySelectorAll('.oui-pagination__selector > button')[1];
+  const getPageSizeButtons = (elt) => getProgress(elt).querySelectorAll('.oui-pagination-menu__items-list .oui-pagination-menu__item');
 
   beforeEach(angular.mock.module('oui.pagination'));
   beforeEach(angular.mock.module('oui.test-utils'));

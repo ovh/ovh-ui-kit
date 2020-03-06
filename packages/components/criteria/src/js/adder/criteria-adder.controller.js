@@ -16,7 +16,7 @@ export default class {
 
   getOperatorsByType(type) {
     const operators = this.operators[type] || [];
-    return operators.map(operator => ({
+    return operators.map((operator) => ({
       name: operator,
       title: this.translations[`operator_${type}_${operator}`],
     }));
@@ -78,7 +78,7 @@ export default class {
   }
 
   initBooleanCriterion() {
-    this.booleanChoices = [true, false].map(value => ({
+    this.booleanChoices = [true, false].map((value) => ({
       name: this.getBooleanLabel(value),
       value,
     }));
@@ -99,7 +99,7 @@ export default class {
     }
 
     this.optionsChoices = Object.keys(options)
-      .map(key => ({
+      .map((key) => ({
         name: options[key],
         value: key,
       }))
@@ -125,7 +125,7 @@ export default class {
     const { type } = this.columnModel;
     const customOperatorsList = get(this.columnModel, 'typeOptions.operators');
     const operators = customOperatorsList || this.operators[type] || [];
-    return operators.map(operator => ({
+    return operators.map((operator) => ({
       name: operator,
       title: this.translations[`operator_${type}_${operator}`],
     }));

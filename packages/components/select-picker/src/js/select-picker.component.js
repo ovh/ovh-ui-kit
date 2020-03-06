@@ -25,6 +25,5 @@ export default {
     disabled: '<?',
     required: '<?',
     onChange: '&?',
-    variant: '@?',
   },
 };

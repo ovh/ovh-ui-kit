@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
-    <title>Icons/System/folder</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Icons/System/folder" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M4,6 L4,18 L20,18 L20,8 L10,8 C9.24245588,8 8.54992965,7.57199525 8.21114562,6.89442719 L7.76393202,6 L4,6 Z M7.76393202,4 C8.52147614,4 9.21400238,4.42800475 9.5527864,5.10557281 L10,6 L20,6 C21.1045695,6 22,6.8954305 22,8 L22,18 C22,19.1045695 21.1045695,20 20,20 L4,20 C2.8954305,20 2,19.1045695 2,18 L2,6 C2,4.8954305 2.8954305,4 4,4 L7.76393202,4 Z" id="Color" fill="#2859C0"></path>
-    </g>
-</svg>

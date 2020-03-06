@@ -14,11 +14,11 @@ describe('ouiRadio', () => {
 
   describe('Component', () => {
     describe('Radio', () => {
-      const getRadioInputElement = element => element[0].querySelector('input[type=radio]');
-      const getRadioLabelElement = element => element[0].querySelector('label');
-      const getRadioTextContainerElement = element => element[0].querySelector('.oui-radio__label span:first-child');
-      const getRadioDescriptionElement = element => element[0].querySelector('.oui-radio__description');
-      const getRadioFooterElement = element => element[0].querySelector('.oui-radio__footer');
+      const getRadioInputElement = (element) => element[0].querySelector('input[type=radio]');
+      const getRadioLabelElement = (element) => element[0].querySelector('label');
+      const getRadioTextContainerElement = (element) => element[0].querySelector('.oui-radio__text');
+      const getRadioDescriptionElement = (element) => element[0].querySelector('.oui-radio__description');
+      const getRadioFooterElement = (element) => element[0].querySelector('.oui-radio__footer');
 
       describe('id attribute', () => {
         it('should generate an id for the input and label when undefined', () => {
@@ -70,7 +70,7 @@ describe('ouiRadio', () => {
           const element = TestUtils.compileTemplate('<oui-radio>test</oui-radio>');
 
           const textContainerRadioElement = getRadioTextContainerElement(element);
-          expect(angular.element(textContainerRadioElement).html()).toBe('test');
+          expect(angular.element(textContainerRadioElement).text().trim()).toBe('test');
         });
       });
 
@@ -86,7 +86,7 @@ describe('ouiRadio', () => {
           const element = TestUtils.compileTemplate('<oui-radio description="test"></oui-radio>');
 
           const descriptionRadioElement = getRadioDescriptionElement(element);
-          expect(angular.element(descriptionRadioElement).html()).toBe('test');
+          expect(angular.element(descriptionRadioElement).text().trim()).toBe('test');
         });
       });
 
@@ -108,7 +108,7 @@ describe('ouiRadio', () => {
           const element = TestUtils.compileTemplate('<oui-radio footer="test" thumbnail="true"></oui-radio>');
 
           const footerRadioElement = getRadioFooterElement(element);
-          expect(angular.element(footerRadioElement).html()).toBe('test');
+          expect(angular.element(footerRadioElement).text().trim()).toBe('test');
         });
       });
 
@@ -189,24 +189,6 @@ describe('ouiRadio', () => {
         });
       });
 
-
-      describe('size attribute', () => {
-        it('should display a classic radio when no attribute', () => {
-          const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');
-
-          $timeout.flush();
-          expect(angular.element(element).hasClass('oui-radio_m')).toBeFalsy();
-        });
-
-        it('should display a medium radio when value is m', () => {
-          const element = TestUtils.compileTemplate('<oui-radio size="m"></oui-radio>');
-
-          $timeout.flush();
-          expect(angular.element(element).hasClass('oui-radio_m')).toBeTruthy();
-        });
-      });
-
-
       describe('thumbnail attribute', () => {
         it('should display a classic radio when no attribute', () => {
           const element = TestUtils.compileTemplate('<oui-radio></oui-radio>');
@@ -238,6 +220,15 @@ describe('ouiRadio', () => {
 
           $timeout.flush();
           expect(angular.element(element).hasClass('oui-radio_thumbnail')).toBe(true);
+        });
+      });
+
+      describe('inline attribute', () => {
+        it('should display an inline radio', () => {
+          const element = TestUtils.compileTemplate('<oui-radio inline></oui-radio>');
+
+          $timeout.flush();
+          expect(angular.element(element).hasClass('oui-radio_inline')).toBe(true);
         });
       });
 
@@ -311,10 +302,10 @@ describe('ouiRadio', () => {
   });
 
   describe('Radio Group', () => {
-    const getRadioInputElement = element => angular.element(element[0].querySelector('input[type=radio]'));
+    const getRadioInputElement = (element) => angular.element(element[0].querySelector('input[type=radio]'));
     const getElementByClass = (element, value) => angular.element(element[0].querySelector(value));
     const getRadioInputElementByValue = (element, value) => angular.element(element[0].querySelector(`input[type=radio][value=${value}]`));
-    const getRadioGroupElement = element => angular.element(element[0]);
+    const getRadioGroupElement = (element) => angular.element(element[0]);
     const clickRadio = (radioToCheck) => {
       radioToCheck.prop('checked', true);
       radioToCheck.triggerHandler('click'); // NG 1.6
@@ -440,10 +431,10 @@ describe('ouiRadio', () => {
   });
 
   describe('Radio Toggle Group', () => {
-    const getRadioInputElement = element => angular.element(element[0].querySelector('input[type=radio]'));
+    const getRadioInputElement = (element) => angular.element(element[0].querySelector('input[type=radio]'));
     const getElementByClass = (element, value) => angular.element(element[0].querySelector(value));
     const getRadioInputElementByValue = (element, value) => angular.element(element[0].querySelector(`input[type=radio][value=${value}]`));
-    const getRadioGroupElement = element => angular.element(element[0]);
+    const getRadioGroupElement = (element) => angular.element(element[0]);
     const clickRadio = (radioToCheck) => {
       radioToCheck.prop('checked', true);
       radioToCheck.triggerHandler('click'); // NG 1.6

@@ -42,7 +42,7 @@ export default class {
   }
 
   $postLink() {
-    this.$document.on('keydown', evt => this.triggerKeyHandler(evt));
+    this.$document.on('keydown', (evt) => this.triggerKeyHandler(evt));
 
     this.$timeout(() => {
       this.panels = this.$element.find('oui-slideshow-panel');
@@ -69,7 +69,7 @@ export default class {
   closeOnBoarding() {
     this.onDismiss();
 
-    this.$document.off('keydown', evt => this.triggerKeyHandler(evt));
+    this.$document.off('keydown', (evt) => this.triggerKeyHandler(evt));
     this.$scope.$broadcast('oui:modalOnBoarding:afterClose', this.id);
   }
 

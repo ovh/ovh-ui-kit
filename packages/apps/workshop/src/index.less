@@ -1,80 +1,85 @@
-@import '~@ovh-ux/ui-kit.core/src/less/_variables.less';
-@import '_mixins.less';
-@import '_variables.less';
+@rem-base: rem-base(16px);
+
+@import '~@ovh-ux/ui-kit.core/src/index';
+@import '~@ovh-ux/ui-kit.components/src/index';
 
 // Color badges
-.oui-color-badge {
-  #oui > .color-badge-themes();
+.doc-badges {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
 
-  position: relative;
-  border: 1px solid @oui-color-badge-border-color;
-  display: inline-block;
-  width: @oui-color-badge-palette-size;
-  max-width: 100%;
-  margin: @oui-color-badge-spacing;
+.doc-badge {
+  width: rem-calc(160);
+  margin: rem-calc(12) 0;
   padding: 0;
-  padding-bottom: rem-calc(12);
-  box-shadow: @oui-color-badge-box-shadow;
+  vertical-align: top;
 
-  &::before {
-    display: block;
-    content: '';
-    width: 100%;
-    height: @oui-color-badge-palette-size;
-  }
-
-  &__prop {
+  &__preview {
+    width: rem-calc(128);
+    height: rem-calc(128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: rem-calc(4);
+    box-sizing: content-box;
+    box-shadow: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+    background-color: #f5feff;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    display: block;
-    font-size: @oui-color-badge-prop-font-size;
     text-align: center;
 
-    &:first-child,
-    &:last-child {
-      margin: rem-calc(5) 0 0;
+    &_s {
+      width: rem-calc(64);
+      height: rem-calc(64);
+      line-height: rem-calc(64);
+    }
+
+    .oui-icon,
+    .oui-flag {
+      font-size: rem-calc(32);
     }
   }
 
-  &_variant {
-    margin-top: rem-calc(50);
-    padding-top: rem-calc(22);
+  &__code {
+    line-height: 1.2;
+    margin-top: rem-calc(12);
+    font-size: rem-calc(12);
+    text-align: center;
 
-    &::before {
-      border-radius: 50%;
-      width: @oui-color-badge-palette-size;
-      height: @oui-color-badge-palette-size;
-      top: rem-calc(-40);
-      left: rem-calc(42);
-    }
-  }
+    code { display: block; }
 
-  &_white::before {
-    border: solid 1px @oui-color-badge-palette-border-color;
+    code + code { margin-top: rem-calc(4); }
   }
 }
 
 // Icon badges
-.oui-icon-badge {
-  width: rem-calc(144);
+.doc-icon-badge {
+  width: rem-calc(160);
   display: inline-block;
-  border: 1px solid @oui-color-dusty;
-  margin: rem-calc(15);
+  margin: rem-calc(12) 0;
   padding: 0;
   vertical-align: top;
-  background-color: #fff;
-  box-shadow: 0 rem-calc(4) rem-calc(6) rgba(0, 0, 0, 0.06);
 
   &__preview {
-    height: rem-calc(144);
-    line-height: rem-calc(144);
-    background-color: @oui-color-iron;
+    width: rem-calc(64);
+    height: rem-calc(64);
+    line-height: rem-calc(64);
+    margin: auto;
+    border-radius: rem-calc(2);
+    box-sizing: content-box;
+    box-shadow: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+    border: solid 1px #bef1ff;
+    background-color: #f5feff;
     text-align: center;
   }
 
   &__code {
-    padding: rem-calc(16);
+    line-height: 1.2;
+    display: block;
+    margin-top: rem-calc(12);
     font-size: rem-calc(12);
     text-align: center;
   }

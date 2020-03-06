@@ -5,13 +5,14 @@
   &__steps { counter-reset: steps; }
 
   &__step {
+    counter-increment: steps;
     display: block;
     padding: @oui-stepper-step-padding;
     border-top: @oui-stepper-step-separator;
 
     &:last-child { border-bottom: @oui-stepper-step-separator; }
 
-    @media screen and (max-width: (@oui-responsive-breakpoint-tablet - 1px)) {
+    @media screen and (max-width: @device-breakpoint-tablet-max-width) {
       padding-left: 0;
       padding-right: 0;
     }
@@ -27,7 +28,6 @@
 
     &::before {
       content: counter(steps);
-      counter-increment: steps;
       width: @oui-stepper-step-bullet-size;
       height: @oui-stepper-step-bullet-size;
       line-height: @oui-stepper-step-bullet-size;

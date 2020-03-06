@@ -25,13 +25,15 @@
     padding-right: @oui-tile-item-side-spacing;
     margin: 0 -@oui-tile-item-side-spacing;
     box-sizing: content-box;
+    border-radius: 0;
     font-weight: @oui-tile-button-font-weight;
     text-align: left;
     text-decoration: none;
 
-    &.oui-button_full-width.oui-button_icon-right {
+    &.oui-button_block.oui-button_icon-right {
       .oui-icon {
-        &:not(.oui-icon-external_link)::before {
+        &:not(.oui-icon-external_link)::before, /* Deprecated: Support for old classname */
+        &:not(.oui-icon-external-link)::before {
           right: @oui-tile-item-side-spacing;
         }
       }
@@ -39,6 +41,7 @@
 
     &:hover,
     &:focus {
+      box-shadow: none;
       background-color: @oui-tile-background-color_hover;
     }
 
@@ -47,7 +50,8 @@
     }
   }
 
-  &__button.oui-button_link {
+  &__button.oui-button_link,
+  &__button.oui-button_ghost {
     &,
     &:hover,
     &:focus { text-decoration: none; }

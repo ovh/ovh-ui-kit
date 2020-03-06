@@ -1,4 +1,3 @@
-import isUndefined from 'lodash/isUndefined';
 import get from 'lodash/get';
 
 export default class {
@@ -12,10 +11,9 @@ export default class {
   }
 
   $onInit() {
-    this.indexToFocus = get(this, 'indexToFocus', 0);
     this.forms = [];
     this.steps = [];
-
+    this.currentIndex = get(this, 'currentIndex', 0);
     this.onInit();
   }
 
@@ -26,30 +24,35 @@ export default class {
       .addClass('oui-stepper'));
 
     this.$scope.$watch(
-      () => this.indexToFocus,
-      (index) => {
-        if (!isUndefined(index) && this.indexToFocus !== this.currentIndex) {
-          this.focusStep(index);
-        }
+      () => this.currentIndex,
+      (index, prevIndex) => {
+        // Avoid calling onFocus if unchanged
+        this.updateSteps(index, index === prevIndex);
       },
     );
   }
 
-  addStep(step) {
-    if (!step.position) {
-      this.steps.push(step);
-    } else {
+  addStep(step, index) {
+    // Priority for position attribute
+    if (angular.isNumber(step.position)) {
       this.steps.splice(step.position - 1, 0, step);
+    } else if (angular.isNumber(index)) {
+      this.steps.splice(index, 0, step);
+    } else {
+      this.steps.push(step);
     }
 
-    this.focusStep(this.indexToFocus);
+    // At this moment, we can't know how much steps we need to add
+    // So we need to update all steps at each adding
+    // That's why we add a flag to only call once the onFocus callback
+    this.updateSteps(this.currentIndex, this.currentIndex !== index);
   }
 
   removeStep(step) {
     const indexOfStep = this.steps.indexOf(step);
     if (indexOfStep > -1) {
       this.steps.splice(indexOfStep, 1);
-      this.focusStep(this.indexToFocus);
+      this.updateSteps(this.currentIndex, this.currentIndex !== indexOfStep);
     }
   }
 
@@ -64,34 +67,34 @@ export default class {
   }
 
   nextStep() {
-    const indexToFocus = Math.min(this.indexToFocus + 1, this.steps.length);
-    this.focusStep(indexToFocus);
+    // updateSteps() is launched with the $watch on currentIndex
+    this.currentIndex = Math.min(this.currentIndex + 1, this.steps.length);
   }
 
   prevStep() {
-    const indexToFocus = Math.max(this.indexToFocus - 1, 0);
-    this.focusStep(indexToFocus);
+    // updateSteps() is launched with the $watch on currentIndex
+    this.currentIndex = Math.max(this.currentIndex - 1, 0);
   }
 
   focusStep(indexToFocus) {
+    // updateSteps() is launched with the $watch on currentIndex
+    this.currentIndex = indexToFocus;
+  }
+
+  updateSteps(indexToFocus, noCallback) {
     this.steps.forEach((_step_, index) => {
       const focused = index === indexToFocus;
       const step = _step_;
 
-      // Disable steps not focused
+      if (focused && !noCallback) {
+        step.onFocus();
+      }
+
       if (angular.isDefined(step.stepper)) {
         step.stepper.index = index;
         step.stepper.focused = focused;
-        step.stepper.disabled = index > indexToFocus;
+        step.stepper.disabled = index > indexToFocus; // Minimize steps after our current index
         step.stepper.last = index === this.steps.length - 1;
-      }
-
-      // Call onFocus step event
-      if (focused && indexToFocus !== this.currentIndex) {
-        this.currentIndex = indexToFocus;
-        this.indexToFocus = indexToFocus;
-
-        step.onFocus();
       }
     });
   }

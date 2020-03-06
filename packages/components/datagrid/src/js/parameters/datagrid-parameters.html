@@ -1,23 +1,17 @@
 <oui-dropdown placement="end" arrow persistent>
     <button type="button" class="oui-datagrid-parameters__button"
         oui-dropdown-trigger>
-        <span class="oui-icon oui-icon-gear" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-gear"></span>
     </button>
     <oui-dropdown-content>
         <div class="oui-datagrid-parameters__body">
-            <div class="oui-datagrid-parameters__headers">
-                <div class="oui-datagrid-parameters__column-column">Columns Display</div>
-            </div>
-            <div class="oui-datagrid-parameters__column"
-                ng-repeat="column in $ctrl.customizedColumns track by $index">
-                <div class="oui-datagrid-parameters__column-column">
-                    <oui-checkbox
-                        model="column.visible"
-                        disabled="!column.name || column.preventCustomization"
-                        on-change="$ctrl.onColumnChange($index, modelValue)">
-                        {{column.title}}
-                    </oui-checkbox>
-                </div>
+            <div class="oui-datagrid-parameters__column" ng-repeat="column in $ctrl.customizedColumns track by $index">
+                <oui-checkbox
+                    model="column.visible"
+                    disabled="!column.name || column.preventCustomization"
+                    on-change="$ctrl.onColumnChange($index, modelValue)">
+                    {{column.title}}
+                </oui-checkbox>
             </div>
         </div>
     </oui-dropdown-content>

@@ -15,11 +15,10 @@ angular.module('myModule', ['oui.radio']);
 | `name`        | string    | @?        | yes               | n/a                 | n/a       | name attribute of the radio
 | `description` | string    | @?        | no                | n/a                 | n/a       | description text
 | `footer`      | string    | @?        | no                | n/a                 | n/a       | footer text
-| `size`        | string    | @?        | yes               | `m`                 | n/a       | radio size
-| `variant`     | string    | @?        | yes               | `default`, `light`  | `default` | used in conjunction with `thumbnail`. Defines specific style for the thumbnail  
 | `value`       | object    | <         | no                | n/a                 | n/a       | value of the radio
 | `disabled`    | boolean   | <?        | no                | `true`, `false`     | `false`   | disabled flag
 | `required`    | boolean   | <?        | no                | `true`, `false`     | `false`   | required flag
+| `inline`      | boolean   | <?        | no                | `true`, `false`     | `false`   | inline style of the radio
 | `thumbnail`   | boolean   | <?        | no                | `true`, `false`     | `false`   | thumbnail style of the radio
 | `on-change`   | function  | &?        | no                | n/a                 | n/a       | handler triggered when value has changed
 
@@ -32,6 +31,22 @@ Model will not be refreshed until the `on-change` callback hasn't returned. If y
     model="$ctrl.model"
     on-change="$ctrl.onChange(modelValue)">
 </oui-radio>
+```
+
+### Transclude slots
+
+| Attribute                 | Description
+| ----                      | ----
+| `<oui-radio-label>`       | definition label slot
+| `<oui-radio-description>` | definition description slot, override attribute `description`
+| `<oui-radio-footer>`      | definition footer slot
+
+```html
+<oui-radio>
+    <oui-radio-label>Label</oui-radio-label>
+    <oui-radio-description>Description</oui-radio-description>
+    <oui-radio-footer>Footer</oui-radio-footer>
+<oui-radio>
 ```
 
 ## Component `oui-radio-group`

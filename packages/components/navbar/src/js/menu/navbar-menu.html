@@ -4,13 +4,23 @@
     <div class="oui-navbar-menu__header-container">
         <div class="oui-navbar-menu__back"
              ng-if="::!!$ctrl.backButton">
-            <button type="button" class="oui-button oui-button_link"
+            <button type="button" class="oui-button oui-button_ghost"
                 ng-click="$ctrl.closeMenu($ctrl.menuName, true)"
                 oui-navbar-group="{{::$ctrl.menuName}}">
                 <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
             </button>
         </div>
-        <div>
+        <a
+            ng-if="$ctrl.headerHref"
+            ng-href="{{ $ctrl.headerHref }}">
+            <span class="oui-navbar-menu__breadcrumb"
+                ng-if="::!!$ctrl.headerBreadcrumb"
+                ng-bind="::$ctrl.headerBreadcrumb">
+            </span>
+            <h3 class="oui-navbar-menu__title" ng-bind="::$ctrl.headerTitle" title="{{::$ctrl.headerTitle}}"></h3>
+        </a>
+        <div
+            ng-if="!$ctrl.headerHref">
             <span class="oui-navbar-menu__breadcrumb"
                 ng-if="::!!$ctrl.headerBreadcrumb"
                 ng-bind="::$ctrl.headerBreadcrumb">
@@ -41,7 +51,7 @@
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
             <span ng-bind-html="::menuLink.title"></span>
-            <span class="oui-icon oui-icon-external_link" aria-hidden="true"
+            <span class="oui-icon oui-icon-external-link" aria-hidden="true"
                 ng-if="::!!menuLink.isExternal">
             </span>
         </a>

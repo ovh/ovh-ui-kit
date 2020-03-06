@@ -34,6 +34,7 @@ angular.module('myModule', ['oui.textarea'])
 | `disabled`    | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
 | `readonly`    | boolean   | <?        | no                | `true`, `false`   | `false`   | readonly flag
 | `required`    | boolean   | <?        | no                | `true`, `false`   | `false`   | required flag
+| `inline`      | boolean   | <?        | yes               | `true`, `false`   | `false`   | inline flag
 | `on-change`   | function  | &?        | no                | n/a               | n/a       | model value change callback
 
 ### Attribute `on-change`

@@ -5,16 +5,10 @@
   margin: @oui-pagination-margin;
   font-size: @oui-pagination-font-size;
 
-  #oui > .phone({
+  @media screen and (max-width: @device-breakpoint-phone-max-width) {
     flex-direction: column-reverse;
     justify-content: inherit;
     align-items: center;
-  });
-
-  .oui-button_link {
-    padding-left: 0;
-    padding-right: 0;
-    margin-right: @oui-pagination-link-spacing;
   }
 
   &__progress {
@@ -22,6 +16,10 @@
     align-items: center;
     flex-wrap: nowrap;
     white-space: nowrap;
+
+    .oui-button {
+      margin-right: @oui-pagination-link-spacing;
+    }
   }
 
   &__progress-text {
@@ -37,10 +35,10 @@
     flex-wrap: nowrap;
     margin-left: @oui-pagination-selector-spacing;
 
-    #oui > .phone({
+    @media screen and (max-width: @device-breakpoint-phone-max-width) {
       margin-bottom: @oui-pagination-selector-spacing_responsive;
       margin-left: 0;
-    });
+    }
 
     > .oui-button {
       &:first-child {

@@ -5,7 +5,7 @@ export default {
   bindings: {
     name: '@',
     id: '@',
-    indexToFocus: '=?currentIndex',
+    currentIndex: '=?',
     onInit: '&',
     onFinish: '&',
   },

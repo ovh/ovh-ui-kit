@@ -1,32 +1,30 @@
-.oui-icon {
-  #oui > .icon();
-  #oui > .icon-type();
+@import './_icons';
 
+.oui-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: @oui-icon-vertical-align;
+  font-family: @oui-icon-font-family;
+  font-weight: normal;
+  font-style: normal;
   text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
+
+  &::before {
+    display: block;
+  }
+
+  // Variants
+  #oui > .icon-type();
 
   &_shake {
     animation-name: oui-shake;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
   }
-
-  &_inherit {
-    color: @oui-icon-color;
-    font: @oui-icon-font;
-    font-size: @oui-icon-size_inherit;
-    vertical-align: middle;
-  }
-
-  // Fix bad vertical alignment from this icon
-  &-eye-blocked::before { margin-top: -0.1em; }
 }
 
 @keyframes oui-shake {
@@ -56,3 +54,149 @@
     transform: scale3d(@oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate, @oui-animation-shake-default-coordinate);
   }
 }
+
+// Sort icons
+.oui-icon-sort {
+  &-inactive {
+    &:extend(.oui-icon-sort all);
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &-up,
+  &-down {
+    &::before {
+      position: absolute;
+    }
+
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &-up::after {
+    content: @oui-icon-index-sort-down;
+  }
+
+  &-down::after {
+    content: @oui-icon-index-sort-up;
+  }
+
+  // Support for ASC and DESC variant
+  &-asc {
+    &:extend(.oui-icon-sort-up);
+  }
+
+  &-desc {
+    &:extend(.oui-icon-sort-down);
+  }
+}
+
+// Deprecated: Support for renamed/duplicate classnames below
+@oui-icon-deprecated:
+  /* Basic */
+  broken-chain                        warning,
+  copy-error                          copy,
+  copy-normal                         copy,
+  copy-success                        copy,
+  domain-dns                          dns-anycast_concept,
+  error_circle                        error-circle,
+  external_link                       external-link,
+  eye                                 eye-open,
+  eye-blocked                         eye-closed,
+  help_circle                         help-circle,
+  info_circle                         info-circle,
+  padlock-close                       padlock-closed_concept,
+  success_circle                      success-circle,
+  triangle-up-down                    sort,
+  warning_circle                      warning-circle,
+
+  /* Concept */
+  chrono-on-off-quickstart_concept    chrono_concept,
+  cloudhand_concept                   cloud-hand_concept,
+  gear_2_concept                      server-gear_concept,
+  gpu_concept                         hardware-gpu_concept,
+  hands_concept                       handshake_concept,
+  on_concept                          speaker-on_concept,
+  minus_concept                       minus,
+  none_concept                        speaker-off_concept,
+  pay-as-you-go_concept               calendar-pay-as-you-go_concept,
+  phone-mobile_concept                device-mobile_concept,
+  phone-tablet_concept                device-tablet_concept,
+  plan_concept                        geolocalisation-plan_concept,
+  replication-application_concept     app-replication_concept,
+  sata_concept                        hardware-sata_concept,
+  ssd_concept                         hardware-ssd_concept,
+  symmetrical-lines_concept           lines-symmetrical_concept,
+  transit-padlock_concept             padlock-transit_concept,
+  loc-ovh_concept                     geolocalisation-ovhcloud_concept,
+
+  /* Line */
+  pen_line                            pen_concept,
+  power_line                          power_concept,
+  trash_line                          trash_concept,
+  chat_line                           speech-bubble_concept,
+  check_line                          check,
+  chevron-up_line                     chevron-up,
+  chevron-right_line                  chevron-right,
+  chevron-down_line                   chevron-down,
+  chevron-left_line                   chevron-left,
+  check-circle_line                   success-circle,
+  counter_line                        counter_concept,
+  gear_line                           gear_concept,
+  page_line                           page_concept,
+  paperplane_line                     paperplane_concept,
+  printer_line                        printer_concept,
+  user_line                           user_concept,
+  pdf_line                            page_concept,
+
+  /* Extra Thin */
+  arrow-down-right_extra-thin         arrow-down-right,
+  arrow-down_extra-thin               arrow-down,
+  arrow-left_extra-thin               arrow-left,
+  arrow-right_extra-thin              arrow-right,
+  arrow-up-right_extra-thin           arrow-up-right,
+  arrow-up_extra-thin                 arrow-up,
+  bell_extra-thin                     bell,
+  bin_extra-thin                      bin,
+  calendar_extra-thin                 calendar,
+  chat_extra-thin                     chat,
+  chevron-down_extra-thin             chevron-down,
+  chevron-left_extra-thin             chevron-left,
+  chevron-right_extra-thin            chevron-right,
+  chevron-up-down_extra-thin          chevron-up-down,
+  chevron-up_extra-thin               chevron-up,
+  close_extra-thin                    close,
+  close_thin                          close,
+  equal_extra-thin                    equal,
+  ellypsis_extra-thin                 ellipsis,
+  ellypsis-vertical_extra-thin        ellipsis-vertical,
+  eye-closed_extra-thin               eye-closed,
+  eye-open_extra-thin                 eye-open,
+  file_extra-thin                     file,
+  filex2_extra-thin                   copy,
+  folder_extra-thin                   folder,
+  hamburger_extra-thin                hamburger,
+  home_extra-thin                     home,
+  info_extra-thin                     info,
+  lightbulb_extra-thin                lightbulb,
+  list_extra-thin                     list,
+  location_extra-thin                 location,
+  minus_extra-thin                    minus,
+  ok_extra-thin                       ok,
+  phone_extra-thin                    phone,
+  plus_extra-thin                     plus,
+  refresh_extra-thin                  refresh,
+  search_extra-thin                   search,
+  settings_extra-thin                 settings,
+  time_extra-thin                     time,
+  triangle-down_extra-thin            triangle-down,
+  triangle-left_extra-thin            triangle-left,
+  triangle-right_extra-thin           triangle-right,
+  triangle-up_extra-thin              triangle-up,
+  user_extra-thin                     user,
+  warning_extra-thin                  warning;
+
+#oui > .icon-content(@oui-icon-deprecated);

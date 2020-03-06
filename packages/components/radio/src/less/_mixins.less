@@ -7,30 +7,39 @@
     #oui > .radio-size(@selector);
     #oui > .radio-color(@selector);
 
-    &__label {
+    &__icon {
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+
       &::before {
         content: '';
         position: absolute;
         border-style: solid;
-        border-width: 1px;
-        border-radius: 50%;
+        border-width: @oui-radio-icon-border-width;
+        border-radius: @oui-radio-icon-border-radius;
       }
 
       &::after {
         content: '';
         position: absolute;
-        border-radius: 50%;
+        border-radius: @oui-radio-icon-border-radius;
         visibility: hidden;
       }
+    }
+
+    &__text {
+      vertical-align: middle;
     }
 
     // Radio - Checked state
     &__input:checked ~ &__label-container {
       #oui > .radio-color(
-        @icon-outer-color: @oui-radio-icon-outer-color_checked
+        @icon-outer-color: @oui-radio-icon-outer-color_checked,
+        @icon-inner-color: @oui-radio-icon-inner-color_checked
       );
 
-      .@{selector}__label::after {
+      .@{selector}__icon::after {
         visibility: visible;
       }
     }
@@ -38,11 +47,7 @@
     // Radio - Disabled state
     &__input:disabled {
       ~ .@{selector}__label-container {
-        #oui > .radio-color(
-          @icon-background-color: @oui-radio-icon-background-color_disabled,
-          @icon-outer-color: @oui-radio-icon-outer-color_disabled,
-          @icon-inner-color: @oui-radio-icon-inner-color_disabled
-        );
+        opacity: 0.5;
 
         .@{selector}__label,
         .@{selector}__description,
@@ -61,7 +66,7 @@
     &__input:not(:disabled) {
       // Radio - Focused state
       &:focus ~ .@{selector}__label-container {
-        .@{selector}__label::before {
+        .@{selector}__icon::before {
           box-shadow: @oui-radio-box-shadow_focus;
         }
       }
@@ -84,7 +89,8 @@
 
       &:checked ~ .@{selector}__label-container:not(:active):hover {
         #oui > .radio-color(
-          @icon-outer-color: @oui-radio-icon-outer-color_checked-hover
+          @icon-outer-color: @oui-radio-icon-outer-color_checked-hover,
+          @icon-inner-color: @oui-radio-icon-inner-color_checked-hover
         );
       }
     }
@@ -103,23 +109,32 @@
       min-height: @min-height;
       line-height: @line-height;
       font-size: @font-size;
+    }
+
+    .@{selector}__icon {
+      width: @icon-size;
+      height: @icon-size;
+      line-height: @icon-size;
 
       &::before {
         width: @icon-size;
         height: @icon-size;
-        top: calc((@min-height - @icon-size) / 2);
+        top: 0;
         left: 0;
       }
 
       &::after {
         width: @bullet-size;
         height: @bullet-size;
-        top: calc((@min-height - @bullet-size) / 2);
+        top: calc((@icon-size - @bullet-size) / 2);
         left: calc((@icon-size - @bullet-size) / 2);
       }
     }
 
-    .@{selector}__label,
+    .@{selector}__text {
+      padding-left: @oui-radio-padding-left;
+    }
+
     .@{selector}__description {
       padding-left: @icon-size + @oui-radio-padding-left;
     }
@@ -131,12 +146,12 @@
     @icon-outer-color: @oui-radio-icon-outer-color,
     @icon-inner-color: @oui-radio-icon-inner-color
   ) {
-    .@{selector}__label::before {
+    .@{selector}__icon::before {
       border-color: @icon-outer-color;
       background-color: @icon-background-color;
     }
 
-    .@{selector}__label::after {
+    .@{selector}__icon::after {
       background-color: @icon-inner-color;
     }
   }

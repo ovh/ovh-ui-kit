@@ -1,0 +1,154 @@
+#oui {
+  .table-base(
+    @selector: oui-table
+  ) {
+    width: @oui-datagrid-width;
+    border-left: @oui-datagrid-border-color solid @oui-datagrid-border-width;
+    border-right: @oui-datagrid-border-color solid @oui-datagrid-border-width;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: @oui-datagrid-margin;
+    text-align: left;
+    font-size: @oui-datagrid-font-size;
+
+    &__row {
+      &:nth-child(odd) {
+        background-color: @oui-datagrid-row-background-color_odd;
+      }
+
+      &:nth-child(even) {
+        background-color: @oui-datagrid-row-background-color_even;
+      }
+    }
+
+    &__cell {
+      padding: @oui-datagrid-cell-padding;
+      height: @oui-datagrid-cell-height;
+      white-space: nowrap;
+      box-sizing: content-box;
+      outline: none;
+      color: @oui-datagrid-cell-font-color;
+      border-bottom: @oui-datagrid-cell-border-width solid @oui-datagrid-cell-border-color;
+      background: none;
+      cursor: default;
+
+      &_s {
+        min-width: @oui-datagrid-cell-width_s;
+        width: @oui-datagrid-cell-width_s;
+        padding: @oui-datagrid-cell-padding_s;
+        text-align: center;
+      }
+    }
+
+    &__row:first-child &__cell {
+      border-top: @oui-datagrid-cell-border-width solid @oui-datagrid-cell-border-color;
+    }
+
+    &__header {
+      #oui > .animate();
+
+      height: @oui-datagrid-header-height;
+      padding: @oui-datagrid-header-padding;
+      white-space: nowrap;
+      outline: none;
+      color: @oui-datagrid-header-font-color;
+      font-weight: @oui-datagrid-header-font-weight;
+      background-color: @oui-datagrid-header-background-color;
+
+      &[role="button"] {
+        cursor: inherit;
+      }
+
+      &_s {
+        min-width: @oui-datagrid-header-width_s;
+        width: @oui-datagrid-header-width_s;
+        padding: @oui-datagrid-header-padding_s;
+        text-align: center;
+      }
+
+      &_sortable-asc, /* Deprecated: Support for old classname */
+      &_sortable-desc, /* Deprecated: Support for old classname */
+      &_sortable,
+      &_sorted {
+        cursor: pointer;
+
+        &[role="button"] {
+          cursor: pointer;
+        }
+
+        .oui-icon {
+          #oui > .animate();
+
+          margin-left: @oui-datagrid-arrow-spacing;
+          font-size: @oui-datagrid-arrow-size;
+          vertical-align: bottom;
+          position: absolute; // Avoid the cell to take account the icon for the width calcultation
+        }
+      }
+
+      &_sortable-asc, /* Deprecated: Support for old classname */
+      &_sortable-desc, /* Deprecated: Support for old classname */
+      &_sortable {
+        &:hover,
+        &:focus {
+          background-color: @oui-datagrid-header-background-color_hover;
+          color: @oui-datagrid-header-font-color_hover;
+        }
+
+        &:focus {
+          #oui > .outline-border(
+            @outline-offset: @oui-datagrid-row-outline-offset
+          );
+        }
+      }
+
+      &_sorted {
+        font-weight: @oui-datagrid-header-font-weight_sorted;
+        color: @oui-datagrid-header-font-color_sorted;
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          color: @oui-datagrid-header-font-color_sorted;
+        }
+
+        &:focus {
+          #oui > .outline-border(
+            @outline-offset: @oui-datagrid-row-outline-offset
+          );
+        }
+      }
+    }
+
+    &__footer {
+      height: @oui-datagrid-footer-height;
+      padding: @oui-datagrid-footer-padding;
+      white-space: nowrap;
+      outline: none;
+      color: @oui-datagrid-footer-font-color;
+      font-weight: @oui-datagrid-footer-font-weight;
+      background-color: @oui-datagrid-footer-background-color;
+
+      &_s {
+        min-width: @oui-datagrid-footer-width_s;
+        width: @oui-datagrid-footer-width_s;
+        padding: @oui-datagrid-footer-padding_s;
+        text-align: center;
+      }
+    }
+  }
+
+  .table-responsive(
+    @selector: oui-table
+  ) {
+    max-width: 100%;
+    margin: @oui-datagrid-margin;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    .@{selector} {
+      margin: 0;
+    }
+  }
+}

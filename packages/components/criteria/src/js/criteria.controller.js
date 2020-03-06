@@ -26,15 +26,15 @@ export default class {
     });
 
     this.criteria = this.model
-      .filter(criterion => !criterion.preview)
-      .map(criterion => ({
+      .filter((criterion) => !criterion.preview)
+      .map((criterion) => ({
         title: this.buildTitle(criterion),
         ...criterion,
       }));
   }
 
   indexOfCriterion(criterion) {
-    return findIndex(this.model, crit => crit.operator === criterion.operator
+    return findIndex(this.model, (crit) => crit.operator === criterion.operator
       && crit.value === criterion.value
       && crit.property === criterion.property
       && crit.preview === criterion.preview);
@@ -137,8 +137,8 @@ export default class {
     this.model = this.model || [];
 
     this.criteria = this.model
-      .filter(criterion => !criterion.preview)
-      .map(criterion => ({
+      .filter((criterion) => !criterion.preview)
+      .map((criterion) => ({
         title: this.buildTitle(criterion),
         ...criterion,
       }));
@@ -147,8 +147,8 @@ export default class {
   $doCheck() {
     if (this.previousModel !== this.model) {
       this.criteria = this.model
-        .filter(criterion => !criterion.preview)
-        .map(criterion => ({
+        .filter((criterion) => !criterion.preview)
+        .map((criterion) => ({
           title: this.buildTitle(criterion),
           ...criterion,
         }));
@@ -166,7 +166,7 @@ export default class {
       return criterion.value;
     }
 
-    const columnModel = find(this.properties, column => column.name === criterion.property);
+    const columnModel = find(this.properties, (column) => column.name === criterion.property);
     const operator = this.translations[`operator_${columnModel.type}_${criterion.operator}`];
     return `${columnModel.title} ${operator} ${criterion.value}`;
   }

@@ -32,6 +32,7 @@ const babelLoader = {
           ],
         ],
         plugins: [
+          '@babel/plugin-proposal-object-rest-spread',
           '@babel/plugin-syntax-dynamic-import',
           '@babel/plugin-transform-runtime',
           'babel-plugin-angularjs-annotate',
@@ -124,8 +125,8 @@ const cssExtractLoader = {
   exclude,
 };
 
-const fileLoader = {
-  test: /\.(woff(2)?|ttf|eot|svg)(\?[a-f0-9]{32})?$/,
+const fontLoader = {
+  test: /\.(woff(2)?|ttf|eot)(\?[a-f0-9]{32})?$/,
   use: [
     {
       loader: 'file-loader',
@@ -138,11 +139,26 @@ const fileLoader = {
   ],
 };
 
+const svgLoader = {
+  test: /\.svg(\?[a-f0-9]{32})?$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[folder]/[name].[ext]?[hash]',
+        outputPath: '../svg',
+        publicPath: '../svg',
+      },
+    },
+  ],
+};
+
 module.exports = {
   babelLoader,
   cssExtractLoader,
   eslintLoader,
-  fileLoader,
+  fontLoader,
   htmlLoader,
   styleLoader,
+  svgLoader,
 };

@@ -1,30 +1,22 @@
-@import './_mixins';
-
 // Inputs
 .oui-input {
-  #oui > .input-base();
-}
+  #oui > .control-base();
 
-// Inputs - Inline
-.oui-input_inline {
-  display: inline-block;
-  vertical-align: top;
-  width: auto;
-}
+  width: 100%;
+  display: block;
 
-// Size variants
-#oui > .control-sizes(oui-input);
-
-// Inputs - Error
-.oui-input_error,
-.oui-field_error .oui-input {
-  #oui > .input-error-style();
-}
-
-.oui-input-group_button .oui-input.oui-input_error:focus ~ .oui-button,
-.oui-input-group_button .oui-input.oui-input_error ~ .oui-button:hover,
-.oui-input-group_button .oui-input.oui-input_error ~ .oui-button:focus {
-  .oui-icon {
-    color: @oui-color-error-dark;
+  &_inline {
+    display: inline-block;
+    width: auto;
   }
+
+  // States
+  #oui > .control-states();
+  #oui > .control-readonly();
+
+  // Sizes
+  #oui > .control-sizes();
+
+  // Validation
+  #oui > .control-validation();
 }

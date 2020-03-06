@@ -30,7 +30,7 @@ export default class {
 
     this.$scope.$watch(
       () => this.password.model,
-      value => this.setValidity(value),
+      (value) => this.setValidity(value),
     );
   }
 }

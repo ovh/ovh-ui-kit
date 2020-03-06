@@ -7,49 +7,19 @@
   height: @oui-action-button-size;
   padding: 0;
   overflow: visible;
-  border: @oui-action-button-border-width solid @oui-action-button-border-color;
   border-radius: @oui-action-button-border-radius;
-  background-color: @oui-action-button-background-color;
 
-  circle {
+  .oui-icon {
     #oui > .animate();
 
-    fill: @oui-action-button-foreground-color;
-  }
-
-  &[aria-expanded="true"] {
-    border-color: @oui-action-button-border-color_active;
-    background-color: @oui-action-button-background-color_active;
-  }
-
-  &:hover {
-    border-color: @oui-action-button-border-color_hover;
-    background-color: @oui-action-button-background-color_hover;
-
-    circle {
-      fill: @oui-action-button-foreground-color_hover;
-      transform-origin: center;
-    }
+    display: block;
+    font-size: @oui-action-button-icon-size;
   }
 
   &:focus {
-    outline: none;
-    box-shadow: @oui-action-button-box-shadow_focus;
-  }
+    #oui > .outline-border();
 
-  &:active {
-    box-shadow: @oui-action-button-box-shadow_active;
-  }
-
-  &:disabled {
-    cursor: default;
-    box-shadow: none;
-    border-color: @oui-action-button-border-color_disabled;
-    background-color: @oui-action-button-background-color_disabled;
-
-    circle {
-      fill: @oui-action-button-foreground-color_disabled;
-    }
+    z-index: 1; // Avoid the outline to be cropped
   }
 }
 

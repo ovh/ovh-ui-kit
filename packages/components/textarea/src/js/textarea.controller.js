@@ -1,12 +1,5 @@
 import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
-const rootClass = 'oui-textarea';
-const disabledClass = 'oui-textarea_disabled';
-const focusClass = 'oui-textarea_active';
-const readonlyClass = 'oui-textarea_readonly';
-const errorClass = 'oui-textarea_error';
-const footerClass = 'oui-textarea__footer';
-
 export default class {
   constructor($attrs, $element, $timeout, ouiTextareaConfiguration) {
     'ngInject';
@@ -21,43 +14,24 @@ export default class {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'required');
     addBooleanParameter(this, 'readonly');
+    addBooleanParameter(this, 'inline');
   }
 
   $postLink() {
-    this.$element.addClass(rootClass);
-
-    this.$element.toggleClass(disabledClass, !!this.disabled);
-    this.$element.toggleClass(readonlyClass, !!this.readonly);
+    this.$element.addClass('oui-textarea__wrapper');
 
     this.$timeout(() => {
       this.$element
         .removeAttr('id')
         .removeAttr('name');
 
-      this.$footer = angular.element(this.$element[0].querySelector(`.${footerClass}`));
-      this.textarea = this.$element[0].querySelector('textarea');
-      this.$footer.on('click', () => {
-        this.textarea.focus();
-      });
+      if (this.inline) {
+        this.$element.addClass('oui-textarea__wrapper_inline');
+      }
 
+      this.textarea = this.$element[0].querySelector('textarea');
       this.updateErrorState();
     });
-  }
-
-  $onChanges(changes) {
-    if (changes.disabled) {
-      this.setDisabled(changes.disabled.currentValue);
-    }
-
-    if (changes.readonly) {
-      this.setReadonly(changes.readonly.currentValue);
-    }
-  }
-
-  $onDestroy() {
-    if (this.$footer) {
-      this.$footer.off('click');
-    }
   }
 
   onTextareaChange() {
@@ -69,10 +43,11 @@ export default class {
 
   updateErrorState() {
     if (!this.textarea || angular.isUndefined(this.maxlength)) {
-      return;
+      return false;
     }
+
     const { length } = angular.element(this.textarea).val();
-    this.$element.toggleClass(errorClass, length > this.maxlength);
+    return length > this.maxlength;
   }
 
   getMaxLengthText() {
@@ -80,19 +55,5 @@ export default class {
     return translation
       .replace('{{length}}', this.textarea ? this.textarea.value.length : 0)
       .replace('{{max}}', this.maxlength);
-  }
-
-  setDisabled(disabled) {
-    this.disabled = disabled;
-    this.$element.toggleClass(disabledClass, disabled);
-  }
-
-  setFocus(focused) {
-    this.$element.toggleClass(focusClass, focused);
-  }
-
-  setReadonly(readonly) {
-    this.readonly = readonly;
-    this.$element.toggleClass(readonlyClass, readonly);
   }
 }

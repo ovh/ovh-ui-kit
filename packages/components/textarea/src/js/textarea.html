@@ -1,4 +1,7 @@
-<textarea class="oui-textarea__textarea"
+<textarea class="oui-textarea"
+    ng-class="{
+        'oui-textarea_error': $ctrl.updateErrorState(),
+    }"
     ng-model="$ctrl.model"
     ng-attr-id="{{::$ctrl.id}}"
     ng-attr-name="{{::$ctrl.name}}"
@@ -9,9 +12,9 @@
     ng-required="$ctrl.required"
     ng-disabled="$ctrl.disabled"
     ng-readonly="$ctrl.readonly"
-    ng-change="$ctrl.onTextareaChange()"
-    ng-focus="$ctrl.setFocus(true)"
-    ng-blur="$ctrl.setFocus(false)"></textarea>
-<div class="oui-textarea__footer"
+    ng-change="$ctrl.onTextareaChange()">
+</textarea>
+<footer class="oui-textarea__footer"
     ng-if="$ctrl.maxlength"
-    ng-bind="$ctrl.getMaxLengthText()"></div>
+    ng-bind="$ctrl.getMaxLengthText()">
+</footer>

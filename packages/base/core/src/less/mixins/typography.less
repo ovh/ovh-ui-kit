@@ -1,19 +1,21 @@
 // Typography
 #oui {
   .base-font(
-    @line-height: @oui-global-base-line-height,
-    @letter-spacing: @oui-global-base-letter-spacing,
-    @font-family: @oui-global-base-font-family
+    @line-height: @earth-line-height,
+    @letter-spacing: @earth-letter-spacing,
+    @font-family: @earth-font-family,
+    @font-weight: @earth-font-weight,
+    @font-size: @earth-font-size,
+    @font-color: @earth-color,
+    @text-align: @earth-text-align,
   ) {
-    font-family: @font-family;
     line-height: @line-height;
     letter-spacing: @letter-spacing;
-    text-align: left;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+    font-family: @font-family;
+    font-weight: @font-weight;
+    font-size: @font-size;
+    color: @font-color;
+    text-align: @text-align;
   }
 
   .text-ellipsis() {
@@ -26,13 +28,17 @@
     #oui > .headings(@index - 1);
 
     &@{index} {
-      color: extract(@oui-heading-colors, @index);
-      font-size: extract(@oui-heading-font-sizes, @index);
-      font-weight: extract(@oui-heading-font-weights, @index);
-      letter-spacing: extract(@oui-heading-letter-spacings, @index);
-      line-height: extract(@oui-heading-line-heights, @index);
-      margin: extract(@oui-heading-margins, @index);
+      #oui > .heading(@index);
     }
+  }
+
+  .heading(@index) {
+    color: extract(@oui-heading-colors, @index);
+    font-size: extract(@oui-heading-font-sizes, @index);
+    font-weight: extract(@oui-heading-font-weights, @index);
+    letter-spacing: extract(@oui-heading-letter-spacings, @index);
+    line-height: extract(@oui-heading-line-heights, @index);
+    margin: extract(@oui-heading-margins, @index);
   }
 
   .link(
@@ -42,15 +48,12 @@
     @text-decoration: @oui-link-text-decoration,
     @text-decoration_hover: @oui-link-text-decoration_hover
   ) {
-    .base-font();
-
     padding: 0;
     border: none;
     background-color: transparent;
     color: @font-color;
     font-weight: @font-weight;
     text-decoration: @text-decoration;
-    line-height: inherit;
     cursor: pointer;
     -webkit-text-decoration-skip: objects;
 

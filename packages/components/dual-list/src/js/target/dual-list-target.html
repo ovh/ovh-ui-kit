@@ -36,14 +36,14 @@
     <!-- /Search -->
 
     <!-- Move All -->
-    <p class="oui-dual-list__action"
+    <div class="oui-dual-list__action"
         ng-if="$ctrl.dualList.target.length > 1"
         ng-show="!$ctrl.isLoading()">
         <oui-button variant="link"
             on-click="$ctrl.dualList.moveAllToSource($ctrl.searchQuery)">
             {{::$ctrl.translations.moveAll}}
         </oui-button>
-    </p>
+    </div>
     <!-- /Move All -->
 
     <!-- Loading -->
@@ -71,7 +71,7 @@
                         ng-bind="::$ctrl.dualList.getProperty(item)">
                     </span>
                     <span class="oui-dual-list-item__icon">
-                        <span class="oui-icon oui-icon-close_thin" aria-hidden="true"></span>
+                        <span class="oui-icon oui-icon-close" aria-hidden="true"></span>
                     </span>
                 </button>
             </li>

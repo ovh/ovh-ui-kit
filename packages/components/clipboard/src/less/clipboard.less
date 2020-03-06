@@ -1,64 +1,18 @@
 // Clipboard
 .oui-clipboard {
-  &:extend(.oui-input-group all);
+  &:extend(.oui-input-overlay all);
 
-  margin: 0;
+  width: 100%;
   display: block;
-  position: relative;
 
-  .oui-input {
-    &,
-    &:read-only {
-      #oui > .text-ellipsis();
-
-      cursor: pointer;
-      margin: 0;
-      padding-right: @oui-clipboard-button-width;
-      color: @oui-clipboard-font-color;
-      box-shadow: @oui-clipboard-box-shadow;
-      border-radius: @oui-clipboard-border-radius;
-      border-color: @oui-clipboard-border-color;
-      background-color: @oui-clipboard-background-color;
-    }
-
-    &:hover {
-      border-color: @oui-clipboard-border-color_hover;
-    }
-
-    &:focus {
-      #oui > .animate();
-
-      transition-property: border-color, box-shadow, background-color;
-      border-color: @oui-clipboard-border-color_focus;
-      outline: none;
-      box-shadow: @oui-clipboard-box-shadow_focus;
-      background-color: @oui-clipboard-background-color_focus;
-      text-decoration: none;
-    }
+  .oui-input:read-only {
+    #oui > .control-color();
+    #oui > .text-ellipsis();
   }
 
-  .oui-button {
-    &,
-    &:hover,
-    &:focus {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      min-width: @oui-clipboard-button-width;
-      width: auto;
-      border-color: transparent;
-      background: transparent;
-      box-shadow: none;
-      transition: none;
-      z-index: 2; // Avoid to be hidden by inputs
-    }
-  }
-
-  .oui-icon {
-    display: block;
-    color: inherit;
-    font-size: inherit;
+  &_inline {
+    display: inline-block;
+    width: auto;
   }
 }
 

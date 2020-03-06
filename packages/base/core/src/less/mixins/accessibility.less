@@ -1,10 +1,17 @@
 // Accessibility
 #oui {
-  .outline-border() {
-    outline-width: 1px;
-    outline-style: dotted;
-    outline-color: initial;
-    outline-offset: -2px;
+  .outline-border(
+    @outline-width: @oui-a11y-outline-width;
+    @outline-style: @oui-a11y-outline-style;
+    @outline-color: @oui-a11y-outline-color;
+    @outline-offset: @oui-a11y-outline-offset;
+    @outline-radius: @oui-a11y-outline-radius;
+  ) {
+    outline-width: @outline-width;
+    outline-style: @outline-style;
+    outline-color: @outline-color;
+    outline-offset: @outline-offset;
+    -moz-outline-radius: @outline-radius;
   }
 
   .visually-hidden() {

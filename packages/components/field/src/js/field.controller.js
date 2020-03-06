@@ -202,7 +202,7 @@ export default class FieldController {
     return this.controlElements
 
     // Exclude all controls that have no defined name attribute.
-      .filter(control => hasAttributeValue(control, 'name'))
+      .filter((control) => hasAttributeValue(control, 'name'))
       .map((control) => {
         // Get all ids available on controls
         if (hasAttributeValue(control, 'id')) {

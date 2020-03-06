@@ -1,4 +1,4 @@
-import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
   constructor($attrs, $element, $scope, $timeout) {
@@ -30,10 +30,7 @@ export default class {
   }
 
   $onInit() {
-    addBooleanParameter(this, 'checked');
     addDefaultParameter(this, 'id', `ouiTabsItem${this.$scope.$id}`);
-
-    this.hasCheckmark = angular.isDefined(this.$attrs.checked);
 
     // Watch if hidden
     this.$scope.$watch(

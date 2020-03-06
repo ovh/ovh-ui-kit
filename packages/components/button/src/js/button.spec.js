@@ -55,14 +55,6 @@ describe('ouiButton', () => {
       expect(component.find('button').eq(0).attr('aria-label')).toBe('foo');
     });
 
-    it('should have a primary next step button', () => {
-      const component = testUtils.compileTemplate('<oui-button variant="primary" variant-nav="next">foo</oui-button>');
-      const button = component.find('button').eq(0);
-
-      expect(button.hasClass('oui-button_primary')).toBe(true);
-      expect(button.hasClass('oui-button_icon-right')).toBe(true);
-    });
-
     it('should have a disabled submit button', () => {
       const component = testUtils.compileTemplate('<oui-button type="submit" disabled>foo</oui-button>');
       const button = component.find('button').eq(0);
@@ -78,6 +70,73 @@ describe('ouiButton', () => {
 
       component.find('button').eq(0).triggerHandler('click');
       expect(component.scope().$ctrl.onClickTest).toHaveBeenCalled();
+    });
+
+    describe('with icon variants', () => {
+      it('should have a primary button with an icon left', () => {
+        const component = testUtils.compileTemplate('<oui-button variant="primary" icon-left="oui-icon-folder">foo</oui-button>');
+        const button = component.find('button').eq(0);
+        const icon = button.find('span').eq(0);
+
+        expect(button.hasClass('oui-button_primary')).toBe(true);
+        expect(button.hasClass('oui-button_icon-left')).toBe(true);
+        expect(icon.hasClass('oui-icon-folder')).toBe(true);
+      });
+
+      it('should have a primary button with an icon right', () => {
+        const component = testUtils.compileTemplate('<oui-button variant="primary" icon-right="oui-icon-folder">foo</oui-button>');
+        const button = component.find('button').eq(0);
+        const icon = button.find('span').eq(1);
+
+        expect(button.hasClass('oui-button_primary')).toBe(true);
+        expect(button.hasClass('oui-button_icon-right')).toBe(true);
+        expect(icon.hasClass('oui-icon-folder')).toBe(true);
+      });
+    });
+
+    describe('with navigation variants', () => {
+      it('should have a primary previous step button', () => {
+        const component = testUtils.compileTemplate('<oui-button variant="primary" variant-nav="previous">foo</oui-button>');
+        const button = component.find('button').eq(0);
+        const icon = button.find('span').eq(0);
+
+        expect(button.hasClass('oui-button_primary')).toBe(true);
+        expect(button.hasClass('oui-button_icon-left')).toBe(true);
+        expect(icon.hasClass('oui-icon-chevron-left')).toBe(true);
+      });
+
+      it('should have a primary next step button', () => {
+        const component = testUtils.compileTemplate('<oui-button variant="primary" variant-nav="next">foo</oui-button>');
+        const button = component.find('button').eq(0);
+        const icon = button.find('span').eq(1);
+
+        expect(button.hasClass('oui-button_primary')).toBe(true);
+        expect(button.hasClass('oui-button_icon-right')).toBe(true);
+        expect(icon.hasClass('oui-icon-chevron-right')).toBe(true);
+      });
+    });
+
+    describe('with size variants', () => {
+      it('should have a small button', () => {
+        const component = testUtils.compileTemplate('<oui-button size="s">foo</oui-button>');
+        const button = component.find('button').eq(0);
+
+        expect(button.hasClass('oui-button_s')).toBe(true);
+      });
+
+      it('should have a large button', () => {
+        const component = testUtils.compileTemplate('<oui-button size="l">foo</oui-button>');
+        const button = component.find('button').eq(0);
+
+        expect(button.hasClass('oui-button_l')).toBe(true);
+      });
+
+      it('should have a block button', () => {
+        const component = testUtils.compileTemplate('<oui-button block>foo</oui-button>');
+        const button = component.find('button').eq(0);
+
+        expect(button.hasClass('oui-button_block')).toBe(true);
+      });
     });
   });
 });

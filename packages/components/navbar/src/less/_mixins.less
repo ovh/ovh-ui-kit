@@ -72,7 +72,9 @@
     }
 
     &:focus {
-      #oui > .outline-border();
+      #oui > .outline-border(
+        @outline-offset: @oui-navbar-outline-offset
+      );
     }
 
     &_active {
@@ -112,12 +114,12 @@
       display: none;
     }
 
-    #oui > .medium({
+    @media screen and (max-width: @device-breakpoint-medium-max-width) {
       padding: 0;
       font-size: 0;
       text-align: center;
       white-space: nowrap;
-    });
+    }
 
     .oui-icon {
       width: @icon-size;
@@ -129,11 +131,11 @@
       color: @icon-color;
       vertical-align: middle;
 
-      #oui > .medium({
+      @media screen and (max-width: @device-breakpoint-medium-max-width) {
         line-height: 1;
         margin: 0;
         vertical-align: middle;
-      });
+      }
 
       &__badge {
         min-width: @badge-size;
@@ -147,16 +149,16 @@
         display: block;
         text-align: center;
         color: @oui-color-white;
-        font-family: @oui-global-base-font-family;
+        font-family: @base-font-family;
         font-weight: @badge-font-weight;
         font-size: @badge-font-size;
         border-radius: @badge-radius;
         background: @badge-background-color;
 
-        #oui > .medium({
+        @media screen and (max-width: @device-breakpoint-medium-max-width) {
           top: 50%;
           transform: translate(50%, -50%);
-        });
+        }
       }
     }
   }

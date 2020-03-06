@@ -14,7 +14,7 @@ export default class {
   }
 
   $onInit() {
-    addDefaultParameter(this, 'placement', 'top');
+    addDefaultParameter(this, 'placement', 'auto');
   }
 
   $onDestroy() {

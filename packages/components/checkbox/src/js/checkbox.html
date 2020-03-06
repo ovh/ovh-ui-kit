@@ -1,44 +1,40 @@
-<div class="oui-checkbox"
-    ng-class="{
-        'oui-checkbox_error': $ctrl.hasError(),
-        'oui-checkbox_m': $ctrl.size === 'm',
-        'oui-checkbox_thumbnail': !!$ctrl.thumbnail && $ctrl.variant === 'default',
-        'oui-checkbox_thumbnail-light': !!$ctrl.thumbnail && $ctrl.variant === 'light'
-    }">
-    <input class="oui-checkbox__input"
-        type="checkbox"
-        id="{{:: $ctrl.id }}"
-        name="{{:: $ctrl.name }}"
-        ng-attr-aria-labelledby="{{:: $ctrl.id }}-text"
-        ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}"
-        ng-model="$ctrl.model"
-        ng-change="$ctrl.onChange({ modelValue: $ctrl.model })"
-        ng-disabled="$ctrl.disabled"
-        ng-required="$ctrl.required"
-        ng-focus="$ctrl.focused = true"
-        ng-blur="$ctrl.focused = false">
-    <label for="{{:: $ctrl.id }}"
-        class="oui-checkbox__label-container"
-        ng-attr-aria-labelledby="{{:: $ctrl.id }}-text"
-        ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}">
-        <span class="oui-checkbox__label">
-            <span id="{{:: $ctrl.id }}-text" ng-transclude></span>
-            <span class="oui-checkbox__icon">
-                <span class="oui-icon oui-icon-checkbox-unchecked"></span>
-                <span class="oui-icon oui-icon-checkbox-checked"></span>
-                <span class="oui-icon oui-icon-checkbox-checkmark"></span>
-                <span class="oui-icon oui-icon-checkbox-indeterminate"></span>
-            </span>
+<input class="oui-checkbox__input"
+    type="checkbox"
+    id="{{:: $ctrl.id }}"
+    name="{{:: $ctrl.name }}"
+    ng-attr-aria-labelledby="{{:: $ctrl.id }}Label"
+    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + 'Description' || undefined }}"
+    ng-model="$ctrl.model"
+    ng-change="$ctrl.onChange({ modelValue: $ctrl.model })"
+    ng-disabled="$ctrl.disabled"
+    ng-required="$ctrl.required"
+    ng-focus="$ctrl.focused = true"
+    ng-blur="$ctrl.focused = false">
+<label for="{{:: $ctrl.id }}"
+    class="oui-checkbox__label-container"
+    ng-attr-aria-labelledby="{{:: $ctrl.id }}Label"
+    ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + '-description' || undefined }}">
+    <span class="oui-checkbox__label">
+        <span class="oui-checkbox__icon"></span>
+        <span class="oui-checkbox__text"
+            id="{{:: $ctrl.id }}Label"
+            ng-show="$ctrl.hasLabel()">
+            <span ng-transclude="labelSlot"></span>
+            <ng-transclude></ng-transclude>
         </span>
-        <span id="{{:: $ctrl.id }}-description" class="oui-checkbox__description"
-            ng-bind="$ctrl.description"
-            ng-if="$ctrl.description">
-        </span>
-        <span
-            id="{{:: $ctrl.id }}-footer"
-            class="oui-checkbox__footer"
-            ng-bind="$ctrl.footer"
-            ng-if="$ctrl.footer && $ctrl.thumbnail">
     </span>
-    </label>
-</div>
+    <span
+        id="{{:: $ctrl.id }}Description"
+        class="oui-checkbox__description"
+        ng-if="$ctrl.hasDescription()"
+        ng-transclude="descriptionSlot">
+        <span ng-bind="$ctrl.description"></span>
+    </span>
+    <span
+        id="{{:: $ctrl.id }}Footer"
+        class="oui-checkbox__footer"
+        ng-if="$ctrl.hasFooter()"
+        ng-transclude="footerSlot">
+        <span ng-bind="$ctrl.footer"></span>
+    </span>
+</label>

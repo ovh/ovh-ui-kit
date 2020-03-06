@@ -1,0 +1,20 @@
+// Radio - Thumbnail
+.oui-radio_thumbnail-light, /* Deprecated: Support for old classname */
+.oui-radio_thumbnail {
+  #oui > .choice-thumbnail(oui-radio);
+
+  // We don't display the input with radio thumbnail
+  .oui-radio__description,
+  .oui-radio__text {
+    padding-left: 0;
+  }
+
+  .oui-radio__icon { display: none; }
+}
+
+.oui-radio_error,
+.oui-field_error .oui-radio {
+  &.oui-radio_thumbnail {
+    #oui > .choice-thumbnail_error(oui-radio);
+  }
+}

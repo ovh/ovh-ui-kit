@@ -56,8 +56,8 @@ export default class {
         this.isNavigable = true;
         this.$document
           .one('click', () => this.closeDatalist())
-          .on('keydown', e => this.triggerKeyHandler(e))
-          .on('keyup', e => delete this.keys[e.which]);
+          .on('keydown', (e) => this.triggerKeyHandler(e))
+          .on('keyup', (e) => delete this.keys[e.which]);
       }
     });
   }
@@ -97,7 +97,7 @@ export default class {
       this.$scope.$watch(
         () => this.model.$modelValue,
         debounce(
-          value => this.searchQuery(value),
+          (value) => this.searchQuery(value),
           this.options.debounceDelay,
         ),
       );
@@ -118,8 +118,8 @@ export default class {
         if (query.length >= this.options.minLength) {
           this.engine.search(
             query,
-            datum => this.openDatalist(datum), // Sync
-            datum => this.openDatalist(datum), // Async
+            (datum) => this.openDatalist(datum), // Sync
+            (datum) => this.openDatalist(datum), // Async
           );
         } else if (this.isOpen) {
           this.closeDatalist();
@@ -232,7 +232,7 @@ export default class {
         .attr('autocomplete', 'off')
         .attr('list', this.id)
         .one('focus', () => this.createDatalist()) // One time bind to create the popper helper
-        .on('click', e => e.stopPropagation()) // Avoid click propagation on $element
+        .on('click', (e) => e.stopPropagation()) // Avoid click propagation on $element
         .after(this.autocomplete); // Add compiled template after $element
     });
   }

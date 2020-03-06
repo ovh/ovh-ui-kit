@@ -54,7 +54,7 @@
             ng-show="!!$ctrl.model[0]"
             ng-click="$ctrl.resetFile()"
             ng-disabled="$ctrl.disabled">
-            <span class="oui-icon oui-icon-close_thin"
+            <span class="oui-icon oui-icon-close"
                 aria-hidden="{{::$ctrl.translations.removeFile}}">
             </span>
         </button>
@@ -119,7 +119,7 @@
                     ng-if="file.preview"
                     ng-style="{ 'background-image': file.preview }">
                 </span>
-                <span class="oui-icon oui-icon-eye-blocked" ng-if="!file.loading && !file.preview"></span>
+                <span class="oui-icon oui-icon-eye-closed" ng-if="!file.loading && !file.preview"></span>
                 <oui-spinner size="s" ng-if="file.loading"></oui-spinner>
             </span>
             <span class="oui-file-attachments__label">
@@ -137,7 +137,7 @@
             <button class="oui-file__remove" type="button"
                 ng-click="$ctrl.removeFile(file)"
                 ng-disabled="$ctrl.disabled">
-                <span class="oui-icon oui-icon-close_thin"
+                <span class="oui-icon oui-icon-close"
                     aria-hidden="{{::$ctrl.translations.removeFile}}">
                 </span>
             </button>

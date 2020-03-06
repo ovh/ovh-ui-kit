@@ -2,12 +2,14 @@
   background: @oui-box-background-color;
   border: @oui-box-border-width solid @oui-box-border-color;
   border-radius: @oui-box-border-radius;
-  margin-bottom: @oui-box-spacing;
+  color: @oui-box-font-color;
   padding: @oui-box-padding;
-  text-align: left;
+
+  &__heading {
+    #oui > .heading(4);
+  }
 
   &_light {
     background: @oui-box-light-background-color;
-    border: @oui-box-border-width solid @oui-box-light-border-color;
   }
 }

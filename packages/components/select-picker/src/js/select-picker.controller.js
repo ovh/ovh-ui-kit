@@ -18,7 +18,6 @@ export default class SelectPickerController {
   $onInit() {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'required');
-    addDefaultParameter(this, 'variant', 'default');
     addDefaultParameter(this, 'id', `ouiSelectPicker${this.$scope.$id}`);
 
     if (this.picture) {
@@ -67,7 +66,7 @@ export default class SelectPickerController {
         .removeAttr('name');
 
       this.labelElement = this.$element.find('label');
-      this.labelElement.on('click', event => this.openSelectMenu(event));
+      this.labelElement.on('click', (event) => this.openSelectMenu(event));
 
       // Prevent click propagation on parent label (Safari)
       this.dropdownElement = angular.element(this.$element[0].querySelectorAll('.ui-select-match'));
@@ -75,11 +74,6 @@ export default class SelectPickerController {
         event.stopPropagation();
         event.preventDefault();
       });
-
-      // Avoid apply undefined class if this.variant is not already set
-      if (this.variant) {
-        this.$element.addClass(`oui-select-picker_${this.variant}`);
-      }
     });
   }
 

@@ -17,6 +17,7 @@
     & > a,
     & > span,
     .oui-button_dropdown {
+      line-height: inherit;
       background-color: transparent;
       display: block;
       color: @oui-header-tabs-item-font-color;
@@ -24,20 +25,15 @@
       font-weight: @oui-header-tabs-item-font-weight;
       box-shadow: none;
       margin: 0;
-
-      .oui-icon {
-        color: inherit;
-        font-size: @oui-header-tabs-icon-font-size;
-        margin-left: @oui-header-tabs-icon-spacing;
-        margin-right: 0;
-      }
     }
 
     & > a {
       text-decoration: none;
 
       &:focus {
-        #oui > .outline-border();
+        #oui > .outline-border(
+          @outline-offset: @oui-header-tabs-item-outline-offset
+        );
       }
     }
 
@@ -47,7 +43,7 @@
       color: @oui-header-tabs-item-font-color;
       font-size: @oui-header-tabs-item-font-size;
       font-weight: @oui-header-tabs-item-font-weight;
-      padding: @oui-header-tabs-item-padding;
+      padding: @oui-header-tabs-item-padding_dropdown;
       transition: none;
 
       &:active,
@@ -55,15 +51,10 @@
         background-color: transparent;
       }
 
-      .oui-icon {
-        overflow: hidden;
-        position: static;
-        width: auto;
-        vertical-align: baseline;
-
-        &::before {
-          margin-right: 0;
-        }
+      &:focus {
+        #oui > .outline-border(
+          @outline-offset: @oui-header-tabs-item-outline-offset
+        );
       }
     }
 

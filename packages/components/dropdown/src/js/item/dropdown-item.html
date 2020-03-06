@@ -1,6 +1,6 @@
 <button type="button" class="oui-dropdown-option"
     role="menuitem"
-    ng-if="::!$ctrl.href && !$ctrl.state"
+    ng-if=":: (!$ctrl.href && !$ctrl.state) || $ctrl.disabled"
     ng-click="$ctrl.onClick()"
     ng-attr-aria-label="{{$ctrl.ariaLabel}}"
     ng-disabled="$ctrl.disabled"
@@ -15,13 +15,13 @@
     ng-click="$ctrl.onClick()">
     <span ng-transclude></span>
     <span ng-if="::$ctrl.external"
-        class="oui-icon oui-icon-external_link"
+        class="oui-icon oui-icon-external-link"
         aria-hidden="true">
     </span>
 </a>
 <a class="oui-dropdown-option"
     role="menuitem"
-    ng-if="::!!$ctrl.state"
+    ng-if="::!!$ctrl.state && !$ctrl.disabled"
     ui-sref="{{::$ctrl.getFullSref()}}"
     ng-click="$ctrl.onClick()"
     ng-transclude>

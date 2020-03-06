@@ -1,0 +1,12 @@
+{
+  "name": "@ovh-ux/ui-kit.badge",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./src/index.js",
+  "less": "./src/index.less",
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "dependencies": {
+    "@ovh-ux/ui-kit.core": "*"
+  }
+}

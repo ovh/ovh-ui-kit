@@ -15,6 +15,7 @@
   &__icon {
     display: inline-block;
     vertical-align: middle;
+    font-size: @oui-guide-button-icon-size;
   }
 
   &__text {
@@ -24,7 +25,7 @@
     vertical-align: middle;
   }
 
-  @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
+  @media screen and (max-width: @device-breakpoint-phone-max-width) {
     background: @oui-guide-button-responsive-background-color;
     border-radius: @oui-guide-button-responsive-border-radius;
     width: @oui-guide-button-responsive-size;

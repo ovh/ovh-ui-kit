@@ -20,7 +20,7 @@ export default class PopoverController {
     this.id = this.id || `ouiPopover${this.$scope.$id}`;
     this.isPopoverOpen = false;
 
-    addDefaultParameter(this, 'placement', 'right');
+    addDefaultParameter(this, 'placement', 'auto');
   }
 
   $postLink() {
@@ -107,7 +107,7 @@ export default class PopoverController {
     this.isPopoverOpen = true;
     this.updatePopper();
 
-    this.$document.on('keydown', evt => this.triggerKeyHandler(evt));
+    this.$document.on('keydown', (evt) => this.triggerKeyHandler(evt));
     this.$element.attr('aria-expanded', true);
 
     // force the digest because the popover is outside the angular digest loop
@@ -117,7 +117,7 @@ export default class PopoverController {
   closePopover() {
     this.isPopoverOpen = false;
 
-    this.$document.off('keydown', evt => this.triggerKeyHandler(evt));
+    this.$document.off('keydown', (evt) => this.triggerKeyHandler(evt));
     this.$element.attr('aria-expanded', false);
 
     // force the digest because the popover is outside the angular digest loop

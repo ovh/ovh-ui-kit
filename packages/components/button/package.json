@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "@ovh-ux/ui-kit.core": "*",
-    "angular": "^1.7.8"
+    "angular": "^1.7.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/node": "^7.4.5",
+    "@babel/core": "^7.8.6",
+    "@babel/node": "^7.8.4",
     "@ovh-ux/ui-kit.test": "*",
-    "angular-mocks": "^1.7.8",
-    "cross-env": "^5.2.0",
-    "karma": "^4.1.0"
+    "angular-mocks": "^1.7.9",
+    "cross-env": "^6.0.3",
+    "karma": "^4.4.1"
   }
 }

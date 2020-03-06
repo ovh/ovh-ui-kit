@@ -1,7 +1,7 @@
 import find from 'lodash/find';
 import mockData from './criteria-adder.spec.data.json';
 
-const getValueComponent = $element => $element[0].querySelector('[name=barValue]');
+const getValueComponent = ($element) => $element[0].querySelector('[name=barValue]');
 
 describe('ouiCriteriaAdder', () => {
   let $timeout;

@@ -54,7 +54,7 @@ export default class {
       const items = this.$document[0].querySelectorAll(`oui-collapsible[group="${this.group}"]`);
 
       // `items` is a jqLite Array
-      angular.forEach(items, item => angular.element(item).controller('ouiCollapsible').close());
+      angular.forEach(items, (item) => angular.element(item).controller('ouiCollapsible').close());
     }
 
     this.expanded = !this.expanded;

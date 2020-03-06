@@ -1,21 +1,41 @@
 import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 
 export default class {
-  constructor($scope, $element, $attrs, $timeout) {
+  constructor($scope, $element, $attrs, $timeout, $transclude) {
     'ngInject';
 
     this.$scope = $scope;
     this.$element = $element;
     this.$attrs = $attrs;
     this.$timeout = $timeout;
+    this.$transclude = $transclude;
+  }
+
+  hasDescription() {
+    return this.$transclude.isSlotFilled('descriptionSlot') || this.description;
+  }
+
+  hasFooter() {
+    if (!this.thumbnail) {
+      return false;
+    }
+
+    return this.$transclude.isSlotFilled('footerSlot') || this.footer;
+  }
+
+  hasLabel() {
+    const transclude = angular.element(this.$element[0].querySelector('.oui-radio__text')).text().trim();
+    const isEmpty = !transclude.length;
+
+    return this.$transclude.isSlotFilled('labelSlot') || !isEmpty;
   }
 
   $onInit() {
     addBooleanParameter(this, 'disabled');
+    addBooleanParameter(this, 'inline');
     addBooleanParameter(this, 'thumbnail');
     addBooleanParameter(this, 'required');
     addDefaultParameter(this, 'id', `ouiRadio${this.$scope.$id}`);
-    addDefaultParameter(this, 'variant', 'default');
 
     this.group = this.radioGroup || this.radioToggleGroup;
     if (this.group) {
@@ -37,12 +57,12 @@ export default class {
         .removeAttr('name')
         .addClass(this.radioToggleGroup ? 'oui-radio-toggle' : 'oui-radio');
 
-      if (this.size) {
-        this.$element.addClass(`oui-radio_${this.size}`);
+      if (this.inline) {
+        this.$element.addClass('oui-radio_inline');
       }
 
       if (this.thumbnail && !this.radioToggleGroup) {
-        this.$element.addClass(this.variant === 'default' ? 'oui-radio_thumbnail' : `oui-radio_thumbnail-${this.variant}`);
+        this.$element.addClass('oui-radio_thumbnail');
       }
     });
   }

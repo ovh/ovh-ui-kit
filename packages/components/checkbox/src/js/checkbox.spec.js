@@ -10,25 +10,12 @@ describe('ouiCheckbox', () => {
     TestUtils = _TestUtils_;
   }));
 
-  function getCheckboxInputElement(element) {
-    return element[0].querySelector('input[type=checkbox]');
-  }
 
-  function getCheckboxLabelElement(element) {
-    return element[0].querySelector('label');
-  }
-
-  function getCheckboxTextContainerElement(element) {
-    return element[0].querySelector('.oui-checkbox__label span:first-child');
-  }
-
-  function getCheckboxDescriptionElement(element) {
-    return element[0].querySelector('.oui-checkbox__description');
-  }
-
-  function getCheckboxFooterElement(element) {
-    return element[0].querySelector('.oui-checkbox__footer');
-  }
+  const getCheckboxInputElement = (element) => element[0].querySelector('input[type=checkbox]');
+  const getCheckboxLabelElement = (element) => element[0].querySelector('label');
+  const getCheckboxTextContainerElement = (element) => element[0].querySelector('.oui-checkbox__text');
+  const getCheckboxDescriptionElement = (element) => element[0].querySelector('.oui-checkbox__description');
+  const getCheckboxFooterElement = (element) => element[0].querySelector('.oui-checkbox__footer');
 
   describe('Component', () => {
     it('should have an element with default classname', () => {
@@ -36,7 +23,7 @@ describe('ouiCheckbox', () => {
 
       $timeout.flush();
 
-      expect(element.find('div').eq(0).hasClass('oui-checkbox')).toBe(true);
+      expect(element.hasClass('oui-checkbox')).toBe(true);
     });
 
     describe('id attribute', () => {
@@ -75,7 +62,7 @@ describe('ouiCheckbox', () => {
         const element = TestUtils.compileTemplate('<oui-checkbox>test</oui-checkbox>');
 
         const textContainerCheckboxElement = getCheckboxTextContainerElement(element);
-        expect(angular.element(textContainerCheckboxElement).html()).toBe('test');
+        expect(angular.element(textContainerCheckboxElement).text().trim()).toBe('test');
       });
     });
 
@@ -91,7 +78,7 @@ describe('ouiCheckbox', () => {
         const element = TestUtils.compileTemplate('<oui-checkbox description="test"></oui-checkbox>');
 
         const descriptionCheckboxElement = getCheckboxDescriptionElement(element);
-        expect(angular.element(descriptionCheckboxElement).html()).toBe('test');
+        expect(angular.element(descriptionCheckboxElement).text().trim()).toBe('test');
       });
     });
 
@@ -114,7 +101,7 @@ describe('ouiCheckbox', () => {
         const element = TestUtils.compileTemplate('<oui-checkbox footer="test" thumbnail="true"></oui-checkbox>');
 
         const footerCheckboxElement = getCheckboxFooterElement(element);
-        expect(angular.element(footerCheckboxElement).html()).toBe('test');
+        expect(angular.element(footerCheckboxElement).text().trim()).toBe('test');
       });
     });
 
@@ -215,25 +202,21 @@ describe('ouiCheckbox', () => {
       });
     });
 
-    describe('size attribute', () => {
-      it('should have an element with `oui-checkbox_m` classname', () => {
-        const element = TestUtils.compileTemplate('<oui-checkbox size="m"></oui-checkbox>');
-
-        expect(element.find('div').eq(0).hasClass('oui-checkbox_m')).toBeTruthy();
-      });
-    });
-
     describe('thumbnail attribute', () => {
       it('should have an element with `oui-checkbox_thumbnail` classname', () => {
         const element = TestUtils.compileTemplate('<oui-checkbox thumbnail></oui-checkbox>');
 
-        expect(element.find('div').eq(0).hasClass('oui-checkbox_thumbnail')).toBeTruthy();
+        $timeout.flush();
+        expect(element.hasClass('oui-checkbox_thumbnail')).toBe(true);
       });
+    });
 
-      it('should have an element with `oui-checkbox_thumbnail` classname', () => {
-        const element = TestUtils.compileTemplate('<oui-checkbox variant="light" thumbnail></oui-checkbox>');
+    describe('inline attribute', () => {
+      it('should display an inline checkbox', () => {
+        const element = TestUtils.compileTemplate('<oui-checkbox inline></oui-checkbox>');
 
-        expect(element.find('div').eq(0).hasClass('oui-checkbox_thumbnail-light')).toBeTruthy();
+        $timeout.flush();
+        expect(element.hasClass('oui-checkbox_inline')).toBe(true);
       });
     });
 

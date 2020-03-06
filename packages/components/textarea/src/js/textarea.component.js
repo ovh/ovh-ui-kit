@@ -15,6 +15,7 @@ export default {
     minlength: '<?',
     maxlength: '<?',
     required: '<?',
+    inline: '<?',
     onChange: '&?',
   },
 };

@@ -12,34 +12,22 @@ oui-radio-toggle-group {
 }
 
 .oui-radio-toggle {
-  margin-left: -@oui-ragio-toggle-group-border-width;
   flex: 1 1 auto;
 
-  &:first-child {
-    margin-left: 0;
-  }
-
-  .oui-radio-toggle-group_column & {
-    margin-left: 0;
-    margin-top: -@oui-ragio-toggle-group-border-width;
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   &__label {
+    #oui > .animate();
+
     display: inline-block;
     width: 100%;
-    height: @oui-ragio-toggle-group-height;
-    line-height: calc(@oui-ragio-toggle-group-height - @oui-ragio-toggle-group-border-width);
-    padding: @oui-ragio-toggle-group-padding;
-    border: @oui-ragio-toggle-group-border-width solid @oui-ragio-toggle-group-border-color;
-    text-align: center;
-    font-size: @oui-ragio-toggle-group-font-size;
-    font-weight: @oui-ragio-toggle-group-font-weight;
-    background-color: @oui-ragio-toggle-group-background-color;
-    color: @oui-ragio-toggle-group-font-color;
+    height: @oui-radio-toggle-height;
+    line-height: calc(@oui-radio-toggle-height - @oui-radio-toggle-border-width);
+    padding: @oui-radio-toggle-padding;
+    border: @oui-radio-toggle-border-width solid @oui-radio-toggle-border-color;
+    border-radius: @oui-radio-toggle-border-radius;
+    font-size: @oui-radio-toggle-font-size;
+    font-weight: @oui-radio-toggle-font-weight;
+    background-color: @oui-radio-toggle-background-color;
+    color: @oui-radio-toggle-font-color;
     white-space: nowrap;
 
     &:hover {
@@ -47,28 +35,7 @@ oui-radio-toggle-group {
     }
   }
 
-  &:first-of-type &__label {
-    border-radius: @oui-ragio-toggle-group-border-radius 0 0 @oui-ragio-toggle-group-border-radius;
-    border-left-width: @oui-ragio-toggle-group-border-width;
-
-    .oui-radio-toggle-group_column & {
-      border-radius: @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius 0 0;
-      border-width: @oui-ragio-toggle-group-border-width;
-    }
-  }
-
-  &:last-of-type &__label {
-    border-radius: 0 @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius 0;
-    border-right-width: @oui-ragio-toggle-group-border-width;
-
-    .oui-radio-toggle-group_column & {
-      border-radius: 0 0 @oui-ragio-toggle-group-border-radius @oui-ragio-toggle-group-border-radius;
-      border-width: @oui-ragio-toggle-group-border-width;
-    }
-  }
-
   &__label-container {
-    width: 100%;
     margin: 0;
   }
 
@@ -76,29 +43,36 @@ oui-radio-toggle-group {
     #oui > .visually-hidden();
   }
 
-  &__input:hover ~ &__label-container &__label {
-    background-color: @oui-ragio-toggle-group-background-color_hover;
+  &__input ~ &__label-container &__label {
+    box-shadow: @oui-radio-toggle-box-shadow;
   }
 
   &__input:checked ~ &__label-container &__label {
-    background-color: @oui-ragio-toggle-group-background-color_checked;
-    color: @oui-ragio-toggle-group-font-color_checked;
+    border-color: @oui-radio-toggle-border-color_checked;
+    background-color: @oui-radio-toggle-background-color_checked;
+    color: @oui-radio-toggle-font-color_checked;
     cursor: default;
-  }
-
-  &__input:not(:checked) ~ &__label-container &__label {
-    box-shadow: @oui-radio-toggle-group-box-shadow;
   }
 
   &__input:disabled ~ &__label-container &__label {
+    opacity: 0.5;
     cursor: default;
-    background-color: @oui-ragio-toggle-group-background-color_disabled;
-    color: @oui-ragio-toggle-group-font-color_disabled;
   }
 
-  &__input:disabled:checked ~ &__label-container &__label {
-    background-color: @oui-ragio-toggle-group-background-color_checked-disabled;
-    color: @oui-ragio-toggle-group-font-color_checked-disabled;
-    cursor: default;
+  &__input:not(:disabled):hover ~ &__label-container &__label,
+  &__input:not(:disabled):focus ~ &__label-container &__label {
+    border-color: @oui-radio-toggle-border-color_hover;
+    box-shadow: @oui-radio-toggle-box-shadow_hover;
+    background-color: @oui-radio-toggle-background-color_hover;
+    color: @oui-radio-toggle-font-color_hover;
+  }
+
+  & + & {
+    margin-left: @oui-radio-toggle-spacing;
+  }
+
+  .oui-radio-toggle-group_column & + & {
+    margin-left: 0;
+    margin-top: @oui-radio-toggle-spacing;
   }
 }

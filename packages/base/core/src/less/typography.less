@@ -38,16 +38,11 @@ h,
 a,
 .oui-link {
   #oui > .link();
-}
 
-.oui-link_icon .oui-icon {
-  margin-left: @oui-link-icon-margin-left;
-
-  &::before {
-    width: @oui-link-icon-icon-size;
-    height: @oui-link-icon-icon-size;
-    font-size: @oui-link-icon-icon-size;
-    line-height: @oui-link-icon-icon-size;
+  .oui-icon {
+    margin-left: @oui-link-icon-spacing;
+    margin-right: @oui-link-icon-spacing;
+    font-size: @oui-link-icon-size;
   }
 }
 
@@ -73,8 +68,8 @@ hr,
 // Paragraphs
 p,
 .oui-paragraph {
-  line-height: @oui-paragraph-line-height;
-  color: @oui-paragraph-font-color;
+  #oui > .base-font();
+
   margin: @oui-paragraph-margin;
   word-break: normal;
 }

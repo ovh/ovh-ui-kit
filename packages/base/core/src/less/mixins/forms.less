@@ -1,14 +1,64 @@
 // Forms
 #oui {
-  .control-sizes(@selector) {
+  .control-base() {
+    #oui > .animate();
+    #oui > .base-font(
+      @line-height: @oui-form-control-line-height,
+      @font-weight: @oui-form-control-font-weight,
+      @font-size: @oui-form-control-font-size,
+      @font-color: @oui-form-control-font-color,
+    );
+
+    min-height: @oui-form-control-min-height;
+    margin: @oui-form-control-margin;
+    padding: @oui-form-control-padding;
+    border: @oui-form-control-border-color solid @oui-form-control-border-width;
+    border-bottom-color: @oui-form-control-border-bottom-color;
+    border-radius: @oui-form-control-border-radius;
+    box-shadow: @oui-form-control-box-shadow;
+    outline: @oui-form-control-outline;
+    background-color: @oui-form-control-background-color;
+    transition-property: border-color, box-shadow, background-color;
+
+    &::selection {
+      color: @oui-form-selection-font-color;
+      background: @oui-form-selection-background-color;
+    }
+
+    &::-ms-clear,
+    &::-ms-reveal {
+      display: none;
+    }
+  }
+
+  .control-color(
+    @font-color: @oui-form-control-font-color,
+    @border-color: @oui-form-control-border-color,
+    @border-bottom-color: @oui-form-control-border-bottom-color,
+    @background-color: @oui-form-control-background-color,
+    @selection-font-color: @oui-form-selection-font-color,
+    @selection-background-color: @oui-form-selection-background-color,
+  ) {
+    color: @font-color;
+    border-color: @border-color;
+    border-bottom-color: @border-bottom-color;
+    background-color: @background-color;
+
+    &::selection {
+      color: @selection-font-color;
+      background: @selection-background-color;
+    }
+  }
+
+  .control-sizes() {
     .make-control-sizes(@i: 1) when (@i <= length(@oui-form-control-sizes)) {
       .make-control-sizes(@i + 1);
+
       @pair: extract(@oui-form-control-sizes, @i);
       @key: extract(@pair, 1);
       @value: extract(@pair, 2);
 
-      .@{selector}_@{key},
-      .@{selector}_@{i} {
+      &_@{key} {
         width: @value;
         min-width: @value;
       }
@@ -20,8 +70,7 @@
       @key: extract(@pair, 1);
       @value: extract(@pair, 2);
 
-      .@{selector}_@{key},
-      .@{selector}_@{i} {
+      &_@{key} {
         width: auto;
         min-width: 0;
         max-width: @value;
@@ -30,8 +79,100 @@
 
     .make-control-sizes();
 
-    @media screen and (max-width: (@oui-responsive-breakpoint-phone - 1)) {
+    @media screen and (max-width: @device-breakpoint-phone-max-width) {
       .make-control-phone-sizes();
+    }
+  }
+
+  .control-states() {
+    &:hover {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_hover,
+        @border-color: @oui-form-control-border-color_hover,
+        @border-bottom-color: @oui-form-control-border-bottom-color_hover,
+        @background-color: @oui-form-control-background-color_hover,
+      );
+    }
+
+    &:focus {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_focus,
+        @border-color: @oui-form-control-border-color_focus,
+        @border-bottom-color: @oui-form-control-border-bottom-color_focus,
+        @background-color: @oui-form-control-background-color_focus,
+      );
+    }
+
+    &:disabled {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_disabled,
+        @border-color: @oui-form-control-border-color_disabled,
+        @border-bottom-color: @oui-form-control-border-bottom-color_disabled,
+        @background-color: @oui-form-control-background-color_disabled,
+      );
+
+      opacity: 0.5;
+    }
+  }
+
+  .control-readonly() {
+    &:read-only {
+      #oui > .control-color(
+        @font-color: @oui-form-control-font-color_readonly,
+        @border-color: @oui-form-control-border-color_readonly,
+        @border-bottom-color: @oui-form-control-border-bottom-color_readonly,
+        @background-color: @oui-form-control-background-color_readonly,
+      );
+    }
+  }
+
+  .control-validation() {
+    &_success,
+    .oui-field_success & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-form-control-font-color_success,
+          @border-color: @oui-form-control-border-color_success,
+          @border-bottom-color: @oui-form-control-border-bottom-color_success,
+          @background-color: @oui-form-control-background-color_success,
+          @selection-font-color: @oui-form-selection-font-color_success,
+          @selection-background-color: @oui-form-selection-background-color_success,
+        );
+      }
+    }
+
+    &_warning,
+    .oui-field_warning & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-form-control-font-color_warning,
+          @border-color: @oui-form-control-border-color_warning,
+          @border-bottom-color: @oui-form-control-border-bottom-color_warning,
+          @background-color: @oui-form-control-background-color_warning,
+          @selection-font-color: @oui-form-selection-font-color_warning,
+          @selection-background-color: @oui-form-selection-background-color_warning,
+        );
+      }
+    }
+
+    &_error,
+    .oui-field_error & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .control-color(
+          @font-color: @oui-form-control-font-color_error,
+          @border-color: @oui-form-control-border-color_error,
+          @border-bottom-color: @oui-form-control-border-bottom-color_error,
+          @background-color: @oui-form-control-background-color_error,
+          @selection-font-color: @oui-form-selection-font-color_error,
+          @selection-background-color: @oui-form-selection-background-color_error,
+        );
+      }
     }
   }
 }

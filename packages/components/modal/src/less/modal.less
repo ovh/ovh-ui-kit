@@ -56,10 +56,12 @@
   }
 
   &__title {
-    margin-top: 0;
     color: @oui-modal-title-color;
-    font-size: @oui-modal-header-font-size;
-    font-weight: @oui-modal-header-font-weight;
+    font-size: @oui-modal-title-font-size;
+    font-weight: @oui-modal-title-font-weight;
+    letter-spacing: @oui-modal-title-letter-spacing;
+    line-height: @oui-modal-title-line-height;
+    margin: @oui-modal-title-margin;
   }
 
   &__loader {
@@ -87,17 +89,39 @@
   }
 
   &__icon {
+    width: @oui-modal-icon-font-size;
+    height: @oui-modal-icon-font-size;
+    line-height: @oui-modal-icon-font-size;
     position: absolute;
     display: block;
     top: @oui-modal-icon-position-top;
     left: @oui-modal-icon-position-left;
     font-size: @oui-modal-icon-font-size;
 
-    &.oui-icon-success_circle { color: @oui-modal-icon-success-color; }
-    &.oui-icon-error_circle { color: @oui-modal-icon-error-color; }
-    &.oui-icon-warning_circle { color: @oui-modal-icon-warning-color; }
-    &.oui-icon-info_circle { color: @oui-modal-icon-info-color; }
-    &.oui-icon-help_circle { color: @oui-modal-icon-help-color; }
+    &.oui-icon-success_circle, /* Deprecated: Support for old classname */
+    &.oui-icon-success-circle {
+      color: @oui-modal-icon-success-color;
+    }
+
+    &.oui-icon-error_circle, /* Deprecated: Support for old classname */
+    &.oui-icon-error-circle {
+      color: @oui-modal-icon-error-color;
+    }
+
+    &.oui-icon-warning_circle, /* Deprecated: Support for old classname */
+    &.oui-icon-warning-circle {
+      color: @oui-modal-icon-warning-color;
+    }
+
+    &.oui-icon-info_circle, /* Deprecated: Support for old classname */
+    &.oui-icon-info-circle {
+      color: @oui-modal-icon-info-color;
+    }
+
+    &.oui-icon-help_circle, /* Deprecated: Support for old classname */
+    &.oui-icon-help-circle {
+      color: @oui-modal-icon-help-color;
+    }
   }
 
   &_shadow {

@@ -1,13 +1,15 @@
 <span class="oui-chip"
+    title="{{::(item.title || item.name)}}"
+    ng-if="::!$ctrl.closable"
     ng-repeat="item in $ctrl.items"
-    ng-class="::{
-        'oui-chip_closable': !!$ctrl.closable,
-        'oui-chip_full-width': !!$ctrl.stacked
-    }">
-    <span ng-bind="::(item.title || item.name)" title="{{::(item.title || item.name)}}"></span>
-    <button type="button" class="oui-chip__close"
-        ng-if="::!!$ctrl.closable"
-        ng-click="$ctrl.removeItem($index)">
-        <span class="oui-icon oui-icon-close_thin" aria-hidden="true"></span>
-    </button>
+    ng-bind="::(item.title || item.name)"
+    ng-class="::{ 'oui-chip_block': !!$ctrl.stacked }">
 </span>
+<button class="oui-chip oui-chip_closable"
+    ng-if="::!!$ctrl.closable"
+    ng-click="$ctrl.removeItem($index)"
+    ng-repeat="item in $ctrl.items"
+    ng-class="::{ 'oui-chip_block': !!$ctrl.stacked }">
+    <span ng-bind="::(item.title || item.name)" title="{{::(item.title || item.name)}}"></span>
+    <span class="oui-chip__close oui-icon oui-icon-close" aria-hidden="true"></span>
+</button>

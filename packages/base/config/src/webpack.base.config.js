@@ -5,8 +5,9 @@ const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const {
   babelLoader,
   eslintLoader,
-  fileLoader,
+  fontLoader,
   htmlLoader,
+  svgLoader,
 } = require('./webpack.rules');
 
 const plugins = [
@@ -25,8 +26,9 @@ module.exports = {
     rules: [
       babelLoader,
       eslintLoader,
-      fileLoader,
+      fontLoader,
       htmlLoader,
+      svgLoader,
     ],
   },
 };

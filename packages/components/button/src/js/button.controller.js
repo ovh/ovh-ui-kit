@@ -10,6 +10,7 @@ export default class {
   }
 
   $onInit() {
+    addBooleanParameter(this, 'block');
     addBooleanParameter(this, 'disabled');
     addDefaultParameter(this, 'type', 'button');
     addDefaultParameter(this, 'variant', 'secondary');

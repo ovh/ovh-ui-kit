@@ -2,23 +2,27 @@
   margin-bottom: @oui-back-button-margin-bottom;
 
   &__arrow {
-    #oui > .link();
+    // #oui > .link();
 
     width: @oui-back-button-arrow-size;
     height: @oui-back-button-arrow-size;
+    display: inline-block;
     padding: @oui-back-button-arrow-padding;
-    box-sizing: content-box;
-    line-height: @oui-back-button-arrow-size;
     margin-right: @oui-back-button-arrow-spacing;
-    vertical-align: @oui-back-button-arrow-valign;
+    font-size: @oui-back-button-arrow-size;
+    vertical-align: @oui-back-button-arrow-vertical-align;
 
     .oui-icon {
-      font-size: @oui-back-button-arrow-size;
-      color: inherit;
+      margin: 0;
+      font-size: inherit;
     }
 
     &:focus {
       #oui > .outline-border();
+    }
+
+    &:hover {
+      text-decoration: none;
     }
   }
 
@@ -26,7 +30,7 @@
     &:extend(.oui-heading_2);
 
     display: inline;
-    vertical-align: @oui-back-button-valign;
+    vertical-align: @oui-back-button-vertical-align;
   }
 }
 

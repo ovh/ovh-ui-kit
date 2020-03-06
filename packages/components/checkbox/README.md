@@ -14,11 +14,10 @@ angular.module('myModule', ['oui.checkbox']);
 | `id`          | string                  | @?      | yes               | n/a                     | n/a       | id attribute of the checkbox
 | `name`        | string                  | @?      | yes               | n/a                     | n/a       | name attribute of the checkbox
 | `description` | string                  | @?      | no                | n/a                     | n/a       | description text
-| `footer`      | string                  | @?      | no                | n/a                     | n/a       | description text
-| `size`        | string                  | @?      | yes               | `m`                     | n/a       | checkbox size
-| `variant`     | string                  | @?      | yes               | `default`, `light`      | `default` | checkbox modifier, used in conjunction with `thumbnail`
+| `footer`      | string                  | @?      | no                | n/a                     | n/a       | footer text
 | `disabled`    | boolean                 | <?      | no                | `true`, `false`         | `false`   | disabled flag
 | `required`    | boolean                 | <?      | no                | `true`, `false`         | `false`   | required flag
+| `inline`      | boolean                 | <?      | no                | `true`, `false`         | `false`   | inline style of the checkbox
 | `thumbnail`   | boolean                 | <?      | no                | `true`, `false`         | `false`   | thumbnail style of the checkbox
 | `on-change`   | function                | &       | no                | n/a                     | n/a       | handler triggered when value has changed
 
@@ -31,4 +30,20 @@ Model will not be refreshed until the `on-change` callback hasn't returned. If y
     model="$ctrl.model"
     on-change="$ctrl.onChange(modelValue)">
 </oui-checkbox>
+```
+
+### Transclude slots
+
+| Attribute                 | Description
+| ----                      | ----
+| `<oui-checkbox-label>`       | definition label slot
+| `<oui-checkbox-description>` | definition description slot, override attribute `description`
+| `<oui-checkbox-footer>`      | definition footer slot
+
+```html
+<oui-checkbox>
+    <oui-checkbox-label>Label</oui-checkbox-label>
+    <oui-checkbox-description>Description</oui-checkbox-description>
+    <oui-checkbox-footer>Footer</oui-checkbox-footer>
+<oui-checkbox>
 ```

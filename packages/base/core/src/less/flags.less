@@ -1,0 +1,25 @@
+@import './_flags';
+
+.oui-flag {
+  width: @oui-icon-size;
+  height: @oui-icon-size;
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  #oui .flags();
+}
+
+#oui {
+  .flags(@index: length(@oui-flag-index)) when(@index > 0) {
+    #oui .flags(@index - 1);
+
+    @flag: extract(@oui-flag-index, @index);
+
+    &_@{flag} {
+      background-image: url('../svg/flags/@{flag}.svg');
+    }
+  }
+}

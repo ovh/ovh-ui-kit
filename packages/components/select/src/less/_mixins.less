@@ -1,91 +1,154 @@
 #oui {
   .select-base(
+    @icon-selector: oui-icon
   ) {
-    #oui > .animate();
+    #oui > .control-base();
     #oui > .text-ellipsis();
 
     cursor: pointer;
     appearance: none;
     width: 100%;
-    max-width: 100%;
-    padding: 0;
-    padding-left: @oui-select-padding-x;
-    padding-right: calc(@oui-select-padding-x + @oui-select-icon-size + @oui-select-icon-spacing);
-    border: @oui-select-border-width solid @oui-select-border-color;
-    border-radius: @oui-select-border-radius;
-    background: @oui-select-background-color;
-    box-shadow: @oui-select-box-shadow;
-    color: @oui-select-font-color;
-    font-size: @oui-select-font-size;
-    font-family: inherit;
-    font-weight: @oui-select-font-weight;
-    letter-spacing: @oui-select-letter-spacing;
+    display: block;
+    position: relative;
+    padding-right: @oui-select-height;
     text-align: left;
     white-space: normal;
 
-    // UI Select
-    .oui-icon-chevron-down {
-      margin-right: @oui-button-dropdown-margin-right;
+    // Icon could be aside (native) or inside (ui-select)
+    .@{icon-selector},
+    ~ .@{icon-selector} {
+      width: auto;
+      height: auto;
+      min-width: @oui-select-height;
+      margin: 0;
+      padding: 0;
       position: absolute;
-      right: 1px;
-      top: 1px;
-      bottom: 1px;
-      text-align: center;
-      vertical-align: middle;
-      pointer-events: none;
-
-      &::before {
-        display: block;
-        font-size: @oui-button-dropdown-icon-size;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      top: 0;
+      right: 0;
+      bottom: 0;
+      color: @oui-select-icon-color;
+      font-size: @oui-select-icon-size;
+      pointer-events: none; // Avoid to be clickable
     }
+  }
 
-    ~ .oui-icon,
-    .oui-icon-chevron-down {
-      color: @oui-select-font-color;
+  .select-color(
+    @icon-selector: oui-icon,
+    @font-color: @oui-select-font-color,
+    @border-color: @oui-select-border-color,
+    @border-bottom-color: @oui-select-border-bottom-color,
+    @background-color: @oui-select-background-color,
+    @icon-color: @oui-select-icon-color
+  ) {
+    #oui > .control-color(
+      @font-color: @font-color,
+      @border-color: @border-color,
+      @border-bottom-color: @border-bottom-color,
+      @background-color: @background-color
+    );
+
+    .@{icon-selector},
+    ~ .@{icon-selector} {
+      color: @icon-color;
     }
+  }
 
-    &::-ms-expand {
-      display: none;
-    }
-
+  .select-states(
+    @icon-selector: oui-icon
+  ) {
     &:hover {
-      background-color: @oui-select-background-color_hover;
-      border-color: @oui-select-border-color_hover;
+      #oui > .select-color(
+        @icon-selector: @icon-selector,
+        @font-color: @oui-select-font-color_hover,
+        @border-color: @oui-select-border-color_hover,
+        @border-bottom-color: @oui-select-border-bottom-color_hover,
+        @background-color: @oui-select-background-color_hover
+      );
     }
 
     &:focus,
     &_focus,
     &_focus:hover,
     &[aria-expanded="true"] {
-      border-color: @oui-select-border-color_focus;
-      outline: none;
-      box-shadow: @oui-select-box-shadow_focus;
-      background: @oui-select-background-color_focus;
-
-      ~ .oui-icon,
-      .oui-icon-chevron-down {
-        color: @oui-select-border-color_focus;
-      }
+      #oui > .select-color(
+        @icon-selector: @icon-selector,
+        @font-color: @oui-select-font-color_focus,
+        @border-color: @oui-select-border-color_focus,
+        @border-bottom-color: @oui-select-border-bottom-color_focus,
+        @background-color: @oui-select-background-color_focus
+      );
     }
 
     &:disabled,
     &_disabled,
     &_disabled:hover,
     &_disabled:focus {
-      cursor: not-allowed;
-      border-color: @oui-select-border-color_disabled;
-      background-color: @oui-select-background-color_disabled;
-      box-shadow: none;
-      color: @oui-select-font-color_disabled;
+      #oui > .select-color(
+        @icon-selector: @icon-selector,
+        @font-color: @oui-select-font-color_disabled,
+        @border-color: @oui-select-border-color_disabled,
+        @border-bottom-color: @oui-select-border-bottom-color_disabled,
+        @background-color: @oui-select-background-color_disabled
+      );
 
-      ~ .oui-icon,
-      .oui-icon-chevron-down {
-        color: @oui-select-font-color_disabled;
+      &,
+      .@{icon-selector},
+      ~ .@{icon-selector} {
+        cursor: not-allowed;
+        opacity: 0.5;
       }
     }
-  };
+  }
+
+  .select-validation(
+    @icon-selector: oui-icon
+  ) {
+    &_success,
+    .oui-field_success & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .select-color(
+          @icon-selector: @icon-selector,
+          @font-color: @oui-select-font-color_success,
+          @border-color: @oui-select-border-color_success,
+          @border-bottom-color: @oui-select-border-bottom-color_success,
+          @background-color: @oui-select-background-color_success,
+          @icon-color: @oui-select-icon-color_success
+        );
+      }
+    }
+
+    &_warning,
+    .oui-field_warning & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .select-color(
+          @icon-selector: @icon-selector,
+          @font-color: @oui-select-font-color_warning,
+          @border-color: @oui-select-border-color_warning,
+          @border-bottom-color: @oui-select-border-bottom-color_warning,
+          @background-color: @oui-select-background-color_warning,
+          @icon-color: @oui-select-icon-color_warning
+        );
+      }
+    }
+
+    &_error,
+    .oui-field_error & {
+      &,
+      &:hover,
+      &:focus {
+        #oui > .select-color(
+          @icon-selector: @icon-selector,
+          @font-color: @oui-select-font-color_error,
+          @border-color: @oui-select-border-color_error,
+          @border-bottom-color: @oui-select-border-bottom-color_error,
+          @background-color: @oui-select-background-color_error,
+          @icon-color: @oui-select-icon-color_error
+        );
+      }
+    }
+  }
 }
