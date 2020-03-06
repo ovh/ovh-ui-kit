@@ -25,9 +25,9 @@
 
     & + & { border-top: @oui-inline-adder-border-width solid @oui-inline-adder-border-color; }
 
-    #oui > .phone({
+    @media screen and (max-width: @device-breakpoint-phone-max-width) {
       flex-direction: column;
-    });
+    }
   }
 
   &__field {
@@ -36,9 +36,9 @@
     & + & {
       margin-left: @oui-inline-adder-field-spacing;
 
-      #oui > .phone({
+      @media screen and (max-width: @device-breakpoint-phone-max-width) {
         margin-left: 0;
-      });
+      }
     }
 
     &_adaptive {

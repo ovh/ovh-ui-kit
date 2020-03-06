@@ -9,8 +9,8 @@
         'oui-button_icon-left': !!$ctrl.iconLeft || $ctrl.variantNav === 'previous',
         'oui-button_icon-right': !!$ctrl.iconRight || $ctrl.variantNav === 'next'
     },
-    !!$ctrl.size && ('oui-button_' + $ctrl.size),
-    !!$ctrl.variant && ('oui-button_' + $ctrl.variant)]"
+    $ctrl.size && ('oui-button_' + $ctrl.size),
+    $ctrl.variant && ('oui-button_' + $ctrl.variant)]"
     ng-click="$ctrl.onClick()"
     ng-disabled="$ctrl.disabled">
     <span aria-hidden="true"

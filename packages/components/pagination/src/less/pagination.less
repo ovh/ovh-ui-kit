@@ -5,11 +5,11 @@
   margin: @oui-pagination-margin;
   font-size: @oui-pagination-font-size;
 
-  #oui > .phone({
+  @media screen and (max-width: @device-breakpoint-phone-max-width) {
     flex-direction: column-reverse;
     justify-content: inherit;
     align-items: center;
-  });
+  }
 
   &__progress {
     display: flex;
@@ -35,10 +35,10 @@
     flex-wrap: nowrap;
     margin-left: @oui-pagination-selector-spacing;
 
-    #oui > .phone({
+    @media screen and (max-width: @device-breakpoint-phone-max-width) {
       margin-bottom: @oui-pagination-selector-spacing_responsive;
       margin-left: 0;
-    });
+    }
 
     > .oui-button {
       &:first-child {

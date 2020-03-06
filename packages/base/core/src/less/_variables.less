@@ -6,27 +6,12 @@
  * Core
  */
 
-// Globals
-@oui-global-base-z-index: 0;
-@oui-global-base-margin: rem-calc(15);
-@oui-global-base-radius: rem-calc(6);
-@oui-global-base-radius-medium: rem-calc(8);
-
-@oui-global-base-font-color: @earth-color;
-@oui-global-base-font-family-fallback: sans-serif;
-@oui-global-base-font-family-icon: 'Oui Icons';
-@oui-global-base-font-family: @earth-font-family, @oui-global-base-font-family-fallback;
-@oui-global-base-font-size: @earth-font-size;
-@oui-global-base-font-weight: @earth-font-weight;
-@oui-global-base-line-height: @earth-line-height;
-@oui-global-base-letter-spacing: @earth-letter-spacing;
-
 // Accessibility
 @oui-a11y-outline-color: @as-500;
 @oui-a11y-outline-offset: 1px;
 @oui-a11y-outline-style: dashed;
 @oui-a11y-outline-width: 2px;
-@oui-a11y-outline-radius: calc(@oui-global-base-radius + @oui-a11y-outline-offset);
+@oui-a11y-outline-radius: calc(@base-border-radius-medium + @oui-a11y-outline-offset);
 
 // Animations
 @oui-animation-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
@@ -34,11 +19,6 @@
 @oui-animation-default-timing: 0.2s;
 @oui-animation-shake-default-coordinate: 1;
 @oui-animation-shake-default-angle: 3deg;
-
-// Breakpoints
-@oui-responsive-breakpoint-phone: 768px;
-@oui-responsive-breakpoint-tablet: 1024px;
-@oui-responsive-breakpoint-medium: 1200px;
 
 // Colors
 @oui-color-brand: @p-700;
@@ -49,12 +29,8 @@
 // Icons
 @oui-icon-dist-folder: "../fonts/oui-icons";
 @oui-icon-size: 1em;
-@oui-icon-font-family: @oui-global-base-font-family-icon;
+@oui-icon-font-family: @base-font-family-icon;
 @oui-icon-vertical-align: inherit;
-
-// Shadows
-@oui-box-shadow-primary: 0 0 6px 0 rgba(0, 14, 156, 0.2);
-@oui-box-shadow-secondary: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
 
 // Status
 @oui-status-background-color: transparent;
@@ -157,19 +133,19 @@
   @mars-line-height;
 
 @oui-heading-margins:
-  0 0 @oui-global-base-margin,
-  0 0 @oui-global-base-margin,
-  0 0 @oui-global-base-margin,
-  0 0 @oui-global-base-margin,
-  0 0 @oui-global-base-margin,
-  0 0 @oui-global-base-margin;
+  0 0 @base-spacing-medium,
+  0 0 @base-spacing-medium,
+  0 0 @base-spacing-medium,
+  0 0 @base-spacing-medium,
+  0 0 @base-spacing-medium,
+  0 0 @base-spacing-medium;
 
 // Label
 @oui-label-font-color: @oui-color-shuttle;
-@oui-label-font-size: @oui-global-base-font-size;
-@oui-label-font-weight: @oui-global-base-font-weight;
+@oui-label-font-size: @base-font-size;
+@oui-label-font-weight: @base-font-weight;
 @oui-label-padding: 0;
-@oui-label-margin: 0 0 rem-calc(6);
+@oui-label-margin: 0 0 @base-spacing-small;
 
 // Link
 @oui-link-font-color: @p-500;
@@ -189,7 +165,7 @@
 @oui-horizontal-line-thin-width: 1px;
 
 // Paragraph
-@oui-paragraph-margin: 0 0 rem-calc(15);
+@oui-paragraph-margin: 0 0 @base-spacing-medium;
 
 // Fonts
 @oui-font-source-sans-pro-folder: "../fonts/source-sans-pro";
@@ -248,15 +224,15 @@
 @oui-choice-icon-inner-color_checked: @p-500;
 @oui-choice-icon-inner-color_checked-hover: @p-700;
 
-@oui-choice-box-shadow_focus: @oui-box-shadow-secondary;
+@oui-choice-box-shadow_focus: @base-box-shadow-secondary;
 @oui-choice-box-shadow_error: @oui-choice-box-shadow_focus;
 
 // Choice - Thumbnail
 @oui-choice-thumbnail-padding: rem-calc(22); // calc(24px - border-width)
 @oui-choice-thumbnail-border-width: 2px;
 @oui-choice-thumbnail-border-width_checked: @oui-choice-thumbnail-border-width;
-@oui-choice-thumbnail-border-radius: @oui-global-base-radius-medium;
-@oui-choice-thumbnail-box-shadow_focus: @oui-box-shadow-primary;
+@oui-choice-thumbnail-border-radius: @base-border-radius-large;
+@oui-choice-thumbnail-box-shadow_focus: @base-box-shadow-primary;
 
 @oui-choice-thumbnail-background: @p-000;
 @oui-choice-thumbnail-background_hover: @p-100;
@@ -339,7 +315,7 @@
 @oui-form-control-border-color_error: @ae-300;
 @oui-form-control-border-color_warning: @aw-300;
 @oui-form-control-border-color_success: @as-300;
-@oui-form-control-border-radius: 2px 2px 0 0;
+@oui-form-control-border-radius: @base-border-radius-small @base-border-radius-small 0 0;
 @oui-form-control-border-width: 1px;
 
 @oui-form-control-border-bottom-color: @oui-form-control-border-color;
@@ -441,7 +417,7 @@
 @oui-box-background-color: @p-050;
 @oui-box-border-color: @p-100;
 @oui-box-border-width: 1px;
-@oui-box-border-radius: @oui-global-base-radius-medium;
+@oui-box-border-radius: @base-border-radius-large;
 @oui-box-font-color: @p-800-text;
 @oui-box-padding: rem-calc(16) rem-calc(32) rem-calc(32);
 
@@ -460,7 +436,7 @@
 @oui-button-font-color: @p-500;
 @oui-button-font-size: rem-calc(16);
 @oui-button-font-weight: @oui-font-semibold;
-@oui-button-radius: @oui-global-base-radius;
+@oui-button-radius: @base-border-radius-medium;
 @oui-button-border-width: 0;
 @oui-button-background-color: transparent;
 
@@ -489,7 +465,7 @@
 @oui-button-primary-border-color_active: @oui-button-primary-background-color_active;
 @oui-button-primary-border-color_disabled: @oui-button-primary-background-color_disabled;
 @oui-button-primary-box-shadow: none;
-@oui-button-primary-box-shadow_hover: @oui-box-shadow-secondary;
+@oui-button-primary-box-shadow_hover: @base-box-shadow-secondary;
 @oui-button-primary-box-shadow_focus: none;
 @oui-button-primary-box-shadow_active: @oui-button-primary-box-shadow_hover;
 @oui-button-primary-box-shadow_disabled: none;
@@ -512,7 +488,7 @@
 @oui-button-secondary-border-color_active: @oui-button-secondary-border-color;
 @oui-button-secondary-border-color_disabled: fade(@p-500, 50%);
 @oui-button-secondary-box-shadow: none;
-@oui-button-secondary-box-shadow_hover: @oui-box-shadow-secondary;
+@oui-button-secondary-box-shadow_hover: @base-box-shadow-secondary;
 @oui-button-secondary-box-shadow_focus: none;
 @oui-button-secondary-box-shadow_active: @oui-button-secondary-box-shadow_hover;
 @oui-button-secondary-box-shadow_disabled: none;
@@ -534,7 +510,7 @@
 @oui-button-link-border-color_active: @oui-button-link-border-color;
 @oui-button-link-border-color_disabled: @oui-button-link-border-color;
 @oui-button-link-box-shadow: none;
-@oui-button-link-box-shadow_hover: @oui-box-shadow-secondary;
+@oui-button-link-box-shadow_hover: @base-box-shadow-secondary;
 @oui-button-link-box-shadow_focus: @oui-button-link-box-shadow;
 @oui-button-link-box-shadow_active: @oui-button-link-box-shadow_hover;
 @oui-button-link-box-shadow_disabled: @oui-button-link-box-shadow;
@@ -606,7 +582,7 @@
 @oui-calendar-font-weight: @oui-font-semibold;
 @oui-calendar-border: @oui-calendar-border-color 1px solid;
 @oui-calendar-border-color: @oui-color-silver;
-@oui-calendar-border-radius: @oui-global-base-radius;
+@oui-calendar-border-radius: @base-border-radius-medium;
 @oui-calendar-box-shadow: @oui-dropdown-menu-box-shadow;
 
 @oui-calendar-arrow-size: @oui-dropdown-arrow-size;
@@ -649,7 +625,7 @@
 @oui-calendar-cell-line-height: rem-calc(28);
 @oui-calendar-cell-spacing: rem-calc(8);
 @oui-calendar-cell-font-color_disabled: @oui-color-dusty;
-@oui-calendar-cell-border-radius: @oui-global-base-radius;
+@oui-calendar-cell-border-radius: @base-border-radius-medium;
 @oui-calendar-cell-border-width: 1px;
 @oui-calendar-cell-background-color_hover: @oui-color-charlotte;
 @oui-calendar-cell-background-color_selected: @oui-color-charlotte;
@@ -681,7 +657,7 @@
 // Checkbox - Custom icon
 @oui-checkbox-icon-size: @oui-choice-icon-size;
 @oui-checkbox-icon-border-width: @oui-choice-icon-border-width;
-@oui-checkbox-icon-border-radius: rem-calc(2);
+@oui-checkbox-icon-border-radius: @base-border-radius-small;
 
 @oui-checkbox-icon-background-color: @p-000;
 @oui-checkbox-icon-background-color_hover: @p-000;
@@ -733,7 +709,7 @@
 @oui-chip-close-icon-size: rem-calc(16);
 @oui-chip-close-icon-spacing: rem-calc(4);
 
-@oui-chip-container-margin: 0 0 rem-calc(10);
+@oui-chip-container-margin: 0 0 @base-spacing-small;
 @oui-chip-container-padding: 0;
 @oui-chip-container-item-spacing: rem-calc(4) rem-calc(4);
 @oui-chip-container-background-color: transparent;
@@ -742,7 +718,7 @@
 
 // Collapsible
 @oui-collapsible-min-height: rem-calc(50);
-@oui-collapsible-margin: rem-calc(16);
+@oui-collapsible-margin: @base-spacing-medium;
 @oui-collapsible-padding-base: rem-calc(16);
 @oui-collapsible-padding: calc(@oui-collapsible-padding-base - @oui-collapsible-border-width);
 @oui-collapsible-padding_hover: calc(@oui-collapsible-padding-base - @oui-collapsible-border-width_hover);
@@ -753,7 +729,7 @@
 @oui-collapsible-border-width: 1px;
 @oui-collapsible-border-width_hover: 1px;
 @oui-collapsible-border-width_active: 1px;
-@oui-collapsible-border-radius: rem-calc(8);
+@oui-collapsible-border-radius: @base-border-radius-large;
 @oui-collapsible-background-color: @p-000;
 @oui-collapsible-background-color_hover: @p-100;
 @oui-collapsible-background-color_active: @p-000;
@@ -792,7 +768,7 @@
 
 // Datagrid
 @oui-datagrid-width: 100%;
-@oui-datagrid-margin: 0 0 rem-calc(12);
+@oui-datagrid-margin: 0 0 @base-spacing-large;
 @oui-datagrid-font-size: rem-calc(16);
 @oui-datagrid-border-color: @p-100;
 @oui-datagrid-border-width: 1px;
@@ -864,7 +840,7 @@
 @oui-dropdown-menu-border-color: @oui-color-silver;
 @oui-dropdown-menu-margin: 0;
 @oui-dropdown-menu-spacing: rem-calc(4);
-@oui-dropdown-menu-box-shadow: @oui-box-shadow-primary;
+@oui-dropdown-menu-box-shadow: @base-box-shadow-primary;
 @oui-dropdown-menu-min-width: rem-calc(140);
 @oui-dropdown-menu-max-width: rem-calc(300);
 @oui-dropdown-menu-z-index: 100;
@@ -901,9 +877,9 @@
 
 // Dual List
 @oui-dual-list-min-height: rem-calc(300);
-@oui-dual-list-margin: 0 0 rem-calc(20);
+@oui-dual-list-margin: 0 0 @base-spacing-large;
 @oui-dual-list-border: 1px solid @oui-color-nurse2;
-@oui-dual-list-border-radius: @oui-global-base-radius;
+@oui-dual-list-border-radius: @base-border-radius-medium;
 @oui-dual-list-background: @oui-color-white;
 
 @oui-dual-list-icon-spacing: rem-calc(10);
@@ -935,7 +911,7 @@
 @oui-dual-list-item-font-color: @oui-color-sapphire;
 @oui-dual-list-item-font-size: rem-calc(16);
 @oui-dual-list-item-font-weight: @oui-font-regular;
-@oui-dual-list-item-border-radius: @oui-global-base-radius;
+@oui-dual-list-item-border-radius: @base-border-radius-medium;
 @oui-dual-list-item-background_hover: @oui-color-foam;
 
 @oui-dual-list-placeholder-font-color: @oui-color-silver;
@@ -943,7 +919,7 @@
 @oui-dual-list-placeholder-font-weight: @oui-font-semibold;
 
 // Field
-@oui-field-margin: rem-calc(32);
+@oui-field-margin: @base-spacing-large;
 @oui-field-header-spacing: 0;
 @oui-field-footer-spacing: 0;
 
@@ -1016,7 +992,7 @@
 @oui-file-attachment-border_error: solid 1px @oui-color-error-medium;
 @oui-file-attachment-background: @oui-color-white;
 @oui-file-attachment-background_error: @oui-color-error-fade;
-@oui-file-attachment-box-shadow: @oui-box-shadow-primary;
+@oui-file-attachment-box-shadow: @base-box-shadow-primary;
 @oui-file-attachment-outline-offset: -@oui-a11y-outline-width;
 
 // Guide button
@@ -1170,7 +1146,7 @@
 // Message
 @oui-message-min-height: rem-calc(50);
 @oui-message-line-height: 1.375;
-@oui-message-margin: 0 0 rem-calc(16);
+@oui-message-margin: 0 0 @base-spacing-medium;
 @oui-message-padding: rem-calc(16) rem-calc(16) rem-calc(16) rem-calc(58);
 @oui-message-border-color: @oui-color-zodiac;
 @oui-message-border-width: 0;
@@ -1240,7 +1216,7 @@
 // Modal
 @oui-modal-spacing: rem-calc(15) auto;
 @oui-modal-font-size: rem-calc(16);
-@oui-modal-border-radius: @oui-global-base-radius-medium;
+@oui-modal-border-radius: @base-border-radius-large;
 @oui-modal-background-color: @oui-color-white;
 @oui-modal-shadow: 0 10px 10px fade(@oui-color-shuttle, 25%);
 
@@ -1375,7 +1351,7 @@
 @oui-navbar-menu-back-spacing: rem-calc(10);
 @oui-navbar-menu-back-padding: rem-calc(12) rem-calc(16);
 @oui-navbar-menu-back-border-color: @p-100;
-@oui-navbar-menu-back-border-radius: 3px;
+@oui-navbar-menu-back-border-radius: @base-border-radius-small;
 @oui-navbar-menu-back-border-width: 1px;
 @oui-navbar-menu-back-background-color: @p-100;
 
@@ -1436,7 +1412,7 @@
 @oui-navbar-badge-font-size: rem-calc(12);
 @oui-navbar-badge-font-weight: @oui-font-semibold;
 @oui-navbar-badge-left-spacing: rem-calc(24);
-@oui-navbar-badge-radius: rem-calc(8);
+@oui-navbar-badge-radius: @oui-navbar-badge-size / 2;
 @oui-navbar-badge-background-color: @oui-color-error-medium;
 
 @oui-navbar-external-color: @oui-color-gothic;
@@ -1450,7 +1426,7 @@
 
 // Pagination
 @oui-pagination-font-size: rem-calc(16);
-@oui-pagination-margin: 0 0 rem-calc(12);
+@oui-pagination-margin: 0 0 @base-spacing-medium;
 
 @oui-pagination-progress-text-font-color: @oui-color-sapphire;
 
@@ -1496,7 +1472,7 @@
 @oui-popover-background-color: @oui-color-white;
 @oui-popover-border-color: @oui-color-silver;
 @oui-popover-border-width: 1px;
-@oui-popover-box-shadow: @oui-box-shadow-primary;
+@oui-popover-box-shadow: @base-box-shadow-primary;
 @oui-popover-opacity: 1;
 @oui-popover-transition-duration: 250ms;
 @oui-popover-transition-animation: ease-in-out;
@@ -1517,7 +1493,7 @@
 @oui-popover-button-spacing: rem-calc(4);
 @oui-popover-button-content: @oui-icon-index-help;
 @oui-popover-button-font: normal normal normal rem-calc(16)/@oui-popover-button-line-height @oui-popover-button-font-family;
-@oui-popover-button-font-family: @oui-global-base-font-family-icon;
+@oui-popover-button-font-family: @base-font-family-icon;
 @oui-popover-button-font-color: @oui-color-sapphire;
 @oui-popover-button-font-size: inherit;
 @oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
@@ -1525,7 +1501,7 @@
 // Progress
 @oui-progress-height: rem-calc(12px);
 @oui-progress-compact-size: rem-calc(16px);
-@oui-progress-margin: rem-calc(10) 0;
+@oui-progress-margin: @base-spacing-small 0;
 @oui-progress-background-color: @oui-color-concrete;
 
 @oui-progress-bar-text-font-size: rem-calc(14px);
@@ -1545,7 +1521,7 @@
 @oui-progress-error-foreground-color: @oui-color-error-medium;
 
 // Progress Tracker
-@oui-progress-tracker-margin: 0 0 rem-calc(20);
+@oui-progress-tracker-margin: 0 0 @base-spacing-large;
 @oui-progress-tracker-step-spacing: rem-calc(30);
 @oui-progress-tracker-font-size: rem-calc(16);
 @oui-progress-tracker-font-weight: @oui-font-regular;
@@ -1570,8 +1546,8 @@
 
 @oui-progress-tracker-status-height: ~"calc(@{oui-progress-tracker-font-size} * 2)";
 @oui-progress-tracker-status-spacing: rem-calc(10);
-@oui-progress-tracker-status-font-family_complete: @oui-global-base-font-family-icon;
-@oui-progress-tracker-status-font-family_error: @oui-global-base-font-family-icon;
+@oui-progress-tracker-status-font-family_complete: @base-font-family-icon;
+@oui-progress-tracker-status-font-family_error: @base-font-family-icon;
 @oui-progress-tracker-status-font-weight: @oui-font-semibold;
 @oui-progress-tracker-status-font-size: rem-calc(20);
 @oui-progress-tracker-status-font-size_complete: rem-calc(18);
@@ -1637,9 +1613,9 @@
 @oui-radio-toggle-border-color_hover: @p-500;
 @oui-radio-toggle-border-color_checked: @p-500;
 @oui-radio-toggle-border-width: 2px;
-@oui-radio-toggle-border-radius: @oui-global-base-radius-medium;
+@oui-radio-toggle-border-radius: @base-border-radius-large;
 @oui-radio-toggle-box-shadow: none;
-@oui-radio-toggle-box-shadow_hover: @oui-box-shadow-secondary;
+@oui-radio-toggle-box-shadow_hover: @base-box-shadow-secondary;
 @oui-radio-toggle-background-color: @p-000;
 @oui-radio-toggle-background-color_hover: @p-100;
 @oui-radio-toggle-background-color_checked: @p-075;
@@ -1662,7 +1638,7 @@
 @oui-select-height: @oui-form-control-height;
 @oui-select-margin: @oui-form-control-margin;
 @oui-select-padding-x: rem-calc(12);
-@oui-select-letter-spacing: @oui-global-base-letter-spacing;
+@oui-select-letter-spacing: @base-letter-spacing;
 @oui-select-box-shadow: @oui-form-control-box-shadow;
 
 @oui-select-font-color: @oui-form-control-font-color;
@@ -1716,7 +1692,7 @@
 @oui-select-menu-z-index: 100;
 
 @oui-select-menu-background-color: @p-000;
-@oui-select-menu-box-shadow: @oui-box-shadow-primary;
+@oui-select-menu-box-shadow: @base-box-shadow-primary;
 
 // Select - Option
 @oui-select-option-line-height: 1.25;
@@ -1828,7 +1804,7 @@
 
 @oui-sidebar-arrow-content: @oui-icon-index-chevron-down;
 @oui-sidebar-arrow-content_active: @oui-icon-index-chevron-up;
-@oui-sidebar-arrow-font-family: @oui-global-base-font-family-icon;
+@oui-sidebar-arrow-font-family: @base-font-family-icon;
 @oui-sidebar-arrow-color: @oui-color-info-medium;
 @oui-sidebar-arrow-color_responsive: @oui-color-zodiac;
 @oui-sidebar-arrow-padding: (@oui-sidebar-menu-back-padding + @oui-sidebar-arrow-spacing);
@@ -1876,7 +1852,7 @@
 @oui-slideshow-height: rem-calc(515);
 @oui-slideshow-height_responsive: 85vh;
 @oui-slideshow-spacing: rem-calc(15) auto;
-@oui-slideshow-border-radius: @oui-global-base-radius-medium;
+@oui-slideshow-border-radius: @base-border-radius-large;
 @oui-slideshow-box-shadow: 0 10px 10px fade(@oui-color-shuttle, 25%);
 @oui-slideshow-background-color: @oui-color-white;
 
@@ -1936,7 +1912,7 @@
 @oui-spinner-l-speed-scale: 240ms;
 
 // Stepper
-@oui-stepper-margin: 0 0 rem-calc(20);
+@oui-stepper-margin: 0 0 @base-spacing-large;
 @oui-stepper-font-color: @oui-color-shuttle;
 @oui-stepper-font-size: rem-calc(16);
 @oui-stepper-font-weight: @oui-font-regular;
@@ -1961,7 +1937,7 @@
 @oui-stepper-step-bullet-top: rem-calc(5);
 
 @oui-stepper-step-bullet-icon-content_complete: @oui-icon-index-success;
-@oui-stepper-step-bullet-icon-font-family: @oui-global-base-font-family-icon;
+@oui-stepper-step-bullet-icon-font-family: @base-font-family-icon;
 @oui-stepper-step-bullet-icon-font-weight: @oui-font-regular;
 
 @oui-stepper-step-title-line-height: rem-calc(22);
@@ -2011,7 +1987,7 @@
 @oui-tabs-tab-border: @oui-tabs-tab-border-color @oui-tabs-tab-border-width solid;
 @oui-tabs-tab-border-color: @p-100;
 @oui-tabs-tab-border-width: 1px;
-@oui-tabs-tab-border-radius: @oui-global-base-radius;
+@oui-tabs-tab-border-radius: @base-border-radius-medium;
 @oui-tabs-tab-background-color: @oui-color-white;
 @oui-tabs-tab-background-color_hover: @p-100;
 @oui-tabs-tab-background-color_active: @p-050;
@@ -2041,7 +2017,7 @@
 @oui-tabs-tabpanel-border: @oui-tabs-tabpanel-border-color @oui-tabs-tabpanel-border-width solid;
 @oui-tabs-tabpanel-border-color: @oui-tabs-tab-border-color;
 @oui-tabs-tabpanel-border-width: @oui-tabs-tab-border-width;
-@oui-tabs-tabpanel-border-radius: @oui-global-base-radius;
+@oui-tabs-tabpanel-border-radius: @base-border-radius-medium;
 @oui-tabs-tabpanel-background-color: @oui-tabs-tab-background-color_active;
 
 // Textarea
@@ -2056,8 +2032,8 @@
 @oui-tile-background-color_hover: @oui-color-concrete;
 @oui-tile-border-color: @oui-color-ironlight;
 @oui-tile-border-width: 1px;
-@oui-tile-border-radius: @oui-global-base-radius;
-@oui-tile-box-shadow: @oui-box-shadow-secondary;
+@oui-tile-border-radius: @base-border-radius-medium;
+@oui-tile-box-shadow: @base-box-shadow-secondary;
 
 @oui-tile-title-color: @oui-color-fiord;
 @oui-tile-title-padding: 0 0 rem-calc(10) 0;
@@ -2084,12 +2060,12 @@
 // Tooltip
 @oui-tooltip-min-width: rem-calc(50);
 @oui-tooltip-max-width: rem-calc(300);
-@oui-tooltip-margin: rem-calc(10);
+@oui-tooltip-margin: @base-spacing-small;
 @oui-tooltip-margin_small: rem-calc(5);
 @oui-tooltip-padding: rem-calc(10) rem-calc(20);
 @oui-tooltip-font-size: rem-calc(14);
 @oui-tooltip-font-color: @oui-color-sapphire;
-@oui-tooltip-box-shadow: @oui-box-shadow-primary;
+@oui-tooltip-box-shadow: @base-box-shadow-primary;
 @oui-tooltip-border-color: @oui-color-silver;
 @oui-tooltip-border-width: 1px;
 @oui-tooltip-background-color: @oui-color-white;

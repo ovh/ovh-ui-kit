@@ -46,11 +46,11 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0; // 1
-  font-family: @oui-global-base-font-family;
-  font-size: @oui-global-base-font-size;
-  font-weight: @oui-global-base-font-weight;
-  line-height: @oui-global-base-line-height;
-  color: @oui-color-primary;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  font-weight: @base-font-weight;
+  line-height: @base-line-height;
+  color: @base-font-color;
   text-align: left; // 3
 }
 
@@ -86,7 +86,7 @@ hr {
 // stylelint-disable selector-list-comma-newline-after
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: @oui-global-base-margin;
+  margin-bottom: @base-spacing-medium;
 }
 // stylelint-enable selector-list-comma-newline-after
 
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 // bottom margin to use `rem` units instead of `em`.
 p {
   margin-top: 0;
-  margin-bottom: @oui-global-base-margin;
+  margin-bottom: @base-spacing-medium;
 }
 
 // Abbreviations
@@ -292,7 +292,7 @@ th {
 label {
   // Allow labels to use `margin` for spacing.
   display: inline-block;
-  margin-bottom: @oui-global-base-margin;
+  margin-bottom: @base-spacing-medium;
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

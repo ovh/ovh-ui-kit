@@ -36,14 +36,14 @@
     <!-- /Search -->
 
     <!-- Move All -->
-    <p class="oui-dual-list__action"
+    <div class="oui-dual-list__action"
         ng-if="$ctrl.dualList.source.length > 1"
         ng-show="!$ctrl.isLoading()">
         <oui-button variant="link"
             on-click="$ctrl.dualList.moveAllToTarget($ctrl.searchQuery)">
             {{::$ctrl.translations.moveAll}}
         </oui-button>
-    </p>
+    </div>
     <!-- /Move All -->
 
     <!-- Loading -->

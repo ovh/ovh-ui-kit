@@ -1,7 +1,7 @@
 module.exports = {
   stories: [
-    '../stories/design-system/**/*.stories.js',
-    '../stories/legacy/**/*.stories.js',
+    '../stories/design-system/**/*',
+    '../stories/legacy/**/*',
   ],
   addons: [
     // For panels

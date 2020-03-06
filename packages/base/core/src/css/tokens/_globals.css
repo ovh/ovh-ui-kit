@@ -1,0 +1,34 @@
+/*
+ * Globals
+ */
+
+:root {
+  /* Base properties */
+  --base-box-shadow-primary: 0 0 6px 0 rgba(0, 14, 156, 0.2);
+  --base-box-shadow-secondary: 0 4px 6px 0 rgba(0, 14, 156, 0.2);
+  --base-border-radius-small: 2px;
+  --base-border-radius-medium: 6px;
+  --base-border-radius-large: 8px;
+  --base-font-color: var(--earth-color);
+  --base-font-family-fallback: sans-serif;
+  --base-font-family-icon: 'Oui Icons';
+  --base-font-family: var(--earth-font-family), var(--base-font-family-fallback);
+  --base-font-size: var(--earth-font-size);
+  --base-font-weight: var(--earth-font-weight);
+  --base-letter-spacing: var(--earth-letter-spacing);
+  --base-line-height: var(--earth-line-height);
+  --base-spacing-small: 8px;
+  --base-spacing-medium: 16px;
+  --base-spacing-large: 32px;
+
+  /* Device breakpoints */
+  --device-breakpoint-phone: 768px;
+  --device-breakpoint-phone-min-width: 0;
+  --device-breakpoint-phone-max-width: calc(var(--device-breakpoint-phone) - 1px);
+  --device-breakpoint-tablet: 1024px;
+  --device-breakpoint-tablet-min-width: var(--device-breakpoint-phone);
+  --device-breakpoint-tablet-max-width: calc(var(--device-breakpoint-tablet) - 1px);
+  --device-breakpoint-medium: 1280px;
+  --device-breakpoint-medium-min-width: var(--device-breakpoint-tablet);
+  --device-breakpoint-medium-max-width: calc(var(--device-breakpoint-medium) - 1px);
+}

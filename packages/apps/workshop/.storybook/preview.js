@@ -25,14 +25,14 @@ addParameters({
     name: 'OVH UI Kit',
     panelPosition: 'right',
     showRoots: true,
-    // storySort: ([first], [second]) => {
-    //   const [firstType] = first.split('-');
-    //   const [secondType] = second.split('-');
+    storySort: ([,a], [,b]) => {
+      if (a.kind === b.kind) return 0;
 
-    //   if (firstType === 'introduction') return -1;
-    //   if (firstType === secondType) return 0;
+      // Put MDX files first
+      if (a.id.endsWith('--page') && !b.id.endsWith('--page')) return -1;
+      if (!a.id.endsWith('--page') && b.id.endsWith('--page')) return 1;
 
-    //   return 1;
-    // },
+      return a.id.localeCompare(b.id, undefined, { numeric: true });
+    },
   },
 });
