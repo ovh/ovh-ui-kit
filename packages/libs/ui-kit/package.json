@@ -1,6 +1,6 @@
 {
   "name": "@ovh-ux/ui-kit",
-  "version": "4.0.0-ods.1",
+  "version": "4.0.0",
   "license": "BSD-3-Clause",
   "homepage": "https://ovh-ux.github.io/ovh-ui-kit/",
   "author": "OVH SAS",
@@ -29,7 +29,6 @@
     "clipboard": "^2.0.4",
     "flatpickr": "^4.6.3",
     "less": "^3.9.0",
-    "less-plugin-remcalc": "^0.1.0",
     "popper.js": "^1.16.1",
     "ui-select": "^0.19.8"
   }
