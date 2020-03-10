@@ -14,7 +14,7 @@ fs.readdir(folder, (err, files) => {
   const flags = files.map((file) => file.replace(/\.svg/, ''));
 
   // Init less file (relative path from the package root, not this file)
-  const file = fs.createWriteStream('src/less/_flags.less');
+  const file = fs.createWriteStream('src/less/variables/generated/flags.less');
 
   log(chalk.blue('Generated'), chalk.cyan(path.resolve(file.path)));
 

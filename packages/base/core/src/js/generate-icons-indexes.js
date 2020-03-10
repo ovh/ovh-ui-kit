@@ -10,7 +10,7 @@ const { log } = console;
 log(chalk.yellow('\nGenerating less variables from icons'));
 
 // Init less file (relative path from the package root, not this file)
-const file = fs.createWriteStream('src/less/_icons.less');
+const file = fs.createWriteStream('src/less/variables/generated/icons.less');
 
 log(chalk.blue('Generated'), chalk.cyan(path.resolve(file.path)));
 
