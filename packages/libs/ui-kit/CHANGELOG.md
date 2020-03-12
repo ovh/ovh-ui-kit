@@ -1,3 +1,14 @@
+## [4.0.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0...v4.0.1) (2020-03-12)
+
+
+### Bug Fixes
+
+* **button:** fix invalid calculated value ([#578](https://github.com/ovh-ux/ovh-ui-kit/issues/578)) ([acd06ed](https://github.com/ovh-ux/ovh-ui-kit/commit/acd06edb9162302e32dc29e72b6547a65a7ddf55))
+* **navbar:** remove max-height on notification description ([#576](https://github.com/ovh-ux/ovh-ui-kit/issues/576)) ([16d01fb](https://github.com/ovh-ux/ovh-ui-kit/commit/16d01fb7041d32cdb6ecac063280487b851a5119))
+* **select:** fix states colors ([#579](https://github.com/ovh-ux/ovh-ui-kit/issues/579)) ([9d509ea](https://github.com/ovh-ux/ovh-ui-kit/commit/9d509ea464785b1566408c83042a7210fe86de6f))
+
+
+
 # [4.0.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.2...v4.0.0) (2020-03-06)
 
 
