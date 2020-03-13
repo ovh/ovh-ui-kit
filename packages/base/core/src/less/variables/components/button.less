@@ -1,5 +1,5 @@
 // Button
-@oui-button-min-width: 0;
+@oui-button-min-width: rem-calc(32);
 @oui-button-max-width: 100%;
 @oui-button-min-height: rem-calc(32);
 @oui-button-line-height: rem-calc(16);
@@ -125,6 +125,7 @@
 @oui-button-dropdown-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
 
 // Button - Size variants
+@oui-button-large-min-width: rem-calc(50);
 @oui-button-large-min-height: rem-calc(50);
 @oui-button-large-line-height: rem-calc(18);
 @oui-button-large-font-size: rem-calc(18);
@@ -133,7 +134,8 @@
 @oui-button-large-padding-y: calc((@oui-button-large-min-height - @oui-button-large-line-height) / 2);
 @oui-button-large-padding: @oui-button-large-padding-y @oui-button-large-padding-x;
 
-@oui-button-small-min-width: @oui-button-min-height;
+@oui-button-small-min-width: @oui-button-min-width;
+@oui-button-small-min-height: @oui-button-min-height;
 @oui-button-small-padding-x: calc((@oui-button-small-min-width - @oui-button-icon-size) / 2);
 @oui-button-small-padding-y: @oui-button-padding-y;
 @oui-button-small-padding: @oui-button-small-padding-y @oui-button-small-padding-x;
