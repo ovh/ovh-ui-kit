@@ -87,9 +87,13 @@ oui-button {
     left: @oui-button-icon-offset;
   }
 
-  &.oui-button_icon-right .oui-icon:not(.oui-icon-external_link), /* Deprecated: Support for old classname */
-  &.oui-button_icon-right .oui-icon:not(.oui-icon-external-link) {
+  &.oui-button_icon-right .oui-icon {
     right: @oui-button-icon-offset;
+  }
+
+  &.oui-button_icon-right .oui-icon-external_link, /* Deprecated: Support for old classname */
+  &.oui-button_icon-right .oui-icon-external-link {
+    right: auto;
   }
 
   .oui-icon-external_link, /* Deprecated: Support for old classname */
