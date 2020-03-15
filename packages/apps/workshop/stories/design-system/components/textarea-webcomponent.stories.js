@@ -57,6 +57,7 @@ export const WithMaxlength = forModule(moduleName).createElement(
     <oui-textarea
       disabled="$ctrl.disabled"
       model="$ctrl.model"
+      on-change="$ctrl.onChange(modelValue)"
       maxlength="250"
       placeholder="Please insert your text..."
       rows="5">
