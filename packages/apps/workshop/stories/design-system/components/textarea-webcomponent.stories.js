@@ -81,7 +81,6 @@ export const Inline = forModule(moduleName).createElement(
     <oui-textarea
       disabled="$ctrl.disabled"
       model="$ctrl.model"
-      maxlength="250"
       placeholder="Please insert your text..."
       rows="5"
       inline>
@@ -89,7 +88,6 @@ export const Inline = forModule(moduleName).createElement(
     {
       $ctrl: {
         model: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        onChange: action('onChange'),
       },
     },
   ),
