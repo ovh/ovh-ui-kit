@@ -1,3 +1,14 @@
+## [4.0.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.1...v4.0.2) (2020-03-17)
+
+
+### Bug Fixes
+
+* **button:** fix external link icon placement ([cd674c7](https://github.com/ovh-ux/ovh-ui-kit/commit/cd674c702963c15263efe37b6cfae0ba21b9c852))
+* **header:** fix dropdown menu overflow ([cf40d1a](https://github.com/ovh-ux/ovh-ui-kit/commit/cf40d1ab0e4468e6826a3335dc75e6037af01052))
+* **icons:** add font-display property ([#581](https://github.com/ovh-ux/ovh-ui-kit/issues/581)) ([de97b5d](https://github.com/ovh-ux/ovh-ui-kit/commit/de97b5db0cd5590e62f8bb888e5361021394d72c))
+
+
+
 ## [4.0.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0...v4.0.1) (2020-03-12)
 
 
