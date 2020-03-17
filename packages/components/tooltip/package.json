@@ -16,8 +16,8 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/node": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.9",
     "cross-env": "^6.0.3",
