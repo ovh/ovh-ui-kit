@@ -1,0 +1,98 @@
+#oui {
+  .tooltip-arrow(
+    @selector: oui-tooltip__arrow,
+    @size: @oui-tooltip-arrow-size,
+    @background-color: @oui-tooltip-arrow-background-color,
+    @border-color: @oui-tooltip-arrow-border-color,
+    @border-width: @oui-tooltip-arrow-border-width,
+    @box-shadow: @oui-tooltip-arrow-box-shadow
+  ) {
+    // To get an arrow with a working box-shadow,
+    // we use a rotated square to create an arrow.
+    // Before, we need to do some calculation here.
+    @calc-shadow: rem-calc(6);
+    @calc-square-side: calc(@size / sqrt(2));
+    @calc-overflow-width: calc(@size + (@calc-shadow * 2));
+    @calc-overflow-height: calc(@calc-overflow-width / 2);
+    @calc-translate: calc(-@size / 2);
+
+    .@{selector} {
+      position: absolute;
+      overflow: hidden; // Allow to contain the box-shadow
+
+      &::before {
+        content: " ";
+        width: @calc-square-side;
+        height: @calc-square-side;
+        pointer-events: none;
+        position: absolute;
+        transform-origin: 0 0;
+        border: @border-width solid @border-color;
+        box-shadow: @box-shadow;
+        background-color: @background-color;
+      }
+    }
+
+    &[x-placement=""],
+    &[x-placement^="bottom"],
+    &[x-placement^="top"] {
+      .@{selector} {
+        width: @calc-overflow-width;
+        height: @calc-overflow-height;
+        left: 50%;
+
+        &::before {
+          left: 50%;
+          transform: translateX(@calc-translate) rotate(-45deg);
+        }
+      }
+    }
+
+    &[x-placement^='top'] .@{selector} {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+    }
+
+    &[x-placement=""] .@{selector},
+    &[x-placement^='bottom'] .@{selector} {
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+
+      &::before {
+        top: 100%;
+      }
+    }
+
+    &[x-placement^="left"],
+    &[x-placement^="right"] {
+      .@{selector} {
+        width: @calc-overflow-height;
+        height: @calc-overflow-width;
+        top: 50%;
+
+        &::before {
+          top: 50%;
+          transform: translateY(@calc-translate) rotate(45deg);
+        }
+      }
+    }
+
+    &[x-placement^='left'] .@{selector} {
+      right: 0;
+      bottom: 50%;
+      transform: translate(100%, -50%);
+    }
+
+    &[x-placement^='right'] .@{selector} {
+      left: 0;
+      top: 50%;
+      transform: translate(-100%, -50%);
+
+      &::before {
+        left: 100%;
+      }
+    }
+  }
+}
