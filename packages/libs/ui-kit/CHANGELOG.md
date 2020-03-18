@@ -1,3 +1,12 @@
+## [4.0.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.2...v4.0.3) (2020-03-18)
+
+
+### Bug Fixes
+
+* **link:** fix hover color ([800b161](https://github.com/ovh-ux/ovh-ui-kit/commit/800b1617d852208167e7fbcef3936a5f65ae7a05))
+
+
+
 ## [4.0.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.1...v4.0.2) (2020-03-17)
 
 
