@@ -10,7 +10,7 @@ const moduleName = 'progress-webcomponent.stories';
 angular.module(moduleName, [Progress]);
 
 export default {
-  title: 'Legacy/Components/Progress/WebComponent',
+  title: 'Design System/Components/Progress/WebComponent',
 
   parameters: {
     notes: readme,
@@ -20,21 +20,25 @@ export default {
   },
 };
 
-export const Variants = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
+    <!-- Info -->
     <oui-progress>
       <oui-progress-bar type="info" value="$ctrl.percentage"></oui-progress-bar>
     </oui-progress>
 
+    <!-- Success -->
     <oui-progress>
       <oui-progress-bar type="success" value="$ctrl.percentage"></oui-progress-bar>
     </oui-progress>
 
+    <!-- Warning -->
     <oui-progress>
       <oui-progress-bar type="warning" value="$ctrl.percentage"></oui-progress-bar>
     </oui-progress>
 
+    <!-- Error -->
     <oui-progress>
       <oui-progress-bar type="error" value="$ctrl.percentage"></oui-progress-bar>
     </oui-progress>`,
@@ -110,29 +114,33 @@ WithCustomLabel.story = {
 export const Compact = forModule(moduleName).createElement(
   () => compileTemplate(
     `
+    <!-- Info -->
     <oui-progress compact>
       <oui-progress-bar type="info"
         value="$ctrl.percentage">
-        {{$ctrl.percentage}}% complete
+        {{$ctrl.percentage}}%
       </oui-progress-bar>
     </oui-progress>
 
+    <!-- Success -->
     <oui-progress compact>
       <oui-progress-bar type="success"
         value="$ctrl.percentage">
       </oui-progress-bar>
     </oui-progress>
 
+    <!-- Warning -->
     <oui-progress compact>
       <oui-progress-bar type="warning"
         value="$ctrl.percentage">
       </oui-progress-bar>
     </oui-progress>
 
+    <!-- Error -->
     <oui-progress compact>
       <oui-progress-bar type="error"
         value="$ctrl.percentage">
-        {{$ctrl.percentage}}% complete
+        {{$ctrl.percentage}}%
       </oui-progress-bar>
     </oui-progress>`,
     {
