@@ -28,22 +28,15 @@ yarn start
 
 Once you have `yarn start`-ed the project, you can edit anything with an automatic browser refresh as a result.
 
-### Contributing
+## Documentation
 
-You've developed a new cool feature? Fixed an annoying bug? We'd be happy
-to hear from you!
-
-see [CONTRIBUTING](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
+Documentation is available from the `packages/` folder, every package is self-documented throught a `README.md` file.
 
 ## Related links
 
  * Contribute: [https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
  * Report bugs: [https://github.com/ovh-ux/ovh-ui-kit/issues](https://github.com/ovh-ux/ovh-ui-kit/issues)
  * Get latest version: [https://github.com/ovh-ux/ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
-
-## Documentation
-
-Documentation is available from the `packages/` folder, every package is self-documented throught a `README.md` file.
 
 ## License
 
