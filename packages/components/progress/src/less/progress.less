@@ -54,14 +54,15 @@
   }
 
   &__label {
-    margin-top: @oui-progress-bar-text-spacing;
+    line-height: @oui-progress-label-line-height;
+    margin-top: @oui-progress-label-spacing;
     display: block;
     position: relative;
-    font-size: @oui-progress-bar-text-font-size;
-    font-weight: @oui-progress-bar-text-font-weight;
+    font-size: @oui-progress-label-font-size;
+    font-weight: @oui-progress-label-font-weight;
     white-space: nowrap;
     text-align: right;
-    color: @oui-progress-bar-text-color;
+    color: @oui-progress-label-color;
   }
 
   &__threshold {
@@ -95,17 +96,18 @@
       align-items: center;
 
       &::before {
-        height: @oui-progress-compact-size;
-        width: @oui-progress-compact-size;
+        height: @oui-progress-height_compact;
+        width: @oui-progress-height_compact;
         display: inline-block;
         margin: 0;
-        border-radius: (@oui-progress-compact-size / 2);
+        border-radius: (@oui-progress-height_compact / 2);
       }
     }
 
     .oui-progress__label {
-      margin-left: @oui-progress-bar-text-spacing;
-      font-size: @oui-progress-bar-compact-text-font-size;
+      margin-top: 0;
+      margin-left: @oui-progress-label-spacing_compact;
+      font-size: @oui-progress-label-font-size_compact;
     }
 
     .oui-progress__threshold {
