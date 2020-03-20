@@ -11,7 +11,7 @@ const moduleName = 'message-webcomponent.stories';
 angular.module(moduleName, [Message]);
 
 export default {
-  title: 'Legacy/Components/Message/WebComponent',
+  title: 'Design System/Components/Message/WebComponent',
 
   parameters: {
     notes: readme,
@@ -21,49 +21,68 @@ export default {
   },
 };
 
-export const Normal = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <oui-message type="info">Message</oui-message>
-    <oui-message type="success">Message</oui-message>
-    <oui-message type="warning">Message</oui-message>
-    <oui-message type="error">Message</oui-message>`,
+    <!-- Info -->
+    <oui-message type="info">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </oui-message>
+
+    <!-- Success -->
+    <oui-message type="success">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </oui-message>
+
+    <!-- Warning -->
+    <oui-message type="warning">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </oui-message>
+
+    <!-- Error -->
+    <oui-message type="error">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </oui-message>`,
   ),
 );
 
 export const Dismissable = forModule(moduleName).createElement(
   () => compileTemplate(
     `
+    <!-- Info -->
     <oui-message
       type="info"
       aria-close-button-label="Close"
       on-dismiss="$ctrl.onDismiss()"
       dismissable>
-      Message
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </oui-message>
 
+    <!-- Success -->
     <oui-message
       type="success"
       aria-close-button-label="Close"
       on-dismiss="$ctrl.onDismiss()"
       dismissable>
-      Message
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </oui-message>
 
+    <!-- Warning -->
     <oui-message
       type="warning"
       aria-close-button-label="Close"
       on-dismiss="$ctrl.onDismiss()"
       dismissable>
-      Message
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </oui-message>
 
+    <!-- Error -->
     <oui-message
       type="error"
       aria-close-button-label="Close"
       on-dismiss="$ctrl.onDismiss()"
       dismissable>
-      Message
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </oui-message>`,
     {
       $ctrl: {
