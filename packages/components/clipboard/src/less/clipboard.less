@@ -7,7 +7,20 @@
 
   .oui-input:read-only {
     #oui > .control-color();
+    #oui > .control-states();
     #oui > .text-ellipsis();
+
+    color: @oui-clipboard-font-color;
+    font-weight: @oui-clipboard-font-weight;
+    cursor: pointer;
+
+    &:hover {
+      color: @oui-clipboard-font-color_hover;
+    }
+  }
+
+  &__button {
+    pointer-events: none;
   }
 
   &_inline {

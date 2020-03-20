@@ -11,7 +11,7 @@ const moduleName = 'clipboard-webcomponent.stories';
 angular.module(moduleName, [Clipboard]);
 
 export default {
-  title: 'Legacy/Components/Clipboard/WebComponent',
+  title: 'Design System/Components/Clipboard/WebComponent',
 
   parameters: {
     notes: readme,
