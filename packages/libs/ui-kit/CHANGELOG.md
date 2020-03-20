@@ -1,35 +1,35 @@
-## [4.0.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.2...v4.0.3) (2020-03-18)
+## [4.0.3](https://github.com/ovh/ovh-ui-kit/compare/v4.0.2...v4.0.3) (2020-03-18)
 
 
 ### Bug Fixes
 
-* **link:** fix hover color ([800b161](https://github.com/ovh-ux/ovh-ui-kit/commit/800b1617d852208167e7fbcef3936a5f65ae7a05))
+* **link:** fix hover color ([800b161](https://github.com/ovh/ovh-ui-kit/commit/800b1617d852208167e7fbcef3936a5f65ae7a05))
 
 
 
-## [4.0.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.1...v4.0.2) (2020-03-17)
-
-
-### Bug Fixes
-
-* **button:** fix external link icon placement ([cd674c7](https://github.com/ovh-ux/ovh-ui-kit/commit/cd674c702963c15263efe37b6cfae0ba21b9c852))
-* **header:** fix dropdown menu overflow ([cf40d1a](https://github.com/ovh-ux/ovh-ui-kit/commit/cf40d1ab0e4468e6826a3335dc75e6037af01052))
-* **icons:** add font-display property ([#581](https://github.com/ovh-ux/ovh-ui-kit/issues/581)) ([de97b5d](https://github.com/ovh-ux/ovh-ui-kit/commit/de97b5db0cd5590e62f8bb888e5361021394d72c))
-
-
-
-## [4.0.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v4.0.0...v4.0.1) (2020-03-12)
+## [4.0.2](https://github.com/ovh/ovh-ui-kit/compare/v4.0.1...v4.0.2) (2020-03-17)
 
 
 ### Bug Fixes
 
-* **button:** fix invalid calculated value ([#578](https://github.com/ovh-ux/ovh-ui-kit/issues/578)) ([acd06ed](https://github.com/ovh-ux/ovh-ui-kit/commit/acd06edb9162302e32dc29e72b6547a65a7ddf55))
-* **navbar:** remove max-height on notification description ([#576](https://github.com/ovh-ux/ovh-ui-kit/issues/576)) ([16d01fb](https://github.com/ovh-ux/ovh-ui-kit/commit/16d01fb7041d32cdb6ecac063280487b851a5119))
-* **select:** fix states colors ([#579](https://github.com/ovh-ux/ovh-ui-kit/issues/579)) ([9d509ea](https://github.com/ovh-ux/ovh-ui-kit/commit/9d509ea464785b1566408c83042a7210fe86de6f))
+* **button:** fix external link icon placement ([cd674c7](https://github.com/ovh/ovh-ui-kit/commit/cd674c702963c15263efe37b6cfae0ba21b9c852))
+* **header:** fix dropdown menu overflow ([cf40d1a](https://github.com/ovh/ovh-ui-kit/commit/cf40d1ab0e4468e6826a3335dc75e6037af01052))
+* **icons:** add font-display property ([#581](https://github.com/ovh/ovh-ui-kit/issues/581)) ([de97b5d](https://github.com/ovh/ovh-ui-kit/commit/de97b5db0cd5590e62f8bb888e5361021394d72c))
 
 
 
-# [4.0.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.2...v4.0.0) (2020-03-06)
+## [4.0.1](https://github.com/ovh/ovh-ui-kit/compare/v4.0.0...v4.0.1) (2020-03-12)
+
+
+### Bug Fixes
+
+* **button:** fix invalid calculated value ([#578](https://github.com/ovh/ovh-ui-kit/issues/578)) ([acd06ed](https://github.com/ovh/ovh-ui-kit/commit/acd06edb9162302e32dc29e72b6547a65a7ddf55))
+* **navbar:** remove max-height on notification description ([#576](https://github.com/ovh/ovh-ui-kit/issues/576)) ([16d01fb](https://github.com/ovh/ovh-ui-kit/commit/16d01fb7041d32cdb6ecac063280487b851a5119))
+* **select:** fix states colors ([#579](https://github.com/ovh/ovh-ui-kit/issues/579)) ([9d509ea](https://github.com/ovh/ovh-ui-kit/commit/9d509ea464785b1566408c83042a7210fe86de6f))
+
+
+
+# [4.0.0](https://github.com/ovh/ovh-ui-kit/compare/v3.11.2...v4.0.0) (2020-03-06)
 
 
 ## OVHcloud Design System
@@ -48,7 +48,7 @@ We aim with this version to be as less breaking as possible with the functioning
 ## Breaking Changes
 
 Even if this version try to be as much breaking-free as possible, there are some notable changes.
-See the [migration guide](https://github.com/ovh-ux/ovh-ui-kit/blob/master/V3-TO-V4.md) for more informations about the changes.
+See the [migration guide](https://github.com/ovh/ovh-ui-kit/blob/master/V3-TO-V4.md) for more informations about the changes.
 
 The first batch of modifications impacts:
 
@@ -85,403 +85,403 @@ Other batches of modifications will be gradually deployed on the other component
 
 
 
-## [3.11.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.1...v3.11.2) (2020-03-03)
+## [3.11.2](https://github.com/ovh/ovh-ui-kit/compare/v3.11.1...v3.11.2) (2020-03-03)
 
 
 ### Bug Fixes
 
-* **oui-select:** trigger onChange when element is removed ([#573](https://github.com/ovh-ux/ovh-ui-kit/issues/573)) ([449f338](https://github.com/ovh-ux/ovh-ui-kit/commit/449f338e1207713d173dd03f64e2a3416daa1378))
+* **oui-select:** trigger onChange when element is removed ([#573](https://github.com/ovh/ovh-ui-kit/issues/573)) ([449f338](https://github.com/ovh/ovh-ui-kit/commit/449f338e1207713d173dd03f64e2a3416daa1378))
 
 
 
-## [3.11.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.11.0...v3.11.1) (2020-02-21)
+## [3.11.1](https://github.com/ovh/ovh-ui-kit/compare/v3.11.0...v3.11.1) (2020-02-21)
 
 
 ### Features
 
-* **oui-select-picker:** add transclusion for label ([#569](https://github.com/ovh-ux/ovh-ui-kit/issues/569)) ([c416546](https://github.com/ovh-ux/ovh-ui-kit/commit/c4165465a4f04016daa04d30459004cb9bfbf369))
+* **oui-select-picker:** add transclusion for label ([#569](https://github.com/ovh/ovh-ui-kit/issues/569)) ([c416546](https://github.com/ovh/ovh-ui-kit/commit/c4165465a4f04016daa04d30459004cb9bfbf369))
 
 
 
-# [3.11.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.10.0...v3.11.0) (2020-02-07)
+# [3.11.0](https://github.com/ovh/ovh-ui-kit/compare/v3.10.0...v3.11.0) (2020-02-07)
 
 
 ### Bug Fixes
 
-* **datagrid:** always call row-loader ([#559](https://github.com/ovh-ux/ovh-ui-kit/issues/559)) ([cab1a41](https://github.com/ovh-ux/ovh-ui-kit/commit/cab1a41c5fc166569721abec7f423504c1a7b032))
+* **datagrid:** always call row-loader ([#559](https://github.com/ovh/ovh-ui-kit/issues/559)) ([cab1a41](https://github.com/ovh/ovh-ui-kit/commit/cab1a41c5fc166569721abec7f423504c1a7b032))
 
 
 ### Features
 
-* **navbar:** add variant attribute onto menus ([#558](https://github.com/ovh-ux/ovh-ui-kit/issues/558)) ([658b558](https://github.com/ovh-ux/ovh-ui-kit/commit/658b558d56fb7b6c2b24173415782a926d94f5a8))
+* **navbar:** add variant attribute onto menus ([#558](https://github.com/ovh/ovh-ui-kit/issues/558)) ([658b558](https://github.com/ovh/ovh-ui-kit/commit/658b558d56fb7b6c2b24173415782a926d94f5a8))
 
 
 
-# [3.10.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.9.0...v3.10.0) (2020-01-20)
-
-
-### Features
-
-* **icons:** add concept icons from design system ([#551](https://github.com/ovh-ux/ovh-ui-kit/issues/551)) ([6c049a5](https://github.com/ovh-ux/ovh-ui-kit/commit/6c049a514bb8374d4f8ae390cb226de1b0e79a09))
-
-
-
-# [3.9.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.8.1...v3.9.0) (2020-01-10)
-
-
-### Bug Fixes
-
-* **calendar:** dynamic changes for min and max date ([#539](https://github.com/ovh-ux/ovh-ui-kit/issues/539)) ([e7835ab](https://github.com/ovh-ux/ovh-ui-kit/commit/e7835abc39f0394b6d47f4b107106922c21e81bb))
-* **calendar:** support flatpickr v4.6.3 ([#547](https://github.com/ovh-ux/ovh-ui-kit/issues/547)) ([5b8a5b5](https://github.com/ovh-ux/ovh-ui-kit/commit/5b8a5b5d310e918db452695bac99b48df7493a65))
-* **collapsible:** add helper to remove html on heading ([#540](https://github.com/ovh-ux/ovh-ui-kit/issues/540)) ([3fe0358](https://github.com/ovh-ux/ovh-ui-kit/commit/3fe03589578566e34f2869ecdac16d694627c548))
-* **oui-datagrid:** use lodash hasIn to check properties ([#544](https://github.com/ovh-ux/ovh-ui-kit/issues/544)) ([df679af](https://github.com/ovh-ux/ovh-ui-kit/commit/df679af727a7c4dad42b2bade2c1ec8a6de2fc72))
+# [3.10.0](https://github.com/ovh/ovh-ui-kit/compare/v3.9.0...v3.10.0) (2020-01-20)
 
 
 ### Features
 
-* **collapsible:** add group attribute for accordion mode ([771a101](https://github.com/ovh-ux/ovh-ui-kit/commit/771a10140b03a2d9af42dd7540b7107c4c11c20e))
-* **collapsible:** add loading attribute ([2e4bbbf](https://github.com/ovh-ux/ovh-ui-kit/commit/2e4bbbfdc33491ec2e6a73d8a28b6a9cd069286d))
-* **radio-toggle-group:** add direction attribute ([#541](https://github.com/ovh-ux/ovh-ui-kit/issues/541)) ([3358a59](https://github.com/ovh-ux/ovh-ui-kit/commit/3358a59bc0605359efb3cf5af37d6cd045fa00c7))
+* **icons:** add concept icons from design system ([#551](https://github.com/ovh/ovh-ui-kit/issues/551)) ([6c049a5](https://github.com/ovh/ovh-ui-kit/commit/6c049a514bb8374d4f8ae390cb226de1b0e79a09))
 
 
 
-## [3.8.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.8.0...v3.8.1) (2020-01-06)
-
-
-### Bug Fixes
-
-* **dropdown:** afterClose should remove the focus ([99d8c65](https://github.com/ovh-ux/ovh-ui-kit/commit/99d8c653266c8e86332e3efbfe2465c902cf5afb))
-
-
-
-# [3.8.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.5...v3.8.0) (2019-11-12)
+# [3.9.0](https://github.com/ovh/ovh-ui-kit/compare/v3.8.1...v3.9.0) (2020-01-10)
 
 
 ### Bug Fixes
 
-* **popover:** fix popover icon size ([a61ef71](https://github.com/ovh-ux/ovh-ui-kit/commit/a61ef7113385391e593b4830302658e8daa7eccf))
-* **stepper:** fix double onFocus call ([#533](https://github.com/ovh-ux/ovh-ui-kit/issues/533)) ([a46679b](https://github.com/ovh-ux/ovh-ui-kit/commit/a46679bfef273fe355918e0c88998a7d42408c1a))
+* **calendar:** dynamic changes for min and max date ([#539](https://github.com/ovh/ovh-ui-kit/issues/539)) ([e7835ab](https://github.com/ovh/ovh-ui-kit/commit/e7835abc39f0394b6d47f4b107106922c21e81bb))
+* **calendar:** support flatpickr v4.6.3 ([#547](https://github.com/ovh/ovh-ui-kit/issues/547)) ([5b8a5b5](https://github.com/ovh/ovh-ui-kit/commit/5b8a5b5d310e918db452695bac99b48df7493a65))
+* **collapsible:** add helper to remove html on heading ([#540](https://github.com/ovh/ovh-ui-kit/issues/540)) ([3fe0358](https://github.com/ovh/ovh-ui-kit/commit/3fe03589578566e34f2869ecdac16d694627c548))
+* **oui-datagrid:** use lodash hasIn to check properties ([#544](https://github.com/ovh/ovh-ui-kit/issues/544)) ([df679af](https://github.com/ovh/ovh-ui-kit/commit/df679af727a7c4dad42b2bade2c1ec8a6de2fc72))
 
 
 ### Features
 
-* **header-tabs:** update tabs scrolling to allow scroll tab by tab ([#532](https://github.com/ovh-ux/ovh-ui-kit/issues/532)) ([62792bb](https://github.com/ovh-ux/ovh-ui-kit/commit/62792bb06191b9a3065bb1012ebf9ee7c525d330))
-* **icons:** add inherit size variant ([719dead](https://github.com/ovh-ux/ovh-ui-kit/commit/719dead72af7f29e4ffc20947663e05c84012322))
-* **oui-criteria:** add filter label ([70ab526](https://github.com/ovh-ux/ovh-ui-kit/commit/70ab5262eea4c737c3a8356d8a1fd1e45921c628))
-* **oui-select-picker:** add tranclude slot for description ([95dc9b8](https://github.com/ovh-ux/ovh-ui-kit/commit/95dc9b860b1167e8ccb5799ed0e18a3bf0fb70b0))
+* **collapsible:** add group attribute for accordion mode ([771a101](https://github.com/ovh/ovh-ui-kit/commit/771a10140b03a2d9af42dd7540b7107c4c11c20e))
+* **collapsible:** add loading attribute ([2e4bbbf](https://github.com/ovh/ovh-ui-kit/commit/2e4bbbfdc33491ec2e6a73d8a28b6a9cd069286d))
+* **radio-toggle-group:** add direction attribute ([#541](https://github.com/ovh/ovh-ui-kit/issues/541)) ([3358a59](https://github.com/ovh/ovh-ui-kit/commit/3358a59bc0605359efb3cf5af37d6cd045fa00c7))
 
 
 
-## [3.7.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.4...v3.7.5) (2019-10-24)
-
-
-### Bug Fixes
-
-* **select-picker:** add body for flex layout ([89e029c](https://github.com/ovh-ux/ovh-ui-kit/commit/89e029c0835683be2405692db01dba8fd234ea2a))
-* **select-picker:** fix flex component support ([#530](https://github.com/ovh-ux/ovh-ui-kit/issues/530)) ([fbaba48](https://github.com/ovh-ux/ovh-ui-kit/commit/fbaba48c802ce2b8e25a328c2975fd1e5e7728cb))
-
-
-
-## [3.7.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.3...v3.7.4) (2019-10-24)
+## [3.8.1](https://github.com/ovh/ovh-ui-kit/compare/v3.8.0...v3.8.1) (2020-01-06)
 
 
 ### Bug Fixes
 
-* **header-tabs:** fix scroll checks ([be8ae96](https://github.com/ovh-ux/ovh-ui-kit/commit/be8ae96b145338d1911d81c5fd4b1278e90771cd))
+* **dropdown:** afterClose should remove the focus ([99d8c65](https://github.com/ovh/ovh-ui-kit/commit/99d8c653266c8e86332e3efbfe2465c902cf5afb))
 
 
 
-## [3.7.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.2...v3.7.3) (2019-10-24)
-
-
-### Bug Fixes
-
-* **header-tabs:** fix scrolling in responsive ([#529](https://github.com/ovh-ux/ovh-ui-kit/issues/529)) ([5329d5d](https://github.com/ovh-ux/ovh-ui-kit/commit/5329d5d90873339fed1c6fc8cf06b858086f4c0a))
-
-
-
-## [3.7.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.1...v3.7.2) (2019-10-16)
+# [3.8.0](https://github.com/ovh/ovh-ui-kit/compare/v3.7.5...v3.8.0) (2019-11-12)
 
 
 ### Bug Fixes
 
-* **icons:** fix icons alignment ([#527](https://github.com/ovh-ux/ovh-ui-kit/issues/527)) ([0113905](https://github.com/ovh-ux/ovh-ui-kit/commit/0113905b984eae552050cd22366b51813552055f))
-
-
-
-## [3.7.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.7.0...v3.7.1) (2019-10-16)
-
-
-### Bug Fixes
-
-* **field:** checkAllErrors avoid undefined value ([#524](https://github.com/ovh-ux/ovh-ui-kit/issues/524)) ([dc96512](https://github.com/ovh-ux/ovh-ui-kit/commit/dc965129acfa9744a7543216a94c9ec7ea7f77c9))
-* **header-tabs:** fix border when dropdown item is active ([c01c5e0](https://github.com/ovh-ux/ovh-ui-kit/commit/c01c5e0e56ac42fc5b438f665274a1317b7c92d4))
-* **icons:** add missing icons ([#525](https://github.com/ovh-ux/ovh-ui-kit/issues/525)) ([01bfd78](https://github.com/ovh-ux/ovh-ui-kit/commit/01bfd7818da232c0ce5a46319f7985786f57a333))
-
-
-
-# [3.7.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.6.0...v3.7.0) (2019-10-09)
-
-
-### Bug Fixes
-
-* **oui-numeric:** allow custom min and max values ([#514](https://github.com/ovh-ux/ovh-ui-kit/issues/514)) ([fe2f3d5](https://github.com/ovh-ux/ovh-ui-kit/commit/fe2f3d566b9428a869b8858af6722b95c4798ff6))
-* **progress-tracker:** fix vertical responsive support ([8461541](https://github.com/ovh-ux/ovh-ui-kit/commit/846154182170f06d2a92b63ca9f99e6539a817c6))
-* **tile:** add spacing for actions ([81bb693](https://github.com/ovh-ux/ovh-ui-kit/commit/81bb6930a66544994cab1757cd0b1b7d0c0f54e5))
+* **popover:** fix popover icon size ([a61ef71](https://github.com/ovh/ovh-ui-kit/commit/a61ef7113385391e593b4830302658e8daa7eccf))
+* **stepper:** fix double onFocus call ([#533](https://github.com/ovh/ovh-ui-kit/issues/533)) ([a46679b](https://github.com/ovh/ovh-ui-kit/commit/a46679bfef273fe355918e0c88998a7d42408c1a))
 
 
 ### Features
 
-* **select-picker:** add footer section ([74cc7e6](https://github.com/ovh-ux/ovh-ui-kit/commit/74cc7e6b73feb8525935d354798565ad27309be4))
-* **select-picker:** add picture transclude ([ea3ebab](https://github.com/ovh-ux/ovh-ui-kit/commit/ea3ebabb712e80acb0dd357e8c96d540689cbb5a))
-* **typography:** add description list ([#519](https://github.com/ovh-ux/ovh-ui-kit/issues/519)) ([cb4d9ee](https://github.com/ovh-ux/ovh-ui-kit/commit/cb4d9eea1da44bc710febed21e71f7e050e0faff))
+* **header-tabs:** update tabs scrolling to allow scroll tab by tab ([#532](https://github.com/ovh/ovh-ui-kit/issues/532)) ([62792bb](https://github.com/ovh/ovh-ui-kit/commit/62792bb06191b9a3065bb1012ebf9ee7c525d330))
+* **icons:** add inherit size variant ([719dead](https://github.com/ovh/ovh-ui-kit/commit/719dead72af7f29e4ffc20947663e05c84012322))
+* **oui-criteria:** add filter label ([70ab526](https://github.com/ovh/ovh-ui-kit/commit/70ab5262eea4c737c3a8356d8a1fd1e45921c628))
+* **oui-select-picker:** add tranclude slot for description ([95dc9b8](https://github.com/ovh/ovh-ui-kit/commit/95dc9b860b1167e8ccb5799ed0e18a3bf0fb70b0))
 
 
 
-# [3.6.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.1...v3.6.0) (2019-09-13)
+## [3.7.5](https://github.com/ovh/ovh-ui-kit/compare/v3.7.4...v3.7.5) (2019-10-24)
 
 
 ### Bug Fixes
 
-* **oui-dropdown:** remove one time binding of href attribute ([#500](https://github.com/ovh-ux/ovh-ui-kit/issues/500)) ([380ef80](https://github.com/ovh-ux/ovh-ui-kit/commit/380ef80))
+* **select-picker:** add body for flex layout ([89e029c](https://github.com/ovh/ovh-ui-kit/commit/89e029c0835683be2405692db01dba8fd234ea2a))
+* **select-picker:** fix flex component support ([#530](https://github.com/ovh/ovh-ui-kit/issues/530)) ([fbaba48](https://github.com/ovh/ovh-ui-kit/commit/fbaba48c802ce2b8e25a328c2975fd1e5e7728cb))
+
+
+
+## [3.7.4](https://github.com/ovh/ovh-ui-kit/compare/v3.7.3...v3.7.4) (2019-10-24)
+
+
+### Bug Fixes
+
+* **header-tabs:** fix scroll checks ([be8ae96](https://github.com/ovh/ovh-ui-kit/commit/be8ae96b145338d1911d81c5fd4b1278e90771cd))
+
+
+
+## [3.7.3](https://github.com/ovh/ovh-ui-kit/compare/v3.7.2...v3.7.3) (2019-10-24)
+
+
+### Bug Fixes
+
+* **header-tabs:** fix scrolling in responsive ([#529](https://github.com/ovh/ovh-ui-kit/issues/529)) ([5329d5d](https://github.com/ovh/ovh-ui-kit/commit/5329d5d90873339fed1c6fc8cf06b858086f4c0a))
+
+
+
+## [3.7.2](https://github.com/ovh/ovh-ui-kit/compare/v3.7.1...v3.7.2) (2019-10-16)
+
+
+### Bug Fixes
+
+* **icons:** fix icons alignment ([#527](https://github.com/ovh/ovh-ui-kit/issues/527)) ([0113905](https://github.com/ovh/ovh-ui-kit/commit/0113905b984eae552050cd22366b51813552055f))
+
+
+
+## [3.7.1](https://github.com/ovh/ovh-ui-kit/compare/v3.7.0...v3.7.1) (2019-10-16)
+
+
+### Bug Fixes
+
+* **field:** checkAllErrors avoid undefined value ([#524](https://github.com/ovh/ovh-ui-kit/issues/524)) ([dc96512](https://github.com/ovh/ovh-ui-kit/commit/dc965129acfa9744a7543216a94c9ec7ea7f77c9))
+* **header-tabs:** fix border when dropdown item is active ([c01c5e0](https://github.com/ovh/ovh-ui-kit/commit/c01c5e0e56ac42fc5b438f665274a1317b7c92d4))
+* **icons:** add missing icons ([#525](https://github.com/ovh/ovh-ui-kit/issues/525)) ([01bfd78](https://github.com/ovh/ovh-ui-kit/commit/01bfd7818da232c0ce5a46319f7985786f57a333))
+
+
+
+# [3.7.0](https://github.com/ovh/ovh-ui-kit/compare/v3.6.0...v3.7.0) (2019-10-09)
+
+
+### Bug Fixes
+
+* **oui-numeric:** allow custom min and max values ([#514](https://github.com/ovh/ovh-ui-kit/issues/514)) ([fe2f3d5](https://github.com/ovh/ovh-ui-kit/commit/fe2f3d566b9428a869b8858af6722b95c4798ff6))
+* **progress-tracker:** fix vertical responsive support ([8461541](https://github.com/ovh/ovh-ui-kit/commit/846154182170f06d2a92b63ca9f99e6539a817c6))
+* **tile:** add spacing for actions ([81bb693](https://github.com/ovh/ovh-ui-kit/commit/81bb6930a66544994cab1757cd0b1b7d0c0f54e5))
 
 
 ### Features
 
-* **progress-tracker:** add vertical variant ([ef42fd6](https://github.com/ovh-ux/ovh-ui-kit/commit/ef42fd6))
+* **select-picker:** add footer section ([74cc7e6](https://github.com/ovh/ovh-ui-kit/commit/74cc7e6b73feb8525935d354798565ad27309be4))
+* **select-picker:** add picture transclude ([ea3ebab](https://github.com/ovh/ovh-ui-kit/commit/ea3ebabb712e80acb0dd357e8c96d540689cbb5a))
+* **typography:** add description list ([#519](https://github.com/ovh/ovh-ui-kit/issues/519)) ([cb4d9ee](https://github.com/ovh/ovh-ui-kit/commit/cb4d9eea1da44bc710febed21e71f7e050e0faff))
 
 
 
-## [3.5.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.5.0...v3.5.1) (2019-08-19)
-
-
-### Bug Fixes
-
-* **datagrid:** allow searching in number columns ([#491](https://github.com/ovh-ux/ovh-ui-kit/issues/491)) ([144d737](https://github.com/ovh-ux/ovh-ui-kit/commit/144d737))
-
-
-
-# [3.5.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.1...v3.5.0) (2019-08-13)
+# [3.6.0](https://github.com/ovh/ovh-ui-kit/compare/v3.5.1...v3.6.0) (2019-09-13)
 
 
 ### Bug Fixes
 
-* fix webpack configuration for umd target ([#487](https://github.com/ovh-ux/ovh-ui-kit/issues/487)) ([1688038](https://github.com/ovh-ux/ovh-ui-kit/commit/1688038))
+* **oui-dropdown:** remove one time binding of href attribute ([#500](https://github.com/ovh/ovh-ui-kit/issues/500)) ([380ef80](https://github.com/ovh/ovh-ui-kit/commit/380ef80))
 
 
 ### Features
 
-* **datagrid:** add footer attribute ([e407947](https://github.com/ovh-ux/ovh-ui-kit/commit/e407947))
+* **progress-tracker:** add vertical variant ([ef42fd6](https://github.com/ovh/ovh-ui-kit/commit/ef42fd6))
 
 
 
-## [3.4.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.4.0...v3.4.1) (2019-08-09)
-
-
-### Bug Fixes
-
-* **datagrid:** fix preview search shouldn't trigger onCriteriaChange ([e49319d](https://github.com/ovh-ux/ovh-ui-kit/commit/e49319d))
-
-
-
-# [3.4.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.4...v3.4.0) (2019-08-05)
+## [3.5.1](https://github.com/ovh/ovh-ui-kit/compare/v3.5.0...v3.5.1) (2019-08-19)
 
 
 ### Bug Fixes
 
-* **eslint:** error on fade function ([#479](https://github.com/ovh-ux/ovh-ui-kit/issues/479)) ([f195c81](https://github.com/ovh-ux/ovh-ui-kit/commit/f195c81))
-* **numeric:** fix change value using keyboard ([#477](https://github.com/ovh-ux/ovh-ui-kit/issues/477)) ([98df32c](https://github.com/ovh-ux/ovh-ui-kit/commit/98df32c))
-* **stepper:** allow html for header and description ([43e66e2](https://github.com/ovh-ux/ovh-ui-kit/commit/43e66e2))
+* **datagrid:** allow searching in number columns ([#491](https://github.com/ovh/ovh-ui-kit/issues/491)) ([144d737](https://github.com/ovh/ovh-ui-kit/commit/144d737))
+
+
+
+# [3.5.0](https://github.com/ovh/ovh-ui-kit/compare/v3.4.1...v3.5.0) (2019-08-13)
+
+
+### Bug Fixes
+
+* fix webpack configuration for umd target ([#487](https://github.com/ovh/ovh-ui-kit/issues/487)) ([1688038](https://github.com/ovh/ovh-ui-kit/commit/1688038))
 
 
 ### Features
 
-* **checkbox:** add ability to display a footer when in thumbnail mode ([fbe9ee8](https://github.com/ovh-ux/ovh-ui-kit/commit/fbe9ee8))
-* **criteria:** add ability to hide operators field ([#476](https://github.com/ovh-ux/ovh-ui-kit/issues/476)) ([fe035a5](https://github.com/ovh-ux/ovh-ui-kit/commit/fe035a5))
-* **datagrid:** add events onSortChange and onCriteriaChange ([#480](https://github.com/ovh-ux/ovh-ui-kit/issues/480)) ([6e30f05](https://github.com/ovh-ux/ovh-ui-kit/commit/6e30f05))
-* **radio:** add ability to display a footer when in thumbnail mode ([4f85f7a](https://github.com/ovh-ux/ovh-ui-kit/commit/4f85f7a))
-* **search:** add boolean attribute to reset on submit ([2f8d1eb](https://github.com/ovh-ux/ovh-ui-kit/commit/2f8d1eb))
-* **tile:** add transclude for term and actions ([#475](https://github.com/ovh-ux/ovh-ui-kit/issues/475)) ([0587035](https://github.com/ovh-ux/ovh-ui-kit/commit/0587035))
+* **datagrid:** add footer attribute ([e407947](https://github.com/ovh/ovh-ui-kit/commit/e407947))
 
 
 
-## [3.3.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.3...v3.3.4) (2019-07-10)
+## [3.4.1](https://github.com/ovh/ovh-ui-kit/compare/v3.4.0...v3.4.1) (2019-08-09)
 
 
 ### Bug Fixes
 
-* **pagination:** fix translation refresh on page change ([5584f92](https://github.com/ovh-ux/ovh-ui-kit/commit/5584f92))
+* **datagrid:** fix preview search shouldn't trigger onCriteriaChange ([e49319d](https://github.com/ovh/ovh-ui-kit/commit/e49319d))
 
 
 
-## [3.3.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.2...v3.3.3) (2019-07-09)
-
-
-### Bug Fixes
-
-* **button:** remove full height when setting full width ([#470](https://github.com/ovh-ux/ovh-ui-kit/issues/470)) ([f29e72f](https://github.com/ovh-ux/ovh-ui-kit/commit/f29e72f))
-
-
-
-## [3.3.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.1...v3.3.2) (2019-07-09)
+# [3.4.0](https://github.com/ovh/ovh-ui-kit/compare/v3.3.4...v3.4.0) (2019-08-05)
 
 
 ### Bug Fixes
 
-* **datagrid:** reflect scope change on row detail item ([#467](https://github.com/ovh-ux/ovh-ui-kit/issues/467)) ([56f76b3](https://github.com/ovh-ux/ovh-ui-kit/commit/56f76b3))
-
-
-
-## [3.3.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.3.0...v3.3.1) (2019-07-08)
-
-
-### Bug Fixes
-
-* **datagrid:** typo on class selector ([#465](https://github.com/ovh-ux/ovh-ui-kit/issues/465)) ([ae79692](https://github.com/ovh-ux/ovh-ui-kit/commit/ae79692))
-
-
-
-# [3.3.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.2...v3.3.0) (2019-07-08)
-
-
-### Bug Fixes
-
-* remove some one time bindings ([#459](https://github.com/ovh-ux/ovh-ui-kit/issues/459)) ([5e56d5b](https://github.com/ovh-ux/ovh-ui-kit/commit/5e56d5b))
-* **field:** display error even on field focus ([#461](https://github.com/ovh-ux/ovh-ui-kit/issues/461)) ([5276506](https://github.com/ovh-ux/ovh-ui-kit/commit/5276506))
+* **eslint:** error on fade function ([#479](https://github.com/ovh/ovh-ui-kit/issues/479)) ([f195c81](https://github.com/ovh/ovh-ui-kit/commit/f195c81))
+* **numeric:** fix change value using keyboard ([#477](https://github.com/ovh/ovh-ui-kit/issues/477)) ([98df32c](https://github.com/ovh/ovh-ui-kit/commit/98df32c))
+* **stepper:** allow html for header and description ([43e66e2](https://github.com/ovh/ovh-ui-kit/commit/43e66e2))
 
 
 ### Features
 
-* add themes files ([#460](https://github.com/ovh-ux/ovh-ui-kit/issues/460)) ([a2dc325](https://github.com/ovh-ux/ovh-ui-kit/commit/a2dc325))
-* **oui-datagrid:** add expandable row detail ([#462](https://github.com/ovh-ux/ovh-ui-kit/issues/462)) ([d14d008](https://github.com/ovh-ux/ovh-ui-kit/commit/d14d008))
-* **stepper:** add attribute to disable next button when invalid ([#457](https://github.com/ovh-ux/ovh-ui-kit/issues/457)) ([67dedae](https://github.com/ovh-ux/ovh-ui-kit/commit/67dedae))
+* **checkbox:** add ability to display a footer when in thumbnail mode ([fbe9ee8](https://github.com/ovh/ovh-ui-kit/commit/fbe9ee8))
+* **criteria:** add ability to hide operators field ([#476](https://github.com/ovh/ovh-ui-kit/issues/476)) ([fe035a5](https://github.com/ovh/ovh-ui-kit/commit/fe035a5))
+* **datagrid:** add events onSortChange and onCriteriaChange ([#480](https://github.com/ovh/ovh-ui-kit/issues/480)) ([6e30f05](https://github.com/ovh/ovh-ui-kit/commit/6e30f05))
+* **radio:** add ability to display a footer when in thumbnail mode ([4f85f7a](https://github.com/ovh/ovh-ui-kit/commit/4f85f7a))
+* **search:** add boolean attribute to reset on submit ([2f8d1eb](https://github.com/ovh/ovh-ui-kit/commit/2f8d1eb))
+* **tile:** add transclude for term and actions ([#475](https://github.com/ovh/ovh-ui-kit/issues/475)) ([0587035](https://github.com/ovh/ovh-ui-kit/commit/0587035))
 
 
 
-## [3.2.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.1...v3.2.2) (2019-06-13)
-
-
-### Bug Fixes
-
-* fix rem base for all CSS files ([#452](https://github.com/ovh-ux/ovh-ui-kit/issues/452)) ([9f1f02e](https://github.com/ovh-ux/ovh-ui-kit/commit/9f1f02e))
-
-
-
-## [3.2.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.2.0...v3.2.1) (2019-06-13)
+## [3.3.4](https://github.com/ovh/ovh-ui-kit/compare/v3.3.3...v3.3.4) (2019-07-10)
 
 
 ### Bug Fixes
 
-* **stepper:** fix modify step button appearance ([#448](https://github.com/ovh-ux/ovh-ui-kit/issues/448)) ([70d9656](https://github.com/ovh-ux/ovh-ui-kit/commit/70d9656))
+* **pagination:** fix translation refresh on page change ([5584f92](https://github.com/ovh/ovh-ui-kit/commit/5584f92))
 
 
 
-# [3.2.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.4...v3.2.0) (2019-06-11)
-
-
-### Bug Fixes
-
-* **button:** set max-width to 100% ([6c22ba4](https://github.com/ovh-ux/ovh-ui-kit/commit/6c22ba4))
-* **oui-datagrid:** prevent scroll from displaying inside the datagrid ([#440](https://github.com/ovh-ux/ovh-ui-kit/issues/440)) ([d307269](https://github.com/ovh-ux/ovh-ui-kit/commit/d307269))
-* **oui-file:** add max-height to file list ([#442](https://github.com/ovh-ux/ovh-ui-kit/issues/442)) ([398c8a9](https://github.com/ovh-ux/ovh-ui-kit/commit/398c8a9))
-
-
-
-## [3.1.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.3...v3.1.4) (2019-06-06)
+## [3.3.3](https://github.com/ovh/ovh-ui-kit/compare/v3.3.2...v3.3.3) (2019-07-09)
 
 
 ### Bug Fixes
 
-* **tabs:** fix tabs that won't open on click ([#435](https://github.com/ovh-ux/ovh-ui-kit/issues/435)) ([4680837](https://github.com/ovh-ux/ovh-ui-kit/commit/4680837))
+* **button:** remove full height when setting full width ([#470](https://github.com/ovh/ovh-ui-kit/issues/470)) ([f29e72f](https://github.com/ovh/ovh-ui-kit/commit/f29e72f))
 
 
 
-## [3.1.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.2...v3.1.3) (2019-06-04)
-
-
-### Bug Fixes
-
-* **message:** fix missing styles ([2071f89](https://github.com/ovh-ux/ovh-ui-kit/commit/2071f89))
-
-
-
-## [3.1.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.1...v3.1.2) (2019-06-04)
+## [3.3.2](https://github.com/ovh/ovh-ui-kit/compare/v3.3.1...v3.3.2) (2019-07-09)
 
 
 ### Bug Fixes
 
-* **button:** fix icon placement with full width ([f0069a3](https://github.com/ovh-ux/ovh-ui-kit/commit/f0069a3))
+* **datagrid:** reflect scope change on row detail item ([#467](https://github.com/ovh/ovh-ui-kit/issues/467)) ([56f76b3](https://github.com/ovh/ovh-ui-kit/commit/56f76b3))
 
 
 
-## [3.1.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.1.0...v3.1.1) (2019-06-03)
-
-
-### Bug Fixes
-
-* **autocomplete:** fix less import in variables file ([5e442d9](https://github.com/ovh-ux/ovh-ui-kit/commit/5e442d9))
-* **choice:** add relative position ([#426](https://github.com/ovh-ux/ovh-ui-kit/issues/426)) ([c8d134b](https://github.com/ovh-ux/ovh-ui-kit/commit/c8d134b))
-
-
-
-# [3.1.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.3...v3.1.0) (2019-05-29)
+## [3.3.1](https://github.com/ovh/ovh-ui-kit/compare/v3.3.0...v3.3.1) (2019-07-08)
 
 
 ### Bug Fixes
 
-* **criteria:** fix fields size to medium ([#422](https://github.com/ovh-ux/ovh-ui-kit/issues/422)) ([7cfaac1](https://github.com/ovh-ux/ovh-ui-kit/commit/7cfaac1))
-* **oui-dropdown:** fix arrow position for side placement ([f9d1981](https://github.com/ovh-ux/ovh-ui-kit/commit/f9d1981))
-* **oui-dropdown:** fix automatic center positionning ([386ccee](https://github.com/ovh-ux/ovh-ui-kit/commit/386ccee))
-* **select:** close others opened select on opening ([#421](https://github.com/ovh-ux/ovh-ui-kit/issues/421)) ([a100f9a](https://github.com/ovh-ux/ovh-ui-kit/commit/a100f9a))
-* **typography:** fix horizontal line margin ([6c8cbd5](https://github.com/ovh-ux/ovh-ui-kit/commit/6c8cbd5))
+* **datagrid:** typo on class selector ([#465](https://github.com/ovh/ovh-ui-kit/issues/465)) ([ae79692](https://github.com/ovh/ovh-ui-kit/commit/ae79692))
+
+
+
+# [3.3.0](https://github.com/ovh/ovh-ui-kit/compare/v3.2.2...v3.3.0) (2019-07-08)
+
+
+### Bug Fixes
+
+* remove some one time bindings ([#459](https://github.com/ovh/ovh-ui-kit/issues/459)) ([5e56d5b](https://github.com/ovh/ovh-ui-kit/commit/5e56d5b))
+* **field:** display error even on field focus ([#461](https://github.com/ovh/ovh-ui-kit/issues/461)) ([5276506](https://github.com/ovh/ovh-ui-kit/commit/5276506))
 
 
 ### Features
 
-* **checkbox:** add size and variant attributes ([#407](https://github.com/ovh-ux/ovh-ui-kit/issues/407)) ([ba7d3fa](https://github.com/ovh-ux/ovh-ui-kit/commit/ba7d3fa))
-* **core:** add extra thin icons to 'Oui Icons' font ([#395](https://github.com/ovh-ux/ovh-ui-kit/issues/395)) ([614fe5b](https://github.com/ovh-ux/ovh-ui-kit/commit/614fe5b)), closes [#393](https://github.com/ovh-ux/ovh-ui-kit/issues/393)
-* **dropdown:** allow placement in others directions ([#411](https://github.com/ovh-ux/ovh-ui-kit/issues/411)) ([9e545e0](https://github.com/ovh-ux/ovh-ui-kit/commit/9e545e0))
-* **navbar:** add style for menu header container ([#396](https://github.com/ovh-ux/ovh-ui-kit/issues/396)) ([7ab3998](https://github.com/ovh-ux/ovh-ui-kit/commit/7ab3998)), closes [#394](https://github.com/ovh-ux/ovh-ui-kit/issues/394)
-* **oui-form-actions:** allow submit button to be disabled ([#417](https://github.com/ovh-ux/ovh-ui-kit/issues/417)) ([57fe866](https://github.com/ovh-ux/ovh-ui-kit/commit/57fe866))
-* **oui-icons:** add extra thin search icon ([#414](https://github.com/ovh-ux/ovh-ui-kit/issues/414)) ([b63ce95](https://github.com/ovh-ux/ovh-ui-kit/commit/b63ce95))
-* **radio:** add size attribute ([#408](https://github.com/ovh-ux/ovh-ui-kit/issues/408)) ([7e969c2](https://github.com/ovh-ux/ovh-ui-kit/commit/7e969c2))
-* **stepper:** emit event on form submit ([#404](https://github.com/ovh-ux/ovh-ui-kit/issues/404)) ([ea996ea](https://github.com/ovh-ux/ovh-ui-kit/commit/ea996ea))
-* **tabs:** allow to select active tab item ([#398](https://github.com/ovh-ux/ovh-ui-kit/issues/398)) ([2dfb325](https://github.com/ovh-ux/ovh-ui-kit/commit/2dfb325))
+* add themes files ([#460](https://github.com/ovh/ovh-ui-kit/issues/460)) ([a2dc325](https://github.com/ovh/ovh-ui-kit/commit/a2dc325))
+* **oui-datagrid:** add expandable row detail ([#462](https://github.com/ovh/ovh-ui-kit/issues/462)) ([d14d008](https://github.com/ovh/ovh-ui-kit/commit/d14d008))
+* **stepper:** add attribute to disable next button when invalid ([#457](https://github.com/ovh/ovh-ui-kit/issues/457)) ([67dedae](https://github.com/ovh/ovh-ui-kit/commit/67dedae))
 
 
 
-## [3.0.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.2...v3.0.3) (2019-05-13)
+## [3.2.2](https://github.com/ovh/ovh-ui-kit/compare/v3.2.1...v3.2.2) (2019-06-13)
 
 
 ### Bug Fixes
 
-* **clipboard:** set button type ([#397](https://github.com/ovh-ux/ovh-ui-kit/issues/397)) ([a87f98a](https://github.com/ovh-ux/ovh-ui-kit/commit/a87f98a))
+* fix rem base for all CSS files ([#452](https://github.com/ovh/ovh-ui-kit/issues/452)) ([9f1f02e](https://github.com/ovh/ovh-ui-kit/commit/9f1f02e))
 
 
 
-## [3.0.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0...v3.0.1) (2019-04-26)
-
-
-### Bug Fixes
-
-* **button:** fix arrows button icon ([1460f96](https://github.com/ovh-ux/ovh-ui-kit/commit/1460f96))
-* **calendar:** fix disabled state on alt input ([85ae5a0](https://github.com/ovh-ux/ovh-ui-kit/commit/85ae5a0))
-* **file:** fix disabled state for multiple and droparea ([a303af5](https://github.com/ovh-ux/ovh-ui-kit/commit/a303af5))
-* **file:** fix loading in preview mode ([8033343](https://github.com/ovh-ux/ovh-ui-kit/commit/8033343))
-
-
-
-# [3.0.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.9...v3.0.0) (2019-04-25)
+## [3.2.1](https://github.com/ovh/ovh-ui-kit/compare/v3.2.0...v3.2.1) (2019-06-13)
 
 
 ### Bug Fixes
 
-* **icons:** fix circle icon size ([148fd36](https://github.com/ovh-ux/ovh-ui-kit/commit/148fd36))
+* **stepper:** fix modify step button appearance ([#448](https://github.com/ovh/ovh-ui-kit/issues/448)) ([70d9656](https://github.com/ovh/ovh-ui-kit/commit/70d9656))
+
+
+
+# [3.2.0](https://github.com/ovh/ovh-ui-kit/compare/v3.1.4...v3.2.0) (2019-06-11)
+
+
+### Bug Fixes
+
+* **button:** set max-width to 100% ([6c22ba4](https://github.com/ovh/ovh-ui-kit/commit/6c22ba4))
+* **oui-datagrid:** prevent scroll from displaying inside the datagrid ([#440](https://github.com/ovh/ovh-ui-kit/issues/440)) ([d307269](https://github.com/ovh/ovh-ui-kit/commit/d307269))
+* **oui-file:** add max-height to file list ([#442](https://github.com/ovh/ovh-ui-kit/issues/442)) ([398c8a9](https://github.com/ovh/ovh-ui-kit/commit/398c8a9))
+
+
+
+## [3.1.4](https://github.com/ovh/ovh-ui-kit/compare/v3.1.3...v3.1.4) (2019-06-06)
+
+
+### Bug Fixes
+
+* **tabs:** fix tabs that won't open on click ([#435](https://github.com/ovh/ovh-ui-kit/issues/435)) ([4680837](https://github.com/ovh/ovh-ui-kit/commit/4680837))
+
+
+
+## [3.1.3](https://github.com/ovh/ovh-ui-kit/compare/v3.1.2...v3.1.3) (2019-06-04)
+
+
+### Bug Fixes
+
+* **message:** fix missing styles ([2071f89](https://github.com/ovh/ovh-ui-kit/commit/2071f89))
+
+
+
+## [3.1.2](https://github.com/ovh/ovh-ui-kit/compare/v3.1.1...v3.1.2) (2019-06-04)
+
+
+### Bug Fixes
+
+* **button:** fix icon placement with full width ([f0069a3](https://github.com/ovh/ovh-ui-kit/commit/f0069a3))
+
+
+
+## [3.1.1](https://github.com/ovh/ovh-ui-kit/compare/v3.1.0...v3.1.1) (2019-06-03)
+
+
+### Bug Fixes
+
+* **autocomplete:** fix less import in variables file ([5e442d9](https://github.com/ovh/ovh-ui-kit/commit/5e442d9))
+* **choice:** add relative position ([#426](https://github.com/ovh/ovh-ui-kit/issues/426)) ([c8d134b](https://github.com/ovh/ovh-ui-kit/commit/c8d134b))
+
+
+
+# [3.1.0](https://github.com/ovh/ovh-ui-kit/compare/v3.0.3...v3.1.0) (2019-05-29)
+
+
+### Bug Fixes
+
+* **criteria:** fix fields size to medium ([#422](https://github.com/ovh/ovh-ui-kit/issues/422)) ([7cfaac1](https://github.com/ovh/ovh-ui-kit/commit/7cfaac1))
+* **oui-dropdown:** fix arrow position for side placement ([f9d1981](https://github.com/ovh/ovh-ui-kit/commit/f9d1981))
+* **oui-dropdown:** fix automatic center positionning ([386ccee](https://github.com/ovh/ovh-ui-kit/commit/386ccee))
+* **select:** close others opened select on opening ([#421](https://github.com/ovh/ovh-ui-kit/issues/421)) ([a100f9a](https://github.com/ovh/ovh-ui-kit/commit/a100f9a))
+* **typography:** fix horizontal line margin ([6c8cbd5](https://github.com/ovh/ovh-ui-kit/commit/6c8cbd5))
+
+
+### Features
+
+* **checkbox:** add size and variant attributes ([#407](https://github.com/ovh/ovh-ui-kit/issues/407)) ([ba7d3fa](https://github.com/ovh/ovh-ui-kit/commit/ba7d3fa))
+* **core:** add extra thin icons to 'Oui Icons' font ([#395](https://github.com/ovh/ovh-ui-kit/issues/395)) ([614fe5b](https://github.com/ovh/ovh-ui-kit/commit/614fe5b)), closes [#393](https://github.com/ovh/ovh-ui-kit/issues/393)
+* **dropdown:** allow placement in others directions ([#411](https://github.com/ovh/ovh-ui-kit/issues/411)) ([9e545e0](https://github.com/ovh/ovh-ui-kit/commit/9e545e0))
+* **navbar:** add style for menu header container ([#396](https://github.com/ovh/ovh-ui-kit/issues/396)) ([7ab3998](https://github.com/ovh/ovh-ui-kit/commit/7ab3998)), closes [#394](https://github.com/ovh/ovh-ui-kit/issues/394)
+* **oui-form-actions:** allow submit button to be disabled ([#417](https://github.com/ovh/ovh-ui-kit/issues/417)) ([57fe866](https://github.com/ovh/ovh-ui-kit/commit/57fe866))
+* **oui-icons:** add extra thin search icon ([#414](https://github.com/ovh/ovh-ui-kit/issues/414)) ([b63ce95](https://github.com/ovh/ovh-ui-kit/commit/b63ce95))
+* **radio:** add size attribute ([#408](https://github.com/ovh/ovh-ui-kit/issues/408)) ([7e969c2](https://github.com/ovh/ovh-ui-kit/commit/7e969c2))
+* **stepper:** emit event on form submit ([#404](https://github.com/ovh/ovh-ui-kit/issues/404)) ([ea996ea](https://github.com/ovh/ovh-ui-kit/commit/ea996ea))
+* **tabs:** allow to select active tab item ([#398](https://github.com/ovh/ovh-ui-kit/issues/398)) ([2dfb325](https://github.com/ovh/ovh-ui-kit/commit/2dfb325))
+
+
+
+## [3.0.3](https://github.com/ovh/ovh-ui-kit/compare/v3.0.2...v3.0.3) (2019-05-13)
+
+
+### Bug Fixes
+
+* **clipboard:** set button type ([#397](https://github.com/ovh/ovh-ui-kit/issues/397)) ([a87f98a](https://github.com/ovh/ovh-ui-kit/commit/a87f98a))
+
+
+
+## [3.0.1](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0...v3.0.1) (2019-04-26)
+
+
+### Bug Fixes
+
+* **button:** fix arrows button icon ([1460f96](https://github.com/ovh/ovh-ui-kit/commit/1460f96))
+* **calendar:** fix disabled state on alt input ([85ae5a0](https://github.com/ovh/ovh-ui-kit/commit/85ae5a0))
+* **file:** fix disabled state for multiple and droparea ([a303af5](https://github.com/ovh/ovh-ui-kit/commit/a303af5))
+* **file:** fix loading in preview mode ([8033343](https://github.com/ovh/ovh-ui-kit/commit/8033343))
+
+
+
+# [3.0.0](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.9...v3.0.0) (2019-04-25)
+
+
+### Bug Fixes
+
+* **icons:** fix circle icon size ([148fd36](https://github.com/ovh/ovh-ui-kit/commit/148fd36))
 
 
 ### Documentation
 
-* **readme:** remove deprecated link to ovh-ui-kit-documentation ([#390](https://github.com/ovh-ux/ovh-ui-kit/issues/390)) ([61c92be](https://github.com/ovh-ux/ovh-ui-kit/commit/61c92be))
+* **readme:** remove deprecated link to ovh-ui-kit-documentation ([#390](https://github.com/ovh/ovh-ui-kit/issues/390)) ([61c92be](https://github.com/ovh/ovh-ui-kit/commit/61c92be))
 
 
 ### BREAKING CHANGES
@@ -710,91 +710,91 @@ classname extend `.oui-input-group`.
 
 
 
-# [3.0.0-rc.9](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.8...v3.0.0-rc.9) (2019-04-24)
+# [3.0.0-rc.9](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.8...v3.0.0-rc.9) (2019-04-24)
 
 
 
-# [3.0.0-rc.8](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.7...v3.0.0-rc.8) (2019-04-24)
+# [3.0.0-rc.8](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.7...v3.0.0-rc.8) (2019-04-24)
 
 
 
-# [3.0.0-rc.7](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.6...v3.0.0-rc.7) (2019-04-24)
+# [3.0.0-rc.7](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.6...v3.0.0-rc.7) (2019-04-24)
 
 
 
-# [3.0.0-rc.6](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.5...v3.0.0-rc.6) (2019-04-23)
+# [3.0.0-rc.6](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.5...v3.0.0-rc.6) (2019-04-23)
 
 
 ### Bug Fixes
 
-* **icons:** remove fixed colors and size ([7c3ac90](https://github.com/ovh-ux/ovh-ui-kit/commit/7c3ac90))
+* **icons:** remove fixed colors and size ([7c3ac90](https://github.com/ovh/ovh-ui-kit/commit/7c3ac90))
 
 
 ### Features
 
-* **datagrid:** add page change event ([5486950](https://github.com/ovh-ux/ovh-ui-kit/commit/5486950))
-* **icons:** add guides icon ([1eed018](https://github.com/ovh-ux/ovh-ui-kit/commit/1eed018))
-* **password:** add confirm attribute ([1cab076](https://github.com/ovh-ux/ovh-ui-kit/commit/1cab076))
-* **stepper:** add ability to change the current index ([40b92bd](https://github.com/ovh-ux/ovh-ui-kit/commit/40b92bd))
+* **datagrid:** add page change event ([5486950](https://github.com/ovh/ovh-ui-kit/commit/5486950))
+* **icons:** add guides icon ([1eed018](https://github.com/ovh/ovh-ui-kit/commit/1eed018))
+* **password:** add confirm attribute ([1cab076](https://github.com/ovh/ovh-ui-kit/commit/1cab076))
+* **stepper:** add ability to change the current index ([40b92bd](https://github.com/ovh/ovh-ui-kit/commit/40b92bd))
 
 
 
-# [3.0.0-rc.5](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.4...v3.0.0-rc.5) (2019-04-18)
+# [3.0.0-rc.5](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.4...v3.0.0-rc.5) (2019-04-18)
 
 
 ### Bug Fixes
 
-* **action-menu:** set default attributes when used in datagrid ([ed465a8](https://github.com/ovh-ux/ovh-ui-kit/commit/ed465a8))
-* **datagrid:** add default column type to string ([e8e4092](https://github.com/ovh-ux/ovh-ui-kit/commit/e8e4092))
+* **action-menu:** set default attributes when used in datagrid ([ed465a8](https://github.com/ovh/ovh-ui-kit/commit/ed465a8))
+* **datagrid:** add default column type to string ([e8e4092](https://github.com/ovh/ovh-ui-kit/commit/e8e4092))
 
 
 
-# [3.0.0-rc.4](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.3...v3.0.0-rc.4) (2019-04-16)
+# [3.0.0-rc.4](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.3...v3.0.0-rc.4) (2019-04-16)
 
 
 ### Features
 
-* add css file with rem base 10px ([178acc9](https://github.com/ovh-ux/ovh-ui-kit/commit/178acc9))
+* add css file with rem base 10px ([178acc9](https://github.com/ovh/ovh-ui-kit/commit/178acc9))
 
 
 
-# [3.0.0-rc.3](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.2...v3.0.0-rc.3) (2019-04-12)
-
-
-### Bug Fixes
-
-* **less:** fix imports in generated dist files ([1161031](https://github.com/ovh-ux/ovh-ui-kit/commit/1161031))
-* **modal:** fix transclude loading by using ng-show ([eccfde3](https://github.com/ovh-ux/ovh-ui-kit/commit/eccfde3))
-
-
-
-# [3.0.0-rc.2](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.1...v3.0.0-rc.2) (2019-04-11)
+# [3.0.0-rc.3](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.2...v3.0.0-rc.3) (2019-04-12)
 
 
 ### Bug Fixes
 
-* **radio:** fix wrong font-size for m-thumbnail ([e29e9ee](https://github.com/ovh-ux/ovh-ui-kit/commit/e29e9ee))
+* **less:** fix imports in generated dist files ([1161031](https://github.com/ovh/ovh-ui-kit/commit/1161031))
+* **modal:** fix transclude loading by using ng-show ([eccfde3](https://github.com/ovh/ovh-ui-kit/commit/eccfde3))
+
+
+
+# [3.0.0-rc.2](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.1...v3.0.0-rc.2) (2019-04-11)
+
+
+### Bug Fixes
+
+* **radio:** fix wrong font-size for m-thumbnail ([e29e9ee](https://github.com/ovh/ovh-ui-kit/commit/e29e9ee))
 
 
 ### Features
 
-* add legacy icons from ovh-manager-webfont ([#367](https://github.com/ovh-ux/ovh-ui-kit/issues/367)) ([21a7a58](https://github.com/ovh-ux/ovh-ui-kit/commit/21a7a58))
+* add legacy icons from ovh-manager-webfont ([#367](https://github.com/ovh/ovh-ui-kit/issues/367)) ([21a7a58](https://github.com/ovh/ovh-ui-kit/commit/21a7a58))
 
 
 
-# [3.0.0-rc.1](https://github.com/ovh-ux/ovh-ui-kit/compare/v3.0.0-rc.0...v3.0.0-rc.1) (2019-04-10)
+# [3.0.0-rc.1](https://github.com/ovh/ovh-ui-kit/compare/v3.0.0-rc.0...v3.0.0-rc.1) (2019-04-10)
 
 
 
-# [3.0.0-rc.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.29.0...v3.0.0-rc.0) (2019-04-09)
+# [3.0.0-rc.0](https://github.com/ovh/ovh-ui-kit/compare/v2.29.0...v3.0.0-rc.0) (2019-04-09)
 
 
 ### Performance Improvements
 
-* remove deprecated attributes ([89a2e65](https://github.com/ovh-ux/ovh-ui-kit/commit/89a2e65))
-* remove deprecated components ([bf24f0d](https://github.com/ovh-ux/ovh-ui-kit/commit/bf24f0d))
-* remove deprecated imports ([c80fbe0](https://github.com/ovh-ux/ovh-ui-kit/commit/c80fbe0))
-* remove deprecated styles ([17eac47](https://github.com/ovh-ux/ovh-ui-kit/commit/17eac47))
+* remove deprecated attributes ([89a2e65](https://github.com/ovh/ovh-ui-kit/commit/89a2e65))
+* remove deprecated components ([bf24f0d](https://github.com/ovh/ovh-ui-kit/commit/bf24f0d))
+* remove deprecated imports ([c80fbe0](https://github.com/ovh/ovh-ui-kit/commit/c80fbe0))
+* remove deprecated styles ([17eac47](https://github.com/ovh/ovh-ui-kit/commit/17eac47))
 
 
 

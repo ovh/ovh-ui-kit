@@ -85,7 +85,7 @@ If you want to use the variables for your style, you can access it through `_var
 1. Clone and install `ovh-ui-kit`
 
 ```bash
-git clone https://github.com/ovh-ux/ovh-ui-kit.git
+git clone https://github.com/ovh/ovh-ui-kit.git
 cd ovh-ui-kit
 yarn install
 ```
@@ -107,13 +107,13 @@ Once you have `yarn start`-ed the project, you can edit anything with an automat
 You've developed a new cool feature? Fixed an annoying bug? We'd be happy
 to hear from you!
 
-see [CONTRIBUTING](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
+see [CONTRIBUTING](https://github.com/ovh/ovh-ui-kit/blob/master/CONTRIBUTING.md)
 
 ## Related links
 
- * Contribute: [https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md](https://github.com/ovh-ux/ovh-ui-kit/blob/master/CONTRIBUTING.md)
- * Report bugs: [https://github.com/ovh-ux/ovh-ui-kit/issues](https://github.com/ovh-ux/ovh-ui-kit/issues)
- * Get latest version: [https://github.com/ovh-ux/ovh-ui-kit](https://github.com/ovh-ux/ovh-ui-kit)
+ * Contribute: [https://github.com/ovh/ovh-ui-kit/blob/master/CONTRIBUTING.md](https://github.com/ovh/ovh-ui-kit/blob/master/CONTRIBUTING.md)
+ * Report bugs: [https://github.com/ovh/ovh-ui-kit/issues](https://github.com/ovh/ovh-ui-kit/issues)
+ * Get latest version: [https://github.com/ovh/ovh-ui-kit](https://github.com/ovh/ovh-ui-kit)
 
 ## Documentation
 
@@ -121,4 +121,4 @@ Documentation is available from the `packages/` folder, every package is self-do
 
 ## License
 
-See [https://github.com/ovh-ux/ovh-ui-kit/blob/master/LICENSE](https://github.com/ovh-ux/ovh-ui-kit/blob/master/LICENSE)
+See [https://github.com/ovh/ovh-ui-kit/blob/master/LICENSE](https://github.com/ovh/ovh-ui-kit/blob/master/LICENSE)
