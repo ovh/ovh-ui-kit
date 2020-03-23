@@ -63,7 +63,6 @@ export default class PopoverController {
 
       const { 0: popover } = this.$element.next();
       this.popperElement = popover;
-      this.arrowElement = this.popperElement.querySelector('.oui-popover__arrow');
     });
   }
 
@@ -125,11 +124,6 @@ export default class PopoverController {
   }
 
   createPopper() {
-    // Let Popper.js manage the arrow position when it's centered (default).
-    if (this.arrowElement) {
-      this.arrowElement.setAttribute('x-arrow', '');
-    }
-
     this.popperElement.style.minWidth = `${this.triggerElement.offsetWidth}px`;
 
     this.popper = new Popper(this.triggerElement, this.popperElement, {
