@@ -10,10 +10,18 @@ const placement = {
   label: 'Placement',
   options: {
     Default: '',
+    'Top Start': 'top-start',
     Top: 'top',
+    'Top End': 'top-end',
+    'Right Start': 'right-start',
     Right: 'right',
+    'Right End': 'right-end',
+    'Left Start': 'left-start',
     Left: 'left',
+    'Left End': 'left-end',
+    'Bottom Start': 'bottom-start',
     Bottom: 'bottom',
+    'Bottom End': 'bottom-end',
   },
   default: '',
 };
