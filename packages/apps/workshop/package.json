@@ -11,8 +11,10 @@
     "copy": "cpx \"./docs/**/*\" \"../../../docs\"",
     "serve": "npx serve ./docs",
     "start": "yarn storybook",
+    "start:ci": "yarn storybook:ci",
     "storiesof-to-csf": "sb migrate storiesof-to-csf --glob \"stories/**/*.stories.js\"",
-    "storybook": "start-storybook -p 8080"
+    "storybook": "start-storybook -p 8000",
+    "storybook:ci": "start-storybook -p 8000 --ci"
   },
   "dependencies": {
     "angular": "^1.7.9",

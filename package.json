@@ -26,6 +26,7 @@
     "lint:js": "eslint ./packages",
     "lint:js-fix": "eslint ./packages --fix",
     "start": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn start",
+    "start:ci": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn start:ci",
     "test": "run-s lint karma"
   },
   "devDependencies": {
