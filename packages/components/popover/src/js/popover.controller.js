@@ -94,6 +94,17 @@ export default class PopoverController {
     }
   }
 
+  documentClickHandler(evt) {
+    if (
+      (evt && evt.type === 'click')
+      && (this.triggerElement.contains(evt.target) || this.popperElement.contains(evt.target))
+    ) {
+      return;
+    }
+
+    this.$scope.$apply(() => this.closePopover());
+  }
+
   triggerKeyHandler(evt) {
     if (evt && evt.type === 'keydown' && evt.which === KEY_ESCAPE) {
       this.$scope.$apply(() => {
@@ -106,7 +117,12 @@ export default class PopoverController {
     this.isPopoverOpen = true;
     this.updatePopper();
 
-    this.$document.on('keydown', (evt) => this.triggerKeyHandler(evt));
+    // Avoid events if the opening is handled from outside
+    if (angular.isUndefined(this.$attrs.ouiPopoverOpen)) {
+      this.$document.on('click', (evt) => this.documentClickHandler(evt));
+      this.$document.on('keydown', (evt) => this.triggerKeyHandler(evt));
+    }
+
     this.$element.attr('aria-expanded', true);
 
     // force the digest because the popover is outside the angular digest loop
@@ -116,7 +132,11 @@ export default class PopoverController {
   closePopover() {
     this.isPopoverOpen = false;
 
-    this.$document.off('keydown', (evt) => this.triggerKeyHandler(evt));
+    if (angular.isUndefined(this.$attrs.ouiPopoverOpen)) {
+      this.$document.off('click');
+      this.$document.off('keydown');
+    }
+
     this.$element.attr('aria-expanded', false);
 
     // force the digest because the popover is outside the angular digest loop
