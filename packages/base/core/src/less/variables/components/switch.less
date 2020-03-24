@@ -1,16 +1,31 @@
 // Switch
 @oui-switch-width: rem-calc(54);
 @oui-switch-height: rem-calc(24);
-@oui-switch-background-color: @oui-color-nurse;
-@oui-switch-background-color_checked: @oui-color-info-dark;
-@oui-switch-background-color_disabled: @oui-color-ironlight;
-@oui-switch-background-color_error: @oui-color-error-fade;
-@oui-switch-border-width: 2px;
-@oui-switch-border-color_error: @oui-color-error-medium;
-@oui-switch-box-shadow: inset 0 1px 1px 0 rgba(63, 81, 103, 0.2);
-@oui-switch-box-shadow_checked: inset 0 1px 1px 0 rgba(63, 81, 103, 0.2), 0 0 3px 1px rgba(0, 0, 0, 0.15);
+@oui-switch-background-color: @p-000;
+@oui-switch-background-color_checked: @p-500;
+@oui-switch-background-color_error: @oui-form-control-background-color_error;
+@oui-switch-border-width: rem-calc(2);
+@oui-switch-border-radius: calc(@oui-switch-height / 2);
+@oui-switch-border-color: @g-300;
+@oui-switch-border-color_checked: @p-500;
+@oui-switch-border-color_error: @oui-form-control-border-color_error;
+@oui-switch-box-shadow: @oui-form-control-box-shadow;
+@oui-switch-box-shadow_checked: @oui-form-control-box-shadow;
 
-@oui-switch-cursor-background-color: @p-000;
-@oui-switch-cursor-background-color_disabled: @oui-color-concrete;
-@oui-switch-cursor-box-shadow: 0 1px 2px 0 @oui-color-silver;
-@oui-switch-cursor-box-shadow_error: 0 1px 2px 0 @oui-color-error-medium;
+// Switch - Cursor
+@oui-switch-cursor-size: rem-calc(18);
+@oui-switch-cursor-position-x: rem-calc(2);
+@oui-switch-cursor-position-y: rem-calc(1);
+@oui-switch-cursor-background-color: @g-300;
+@oui-switch-cursor-background-color_checked: @p-000;
+@oui-switch-cursor-box-shadow: none;
+@oui-switch-cursor-box-shadow_checked: none;
+@oui-switch-cursor-box-shadow_error: none;
+
+@oui-switch-cursor-icon-color: @g-300;
+@oui-switch-cursor-icon-color_checked: @p-500;
+@oui-switch-cursor-icon-color_error: @oui-form-control-icon-color_error;
+@oui-switch-cursor-icon-family: @oui-icon-font-family;
+@oui-switch-cursor-icon-index: @oui-icon-index-blank;
+@oui-switch-cursor-icon-index_checked: @oui-icon-index-check;
+@oui-switch-cursor-icon-size: rem-calc(14);
