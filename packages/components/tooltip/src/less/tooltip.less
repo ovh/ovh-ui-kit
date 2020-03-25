@@ -1,49 +1,8 @@
-@import './_mixins';
-
 .oui-tooltip {
-  min-width: @oui-tooltip-min-width;
-  max-width: @oui-tooltip-max-width;
-  line-height: @oui-tooltip-line-height;
-  box-sizing: border-box;
-  margin: 0;
-  padding: @oui-tooltip-padding;
-  position: absolute;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  font-size: @oui-tooltip-font-size;
-  color: @oui-tooltip-font-color;
-  box-shadow: @oui-tooltip-box-shadow;
-  border: solid @oui-tooltip-border-width @oui-tooltip-border-color;
-  border-radius: @oui-tooltip-border-radius;
-  background-color: @oui-tooltip-background-color;
-  opacity: 0;
-  transition-property: opacity, z-index;
-  transition-duration: @oui-tooltip-transition-duration;
-  transition-timing-function: @oui-tooltip-transition-animation;
-  z-index: -1;
-  user-select: none;
+  #oui > .tooltip-base();
+  #oui > .tooltip-arrow();
+
   pointer-events: none;
-  cursor: default;
-
-  #oui > .tooltip-arrow(
-    @selector: oui-tooltip__arrow,
-    @size: @oui-tooltip-arrow-size,
-    @background-color: @oui-tooltip-arrow-background-color,
-    @border-color: @oui-tooltip-arrow-border-color,
-    @border-width: @oui-tooltip-arrow-border-width,
-    @box-shadow: @oui-tooltip-arrow-box-shadow
-  );
-
-  &[x-placement=""],
-  &[x-placement^='bottom'] { margin-top: @oui-tooltip-margin; }
-
-  &[x-placement^='top'] { margin-bottom: @oui-tooltip-margin; }
-
-  &[x-placement^='right'] { margin-left: @oui-tooltip-margin; }
-
-  &[x-placement^='left'] { margin-right: @oui-tooltip-margin; }
 
   &__trigger:focus + &,
   &__trigger:hover + & {

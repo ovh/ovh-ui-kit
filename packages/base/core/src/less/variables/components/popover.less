@@ -1,24 +1,35 @@
 // Popover
-@oui-popover-max-width: rem-calc(300);
-@oui-popover-padding: rem-calc(20) rem-calc(30) rem-calc(20)  rem-calc(20);
-@oui-popover-font-color: @oui-color-sapphire;
-@oui-popover-font-size: rem-calc(14);
-@oui-popover-background-color: @p-000;
-@oui-popover-border-color: @oui-color-silver;
-@oui-popover-border-width: 1px;
-@oui-popover-box-shadow: @base-box-shadow-primary;
-@oui-popover-opacity: 1;
-@oui-popover-transition-duration: 250ms;
-@oui-popover-transition-animation: ease-in-out;
-@oui-popover-z-index: 1000;
+@oui-popover-min-width: @oui-tooltip-min-width;
+@oui-popover-max-width: @oui-tooltip-max-width;
+@oui-popover-line-height: @venus-line-height;
+@oui-popover-spacing: rem-calc(12);
+@oui-popover-padding: rem-calc(12) rem-calc(24) rem-calc(12) rem-calc(16);
+@oui-popover-font-color: @p-800-text;
+@oui-popover-font-size: @venus-font-size;
+@oui-popover-font-weight: @venus-font-weight;
+@oui-popover-box-shadow: @oui-tooltip-box-shadow;
+@oui-popover-border-color: @oui-tooltip-border-color;
+@oui-popover-border-width: @oui-tooltip-border-width;
+@oui-popover-border-radius: @oui-tooltip-border-radius;
+@oui-popover-background-color: @oui-tooltip-background-color;
+@oui-popover-opacity: @oui-tooltip-opacity;
+@oui-popover-transition-duration: @oui-tooltip-transition-duration;
+@oui-popover-transition-animation: @oui-tooltip-transition-animation;
+@oui-popover-z-index: @oui-tooltip-z-index;
 
-@oui-popover-arrow-margin: 4px;
-@oui-popover-arrow-size: 8px;
+// Popover - Arrow
+@oui-popover-arrow-size: @oui-tooltip-arrow-size;
+@oui-popover-arrow-border-color: @oui-tooltip-arrow-border-color;
+@oui-popover-arrow-border-width: @oui-tooltip-arrow-border-width;
+@oui-popover-arrow-box-shadow: @oui-tooltip-arrow-box-shadow;
+@oui-popover-arrow-background-color: @oui-tooltip-arrow-background-color;
 
-@oui-popover-close-button-right: rem-calc(10);
-@oui-popover-close-button-top: rem-calc(10);
-@oui-popover-close-button-icon-size: rem-calc(12);
-@oui-popover-close-button-icon-color: @oui-color-info-dark;
+// Popover - Close button
+@oui-popover-close-button-right: rem-calc(0);
+@oui-popover-close-button-top: rem-calc(0);
+@oui-popover-close-button-icon-size: rem-calc(24);
+@oui-popover-close-button-icon-color: @p-500;
+@oui-popover-close-button-outline-offset: calc(-@oui-a11y-outline-offset - @oui-a11y-outline-width - @oui-collapsible-border-width);
 
 // Popover - Help button
 @oui-popover-button-width: 1em;
@@ -28,6 +39,6 @@
 @oui-popover-button-content: @oui-icon-index-help;
 @oui-popover-button-font: normal normal normal rem-calc(16)/@oui-popover-button-line-height @oui-popover-button-font-family;
 @oui-popover-button-font-family: @base-font-family-icon;
-@oui-popover-button-font-color: @oui-color-sapphire;
+@oui-popover-button-font-color: inherit;
 @oui-popover-button-font-size: inherit;
 @oui-popover-button-box-shadow_focus: @oui-button-secondary-box-shadow_focus;
