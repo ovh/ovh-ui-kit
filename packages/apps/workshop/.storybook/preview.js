@@ -28,10 +28,15 @@ addParameters({
     storySort: ([,a], [,b]) => {
       if (a.kind === b.kind) return 0;
 
-      // Put MDX files first
+      // Put Introduction files first
+      if (a.id.includes('-introduction-') && !b.id.includes('-introduction-')) return -1;
+      if (!a.id.includes('-introduction-') && b.id.includes('-introduction-')) return 1;
+
+      // Then put MDX files second
       if (a.id.endsWith('--page') && !b.id.endsWith('--page')) return -1;
       if (!a.id.endsWith('--page') && b.id.endsWith('--page')) return 1;
 
+      // Then let the compare manage the ordering
       return a.id.localeCompare(b.id, undefined, { numeric: true });
     },
   },
