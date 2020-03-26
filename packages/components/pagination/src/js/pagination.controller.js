@@ -1,6 +1,11 @@
 import clamp from 'lodash/clamp';
 import range from 'lodash/range';
 
+const MAX_THRESHOLD_MODE = {
+  button: 5,
+  select: 100,
+};
+
 export default class {
   constructor($attrs, $element, $timeout, ouiPaginationConfiguration) {
     'ngInject';
@@ -47,6 +52,7 @@ export default class {
     this.pageCount = this.getPageCount();
     this.currentPage = this.getCurrentPage();
     this.inputPage = this.getCurrentPage(); // Update model for input
+    this.mode = this.getMode();
   }
 
   processTranslations() {
@@ -62,6 +68,24 @@ export default class {
     this.translations.inputPageOfPageCount = translations.currentPageOfPageCount
       .replace('{{pageCount}}', this.pageCount)
       .split('{{currentPage}}');
+  }
+
+  getMode() {
+    if (!angular.isUndefined(this.$attrs.mode) && this.mode !== '') {
+      return this.mode;
+    }
+
+    // Without 'mode' value, we select the 'mode' based on the pageCount
+    if (this.pageCount <= MAX_THRESHOLD_MODE.button) {
+      return 'button';
+    }
+    if (
+      this.pageCount > MAX_THRESHOLD_MODE.button
+      && this.pageCount <= MAX_THRESHOLD_MODE.select
+    ) {
+      return 'select';
+    }
+    return 'input';
   }
 
   getPageAriaLabel(page) {
