@@ -1,3 +1,12 @@
+## [4.0.5](https://github.com/ovh/ovh-ui-kit/compare/v4.0.4...v4.0.5) (2020-03-26)
+
+
+### Bug Fixes
+
+* **flags:** fix url path value ([b51d394](https://github.com/ovh/ovh-ui-kit/commit/b51d3940af64fb7ccb1d7f39496f9d782950e3ad))
+
+
+
 ## [4.0.4](https://github.com/ovh/ovh-ui-kit/compare/v4.0.3...v4.0.4) (2020-03-20)
 
 
