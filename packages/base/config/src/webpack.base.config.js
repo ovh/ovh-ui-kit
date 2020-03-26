@@ -24,11 +24,11 @@ module.exports = {
   plugins,
   module: {
     rules: [
+      svgLoader,
+      fontLoader,
       babelLoader,
       eslintLoader,
-      fontLoader,
       htmlLoader,
-      svgLoader,
     ],
   },
 };

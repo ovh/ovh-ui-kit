@@ -143,8 +143,9 @@ const svgLoader = {
   test: /\.svg(\?[a-f0-9]{32})?$/,
   use: [
     {
-      loader: 'file-loader',
+      loader: 'url-loader',
       options: {
+        limit: false,
         name: '[folder]/[name].[ext]?[hash]',
         outputPath: '../svg',
         publicPath: '../svg',
