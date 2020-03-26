@@ -16,8 +16,8 @@
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --colors --config ./.config/webpack.config.js",
     "clean": "rimraf ./dist ../../../dist ../../libs/ui-kit/dist",
     "copy": "run-p copy:*",
-    "copy:root": "cpx \"./dist/**/*\" \"../../../dist\"",
-    "copy:lib": "cpx \"./dist/**/*\" \"../../libs/ui-kit/dist\"",
+    "copy:root": "cpx \"./dist/**/!(oui-flags.j*|oui-icons.j*)\" \"../../../dist\"",
+    "copy:lib": "cpx \"./dist/**/!(oui-flags.j*|oui-icons.j*)\" \"../../libs/ui-kit/dist\"",
     "prepare": "yarn build"
   },
   "dependencies": {
