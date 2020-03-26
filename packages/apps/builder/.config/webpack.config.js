@@ -11,6 +11,12 @@ module.exports = merge(baseConfig, {
       './src/oui.js',
       './src/oui.less',
     ],
+    'oui-flags': [
+      './src/oui-flags.less',
+    ],
+    'oui-icons': [
+      './src/oui-icons.less',
+    ],
   },
   output: {
     filename: '[name].js',
