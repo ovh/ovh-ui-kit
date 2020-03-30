@@ -37,7 +37,18 @@ export const Default = forModule(moduleName).createElement(
     `
     <oui-pagination
       current-offset="${number('Current offset', 1)}"
-      page-size="${number('Page size', 25)}"
+      total-items="${number('Total items', 100)}">
+    </oui-pagination>`,
+  ),
+);
+
+export const PageSize = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-pagination
+      current-offset="${number('Current offset', 1)}"
+      page-size="${number('Page size', 50)}"
+      page-size-max="${number('Page size max', 100)}"
       total-items="${number('Total items', 100)}">
     </oui-pagination>`,
   ),

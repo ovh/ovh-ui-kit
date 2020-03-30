@@ -1,8 +1,15 @@
+import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
 import clamp from 'lodash/clamp';
 import range from 'lodash/range';
 
+const MODES = [
+  'button',
+  'select',
+  'input',
+];
+
 const MAX_THRESHOLD_MODE = {
-  button: 5,
+  button: 10,
   select: 100,
 };
 
@@ -14,68 +21,53 @@ export default class {
     this.$element = $element;
     this.$timeout = $timeout;
     this.config = ouiPaginationConfiguration;
-    this.pageSizeList = this.config.pageSizeList.slice();
-    this.pageSize = this.config.pageSize;
   }
 
-  $postLink() {
-    this.$timeout(() => this.$element
-      .addClass('oui-pagination'));
+  getCurrentPage() {
+    return Math.floor((this.currentOffset - 1) / this.currentPageSize) + 1;
   }
 
-  $onChanges(changes) {
-    // If pageSizeMax changes, recalculate pageSizeList...
-    if (changes.pageSizeMax) {
-      this.pageSizeList = this.config.pageSizeList.slice();
-      this.pageSizeList.sort((a, b) => a - b);
+  getCurrentOffset(page) {
+    const offset = (this.currentPageSize * (page - 1)) + 1;
+    return clamp(offset, 1, this.totalItems);
+  }
 
-      if (angular.isNumber(this.pageSizeMax)) {
-        this.pageSizeList = this.pageSizeList
-          .filter((pageSize) => pageSize <= this.pageSizeMax);
+  getPageCount() {
+    return Math.ceil(this.totalItems / this.currentPageSize);
+  }
 
-        // ... and add the max page size if necessary.
-        if (this.pageSizeList.indexOf(this.pageSizeMax) < 0) {
-          this.pageSizeList.push(this.pageSizeMax);
-        }
+  getPageRange() {
+    return range(1, this.pageCount + 1);
+  }
+
+  getPageSizeList() {
+    let { pageSizeList } = this.config;
+
+    // Add the currentPageSize in the list if necessary
+    if (angular.isNumber(this.currentPageSize) && !pageSizeList.includes(this.currentPageSize)) {
+      pageSizeList.push(this.currentPageSize);
+    }
+
+    // Filter value above pageSizeMax
+    if (angular.isNumber(this.pageSizeMax)) {
+      pageSizeList = pageSizeList.filter((pageSize) => pageSize <= this.pageSizeMax);
+
+      // ... and add the max page size if necessary.
+      if (!pageSizeList.includes(this.pageSizeMax)) {
+        pageSizeList.push(this.pageSizeMax);
       }
     }
 
-    // Instead of recalculate these values on each digest,
-    // values are calculated on each change concerning the table.
-    // It avoids digest problems in ng-repeat.
-    this.processPaginationChange();
-
-    this.processTranslations();
+    return pageSizeList.sort((a, b) => a - b);
   }
 
-  processPaginationChange() {
-    this.pageCount = this.getPageCount();
-    this.currentPage = this.getCurrentPage();
-    this.inputPage = this.getCurrentPage(); // Update model for input
-    this.mode = this.getMode();
-  }
-
-  processTranslations() {
-    this.translations = { ...this.config.translations };
-    this.translations.ofNResults = this.translations.ofNResults
-      .replace('{{totalItems}}', this.totalItems);
-    this.translations.currentPageOfPageCount = this.translations.currentPageOfPageCount
-      .replace('{{currentPage}}', this.currentPage)
-      .replace('{{pageCount}}', this.pageCount);
-
-    // For huge amount of pages, we replaced "{{currentPage}}" by a number input
-    const translations = { ...this.config.translations };
-    this.translations.inputPageOfPageCount = translations.currentPageOfPageCount
-      .replace('{{pageCount}}', this.pageCount)
-      .split('{{currentPage}}');
-  }
-
-  getMode() {
-    if (!angular.isUndefined(this.$attrs.mode) && this.mode !== '') {
+  getPaginationMode() {
+    if (!angular.isUndefined(this.$attrs.mode) && MODES.includes(this.mode)) {
       return this.mode;
     }
 
-    // Without 'mode' value, we select the 'mode' based on the pageCount
+    // If we don't have a valid "mode" value
+    // We select it automatically based on thresholds
     if (this.pageCount <= MAX_THRESHOLD_MODE.button) {
       return 'button';
     }
@@ -88,65 +80,88 @@ export default class {
     return 'input';
   }
 
-  getPageAriaLabel(page) {
-    const pageOfPageCountText = this.config.translations.currentPageOfPageCount;
-    return pageOfPageCountText
-      .replace('{{currentPage}}', page)
+  getPaginationTranslations() {
+    const translations = {
+      ...this.config.translations,
+      splittedPageOfPageCount: this.config.translations.currentPageOfPageCount,
+    };
+
+    translations.ofNResults = translations.ofNResults
+      .replace('{{totalItems}}', this.totalItems);
+    translations.splittedPageOfPageCount = translations.splittedPageOfPageCount
+      .replace('{{pageCount}}', this.pageCount)
+      .split('{{currentPage}}');
+    translations.currentPageOfPageCount = translations.currentPageOfPageCount
+      .replace('{{currentPage}}', this.currentPage)
       .replace('{{pageCount}}', this.pageCount);
-  }
 
-  onPageSizeChange(pageSize) {
-    this.pageSize = pageSize;
-    this.currentOffset = 1;
-
-    // If page-size attribute is not set on the component (default value),
-    // $onChanges is never triggered and other values are not calculated.
-    // So these values have to be calculated here.
-    if (!this.$attrs.pageSize) {
-      this.processPaginationChange();
-    }
-
-    this.onPaginationChange();
+    return translations;
   }
 
   onPageChange(page) {
-    this.currentOffset = (this.pageSize * (page - 1)) + 1;
-    this.currentPage = this.getCurrentPage();
-    this.inputPage = this.getCurrentPage(); // Update model for input
-    this.onPaginationChange();
-  }
+    // The numeric input returns undefined
+    // If the value doesn't match the min/max values
+    // In this case, we reset the current page
+    this.currentPage = (Number.isInteger(page))
+      ? page
+      : this.getCurrentPage();
 
-  checkPageRange(page) {
-    const currentPage = Number.isInteger(page)
-      ? clamp(page, 1, this.pageCount)
-      : this.currentPage;
+    this.currentOffset = this.getCurrentOffset(this.currentPage);
 
-    this.onPageChange(currentPage);
-  }
-
-  getLastItemOffset() {
-    return Math.min(this.currentOffset + this.pageSize - 1, this.totalItems);
-  }
-
-  getPageCount() {
-    return Math.ceil(this.totalItems / this.pageSize);
-  }
-
-  getCurrentPage() {
-    return Math.floor((this.currentOffset - 1) / this.pageSize) + 1;
-  }
-
-  getPageRange() {
-    return range(1, this.getPageCount() + 1);
-  }
-
-  onPaginationChange() {
-    this.processTranslations();
     this.onChange({
       $event: {
         offset: this.currentOffset,
-        pageSize: this.pageSize,
+        pageSize: this.currentPageSize,
       },
     });
+  }
+
+  onPageSizeChange(pageSize) {
+    // Since the pageSize changed
+    // We need to update all the selectors
+    this.updatePaginationSelectors(pageSize);
+
+    this.onChange({
+      $event: {
+        offset: this.currentOffset,
+        pageSize: this.currentPageSize,
+      },
+    });
+  }
+
+  updatePaginationSelectors(pageSize) {
+    if (pageSize) {
+      // PageSize selector
+      this.currentPageSize = pageSize || this.pageSize;
+      this.pageSizeList = this.getPageSizeList();
+
+      // Page selector
+      this.currentPage = this.getCurrentPage();
+      this.pageCount = this.getPageCount();
+      this.pageRange = this.getPageRange();
+
+      // Pagination template
+      this.mode = this.getPaginationMode();
+      this.translations = this.getPaginationTranslations();
+    }
+  }
+
+  $onInit() {
+    addDefaultParameter(this, 'pageSize', this.config.pageSize);
+
+    this.updatePaginationSelectors(this.pageSize);
+  }
+
+  $postLink() {
+    this.$timeout(() => this.$element
+      .addClass('oui-pagination'));
+  }
+
+  $onChanges({ pageSize }) {
+    this.updatePaginationSelectors(
+      (pageSize)
+        ? pageSize.currentValue
+        : this.pageSize,
+    );
   }
 }

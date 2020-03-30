@@ -1,104 +1,89 @@
-<div class="oui-pagination__progress">
-    <oui-dropdown placement="center" arrow>
-        <button type="button"
-            class="oui-button oui-button_ghost"
-            oui-dropdown-trigger>
-            <span ng-bind="$ctrl.currentOffset"></span> -
-            <span ng-bind="$ctrl.getLastItemOffset()"></span>
-        </button>
-        <oui-dropdown-content>
-            <div role="menu" class="oui-pagination-menu">
-                <div class="oui-pagination-menu__group"
-                    ng-bind="::$ctrl.config.translations.resultsPerPage"></div>
-                <div class="oui-pagination-menu__items-list">
-                    <button type="button"
-                        ng-repeat="pageSize in $ctrl.pageSizeList track by $index"
-                        class="oui-pagination-menu__item"
-                        ng-disabled="pageSize === $ctrl.pageSize"
-                        ng-bind="pageSize"
-                        ng-click="$ctrl.onPageSizeChange(pageSize)"></button>
-                </div>
-            </div>
-        </oui-dropdown-content>
-    </oui-dropdown>
-    <span class="oui-pagination__progress-text" ng-bind="$ctrl.translations.ofNResults"></span>
+<div class="oui-pagination-result">
+    <label class="oui-select oui-select_inline">
+        <select class="oui-pagination-result__selector oui-select__input"
+            ng-change="$ctrl.onPageSizeChange($ctrl.currentPageSize)"
+            ng-model="$ctrl.currentPageSize"
+            ng-options="pageSize as pageSize for pageSize in $ctrl.pageSizeList">
+        </select>
+        <span class="oui-icon oui-icon-chevron-up-down" aria-hidden="true"></span>
+    </label>
+    <span class="oui-pagination-result__text" ng-bind="$ctrl.translations.ofNResults"></span>
 </div>
 
-<div class="oui-pagination__selector"
-    ng-if="$ctrl.totalItems > $ctrl.pageSize"
+<div class="oui-pagination-nav"
     ng-switch="$ctrl.mode">
     <button type="button"
-        class="oui-button oui-button_secondary oui-button_s"
+        class="oui-pagination-nav__previous oui-button oui-button_secondary oui-button_s"
         ng-attr-aria-label="{{ ::$ctrl.translations.previousPage }}"
-        ng-disabled="$ctrl.currentPage === 1"
-        ng-click="$ctrl.onPageChange($ctrl.getCurrentPage() - 1)">
-        <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
+        ng-disabled="$ctrl.currentPage <= 1"
+        ng-click="$ctrl.onPageChange($ctrl.currentPage - 1)">
+        <span class="oui-icon oui-icon-chevron-left"></span>
     </button>
 
-    <!-- Buttons (<= 5 pages) -->
-    <div class="oui-button-group"
+    <!-- Buttons -->
+    <div class="oui-pagination-items oui-pagination-items_button oui-button-group"
         ng-switch-when="button">
         <button type="button"
-            class="oui-button oui-button_s"
-            ng-repeat="page in $ctrl.getPageRange() track by page"
+            class="oui-pagination-items__button oui-button oui-button_s"
+            ng-repeat="page in $ctrl.pageRange track by page"
             ng-class="{
-                'oui-button_primary oui-pagination-button_selected': page === $ctrl.currentPage,
+                'oui-button_primary oui-pagination-items__button_selected': page === $ctrl.currentPage,
                 'oui-button_secondary': page != $ctrl.currentPage
             }"
             ng-disabled="page === $ctrl.currentPage"
             ng-bind="page"
             ng-click="$ctrl.onPageChange(page)"></button>
     </div>
-    <!-- /Buttons (<= 5 pages) -->
+    <!-- /Buttons -->
 
-    <!-- Select (> 5 && <= 100 pages) -->
-    <form class="oui-pagination-form"
+    <!-- Select -->
+    <form class="oui-pagination-items oui-pagination-items_select"
         ng-switch-when="select"
-        ng-submit="$ctrl.checkPageRange($ctrl.inputPage)"
         novalidate>
         <span aria-hidden="true"
-            ng-bind="$ctrl.translations.inputPageOfPageCount[0]">
+            ng-bind="$ctrl.translations.splittedPageOfPageCount[0]">
         </span>
-        <label class="oui-pagination-form__select oui-select oui-select_inline">
+        <label class="oui-pagination-items__control oui-select oui-select_inline">
             <select class="oui-select__input"
-                ng-attr-aria-label="{{ $ctrl.getPageAriaLabel($ctrl.inputPage) }}"
-                ng-change="$ctrl.onPageChange($ctrl.inputPage)"
-                ng-model="$ctrl.inputPage"
-                ng-options="page as page for page in $ctrl.getPageRange()">
+                ng-attr-aria-label="{{ $ctrl.getPageAriaLabel($ctrl.currentPage) }}"
+                ng-change="$ctrl.onPageChange($ctrl.currentPage)"
+                ng-model="$ctrl.currentPage"
+                ng-options="page as page for page in $ctrl.pageRange track by page">
             </select>
             <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
         </label>
         <span aria-hidden="true"
-            ng-bind="$ctrl.translations.inputPageOfPageCount[1]">
+            ng-bind="$ctrl.translations.splittedPageOfPageCount[1]">
         </span>
     </form>
-    <!-- /Select (> 5 && <= 100 pages) -->
+    <!-- /Select -->
 
-    <!-- Input (> 100 pages) -->
-    <form class="oui-pagination-form"
+    <!-- Input -->
+    <form class="oui-pagination-items oui-pagination-items_input"
         ng-switch-default
-        ng-submit="$ctrl.checkPageRange($ctrl.inputPage)"
         novalidate>
         <span aria-hidden="true"
-            ng-bind="$ctrl.translations.inputPageOfPageCount[0]">
+            ng-bind="$ctrl.translations.splittedPageOfPageCount[0]">
         </span>
-        <input class="oui-pagination-form__input oui-input oui-input_inline oui-input_xs"
+        <input class="oui-pagination-items__control oui-input oui-input_inline oui-input_xs"
             type="number"
             min="1"
             max="{{$ctrl.pageCount}}"
-            ng-attr-aria-label="{{ $ctrl.getPageAriaLabel($ctrl.inputPage) }}"
-            ng-model="$ctrl.inputPage">
+            step="1"
+            ng-attr-aria-label="{{ $ctrl.getPageAriaLabel($ctrl.currentPage) }}"
+            ng-change="$ctrl.onPageChange($ctrl.currentPage)"
+            ng-model="$ctrl.currentPage">
         <span aria-hidden="true"
-            ng-bind="$ctrl.translations.inputPageOfPageCount[1]">
+            ng-bind="$ctrl.translations.splittedPageOfPageCount[1]">
         </span>
     </form>
-    <!-- /Input (> 100 pages) -->
+    <!-- /Input -->
 
     <button type="button"
-        class="oui-button oui-button_secondary oui-button_s"
+        class="oui-pagination-nav__next oui-button oui-button_secondary oui-button_s"
         ng-attr-aria-label="{{ ::$ctrl.translations.nextPage }}"
-        ng-disabled="$ctrl.currentPage === $ctrl.pageCount"
+        ng-disabled="$ctrl.currentPage >= $ctrl.pageCount"
         ng-click="$ctrl.onPageChange($ctrl.currentPage + 1)">
-        <span class="oui-icon oui-icon-chevron-right" aria-hidden="true"></span>
+        <span class="oui-icon oui-icon-chevron-right"></span>
     </button>
 </div>
