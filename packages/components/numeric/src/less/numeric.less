@@ -2,21 +2,59 @@
 .oui-numeric {
   &:extend(.oui-input-group all);
 
-  width: @oui-numeric-width;
-  max-width: @oui-numeric-width;
-  margin: @oui-numeric-margin;
-
-  .oui-icon {
-    font-size: @oui-numeric-icon-size;
+  & &__button {
+    font-size: @oui-numeric-button-font-size;
   }
 
-  .oui-input {
+  & &__input {
+    min-width: @oui-numeric-input-min-width;
+    min-height: @oui-numeric-input-height;
+    height: @oui-numeric-input-height;
+    font-weight: @oui-numeric-input-font-weight;
+    color: @oui-numeric-input-font-color;
+    border-color: @oui-numeric-input-border-color;
+    border-radius: @oui-numeric-input-border-radius;
+    box-sizing: content-box;
+    flex: initial !important;
     text-align: center;
+    appearance: textfield;
+    -moz-appearance: textfield;
 
-    // Two lines bellow are required by firefox otherwise the max-width
-    // defined at root of the mixin isn't applied correctly
-    flex-shrink: 1;
-    min-width: 1px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    // Status
+    &:hover {
+      border-color: @oui-numeric-input-border-color_hover;
+    }
+
+    &:focus {
+      border-color: @oui-numeric-input-border-color_focus;
+    }
+
+    &:read-only {
+      border-color: @oui-numeric-input-border-color_readonly;
+    }
+
+    &:disabled {
+      border-color: @oui-numeric-input-border-color_disabled;
+    }
+
+    // Validation
+    .oui-field_success & {
+      border-color: @oui-numeric-input-border-color_success;
+    }
+
+    .oui-field_warning & {
+      border-color: @oui-numeric-input-border-color_warning;
+    }
+
+    .oui-field_error & {
+      border-color: @oui-numeric-input-border-color_error;
+    }
   }
 }
 
