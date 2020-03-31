@@ -11,7 +11,7 @@ export default class {
   }
 
   setActive() {
-    this.tabsCtrl.model = this.id;
+    this.tabsCtrl.setActiveTab(this);
   }
 
   getNodeIndex() {

@@ -1,3 +1,12 @@
+## [4.0.6](https://github.com/ovh/ovh-ui-kit/compare/v4.0.5...v4.0.6) (2020-03-31)
+
+
+### Bug Fixes
+
+* **tabs:** fix on-active call in responsive  ([687d869](https://github.com/ovh/ovh-ui-kit/commit/687d8694f8fcd50a15deb8c0e2509fca455d88d8))
+
+
+
 ## [4.0.5](https://github.com/ovh/ovh-ui-kit/compare/v4.0.4...v4.0.5) (2020-03-26)
 
 
