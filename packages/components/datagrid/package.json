@@ -7,8 +7,8 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
-    "test": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
-    "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/karma start --watch"
+    "test": "cross-env NODE_ENV=test karma start --reporters spec,coverage --single-run",
+    "test:watch": "cross-env NODE_ENV=test karma start --watch"
   },
   "dependencies": {
     "@ovh-ux/ui-kit.checkbox": "*",
@@ -30,6 +30,7 @@
     "cross-env": "^6.0.3",
     "escape-string-regexp": "^1.0.5",
     "karma": "^4.4.1",
+    "karma-cli": "^2.0.0",
     "lodash": "^4.17.15"
   }
 }
