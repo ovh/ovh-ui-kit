@@ -1,57 +1,69 @@
 // File
-@oui-file-margin: 0;
+@oui-file-margin: @oui-form-control-margin;
+@oui-file-outline-offset: -@oui-a11y-outline-width;
 
-@oui-file-placeholder-font-color: @oui-color-silver;
-
+// File - Selector
+@oui-file-placeholder-font-color: @p-800-text;
 @oui-file-ellipsis-size-spacing: rem-calc(5);
+@oui-file-button-spacing: rem-calc(4);
+@oui-file-decorator-width: @oui-form-control-height;
 
-@oui-file-input-font-weight: @oui-font-regular;
-@oui-file-input-font-color_disabled: @oui-form-control-font-color_disabled;
-@oui-file-input-font-color_error: @oui-form-control-font-color_error;
-@oui-file-input-border-color_hover: @oui-form-control-border-color_hover;
-@oui-file-input-border-color_focus: @oui-form-control-border-color_focus;
-@oui-file-input-border-color_disabled: @oui-form-control-border-color_disabled;
-@oui-file-input-border-color_error: @oui-form-control-border-color_error;
-@oui-file-input-background-color_focus: @oui-form-control-background-color_focus;
-@oui-file-input-background-color_disabled: @oui-form-control-background-color_disabled;
-@oui-file-input-background-color_error: @oui-form-control-background-color_error;
+// File - Drop Area
+@oui-file-droparea-width: rem-calc(150);
+@oui-file-droparea-line-height: rem-calc(20);
+@oui-file-droparea-padding: rem-calc(16);
+@oui-file-droparea-font-color: @p-800-text;
+@oui-file-droparea-font-color_hover: @p-800-text;
+@oui-file-droparea-font-weight: @oui-font-bold;
+@oui-file-droparea-border-color: @p-200;
+@oui-file-droparea-border-color_hover: @p-500;
+@oui-file-droparea-border-radius: @base-border-radius-large;
+@oui-file-droparea-border-width: 2px;
+@oui-file-droparea-background-color: @p-000;
+@oui-file-droparea-background-color_hover: @p-100;
+@oui-file-droparea-icon-color: @p-500;
+@oui-file-droparea-icon-outline-width: 2px;
+@oui-file-droparea-icon-outline-color: @oui-file-droparea-icon-color;
+@oui-file-droparea-icon-padding: rem-calc(2);
+@oui-file-droparea-icon-size: rem-calc(24);
+@oui-file-droparea-icon-spacing: rem-calc(8);
 
-@oui-file-button-spacing: rem-calc(10);
+// File - Attachments
+@oui-file-heading-line-height: rem-calc(20);
+@oui-file-heading-margin: rem-calc(4) 0;
+@oui-file-heading-padding: 0 rem-calc(4);
+@oui-file-heading-font-color: @p-700;
+@oui-file-heading-font-size: rem-calc(12);
 
-@oui-file-icon-width: rem-calc(40);
-@oui-file-icon-color: @oui-color-sapphire;
-@oui-file-icon-color_error: @oui-color-error-dark;
-@oui-file-icon-font-size: rem-calc(12);
+@oui-file-preview-size: rem-calc(30);
+@oui-file-preview-icon-size: rem-calc(16);
+@oui-file-preview-icon-color: @g-300;
+@oui-file-preview-background-color: @p-000;
 
-@oui-file-droparea-height: rem-calc(80);
-@oui-file-droparea-font-color: @oui-color-sapphire;
-@oui-file-droparea-font-color_hover: @oui-color-silver;
-@oui-file-droparea-font-color_disabled: @oui-color-silver;
-@oui-file-droparea-border: dashed 1px @oui-color-pacific;
-@oui-file-droparea-border_hover: dashed 1px @oui-color-silver;
-@oui-file-droparea-border_disabled: dashed 1px @oui-color-silver;
-@oui-file-droparea-background-color: @oui-color-polar;
-@oui-file-droparea-background-color_hover: @oui-color-alabaster;
-@oui-file-droparea-background-color_disabled: @oui-color-alabaster;
+@oui-file-attachments-max-height: none;
+@oui-file-attachments-box-shadow: none;
 
-@oui-file-heading-margin: rem-calc(15) 0 rem-calc(5);
-@oui-file-heading-font-color: @oui-color-sapphire;
-@oui-file-heading-font-size: rem-calc(14);
-
-@oui-file-preview-size: rem-calc(78);
-@oui-file-preview-icon-size: rem-calc(20);
-
-@oui-file-attachment-height: rem-calc(40);
-@oui-file-attachment-max-height: rem-calc(230);
-@oui-file-attachment-line-height: rem-calc(20);
-@oui-file-attachment-padding: rem-calc(10) rem-calc(40) rem-calc(10) rem-calc(20);
-@oui-file-attachment-font-color: @oui-color-sapphire;
-@oui-file-attachment-font-color_disabled: @oui-color-silver;
+@oui-file-attachment-height: rem-calc(32);
+@oui-file-attachment-line-height: rem-calc(16);
+@oui-file-attachment-padding: rem-calc(7) rem-calc(8);
+@oui-file-attachment-spacing: rem-calc(4);
+@oui-file-attachment-font-color: @p-800-text;
 @oui-file-attachment-font-color_error: @oui-color-error-dark;
-@oui-file-attachment-font-size: rem-calc(14);
-@oui-file-attachment-border: solid 1px @oui-color-silver;
-@oui-file-attachment-border_error: solid 1px @oui-color-error-medium;
-@oui-file-attachment-background: @p-000;
-@oui-file-attachment-background_error: @oui-color-error-fade;
-@oui-file-attachment-box-shadow: @base-box-shadow-primary;
-@oui-file-attachment-outline-offset: -@oui-a11y-outline-width;
+@oui-file-attachment-font-size: rem-calc(12);
+@oui-file-attachment-border-color: @oui-form-control-border-color_focus;
+@oui-file-attachment-border-color_error: @oui-form-control-border-color_error;
+@oui-file-attachment-border-radius: @base-border-radius-large;
+@oui-file-attachment-border-width: 1px;
+@oui-file-attachment-background: @oui-form-control-background-color_focus;
+@oui-file-attachment-background_error: @oui-form-control-background-color_error;
+
+@oui-file-attachment-icon-color: @oui-form-control-icon-color;
+@oui-file-attachment-icon-color_error: @oui-form-control-icon-color_error;
+@oui-file-attachment-icon-outline-offset: -@oui-a11y-outline-width;
+@oui-file-attachment-icon-size: rem-calc(16);
+@oui-file-attachment-icon-width: rem-calc(30);
+
+@oui-file-attachment-decorator-width: rem-calc(30);
+@oui-file-attachment-decorator-color: @oui-form-control-icon-color;
+@oui-file-attachment-decorator-size: rem-calc(24);
+@oui-file-attachment-decorator-spacing: -(rem-calc(8));
