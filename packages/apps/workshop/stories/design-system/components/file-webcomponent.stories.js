@@ -1,9 +1,9 @@
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Button from '@ovh-ux/ui-kit.button';
 import Field from '@ovh-ux/ui-kit.field';
 import File from '@ovh-ux/ui-kit.file';
+import FormActions from '@ovh-ux/ui-kit.form-actions';
 
 import readme from '@ovh-ux/ui-kit.file/README.md';
 import { compileTemplate } from '../../../src/utils';
@@ -15,11 +15,11 @@ angular.module(moduleName, [
 
   // For examples
   Field,
-  Button,
+  FormActions,
 ]);
 
 export default {
-  title: 'Legacy/Components/File/WebComponent',
+  title: 'Design System/Components/File/WebComponent',
 
   parameters: {
     notes: readme,
@@ -29,12 +29,11 @@ export default {
   },
 };
 
-export const SimpleFileSelector = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-file
       disabled="$ctrl.disabled"
-      placeholder="Select a file..."
       model="$ctrl.model">
     </oui-file>`,
     {
@@ -44,40 +43,6 @@ export const SimpleFileSelector = forModule(moduleName).createElement(
     },
   ),
 );
-
-SimpleFileSelector.story = {
-  name: 'Simple file selector ',
-};
-
-export const FileRestriction = forModule(moduleName).createElement(
-  () => compileTemplate(
-    `
-    <form novalidate name="fileForm">
-      <oui-field label="Upload file" help-text="image/jpeg, image/png, image/gif (max size 150 KB)">
-        <oui-file name="fileUpload"
-          accept="image/jpeg,image/png,image/gif"
-          disabled="$ctrl.disabled"
-          maxsize="150000"
-          model="$ctrl.model"
-          required>
-        </oui-file>
-      </oui-field>
-      <p><strong>fileForm.$valid value:</strong> {{fileForm.$valid | json}}</p>
-      <p><strong>fileForm.$submitted value:</strong> {{fileForm.$submitted | json}}</p>
-      <p><strong>fileForm["fileUpload"].$error value:</strong> {{fileForm["fileUpload"].$error | json}}</p>
-      <oui-button type="submit">Submit</oui-button>
-    </form>`,
-    {
-      $ctrl: {
-        disabled: boolean('Disabled state', false),
-      },
-    },
-  ),
-);
-
-FileRestriction.story = {
-  name: 'File restriction ',
-};
 
 export const MultipleFiles = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -167,8 +132,28 @@ export const DragDropWithPreview = forModule(moduleName).createElement(
 
 DragDropWithPreview.story = {
   name: 'Drag & Drop with preview',
-
-  parameters: {
-    notes: 'Preview works only with `image/*` files.',
-  },
 };
+
+export const Validation = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <form novalidate name="form">
+      <oui-field label="Upload file" help-text="image/jpeg, image/png, image/gif (max size 150 KB)">
+        <oui-file name="fileUpload"
+          accept="image/jpeg,image/png,image/gif"
+          disabled="$ctrl.disabled"
+          maxsize="150000"
+          model="$ctrl.model"
+          required>
+        </oui-file>
+      </oui-field>
+
+      <oui-form-actions></oui-form-actions>
+    </form>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    },
+  ),
+);
