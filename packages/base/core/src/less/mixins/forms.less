@@ -116,7 +116,12 @@
   }
 
   .control-readonly() {
-    &:read-only {
+    /*
+     * Use attribute selector instead of :read-only
+     * to avoid applying styles on elements
+     * that are not read-only (like a button)
+     */
+    &[readonly] {
       #oui > .control-color(
         @font-color: @oui-form-control-font-color_readonly,
         @border-color: @oui-form-control-border-color_readonly,
