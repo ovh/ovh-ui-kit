@@ -179,6 +179,7 @@ export default class {
 
     addDefaultParameter(this, 'id', `ouiFile${this.$scope.$id}`);
     addDefaultParameter(this, 'name', `ouiFile${this.$scope.$id}`);
+    addDefaultParameter(this, 'placeholder', this.translations.filePlaceholder);
 
     this.selectorId = `${this.id}Selector`;
     this.dropareaId = `${this.id}Droparea`;
