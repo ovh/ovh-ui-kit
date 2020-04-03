@@ -13,6 +13,7 @@ export default class {
 
   toggleVisibility() {
     this.isVisible = !this.isVisible;
+    this.$element.find('input')[0].focus();
   }
 
   updateValidity(key, isValid) {
@@ -35,6 +36,7 @@ export default class {
 
     this.errors = {};
     this.isVisible = false;
+    this.isConfirm = angular.isDefined(this.$attrs.confirm);
   }
 
   $postLink() {
@@ -44,7 +46,7 @@ export default class {
         .removeAttr('name')
         .addClass('oui-password');
 
-      if ('confirm' in this.$attrs) {
+      if (this.isConfirm) {
         this.$scope.$watch(
           () => this.confirm === this.model,
           (value) => this.updateValidity('confirm', value),
