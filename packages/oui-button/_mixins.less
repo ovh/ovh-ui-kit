@@ -183,21 +183,18 @@
     padding-left: @padding;
 
     .@{icon-selector} {
+      margin-right: @oui-button-icon-padding-right;
       position: absolute;
       right: 0;
       top: 1px;
       bottom: 1px;
-      width: ~"calc(@{icon-size} * 2.5)";
-      height: auto;
-      margin: auto;
+      color: inherit;
       text-align: center;
       vertical-align: middle;
-      cursor: pointer;
       pointer-events: none;
+      cursor: pointer;
 
       &::before {
-        display: inline-block;
-        margin-right: @padding * 1.5;
         color: @oui-color-sapphire;
         font-size: @icon-size;
       }
