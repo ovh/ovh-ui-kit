@@ -1,3 +1,13 @@
+<a name="2.41.0"></a>
+# [2.41.0](https://github.com/ovh/ovh-ui-kit/compare/v2.40.0...v2.41.0) (2020-04-07)
+
+
+### Features
+
+* **oui-datagrid:** add tooltip on parameters ([#600](https://github.com/ovh/ovh-ui-kit/issues/600)) ([9d3849c](https://github.com/ovh/ovh-ui-kit/commit/9d3849c))
+
+
+
 <a name="2.40.0"></a>
 # [2.40.0](https://github.com/ovh-ux/ovh-ui-kit/compare/v2.39.0...v2.40.0) (2020-02-07)
 

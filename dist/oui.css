@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.40.0") format("woff2"), url("./icons/icons.woff?v=2.40.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.41.0") format("woff2"), url("./icons/icons.woff?v=2.41.0") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -1462,15 +1462,15 @@ dl dd,
   display: block;
   content: "\f107";
 }
-.oui-icon.oui-icon-arrow-down::before {
+.oui-icon.oui-icon-arrow-down_concept::before {
   display: block;
   content: "\f108";
 }
-.oui-icon.oui-icon-arrow-down_concept::before {
+.oui-icon.oui-icon-arrow-down_extra-thin::before {
   display: block;
   content: "\f109";
 }
-.oui-icon.oui-icon-arrow-down_extra-thin::before {
+.oui-icon.oui-icon-arrow-down::before {
   display: block;
   content: "\f10a";
 }
@@ -1494,11 +1494,11 @@ dl dd,
   display: block;
   content: "\f10f";
 }
-.oui-icon.oui-icon-arrow-up::before {
+.oui-icon.oui-icon-arrow-up_extra-thin::before {
   display: block;
   content: "\f110";
 }
-.oui-icon.oui-icon-arrow-up_extra-thin::before {
+.oui-icon.oui-icon-arrow-up::before {
   display: block;
   content: "\f111";
 }
@@ -1510,15 +1510,15 @@ dl dd,
   display: block;
   content: "\f113";
 }
-.oui-icon.oui-icon-bell::before {
+.oui-icon.oui-icon-bell_concept::before {
   display: block;
   content: "\f114";
 }
-.oui-icon.oui-icon-bell_concept::before {
+.oui-icon.oui-icon-bell_extra-thin::before {
   display: block;
   content: "\f115";
 }
-.oui-icon.oui-icon-bell_extra-thin::before {
+.oui-icon.oui-icon-bell::before {
   display: block;
   content: "\f116";
 }
@@ -1590,11 +1590,11 @@ dl dd,
   display: block;
   content: "\f127";
 }
-.oui-icon.oui-icon-check-circle_line::before {
+.oui-icon.oui-icon-check_line::before {
   display: block;
   content: "\f128";
 }
-.oui-icon.oui-icon-check_line::before {
+.oui-icon.oui-icon-check-circle_line::before {
   display: block;
   content: "\f129";
 }
@@ -1614,55 +1614,55 @@ dl dd,
   display: block;
   content: "\f12d";
 }
-.oui-icon.oui-icon-chevron-down::before {
+.oui-icon.oui-icon-chevron-down_extra-thin::before {
   display: block;
   content: "\f12e";
 }
-.oui-icon.oui-icon-chevron-down_extra-thin::before {
+.oui-icon.oui-icon-chevron-down_line::before {
   display: block;
   content: "\f12f";
 }
-.oui-icon.oui-icon-chevron-down_line::before {
+.oui-icon.oui-icon-chevron-down::before {
   display: block;
   content: "\f130";
 }
-.oui-icon.oui-icon-chevron-left::before {
+.oui-icon.oui-icon-chevron-left_extra-thin::before {
   display: block;
   content: "\f131";
 }
-.oui-icon.oui-icon-chevron-left_extra-thin::before {
+.oui-icon.oui-icon-chevron-left_line::before {
   display: block;
   content: "\f132";
 }
-.oui-icon.oui-icon-chevron-left_line::before {
+.oui-icon.oui-icon-chevron-left::before {
   display: block;
   content: "\f133";
 }
-.oui-icon.oui-icon-chevron-right::before {
+.oui-icon.oui-icon-chevron-right_extra-thin::before {
   display: block;
   content: "\f134";
 }
-.oui-icon.oui-icon-chevron-right_extra-thin::before {
+.oui-icon.oui-icon-chevron-right_line::before {
   display: block;
   content: "\f135";
 }
-.oui-icon.oui-icon-chevron-right_line::before {
+.oui-icon.oui-icon-chevron-right::before {
   display: block;
   content: "\f136";
 }
-.oui-icon.oui-icon-chevron-up-down_extra-thin::before {
+.oui-icon.oui-icon-chevron-up_extra-thin::before {
   display: block;
   content: "\f137";
 }
-.oui-icon.oui-icon-chevron-up::before {
+.oui-icon.oui-icon-chevron-up_line::before {
   display: block;
   content: "\f138";
 }
-.oui-icon.oui-icon-chevron-up_extra-thin::before {
+.oui-icon.oui-icon-chevron-up-down_extra-thin::before {
   display: block;
   content: "\f139";
 }
-.oui-icon.oui-icon-chevron-up_line::before {
+.oui-icon.oui-icon-chevron-up::before {
   display: block;
   content: "\f13a";
 }
@@ -1670,59 +1670,59 @@ dl dd,
   display: block;
   content: "\f13b";
 }
-.oui-icon.oui-icon-clock-available_concept::before {
+.oui-icon.oui-icon-clock_concept::before {
   display: block;
   content: "\f13c";
 }
-.oui-icon.oui-icon-clock-wait::before {
+.oui-icon.oui-icon-clock-available_concept::before {
   display: block;
   content: "\f13d";
 }
-.oui-icon.oui-icon-clock_concept::before {
+.oui-icon.oui-icon-clock-wait::before {
   display: block;
   content: "\f13e";
 }
-.oui-icon.oui-icon-close::before {
+.oui-icon.oui-icon-close_extra-thin::before {
   display: block;
   content: "\f13f";
 }
-.oui-icon.oui-icon-close_extra-thin::before {
+.oui-icon.oui-icon-close_thin::before {
   display: block;
   content: "\f140";
 }
-.oui-icon.oui-icon-close_thin::before {
+.oui-icon.oui-icon-close::before {
   display: block;
   content: "\f141";
 }
-.oui-icon.oui-icon-cloud-data-sharing_concept::before {
+.oui-icon.oui-icon-cloud_concept::before {
   display: block;
   content: "\f142";
 }
-.oui-icon.oui-icon-cloud-edge-computing_concept::before {
+.oui-icon.oui-icon-cloud-data-sharing_concept::before {
   display: block;
   content: "\f143";
 }
-.oui-icon.oui-icon-cloud-eye_concept::before {
+.oui-icon.oui-icon-cloud-edge-computing_concept::before {
   display: block;
   content: "\f144";
 }
-.oui-icon.oui-icon-cloud-hybrid_concept::before {
+.oui-icon.oui-icon-cloud-eye_concept::before {
   display: block;
   content: "\f145";
 }
-.oui-icon.oui-icon-cloud-infinity_concept::before {
+.oui-icon.oui-icon-cloud-hybrid_concept::before {
   display: block;
   content: "\f146";
 }
-.oui-icon.oui-icon-cloud-padlock_concept::before {
+.oui-icon.oui-icon-cloud-infinity_concept::before {
   display: block;
   content: "\f147";
 }
-.oui-icon.oui-icon-cloud-server_concept::before {
+.oui-icon.oui-icon-cloud-padlock_concept::before {
   display: block;
   content: "\f148";
 }
-.oui-icon.oui-icon-cloud_concept::before {
+.oui-icon.oui-icon-cloud-server_concept::before {
   display: block;
   content: "\f149";
 }
@@ -1730,11 +1730,11 @@ dl dd,
   display: block;
   content: "\f14a";
 }
-.oui-icon.oui-icon-component-square_concept::before {
+.oui-icon.oui-icon-component_concept::before {
   display: block;
   content: "\f14b";
 }
-.oui-icon.oui-icon-component_concept::before {
+.oui-icon.oui-icon-component-square_concept::before {
   display: block;
   content: "\f14c";
 }
@@ -1742,19 +1742,19 @@ dl dd,
   display: block;
   content: "\f14d";
 }
-.oui-icon.oui-icon-computer-curve_concept::before {
+.oui-icon.oui-icon-computer_concept::before {
   display: block;
   content: "\f14e";
 }
-.oui-icon.oui-icon-computer-floppy_concept::before {
+.oui-icon.oui-icon-computer-curve_concept::before {
   display: block;
   content: "\f14f";
 }
-.oui-icon.oui-icon-computer-folder_concept::before {
+.oui-icon.oui-icon-computer-floppy_concept::before {
   display: block;
   content: "\f150";
 }
-.oui-icon.oui-icon-computer-laptop-cloud_concept::before {
+.oui-icon.oui-icon-computer-folder_concept::before {
   display: block;
   content: "\f151";
 }
@@ -1762,11 +1762,11 @@ dl dd,
   display: block;
   content: "\f152";
 }
-.oui-icon.oui-icon-computer-v-r-ops_concept::before {
+.oui-icon.oui-icon-computer-laptop-cloud_concept::before {
   display: block;
   content: "\f153";
 }
-.oui-icon.oui-icon-computer_concept::before {
+.oui-icon.oui-icon-computer-v-r-ops_concept::before {
   display: block;
   content: "\f154";
 }
@@ -1794,11 +1794,11 @@ dl dd,
   display: block;
   content: "\f15a";
 }
-.oui-icon.oui-icon-credit-card-clock_concept::before {
+.oui-icon.oui-icon-credit-card_concept::before {
   display: block;
   content: "\f15b";
 }
-.oui-icon.oui-icon-credit-card_concept::before {
+.oui-icon.oui-icon-credit-card-clock_concept::before {
   display: block;
   content: "\f15c";
 }
@@ -1806,15 +1806,15 @@ dl dd,
   display: block;
   content: "\f15d";
 }
-.oui-icon.oui-icon-database-cold-archive_concept::before {
+.oui-icon.oui-icon-database_concept::before {
   display: block;
   content: "\f15e";
 }
-.oui-icon.oui-icon-database-sql_concept::before {
+.oui-icon.oui-icon-database-cold-archive_concept::before {
   display: block;
   content: "\f15f";
 }
-.oui-icon.oui-icon-database_concept::before {
+.oui-icon.oui-icon-database-sql_concept::before {
   display: block;
   content: "\f160";
 }
@@ -1850,35 +1850,35 @@ dl dd,
   display: block;
   content: "\f168";
 }
-.oui-icon.oui-icon-ellypsis-vertical_extra-thin::before {
+.oui-icon.oui-icon-ellypsis_extra-thin::before {
   display: block;
   content: "\f169";
 }
-.oui-icon.oui-icon-ellypsis_extra-thin::before {
+.oui-icon.oui-icon-ellypsis-vertical_extra-thin::before {
   display: block;
   content: "\f16a";
 }
-.oui-icon.oui-icon-envelop-letter_concept::before {
+.oui-icon.oui-icon-envelop_concept::before {
   display: block;
   content: "\f16b";
 }
-.oui-icon.oui-icon-envelop_concept::before {
+.oui-icon.oui-icon-envelop-letter_concept::before {
   display: block;
   content: "\f16c";
 }
-.oui-icon.oui-icon-error::before {
+.oui-icon.oui-icon-error_circle::before {
   display: block;
   content: "\f16d";
 }
-.oui-icon.oui-icon-error_circle::before {
+.oui-icon.oui-icon-error::before {
   display: block;
   content: "\f16e";
 }
-.oui-icon.oui-icon-ethernet-add_concept::before {
+.oui-icon.oui-icon-ethernet_concept::before {
   display: block;
   content: "\f16f";
 }
-.oui-icon.oui-icon-ethernet_concept::before {
+.oui-icon.oui-icon-ethernet-add_concept::before {
   display: block;
   content: "\f170";
 }
@@ -1894,23 +1894,23 @@ dl dd,
   display: block;
   content: "\f173";
 }
-.oui-icon.oui-icon-eye-blocked::before {
+.oui-icon.oui-icon-eye_concept::before {
   display: block;
   content: "\f174";
 }
-.oui-icon.oui-icon-eye-closed_extra-thin::before {
+.oui-icon.oui-icon-eye-blocked::before {
   display: block;
   content: "\f175";
 }
-.oui-icon.oui-icon-eye-open_extra-thin::before {
+.oui-icon.oui-icon-eye-closed_extra-thin::before {
   display: block;
   content: "\f176";
 }
-.oui-icon.oui-icon-eye::before {
+.oui-icon.oui-icon-eye-open_extra-thin::before {
   display: block;
   content: "\f177";
 }
-.oui-icon.oui-icon-eye_concept::before {
+.oui-icon.oui-icon-eye::before {
   display: block;
   content: "\f178";
 }
@@ -1922,11 +1922,11 @@ dl dd,
   display: block;
   content: "\f17a";
 }
-.oui-icon.oui-icon-filter::before {
+.oui-icon.oui-icon-filter_full::before {
   display: block;
   content: "\f17b";
 }
-.oui-icon.oui-icon-filter_full::before {
+.oui-icon.oui-icon-filter::before {
   display: block;
   content: "\f17c";
 }
@@ -1934,47 +1934,47 @@ dl dd,
   display: block;
   content: "\f17d";
 }
-.oui-icon.oui-icon-floppy-clock_concept::before {
+.oui-icon.oui-icon-floppy_concept::before {
   display: block;
   content: "\f17e";
 }
-.oui-icon.oui-icon-floppy-reload_concept::before {
+.oui-icon.oui-icon-floppy-clock_concept::before {
   display: block;
   content: "\f17f";
 }
-.oui-icon.oui-icon-floppy_concept::before {
+.oui-icon.oui-icon-floppy-reload_concept::before {
   display: block;
   content: "\f180";
 }
-.oui-icon.oui-icon-folder-ftp_concept::before {
+.oui-icon.oui-icon-folder_concept::before {
   display: block;
   content: "\f181";
 }
-.oui-icon.oui-icon-folder_concept::before {
+.oui-icon.oui-icon-folder_extra-thin::before {
   display: block;
   content: "\f182";
 }
-.oui-icon.oui-icon-folder_extra-thin::before {
+.oui-icon.oui-icon-folder-ftp_concept::before {
   display: block;
   content: "\f183";
 }
-.oui-icon.oui-icon-gear-arrow_concept::before {
+.oui-icon.oui-icon-gear_2_concept::before {
   display: block;
   content: "\f184";
 }
-.oui-icon.oui-icon-gear::before {
+.oui-icon.oui-icon-gear_concept::before {
   display: block;
   content: "\f185";
 }
-.oui-icon.oui-icon-gear_2_concept::before {
+.oui-icon.oui-icon-gear_line::before {
   display: block;
   content: "\f186";
 }
-.oui-icon.oui-icon-gear_concept::before {
+.oui-icon.oui-icon-gear-arrow_concept::before {
   display: block;
   content: "\f187";
 }
-.oui-icon.oui-icon-gear_line::before {
+.oui-icon.oui-icon-gear::before {
   display: block;
   content: "\f188";
 }
@@ -2014,11 +2014,11 @@ dl dd,
   display: block;
   content: "\f191";
 }
-.oui-icon.oui-icon-help::before {
+.oui-icon.oui-icon-help_circle::before {
   display: block;
   content: "\f192";
 }
-.oui-icon.oui-icon-help_circle::before {
+.oui-icon.oui-icon-help::before {
   display: block;
   content: "\f193";
 }
@@ -2102,15 +2102,15 @@ dl dd,
   display: block;
   content: "\f1a7";
 }
-.oui-icon.oui-icon-magnifying-glass-check_concept::before {
+.oui-icon.oui-icon-magnifying-glass_concept::before {
   display: block;
   content: "\f1a8";
 }
-.oui-icon.oui-icon-magnifying-glass-person_concept::before {
+.oui-icon.oui-icon-magnifying-glass-check_concept::before {
   display: block;
   content: "\f1a9";
 }
-.oui-icon.oui-icon-magnifying-glass_concept::before {
+.oui-icon.oui-icon-magnifying-glass-person_concept::before {
   display: block;
   content: "\f1aa";
 }
@@ -2190,27 +2190,27 @@ dl dd,
   display: block;
   content: "\f1bd";
 }
-.oui-icon.oui-icon-page-certificate_concept::before {
+.oui-icon.oui-icon-page_concept::before {
   display: block;
   content: "\f1be";
 }
-.oui-icon.oui-icon-page-info_concept::before {
+.oui-icon.oui-icon-page_line::before {
   display: block;
   content: "\f1bf";
 }
-.oui-icon.oui-icon-page-question_concept::before {
+.oui-icon.oui-icon-page-certificate_concept::before {
   display: block;
   content: "\f1c0";
 }
-.oui-icon.oui-icon-page-script_concept::before {
+.oui-icon.oui-icon-page-info_concept::before {
   display: block;
   content: "\f1c1";
 }
-.oui-icon.oui-icon-page_concept::before {
+.oui-icon.oui-icon-page-question_concept::before {
   display: block;
   content: "\f1c2";
 }
-.oui-icon.oui-icon-page_line::before {
+.oui-icon.oui-icon-page-script_concept::before {
   display: block;
   content: "\f1c3";
 }
@@ -2242,43 +2242,43 @@ dl dd,
   display: block;
   content: "\f1ca";
 }
-.oui-icon.oui-icon-person-happy_concept::before {
+.oui-icon.oui-icon-person_concept::before {
   display: block;
   content: "\f1cb";
 }
-.oui-icon.oui-icon-person_concept::before {
+.oui-icon.oui-icon-person-happy_concept::before {
   display: block;
   content: "\f1cc";
 }
-.oui-icon.oui-icon-phone-dots_concept::before {
+.oui-icon.oui-icon-phone_concept::before {
   display: block;
   content: "\f1cd";
 }
-.oui-icon.oui-icon-phone-filter_concept::before {
+.oui-icon.oui-icon-phone_extra-thin::before {
   display: block;
   content: "\f1ce";
 }
-.oui-icon.oui-icon-phone-fobidden_concept::before {
+.oui-icon.oui-icon-phone-dots_concept::before {
   display: block;
   content: "\f1cf";
 }
-.oui-icon.oui-icon-phone-forward_concept::before {
+.oui-icon.oui-icon-phone-filter_concept::before {
   display: block;
   content: "\f1d0";
 }
-.oui-icon.oui-icon-phone-mobile_concept::before {
+.oui-icon.oui-icon-phone-fobidden_concept::before {
   display: block;
   content: "\f1d1";
 }
-.oui-icon.oui-icon-phone-tablet_concept::before {
+.oui-icon.oui-icon-phone-forward_concept::before {
   display: block;
   content: "\f1d2";
 }
-.oui-icon.oui-icon-phone_concept::before {
+.oui-icon.oui-icon-phone-mobile_concept::before {
   display: block;
   content: "\f1d3";
 }
-.oui-icon.oui-icon-phone_extra-thin::before {
+.oui-icon.oui-icon-phone-tablet_concept::before {
   display: block;
   content: "\f1d4";
 }
@@ -2342,11 +2342,11 @@ dl dd,
   display: block;
   content: "\f1e3";
 }
-.oui-icon.oui-icon-replication-application_concept::before {
+.oui-icon.oui-icon-replication_concept::before {
   display: block;
   content: "\f1e4";
 }
-.oui-icon.oui-icon-replication_concept::before {
+.oui-icon.oui-icon-replication-application_concept::before {
   display: block;
   content: "\f1e5";
 }
@@ -2362,11 +2362,11 @@ dl dd,
   display: block;
   content: "\f1e8";
 }
-.oui-icon.oui-icon-search::before {
+.oui-icon.oui-icon-search_extra-thin::before {
   display: block;
   content: "\f1e9";
 }
-.oui-icon.oui-icon-search_extra-thin::before {
+.oui-icon.oui-icon-search::before {
   display: block;
   content: "\f1ea";
 }
@@ -2426,11 +2426,11 @@ dl dd,
   display: block;
   content: "\f1f8";
 }
-.oui-icon.oui-icon-success::before {
+.oui-icon.oui-icon-success_circle::before {
   display: block;
   content: "\f1f9";
 }
-.oui-icon.oui-icon-success_circle::before {
+.oui-icon.oui-icon-success::before {
   display: block;
   content: "\f1fa";
 }
@@ -2486,11 +2486,11 @@ dl dd,
   display: block;
   content: "\f207";
 }
-.oui-icon.oui-icon-triangle-up-down_extra-thin::before {
+.oui-icon.oui-icon-triangle-up_extra-thin::before {
   display: block;
   content: "\f208";
 }
-.oui-icon.oui-icon-triangle-up_extra-thin::before {
+.oui-icon.oui-icon-triangle-up-down_extra-thin::before {
   display: block;
   content: "\f209";
 }
@@ -2506,27 +2506,27 @@ dl dd,
   display: block;
   content: "\f20c";
 }
-.oui-icon.oui-icon-user-forbid_concept::before {
+.oui-icon.oui-icon-user_concept::before {
   display: block;
   content: "\f20d";
 }
-.oui-icon.oui-icon-user-support_concept::before {
+.oui-icon.oui-icon-user_extra-thin::before {
   display: block;
   content: "\f20e";
 }
-.oui-icon.oui-icon-user::before {
+.oui-icon.oui-icon-user_line::before {
   display: block;
   content: "\f20f";
 }
-.oui-icon.oui-icon-user_concept::before {
+.oui-icon.oui-icon-user-forbid_concept::before {
   display: block;
   content: "\f210";
 }
-.oui-icon.oui-icon-user_extra-thin::before {
+.oui-icon.oui-icon-user-support_concept::before {
   display: block;
   content: "\f211";
 }
-.oui-icon.oui-icon-user_line::before {
+.oui-icon.oui-icon-user::before {
   display: block;
   content: "\f212";
 }
@@ -2554,11 +2554,11 @@ dl dd,
   display: block;
   content: "\f218";
 }
-.oui-icon.oui-icon-world-add_concept::before {
+.oui-icon.oui-icon-world_concept::before {
   display: block;
   content: "\f219";
 }
-.oui-icon.oui-icon-world_concept::before {
+.oui-icon.oui-icon-world-add_concept::before {
   display: block;
   content: "\f21a";
 }
@@ -5927,7 +5927,6 @@ oui-message {
   min-width: 6.25rem;
   max-width: 18.75rem;
   box-sizing: border-box;
-  margin: 0.625rem 0;
   padding: 0.625rem 1.25rem;
   position: absolute;
   top: auto;
@@ -5947,13 +5946,34 @@ oui-message {
   user-select: none;
   pointer-events: none;
 }
+.oui-tooltip[x-placement^='top'] {
+  margin-bottom: 0.625rem;
+}
+.oui-tooltip[x-placement^='right'] {
+  margin-left: 0.625rem;
+}
+.oui-tooltip[x-placement^='bottom'] {
+  margin-top: 0.625rem;
+}
+.oui-tooltip[x-placement^='left'] {
+  margin-right: 0.625rem;
+}
 .oui-tooltip__trigger:focus + .oui-tooltip,
 .oui-tooltip__trigger:hover + .oui-tooltip {
   opacity: 1;
   z-index: 1000;
 }
-.oui-tooltip__trigger.oui-link + .oui-tooltip {
-  margin: 0.313rem 0;
+.oui-tooltip__trigger.oui-link + .oui-tooltip[x-placement^='top'] {
+  margin-bottom: 0.313rem;
+}
+.oui-tooltip__trigger.oui-link + .oui-tooltip[x-placement^='right'] {
+  margin-left: 0.313rem;
+}
+.oui-tooltip__trigger.oui-link + .oui-tooltip[x-placement^='bottom'] {
+  margin-top: 0.313rem;
+}
+.oui-tooltip__trigger.oui-link + .oui-tooltip[x-placement^='left'] {
+  margin-right: 0.313rem;
 }
 oui-navbar-link,
 oui-navbar-menu,
@@ -6637,7 +6657,7 @@ oui-navbar-main {
   padding-right: 3.125rem;
 }
 .oui-navbar-menu .oui-navbar-link[aria-haspopup="true"]::after {
-  content: "\f134";
+  content: "\f136";
   font-family: 'Oui Icons';
   font-size: 0.625rem;
   color: #122844;
@@ -6912,7 +6932,7 @@ oui-navbar-main {
   padding-right: 3.125rem;
 }
 .oui-sidebar-link[aria-haspopup="true"]::after {
-  content: "\f12e";
+  content: "\f130";
   font-family: 'Oui Icons';
   font-size: 0.625rem;
   color: #7d8da1;
@@ -6923,7 +6943,7 @@ oui-navbar-main {
   transform: translateY(-50%);
 }
 .oui-sidebar-link[aria-expanded="true"]::after {
-  content: "\f138";
+  content: "\f13a";
 }
 a.oui-sidebar-link:hover,
 button.oui-sidebar-link:hover,
@@ -7098,7 +7118,7 @@ button.oui-sidebar-link:focus {
     background-color: #e0f6fd;
   }
   .oui-sidebar-menu_fixed .oui-sidebar-link[aria-haspopup="true"]::after {
-    content: "\f134";
+    content: "\f136";
     color: #122844;
   }
   [aria-expanded="true"] ~ .oui-sidebar-menu_fixed {
@@ -7435,7 +7455,7 @@ ol {
 .oui-list_steps .oui-list__item_checked .oui-list__header::before,
 .oui-list_steps .oui-list__item_complete .oui-list__header::before {
   position: absolute;
-  content: "\f1f9";
+  content: "\f1fa";
   border: 1px solid #dedede;
   background-color: #f6f6f4;
   color: #f6f6f4;
@@ -8864,7 +8884,7 @@ a.oui-progress-tracker__status:hover .oui-progress-tracker__label {
   color: #b04020;
 }
 .oui-progress-tracker__step_error .oui-progress-tracker__status::before {
-  content: "\f140";
+  content: "\f13f";
   font-family: 'Oui Icons';
   font-size: 1.125rem;
   color: #fff;
@@ -9124,7 +9144,7 @@ oui-criteria-adder {
   line-height: 1;
   font-weight: 700;
   text-align: center;
-  content: "\f208";
+  content: "\f209";
   color: #59697d;
   opacity: 0.5;
 }
@@ -9151,7 +9171,7 @@ oui-criteria-adder {
   font-weight: 700;
   text-align: center;
   color: #113f6d;
-  content: "\f209";
+  content: "\f208";
 }
 .oui-datagrid__header_sortable-asc:hover::after {
   transition-duration: 0.2s;
@@ -9309,7 +9329,7 @@ oui-criteria-adder {
   color: #113f6d;
 }
 .oui-datagrid-parameters__body {
-  padding: 0 1.125rem 0.25rem 1.125rem;
+  padding: 0.25rem 1.125rem;
 }
 .oui-datagrid-parameters__headers {
   display: flex;
@@ -12519,7 +12539,7 @@ oui-step-form {
   display: none;
 }
 .oui-stepper__container_complete .oui-stepper__header::before {
-  content: "\f1f9";
+  content: "\f1fa";
   font-family: 'Oui Icons';
   font-weight: 400;
   color: #fff;
@@ -12731,7 +12751,7 @@ oui-popover-content {
 }
 .oui-popover__help-button::before,
 .oui-popover-button::before {
-  content: "\f193";
+  content: "\f192";
   font-family: 'Oui Icons';
   font-size: inherit;
 }
