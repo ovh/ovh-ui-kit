@@ -7,7 +7,6 @@
     @font-weight: @earth-font-weight,
     @font-size: @earth-font-size,
     @font-color: @earth-color,
-    @text-align: @earth-text-align,
   ) {
     line-height: @line-height;
     letter-spacing: @letter-spacing;
@@ -15,7 +14,6 @@
     font-weight: @font-weight;
     font-size: @font-size;
     color: @font-color;
-    text-align: @text-align;
   }
 
   .text-ellipsis() {
@@ -33,14 +31,11 @@
   }
 
   .heading(@index) {
-    #oui > .base-font(
-      @line-height: extract(@oui-heading-line-heights, @index),
-      @letter-spacing: extract(@oui-heading-letter-spacings, @index),
-      @font-weight: extract(@oui-heading-font-weights, @index),
-      @font-size: extract(@oui-heading-font-sizes, @index),
-      @font-color: extract(@oui-heading-colors, @index),
-    );
-
+    line-height: extract(@oui-heading-line-heights, @index);
+    letter-spacing: extract(@oui-heading-letter-spacings, @index);
+    font-weight: extract(@oui-heading-font-weights, @index);
+    font-size: extract(@oui-heading-font-sizes, @index);
+    color: extract(@oui-heading-colors, @index);
     margin: extract(@oui-heading-margins, @index);
   }
 
