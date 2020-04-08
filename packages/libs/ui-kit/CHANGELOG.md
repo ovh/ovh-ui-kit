@@ -1,3 +1,18 @@
+## [4.0.7](https://github.com/ovh/ovh-ui-kit/compare/v4.0.6...v4.0.7) (2020-04-08)
+
+
+### Bug Fixes
+
+* **input:** fix input width in input-group ([4683cf6](https://github.com/ovh/ovh-ui-kit/commit/4683cf6bab54bf6d16c51a682df39e6fec187655))
+* **typography:** update fonts tokens ([3b35847](https://github.com/ovh/ovh-ui-kit/commit/3b35847761ba9931455c29d080d23da867a9e025))
+
+
+### Features
+
+* **datagrid:** add tooltip on parameters ([#602](https://github.com/ovh/ovh-ui-kit/issues/602)) ([236fe50](https://github.com/ovh/ovh-ui-kit/commit/236fe501fe53731ebf5fae8fc71e87f122a590dc))
+
+
+
 ## [4.0.6](https://github.com/ovh/ovh-ui-kit/compare/v4.0.5...v4.0.6) (2020-03-31)
 
 
