@@ -3,6 +3,7 @@ import Criteria from '@ovh-ux/ui-kit.criteria';
 import Pagination from '@ovh-ux/ui-kit.pagination';
 import Skeleton from '@ovh-ux/ui-kit.skeleton';
 import Spinner from '@ovh-ux/ui-kit.spinner';
+import Tooltip from '@ovh-ux/ui-kit.tooltip';
 
 import Datagrid from './js/datagrid.directive';
 import DatagridCell from './js/cell/cell.component';
@@ -24,6 +25,7 @@ angular
     Pagination,
     Skeleton,
     Spinner,
+    Tooltip,
   ])
   .service('ouiDatagridColumnBuilder', DatagridColumnBuilder)
   .directive('ouiDatagrid', Datagrid)
