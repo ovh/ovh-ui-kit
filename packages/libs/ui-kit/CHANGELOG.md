@@ -1,3 +1,12 @@
+## [4.0.8](https://github.com/ovh/ovh-ui-kit/compare/v4.0.7...v4.0.8) (2020-04-09)
+
+
+### Bug Fixes
+
+* **navbar:** fix notifications shrink issue ([d1aedf9](https://github.com/ovh/ovh-ui-kit/commit/d1aedf9dac91574905a384423b261c6af53b139b))
+
+
+
 ## [4.0.7](https://github.com/ovh/ovh-ui-kit/compare/v4.0.6...v4.0.7) (2020-04-08)
 
 
