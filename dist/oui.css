@@ -1361,7 +1361,7 @@ dl dd,
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("./icons/icons.woff2?v=2.41.0") format("woff2"), url("./icons/icons.woff?v=2.41.0") format("woff");
+  src: url("./icons/icons.woff2?v=2.41.1") format("woff2"), url("./icons/icons.woff?v=2.41.1") format("woff");
 }
 #oui {
   /* Deprecated: Support only for old use */
@@ -6809,6 +6809,7 @@ oui-navbar-main {
 .oui-navbar-notification {
   align-items: flex-start;
   display: flex;
+  flex: none;
   padding: 0.438rem 0.625rem;
 }
 .oui-navbar-notification__action {

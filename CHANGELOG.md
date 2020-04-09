@@ -1,3 +1,13 @@
+<a name="2.41.1"></a>
+## [2.41.1](https://github.com/ovh/ovh-ui-kit/compare/v2.41.0...v2.41.1) (2020-04-09)
+
+
+### Bug Fixes
+
+* **oui-navbar:** fix notifications shrink issue ([c440974](https://github.com/ovh/ovh-ui-kit/commit/c440974))
+
+
+
 <a name="2.41.0"></a>
 # [2.41.0](https://github.com/ovh/ovh-ui-kit/compare/v2.40.0...v2.41.0) (2020-04-07)
 
