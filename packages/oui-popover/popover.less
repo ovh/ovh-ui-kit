@@ -169,10 +169,6 @@
     right: 10px;
     top: 10px;
 
-    &::before {
-      display: block;
-    }
-
     &:hover,
     &:focus,
     &:active {
@@ -187,13 +183,15 @@
 
   &__help-button, /* Deprecated: Support only for old use */
   &-button {
-    width: 1em;
-    height: 1em;
-    margin: 0 0 0 rem-calc(10);
+    #oui > .icon-normalize();
+    #oui > .icon(
+      @icon-size: inherit,
+      @icon-color: @oui-color-sapphire,
+      @spacing: rem-calc(10),
+      @alignment-offset: -0.2em
+    );
+
     padding: 0;
-    color: @oui-color-sapphire;
-    font: normal normal normal @oui-icon-size/1 "Oui Icons", sans-serif;
-    font-size: inherit;
     vertical-align: middle;
     border: none;
     background: none;
@@ -201,8 +199,6 @@
 
     &::before {
       content: @oui-icon-index-help_circle;
-      font-family: @oui-global-base-font-family-icon;
-      font-size: inherit;
     }
 
     &:focus {

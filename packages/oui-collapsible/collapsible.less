@@ -10,14 +10,11 @@
 
   &__toggle-icon {
     color: inherit;
-
-    &::before {
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: rem-calc(13);
-      right: rem-calc(14);
-      height: rem-calc(10);
-      line-height: rem-calc(10);
-    }
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: rem-calc(13);
+    right: rem-calc(14);
+    height: rem-calc(10);
+    line-height: rem-calc(10);
   }
 
   &__loading-icon {
@@ -57,7 +54,7 @@
     &:hover { background-color: @oui-collapsible-inactive-color; }
   }
 
-  &__header[aria-expanded="true"] &__toggle-icon::before { transform: rotate(-180deg); }
+  &__header[aria-expanded="true"] &__toggle-icon { transform: translateY(-50%) rotate(-180deg); }
 
   &__header[aria-expanded="false"] ~ &__wrapper {
     /* Priority over ngStyle's height */

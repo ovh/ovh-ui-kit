@@ -83,6 +83,8 @@
     }
 
     .@{icon-selector} {
+      display: flex;
+      align-items: center;
       position: absolute;
       top: 1px;
       right: 1px;
@@ -96,12 +98,11 @@
       vertical-align: middle;
       cursor: pointer;
       pointer-events: none;
+      color: @oui-color-shuttle;
+      font-size: @icon-size;
 
       &::before {
-        display: inline-block;
         margin-right: @padding * 1.5;
-        color: @oui-color-shuttle;
-        font-size: @icon-size;
       }
     }
   }
