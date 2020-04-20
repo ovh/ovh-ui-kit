@@ -16,8 +16,8 @@
   &__item {
     position: static;
 
-    & > a,
-    & > span,
+    > a,
+    > span,
     .oui-button_dropdown {
       background-color: transparent;
       display: block;
@@ -35,7 +35,7 @@
       }
     }
 
-    & > a {
+    > a {
       text-decoration: none;
 
       &:focus {
@@ -67,26 +67,27 @@
         vertical-align: baseline;
         top: unset;
         transform: none;
-
-        &::before {
-          margin-right: 0;
-        }
+        margin-right: 0;
       }
     }
 
-    &_disabled > span {
-      color: @oui-header-tabs-item-font-color_disabled;
+    // stylelint-disable no-descending-specificity
+    &_disabled {
+      > a,
+      > span,
+      .oui-button_dropdown {
+        color: @oui-header-tabs-item-font-color_disabled !important;
+      }
     }
 
-    // stylelint-disable no-descending-specificity
     &_active .oui-button_dropdown {
       border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
     // stylelint-enable no-descending-specificity
 
     :not(.oui-header-tabs__dropdown-container) & {
-      & > a,
-      & > span {
+      > a,
+      > span {
         padding: @oui-header-tabs-item-padding;
         white-space: nowrap;
       }
@@ -97,15 +98,15 @@
     }
 
     .oui-header-tabs__dropdown-container & {
-      & > a,
-      & > span {
+      > a,
+      > span {
         padding: @oui-header-tabs-dropdown-item-padding;
       }
 
       &_active > a,
-      & > a:hover,
-      & > a:focus,
-      & > a:active {
+      > a:hover,
+      > a:focus,
+      > a:active {
         border-bottom: none;
         background-color: @oui-header-tabs-dropdown-item-background-color_active;
       }
@@ -143,6 +144,7 @@
   }
 
   .oui-dropdown_active {
+    // stylelint-disable-next-line no-descending-specificity
     .oui-button_dropdown {
       border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }

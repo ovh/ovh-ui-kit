@@ -1,221 +1,32 @@
-cloud-sidebar {
-  background-color: @background-color;
-  color: @text-color;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  box-shadow: 0 6px 6px rgba(0, 14, 156, 0.2);
 
-  @media screen and (max-width: @oui-responsive-breakpoint-tablet) {
-    position: absolute;
-    width: @oui-navbar-menu-width;
-    z-index: 2;
+/* stylelint-disable no-descending-specificity */
+.oui-sidebar {
+  overflow: auto;
 
-    &.cloud-sidebar_open {
-      left: 0;
-    }
-
-    &.cloud-sidebar_hidden {
-      left: -@oui-navbar-menu-width;
-    }
+  &_fixed {
+    box-shadow: 0 6px 6px rgba(0, 14, 156, 0.2);
   }
 
-  .oui-navbar-menu__header {
-    align-items: center;
-    background-color: #fff;
-    border-bottom: none;
-    z-index: 2;
-
-    .oui-navbar-menu__title {
-      color: @primary-color;
-      font-weight: @oui-font-semibold;
-      font-size: 18px;
-    }
-
-    .oui-navbar-menu__back {
-      background-color: @info-bg-color;
-      border: 1px solid @info-bg-color;
-      border-radius: 3px;
-
-      .oui-button {
-        padding: 16px;
-      }
-
-      + div {
-        margin-left: 10px;
-      }
-    }
-  }
-
-  .oui-navbar-backdrop_active {
-    z-index: 1;
-  }
-
-  .sidebar-toggler {
-    z-index: 3;
-    top: 0;
-    left: 0;
-    height: 44px;
-    width: 50px;
-  }
-
-  oui-clipboard {
-    margin-bottom: 0;
-
-    .oui-clipboard__control {
-      border-bottom: 0;
-      padding: 0;
-      padding-left: 1.5rem;
-      font-weight: 400;
-      color: @primary-color;
-      background-color: transparent;
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-        background-color: transparent;
-      }
-    }
-
-    .oui-clipboard__button {
-      left: 0;
-      right: inherit;
-      padding: 0;
-      min-width: auto;
-      color: @primary-color;
-
-      &:hover {
-        min-width: auto;
-      }
-    }
-
-    .oui-tooltip {
-      bottom: 0;
-      margin: 0;
-    }
-  }
-
-  .project-list-toggle {
-    padding: 6px 13px;
-
-    > .oui-icon {
-      vertical-align: initial;
-    }
-  }
-
-  .project-list {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: @primary-color;
-    color: @light-color;
-    top: 0;
-    transform: translateX(0);
-    z-index: 1021;
-    overflow: auto;
-    will-change: transform;
-    transition: transform ease-in-out 500ms;
-
-    @media screen and (max-width: @oui-responsive-breakpoint-tablet) {
-      left: 0;
-    }
-
-    .oui-input-group {
-      .oui-icon {
-        right: 0;
-        z-index: 1;
-        color: @primary-color;
-      }
-    }
-
-    oui-clipboard {
-      .oui-clipboard__control,
-      .oui-clipboard__button {
-        color: #fff;
-
-        .oui-icon {
-          color: @light-color;
-        }
-      }
-    }
-
-    &.ng-enter,
-    &.ng-leave.ng-leave-active {
-      transform: translateX(-100%);
-    }
-
-    &.ng-leave,
-    &.ng-enter.ng-enter-active {
-      transform: translateX(0);
-    }
-
-    .btn {
-      border: 2px solid @light-color;
-      border-radius: 4px;
-
-      &.btn-primary.rounded-circle {
-        background-color: @light-color;
-        color: @primary-color;
-      }
-    }
-
-    ul {
-      li {
-        padding: 4px;
-        border-bottom: 1px solid @light-color;
-      }
-    }
-  }
-
+  // Level 1+
   .oui-sidebar-menu {
     background-color: @background-color;
-    color: @text-color;
-    padding: 0 8pt;
-    width: 100%;
     box-sizing: inherit;
-
-    .oui-sidebar-list {
-      overflow: initial;
-    }
-
-    .oui-sidebar-link_active,
-    .oui-sidebar-link[aria-expanded='true'] {
-      background-color: #fff;
-    }
-
-    .oui-status_alpha {
-      background-color: #fbff47;
-      padding: 0 8px;
-      line-height: 15px;
-      font-size: 12px;
-      font-weight: 600;
-      border-radius: 8px;
-      color: #00185e;
-    }
-
-    .oui-status_beta {
-      padding: 0 8px;
-      line-height: 15px;
-      font-size: 12px;
-      font-weight: 600;
-      background-color: #47ff78;
-      border-radius: 8px;
-      color: #000e9c;
-    }
-  }
-
-  .oui-sidebar-list__item {
-    border: 0;
-    margin-bottom: 0;
+    color: @text-color;
+    overflow: auto;
+    width: 100%;
 
     .oui-sidebar-link {
-      font-weight: bold;
+      min-height: inherit;
       display: flex;
+      align-items: center;
+      padding: 8pt 0 4pt;
+      text-indent: 0;
+      font-weight: bold;
 
       &::after {
-        color: @light-color;
-        top: 55%;
-        right: 0;
+        color: inherit;
+        top: 50%;
+        right: 8pt;
       }
 
       &,
@@ -224,8 +35,6 @@ cloud-sidebar {
       &:active {
         border-bottom: 2px solid rgb(230, 245, 252);
         color: @text-color;
-        padding: 8pt 0 4pt;
-        min-height: inherit;
       }
 
       &[aria-expanded='true'] {
@@ -233,80 +42,24 @@ cloud-sidebar {
           padding: 4pt 0;
         }
       }
-
-      .item-icon i {
-        margin-right: 0.2rem;
-        font-size: 1rem !important;
-        color: @text-color;
-        line-height: inherit !important;
-        opacity: 1 !important;
-      }
     }
 
-    .oui-sidebar-menu {
-      background-color: @background-color;
-      padding: 0;
+    .oui-sidebar-list {
+      max-height: none;
+      overflow: initial;
+      padding: 0 8pt;
+    }
 
-      /* stylelint-disable-next-line no-descending-specificity */
-      .oui-sidebar-list {
-        max-height: none;
-
-        .oui-sidebar-list__item {
-          margin-bottom: 0;
-
-          .oui-sidebar-link {
-            &,
-            &:hover,
-            &:focus,
-            &:active {
-              border-bottom: 0;
-              border-left: 3px solid transparent;
-              color: rgb(17, 63, 109);
-              padding: 6pt;
-              text-indent: 0;
-              font-weight: 600;
-              font-weight: normal;
-            }
-
-            &:hover,
-            &:focus {
-              text-decoration: underline;
-            }
-
-            &.oui-sidebar-link_active {
-              border-left-color: @primary-color;
-              font-weight: bold;
-              color: @primary-color;
-              background-color: rgb(230, 245, 252);
-            }
-          }
-
-          + .oui-sidebar-list__item {
-            border-top: 0;
-          }
-        }
-      }
-
-      &_fixed {
-        opacity: 1;
-        position: relative;
-        transform: none;
-        box-shadow: none;
-      }
-
-      .oui-sidebar-menu__header {
-        display: none;
-      }
+    .oui-sidebar-list__item {
+      border: 0;
+      margin-bottom: 0;
     }
   }
-}
 
-#sidebar-menu .oui-sidebar-menu {
-  width: 100%;
-  overflow: auto;
-
-  .sidebar-menu-orphan-item {
-    border-top: #89d7f8 2px solid;
+  // Level 2+
+  .oui-sidebar-menu .oui-sidebar-menu {
+    background-color: @background-color;
+    color: @text-color;
 
     .oui-sidebar-link {
       &,
@@ -315,10 +68,7 @@ cloud-sidebar {
       &:active {
         border-bottom: 0;
         border-left: 3px solid transparent;
-        color: rgb(17, 63, 109);
         padding: 6px;
-        text-indent: 0;
-        font-weight: 600;
         font-weight: normal;
       }
 
@@ -327,5 +77,90 @@ cloud-sidebar {
         text-decoration: underline;
       }
     }
+
+    .oui-sidebar-link_active,
+    .oui-sidebar-link[aria-expanded='true'] {
+      background-color: #fff;
+    }
+
+    .oui-sidebar-list__item {
+      border: 0;
+      margin-bottom: 0;
+    }
+
+    .oui-sidebar-list {
+      padding: 0;
+
+      .oui-sidebar-list__item {
+        margin-bottom: 0;
+
+        .oui-sidebar-link {
+          &,
+          &:hover,
+          &:focus,
+          &:active {
+            border-bottom: 0;
+            border-left: 3px solid transparent;
+            color: rgb(17, 63, 109);
+            padding: 6pt;
+            text-indent: 0;
+            font-weight: 400;
+          }
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+
+          &.oui-sidebar-link_active {
+            border-left-color: @primary-color;
+            font-weight: bold;
+            color: @primary-color;
+            background-color: rgb(230, 245, 252);
+          }
+        }
+
+        + .oui-sidebar-list__item {
+          border-top: 0;
+        }
+      }
+    }
+
+    &_fixed {
+      opacity: 1;
+      position: relative;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .oui-sidebar-menu__header {
+      display: none;
+    }
+  }
+
+  // Level 3+
+  .oui-sidebar-menu .oui-sidebar-menu .oui-sidebar-menu {
+    padding-left: 8pt;
+  }
+
+  .oui-status_alpha {
+    background-color: #fbff47;
+    padding: 0 8px;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    color: #00185e;
+  }
+
+  .oui-status_beta {
+    padding: 0 8px;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #47ff78;
+    border-radius: 8px;
+    color: #000e9c;
   }
 }
+/* stylelint-enable no-descending-specificity */

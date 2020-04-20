@@ -5,19 +5,28 @@
     padding: 0;
   }
 
-  .oui-header-tabs__container {
-    margin: 0;
-    border-bottom: 1px solid rgb(230, 245, 252);
-  }
-
-  :not(.oui-header-tabs__dropdown-container) > .oui-header-tabs__item_active > a {
-    border-color: @primary-color;
-  }
-
   h1 {
     font-size: 36px;
     line-height: 45px;
     color: @text-color;
     font-weight: 400;
+  }
+}
+
+.oui-header-tabs {
+  .oui-header-tabs__container {
+    margin: 0;
+    border-bottom: 1px solid rgb(230, 245, 252);
+  }
+
+  .oui-header-tabs__item > a,
+  .oui-header-tabs__item > span,
+  .oui-header-tabs__item .oui-button_dropdown {
+    color: @primary-color;
+    font-weight: 600;
+  }
+
+  :not(.oui-header-tabs__dropdown-container) > .oui-header-tabs__item_active > a {
+    border-color: @primary-color;
   }
 }

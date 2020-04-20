@@ -1,9 +1,19 @@
-.oui-button {
+.oui-button:not(.oui-header-tabs__dropdown) {
   transition: all ease-in 200ms;
   border-radius: @border-radius-default;
 
+  .oui-icon {
+    color: inherit;
+  }
+
+  &.oui-button_icon-left,
+  &.oui-button_icon-right {
+    padding: 0.438rem 1.25rem;
+  }
+
   &.oui-button_primary {
-    border: 2px solid @primary-color;
+    padding-top: rem-calc(8);
+    padding-bottom: rem-calc(8);
     background-color: @primary-color;
     color: #fff;
 
@@ -14,22 +24,17 @@
     }
   }
 
+  &.oui-button_dropdown,
   &.oui-button_secondary {
     border: 2px solid @primary-color;
-
-    &,
-    .oui-icon {
-      color: @primary-color;
-    }
+    padding-top: rem-calc(6);
+    padding-bottom: rem-calc(6);
+    color: @primary-color;
 
     &:hover,
     &:focus {
       background-color: rgb(239, 249, 253);
     }
-  }
-
-  &.oui-button_icon-left {
-    padding: 0.438rem 1.25rem;
   }
 
   &.oui-button_icon-left .oui-icon,
@@ -64,7 +69,7 @@
     &:hover,
     &:focus {
       background-color: #c4cfdb;
-      border: 0;
+      border-color: #c4cfdb;
       color: #113f6d;
 
       & .oui-icon::before {
