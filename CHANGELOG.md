@@ -1,3 +1,18 @@
+<a name="2.42.0"></a>
+# [2.42.0](https://github.com/ovh/ovh-ui-kit/compare/v2.41.1...v2.42.0) (2020-04-21)
+
+
+### Bug Fixes
+
+* **icons:** fix vertical alignment ([9f5865f](https://github.com/ovh/ovh-ui-kit/commit/9f5865f))
+
+
+### Features
+
+* add ovhcloud light theme files ([a65a26d](https://github.com/ovh/ovh-ui-kit/commit/a65a26d))
+
+
+
 <a name="2.41.1"></a>
 ## [2.41.1](https://github.com/ovh/ovh-ui-kit/compare/v2.41.0...v2.41.1) (2020-04-09)
 
