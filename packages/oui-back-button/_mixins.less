@@ -4,13 +4,13 @@
   .back-button-base(
     @margin-bottom: @oui-back-button-margin-bottom
   ) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: @margin-bottom;
 
-    .oui-button_icon-alone {
-      top: rem-calc(7);
-    }
-
     .oui-back-button_title {
+      margin: 0;
       display: inline;
     }
   }

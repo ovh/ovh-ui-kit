@@ -174,12 +174,14 @@
     justify-content: center;
     margin-bottom: 0.625rem;
     margin-left: auto;
-    padding: 0.9rem 0rem;
+    padding: 0.9rem 0;
 
-    .oui-icon::before {
+    /* stylelint-disable no-descending-specificity */
+    .oui-icon {
       width: auto;
       height: auto;
       font-size: 1.25rem;
     }
+    /* stylelint-enable no-descending-specificity */
   }
 }

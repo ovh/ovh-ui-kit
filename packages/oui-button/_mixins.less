@@ -47,6 +47,8 @@
     &:active:disabled {
       box-shadow: none;
     }
+
+    .oui-icon { vertical-align: baseline; }
   }
 
   .button-filled(
@@ -183,24 +185,17 @@
     padding-left: @padding;
 
     .@{icon-selector} {
+      margin-right: @oui-button-icon-padding-right;
       position: absolute;
       right: 0;
-      top: 1px;
-      bottom: 1px;
-      width: ~"calc(@{icon-size} * 2.5)";
-      height: auto;
-      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
+      color: @oui-color-sapphire;
+      font-size: @icon-size;
       text-align: center;
       vertical-align: middle;
-      cursor: pointer;
       pointer-events: none;
-
-      &::before {
-        display: inline-block;
-        margin-right: @padding * 1.5;
-        color: @oui-color-sapphire;
-        font-size: @icon-size;
-      }
+      cursor: pointer;
     }
 
     &:active,
@@ -210,9 +205,7 @@
       box-shadow: none;
 
       .@{icon-selector} {
-        &::before {
-          color: @icon-color_active;
-        }
+        color: @icon-color_active;
       }
     }
 
@@ -220,9 +213,7 @@
       color: @color_disabled;
 
       .@{icon-selector} {
-        &::before {
-          color: @icon-color_disabled;
-        }
+        color: @icon-color_disabled;
       }
     }
 
@@ -237,9 +228,7 @@
     color: @oui-button-error-text-color;
 
     .oui-icon {
-      &::before {
-        color: @oui-button-error-text-color;
-      }
+      color: @oui-button-error-text-color;
     }
   }
 
@@ -252,36 +241,16 @@
   ) {
     .@{icon-selector} {
       color: @icon-color;
-    }
-
-    .@{icon-selector}::before {
-      width: @icon-size;
-      height: @icon-size;
       font-size: @icon-size;
-      line-height: @icon-size;
     }
 
-    .@{icon-selector}_circle::before {
-      background: @icon-color;
-      width: @icon-size_large;
-      height: @icon-size_large;
-      font-size: @icon-size;
-      line-height: @icon-size_large;
-    }
-
-    &:disabled .@{icon-selector}::before {
+    &:disabled .@{icon-selector} {
       color: @icon-color_disabled;
-    }
-
-    &:disabled .@{icon-selector}_circle::before {
-      background: @icon-color_disabled;
-      color: #fff;
     }
   }
 
   .button-icon-alone(
     @icon-selector: oui-icon,
-    @background: @oui-button-icon-alone-background,
     @background: @oui-button-icon-alone-background,
     @min-width: @oui-button-icon-alone-min-width,
     @padding-left: @oui-button-icon-alone-padding-left,
@@ -293,21 +262,20 @@
   ) {
     background: @background;
     min-width: @min-width;
+    padding: 0;
     padding-left: @padding-left;
     padding-right: @padding-right;
     margin-right: @margin-right;
 
     .@{icon-selector} {
-      color: @icon-font-color;
-    }
-
-    .@{icon-selector}:hover,
-    .@{icon-selector}:focus {
-      color: @icon-font-color_hover;
-    }
-
-    .@{icon-selector}::before {
       font-size: @icon-font-size;
+      color: @icon-font-color;
+      vertical-align: middle;
+
+      &:hover,
+      &:focus {
+        color: @icon-font-color_hover;
+      }
     }
   }
 
@@ -321,10 +289,6 @@
     .@{icon-selector} {
       margin-left: @icon-margin-left;
     }
-
-    .@{icon-selector}_circle::before {
-      line-height: 2;
-    }
   }
 
   .button-icon-left(
@@ -336,11 +300,6 @@
 
     .@{icon-selector} {
       margin-right: @icon-margin-right;
-    }
-
-    .@{icon-selector}_circle::before {
-      line-height: 2;
-      text-indent: -2px;
     }
   }
 
@@ -386,11 +345,10 @@
     max-width: none;
     width: 100%;
 
-    .@{icon-selector}::before {
+    .@{icon-selector} {
       position: absolute;
-      top: 0;
-      bottom: 0;
-      margin: auto;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
@@ -398,7 +356,7 @@
     @icon-selector: oui-icon,
     @padding-right: @oui-button-icon-padding-right
   ) {
-    .@{icon-selector}::before:not(.oui-icon-external_link) {
+    .@{icon-selector}:not(.oui-icon-external_link) {
       right: @padding-right;
     }
   }
@@ -407,7 +365,7 @@
     @icon-selector: oui-icon,
     @padding-left: @oui-button-icon-padding-left
   ) {
-    .@{icon-selector}::before {
+    .@{icon-selector} {
       left: @padding-left;
     }
   }

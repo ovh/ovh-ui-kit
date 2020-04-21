@@ -8,17 +8,28 @@
   .icon(
     @icon-size: @oui-icon-size,
     @icon-color: @oui-icon-color,
-    @spacing: @oui-icon-spacing
+    @spacing: @oui-icon-spacing,
+    @vertical-align: @oui-icon-vertical-align,
+    @alignment-offset: @oui-icon-alignment-offset
   ) {
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    box-sizing: content-box;
     display: inline-block;
-    margin: @spacing;
+    vertical-align: @vertical-align;
+    margin: 0 @spacing;
     padding: 0;
     color: @icon-color;
     font-family: @oui-global-base-font-family-icon;
     font-size: @icon-size;
-    line-height: 1;
-    font-weight: normal;
     font-style: normal;
+    font-weight: normal;
+
+    &::before {
+      display: block;
+      margin-top: @alignment-offset; /* Fix the webfont alignment */
+    }
   }
 
   .for(@array)   when (default()) { .for-impl_(length(@array)); }
@@ -34,52 +45,8 @@
       .define(@index);
 
       &.oui-icon-@{index}::before {
-        display: block;
         content: @@content;
       }
-    }
-  }
-
-  .icon-circle(
-    @icon-size: @oui-icon-size;
-  ) {
-    &::before {
-      width: @icon-size;
-      height: @icon-size;
-      border-radius: 50%;
-      background: #333;
-      color: #fff;
-      font-size: ~"calc(@{icon-size} / 2)";
-      line-height: 2;
-      text-align: center;
-    }
-  }
-
-  .icon-bicolor(
-    @icon-char-color: @oui-icon-char-color;
-  ) {
-    position: relative;
-    z-index: 1;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 90%;
-      height: 90%;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      background: @icon-char-color;
-      border-radius: 50%;
-      z-index: -1;
-    }
-
-    &.oui-icon-warning_circle::after {
-      width: 25%;
-      height: 75%;
     }
   }
 }
