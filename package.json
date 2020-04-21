@@ -17,7 +17,7 @@
     "lint": "yarn lint:css",
     "commit": "npm-scripts-config commit",
     "commitmsg": "npm-scripts-config commitmsg",
-    "version": "yarn build && git add dist packages/oui-icons/_icons.less packages/oui/_version.less && npm-scripts-config version",
+    "version": "yarn build && git add . && npm-scripts-config version",
     "postversion": "git push && git push --tags",
     "preview-changelog": "npm-scripts-config preview-changelog"
   },
