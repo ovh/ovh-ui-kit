@@ -3,6 +3,10 @@
   "version": "2.42.0",
   "description": "A LESS stylekit for the OVH brand.",
   "license": "BSD-3-Clause",
+  "files": [
+    "dist",
+    "packages"
+  ],
   "scripts": {
     "build:version": "cross-conf-env sed -e 's/${tmpl-npm-version}/npm_package_version/' packages/oui/_version.tmpl.less > packages/oui/_version.less",
     "build:less:oui": "lessc --remcalc packages/oui/_dist.less dist/oui.css",
