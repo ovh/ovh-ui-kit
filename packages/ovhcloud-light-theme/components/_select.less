@@ -31,3 +31,31 @@
     box-shadow: none !important;
   }
 }
+
+.oui-select {
+  .oui-icon {
+    #oui > .animate();
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 2px !important;
+  }
+
+  & &__input:hover ~ .oui-icon,
+  & &__input:focus ~ .oui-icon {
+    box-shadow: none;
+    background-color: rgb(239, 249, 253);
+
+    &::before {
+      color: rgb(28, 49, 147);
+    }
+  }
+
+  & &__input:disabled ~ .oui-icon {
+    background-color: #eff9fd;
+
+    &::before {
+      color: #b3b3b3;
+    }
+  }
+}
