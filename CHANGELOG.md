@@ -1,3 +1,13 @@
+<a name="2.42.2"></a>
+## [2.42.2](https://github.com/ovh/ovh-ui-kit/compare/v2.42.1...v2.42.2) (2020-04-22)
+
+
+### Bug Fixes
+
+* update ovhcloud light theme ([5c4f97e](https://github.com/ovh/ovh-ui-kit/commit/5c4f97e))
+
+
+
 <a name="2.42.1"></a>
 ## [2.42.1](https://github.com/ovh/ovh-ui-kit/compare/v2.42.0...v2.42.1) (2020-04-22)
 
