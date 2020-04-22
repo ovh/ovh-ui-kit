@@ -1,3 +1,8 @@
+<a name="2.42.1"></a>
+## [2.42.1](https://github.com/ovh/ovh-ui-kit/compare/v2.42.0...v2.42.1) (2020-04-22)
+
+
+
 <a name="2.42.0"></a>
 # [2.42.0](https://github.com/ovh/ovh-ui-kit/compare/v2.41.1...v2.42.0) (2020-04-21)
 
