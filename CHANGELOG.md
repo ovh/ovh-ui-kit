@@ -1,3 +1,13 @@
+<a name="2.42.3"></a>
+## [2.42.3](https://github.com/ovh/ovh-ui-kit/compare/v2.42.2...v2.42.3) (2020-04-22)
+
+
+### Bug Fixes
+
+* fix olt style issues ([a3eb6c5](https://github.com/ovh/ovh-ui-kit/commit/a3eb6c5))
+
+
+
 <a name="2.42.2"></a>
 ## [2.42.2](https://github.com/ovh/ovh-ui-kit/compare/v2.42.1...v2.42.2) (2020-04-22)
 
