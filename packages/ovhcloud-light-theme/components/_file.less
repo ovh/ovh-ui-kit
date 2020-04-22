@@ -3,3 +3,18 @@
     box-shadow: 0 0 6px fade(@primary-color, 20%);
   }
 }
+
+.oui-file-selector__button {
+  transition: all ease-in 200ms;
+  border-radius: @border-radius-default !important;
+  border: 2px solid @primary-color !important;
+  padding-top: rem-calc(6);
+  padding-bottom: rem-calc(6);
+  color: @primary-color;
+  margin-left: 4px !important;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(239, 249, 253);
+  }
+}
