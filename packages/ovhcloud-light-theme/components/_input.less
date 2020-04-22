@@ -2,17 +2,13 @@
 .oui-input {
   @border-color: rgb(137, 215, 248);
 
-  border: 0;
-  border-radius: 0;
-  border-bottom: 2px solid @border-color;
-  box-shadow: none;
+  border-radius: 0 !important;
+  border-width: 0 !important;
+  border-bottom-color: @border-color;
+  border-bottom-width: 2px !important;
+  border-bottom-style: solid;
+  box-shadow: none !important;
   transition: all ease-in 200ms;
-
-  // Numeric
-  &.oui-input_number {
-    border-radius: @border-radius-default;
-    border-bottom: 0;
-  }
 
   &:focus,
   &:hover {
@@ -25,32 +21,39 @@
     border-color: rgb(28, 49, 147);
     color: rgb(28, 49, 147);
   }
-}
 
-// Errors
-
-.oui-field_error .oui-input {
-  background-color: rgb(255, 210, 221);
-  border-color: rgb(193, 27, 27);
-  box-shadow: none !important;
+  // Errors
+  .oui-field_error & {
+    background-color: rgb(255, 210, 221);
+    border-color: rgb(193, 27, 27);
+    box-shadow: none !important;
+  }
 }
 
 // Group
+.oui-input-group:not(.oui-input-group_button):not(.oui-input-group_search) {
+  > .oui-button {
+    transition: all ease-in 200ms;
+    border-radius: @border-radius-default !important;
+    border: 2px solid @primary-color !important;
+    padding-top: rem-calc(6);
+    padding-bottom: rem-calc(6);
+    color: @primary-color;
 
-.oui-input-group {
-  .oui-button.oui-button_icon-only {
-    border: 0;
-    border-radius: @border-radius-default;
+    &:hover,
+    &:focus {
+      background-color: rgb(239, 249, 253);
+    }
   }
-}
 
-.oui-input-group_search {
-  .oui-input:first-child {
-    border-radius: 0;
-  }
-
-  .oui-button,
-  .oui-file-selector__button {
-    z-index: 1;
+  /* stylelint-disable-next-line no-descending-specificity */
+  > .oui-button,
+  > .oui-input,
+  > .oui-select {
+    + .oui-button,
+    + .oui-input,
+    + .oui-select {
+      margin-left: 8px !important;
+    }
   }
 }
