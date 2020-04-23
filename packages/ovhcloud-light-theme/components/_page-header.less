@@ -17,8 +17,22 @@
   .oui-header-tabs__item > a,
   .oui-header-tabs__item > span,
   .oui-header-tabs__item .oui-button_dropdown {
+    padding: 0.625rem 1.875rem;
     color: @primary-color;
     font-weight: 600;
+    background: transparent !important;
+
+    .oui-icon {
+      /* stylelint-disable-next-line no-descending-specificity */
+      &,
+      &::before {
+        color: inherit;
+      }
+    }
+  }
+
+  .oui-header-tabs__item .oui-button_dropdown {
+    border: none;
   }
 
   :not(.oui-header-tabs__dropdown-container) > .oui-header-tabs__item_active > a {
