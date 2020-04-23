@@ -1,3 +1,14 @@
+<a name="2.42.4"></a>
+## [2.42.4](https://github.com/ovh/ovh-ui-kit/compare/v2.42.3...v2.42.4) (2020-04-23)
+
+
+### Bug Fixes
+
+* fix clipboard button ([de0c072](https://github.com/ovh/ovh-ui-kit/commit/de0c072))
+* fix light theme ([e1c95db](https://github.com/ovh/ovh-ui-kit/commit/e1c95db))
+
+
+
 <a name="2.42.3"></a>
 ## [2.42.3](https://github.com/ovh/ovh-ui-kit/compare/v2.42.2...v2.42.3) (2020-04-22)
 
