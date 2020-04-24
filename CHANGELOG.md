@@ -1,3 +1,13 @@
+<a name="2.42.5"></a>
+## [2.42.5](https://github.com/ovh/ovh-ui-kit/compare/v2.42.4...v2.42.5) (2020-04-24)
+
+
+### Bug Fixes
+
+* fix icons alignment ([536eeb7](https://github.com/ovh/ovh-ui-kit/commit/536eeb7))
+
+
+
 <a name="2.42.4"></a>
 ## [2.42.4](https://github.com/ovh/ovh-ui-kit/compare/v2.42.3...v2.42.4) (2020-04-23)
 
