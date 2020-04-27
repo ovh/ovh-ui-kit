@@ -38,7 +38,7 @@
     "cpx": "^1.5.0",
     "cross-conf-env": "^1.1.2",
     "flatpickr": "^4.5.7",
-    "icon-font-generator": "^2.1.9",
+    "icon-font-generator": "https://github.com/AxelPeter/icon-font-generator/archive/v2.1.11.tar.gz",
     "less": "^3.8.1",
     "less-plugin-clean-css": "^1.5.1",
     "mkdirp": "^0.5.1",
