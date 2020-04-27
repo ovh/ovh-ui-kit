@@ -1,7 +1,7 @@
 @font-face {
     font-family: "oui-icons";
-    src: url("./oui-icons.woff2?eac4d2bf042b0a436b86053243035b2a") format("woff2"),
-url("./oui-icons.woff?eac4d2bf042b0a436b86053243035b2a") format("woff");
+    src: url("./oui-icons.woff2?c7e1a3b8ed13990eafe2ea419fdce8ba") format("woff2"),
+url("./oui-icons.woff?c7e1a3b8ed13990eafe2ea419fdce8ba") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
@@ -81,10 +81,10 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-cable-speed_concept:before {
     content: "\f116";
 }
-.oui-icon-calendar-pay-as-you-go_concept:before {
+.oui-icon-calendar_concept:before {
     content: "\f117";
 }
-.oui-icon-calendar_concept:before {
+.oui-icon-calendar-pay-as-you-go_concept:before {
     content: "\f118";
 }
 .oui-icon-camera_concept:before {
@@ -102,70 +102,70 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-chrono_concept:before {
     content: "\f11d";
 }
-.oui-icon-clock-available_concept:before {
+.oui-icon-clock_concept:before {
     content: "\f11e";
 }
-.oui-icon-clock_concept:before {
+.oui-icon-clock-available_concept:before {
     content: "\f11f";
 }
-.oui-icon-cloud-data-sharing_concept:before {
+.oui-icon-cloud_concept:before {
     content: "\f120";
 }
-.oui-icon-cloud-edge-computing_concept:before {
+.oui-icon-cloud-data-sharing_concept:before {
     content: "\f121";
 }
-.oui-icon-cloud-eye_concept:before {
+.oui-icon-cloud-edge-computing_concept:before {
     content: "\f122";
 }
-.oui-icon-cloud-hand_concept:before {
+.oui-icon-cloud-eye_concept:before {
     content: "\f123";
 }
-.oui-icon-cloud-hybrid_concept:before {
+.oui-icon-cloud-hand_concept:before {
     content: "\f124";
 }
-.oui-icon-cloud-infinity_concept:before {
+.oui-icon-cloud-hybrid_concept:before {
     content: "\f125";
 }
-.oui-icon-cloud-padlock_concept:before {
+.oui-icon-cloud-infinity_concept:before {
     content: "\f126";
 }
-.oui-icon-cloud-server_concept:before {
+.oui-icon-cloud-padlock_concept:before {
     content: "\f127";
 }
-.oui-icon-cloud_concept:before {
+.oui-icon-cloud-server_concept:before {
     content: "\f128";
 }
 .oui-icon-community_concept:before {
     content: "\f129";
 }
-.oui-icon-component-square_concept:before {
+.oui-icon-component_concept:before {
     content: "\f12a";
 }
-.oui-icon-component_concept:before {
+.oui-icon-component-square_concept:before {
     content: "\f12b";
 }
 .oui-icon-compute_concept:before {
     content: "\f12c";
 }
-.oui-icon-computer-curve_concept:before {
+.oui-icon-computer_concept:before {
     content: "\f12d";
 }
-.oui-icon-computer-floppy_concept:before {
+.oui-icon-computer-curve_concept:before {
     content: "\f12e";
 }
-.oui-icon-computer-folder_concept:before {
+.oui-icon-computer-floppy_concept:before {
     content: "\f12f";
 }
-.oui-icon-computer-laptop-cloud_concept:before {
+.oui-icon-computer-folder_concept:before {
     content: "\f130";
 }
 .oui-icon-computer-laptop_concept:before {
     content: "\f131";
 }
-.oui-icon-computer-v-r-ops_concept:before {
+.oui-icon-computer-laptop-cloud_concept:before {
     content: "\f132";
 }
-.oui-icon-computer_concept:before {
+.oui-icon-computer-v-r-ops_concept:before {
     content: "\f133";
 }
 .oui-icon-container_concept:before {
@@ -174,22 +174,22 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-counter_concept:before {
     content: "\f135";
 }
-.oui-icon-credit-card-clock_concept:before {
+.oui-icon-credit-card_concept:before {
     content: "\f136";
 }
-.oui-icon-credit-card_concept:before {
+.oui-icon-credit-card-clock_concept:before {
     content: "\f137";
 }
 .oui-icon-curve_concept:before {
     content: "\f138";
 }
-.oui-icon-database-cold-archive_concept:before {
+.oui-icon-database_concept:before {
     content: "\f139";
 }
-.oui-icon-database-sql_concept:before {
+.oui-icon-database-cold-archive_concept:before {
     content: "\f13a";
 }
-.oui-icon-database_concept:before {
+.oui-icon-database-sql_concept:before {
     content: "\f13b";
 }
 .oui-icon-datacenter_concept:before {
@@ -219,16 +219,16 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-dslam_concept:before {
     content: "\f144";
 }
-.oui-icon-envelop-letter_concept:before {
+.oui-icon-envelop_concept:before {
     content: "\f145";
 }
-.oui-icon-envelop_concept:before {
+.oui-icon-envelop-letter_concept:before {
     content: "\f146";
 }
-.oui-icon-ethernet-add_concept:before {
+.oui-icon-ethernet_concept:before {
     content: "\f147";
 }
-.oui-icon-ethernet_concept:before {
+.oui-icon-ethernet-add_concept:before {
     content: "\f148";
 }
 .oui-icon-expansion-arrows_concept:before {
@@ -243,28 +243,28 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-flask_concept:before {
     content: "\f14c";
 }
-.oui-icon-floppy-clock_concept:before {
+.oui-icon-floppy_concept:before {
     content: "\f14d";
 }
-.oui-icon-floppy-reload_concept:before {
+.oui-icon-floppy-clock_concept:before {
     content: "\f14e";
 }
-.oui-icon-floppy_concept:before {
+.oui-icon-floppy-reload_concept:before {
     content: "\f14f";
 }
-.oui-icon-folder-ftp_concept:before {
+.oui-icon-folder_concept:before {
     content: "\f150";
 }
-.oui-icon-folder_concept:before {
+.oui-icon-folder-ftp_concept:before {
     content: "\f151";
 }
-.oui-icon-gear-arrow_concept:before {
+.oui-icon-gear_concept:before {
     content: "\f152";
 }
-.oui-icon-gear-dollar_concept:before {
+.oui-icon-gear-arrow_concept:before {
     content: "\f153";
 }
-.oui-icon-gear_concept:before {
+.oui-icon-gear-dollar_concept:before {
     content: "\f154";
 }
 .oui-icon-geolocalisation-ovhcloud_concept:before {
@@ -342,13 +342,13 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-lines-symmetrical_concept:before {
     content: "\f16d";
 }
-.oui-icon-magnifying-glass-check_concept:before {
+.oui-icon-magnifying-glass_concept:before {
     content: "\f16e";
 }
-.oui-icon-magnifying-glass-person_concept:before {
+.oui-icon-magnifying-glass-check_concept:before {
     content: "\f16f";
 }
-.oui-icon-magnifying-glass_concept:before {
+.oui-icon-magnifying-glass-person_concept:before {
     content: "\f170";
 }
 .oui-icon-map-france_concept:before {
@@ -393,19 +393,19 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-padlock-transit_concept:before {
     content: "\f17e";
 }
-.oui-icon-page-certificate_concept:before {
+.oui-icon-page_concept:before {
     content: "\f17f";
 }
-.oui-icon-page-info_concept:before {
+.oui-icon-page-certificate_concept:before {
     content: "\f180";
 }
-.oui-icon-page-question_concept:before {
+.oui-icon-page-info_concept:before {
     content: "\f181";
 }
-.oui-icon-page-script_concept:before {
+.oui-icon-page-question_concept:before {
     content: "\f182";
 }
-.oui-icon-page_concept:before {
+.oui-icon-page-script_concept:before {
     content: "\f183";
 }
 .oui-icon-paperplane_concept:before {
@@ -417,25 +417,25 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-pen_concept:before {
     content: "\f186";
 }
-.oui-icon-person-happy_concept:before {
+.oui-icon-person_concept:before {
     content: "\f187";
 }
-.oui-icon-person_concept:before {
+.oui-icon-person-happy_concept:before {
     content: "\f188";
 }
-.oui-icon-phone-dots_concept:before {
+.oui-icon-phone_concept:before {
     content: "\f189";
 }
-.oui-icon-phone-filter_concept:before {
+.oui-icon-phone-dots_concept:before {
     content: "\f18a";
 }
-.oui-icon-phone-fobidden_concept:before {
+.oui-icon-phone-filter_concept:before {
     content: "\f18b";
 }
-.oui-icon-phone-forward_concept:before {
+.oui-icon-phone-fobidden_concept:before {
     content: "\f18c";
 }
-.oui-icon-phone_concept:before {
+.oui-icon-phone-forward_concept:before {
     content: "\f18d";
 }
 .oui-icon-pig_concept:before {
@@ -474,13 +474,13 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-scale-up_concept:before {
     content: "\f199";
 }
-.oui-icon-server-gear_concept:before {
+.oui-icon-server_concept:before {
     content: "\f19a";
 }
-.oui-icon-server-managed_concept:before {
+.oui-icon-server-gear_concept:before {
     content: "\f19b";
 }
-.oui-icon-server_concept:before {
+.oui-icon-server-managed_concept:before {
     content: "\f19c";
 }
 .oui-icon-share_concept:before {
@@ -549,13 +549,13 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-upload_concept:before {
     content: "\f1b2";
 }
-.oui-icon-user-forbid_concept:before {
+.oui-icon-user_concept:before {
     content: "\f1b3";
 }
-.oui-icon-user-support_concept:before {
+.oui-icon-user-forbid_concept:before {
     content: "\f1b4";
 }
-.oui-icon-user_concept:before {
+.oui-icon-user-support_concept:before {
     content: "\f1b5";
 }
 .oui-icon-virtual-machine_concept:before {
@@ -570,10 +570,10 @@ span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {
 .oui-icon-wifi_concept:before {
     content: "\f1b9";
 }
-.oui-icon-world-add_concept:before {
+.oui-icon-world_concept:before {
     content: "\f1ba";
 }
-.oui-icon-world_concept:before {
+.oui-icon-world-add_concept:before {
     content: "\f1bb";
 }
 .oui-icon-add:before {

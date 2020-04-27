@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "chalk": "^3.0.0",
-    "icon-font-generator": "^2.1.10",
+    "icon-font-generator": "https://github.com/AxelPeter/icon-font-generator/archive/v2.1.11.tar.gz",
     "mkdirp": "^0.5.1"
   }
 }
