@@ -1,3 +1,12 @@
+## [4.0.9](https://github.com/ovh/ovh-ui-kit/compare/v4.0.8...v4.0.9) (2020-04-27)
+
+
+### Bug Fixes
+
+* **headings:** update tokens ([d0345c7](https://github.com/ovh/ovh-ui-kit/commit/d0345c7dbc0c87ada1db75cc59e0368d2f478173))
+
+
+
 ## [4.0.8](https://github.com/ovh/ovh-ui-kit/compare/v4.0.7...v4.0.8) (2020-04-09)
 
 
