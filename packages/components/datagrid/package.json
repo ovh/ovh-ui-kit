@@ -28,9 +28,9 @@
     "@ovh-ux/ui-kit.dropdown": "*",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.9",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.2",
     "escape-string-regexp": "^1.0.5",
-    "karma": "^4.4.1",
+    "karma": "^5.0.2",
     "karma-cli": "^2.0.0",
     "lodash": "^4.17.15"
   }

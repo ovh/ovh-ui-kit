@@ -28,12 +28,12 @@
   "devDependencies": {
     "angular": "^1.7.9",
     "cpx": "^1.5.0",
-    "cross-env": "^6.0.3",
+    "cross-env": "^7.0.2",
     "less": "^3.11.1",
     "less-plugin-remcalc": "^0.1.0",
     "mini-css-extract-plugin": "^0.9.0",
     "rimraf": "^3.0.2",
-    "webpack": "^4.42.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-extraneous-file-cleanup-plugin": "^2.0.0",
     "webpack-merge": "^4.2.2"

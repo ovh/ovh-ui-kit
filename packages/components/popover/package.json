@@ -22,8 +22,8 @@
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.9",
-    "cross-env": "^6.0.3",
-    "karma": "^4.4.1",
+    "cross-env": "^7.0.2",
+    "karma": "^5.0.2",
     "karma-cli": "^2.0.0"
   }
 }
