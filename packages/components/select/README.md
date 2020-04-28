@@ -17,8 +17,9 @@ angular.module('myModule', ['oui.select']);
 | `match`           | string    | @?        | no                | n/a               | n/a       | property of item to show as selected item
 | `items`           | array     | <         | no                | n/a               | n/a       | array used to populate the list
 | `disable-items`   | function  | &         | no                | n/a               | n/a       | predicate to determine items to disable
-| `required`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the field is required
-| `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the field is disabled
+| `required`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is required
+| `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is disabled
+| `searchable`      | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is searchable
 | `multiple`        | boolean   | <?        | yes               | `true`, `false`   | `false`   | allow multiple selection
 | `inline`          | boolean   | <?        | no                | `true`, `false`   | `false`   | enable inline style
 | `group-by`        | function  | <?        | no                | n/a               | n/a       | function taking an item as parameter and returning the group name as as string

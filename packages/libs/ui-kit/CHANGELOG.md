@@ -1,3 +1,36 @@
+## [4.0.9](https://github.com/ovh/ovh-ui-kit/compare/v4.0.8...v4.0.9) (2020-04-27)
+
+
+### Bug Fixes
+
+* **headings:** update tokens ([d0345c7](https://github.com/ovh/ovh-ui-kit/commit/d0345c7dbc0c87ada1db75cc59e0368d2f478173))
+
+
+
+## [4.0.8](https://github.com/ovh/ovh-ui-kit/compare/v4.0.7...v4.0.8) (2020-04-09)
+
+
+### Bug Fixes
+
+* **navbar:** fix notifications shrink issue ([d1aedf9](https://github.com/ovh/ovh-ui-kit/commit/d1aedf9dac91574905a384423b261c6af53b139b))
+
+
+
+## [4.0.7](https://github.com/ovh/ovh-ui-kit/compare/v4.0.6...v4.0.7) (2020-04-08)
+
+
+### Bug Fixes
+
+* **input:** fix input width in input-group ([4683cf6](https://github.com/ovh/ovh-ui-kit/commit/4683cf6bab54bf6d16c51a682df39e6fec187655))
+* **typography:** update fonts tokens ([3b35847](https://github.com/ovh/ovh-ui-kit/commit/3b35847761ba9931455c29d080d23da867a9e025))
+
+
+### Features
+
+* **datagrid:** add tooltip on parameters ([#602](https://github.com/ovh/ovh-ui-kit/issues/602)) ([236fe50](https://github.com/ovh/ovh-ui-kit/commit/236fe501fe53731ebf5fae8fc71e87f122a590dc))
+
+
+
 ## [4.0.6](https://github.com/ovh/ovh-ui-kit/compare/v4.0.5...v4.0.6) (2020-03-31)
 
 

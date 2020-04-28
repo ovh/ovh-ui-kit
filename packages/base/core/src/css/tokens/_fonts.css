@@ -7,7 +7,7 @@
   --sun-font-size: 76px;
   --sun-color: var(--p-800);
   --sun-letter-spacing: 1px;
-  --sun-line-height: 95px;
+  --sun-line-height: 1.25;
   --sun-font-family: "Source Sans Pro";
   --sun-font-weight: 300;
   --sun-text-align: left;
@@ -16,7 +16,7 @@
   --pluto-font-size: 54px;
   --pluto-color: var(--p-800);
   --pluto-letter-spacing: 0.12px;
-  --pluto-line-height: 67px;
+  --pluto-line-height: 1.25;
   --pluto-font-family: "Source Sans Pro";
   --pluto-font-weight: 300;
   --pluto-text-align: left;
@@ -25,7 +25,7 @@
   --uranus-font-size: 36px;
   --uranus-color: var(--p-800);
   --uranus-letter-spacing: 0;
-  --uranus-line-height: 45px;
+  --uranus-line-height: 1.25;
   --uranus-font-family: "Source Sans Pro";
   --uranus-font-weight: 400;
   --uranus-text-align: left;
@@ -34,7 +34,7 @@
   --saturn-font-size: 28px;
   --saturn-color: var(--p-800);
   --saturn-letter-spacing: 0;
-  --saturn-line-height: 35px;
+  --saturn-line-height: 1.25;
   --saturn-font-family: "Source Sans Pro";
   --saturn-font-weight: 400;
   --saturn-text-align: left;
@@ -43,7 +43,7 @@
   --jupiter-font-size: 20px;
   --jupiter-color: var(--p-800);
   --jupiter-letter-spacing: 0.12px;
-  --jupiter-line-height: 25px;
+  --jupiter-line-height: 1.25;
   --jupiter-font-family: "Source Sans Pro";
   --jupiter-font-weight: 700;
   --jupiter-text-align: left;
@@ -52,7 +52,7 @@
   --mars-font-size: 18px;
   --mars-color: var(--p-800);
   --mars-letter-spacing: 0;
-  --mars-line-height: 22px;
+  --mars-line-height: 1.25;
   --mars-font-family: "Source Sans Pro";
   --mars-font-weight: 700;
   --mars-text-align: left;
@@ -62,7 +62,7 @@
   --earth-color: var(--p-800-text);
   --earth-letter-spacing: 0.12px;
   --earth-text-align: left;
-  --earth-line-height: 24px;
+  --earth-line-height: 1.5;
   --earth-font-family: "Source Sans Pro";
   --earth-font-weight: 400;
 
@@ -71,7 +71,7 @@
   --venus-color: var(--p-800-text);
   --venus-letter-spacing: 0.12px;
   --venus-text-align: left;
-  --venus-line-height: 20px;
+  --venus-line-height: 1.43;
   --venus-font-family: "Source Sans Pro";
   --venus-font-weight: 400;
 
@@ -80,7 +80,7 @@
   --mercury-color: var(--p-800-text);
   --mercury-letter-spacing: 0.12px;
   --mercury-text-align: left;
-  --mercury-line-height: 20px;
+  --mercury-line-height: 1.67;
   --mercury-font-family: "Source Sans Pro";
   --mercury-font-weight: 400;
 }
