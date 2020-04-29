@@ -1,3 +1,13 @@
+<a name="2.42.6"></a>
+## [2.42.6](https://github.com/ovh/ovh-ui-kit/compare/v2.42.5...v2.42.6) (2020-04-29)
+
+
+### Bug Fixes
+
+* remove temp import in main file ([12010af](https://github.com/ovh/ovh-ui-kit/commit/12010af))
+
+
+
 <a name="2.42.5"></a>
 ## [2.42.5](https://github.com/ovh/ovh-ui-kit/compare/v2.42.4...v2.42.5) (2020-04-24)
 
