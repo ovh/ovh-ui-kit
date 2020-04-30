@@ -24,15 +24,11 @@
     & > .@{button-selector},
     & > .@{input-selector} {
       display: table-cell;
-      border-radius: 0;
       margin: 0;
 
-      &:first-child {
-        border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
-      }
-
-      &:last-child {
-        border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
+      + .@{button-selector},
+      + .@{input-selector} {
+        margin-left: 4px;
       }
     }
 
@@ -42,13 +38,6 @@
         @border-color_disabled: @button-border-color_disabled,
         @padding: @button-padding
       );
-    }
-
-    & > .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
-      & + .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary),
-      & + .@{input-selector} {
-        margin-left: -1px;
-      }
     }
 
     & > .@{input-selector} {
@@ -64,11 +53,6 @@
           margin: 0;
         }
       }
-
-      & + .@{input-selector},
-      & + .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
-        border-left: 0;
-      }
     }
 
     .@{input-selector}-formfield {
@@ -79,11 +63,6 @@
       .@{input-selector} {
         border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
         margin-bottom: 0;
-      }
-
-      + .@{button-selector}:not(.@{button-selector}_primary):not(.@{button-selector}_secondary) {
-        border-left: 0;
-        margin: 0;
       }
     }
   }

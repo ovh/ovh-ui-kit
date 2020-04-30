@@ -71,19 +71,17 @@
       }
     }
 
-    // stylelint-disable no-descending-specificity
+    &_active .oui-button_dropdown {
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
+    }
+
     &_disabled {
       > a,
       > span,
       .oui-button_dropdown {
-        color: @oui-header-tabs-item-font-color_disabled !important;
+        color: @oui-header-tabs-item-font-color_disabled;
       }
     }
-
-    &_active .oui-button_dropdown {
-      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
-    }
-    // stylelint-enable no-descending-specificity
 
     :not(.oui-header-tabs__dropdown-container) & {
       > a,

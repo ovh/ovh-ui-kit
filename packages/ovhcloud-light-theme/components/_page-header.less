@@ -14,20 +14,23 @@
     border-bottom: 1px solid rgb(230, 245, 252);
   }
 
-  .oui-header-tabs__item > a,
-  .oui-header-tabs__item > span,
-  .oui-header-tabs__item .oui-button_dropdown {
-    padding: 0.625rem 1.875rem;
-    color: @primary-color;
-    font-weight: 600;
-    background: transparent !important;
+  .oui-header-tabs__item {
+    > a,
+    > span,
+    .oui-button_dropdown {
+      padding: 0.625rem 1.875rem;
+      color: @primary-color;
+      font-weight: 600;
+      background: transparent !important;
 
-    .oui-icon {
-      /* stylelint-disable-next-line no-descending-specificity */
-      &,
-      &::before {
+      .oui-icon {
         color: inherit;
       }
+    }
+
+    &_disabled:not(.oui-header-tabs__item_dropdown) {
+      opacity: 0.5;
+      cursor: default;
     }
   }
 

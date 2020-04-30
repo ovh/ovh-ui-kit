@@ -4,31 +4,67 @@
 .oui-ui-select_multiple .ui-select-match-container {
   @border-color: rgb(137, 215, 248);
 
-  border-radius: 0;
-  border-width: 0;
-  border-bottom-color: @border-color;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
+  background: #fff;
+  border-radius: 0 !important;
+  border: 0;
+  border-bottom: solid 2px @border-color;
   box-shadow: none;
   transition: all ease-in 200ms;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  ~ .oui-icon {
+    background: none !important;
+    color: #0050d7;
+  }
 
   &:focus,
   &:hover {
     box-shadow: none;
-    border-color: @border-color;
+    border: 0;
+    border-bottom: solid 2px @border-color;
     background-color: rgb(239, 249, 253);
+
+    ~ .oui-icon {
+      color: #0050d7;
+    }
   }
 
   &:focus {
-    border-color: rgb(28, 49, 147);
+    border: 0;
+    border-bottom: solid 2px rgb(28, 49, 147);
     color: rgb(28, 49, 147);
   }
 
-  // Errors
-  .oui-field_error & {
-    background-color: rgb(255, 210, 221);
-    border-color: rgb(193, 27, 27);
+  &:disabled {
+    border: 0;
+    border-bottom: solid 2px #bbbdbf;
+    background-color: #f2f2f2;
     box-shadow: none;
+    color: #bbbdbf;
+    cursor: auto;
+
+    ~ .oui-icon {
+      color: #bbbdbf;
+    }
+  }
+
+  // Errors
+  .oui-select_error &,
+  .oui-field_error & {
+    &,
+    &:hover,
+    &:focus {
+      background-color: rgb(255, 210, 221);
+      border-color: rgb(193, 27, 27);
+      box-shadow: none;
+      color: #b04020;
+    }
+
+    ~ .oui-icon {
+      color: #b04020 !important;
+    }
   }
 }
 
@@ -45,17 +81,11 @@
   & &__input:focus ~ .oui-icon {
     box-shadow: none;
     background-color: rgb(239, 249, 253);
-
-    &::before {
-      color: rgb(28, 49, 147);
-    }
+    color: rgb(28, 49, 147);
   }
 
   & &__input:disabled ~ .oui-icon {
     background-color: #eff9fd;
-
-    &::before {
-      color: #b3b3b3;
-    }
+    color: #b3b3b3;
   }
 }

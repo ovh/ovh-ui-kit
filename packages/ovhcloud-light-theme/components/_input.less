@@ -1,13 +1,15 @@
 // Generic Inputs
 /* stylelint-disable no-descending-specificity */
 .oui-input,
+.oui-textarea,
 .oui-file-selector__label {
   @border-color: rgb(137, 215, 248);
 
   &,
   &.oui-clipboard__control,
   &.oui-calendar__control {
-    border-radius: 0;
+    background: #fff;
+    border-radius: 0 !important;
     border: 0;
     border-bottom: solid 2px @border-color;
     box-shadow: none;
@@ -16,33 +18,48 @@
     &:focus,
     &:hover {
       box-shadow: none;
-      border-color: @border-color;
+      border: 0;
+      border-bottom: solid 2px @border-color;
       background-color: rgb(239, 249, 253);
     }
 
     &:focus {
-      border-color: rgb(28, 49, 147);
+      border: 0;
+      border-bottom: solid 2px rgb(28, 49, 147);
       color: rgb(28, 49, 147);
     }
 
     &:disabled {
-      border-color: #bbbdbf;
+      border: 0;
+      border-bottom: solid 2px #bbbdbf;
       background-color: #f2f2f2;
       box-shadow: none;
       color: #bbbdbf;
       cursor: auto;
     }
+  }
 
-    // Errors
-    .oui-field_error &:not(:disabled) {
-      &,
-      &:hover,
-      &:focus {
-        background-color: rgb(255, 210, 221);
-        border-color: rgb(193, 27, 27);
-        box-shadow: none;
-      }
+  // Errors
+  &_error,
+  .oui-field_error & {
+    &,
+    &:hover,
+    &:focus {
+      background-color: rgb(255, 210, 221) !important;
+      border-color: rgb(193, 27, 27) !important;
+      box-shadow: none !important;
+      color: #b04020 !important;
     }
+  }
+}
+
+input.oui-input,
+textarea.oui-textarea {
+  &:read-only:not(.oui-clipboard__control):not(.oui-calendar__control) {
+    background-color: #f2f2f2;
+    border-color: #e6e6e6;
+    box-shadow: none;
+    color: #7991a3;
   }
 }
 
@@ -50,7 +67,6 @@
 .oui-input-group {
   > .oui-button {
     transition: all ease-in 200ms;
-    border-radius: @border-radius-default;
     border: 2px solid @primary-color;
     padding-top: rem-calc(6);
     padding-bottom: rem-calc(6);
@@ -59,6 +75,12 @@
     &:hover,
     &:focus {
       background-color: rgb(239, 249, 253);
+    }
+
+    &,
+    &:first-child,
+    &:last-child {
+      border-radius: @border-radius-default;
     }
   }
 
@@ -76,8 +98,12 @@
   &.oui-input-group_search,
   &.oui-input-group_clipboard {
     > .oui-button {
-      border-color: transparent;
-      background-color: transparent;
+      &,
+      &:hover,
+      &:focus {
+        border-color: transparent;
+        background-color: transparent;
+      }
     }
   }
 

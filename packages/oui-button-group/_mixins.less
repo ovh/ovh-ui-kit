@@ -6,7 +6,6 @@
     @button-primary-selector,
     @button-secondary-selector
   ) {
-    display: table;
     display: inline-flex;
     align-content: stretch;
     align-items: flex-end;
@@ -14,26 +13,10 @@
     margin: @oui-button-group-spacing;
 
     .@{button-selector} {
-      display: table-cell;
       margin: 0;
-      border-radius: 0;
 
-      &:first-child {
-        border-radius: @oui-global-base-radius 0 0 @oui-global-base-radius;
-      }
-
-      &:last-child {
-        border-radius: 0 @oui-global-base-radius @oui-global-base-radius 0;
-      }
-
-      & + .@{button-selector} {
-        border-left-width: 0;
-      }
-    }
-
-    .@{button-primary-selector} {
-      & + .@{button-secondary-selector} {
-        border-left-width: 1px;
+      + .@{button-selector} {
+        margin-left: 4px;
       }
     }
   }
