@@ -1,3 +1,13 @@
+<a name="2.42.7"></a>
+## [2.42.7](https://github.com/ovh/ovh-ui-kit/compare/v2.42.6...v2.42.7) (2020-04-30)
+
+
+### Bug Fixes
+
+* **olt:** fix components states issues ([3ccade2](https://github.com/ovh/ovh-ui-kit/commit/3ccade2))
+
+
+
 <a name="2.42.6"></a>
 ## [2.42.6](https://github.com/ovh/ovh-ui-kit/compare/v2.42.5...v2.42.6) (2020-04-29)
 
