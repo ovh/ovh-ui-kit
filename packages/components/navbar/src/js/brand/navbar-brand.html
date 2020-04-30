@@ -1,7 +1,8 @@
 <a class="oui-navbar__brand"
     ng-attr-aria-label="{{::!!$ctrl.ariaLabel ? $ctrl.ariaLabel : null}}"
     ng-attr-title="{{::!!$ctrl.ariaLabel ? $ctrl.ariaLabel : null}}"
-    ng-href="{{::$ctrl.href}}">
+    ng-href="{{::$ctrl.href}}"
+    ng-click="::$ctrl.onClick()($event)">
     <img class="navbar-logo"
         ng-if="!!$ctrl.iconSrc"
         ng-attr-alt="{{::!!$ctrl.iconAlt ? $ctrl.iconAlt : null}}"
