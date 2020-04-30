@@ -8,6 +8,7 @@ export default {
     iconClass: '@?',
     iconSrc: '@?',
     href: '@?',
+    onClick: '&',
   },
   controller: class {
     constructor($element, $timeout) {

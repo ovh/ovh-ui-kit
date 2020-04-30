@@ -43,6 +43,7 @@ angular.module('myModule', ['oui.navbar'])
 - `label` **(optional)**: define `aria-label` of the brand link.
 - `title`: **(optional)**: define the brand text.
 - `url`: define `href` of the brand link.
+- `click` **(optional)**: define the method to call when the brand link is clicked.
 
 #### Set a brand icon with a CSS class (for `oui-icon`)
 
@@ -294,6 +295,7 @@ The property `name` **must be** `"user"`.
 | `icon-class`          | string    | @?        | yes               | n/a                                   | n/a       | classname of the brand icon
 | `icon-src`            | string    | @?        | yes               | n/a                                   | n/a       | url of the brand icon
 | `href`                | string    | @?        | yes               | n/a                                   | n/a       | link href of the brand link
+| `on-click`            | function  | &         | yes               | n/a                                   | n/a       | click callback
 
 ## Component `oui-navbar-dropdown`
 
