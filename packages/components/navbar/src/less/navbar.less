@@ -167,6 +167,7 @@
     &_dropdown,
     &_tertiary {
       #oui > .navbar-link_variant(
+        @font-color: @oui-navbar-tertiary-font-color,
         @font-size: @oui-navbar-tertiary-font-size,
         @font-weight: @oui-navbar-tertiary-font-weight
       );
@@ -177,7 +178,7 @@
       &[aria-expanded="true"] {
         #oui > .navbar-link_variant(
           @background-color: @oui-navbar-background-color_active,
-          @font-color: @oui-navbar-tertiary-font-color,
+          @font-color: @oui-navbar-tertiary-font-color_active,
           @font-size: @oui-navbar-tertiary-font-size,
           @font-weight: @oui-navbar-tertiary-font-weight
         );
@@ -590,7 +591,7 @@
       }
 
       &.oui-icon-clock-wait {
-        color: @oui-color-pacific;
+        color: @p-400;
       }
     }
 
