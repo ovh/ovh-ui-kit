@@ -13,17 +13,14 @@ const moduleName = 'calendar-webcomponent.stories';
 angular.module(moduleName, [Calendar]);
 
 export default {
-  title: 'Legacy/Components/Calendar/WebComponent',
+  title: 'Design System/Components/Calendar/WebComponent',
 
   parameters: {
     notes: readme,
-    options: {
-      showPanel: true,
-    },
   },
 };
 
-export const SimpleDateSelector = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-calendar
@@ -45,11 +42,7 @@ export const SimpleDateSelector = forModule(moduleName).createElement(
   ),
 );
 
-SimpleDateSelector.story = {
-  name: 'Simple date selector',
-};
-
-export const FullCalendarInPlace = forModule(moduleName).createElement(
+export const Inline = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-calendar
@@ -58,10 +51,6 @@ export const FullCalendarInPlace = forModule(moduleName).createElement(
     </oui-calendar>`,
   ),
 );
-
-FullCalendarInPlace.story = {
-  name: 'Full calendar in-place',
-};
 
 export const WithWeekNumbers = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -77,7 +66,18 @@ WithWeekNumbers.story = {
   name: 'With week numbers',
 };
 
-export const LimitedRangeOfDates = forModule(moduleName).createElement(
+export const WithTimepicker = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-calendar
+      model="$ctrl.model"
+      format="Y-m-d H:i"
+      enable-time>
+    </oui-calendar>`,
+  ),
+);
+
+export const MinAndMax = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-calendar
@@ -102,23 +102,8 @@ export const LimitedRangeOfDates = forModule(moduleName).createElement(
   ),
 );
 
-LimitedRangeOfDates.story = {
-  name: 'Limited range of dates',
-};
-
-export const EnableTimepicker = forModule(moduleName).createElement(
-  () => compileTemplate(
-    `
-    <oui-calendar
-      model="$ctrl.model"
-      format="Y-m-d H:i"
-      enable-time>
-    </oui-calendar>`,
-  ),
-);
-
-EnableTimepicker.story = {
-  name: 'Enable timepicker',
+MinAndMax.story = {
+  name: 'Min and Max',
 };
 
 export const DisablingDates = forModule(moduleName).createElement(
