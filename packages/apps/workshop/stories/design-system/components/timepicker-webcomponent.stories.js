@@ -11,7 +11,7 @@ const moduleName = 'timepicker-webcomponent.stories';
 angular.module(moduleName, [Timepicker]);
 
 export default {
-  title: 'Legacy/Components/Timepicker/WebComponent',
+  title: 'Design System/Components/Timepicker/WebComponent',
 
   parameters: {
     notes: readme,
@@ -21,7 +21,7 @@ export default {
   },
 };
 
-export const Simple = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-timepicker
