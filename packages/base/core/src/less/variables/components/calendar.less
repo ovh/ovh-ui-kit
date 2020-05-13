@@ -1,35 +1,37 @@
 // Calendar
-@oui-calendar-font-color: @p-700;
-@oui-calendar-font-color_hover: @p-700;
+@oui-calendar-font-color: @p-800-text;
+@oui-calendar-font-color_hover: @p-500;
 @oui-calendar-font-size: rem-calc(16);
-@oui-calendar-font-weight: 600;
-@oui-calendar-border: @oui-calendar-border-color 1px solid;
-@oui-calendar-border-color: @g-300;
+@oui-calendar-font-weight: 400;
+@oui-calendar-border-color: rgba(0, 14, 156, 0.075);
 @oui-calendar-border-radius: @base-border-radius-medium;
-@oui-calendar-box-shadow: @oui-dropdown-menu-box-shadow;
+@oui-calendar-box-shadow: @base-box-shadow-primary;
 
 @oui-calendar-arrow-size: @oui-dropdown-arrow-size;
 @oui-calendar-arrow-inner-size: @oui-dropdown-arrow-inner-size;
 @oui-calendar-arrow-spacing: @oui-dropdown-menu-spacing;
 
-@oui-calendar-separator-color: @g-300;
+@oui-calendar-separator-color: @p-100;
 @oui-calendar-separator-size: 1px;
 
-@oui-calendar-header-height: rem-calc(60);
+@oui-calendar-header-height: rem-calc(56);
+@oui-calendar-header-font-color: @p-800;
+@oui-calendar-header-font-size: rem-calc(20);
+@oui-calendar-header-font-weight: 700;
 @oui-calendar-header-spacing: rem-calc(20);
 @oui-calendar-header-border-bottom: @oui-calendar-separator-color 1px solid;
 
 @oui-calendar-title-month-spacing: rem-calc(5);
 @oui-calendar-title-year-width: 4ch;
 @oui-calendar-title-year-height: rem-calc(20);
-@oui-calendar-title-year-spacing: rem-calc(5);
+@oui-calendar-title-year-spacing: rem-calc(4);
 @oui-calendar-title-arrow-width: rem-calc(15);
 @oui-calendar-title-button-width: rem-calc(14);
 
-@oui-calendar-icon-color: @p-400;
+@oui-calendar-icon-color: @p-500;
 @oui-calendar-icon-color_hover: @p-700;
-@oui-calendar-icon-size: rem-calc(20);
-@oui-calendar-icon-spacing: rem-calc(12);
+@oui-calendar-icon-size: rem-calc(24);
+@oui-calendar-icon-spacing: rem-calc(8);
 
 @oui-calendar-input-margin: @oui-form-control-margin;
 @oui-calendar-input-font-color: @oui-form-control-font-color;
@@ -40,22 +42,30 @@
 @oui-calendar-button-font-color: @oui-button-primary-font-color;
 @oui-calendar-button-background-color: @oui-button-primary-background-color;
 @oui-calendar-button-background-color_hover: @oui-button-primary-background-color_hover;
+@oui-calendar-button-border-radius: @base-border-radius-medium;
 
-@oui-calendar-body-padding: rem-calc(20) rem-calc(25);
+@oui-calendar-body-padding: rem-calc(16) rem-calc(24);
 
-@oui-calendar-cell-width: rem-calc(45);
-@oui-calendar-cell-height: rem-calc(30);
-@oui-calendar-cell-line-height: rem-calc(28);
-@oui-calendar-cell-spacing: rem-calc(8);
-@oui-calendar-cell-font-color_disabled: @g-400;
-@oui-calendar-cell-border-radius: @base-border-radius-medium;
-@oui-calendar-cell-border-width: 1px;
+@oui-calendar-cell-width: rem-calc(44);
+@oui-calendar-cell-height: rem-calc(24);
+@oui-calendar-cell-line-height: rem-calc(24);
+@oui-calendar-cell-spacing: rem-calc(12);
+@oui-calendar-cell-border-radius: @base-border-radius-large;
+@oui-calendar-cell-border-width: 0;
+@oui-calendar-cell-background-color: transparent;
 @oui-calendar-cell-background-color_hover: @p-100;
-@oui-calendar-cell-background-color_selected: @p-100;
+@oui-calendar-cell-background-color_selected: @p-500;
+@oui-calendar-cell-font-color: @p-800-text;
+@oui-calendar-cell-font-color_hover: @p-500;
+@oui-calendar-cell-font-color_selected: @p-000;
+@oui-calendar-cell-font-size: rem-calc(16);
+@oui-calendar-cell-font-weight: 400;
+@oui-calendar-cell-font-weight_hover: 600;
+@oui-calendar-cell-font-weight_selected: 600;
 
-@oui-calendar-today-border-color: @p-700;
-@oui-calendar-today-border-color_hover: @p-700;
-@oui-calendar-today-border-color_disabled: @g-300;
+@oui-calendar-weekday-font-color: @p-800-text;
+@oui-calendar-weekday-font-size: rem-calc(16);
+@oui-calendar-weekday-font-weight: 700;
 
 @oui-calendar-time-width: rem-calc(300);
 @oui-calendar-time-height: rem-calc(38);
