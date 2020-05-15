@@ -6,7 +6,6 @@ const { cssExtractLoader } = require('./webpack.rules');
 
 module.exports = merge(baseConfig, {
   mode: 'production',
-  devtool: 'source-map',
   performance: {
     hints: false,
   },
