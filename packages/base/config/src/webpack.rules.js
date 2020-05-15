@@ -75,12 +75,11 @@ const styleLoader = {
   test: /\.css|.less$/,
   use: [
     { loader: 'style-loader' },
-    { loader: 'css-loader', options: { sourceMap: true } },
+    { loader: 'css-loader' },
     {
       loader: 'postcss-loader',
       options: {
         ident: 'postcss',
-        sourceMap: true,
         plugins: () => [
           autoprefixer(),
           cssnano({ preset: 'default' }),
@@ -91,7 +90,6 @@ const styleLoader = {
       loader: 'less-loader',
       options: {
         plugins: [RemcalcPlugin],
-        sourceMap: true,
       },
     },
   ],
