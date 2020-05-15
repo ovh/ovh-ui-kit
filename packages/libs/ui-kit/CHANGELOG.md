@@ -1,3 +1,12 @@
+## [4.0.10](https://github.com/ovh/ovh-ui-kit/compare/v4.0.9...v4.0.10) (2020-05-15)
+
+
+### Features
+
+* **oui-navbar:** add on-click attribute to oui-navbar brand ([#608](https://github.com/ovh/ovh-ui-kit/issues/608)) ([35f26ec](https://github.com/ovh/ovh-ui-kit/commit/35f26ecd577e198f4465ac520aa950b00f233ed8))
+
+
+
 ## [4.0.9](https://github.com/ovh/ovh-ui-kit/compare/v4.0.8...v4.0.9) (2020-04-27)
 
 
