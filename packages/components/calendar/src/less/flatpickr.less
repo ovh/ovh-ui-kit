@@ -10,7 +10,6 @@
 
     // Fix calendar's width inline style
     width: auto !important;
-    border: @oui-calendar-border;
     border-radius: @oui-calendar-border-radius;
     box-shadow: @oui-calendar-box-shadow;
 
@@ -42,7 +41,6 @@
 
     &.inline {
       top: auto;
-      box-shadow: none;
     }
 
     &.noCalendar {
@@ -66,6 +64,11 @@
         &:focus { background-color: @oui-calendar-input-background-color_hover; }
       }
 
+      .arrowUp,
+      .arrowDown {
+        display: none;
+      }
+
       span,
       span:hover,
       span:focus { background-color: @oui-calendar-input-background-color; }
@@ -81,15 +84,23 @@
     line-height: @oui-calendar-header-height;
     margin: 0 @oui-calendar-header-spacing;
     align-items: center;
+    font-size: @oui-calendar-header-font-size;
+    font-weight: @oui-calendar-header-font-weight;
+    color: @oui-calendar-header-font-color;
     border-bottom: @oui-calendar-header-border-bottom;
   }
 
-  &-months &-month { height: auto; }
+  &-months &-month {
+    height: auto;
+    line-height: unset;
+    overflow: unset;
+  }
 
   // Header icons
   &-months &-prev-month,
   &-months &-next-month {
-    height: auto;
+    width: @oui-calendar-icon-size;
+    height: @oui-calendar-icon-size;
     line-height: 1;
     position: static;
     margin: 0 @oui-calendar-icon-spacing;
@@ -116,18 +127,26 @@
     height: auto;
     padding: 0;
     position: static;
-    color: @oui-calendar-font-color;
-    font-size: inherit;
-    font-weight: inherit;
+    color: @oui-calendar-header-font-color;
+    font-size: @oui-calendar-header-font-size;
+    font-weight: @oui-calendar-header-font-weight;
 
     span.cur-month,
-    input.cur-year {
+    input.cur-year,
+    input.cur-year[disabled] {
+      display: inline;
       margin: 0;
       font-size: inherit;
       font-weight: inherit;
-    }
+      color: inherit;
+      background: none;
 
-    span.cur-month:hover { background: none; }
+      &:hover,
+      &:focus {
+        background: none;
+        color: inherit;
+      }
+    }
 
     input.cur-year {
       width: @oui-calendar-title-year-width;
@@ -136,10 +155,6 @@
       padding-right: @oui-calendar-title-year-spacing;
       box-sizing: content-box;
       text-align: center;
-
-      ~ span {
-        margin-right: -@oui-calendar-title-button-width;
-      }
     }
   }
 
@@ -175,12 +190,20 @@
     box-shadow: @oui-calendar-separator-size 0 0 @oui-calendar-separator-color;
   }
 
-  &-weekwrapper &-weekday,
-  &-weekdays &-weekday {
+  &-weekdays &-weekday,
+  &-weekwrapper &-weekday {
     line-height: 1;
-    font-size: inherit;
-    font-weight: inherit;
-    color: @oui-calendar-cell-font-color_disabled;
+  }
+
+  &-weekdays &-weekday,
+  &-weekwrapper &-weekday,
+  &-weekwrapper &-weeks &-day {
+    &,
+    &:hover {
+      font-size: @oui-calendar-weekday-font-size;
+      font-weight: @oui-calendar-weekday-font-weight;
+      color: @oui-calendar-weekday-font-color;
+    }
   }
 
   &-days {
@@ -201,9 +224,9 @@
     height: @oui-calendar-cell-height;
     line-height: @oui-calendar-cell-line-height;
     margin-top: @oui-calendar-cell-spacing;
-    font-size: inherit;
-    font-weight: inherit;
-    color: @oui-calendar-font-color;
+    font-size: @oui-calendar-cell-font-size;
+    font-weight: @oui-calendar-cell-font-weight;
+    color: @oui-calendar-cell-font-color;
     border-width: @oui-calendar-cell-border-width;
     border-radius: @oui-calendar-cell-border-radius;
 
@@ -212,8 +235,7 @@
 
     &.prevMonthDay,
     &.nextMonthDay {
-      font-weight: 400;
-      color: @oui-calendar-cell-font-color_disabled;
+      opacity: 0.5;
     }
 
     &,
@@ -223,8 +245,10 @@
       &.today.inRange,
       &:hover,
       &:focus {
+        color: @oui-calendar-cell-font-color_hover;
         border-color: @oui-calendar-cell-background-color_hover;
         background-color: @oui-calendar-cell-background-color_hover;
+        font-weight: @oui-calendar-cell-font-weight_hover;
       }
     }
 
@@ -242,9 +266,10 @@
       &.inRange,
       &.prevMonthDay,
       &.nextMonthDay {
-        color: @oui-calendar-font-color;
+        color: @oui-calendar-cell-font-color_selected;
         border-color: @oui-calendar-cell-background-color_selected;
         background-color: @oui-calendar-cell-background-color_selected;
+        font-weight: @oui-calendar-cell-font-weight_selected;
       }
 
       &.startRange { border-radius: @oui-calendar-cell-border-radius 0 0 @oui-calendar-cell-border-radius; }
@@ -264,29 +289,47 @@
       &.nextMonthDay,
       &.prevMonthDay.today,
       &.nextMonthDay.today {
-        color: @oui-calendar-font-color;
+        color: @oui-calendar-cell-font-color_selected;
         border-color: @oui-calendar-cell-background-color_selected;
         background-color: @oui-calendar-cell-background-color_selected;
+        font-weight: @oui-calendar-cell-font-weight_selected;
       }
     }
 
     &.today {
-      border-color: @oui-calendar-today-border-color;
+      color: @oui-calendar-cell-font-color;
+      border-color: @oui-calendar-cell-background-color;
+      background-color: @oui-calendar-cell-background-color;
+      font-weight: @oui-calendar-cell-font-weight;
 
       &:hover,
       &:focus {
-        color: @oui-calendar-font-color_hover;
-        border-color: @oui-calendar-today-border-color_hover;
+        color: @oui-calendar-cell-font-color_hover;
+        border-color: @oui-calendar-cell-background-color_hover;
         background-color: @oui-calendar-cell-background-color_hover;
+        font-weight: @oui-calendar-cell-font-weight_hover;
       }
 
       &.inRange,
       &.selected,
       &.prevMonthDay.inRange,
-      &.nextMonthDay.inRange { border-color: @oui-calendar-today-border-color; }
+      &.nextMonthDay.inRange {
+        color: @oui-calendar-cell-font-color_selected;
+        border-color: @oui-calendar-cell-background-color_selected;
+        background-color: @oui-calendar-cell-background-color_selected;
+        font-weight: @oui-calendar-cell-font-weight_selected;
+      }
     }
 
     // Disabled
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+      font-weight: @oui-calendar-cell-font-weight;
+      color: @oui-calendar-cell-font-color;
+      background: transparent;
+    }
+
     &.disabled,
     &.disabled:hover,
     &.disabled:focus,
@@ -295,10 +338,7 @@
     &.notAllowed,
     &.notAllowed.prevMonthDay,
     &.notAllowed.nextMonthDay {
-      color: @oui-calendar-cell-font-color_disabled;
-      background: transparent;
-
-      &.today { border-color: @oui-calendar-today-border-color_disabled; }
+      opacity: 0.5;
     }
   }
 
@@ -320,7 +360,7 @@
     }
 
     .numInput {
-      border-radius: @oui-calendar-cell-border-radius;
+      border-radius: @oui-calendar-input-border-radius;
     }
 
     & &-separator {
@@ -338,7 +378,7 @@
   &-calendar.inline.hasTime &-time {
     height: @oui-calendar-time-height;
     line-height: @oui-calendar-time-height;
-    padding: 0;
+    padding: @oui-calendar-time-padding_inline;
     margin: 0;
   }
 
@@ -353,6 +393,7 @@
     font-weight: @oui-calendar-font-weight;
     color: @oui-calendar-button-font-color;
     background: @oui-calendar-button-background-color;
+    border-radius: @oui-calendar-button-border-radius;
 
     &:hover,
     &:focus { background-color: @oui-calendar-button-background-color_hover; }

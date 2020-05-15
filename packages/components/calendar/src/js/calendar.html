@@ -1,4 +1,5 @@
-<div class="oui-calendar__control-wrapper">
+<div class="oui-calendar__control-wrapper"
+    ng-class="{ 'oui-input-overlay': !$ctrl.inline }">
     <input class="oui-calendar__control oui-input" type="text"
         autocomplete="off"
         ng-attr-id="{{::$ctrl.id}}"
@@ -6,4 +7,5 @@
         ng-model="$ctrl.model"
         ng-disabled="$ctrl.disabled"
         ng-required="$ctrl.required" />
+    <span class="oui-icon oui-icon-calendar" ng-if="!$ctrl.inline"></span>
 </div>
