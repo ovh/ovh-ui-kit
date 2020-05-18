@@ -13,7 +13,7 @@ const moduleName = 'search-webcomponent.stories';
 angular.module(moduleName, [Search]);
 
 export default {
-  title: 'Legacy/Components/Search/WebComponent',
+  title: 'Design System/Components/Search/WebComponent',
 
   parameters: {
     notes: readme,

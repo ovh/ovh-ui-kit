@@ -33,7 +33,6 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.3.4",
     "babel-eslint": "^10.1.0",
-    "browserslist": "^4.12.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-friendly-formatter": "^4.0.1",
@@ -44,5 +43,9 @@
     "npm-run-all": "^4.1.5",
     "stylelint": "^13.3.3",
     "stylelint-config-standard": "^20.0.0"
+  },
+  "resolutions": {
+    "browserslist": "^4.x",
+    "caniuse-lite": "^1.x"
   }
 }
