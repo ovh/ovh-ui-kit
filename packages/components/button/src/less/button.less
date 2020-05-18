@@ -187,24 +187,7 @@ oui-button {
 }
 
 .oui-button_dropdown {
-  #oui > .button-color(
-    @background-color: @oui-button-dropdown-background-color,
-    @background-color_hover: @oui-button-dropdown-background-color_hover,
-    @background-color_active: @oui-button-dropdown-background-color_active,
-    @background-color_disabled: @oui-button-dropdown-background-color_disabled,
-    @border-color: @oui-button-dropdown-border-color,
-    @border-color_hover: @oui-button-dropdown-border-color_hover,
-    @border-color_active: @oui-button-dropdown-border-color_active,
-    @border-color_disabled: @oui-button-dropdown-border-color_disabled,
-    @box-shadow: @oui-button-dropdown-box-shadow,
-    @box-shadow_focus: @oui-button-dropdown-box-shadow_focus,
-    @box-shadow_active: @oui-button-dropdown-box-shadow_active,
-    @box-shadow_disabled: @oui-button-dropdown-box-shadow_disabled,
-    @font-color: @oui-button-dropdown-font-color,
-    @font-color_disabled: @oui-button-dropdown-font-color_disabled,
-    @icon-color: @oui-button-dropdown-icon-color,
-    @icon-color_disabled: @oui-button-dropdown-icon-color_disabled
-  );
+  #oui > .button-dropdown-color();
 
   padding: @oui-button-dropdown-padding;
   padding-right: @oui-button-dropdown-padding-right;
@@ -226,10 +209,6 @@ oui-button {
     &::before {
       font-size: @oui-button-dropdown-icon-size;
     }
-  }
-
-  &.open .oui-icon {
-    transform: rotate(180deg);
   }
 
   // No need to add a small variant
