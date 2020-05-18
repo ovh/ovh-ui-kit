@@ -12,7 +12,7 @@ const moduleName = 'action-menu-webcomponent.stories';
 angular.module(moduleName, [ActionMenu]);
 
 export default {
-  title: 'Legacy/Components/Action Menu/WebComponent',
+  title: 'Design System/Components/Action Menu/WebComponent',
 
   parameters: {
     notes: readme,
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-export const Simple = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-action-menu text="Actions" disabled="$ctrl.disabled">

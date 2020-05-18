@@ -17,7 +17,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Legacy/Components/Guide Menu/WebComponent',
+  title: 'Design System/Components/Guide Menu/WebComponent',
 
   parameters: {
     notes: readme,
@@ -27,7 +27,7 @@ export default {
   },
 };
 
-export const Simple = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-guide-menu text="Guides">

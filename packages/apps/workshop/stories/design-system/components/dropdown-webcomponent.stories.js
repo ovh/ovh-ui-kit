@@ -12,7 +12,7 @@ const moduleName = 'odropdown-webcomponent.stories';
 angular.module(moduleName, [Dropdown]);
 
 export default {
-  title: 'Legacy/Components/Dropdown/WebComponent',
+  title: 'Design System/Components/Dropdown/WebComponent',
 
   parameters: {
     notes: readme,
@@ -22,7 +22,7 @@ export default {
   },
 };
 
-export const Simple = forModule(moduleName).createElement(
+export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-dropdown>
