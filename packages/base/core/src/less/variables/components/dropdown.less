@@ -1,9 +1,10 @@
 // Dropdown
 @oui-dropdown-menu-background-color: @p-000;
-@oui-dropdown-menu-border-width: 1px;
-@oui-dropdown-menu-border-color: @g-300;
+@oui-dropdown-menu-border-width: 0;
+@oui-dropdown-menu-border-color: rgba(0, 14, 156, 0.075);
+@oui-dropdown-menu-border-radius: @base-border-radius-medium;
 @oui-dropdown-menu-margin: 0;
-@oui-dropdown-menu-spacing: rem-calc(4);
+@oui-dropdown-menu-spacing: 0;
 @oui-dropdown-menu-box-shadow: @base-box-shadow-primary;
 @oui-dropdown-menu-min-width: rem-calc(140);
 @oui-dropdown-menu-max-width: rem-calc(300);
@@ -16,25 +17,24 @@
 @oui-dropdown-arrow-diff-size: sqrt(2 * @oui-dropdown-arrow-border-width);
 @oui-dropdown-arrow-inner-size: ~"calc(@{oui-dropdown-arrow-size} - @{oui-dropdown-arrow-diff-size})";
 
-@oui-dropdown-label-line-height: rem-calc(18);
-@oui-dropdown-label-background-color: @g-050;
-@oui-dropdown-label-padding: rem-calc(6) rem-calc(20);
-@oui-dropdown-label-font-color: @p-700;
+@oui-dropdown-label-line-height: rem-calc(16);
+@oui-dropdown-label-background-color: transparent;
+@oui-dropdown-label-padding: rem-calc(8) rem-calc(16);
+@oui-dropdown-label-font-color: @p-800-text;
 @oui-dropdown-label-font-size: rem-calc(14);
-@oui-dropdown-label-font-weight: 600;
+@oui-dropdown-label-font-weight: 700;
 
 @oui-dropdown-item-height: rem-calc(40);
-@oui-dropdown-item-line-height: rem-calc(22);
+@oui-dropdown-item-line-height: rem-calc(16);
 @oui-dropdown-item-background-color: @p-000;
-@oui-dropdown-item-background-color_active: @p-500;
-@oui-dropdown-item-padding: rem-calc(9) rem-calc(20);
-@oui-dropdown-item-font-color: @p-700;
-@oui-dropdown-item-font-color_active: @p-000;
-@oui-dropdown-item-font-color_disabled: @g-400;
+@oui-dropdown-item-background-color_active: @p-100;
+@oui-dropdown-item-padding: rem-calc(8) rem-calc(16);
+@oui-dropdown-item-font-color: @p-500;
+@oui-dropdown-item-font-color_active: @p-500;
 @oui-dropdown-item-font-size: rem-calc(16);
-@oui-dropdown-item-font-weight: 400;
+@oui-dropdown-item-font-weight: 600;
 @oui-dropdown-item-outline-offset: -@oui-a11y-outline-width;
 
-@oui-dropdown-item-icon-padding: 0 rem-calc(5);
-@oui-dropdown-item-icon-size: rem-calc(12);
-@oui-dropdown-item-icon-color: inherit;
+@oui-dropdown-divider-height: 1px;
+@oui-dropdown-divider-color: @g-300;
+@oui-dropdown-divider-margin: 0 rem-calc(16);
