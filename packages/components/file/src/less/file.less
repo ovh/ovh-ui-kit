@@ -79,9 +79,7 @@
     background: none;
 
     &:focus {
-      #oui > .outline-border(
-        @outline-offset: @oui-file-outline-offset
-      );
+      #oui > .outline-border-inner();
     }
   }
 }
@@ -208,9 +206,7 @@
     cursor: pointer;
 
     &:focus {
-      #oui > .outline-border(
-        @outline-offset: @oui-file-attachment-icon-outline-offset;
-      );
+      #oui > .outline-border-inner();
     }
   }
 
