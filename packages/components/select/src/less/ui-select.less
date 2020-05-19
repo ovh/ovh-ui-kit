@@ -47,21 +47,19 @@
   // Select - Options
   .ui-select-choices-row {
     width: 100%;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    line-height: @oui-select-option-line-height;
+    padding: @oui-select-option-padding;
+    display: block;
     text-align: left;
     font-size: @oui-select-option-font-size;
     font-weight: @oui-select-option-font-weight;
     color: @oui-select-option-font-color;
     border: none;
     background-color: @oui-select-option-background-color;
+    cursor: pointer;
 
     &-inner {
-      line-height: @oui-select-option-line-height;
-      flex: 1;
-      padding: @oui-select-option-padding;
+      display: block;
     }
 
     &,

@@ -1,21 +1,60 @@
 .oui-autocomplete {
   &:extend(.oui-dropdown-menu all);
 
-  max-height: calc((@oui-autocomplete-item-height * @oui-autocomplete-items-displayed) + (@oui-autocomplete-menu-spacing * 2));
+  max-height: @oui-autocomplete-max-height;
   overflow-y: auto;
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: @oui-autocomplete-margin;
+  padding: @oui-autocomplete-padding;
   list-style: none;
+  box-shadow: @oui-autocomplete-box-shadow;
+  border: none;
+  background-color: @oui-autocomplete-background-color;
 
   @media screen and (max-width: @device-breakpoint-phone-max-width) {
     max-width: 100%;
   }
 
-  &__option {
-    &:extend(.oui-dropdown-option all);
+  &__item {
+    min-height: @oui-autocomplete-item-height;
+    display: block;
+  }
 
+  &__option {
+    width: 100%;
+    line-height: @oui-autocomplete-option-line-height;
+    padding: @oui-autocomplete-option-padding;
+    display: block;
+    text-align: left;
+    font-size: @oui-autocomplete-option-font-size;
+    font-weight: @oui-autocomplete-option-font-weight;
+    color: @oui-autocomplete-option-font-color;
+    border: none;
+    background-color: @oui-autocomplete-option-background-color;
     cursor: pointer;
+
+    &,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      #oui > .outline-border();
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @oui-autocomplete-option-background-color_hover;
+      color: @oui-autocomplete-option-font-color_hover;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: @oui-autocomplete-option-background-color;
+      color: @oui-autocomplete-option-font-color;
+      opacity: 0.5;
+    }
   }
 
   &-highlight {
