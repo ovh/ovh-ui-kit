@@ -12,7 +12,7 @@ const moduleName = 'autocomplete.stories';
 angular.module(moduleName, [Autocomplete]);
 
 export default {
-  title: 'Legacy/Directives/Autocomplete',
+  title: 'Design System/Directives/Autocomplete',
 
   parameters: {
     options: {
