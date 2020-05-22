@@ -10710,14 +10710,15 @@ husky@^4.2.3:
     slash "^3.0.0"
     which-pm-runs "^1.0.0"
 
-"icon-font-generator@https://github.com/AxelPeter/icon-font-generator/archive/v2.1.11.tar.gz":
-  version "2.1.11"
-  resolved "https://github.com/AxelPeter/icon-font-generator/archive/v2.1.11.tar.gz#cc2aa7400f966450a5582ed1caad5357f2f772de"
+icon-font-generator@^2.1.10:
+  version "2.1.10"
+  resolved "https://registry.yarnpkg.com/icon-font-generator/-/icon-font-generator-2.1.10.tgz#95d6d7f3c44dc68a5fbc37b2e1a9511487387eba"
+  integrity sha512-p8iMm+eG9toP/nRt3K7u19NPgPkjOzJS+zdf/FG7TXH0SE7teiBQIzge2aDvQOZf4HYtCVswz0Do3/nEQHLAhA==
   dependencies:
     colors "^1.2.1"
     glob "^7.1.2"
     minimist "^1.2.0"
-    webfonts-generator " https://github.com/AxelPeter/webfonts-generator/archive/v0.4.1.tar.gz"
+    webfonts-generator "^0.4.0"
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.24"
@@ -18173,9 +18174,10 @@ svg-tags@^1.0.0:
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
-"svg2ttf@https://github.com/AxelPeter/svg2ttf/archive/v4.3.1.tar.gz":
-  version "4.3.1"
-  resolved "https://github.com/AxelPeter/svg2ttf/archive/v4.3.1.tar.gz#36fd2b9b194b8167e354ccb0c8e8161cadfbdced"
+svg2ttf@^4.0.0, svg2ttf@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/svg2ttf/-/svg2ttf-5.0.0.tgz#834d5cc61c9ac14fa9f6ad2aa5a9736090e46204"
+  integrity sha512-xv4ERtuuaY+RQu7G57nKF7agrAGP+Bqmox72+kIbKek5vyAo02Dus901fR995p0E6adc27+kRhPVynDdShUWWw==
   dependencies:
     argparse "^1.0.6"
     cubic2quad "^1.0.0"
@@ -19489,14 +19491,15 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.3.tgz#9bbf5c99ff0908d2da031f1d732492a96571a83f"
   integrity sha512-r8sAtNmgR0WKOKOxzuSgk09JsHlpKlB+uHi937qypOu3PZ17UxPrierFKDye/uNHjNTTEshu5PId8rojIPj/tA==
 
-"webfonts-generator@ https://github.com/AxelPeter/webfonts-generator/archive/v0.4.1.tar.gz":
-  version "0.4.1"
-  resolved " https://github.com/AxelPeter/webfonts-generator/archive/v0.4.1.tar.gz#a5c91dae556e3d013d21e62c3952d6725ab9177c"
+webfonts-generator@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/webfonts-generator/-/webfonts-generator-0.4.0.tgz#5f89fc81c7160e6e0cbbc9b7387e42a5851fda46"
+  integrity sha1-X4n8gccWDm4Mu8m3OH5CpYUf2kY=
   dependencies:
     handlebars "^4.0.5"
     mkdirp "^0.5.0"
     q "^1.1.2"
-    svg2ttf "https://github.com/AxelPeter/svg2ttf/archive/v4.3.1.tar.gz"
+    svg2ttf "^4.0.0"
     svgicons2svgfont "^5.0.0"
     ttf2eot "^2.0.0"
     ttf2woff "^2.0.1"
