@@ -46,6 +46,7 @@
   },
   "resolutions": {
     "browserslist": "^4.x",
-    "caniuse-lite": "^1.x"
+    "caniuse-lite": "^1.x",
+    "svg2ttf": "^5.0.0"
   }
 }
