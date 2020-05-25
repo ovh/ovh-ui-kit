@@ -12,12 +12,12 @@
     "angular-sanitize": "^1.7.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "cross-env": "^7.0.2",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jasmine-core": "^3.5.0",
-    "karma": "^5.0.2",
+    "karma": "^5.0.9",
     "karma-coverage": "^2.0.2",
     "karma-jasmine": "^3.1.1",
     "karma-phantomjs-launcher": "^1.0.4",
