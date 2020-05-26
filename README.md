@@ -1,4 +1,4 @@
-# OVH UI Kit
+# OVHcloud UI Kit
 
 ## Introduction
 
