@@ -1,6 +1,6 @@
-# OVH UI Kit
+# OVHcloud UI Kit
 
-A component framework for the OVH brand.
+A component framework for the OVHcloud brand.
 
 [![npm version](https://badgen.net/npm/v/@ovh-ux/ui-kit)](https://www.npmjs.com/package/@ovh-ux/ui-kit)
 

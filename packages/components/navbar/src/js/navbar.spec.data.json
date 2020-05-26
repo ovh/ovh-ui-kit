@@ -1,6 +1,6 @@
 {
     "brand": {
-        "label": "OVH",
+        "label": "OVHcloud",
         "iconClass": "oui-icon oui-icon-ovh",
         "url": "#!/oui-angular/navbar"
     },

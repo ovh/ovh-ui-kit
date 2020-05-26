@@ -22,7 +22,7 @@ addParameters({
     page: DocsPage,
   },
   options: {
-    name: 'OVH UI Kit',
+    name: 'OVHcloud UI Kit',
     panelPosition: 'right',
     showRoots: true,
     storySort: ([,a], [,b]) => {
