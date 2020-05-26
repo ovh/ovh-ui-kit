@@ -1,7 +1,7 @@
 # Installation
 
 ```js
-angular.module('myModule', ['oui.calendar']);
+angular.module('myModule', ['oui.dual-list']);
 ```
 
 # Configuration
