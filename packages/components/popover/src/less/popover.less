@@ -47,9 +47,13 @@
     &:hover,
     &:focus,
     &:active {
-      #oui > .outline-border-inner(
-        @outline-offset: @oui-popover-close-button-outline-offset
-      );
+      #oui > .animate();
+
+      color: @oui-popover-close-button-icon-color_hover;
+    }
+
+    &:focus {
+      #oui > .outline-border();
     }
   }
 

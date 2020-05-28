@@ -385,17 +385,14 @@
   &-calendar.showTimeInput.hasTime &-innerContainer + &-time { border-top: @oui-calendar-header-border-bottom; }
 
   &-time &-am-pm {
+    #oui > .button-ghost-color();
+
     width: @oui-calendar-cell-width;
     max-width: @oui-calendar-cell-width;
     min-width: @oui-calendar-cell-width;
     height: 100%;
-    font-size: @oui-calendar-font-size;
-    font-weight: @oui-calendar-font-weight;
-    color: @oui-calendar-button-font-color;
-    background: @oui-calendar-button-background-color;
+    margin-left: @oui-calendar-button-spacing;
     border-radius: @oui-calendar-button-border-radius;
-
-    &:hover,
-    &:focus { background-color: @oui-calendar-button-background-color_hover; }
+    transition: background-color ease-in 200ms, border-color ease-in 200ms, box-shadow ease-in 200ms;
   }
 }
