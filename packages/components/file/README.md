@@ -16,6 +16,7 @@ angular.module('myModule', ['oui.file'])
       attachmentsHeading: 'Attachment(s)',
       dropArea: 'Attach document(s) by drap and drop or',
       dropAreaSelector: 'select a file',
+      filePlaceholder: 'Select a file...',
       fileSelector: 'Select file',
       filesSelector: 'Select file(s)...',
       maxsizeError: 'This file exceeds the size limit',
@@ -50,5 +51,3 @@ angular.module('myModule', ['oui.file'])
 | `droparea`        | boolean           | <?        | yes               | `true`, `false`   | `false`   | enable a drop area to drag files
 | `preview`         | boolean           | <?        | yes               | `true`, `false`   | `false`   | show preview of image files (works only with `image/*` files.)
 | `on-select`       | function          | &         | no                | n/a               | n/a       | handler triggered when files are selected
-
-### Attributes

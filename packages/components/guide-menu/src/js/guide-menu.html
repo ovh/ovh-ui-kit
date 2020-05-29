@@ -1,8 +1,8 @@
 <oui-dropdown class="oui-dropdown_guide-menu" arrow
     placement="{{::$ctrl.placement}}">
-    <button class="oui-guide-button oui-dropdown__trigger" oui-dropdown-trigger>
-        <span class="oui-guide-button__icon oui-icon oui-icon-guides"></span>
-        <span class="oui-guide-button__text" ng-bind="::$ctrl.text"></span>
+    <button class="oui-dropdown__trigger oui-button oui-button_ghost oui-button_icon-left" oui-dropdown-trigger>
+        <span class="oui-icon oui-icon-guides"></span>
+        <span ng-bind="::$ctrl.text"></span>
     </button>
     <oui-dropdown-content class="oui-guide-menu"
         ng-transclude>

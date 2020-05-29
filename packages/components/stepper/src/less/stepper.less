@@ -30,7 +30,7 @@
       content: counter(steps);
       width: @oui-stepper-step-bullet-size;
       height: @oui-stepper-step-bullet-size;
-      line-height: @oui-stepper-step-bullet-size;
+      line-height: @oui-stepper-step-bullet-line-height;
       display: inline-block;
       position: absolute;
       top: ~"calc((@{oui-stepper-step-title-line-height} - @{oui-stepper-step-bullet-size}) / 2)";
@@ -112,6 +112,7 @@
   &__container_complete {
     .oui-stepper__header::before {
       content: @oui-stepper-step-bullet-icon-content_complete;
+      line-height: @oui-stepper-step-bullet-size;
       font-family: @oui-stepper-step-bullet-icon-font-family;
       font-weight: @oui-stepper-step-bullet-icon-font-weight;
       color: @oui-stepper-step-bullet-color_complete;

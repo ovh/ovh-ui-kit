@@ -11,6 +11,7 @@ export default class {
       maxDate: null,
       minDate: null,
       mode: 'single',
+      monthSelectorType: 'static',
       nextArrow: '<span class="oui-icon oui-icon-chevron-right"></span>',
       prevArrow: '<span class="oui-icon oui-icon-chevron-left"></span>',
       showMonths: 1,

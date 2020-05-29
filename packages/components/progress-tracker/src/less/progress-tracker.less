@@ -47,7 +47,6 @@
       counter-increment: oui-progress-tracker;
       width: @oui-progress-tracker-status-height;
       height: @oui-progress-tracker-status-height;
-      line-height: @oui-progress-tracker-status-height;
       display: block;
       position: absolute;
       left: 0;
@@ -85,9 +84,11 @@
     color: @oui-progress-tracker-label-color_complete;
 
     &::before {
-      content: @oui-progress-tracker-status-icon_complete;
-      font-family: @oui-progress-tracker-status-font-family_complete;
-      font-size: @oui-progress-tracker-status-font-size_complete;
+      content: @oui-progress-tracker-status-icon-content_complete;
+      line-height: @oui-progress-tracker-status-height;
+      font-family: @oui-progress-tracker-status-icon-font-family;
+      font-size: @oui-progress-tracker-status-icon-font-size;
+      font-weight: @oui-progress-tracker-status-icon-font-weight;
       color: @oui-progress-tracker-font-color_complete;
       background-color: @oui-progress-tracker-background-color_complete;
     }
@@ -102,9 +103,11 @@
     color: @oui-progress-tracker-label-color_error;
 
     &::before {
-      content: @oui-progress-tracker-status-icon_error;
-      font-family: @oui-progress-tracker-status-font-family_error;
-      font-size: @oui-progress-tracker-status-font-size_error;
+      content: @oui-progress-tracker-status-icon-content_error;
+      line-height: @oui-progress-tracker-status-height;
+      font-family: @oui-progress-tracker-status-icon-font-family;
+      font-size: @oui-progress-tracker-status-icon-font-size;
+      font-weight: @oui-progress-tracker-status-icon-font-weight;
       color: @oui-progress-tracker-font-color_error;
       background-color: @oui-progress-tracker-background-color_error;
     }

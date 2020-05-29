@@ -1,2 +1,7 @@
-* text=auto
-*.less text eol=lf
+# Enforce Unix newlines
+* text eol=lf
+
+# Don't diff or textually merge
+*.map   binary
+*.woff  binary
+*.woff2 binary

@@ -4,6 +4,7 @@ import template from './pagination.html';
 export default {
   template,
   bindings: {
+    mode: '@?',
     currentOffset: '<',
     pageSize: '<?',
     pageSizeMax: '<?',

@@ -1,12 +1,10 @@
-<button class="oui-button oui-button_secondary oui-button_s"
+<button class="oui-numeric__button oui-button oui-button_primary oui-button_s"
     type="button"
     ng-disabled="$ctrl.disabled || $ctrl.model <= $ctrl.min"
     ng-click="$ctrl.decrement()"
     tabindex="-1"
-    aria-hidden="true">
-    <span class="oui-icon oui-icon-remove"></span>
-</button>
-<input class="oui-input oui-input_number"
+    aria-hidden="true">&minus;</button>
+<input class="oui-numeric__input oui-input"
     type="number"
     role="slider"
     required
@@ -19,12 +17,13 @@
     ng-attr-aria-valuenow="{{ $ctrl.model }}"
     ng-disabled="$ctrl.disabled"
     ng-change="$ctrl.onInputChanged()"
-    ng-model="$ctrl.model">
-<button class="oui-button oui-button_secondary oui-button_s"
+    ng-model="$ctrl.model"
+    ng-style="{
+        'width': $ctrl.getWidth(),
+    }">
+<button class="oui-numeric__button oui-button oui-button_primary oui-button_s"
     type="button"
     ng-disabled="$ctrl.disabled || $ctrl.model >= $ctrl.max"
     ng-click="$ctrl.increment()"
     tabindex="-1"
-    aria-hidden="true">
-    <span class="oui-icon oui-icon-add"></span>
-</button>
+    aria-hidden="true">&plus;</button>

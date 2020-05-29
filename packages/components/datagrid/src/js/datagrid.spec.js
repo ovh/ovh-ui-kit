@@ -17,9 +17,7 @@ describe('ouiDatagrid', () => {
   const getFooterRow = (element) => angular.element(element[0].querySelector('tfoot > tr'));
   const getFooterCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__footer')[columnNumber]);
   const getCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__cell')[columnNumber]);
-  const getPaginationOffset = (element) => angular.element(element[0].querySelector('.oui-pagination .oui-dropdown .oui-button span:first-child'));
-  const getPaginationLastItemOffset = (element) => angular.element(element[0].querySelector('.oui-pagination .oui-dropdown .oui-button span:nth-child(2)'));
-  const getNextPagePaginationButton = (element) => angular.element(element[0].querySelector('.oui-pagination__selector > .oui-button:last-child'));
+  const getNextPagePaginationButton = (element) => angular.element(element[0].querySelector('.oui-pagination-nav__next'));
   const isSortableCell = (element) => element.hasClass('oui-datagrid__header_sortable');
   const isSortableAscCell = (element) => {
     const isSortable = isSortableCell(element);
@@ -1076,25 +1074,6 @@ describe('ouiDatagrid', () => {
           expect(changeHandler).toHaveBeenCalledWith(id, changedColumns);
         });
       });
-    });
-
-    it('should display a pagination component', () => {
-      const element = TestUtils.compileTemplate(`
-                    <oui-datagrid rows="$ctrl.rows">
-                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
-                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
-                    </oui-datagrid>
-                `, {
-        rows: fakeData.slice(0, 5),
-      });
-
-      $timeout.flush();
-
-      const $paginationOffset = getPaginationOffset(element);
-      const $paginationLastItemOffset = getPaginationLastItemOffset(element);
-
-      expect($paginationOffset.html()).toBe('1');
-      expect($paginationLastItemOffset.html()).toBe('5');
     });
 
     it('should support row data binding inside cell', () => {

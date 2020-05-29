@@ -18,8 +18,8 @@
 
     background-color: @oui-switch-background-color;
     bottom: 0;
-    border: 1px solid transparent;
-    border-radius: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+    border: @oui-switch-border-width solid @oui-switch-border-color;
+    border-radius: @oui-switch-border-radius;
     box-shadow: @oui-switch-box-shadow;
     cursor: pointer;
     left: 0;
@@ -30,15 +30,21 @@
     &::before {
       #oui > .animate();
 
-      background-color: @oui-switch-cursor-background-color;
-      border-radius: 50%;
-      bottom: ~"calc(@{oui-switch-border-width} - 1px)";
-      box-shadow: @oui-switch-cursor-box-shadow;
-      content: "";
-      height: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
-      left: ~"calc(@{oui-switch-border-width} - 1px)";
+      content: @oui-switch-cursor-icon-index;
+      width: @oui-switch-cursor-size;
+      height: @oui-switch-cursor-size;
+      line-height: @oui-switch-cursor-size;
       position: absolute;
-      width: ~"calc(@{oui-switch-height} - @{oui-switch-border-width} * 2)";
+      bottom: @oui-switch-cursor-position-y;
+      left: @oui-switch-cursor-position-x;
+      font-family: @oui-switch-cursor-icon-family;
+      font-size: @oui-switch-cursor-icon-size;
+      text-align: center;
+      color: @oui-switch-cursor-icon-color;
+      border-radius: 50%;
+      box-shadow: @oui-switch-cursor-box-shadow;
+      background-color: @oui-switch-cursor-background-color;
+      transition-property: background-color, color, transform;
       z-index: 1;
     }
   }
@@ -48,22 +54,23 @@
 
     &:checked {
       ~ .oui-switch__slider {
+        border-color: @oui-switch-border-color_checked;
         background-color: @oui-switch-background-color_checked;
       }
 
       ~ .oui-switch__slider::before {
-        transform: translateX(@oui-switch-width - @oui-switch-height);
+        content: @oui-switch-cursor-icon-index_checked;
+        color: @oui-switch-cursor-icon-color_checked;
+        box-shadow: @oui-switch-cursor-box-shadow_checked;
+        background-color: @oui-switch-cursor-background-color_checked;
+        transform: translateX(@oui-switch-width - @oui-switch-cursor-size - (@oui-switch-cursor-position-x * 2) - (@oui-switch-border-width * 2));
       }
     }
 
     &:disabled {
       ~ .oui-switch__slider {
-        background-color: @oui-switch-background-color_disabled;
-        cursor: default;
-
-        &::before {
-          background-color: @oui-switch-cursor-background-color_disabled;
-        }
+        opacity: 0.5;
+        cursor: not-allowed;
       }
     }
 
@@ -96,6 +103,7 @@ oui-switch {
 
   .oui-switch__checkbox:not(:disabled) + .oui-switch__slider::before,
   .oui-switch__checkbox:checked + .oui-switch__slider::before {
+    background-color: @oui-switch-cursor-icon-color_error;
     box-shadow: @oui-switch-cursor-box-shadow_error;
   }
 }

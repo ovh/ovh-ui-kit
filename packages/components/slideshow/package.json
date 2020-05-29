@@ -7,8 +7,8 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
-    "test": "cross-env NODE_ENV=test babel-node ./node_modules/.bin/karma start --reporters spec,coverage --single-run",
-    "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/karma start --watch"
+    "test": "cross-env NODE_ENV=test karma start --reporters spec,coverage --single-run",
+    "test:watch": "cross-env NODE_ENV=test karma start --watch"
   },
   "dependencies": {
     "@ovh-ux/ui-kit.core": "*",
@@ -16,11 +16,12 @@
     "angular": "^1.7.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
+    "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@ovh-ux/ui-kit.test": "*",
     "angular-mocks": "^1.7.9",
-    "cross-env": "^6.0.3",
-    "karma": "^4.4.1"
+    "cross-env": "^7.0.2",
+    "karma": "^5.0.9",
+    "karma-cli": "^2.0.0"
   }
 }

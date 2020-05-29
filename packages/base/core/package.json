@@ -14,9 +14,9 @@
     "icons-generator": "icon-font-generator ./src/svg/icons/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types \"woff, woff2\" --center --normalize"
   },
   "devDependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "icon-font-generator": "^2.1.10",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^1.0.4"
   },
   "resolutions": {
     "svg2ttf": "^5.0.0"

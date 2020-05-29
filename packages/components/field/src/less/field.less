@@ -2,6 +2,9 @@
   margin-bottom: @oui-field-margin;
 
   &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-bottom: @oui-field-header-spacing;
   }
 
@@ -18,17 +21,23 @@
   }
 
   &__helper {
+    line-height: @oui-field-helper-line-height;
+    margin: @oui-field-helper-margin;
     color: @oui-field-helper-font-color;
     font-size: @oui-field-helper-font-size;
-    font-size: @oui-field-helper-font-weight;
+    font-weight: @oui-field-helper-font-weight;
     text-align: justify;
   }
 
   &__error {
+    line-height: @oui-field-helper-line-height;
+    margin: @oui-field-helper-margin;
     display: none;
     color: @oui-field-helper-font-color_error;
     font-size: @oui-field-helper-font-size;
     text-align: justify;
+
+    span { display: block; }
   }
 
   // Sizes

@@ -3,6 +3,7 @@ import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/sr
 // By design, value is restricted to [0, 99999] interval
 const MIN_VALUE = 0;
 const MAX_VALUE = 99999;
+const MIN_WIDTH = 3;
 
 export default class {
   constructor($attrs, $element, $log, $scope, $timeout) {
@@ -60,6 +61,19 @@ export default class {
       .addClass('oui-numeric')
       .removeAttr('id')
       .removeAttr('name'));
+  }
+
+  getWidth() {
+    // We calculate the width of the input
+    // based on the digits of the max number
+    let inputWidth = MIN_WIDTH;
+
+    if (this.max && angular.isNumber(this.max)) {
+      const maxString = this.max.toString();
+      inputWidth = maxString.length || MIN_WIDTH;
+    }
+
+    return `${inputWidth}ch`;
   }
 
   setModelValue(value) {

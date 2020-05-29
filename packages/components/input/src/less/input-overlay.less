@@ -15,14 +15,13 @@
   > .oui-button,
   > .oui-icon {
     width: auto;
-    height: auto;
-    min-width: @oui-input-overlay-size;
+    height: @oui-input-overlay-icon-size;
+    min-width: @oui-input-overlay-icon-size;
     margin: 0;
-    padding: @oui-input-overlay-padding;
+    padding: 0;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    top: @oui-input-overlay-icon-spacing;
+    right: @oui-input-overlay-icon-spacing;
     z-index: 1; // Avoid to be hidden by inputs
 
     &,

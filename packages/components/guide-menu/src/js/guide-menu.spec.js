@@ -8,7 +8,7 @@ describe('ouiGuideMenu', () => {
     TestUtils = _TestUtils_;
   }));
 
-  const getButtonTextEl = (element) => angular.element(element[0].querySelector('.oui-guide-button__text'));
+  const getButtonTextEl = (element) => angular.element(element[0].querySelector('.oui-dropdown__trigger'));
 
   describe('Component', () => {
     it('should display a guide menu', () => {
@@ -17,7 +17,7 @@ describe('ouiGuideMenu', () => {
                 <oui-guide-menu text="${text}"></oui-guide-menu>`);
 
       const buttonText = getButtonTextEl(element);
-      expect(buttonText.html()).toBe(text);
+      expect(buttonText.text().trim()).toBe(text);
     });
   });
 });

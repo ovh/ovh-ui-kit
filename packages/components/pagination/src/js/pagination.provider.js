@@ -4,7 +4,7 @@ export default class {
   constructor() {
     this.pageSize = 25;
     this.pageSizeList = [
-      25, 50, 100, 300, // eslint-disable-line no-magic-numbers
+      25, 50, 100, 300,
     ];
     this.translations = {
       resultsPerPage: 'Results per page',
@@ -43,10 +43,10 @@ export default class {
   }
 
   $get() {
-    return {
+    return angular.copy({
       pageSize: this.pageSize,
       pageSizeList: this.pageSizeList,
       translations: this.translations,
-    };
+    });
   }
 }

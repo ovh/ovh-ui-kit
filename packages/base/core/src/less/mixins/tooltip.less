@@ -1,0 +1,145 @@
+#oui {
+  .tooltip-base(
+    @min-width: @oui-tooltip-min-width,
+    @max-width: @oui-tooltip-max-width,
+    @line-height: @oui-tooltip-line-height,
+    @padding: @oui-tooltip-padding,
+    @spacing: @oui-tooltip-spacing,
+    @font-color: @oui-tooltip-font-color,
+    @font-size: @oui-tooltip-font-size,
+    @font-weight: @oui-tooltip-font-weight,
+    @box-shadow: @oui-tooltip-box-shadow,
+    @border-color: @oui-tooltip-border-color,
+    @border-width: @oui-tooltip-border-width,
+    @border-radius: @oui-tooltip-border-radius,
+    @background-color: @oui-tooltip-background-color
+  ) {
+    min-width: @min-width;
+    max-width: @max-width;
+    line-height: @line-height;
+    box-sizing: border-box;
+    margin: 0;
+    padding: @padding;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    font-size: @font-size;
+    font-weight: @font-weight;
+    color: @font-color;
+    box-shadow: @box-shadow;
+    border: solid @border-width @border-color;
+    border-radius: @border-radius;
+    background-color: @background-color;
+    opacity: 0;
+    transition-property: opacity, z-index;
+    transition-duration: @oui-tooltip-transition-duration;
+    transition-timing-function: @oui-tooltip-transition-animation;
+    z-index: -1;
+    user-select: none;
+    cursor: default;
+
+    &[x-placement=""],
+    &[x-placement^='bottom'] { margin-top: @spacing; }
+
+    &[x-placement^='top'] { margin-bottom: @spacing; }
+
+    &[x-placement^='right'] { margin-left: @spacing; }
+
+    &[x-placement^='left'] { margin-right: @spacing; }
+  }
+
+  .tooltip-arrow(
+    @selector: oui-tooltip__arrow,
+    @size: @oui-tooltip-arrow-size,
+    @background-color: @oui-tooltip-arrow-background-color,
+    @border-color: @oui-tooltip-arrow-border-color,
+    @border-width: @oui-tooltip-arrow-border-width,
+    @box-shadow: @oui-tooltip-arrow-box-shadow
+  ) {
+    // To get an arrow with a working box-shadow,
+    // we use a rotated square to create an arrow.
+    // Before, we need to do some calculation here.
+    @calc-shadow: rem-calc(6);
+    @calc-square-side: calc(@size / sqrt(2));
+    @calc-overflow-width: calc(@size + (@calc-shadow * 2));
+    @calc-overflow-height: calc(@calc-overflow-width / 2);
+    @calc-translate: calc(-@size / 2);
+
+    .@{selector} {
+      position: absolute;
+      overflow: hidden; // Allow to contain the box-shadow
+      pointer-events: none;
+
+      &::before {
+        content: " ";
+        width: @calc-square-side;
+        height: @calc-square-side;
+        position: absolute;
+        transform-origin: 0 0;
+        border: @border-width solid @border-color;
+        box-shadow: @box-shadow;
+        background-color: @background-color;
+      }
+    }
+
+    &[x-placement=""],
+    &[x-placement^="bottom"],
+    &[x-placement^="top"] {
+      .@{selector} {
+        width: @calc-overflow-width;
+        height: @calc-overflow-height;
+        left: 50%;
+
+        &::before {
+          left: 50%;
+          transform: translateX(@calc-translate) rotate(-45deg);
+        }
+      }
+    }
+
+    &[x-placement^='top'] .@{selector} {
+      bottom: 0;
+      transform: translateY(100%);
+    }
+
+    &[x-placement=""] .@{selector},
+    &[x-placement^='bottom'] .@{selector} {
+      top: 0;
+      transform: translateY(-100%);
+
+      &::before {
+        top: 100%;
+      }
+    }
+
+    &[x-placement^="left"],
+    &[x-placement^="right"] {
+      .@{selector} {
+        width: @calc-overflow-height;
+        height: @calc-overflow-width;
+        top: 50%;
+
+        &::before {
+          top: 50%;
+          transform: translateY(@calc-translate) rotate(45deg);
+        }
+      }
+    }
+
+    &[x-placement^='left'] .@{selector} {
+      right: 0;
+      transform: translateX(100%);
+    }
+
+    &[x-placement^='right'] .@{selector} {
+      left: 0;
+      transform: translateX(-100%);
+
+      &::before {
+        left: 100%;
+      }
+    }
+  }
+}

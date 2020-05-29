@@ -33,8 +33,8 @@
     }">
 
     <!-- Fake Selector -->
-    <div class="oui-file-selector__input">
-        <button class="oui-file-selector__label" type="button"
+    <div class="oui-file-selector__input oui-input-overlay">
+        <button class="oui-file-selector__label oui-input" type="button"
             ng-blur="$ctrl.setInputTouched()"
             ng-click="$ctrl.openFileSelector()"
             ng-disabled="$ctrl.disabled">
@@ -50,22 +50,22 @@
                 <span class="oui-file-ellipsis__size" ng-bind="$ctrl.model[0].infos.size"></span>
             </span>
         </button>
-        <button class="oui-file__remove" type="button"
+        <button class="oui-file-selector__remove oui-icon oui-icon-close" type="button"
+            aria-label="{{::$ctrl.translations.removeFile}}"
             ng-show="!!$ctrl.model[0]"
             ng-click="$ctrl.resetFile()"
             ng-disabled="$ctrl.disabled">
-            <span class="oui-icon oui-icon-close"
-                aria-hidden="{{::$ctrl.translations.removeFile}}">
-            </span>
         </button>
+        <span class="oui-file-selector__decorator oui-icon oui-icon-file" aria-hidden="hidden"></span>
     </div>
     <!-- /Fake Selector -->
 
-    <button class="oui-file-selector__button" type="button"
-        ng-bind="::$ctrl.translations.fileSelector"
+    <button class="oui-file-selector__button oui-button oui-button_primary oui-button_icon-left" type="button"
         ng-click="$ctrl.openFileSelector()"
         ng-disabled="$ctrl.disabled"
         tabindex="-1">
+        <span class="oui-icon oui-icon-folder" aria-hidden="true"></span>
+        <span ng-bind="::$ctrl.translations.fileSelector"></span>
     </button>
 </div>
 <!-- /Selector -->
@@ -75,9 +75,10 @@
     ng-if="::$ctrl.multiple && !$ctrl.droparea">
     <oui-button
         disabled="$ctrl.disabled"
-        variant="secondary"
-        on-click="$ctrl.openFileSelector()">
-        {{::$ctrl.translations.filesSelector}}
+        icon-left="oui-icon-folder"
+        on-click="$ctrl.openFileSelector()"
+        variant="primary">
+        <span ng-bind="::$ctrl.translations.filesSelector"></span>
     </oui-button>
 </div>
 <!-- /Multiple -->
@@ -89,12 +90,17 @@
         'oui-file-droparea_disabled': !!$ctrl.disabled
     }"
     ng-attr-id="{{::$ctrl.dropareaId}}">
-    <span ng-bind="::$ctrl.translations.dropArea"></span>
-    <oui-button variant="link"
-        disabled="$ctrl.disabled"
-        on-click="$ctrl.openFileSelector()">
-        {{::$ctrl.translations.dropAreaSelector}}
-    </oui-button>
+    <div class="oui-file-droparea__icon">
+        <span class="oui-icon oui-icon-file" aria-hidden="true"></span>
+    </div>
+    <div class="oui-file-droparea__text" >
+        <span ng-bind="::$ctrl.translations.dropArea"></span>
+        <button class="oui-link"
+            ng-bind="::$ctrl.translations.dropAreaSelector"
+            ng-click="$ctrl.openFileSelector()"
+            ng-disabled="$ctrl.disabled">
+        </button>
+    </div>
 </div>
 <!-- /Drop Area -->
 
@@ -107,12 +113,16 @@
     </p>
     <ul class="oui-file-attachments__list"
         ng-if="$ctrl.model && $ctrl.model.length">
-        <li class="oui-file-attachments__item"
+        <li class="oui-file-attachments__item"s
             ng-class="{
                 'oui-file-attachments__item_error': file.errors,
                 'oui-file-attachments__item_loading': file.loading
             }"
             ng-repeat="file in $ctrl.model track by $index">
+            <span class="oui-file-attachments__decorator oui-icon oui-icon-file"
+                aria-hidden="true"
+                ng-if="!$ctrl.preview">
+            </span>
             <span class="oui-file-attachments__preview"
                 ng-if="$ctrl.preview">
                 <span class="oui-file-attachments__image"
@@ -134,12 +144,11 @@
                     ng-bind="::$ctrl.translations.maxsizeError">
                 </span>
             </span>
-            <button class="oui-file__remove" type="button"
+            <button class="oui-file-attachments__remove oui-icon oui-icon-close"
+                type="button"
+                aria-label="{{::$ctrl.translations.removeFile}}"
                 ng-click="$ctrl.removeFile(file)"
                 ng-disabled="$ctrl.disabled">
-                <span class="oui-icon oui-icon-close"
-                    aria-hidden="{{::$ctrl.translations.removeFile}}">
-                </span>
             </button>
         </li>
     </ul>

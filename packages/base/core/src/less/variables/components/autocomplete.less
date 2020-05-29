@@ -1,8 +1,25 @@
 // Autocomplete
-@oui-autocomplete-items-displayed: 5;
-@oui-autocomplete-item-height: @oui-dropdown-item-height;
-@oui-autocomplete-menu-spacing: @oui-dropdown-menu-spacing;
+@oui-autocomplete-max-height: calc(@oui-autocomplete-item-height * @oui-autocomplete-items-displayed);
+@oui-autocomplete-margin: 0;
+@oui-autocomplete-padding: 0;
+@oui-autocomplete-background-color: @p-000;
+@oui-autocomplete-box-shadow: @base-box-shadow-primary;
 
-@oui-autocomplete-highlight-color: inherit;
-@oui-autocomplete-highlight-font-weight: @oui-font-bold;
+@oui-autocomplete-items-displayed: 5;
+@oui-autocomplete-item-height: rem-calc(28);
+
+@oui-autocomplete-option-line-height: 1.25;
+@oui-autocomplete-option-padding: rem-calc(4) rem-calc(8);
+
+@oui-autocomplete-option-background-color: @p-000;
+@oui-autocomplete-option-background-color_hover: @p-100;
+@oui-autocomplete-option-background-color_checked: @p-500;
+@oui-autocomplete-option-font-color: @p-800-text;
+@oui-autocomplete-option-font-color_hover: @p-800-text;
+@oui-autocomplete-option-font-color_checked: @p-000;
+@oui-autocomplete-option-font-size: rem-calc(16);
+@oui-autocomplete-option-font-weight: 400;
+
+@oui-autocomplete-highlight-color: @p-500;
+@oui-autocomplete-highlight-font-weight: 600;
 @oui-autocomplete-highlight-background: none;

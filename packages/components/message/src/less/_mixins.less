@@ -1,16 +1,15 @@
 #oui {
   .message-color(
-    @selector: oui-message,
     @font-color: @oui-message-info-font-color,
-    @border-color: @oui-message-info-border-color,
     @background-color: @oui-message-info-background-color,
+    @icon-index: @oui-message-info-icon-index,
     @icon-color: @oui-message-info-icon-color
   ) {
-    border-color: @border-color;
     background-color: @background-color;
     color: @font-color;
 
-    .@{selector}__icon {
+    &__icon {
+      content: @icon-index;
       color: @icon-color;
     }
   }

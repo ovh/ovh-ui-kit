@@ -17,18 +17,13 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-down"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-arrow-down</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-up"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-up</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-down-right"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-arrow-down-right</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-left"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-arrow-left</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-up-right"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-up-right</code></div>
   </div>
 
   <div class="doc-badge">
@@ -37,13 +32,23 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-up"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-arrow-up</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-down-right"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-down-right</code></div>
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-up-right"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-arrow-up-right</code></div>
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-down"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-down</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-left"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-left</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-transfer"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-transfer</code></div>
   </div>
 
   <div class="doc-badge">
@@ -67,6 +72,11 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cart"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-cart</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chat"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-chat</code></div>
   </div>
@@ -74,6 +84,16 @@ export const System = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-check"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-check</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chevron-up"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-chevron-up</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chevron-right"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-chevron-right</code></div>
   </div>
 
   <div class="doc-badge">
@@ -87,18 +107,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chevron-right"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-chevron-right</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chevron-up-down"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-chevron-up-down</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-chevron-up"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-chevron-up</code></div>
   </div>
 
   <div class="doc-badge">
@@ -129,6 +139,11 @@ export const System = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-equal"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-equal</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-email"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-email</code></div>
   </div>
 
   <div class="doc-badge">
@@ -232,6 +247,11 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-lock"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-lock</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-minus"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-minus</code></div>
   </div>
@@ -247,6 +267,11 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-pen"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-pen</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-phone"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-phone</code></div>
   </div>
@@ -254,6 +279,11 @@ export const System = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-plus"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-plus</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-printer"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-printer</code></div>
   </div>
 
   <div class="doc-badge">
@@ -302,6 +332,11 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort-up"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-sort-up</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort-down"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-sort-down</code></div>
   </div>
@@ -312,28 +347,8 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-sort-up"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-sort-up</code></div>
-  </div>
-
-  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-time"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-time</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-trash"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-trash</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-triangle-left"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-triangle-left</code></div>
-  </div>
-
-  <div class="doc-badge">
-    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-triangle-right"></span></div>
-    <div class="doc-badge__code"><code>.oui-icon-triangle-right</code></div>
   </div>
 
   <div class="doc-badge">
@@ -342,8 +357,23 @@ export const System = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-triangle-right"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-triangle-right</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-triangle-down"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-triangle-down</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-triangle-left"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-triangle-left</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-truck"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-truck</code></div>
   </div>
 
   <div class="doc-badge">
