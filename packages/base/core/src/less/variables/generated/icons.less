@@ -194,6 +194,7 @@
   ~"arrow-down"
   ~"arrow-left"
   ~"arrow-right"
+  ~"arrow-transfer"
   ~"arrow-up-right"
   ~"arrow-up"
   ~"bell"
@@ -242,7 +243,7 @@
   ~"pen"
   ~"phone"
   ~"plus"
-  ~"print"
+  ~"printer"
   ~"refresh"
   ~"remove"
   ~"search"
@@ -261,6 +262,7 @@
   ~"triangle-left"
   ~"triangle-right"
   ~"triangle-up"
+  ~"truck"
   ~"user"
   ~"warning-circle"
   ~"warning";
@@ -457,73 +459,75 @@
 @oui-icon-index-arrow-down: "\f1be";
 @oui-icon-index-arrow-left: "\f1bf";
 @oui-icon-index-arrow-right: "\f1c0";
-@oui-icon-index-arrow-up-right: "\f1c1";
-@oui-icon-index-arrow-up: "\f1c2";
-@oui-icon-index-bell: "\f1c3";
-@oui-icon-index-bin: "\f1c4";
-@oui-icon-index-book: "\f1c5";
-@oui-icon-index-calendar: "\f1c6";
-@oui-icon-index-cart: "\f1c7";
-@oui-icon-index-chat: "\f1c8";
-@oui-icon-index-check: "\f1c9";
-@oui-icon-index-chevron-down: "\f1ca";
-@oui-icon-index-chevron-left: "\f1cb";
-@oui-icon-index-chevron-right: "\f1cc";
-@oui-icon-index-chevron-up-down: "\f1cd";
-@oui-icon-index-chevron-up: "\f1ce";
-@oui-icon-index-clock-wait: "\f1cf";
-@oui-icon-index-close: "\f1d0";
-@oui-icon-index-copy: "\f1d1";
-@oui-icon-index-ellipsis-vertical: "\f1d2";
-@oui-icon-index-ellipsis: "\f1d3";
-@oui-icon-index-email: "\f1d4";
-@oui-icon-index-equal: "\f1d5";
-@oui-icon-index-error-circle: "\f1d6";
-@oui-icon-index-error: "\f1d7";
-@oui-icon-index-external-link: "\f1d8";
-@oui-icon-index-eye-closed: "\f1d9";
-@oui-icon-index-eye-open: "\f1da";
-@oui-icon-index-file: "\f1db";
-@oui-icon-index-filter: "\f1dc";
-@oui-icon-index-folder: "\f1dd";
-@oui-icon-index-gear: "\f1de";
-@oui-icon-index-guides: "\f1df";
-@oui-icon-index-hamburger: "\f1e0";
-@oui-icon-index-help-circle: "\f1e1";
-@oui-icon-index-help: "\f1e2";
-@oui-icon-index-home: "\f1e3";
-@oui-icon-index-indeterminate: "\f1e4";
-@oui-icon-index-info-circle: "\f1e5";
-@oui-icon-index-info: "\f1e6";
-@oui-icon-index-lightbulb: "\f1e7";
-@oui-icon-index-list: "\f1e8";
-@oui-icon-index-location: "\f1e9";
-@oui-icon-index-lock: "\f1ea";
-@oui-icon-index-minus: "\f1eb";
-@oui-icon-index-ok: "\f1ec";
-@oui-icon-index-ovh: "\f1ed";
-@oui-icon-index-pen: "\f1ee";
-@oui-icon-index-phone: "\f1ef";
-@oui-icon-index-plus: "\f1f0";
-@oui-icon-index-print: "\f1f1";
-@oui-icon-index-refresh: "\f1f2";
-@oui-icon-index-remove: "\f1f3";
-@oui-icon-index-search: "\f1f4";
-@oui-icon-index-settings: "\f1f5";
-@oui-icon-index-shape-circle: "\f1f6";
-@oui-icon-index-shape-dot: "\f1f7";
-@oui-icon-index-sort-down: "\f1f8";
-@oui-icon-index-sort-up: "\f1f9";
-@oui-icon-index-sort: "\f1fa";
-@oui-icon-index-success-circle: "\f1fb";
-@oui-icon-index-success: "\f1fc";
-@oui-icon-index-time: "\f1fd";
-@oui-icon-index-transfer: "\f1fe";
-@oui-icon-index-trash: "\f1ff";
-@oui-icon-index-triangle-down: "\f200";
-@oui-icon-index-triangle-left: "\f201";
-@oui-icon-index-triangle-right: "\f202";
-@oui-icon-index-triangle-up: "\f203";
-@oui-icon-index-user: "\f204";
-@oui-icon-index-warning-circle: "\f205";
-@oui-icon-index-warning: "\f206";
+@oui-icon-index-arrow-transfer: "\f1c1";
+@oui-icon-index-arrow-up-right: "\f1c2";
+@oui-icon-index-arrow-up: "\f1c3";
+@oui-icon-index-bell: "\f1c4";
+@oui-icon-index-bin: "\f1c5";
+@oui-icon-index-book: "\f1c6";
+@oui-icon-index-calendar: "\f1c7";
+@oui-icon-index-cart: "\f1c8";
+@oui-icon-index-chat: "\f1c9";
+@oui-icon-index-check: "\f1ca";
+@oui-icon-index-chevron-down: "\f1cb";
+@oui-icon-index-chevron-left: "\f1cc";
+@oui-icon-index-chevron-right: "\f1cd";
+@oui-icon-index-chevron-up-down: "\f1ce";
+@oui-icon-index-chevron-up: "\f1cf";
+@oui-icon-index-clock-wait: "\f1d0";
+@oui-icon-index-close: "\f1d1";
+@oui-icon-index-copy: "\f1d2";
+@oui-icon-index-ellipsis-vertical: "\f1d3";
+@oui-icon-index-ellipsis: "\f1d4";
+@oui-icon-index-email: "\f1d5";
+@oui-icon-index-equal: "\f1d6";
+@oui-icon-index-error-circle: "\f1d7";
+@oui-icon-index-error: "\f1d8";
+@oui-icon-index-external-link: "\f1d9";
+@oui-icon-index-eye-closed: "\f1da";
+@oui-icon-index-eye-open: "\f1db";
+@oui-icon-index-file: "\f1dc";
+@oui-icon-index-filter: "\f1dd";
+@oui-icon-index-folder: "\f1de";
+@oui-icon-index-gear: "\f1df";
+@oui-icon-index-guides: "\f1e0";
+@oui-icon-index-hamburger: "\f1e1";
+@oui-icon-index-help-circle: "\f1e2";
+@oui-icon-index-help: "\f1e3";
+@oui-icon-index-home: "\f1e4";
+@oui-icon-index-indeterminate: "\f1e5";
+@oui-icon-index-info-circle: "\f1e6";
+@oui-icon-index-info: "\f1e7";
+@oui-icon-index-lightbulb: "\f1e8";
+@oui-icon-index-list: "\f1e9";
+@oui-icon-index-location: "\f1ea";
+@oui-icon-index-lock: "\f1eb";
+@oui-icon-index-minus: "\f1ec";
+@oui-icon-index-ok: "\f1ed";
+@oui-icon-index-ovh: "\f1ee";
+@oui-icon-index-pen: "\f1ef";
+@oui-icon-index-phone: "\f1f0";
+@oui-icon-index-plus: "\f1f1";
+@oui-icon-index-printer: "\f1f2";
+@oui-icon-index-refresh: "\f1f3";
+@oui-icon-index-remove: "\f1f4";
+@oui-icon-index-search: "\f1f5";
+@oui-icon-index-settings: "\f1f6";
+@oui-icon-index-shape-circle: "\f1f7";
+@oui-icon-index-shape-dot: "\f1f8";
+@oui-icon-index-sort-down: "\f1f9";
+@oui-icon-index-sort-up: "\f1fa";
+@oui-icon-index-sort: "\f1fb";
+@oui-icon-index-success-circle: "\f1fc";
+@oui-icon-index-success: "\f1fd";
+@oui-icon-index-time: "\f1fe";
+@oui-icon-index-transfer: "\f1ff";
+@oui-icon-index-trash: "\f200";
+@oui-icon-index-triangle-down: "\f201";
+@oui-icon-index-triangle-left: "\f202";
+@oui-icon-index-triangle-right: "\f203";
+@oui-icon-index-triangle-up: "\f204";
+@oui-icon-index-truck: "\f205";
+@oui-icon-index-user: "\f206";
+@oui-icon-index-warning-circle: "\f207";
+@oui-icon-index-warning: "\f208";
