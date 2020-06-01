@@ -1,3 +1,15 @@
+<a name="2.42.8"></a>
+## [2.42.8](https://github.com/ovh/ovh-ui-kit/compare/v2.42.7...v2.42.8) (2020-06-01)
+
+
+### Bug Fixes
+
+* **oui-header-tabs:** set as button when no href ([8317572](https://github.com/ovh/ovh-ui-kit/commit/8317572))
+* **oui-message:** fix large messages background ([76590b2](https://github.com/ovh/ovh-ui-kit/commit/76590b2))
+* **oui-select:** fix options background ([c49c1c7](https://github.com/ovh/ovh-ui-kit/commit/c49c1c7))
+
+
+
 <a name="2.42.7"></a>
 ## [2.42.7](https://github.com/ovh/ovh-ui-kit/compare/v2.42.6...v2.42.7) (2020-04-30)
 
