@@ -1,7 +1,13 @@
 <div class="oui-header-tabs__item" role="listitem"
     ui-sref-active="oui-header-tabs__item_active"
     ng-class="{ 'oui-header-tabs__item_active': $ctrl.active, 'oui-header-tabs__item_disabled': $ctrl.disabled }">
-    <a ng-attr-rel="{{::$ctrl.linkRel}}"
+    <button class="oui-header-tabs__action"
+        ng-click="$ctrl.onClick()"
+        ng-if="!$ctrl.href && !$ctrl.state && !$ctrl.disabled">
+        <span ng-transclude></span>
+    </button>
+    <a class="oui-header-tabs__action"
+        ng-attr-rel="{{::$ctrl.linkRel}}"
         ng-attr-target="{{::$ctrl.linkTarget}}"
         ng-href="{{::$ctrl.href}}"
         ng-if="!!$ctrl.href && !$ctrl.disabled"
@@ -11,11 +17,13 @@
               ng-if="::$ctrl.external">
         </span>
     </a>
-    <a ng-transclude
+    <a class="oui-header-tabs__action"
         ng-click="$ctrl.onClick()"
         ng-if="!!$ctrl.state && !$ctrl.disabled"
         ui-sref="{{::$ctrl.getFullSref()}}">
     </a>
-    <span ng-transclude
-          ng-if="!!$ctrl.disabled"></span>
+    <span class="oui-header-tabs__action"
+        ng-transclude
+        ng-if="!!$ctrl.disabled">
+    </span>
 </div>

@@ -14,20 +14,31 @@
   &__item {
     position: static;
 
-    & > a,
-    & > span,
+    .oui-header-tabs__action,
     .oui-button_dropdown {
+      width: @oui-header-tabs-item-width;
       line-height: inherit;
-      background-color: transparent;
+      background-color: @oui-header-tabs-item-background-color;
+      border: none;
       display: block;
       color: @oui-header-tabs-item-font-color;
       font-size: @oui-header-tabs-item-font-size;
       font-weight: @oui-header-tabs-item-font-weight;
       box-shadow: none;
       margin: 0;
+      text-align: left;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      .oui-icon {
+        color: inherit;
+      }
     }
 
-    & > a {
+    .oui-header-tabs__action {
       text-decoration: none;
 
       &:focus {
@@ -54,8 +65,12 @@
       }
     }
 
-    &_disabled > span {
+    &_disabled .oui-header-tabs__action {
       color: @oui-header-tabs-item-font-color_disabled;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
 
     &_active .oui-button_dropdown {
@@ -63,27 +78,25 @@
     }
 
     :not(.oui-header-tabs__dropdown-container) & {
-      & > a,
-      & > span {
+      .oui-header-tabs__action {
         padding: @oui-header-tabs-item-padding;
         white-space: nowrap;
       }
 
-      &_active > a {
+      &_active .oui-header-tabs__action {
         border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
       }
     }
 
     .oui-header-tabs__dropdown-container & {
-      & > a,
-      & > span {
+      .oui-header-tabs__action {
         padding: @oui-header-tabs-dropdown-item-padding;
       }
 
-      &_active > a,
-      & > a:hover,
-      & > a:focus,
-      & > a:active {
+      &_active .oui-header-tabs__action,
+      .oui-header-tabs__action:hover,
+      .oui-header-tabs__action:focus,
+      .oui-header-tabs__action:active {
         border-bottom: none;
         background-color: @oui-header-tabs-dropdown-item-background-color_active;
       }
