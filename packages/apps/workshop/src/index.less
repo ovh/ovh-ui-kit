@@ -100,3 +100,33 @@
     padding: rem-calc(16);
   }
 }
+
+// Storybook Docs
+.sbdocs {
+  .sbdocs-a {
+    font-size: unset;
+  }
+
+  .sbdocs-h1 { #oui > .heading(1); }
+  .sbdocs-h2 { #oui > .heading(2); }
+  .sbdocs-h3 { #oui > .heading(3); }
+  .sbdocs-h4 { #oui > .heading(4); }
+  .sbdocs-h5 { #oui > .heading(5); }
+  .sbdocs-h6 { #oui > .heading(6); }
+
+  .sbdocs-code {
+    background: @oui-box-background-color;
+    border: @oui-box-border-width solid @oui-box-border-color;
+    border-radius: @oui-box-border-radius;
+    color: @oui-box-font-color;
+  }
+
+  .sbdocs-pre {
+    margin-bottom: @base-spacing-medium !important;
+
+    .sbdocs-code {
+      display: block;
+      padding: @base-spacing-medium;
+    }
+  }
+}
