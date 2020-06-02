@@ -1,3 +1,59 @@
+# [4.1.0](https://github.com/ovh/ovh-ui-kit/compare/v4.0.10...v4.1.0) (2020-06-02)
+
+
+## OVHcloud Design System (Batch 2)
+
+With this minor update, we continue the work of applying the new guidelines from our [Design System](https://design.cxprojects.ovh/).
+
+### Components
+
+We've updated these components to match the OVHcloud Design System:
+
+* Action-menu
+* Autocomplete
+* Calendar
+* Clipboard
+* Dropdown
+* File
+* Guide-menu
+* Message
+* Numeric
+* Pagination
+* Password
+* Popover
+* Progress
+* Search
+* Switch
+* Timepicker
+* Tooltip
+
+Other batches of modifications will be gradually deployed on the other components.
+
+### Icons
+
+We've added these new icons in the `system` family:
+
+* arrow-transfer
+* cart
+* email
+* lock
+* pen
+* printer
+* truck
+
+
+### Features
+
+* **file:** add placeholder label in provider ([d6a8134](https://github.com/ovh/ovh-ui-kit/commit/d6a813400cfe88e2d6a8508cf47266eec
+* **pagination:** add mode attribute ([abdb296](https://github.com/ovh/ovh-ui-kit/commit/abdb29649774449bd1cac073b98f87aa02913bf7))
+
+
+### Bug Fixes
+
+* **header-tabs:** display button if no href ([77f6330](https://github.com/ovh/ovh-ui-kit/commit/77f6330f1ccc12d31eaea8a02e11b459e7ea57a0))
+
+
+
 ## [4.0.10](https://github.com/ovh/ovh-ui-kit/compare/v4.0.9...v4.0.10) (2020-05-15)
 
 
@@ -96,7 +152,7 @@
 # [4.0.0](https://github.com/ovh/ovh-ui-kit/compare/v3.11.2...v4.0.0) (2020-03-06)
 
 
-## OVHcloud Design System
+## OVHcloud Design System (Batch 1)
 
 With this major update, we apply the new guidelines from our [Design System](https://design.cxprojects.ovh/). The application of those guidelines will be done in multiple batch of changes. The v4.0.x consists of the first batch of changes.
 
