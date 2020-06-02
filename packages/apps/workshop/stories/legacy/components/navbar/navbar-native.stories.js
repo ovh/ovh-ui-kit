@@ -2,9 +2,6 @@ export default {
   title: 'Legacy/Components/Navbar/Native',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

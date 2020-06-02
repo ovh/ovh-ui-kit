@@ -2,9 +2,6 @@ export default {
   title: 'Design System/Content/Descriptions',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

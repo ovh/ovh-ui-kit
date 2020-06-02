@@ -2,9 +2,6 @@ export default {
   title: 'Legacy/Components/Progress Tracker/Native',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

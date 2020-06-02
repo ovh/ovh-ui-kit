@@ -2,9 +2,6 @@ export default {
   title: 'Design System/Content/Links',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

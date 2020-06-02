@@ -2,9 +2,6 @@ export default {
   title: 'Design System/Content/Headings',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

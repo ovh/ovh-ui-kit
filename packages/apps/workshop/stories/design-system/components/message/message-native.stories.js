@@ -2,9 +2,6 @@ export default {
   title: 'Design System/Components/Message/Native',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

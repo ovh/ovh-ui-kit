@@ -2,9 +2,6 @@ export default {
   title: 'Legacy/Components/List/Native',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

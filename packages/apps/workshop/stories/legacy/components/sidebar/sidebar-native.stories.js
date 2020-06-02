@@ -2,9 +2,6 @@ export default {
   title: 'Legacy/Components/Sidebar/Native',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

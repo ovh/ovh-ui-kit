@@ -7,9 +7,6 @@ export default {
   title: 'Design System/Components/Table/Native',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

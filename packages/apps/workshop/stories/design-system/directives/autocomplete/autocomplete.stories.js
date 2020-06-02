@@ -15,9 +15,6 @@ export default {
   title: 'Design System/Directives/Autocomplete',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

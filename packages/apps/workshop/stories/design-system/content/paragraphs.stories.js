@@ -2,9 +2,6 @@ export default {
   title: 'Design System/Content/Paragraphs',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 

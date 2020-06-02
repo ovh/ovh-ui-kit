@@ -10,9 +10,6 @@ export default {
   title: 'Design System/Content/Abbreviations',
 
   parameters: {
-    options: {
-      showPanel: true,
-    },
   },
 };
 
