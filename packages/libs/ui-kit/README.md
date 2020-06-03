@@ -23,9 +23,9 @@ You need to load these dependencies in your project:
 
 See `package.json` for more informations.
 
-[![Dependencies](https://badgen.net/david/dep/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
-[![Dev Dependencies](https://badgen.net/david/dev/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
-[![Peer Dependencies](https://badgen.net/david/peer/ovh-ux/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
+[![Dependencies](https://badgen.net/david/dep/ovh/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
+[![Dev Dependencies](https://badgen.net/david/dev/ovh/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
+[![Peer Dependencies](https://badgen.net/david/peer/ovh/ovh-ui-kit/packages/libs/ui-kit)](https://npmjs.com/package/@ovh-ux/ui-kit?activeTab=dependencies)
 
 ### Install with [npm](https://www.npmjs.com/)
 

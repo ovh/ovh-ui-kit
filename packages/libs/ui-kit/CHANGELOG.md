@@ -44,7 +44,7 @@ We've added these new icons in the `system` family:
 
 ### Features
 
-* **file:** add placeholder label in provider ([d6a8134](https://github.com/ovh/ovh-ui-kit/commit/d6a813400cfe88e2d6a8508cf47266eec
+* **file:** add placeholder label in provider ([d6a8134](https://github.com/ovh/ovh-ui-kit/commit/d6a813400cfe88e2d6a8508cf47266eec))
 * **pagination:** add mode attribute ([abdb296](https://github.com/ovh/ovh-ui-kit/commit/abdb29649774449bd1cac073b98f87aa02913bf7))
 
 
@@ -168,7 +168,7 @@ We aim with this version to be as less breaking as possible with the functioning
 ## Breaking Changes
 
 Even if this version try to be as much breaking-free as possible, there are some notable changes.
-See the [migration guide](https://github.com/ovh/ovh-ui-kit/blob/master/V3-TO-V4.md) for more informations about the changes.
+See the [migration guide](https://github.com/ovh/ovh-ui-kit/blob/master/packages/libs/ui-kit/V3-TO-V4.md) for more informations about the changes.
 
 The first batch of modifications impacts:
 
