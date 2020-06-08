@@ -126,14 +126,16 @@ export default class FieldController {
 
     angular.element(controlElement).on('focus', () => {
       this.$timeout(() => {
-        this.form[name].$touched = false;
+        if (this.form && this.form[name]) {
+          this.form[name].$touched = false;
+        }
       });
     });
   }
 
   checkControlErrors(controlElement, name) {
     this.blurred = true;
-    if (this.form[name] && this.form[name].$invalid) {
+    if (this.form && this.form[name] && this.form[name].$invalid) {
       this.currentErrorField = name;
     } else {
       this.currentErrorField = null;
@@ -152,7 +154,7 @@ export default class FieldController {
   checkAllErrors() {
     this.invalid = Object.keys(this.controls)
       .map((name) => {
-        if (!(name in this.form)) {
+        if (!this.form && !(name in this.form)) {
           return false;
         }
         if (this.form[name].$invalid && !this.currentErrorField) {
@@ -169,7 +171,7 @@ export default class FieldController {
   getFirstError() {
     const names = Object.keys(this.controls);
     for (let i = 0; i < names.length; i += 1) {
-      if (this.form[names[i]] && this.form[names[i]].$invalid) {
+      if (this.form && this.form[names[i]] && this.form[names[i]].$invalid) {
         return this.form[names[i]].$error;
       }
     }
