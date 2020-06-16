@@ -21,6 +21,7 @@
         ng-click="$ctrl.onClick()"
         ng-if="!!$ctrl.state && !$ctrl.disabled"
         ui-sref="{{::$ctrl.getFullSref()}}">
+        <span ng-transclude></span>
     </a>
     <span class="oui-header-tabs__action"
         ng-transclude
