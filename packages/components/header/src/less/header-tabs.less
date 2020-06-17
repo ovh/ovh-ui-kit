@@ -1,8 +1,14 @@
 .oui-header-tabs {
+  margin: @oui-header-tabs-margin;
   display: block;
 
   &__nav {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   &__dropdown-container {
@@ -104,43 +110,31 @@
   }
 
   &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1;
     list-style: none;
-    margin: @oui-header-tabs-margin;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
     border-bottom: @oui-header-tabs-border-bottom;
 
     ul& {
       display: flex;
       flex-wrap: nowrap;
     }
-  }
 
-  &__list {
-    display: flex;
-    flex-wrap: nowrap;
-    transform: translateX(0);
-    transition: transform 0.25s ease;
-    will-change: transform;
+    // The first child will move all the others
+    oui-header-tabs-item:first-child,
+    oui-header-tabs-dropdown:first-child {
+      margin-left: 0;
+      transition: margin-left 0.25s ease;
+      will-change: margin-left;
+    }
   }
 
   &__slider {
-    background-color: @oui-header-tabs-slider-nav-background-color;
-    border: none;
-    bottom: 0;
-    color: @oui-header-tabs-slider-nav-font-color;
-    font-size: @oui-header-tabs-slider-nav-font-size;
-    position: absolute;
-    top: 0;
-    width: @oui-header-tabs-slider-nav-width;
-    z-index: 1;
-
-    &_left {
-      left: 0;
-    }
-
-    &_right {
-      right: 0;
-    }
+    margin: 0 @oui-header-tabs-slider-nav-spacing @oui-header-tabs-item-border-width;
   }
 
   .oui-dropdown_active {

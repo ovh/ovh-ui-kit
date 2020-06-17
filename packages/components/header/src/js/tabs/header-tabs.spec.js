@@ -19,7 +19,7 @@ describe('ouiHeaderTabs', () => {
 
       $timeout.flush();
 
-      const container = element[0].querySelector('.oui-header-tabs__list');
+      const container = element[0].querySelector('.oui-header-tabs__container');
       const $container = angular.element(container);
       expect($container.children().length).toBe(1);
       expect($container.attr('role')).toBe('list');
@@ -90,7 +90,7 @@ describe('ouiHeaderTabs', () => {
 
       $timeout.flush();
 
-      const container = element[0].querySelector('.oui-header-tabs__list');
+      const container = element[0].querySelector('.oui-header-tabs__container');
       expect(angular.element(container).children().length).toBe(1);
       const trigger = container.querySelector('.oui-dropdown__trigger');
       const $trigger = angular.element(trigger);
