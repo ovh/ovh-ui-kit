@@ -1,0 +1,146 @@
+// WARNING
+// This is an override for the OVHcloud Light Theme
+// This file will be removed when ODS will applied
+.oui-sidebar {
+  @background-color: @p-000;
+  @primary-color: @p-500;
+  @text-color: @p-800-text;
+
+  overflow: auto;
+
+  // Level 1+
+  .oui-sidebar-menu {
+    background-color: @background-color;
+    box-sizing: inherit;
+    color: @text-color;
+    overflow: auto;
+    width: 100%;
+
+    .oui-sidebar-link {
+      min-height: inherit;
+      display: flex;
+      align-items: center;
+      padding: 8pt 0 4pt;
+      text-indent: 0;
+      font-weight: bold;
+
+      &::after {
+        color: inherit;
+        top: 50%;
+        right: 8pt;
+      }
+
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 2px solid @p-100;
+        color: @text-color;
+      }
+
+      &[aria-expanded='true'] {
+        + .oui-sidebar-menu .oui-sidebar-list {
+          padding: 4pt 0;
+        }
+      }
+    }
+
+    .oui-sidebar-list {
+      max-height: none;
+      overflow: initial;
+      padding: 0 8pt;
+    }
+
+    .oui-sidebar-list__item {
+      border: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  // Level 2+
+  .oui-sidebar-menu .oui-sidebar-menu {
+    background-color: @background-color;
+    color: @text-color;
+
+    .oui-sidebar-link {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom: 0;
+        border-left: 3px solid transparent;
+        padding: 6px;
+        font-weight: normal;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .oui-sidebar-link_active,
+    .oui-sidebar-link[aria-expanded='true'] {
+      background-color: @p-000;
+    }
+
+    .oui-sidebar-list__item {
+      border: 0;
+      margin-bottom: 0;
+    }
+
+    .oui-sidebar-list {
+      padding: 0;
+
+      .oui-sidebar-list__item {
+        margin-bottom: 0;
+
+        .oui-sidebar-link {
+          &,
+          &:hover,
+          &:focus,
+          &:active {
+            border-bottom: 0;
+            border-left: 3px solid transparent;
+            color: @text-color;
+            padding: 6pt;
+            text-indent: 0;
+            font-weight: 400;
+          }
+
+          &:hover,
+          &:focus {
+            text-decoration: underline;
+          }
+
+          &.oui-sidebar-link_active {
+            border-left-color: @primary-color;
+            font-weight: bold;
+            color: @primary-color;
+            background-color: @p-075;
+          }
+        }
+
+        + .oui-sidebar-list__item {
+          border-top: 0;
+        }
+      }
+    }
+
+    &_fixed {
+      opacity: 1;
+      position: relative;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .oui-sidebar-menu__header {
+      display: none;
+    }
+  }
+
+  // Level 3+
+  .oui-sidebar-menu .oui-sidebar-menu .oui-sidebar-menu {
+    padding-left: 8pt;
+  }
+}

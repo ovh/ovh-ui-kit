@@ -1,10 +1,8 @@
 // Sidebar
 @oui-sidebar-font-size: rem-calc(16);
-@oui-sidebar-font-color: @p-100;
-@oui-sidebar-font-color_responsive: @p-700;
-@oui-sidebar-background-color: @p-700;
-@oui-sidebar-background-color_responsive: @p-000;
-@oui-sidebar-box-shadow: none;
+@oui-sidebar-font-color: @p-800-text;
+@oui-sidebar-background-color: @p-000;
+@oui-sidebar-box-shadow: @base-box-shadow-primary;
 @oui-sidebar-z-index: 1020;
 @oui-sidebar-transition-delay: 0.3s;
 
@@ -12,12 +10,10 @@
 @oui-sidebar-menu-width: rem-calc(300);
 @oui-sidebar-menu-padding: rem-calc(4) 0 0 0;
 @oui-sidebar-menu-background-color: @oui-sidebar-background-color;
-@oui-sidebar-menu-background-color_level-1: darken(@oui-sidebar-menu-background-color, 5%);
-@oui-sidebar-menu-background-color_level-2: @p-800;
-@oui-sidebar-menu-background-color_responsive: @oui-sidebar-background-color_responsive;
+@oui-sidebar-menu-background-color_level-1: @oui-sidebar-background-color;
+@oui-sidebar-menu-background-color_level-2: @oui-sidebar-background-color;
 @oui-sidebar-menu-font-size_small: rem-calc(14);
 @oui-sidebar-menu-font-color: @oui-sidebar-font-color;
-@oui-sidebar-menu-font-color_responsive: @oui-sidebar-font-color_responsive;
 @oui-sidebar-menu-box-shadow: 0 rem-calc(4) rem-calc(6) 0 @oui-sidebar-menu-box-shadow-color;
 @oui-sidebar-menu-box-shadow-color: fade(darken(@p-100, 50%), 25%);
 @oui-sidebar-menu-z-index: @oui-sidebar-z-index + 1;
@@ -33,7 +29,7 @@
 @oui-sidebar-menu-header-border-bottom: solid 1px @g-050;
 
 @oui-sidebar-menu-title-line-height: 1.2;
-@oui-sidebar-menu-title-font-color: @oui-sidebar-menu-font-color_responsive;
+@oui-sidebar-menu-title-font-color: @oui-sidebar-menu-font-color;
 @oui-sidebar-menu-title-font-size: rem-calc(20);
 @oui-sidebar-menu-title-font-weight: 600;
 
@@ -41,7 +37,6 @@
 @oui-sidebar-arrow-content_active: @oui-icon-index-chevron-up;
 @oui-sidebar-arrow-font-family: @base-font-family-icon;
 @oui-sidebar-arrow-color: @p-200;
-@oui-sidebar-arrow-color_responsive: @p-800;
 @oui-sidebar-arrow-padding: (@oui-sidebar-menu-back-padding + @oui-sidebar-arrow-spacing);
 @oui-sidebar-arrow-size: rem-calc(16);
 @oui-sidebar-arrow-spacing: rem-calc(16);
@@ -58,9 +53,7 @@
 @oui-sidebar-link-padding: @oui-sidebar-link-padding-h @oui-sidebar-link-padding-v;
 @oui-sidebar-link-font-color: @oui-sidebar-font-color;
 @oui-sidebar-link-font-color_active: @p-000;
-@oui-sidebar-link-font-color_responsive: @oui-sidebar-font-color_responsive;
 @oui-sidebar-link-font-size: rem-calc(16);
 @oui-sidebar-link-font-weight: 400;
 @oui-sidebar-link-background-color: transparent;
-@oui-sidebar-link-background-color_responsive: transparent;
 @oui-sidebar-link-background-color_active: @p-075;
