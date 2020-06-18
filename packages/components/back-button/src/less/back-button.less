@@ -1,36 +1,17 @@
 .oui-back-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: @oui-back-button-margin-bottom;
 
   &__arrow {
-    // #oui > .link();
-
-    width: @oui-back-button-arrow-size;
-    height: @oui-back-button-arrow-size;
-    display: inline-block;
-    padding: @oui-back-button-arrow-padding;
+    margin: 0;
     margin-right: @oui-back-button-arrow-spacing;
-    font-size: @oui-back-button-arrow-size;
-    vertical-align: @oui-back-button-arrow-vertical-align;
-
-    .oui-icon {
-      margin: 0;
-      font-size: inherit;
-    }
-
-    &:focus {
-      #oui > .outline-border();
-    }
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 
   &__title {
-    &:extend(.oui-heading_2);
-
-    display: inline;
-    vertical-align: @oui-back-button-vertical-align;
+    margin: 0;
   }
 }
 
