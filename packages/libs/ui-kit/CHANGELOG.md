@@ -1,3 +1,16 @@
+## [4.1.2](https://github.com/ovh/ovh-ui-kit/compare/v4.1.1...v4.1.2) (2020-06-18)
+
+
+### Bug Fixes
+
+* **back-button:** fix title alignment ([36eed46](https://github.com/ovh/ovh-ui-kit/commit/36eed4656c915b97ea04b1a2b0b675f070ddb6b3))
+* **button:** fix margin on icons ([00813fb](https://github.com/ovh/ovh-ui-kit/commit/00813fb7344c191f12dc83a8dda5cffee8ae72c4))
+* **header-tabs:** fix border on dropdown items ([90bc586](https://github.com/ovh/ovh-ui-kit/commit/90bc5866b1d592e8130ca0bb564491c04ffd2705))
+* **navbar:** apply OLT override ([aac83ee](https://github.com/ovh/ovh-ui-kit/commit/aac83ee01ce1a19af6d130ccd4637b80e72caf91))
+* **sidebar:** apply OLT override ([b665b5b](https://github.com/ovh/ovh-ui-kit/commit/b665b5b58fa974e879a2b7859bc65e7583359356))
+
+
+
 ## [4.1.1](https://github.com/ovh/ovh-ui-kit/compare/v4.1.0...v4.1.1) (2020-06-18)
 
 
