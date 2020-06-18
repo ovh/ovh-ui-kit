@@ -83,7 +83,8 @@
       border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
     }
 
-    :not(.oui-header-tabs__dropdown-container) & {
+    // Only for the tabs not in dropdown
+    .oui-header-tabs__container > oui-header-tabs-item & {
       .oui-header-tabs__action {
         padding: @oui-header-tabs-item-padding;
         white-space: nowrap;
