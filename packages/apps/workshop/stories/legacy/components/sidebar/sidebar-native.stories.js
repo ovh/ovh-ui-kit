@@ -157,10 +157,10 @@ export const Collapsible = () => `
   </div>
 </nav>`;
 
-export const Responsive = () => `
-<nav class="oui-sidebar" style="width: 300px;">
+export const Fixed = () => `
+<nav class="oui-sidebar oui-sidebar_fixed" style="width: 300px;">
   <!-- Root -->
-  <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
+  <div class="oui-sidebar-menu">
     <ul class="oui-sidebar-list">
       <li class="oui-sidebar-list__item" aria-haspopup="true" aria-expanded="false">
         <button type="button" class="oui-sidebar-link">
@@ -177,7 +177,7 @@ export const Responsive = () => `
           Category 3
         </button>
         <!-- Level 1 -->
-        <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
+        <div class="oui-sidebar-menu">
           <header class="oui-sidebar-menu__header">
             <div class="oui-sidebar-menu__back">
               <button type="button" class="oui-button oui-button_ghost oui-button_icon-left" aria-label="Return to previous navigation menu">
@@ -197,7 +197,7 @@ export const Responsive = () => `
                 Product 1
               </button>
               <!-- Level 2 -->
-              <div class="oui-sidebar-menu oui-sidebar-menu_fixed">
+              <div class="oui-sidebar-menu">
                 <header class="oui-sidebar-menu__header">
                   <div class="oui-sidebar-menu__back">
                     <button type="button" class="oui-button oui-button_ghost oui-button_icon-left" aria-label="Return to previous navigation menu">
@@ -246,10 +246,3 @@ export const Responsive = () => `
     </ul>
   </div>
 </nav>`;
-
-Responsive.story = {
-  parameters: {
-    notes:
-      'With screen resolution below `1024px`, the Sidebar change its layout for something similar to the Navbar. This can be enabled by adding `.oui-sidebar-menu_fixed` on `oui-sidebar-menu` elements.',
-  },
-};
