@@ -18,20 +18,14 @@ export default class {
       this.canScrollLeft = false;
       this.canScrollRight = true;
       this.scrollIndex = 0;
-      this.tabsList.style.transform = 'translateX(0)';
+      this.tabsList.firstElementChild.style.marginLeft = 0;
     });
   }
 
   getOffsetLeft() {
-    // Here we set temporary the position to 'relative',
-    // to get the right offsetLeft with for reference the list container.
-    // Because we could have dropdown, we can't set the position to 'relative' in the CSS,
-    // or else the overflow will hidden the dropdown menu
-    this.tabsList.style.position = 'relative';
-    const { offsetLeft } = this.tabs[this.scrollIndex];
-    this.tabsList.style.position = 'static';
+    const { initialOffsetLeft } = this.tabs[this.scrollIndex];
 
-    return offsetLeft;
+    return initialOffsetLeft;
   }
 
   scrollTo(direction) {
@@ -47,9 +41,11 @@ export default class {
     this.canScrollLeft = this.scrollIndex > minIndex;
     this.canScrollRight = this.scrollIndex < maxIndex;
 
-    // The slide animation is done in the CSS
-    // with a transition targeting the transform property
-    this.tabsList.style.transform = `translateX(-${this.getOffsetLeft()}px)`;
+    // The slide animation is done in the CSS with a transition
+    // targeting the margin-left property n the first child.
+    // In this way, we can keep the overflow: hidden on the flex container.
+    // With others solutions, this will mask any dropdown item
+    this.tabsList.firstElementChild.style.marginLeft = `-${this.getOffsetLeft()}px`;
   }
 
   $onInit() {
@@ -66,7 +62,15 @@ export default class {
       this.$element
         .addClass('oui-header-tabs');
 
-      this.tabsList = this.$element[0].querySelector('.oui-header-tabs__list');
+      this.tabsList = this.$element[0].querySelector('.oui-header-tabs__container');
+
+      // Update initial offsetLeft for the slide animation
+      // Unless it changes when moved
+      this.tabsList.children.forEach((element) => {
+        // eslint-disable-next-line
+        element.initialOffsetLeft = element.offsetLeft;
+      });
+
       this.$scope.$watch(() => this.tabsList.childNodes.length, () => {
         this.tabs = filter(this.tabsList.childNodes, (node) => node.nodeType === 1);
         this.checkScroll();

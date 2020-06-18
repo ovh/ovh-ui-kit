@@ -33,20 +33,11 @@ oui-datagrid {
   display: inline-block;
 
   &__button {
-    margin: 0;
-    padding: @oui-datagrid-parameters-button-padding;
-    width: @oui-datagrid-parameters-button-width;
-    font-size: @oui-datagrid-parameters-button-icon-size;
-    color: @oui-datagrid-parameters-button-font-color;
-    border: @oui-datagrid-parameters-button-border;
-    background-color: @oui-datagrid-parameters-button-background-color;
-
-    .oui-icon {
-      line-height: @oui-datagrid-parameters-button-line-height;
-    }
-
+    &,
+    &:hover,
     &:focus {
-      #oui > .outline-border();
+      background-color: @oui-datagrid-parameters-button-background-color;
+      box-shadow: @oui-datagrid-parameters-button-box-shadow;
     }
   }
 

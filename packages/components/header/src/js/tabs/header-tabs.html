@@ -1,17 +1,19 @@
 <nav class="oui-header-tabs__nav">
     <button type="button"
-        class="oui-header-tabs__slider oui-header-tabs__slider_left oui-icon oui-icon-chevron-left" aria-hidden="true"
+        class="oui-button oui-button_primary oui-button_s oui-header-tabs__slider oui-header-tabs__slider_left" aria-hidden="true"
         ng-click="$ctrl.scrollTo('left')"
-        ng-show="$ctrl.canScroll && $ctrl.canScrollLeft">
+        ng-show="$ctrl.canScroll"
+        ng-disabled="!$ctrl.canScrollLeft">
+        <span class="oui-icon oui-icon-chevron-left"></span>
     </button>
-    <div class="oui-header-tabs__container">
-        <div class="oui-header-tabs__list" role="list"
-            ng-transclude>
-        </div>
+    <div class="oui-header-tabs__container" role="list"
+        ng-transclude>
     </div>
     <button type="button"
-        class="oui-header-tabs__slider oui-header-tabs__slider_right oui-icon oui-icon-chevron-right" aria-hidden="true"
+        class="oui-button oui-button_primary oui-button_s oui-header-tabs__slider oui-header-tabs__slider_right" aria-hidden="true"
         ng-click="$ctrl.scrollTo('right')"
-        ng-show="$ctrl.canScroll && $ctrl.canScrollRight">
+        ng-show="$ctrl.canScroll"
+        ng-disabled="!$ctrl.canScrollRight">
+        <span class="oui-icon oui-icon-chevron-right"></span>
     </button>
 </nav>

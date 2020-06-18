@@ -3,8 +3,8 @@
     @selector: oui-table
   ) {
     width: @oui-datagrid-width;
-    border-left: @oui-datagrid-border-color solid @oui-datagrid-border-width;
-    border-right: @oui-datagrid-border-color solid @oui-datagrid-border-width;
+    border: @oui-datagrid-border-color solid @oui-datagrid-border-width;
+    border-bottom: none;
     border-collapse: separate;
     border-spacing: 0;
     margin: @oui-datagrid-margin;
@@ -38,10 +38,6 @@
         padding: @oui-datagrid-cell-padding_s;
         text-align: center;
       }
-    }
-
-    &__row:first-child &__cell {
-      border-top: @oui-datagrid-cell-border-width solid @oui-datagrid-cell-border-color;
     }
 
     &__header {
@@ -82,7 +78,7 @@
           margin-left: @oui-datagrid-arrow-spacing;
           font-size: @oui-datagrid-arrow-size;
           vertical-align: bottom;
-          position: absolute; // Avoid the cell to take account the icon for the width calcultation
+          position: relative;
         }
       }
 
