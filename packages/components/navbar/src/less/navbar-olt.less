@@ -1,0 +1,48 @@
+// WARNING
+// This is an override for the OVHcloud Light Theme
+// This file will be removed when ODS will applied
+.oui-navbar {
+  .oui-navbar__brand {
+    color: @p-700;
+  }
+
+  .oui-navbar-link {
+    background-color: initial;
+
+    .oui-icon {
+      color: @p-500;
+    }
+
+    &_primary {
+      color: @p-800-text;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 0.5rem;
+      padding-top: 1.2rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    &_tertiary {
+      font-weight: bold;
+      color: @p-500;
+    }
+  }
+
+  .oui-navbar-link:hover,
+  .oui-navbar-link:focus,
+  .oui-navbar-link_tertiary:hover,
+  .oui-navbar-link_tertiary[aria-expanded='true'],
+  .oui-navbar-link_tertiary:focus {
+    background-color: initial;
+  }
+
+  .oui-navbar-link_active {
+    background-color: initial;
+    border-bottom: 2px solid @p-500;
+    box-sizing: border-box;
+  }
+
+  .oui-navbar-toggler__hamburger span {
+    background: @p-500 !important;
+  }
+}
