@@ -1,3 +1,18 @@
+## [4.1.1](https://github.com/ovh/ovh-ui-kit/compare/v4.1.0...v4.1.1) (2020-06-18)
+
+
+### Bug Fixes
+
+* **datagrid:** fix parameters button tooltip ([3e3f1d0](https://github.com/ovh/ovh-ui-kit/commit/3e3f1d0957e4cacf0e2bc6203b2286609e580844))
+* **datagrid:** fix row borders ([4951756](https://github.com/ovh/ovh-ui-kit/commit/49517562ea1dd225ddbf1fc512b1c845863ccddd))
+* **field:** fix errors when no form wrapper ([7f99a6c](https://github.com/ovh/ovh-ui-kit/commit/7f99a6caf1cd1c8f1008534f00371f08c423ae39))
+* **header-tabs:** fix slide animation for dropdown ([90fa4d0](https://github.com/ovh/ovh-ui-kit/commit/90fa4d05c0563be5055b94b4467392a9315d997e))
+* **header-tabs:** fix transclude for state link ([faef725](https://github.com/ovh/ovh-ui-kit/commit/faef725d541c561a41acc54621c4c566e93be2e3))
+* **input:** remove z-index on overlay group ([43e3f76](https://github.com/ovh/ovh-ui-kit/commit/43e3f76f279a028a6e88dd09e9eb6f659386c20c))
+* **table:** fix floating sortable icon ([d7cef32](https://github.com/ovh/ovh-ui-kit/commit/d7cef324dfe43c38810eebb2a70d95c8663a4d4e))
+
+
+
 # [4.1.0](https://github.com/ovh/ovh-ui-kit/compare/v4.0.10...v4.1.0) (2020-06-02)
 
 
