@@ -39,14 +39,14 @@ a,
 .oui-link {
   #oui > .link();
 
-  .oui-icon {
+  &:focus {
+    #oui > .outline-border();
+  }
+
+  &.oui-link_icon .oui-icon {
     margin-left: @oui-link-icon-spacing;
     margin-right: @oui-link-icon-spacing;
     font-size: @oui-link-icon-size;
-  }
-
-  &:focus {
-    #oui > .outline-border();
   }
 }
 

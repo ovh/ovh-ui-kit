@@ -1,3 +1,36 @@
+## [4.1.4](https://github.com/ovh/ovh-ui-kit/compare/v4.1.3...v4.1.4) (2020-06-23)
+
+
+### Features
+
+* **icons:** add icons indexes in tokens ([5d46b55](https://github.com/ovh/ovh-ui-kit/commit/5d46b55f67c1e7f1a10e363d76a8561cb16349c1))
+
+
+
+## [4.1.3](https://github.com/ovh/ovh-ui-kit/compare/v4.1.2...v4.1.3) (2020-06-23)
+
+
+### Bug Fixes
+
+* **button:** fix icon color inheritance ([a480df0](https://github.com/ovh/ovh-ui-kit/commit/a480df08591634e3cbc3679bf251053be256ab8c))
+* **link:** apply icons style on classnamed tags ([6b3d809](https://github.com/ovh/ovh-ui-kit/commit/6b3d8097c0130da6e105e7a0efddb85a9418c4fa))
+* **tooltip:** fix white-space inheritance ([e16bd96](https://github.com/ovh/ovh-ui-kit/commit/e16bd96f539da72bf66606854faeb2150990c9ec))
+
+
+
+## [4.1.2](https://github.com/ovh/ovh-ui-kit/compare/v4.1.1...v4.1.2) (2020-06-18)
+
+
+### Bug Fixes
+
+* **back-button:** fix title alignment ([36eed46](https://github.com/ovh/ovh-ui-kit/commit/36eed4656c915b97ea04b1a2b0b675f070ddb6b3))
+* **button:** fix margin on icons ([00813fb](https://github.com/ovh/ovh-ui-kit/commit/00813fb7344c191f12dc83a8dda5cffee8ae72c4))
+* **header-tabs:** fix border on dropdown items ([90bc586](https://github.com/ovh/ovh-ui-kit/commit/90bc5866b1d592e8130ca0bb564491c04ffd2705))
+* **navbar:** apply OLT override ([aac83ee](https://github.com/ovh/ovh-ui-kit/commit/aac83ee01ce1a19af6d130ccd4637b80e72caf91))
+* **sidebar:** apply OLT override ([b665b5b](https://github.com/ovh/ovh-ui-kit/commit/b665b5b58fa974e879a2b7859bc65e7583359356))
+
+
+
 ## [4.1.1](https://github.com/ovh/ovh-ui-kit/compare/v4.1.0...v4.1.1) (2020-06-18)
 
 
