@@ -411,7 +411,6 @@
       padding: @oui-navbar-menu-header-padding;
       text-align: left;
       color: @oui-navbar-menu-header-font-color;
-      border-bottom: @oui-navbar-menu-header-border-bottom;
       background: @oui-navbar-menu-header-background-color;
     }
 
@@ -513,6 +512,7 @@
   &-notification {
     align-items: flex-start;
     display: flex;
+    flex-direction: row;
     flex: none;
     padding: @oui-navbar-notification-padding;
 
@@ -600,6 +600,7 @@
       }
 
       &__title {
+        color: @oui-navbar-notification-title-font-color;
         font-size: @oui-navbar-notification-title-font-size;
         font-weight: @oui-navbar-notification-title-font-weight;
       }
@@ -619,12 +620,16 @@
       font-weight: @oui-navbar-notification-description-font-weight;
       line-height: @oui-navbar-notification-description-line-height;
       max-height: @oui-navbar-notification-description-max-height;
+      letter-spacing: @oui-navbar-notification-description-letter-spacing;
       overflow: hidden;
     }
 
     &__title {
+      line-height: @oui-navbar-notification-title-line-height;
+      color: @oui-navbar-notification-title-font-color;
       font-size: @oui-navbar-notification-title-font-size;
       font-weight: @oui-navbar-notification-title-font-weight;
+      letter-spacing: @oui-navbar-notification-title-letter-spacing;
     }
   }
 

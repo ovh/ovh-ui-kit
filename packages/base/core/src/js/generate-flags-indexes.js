@@ -24,9 +24,7 @@ fs.readdir(folder, (err, files) => {
   const lastIndex = flagsIndexes.length;
   flagsIndexes[lastIndex - 1] += ';';
 
-  file.write('// Flags\n');
-  file.write('//\n');
-  file.write('// WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!\n');
+  file.write('/*\n * Flags (WARNING: THIS FILE IS GENERATED, PLEASE DO NOT EDIT IT!)\n */\n\n');
   file.write(flagsIndexes.join('\n'));
   file.write('\n');
 
