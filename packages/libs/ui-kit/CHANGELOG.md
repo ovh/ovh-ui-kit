@@ -1,3 +1,14 @@
+## [4.1.3](https://github.com/ovh/ovh-ui-kit/compare/v4.1.2...v4.1.3) (2020-06-23)
+
+
+### Bug Fixes
+
+* **button:** fix icon color inheritance ([a480df0](https://github.com/ovh/ovh-ui-kit/commit/a480df08591634e3cbc3679bf251053be256ab8c))
+* **link:** apply icons style on classnamed tags ([6b3d809](https://github.com/ovh/ovh-ui-kit/commit/6b3d8097c0130da6e105e7a0efddb85a9418c4fa))
+* **tooltip:** fix white-space inheritance ([e16bd96](https://github.com/ovh/ovh-ui-kit/commit/e16bd96f539da72bf66606854faeb2150990c9ec))
+
+
+
 ## [4.1.2](https://github.com/ovh/ovh-ui-kit/compare/v4.1.1...v4.1.2) (2020-06-18)
 
 
