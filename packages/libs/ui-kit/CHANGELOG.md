@@ -1,3 +1,12 @@
+## [4.1.4](https://github.com/ovh/ovh-ui-kit/compare/v4.1.3...v4.1.4) (2020-06-23)
+
+
+### Features
+
+* **icons:** add icons indexes in tokens ([5d46b55](https://github.com/ovh/ovh-ui-kit/commit/5d46b55f67c1e7f1a10e363d76a8561cb16349c1))
+
+
+
 ## [4.1.3](https://github.com/ovh/ovh-ui-kit/compare/v4.1.2...v4.1.3) (2020-06-23)
 
 
