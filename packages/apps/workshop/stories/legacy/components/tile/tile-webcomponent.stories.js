@@ -3,6 +3,7 @@ import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
 import ActionMenu from '@ovh-ux/ui-kit.action-menu';
+import Datagrid from '@ovh-ux/ui-kit.datagrid';
 import Tile from '@ovh-ux/ui-kit.tile';
 
 import readme from '@ovh-ux/ui-kit.tile/README.md';
@@ -14,6 +15,7 @@ angular.module(moduleName, [
 
   // For examples
   ActionMenu,
+  Datagrid,
 ]);
 
 export default {
@@ -71,7 +73,7 @@ WithButtons.story = {
   name: 'With buttons',
 };
 
-export const DefinitionList = forModule(moduleName).createElement(
+export const WithDefinitionList = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-tile heading="Title" description="Lorem dolor sit amet" loading="$ctrl.loading">
@@ -120,6 +122,73 @@ export const DefinitionList = forModule(moduleName).createElement(
   ),
 );
 
-DefinitionList.story = {
-  name: 'Definition list',
+WithDefinitionList.story = {
+  name: 'With definition list',
+};
+
+export const WithTable = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-tile heading="Title" description="Lorem dolor sit amet" loading="$ctrl.loading">
+      <table class="oui-table">
+        <thead>
+          <tr>
+            <th class="oui-table__header">Header</th>
+            <th class="oui-table__header">Header</th>
+            <th class="oui-table__header">Header</th>
+            <th class="oui-table__header">Header</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="oui-table__row">
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+          </tr>
+          <tr class="oui-table__row">
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+          </tr>
+          <tr class="oui-table__row">
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+          </tr>
+          <tr class="oui-table__row">
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+          </tr>
+          <tr class="oui-table__row">
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+            <td class="oui-table__cell">Column</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="oui-table__footer">Footer</td>
+            <td class="oui-table__footer">Footer</td>
+            <td class="oui-table__footer">Footer</td>
+            <td class="oui-table__footer">Footer</td>
+          </tr>
+        </tfoot>
+      </table>
+    </oui-tile>`,
+    {
+      $ctrl: {
+        loading: boolean('Loading state', false),
+      },
+    },
+  ),
+);
+
+WithTable.story = {
+  name: 'With table',
 };
