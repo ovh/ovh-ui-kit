@@ -25,7 +25,8 @@
   .headings(@index: length(@oui-heading-font-sizes)) when(@index > 0) {
     #oui > .headings(@index - 1);
 
-    &@{index} {
+    h@{index},
+    .oui-heading_@{index} {
       #oui > .heading(@index);
     }
   }
