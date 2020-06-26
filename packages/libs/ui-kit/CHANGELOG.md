@@ -1,3 +1,18 @@
+## [4.1.5](https://github.com/ovh/ovh-ui-kit/compare/v4.1.4...v4.1.5) (2020-06-26)
+
+
+### Bug Fixes
+
+* **paragraph:** remove forced base font properties ([ae402d0](https://github.com/ovh/ovh-ui-kit/commit/ae402d067efad46f4db3328244f27610b4cb68fe))
+* **tile:** update title style ([a66e6b6](https://github.com/ovh/ovh-ui-kit/commit/a66e6b6df82d06620161145b0aabf4643016509a))
+
+
+### Features
+
+* **tile:** add table support ([e6d270f](https://github.com/ovh/ovh-ui-kit/commit/e6d270f695343a9f916a04b63aeb8095eb626303))
+
+
+
 ## [4.1.4](https://github.com/ovh/ovh-ui-kit/compare/v4.1.3...v4.1.4) (2020-06-23)
 
 
