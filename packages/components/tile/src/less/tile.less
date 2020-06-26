@@ -8,12 +8,11 @@
   box-shadow: @oui-tile-box-shadow;
 
   &__title {
-    font-weight: @oui-tile-title-font-weight;
-    color: @oui-tile-title-color;
+    #oui > .heading(4);
   }
 
   &__legend {
-    color: @oui-tile-title-color;
+    color: @oui-tile-legend-color;
   }
 
   &__loader {
@@ -63,7 +62,7 @@
     position: relative;
     display: flex;
     border-top: @oui-tile-item-border-width solid @oui-tile-item-border-color;
-    padding: @oui-tile-item-top-spacing 0;
+    padding: @oui-tile-item-padding;
 
     &:last-child {
       border-bottom: @oui-tile-item-border-width solid @oui-tile-item-border-color;
