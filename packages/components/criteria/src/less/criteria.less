@@ -1,43 +1,12 @@
 .oui-criteria-adder {
   display: inline-block;
 
-  &__button {
-    margin-bottom: 0;
-
-    .oui-icon { font-size: @oui-criteria-adder-icon-size; }
-  }
-
   &__submit { margin-top: @oui-criteria-adder-submit-spacing; }
 
   oui-dropdown { display: inline-block; }
 
-  .oui-dropdown {
-    > .oui-button {
-      display: flex;
-
-      span + span {
-        margin-left: @oui-criteria-adder-icon-spacing;
-      }
-
-      .oui-icon {
-        height: @oui-criteria-adder-icon-size;
-        display: flex; /* For a better vertical centering */
-        flex-direction: row;
-        align-items: center;
-
-        &::before {
-          width: auto;
-          height: auto;
-          line-height: 1;
-          flex: 1;
-          font-size: @oui-button-icon-size_large;
-        }
-      }
-    }
-
-    &__content {
-      width: @oui-criteria-adder-menu-width;
-    }
+  .oui-dropdown__content {
+    width: @oui-criteria-adder-menu-width;
   }
 
   .oui-field { margin-bottom: @oui-criteria-adder-field-spacing; }

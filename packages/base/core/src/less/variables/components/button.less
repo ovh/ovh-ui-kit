@@ -16,8 +16,7 @@
 @oui-button-background-color: transparent;
 
 // Button - Icons
-@oui-button-icon-size: rem-calc(24);
-@oui-button-icon-size_large: @oui-button-icon-size;
+@oui-button-icon-size: rem-calc(16);
 @oui-button-icon-color: @oui-button-font-color;
 @oui-button-icon-color_disabled: @g-300;
 @oui-button-icon-offset: @oui-button-padding-x;
@@ -45,9 +44,13 @@
 @oui-button-primary-box-shadow_active: @oui-button-primary-box-shadow_hover;
 @oui-button-primary-box-shadow_disabled: none;
 @oui-button-primary-font-color: @p-000;
+@oui-button-primary-font-color_hover: @oui-button-primary-font-color;
+@oui-button-primary-font-color_active: @oui-button-primary-font-color;
 @oui-button-primary-font-color_disabled: @oui-button-primary-font-color;
 @oui-button-primary-icon-color: inherit;
-@oui-button-primary-icon-color_disabled: inherit;
+@oui-button-primary-icon-color_hover: @oui-button-primary-icon-color;
+@oui-button-primary-icon-color_active: @oui-button-primary-icon-color;
+@oui-button-primary-icon-color_disabled: @oui-button-primary-icon-color;
 
 // Button - Secondary variant
 @oui-button-secondary-padding: calc(@oui-button-padding-y - @oui-button-secondary-border-width) calc(@oui-button-padding-x - @oui-button-secondary-border-width);
@@ -68,9 +71,13 @@
 @oui-button-secondary-box-shadow_active: @oui-button-secondary-box-shadow_hover;
 @oui-button-secondary-box-shadow_disabled: none;
 @oui-button-secondary-font-color: @oui-button-font-color;
-@oui-button-secondary-font-color_disabled: @p-500;
+@oui-button-secondary-font-color_hover: @oui-button-secondary-font-color;
+@oui-button-secondary-font-color_active: @oui-button-secondary-font-color;
+@oui-button-secondary-font-color_disabled: @oui-button-secondary-font-color;
 @oui-button-secondary-icon-color: inherit;
-@oui-button-secondary-icon-color_disabled: inherit;
+@oui-button-secondary-icon-color_hover: @oui-button-secondary-icon-color;
+@oui-button-secondary-icon-color_active: @oui-button-secondary-icon-color;
+@oui-button-secondary-icon-color_disabled: @oui-button-secondary-icon-color;
 
 // Button - Link variant
 @oui-button-ghost-padding: @oui-button-padding-y @oui-button-padding-x;
@@ -89,12 +96,14 @@
 @oui-button-ghost-box-shadow_focus: @oui-button-ghost-box-shadow;
 @oui-button-ghost-box-shadow_active: @oui-button-ghost-box-shadow_hover;
 @oui-button-ghost-box-shadow_disabled: @oui-button-ghost-box-shadow;
-@oui-button-ghost-font-color: @oui-link-font-color;
-@oui-button-ghost-font-color_hover: @oui-link-font-color_hover;
-@oui-button-ghost-font-color_disabled: @p-500;
-@oui-button-ghost-font-weight: @oui-link-font-weight;
+@oui-button-ghost-font-color: @p-500;
+@oui-button-ghost-font-color_hover: @oui-button-ghost-font-color;
+@oui-button-ghost-font-color_active: @oui-button-ghost-font-color;
+@oui-button-ghost-font-color_disabled: @oui-button-ghost-font-color;
 @oui-button-ghost-icon-color: inherit;
-@oui-button-ghost-icon-color_disabled: inherit;
+@oui-button-ghost-icon-color_hover: @oui-button-ghost-icon-color;
+@oui-button-ghost-icon-color_active: @oui-button-ghost-icon-color;
+@oui-button-ghost-icon-color_disabled: @oui-button-ghost-icon-color;
 
 // Button - Dropdown variant
 @oui-button-dropdown-icon-size: @oui-button-icon-size;
@@ -122,11 +131,16 @@
 @oui-button-dropdown-box-shadow_active: @oui-button-secondary-box-shadow_active;
 @oui-button-dropdown-box-shadow_disabled: @oui-button-secondary-box-shadow_disabled;
 @oui-button-dropdown-font-color: @oui-button-secondary-font-color;
+@oui-button-dropdown-font-color_hover: @oui-button-secondary-font-color_hover;
+@oui-button-dropdown-font-color_active: @oui-button-secondary-font-color_active;
 @oui-button-dropdown-font-color_open: @oui-button-primary-font-color;
 @oui-button-dropdown-font-color_disabled: @oui-button-secondary-font-color_disabled;
 @oui-button-dropdown-icon-color: @oui-button-secondary-icon-color;
+@oui-button-dropdown-icon-color_hover: @oui-button-secondary-icon-color_hover;
+@oui-button-dropdown-icon-color_active: @oui-button-secondary-icon-color_active;
 @oui-button-dropdown-icon-color_open: @oui-button-primary-icon-color;
 @oui-button-dropdown-icon-color_disabled: @oui-button-secondary-icon-color_disabled;
+@oui-button-dropdown-icon-size: rem-calc(24);
 
 // Button - Size variants
 @oui-button-large-min-width: rem-calc(50);
@@ -134,13 +148,14 @@
 @oui-button-large-line-height: rem-calc(18);
 @oui-button-large-font-size: rem-calc(18);
 @oui-button-large-font-weight: 600;
+@oui-button-large-icon-size: rem-calc(24);
 @oui-button-large-padding-x: rem-calc(16);
 @oui-button-large-padding-y: calc((@oui-button-large-min-height - @oui-button-large-line-height) / 2);
 @oui-button-large-padding: @oui-button-large-padding-y @oui-button-large-padding-x;
 
 @oui-button-small-min-width: @oui-button-min-width;
 @oui-button-small-min-height: @oui-button-min-height;
-@oui-button-small-padding-x: calc((@oui-button-small-min-width - @oui-button-icon-size) / 2);
+@oui-button-small-padding-x: rem-calc(4);
 @oui-button-small-padding-y: @oui-button-padding-y;
 @oui-button-small-padding: @oui-button-small-padding-y @oui-button-small-padding-x;
 
