@@ -1,3 +1,16 @@
+## [4.1.6](https://github.com/ovh/ovh-ui-kit/compare/v4.1.5...v4.1.6) (2020-06-29)
+
+
+### Bug Fixes
+
+* **button:** force status color ([f22cdcb](https://github.com/ovh/ovh-ui-kit/commit/f22cdcbd7ce144994e0b911a0e9d7e46a9d13913))
+* **criteria:** use oui-button style ([b31747a](https://github.com/ovh/ovh-ui-kit/commit/b31747a8e9023d249f8a9b14d59ebca808210ae7))
+* **datagrid:** adjust padding in oui-tile ([a3135e1](https://github.com/ovh/ovh-ui-kit/commit/a3135e14efd69cb7605b8102667b24fd874ada13))
+* **dropdown:** apply button changes ([10590a1](https://github.com/ovh/ovh-ui-kit/commit/10590a1c523a8e1a6e7a56cf18794c5aaa9d6dbe))
+* **message:** add border-radius ([ad90cbb](https://github.com/ovh/ovh-ui-kit/commit/ad90cbb90222b327839ede4caa69c6b3239b0bfd))
+
+
+
 ## [4.1.5](https://github.com/ovh/ovh-ui-kit/compare/v4.1.4...v4.1.5) (2020-06-26)
 
 
