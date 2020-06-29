@@ -5,7 +5,6 @@ export default class {
     this.pageSize = 25;
     this.translations = {
       emptyPlaceholder: 'No data available',
-      ariaShowHideColumnsLabel: 'Show/Hide columns',
     };
   }
 

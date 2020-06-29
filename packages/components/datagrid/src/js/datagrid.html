@@ -40,10 +40,7 @@
                     class="oui-datagrid__header oui-datagrid__header_s">
                     <oui-datagrid-parameters ng-if="$ctrl.customizable"
                         columns="$ctrl.availableColumns"
-                        on-change="$ctrl.onColumnsChange(columns)"
-                        oui-tooltip
-                        oui-tooltip-placement="left"
-                        title="{{::$ctrl.config.translations.ariaShowHideColumnsLabel}}">
+                        on-change="$ctrl.onColumnsChange(columns)">
                     </oui-datagrid-parameters>
                 </th>
             </tr>
