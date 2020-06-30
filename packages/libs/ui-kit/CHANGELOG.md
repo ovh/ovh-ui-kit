@@ -1,3 +1,18 @@
+## [4.1.7](https://github.com/ovh/ovh-ui-kit/compare/v4.1.6...v4.1.7) (2020-06-30)
+
+
+### Bug Fixes
+
+* **navbar:** fix backdrop z-index ([f47dd25](https://github.com/ovh/ovh-ui-kit/commit/f47dd258ed9126093b7d74dc28ec76376548a101))
+* **tooltip:** hide empty tooltip ([fd637c5](https://github.com/ovh/ovh-ui-kit/commit/fd637c5da7442ef7e0bc4393486ba5c6e6ed6baa))
+
+
+### Features
+
+* add z-index globals ([644a77d](https://github.com/ovh/ovh-ui-kit/commit/644a77d94d77e03941b716d81591fb9cd70d0c0d))
+
+
+
 ## [4.1.6](https://github.com/ovh/ovh-ui-kit/compare/v4.1.5...v4.1.6) (2020-06-29)
 
 
