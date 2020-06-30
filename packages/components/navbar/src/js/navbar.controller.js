@@ -85,7 +85,6 @@ export default class {
   $postLink() {
     // Avoid $element DOM unsync for jqLite methods
     this.$timeout(() => {
-
       // Close navbar menu on document click, only if a menu is open
       this.$document.on('click', () => {
         if (this.navigation) {

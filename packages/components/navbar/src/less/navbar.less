@@ -1,6 +1,7 @@
 @import './_mixins';
 
 .oui-navbar {
+  width: 100%;
   min-height: @oui-navbar-height;
   display: flex;
   flex-direction: row;
@@ -648,6 +649,8 @@
 }
 
 oui-navbar {
+  display: block;
+
   &-link,
   &-menu,
   &-brand,
@@ -658,7 +661,6 @@ oui-navbar {
     display: block;
   }
 
-  &,
   &-aside,
   &-main {
     display: flex;
