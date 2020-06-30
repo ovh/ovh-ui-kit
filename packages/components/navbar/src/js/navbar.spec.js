@@ -77,22 +77,24 @@ describe('ouiNavbar', () => {
       const internalMenuName = 'ipsum';
 
       let component;
+      let navbar;
       let controller;
 
       beforeEach(() => {
         component = testUtils.compileTemplate('<oui-navbar></oui-navbar>');
+        navbar = component.find('nav');
         controller = component.controller('ouiNavbar');
 
         $timeout.flush();
       });
 
       it('should have default classname', () => {
-        expect(component.hasClass(navbarClass)).toBeTruthy();
-        expect(component.hasClass(navbarFixedClass)).toBeFalsy();
+        expect(navbar.hasClass(navbarClass)).toBeTruthy();
+        expect(navbar.hasClass(navbarFixedClass)).toBeFalsy();
       });
 
       it("should have role 'navigation'", () => {
-        expect(component.attr('role')).toBe('navigation');
+        expect(navbar.attr('role')).toBe('navigation');
       });
 
       it("should add item 'foo' to group 'bar'", () => {
@@ -171,30 +173,33 @@ describe('ouiNavbar', () => {
       it('should be fixed', () => {
         // Test without value, should be true
         component = testUtils.compileTemplate('<oui-navbar fixed></oui-navbar>');
+        navbar = component.find('nav');
         controller = component.controller('ouiNavbar');
 
         $timeout.flush();
 
-        expect(component.hasClass(navbarFixedClass)).toBeTruthy();
+        expect(navbar.hasClass(navbarFixedClass)).toBeTruthy();
         expect(controller.fixed).toBeTruthy();
 
         // Test with value
         component = testUtils.compileTemplate('<oui-navbar fixed="true"></oui-navbar>');
+        navbar = component.find('nav');
         controller = component.controller('ouiNavbar');
 
         $timeout.flush();
 
-        expect(component.hasClass(navbarFixedClass)).toBeTruthy();
+        expect(navbar.hasClass(navbarFixedClass)).toBeTruthy();
         expect(controller.fixed).toBeTruthy();
       });
 
       it('should not be fixed', () => {
         component = testUtils.compileTemplate('<oui-navbar fixed="false"></oui-navbar>');
+        navbar = component.find('nav');
         controller = component.controller('ouiNavbar');
 
         $timeout.flush();
 
-        expect(component.hasClass(navbarFixedClass)).toBeFalsy();
+        expect(navbar.hasClass(navbarFixedClass)).toBeFalsy();
         expect(controller.fixed).toBeFalsy();
       });
 
