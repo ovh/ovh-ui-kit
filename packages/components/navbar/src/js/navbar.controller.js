@@ -85,15 +85,6 @@ export default class {
   $postLink() {
     // Avoid $element DOM unsync for jqLite methods
     this.$timeout(() => {
-      // Add Classname on root element
-      this.$element.addClass('oui-navbar');
-
-      if (this.fixed) {
-        this.$element.addClass('oui-navbar_fixed');
-      }
-
-      // Add "role" attribute for accessibility
-      this.$element.attr('role', 'navigation');
 
       // Close navbar menu on document click, only if a menu is open
       this.$document.on('click', () => {
