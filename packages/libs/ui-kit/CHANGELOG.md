@@ -1,3 +1,12 @@
+## [4.1.8](https://github.com/ovh/ovh-ui-kit/compare/v4.1.7...v4.1.8) (2020-07-01)
+
+
+### Bug Fixes
+
+* **tile:** update tile button padding ([91c144e](https://github.com/ovh/ovh-ui-kit/commit/91c144efacc1d5caa33f2ccc212156e22cb3533e))
+
+
+
 ## [4.1.7](https://github.com/ovh/ovh-ui-kit/compare/v4.1.6...v4.1.7) (2020-06-30)
 
 
