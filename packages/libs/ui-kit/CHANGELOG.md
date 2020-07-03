@@ -1,3 +1,12 @@
+## [4.1.9](https://github.com/ovh/ovh-ui-kit/compare/v4.1.8...v4.1.9) (2020-07-03)
+
+
+### Bug Fixes
+
+* **back-button:** update button style ([8850524](https://github.com/ovh/ovh-ui-kit/commit/88505240879208eb1328d193239ec157ec7056c2))
+
+
+
 ## [4.1.8](https://github.com/ovh/ovh-ui-kit/compare/v4.1.7...v4.1.8) (2020-07-01)
 
 
