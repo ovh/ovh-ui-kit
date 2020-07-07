@@ -1,1 +1,18 @@
-*    @antleblanc @AxelPeter @cbourgois @FredericEspiau @frenautvh @ganeshkumar1989 @JeremyDec @Jisay @jleveugle @lizardK @marie-j @radireddy @varun257
+# Global
+* @ovh/team-manager
+
+# Build
+/packages/apps/builder/ @ovh/team-manager-build
+/packages/base/config/ @ovh/team-manager-build
+/packages/base/test/ @ovh/team-manager-build
+/packages/libs/ @ovh/team-manager-build
+
+# Components
+/packages/base/core/ @ovh/team-manager-dev
+/packages/base/themes/ @ovh/team-manager-dev
+/packages/components/ @ovh/team-manager-dev
+
+# Documentation
+*.md @ovh/team-manager-documentation
+/docs/ @ovh/team-manager-documentation
+/packages/apps/workshop/ @ovh/team-manager-documentation
