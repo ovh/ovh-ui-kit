@@ -1,1 +1,11 @@
-*    @AxelPeter @FredericEspiau @euhmeuh @JeremyDec
+# Global
+* @ovh/team-manager
+
+# Build
+/scripts/ @ovh/team-manager-build
+
+# Components
+/packages/ @ovh/team-manager-dev
+
+# Documentation
+*.md @ovh/team-manager-documentation
