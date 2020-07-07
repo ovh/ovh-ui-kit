@@ -8,12 +8,11 @@
   box-shadow: @oui-tile-box-shadow;
 
   &__title {
-    font-weight: @oui-tile-title-font-weight;
-    color: @oui-tile-title-color;
+    #oui > .heading(4);
   }
 
   &__legend {
-    color: @oui-tile-title-color;
+    color: @oui-tile-legend-color;
   }
 
   &__loader {
@@ -21,18 +20,17 @@
   }
 
   &__button {
-    padding-left: @oui-tile-item-side-spacing;
-    padding-right: @oui-tile-item-side-spacing;
-    margin: 0 -@oui-tile-item-side-spacing;
+    padding-left: @oui-tile-padding-x;
+    padding-right: @oui-tile-padding-x;
+    margin: 0 -@oui-tile-padding-x;
     box-sizing: content-box;
     border-radius: 0;
-    font-weight: @oui-tile-button-font-weight;
     text-align: left;
     text-decoration: none;
 
     &.oui-button_block.oui-button_icon-right {
       .oui-icon {
-        right: @oui-tile-item-side-spacing;
+        right: @oui-tile-padding-x;
       }
 
       .oui-icon-external_link, /* Deprecated: Support for old classname */
@@ -44,26 +42,14 @@
     &:hover,
     &:focus {
       box-shadow: none;
-      background-color: @oui-tile-background-color_hover;
     }
-
-    &:disabled {
-      background: none;
-    }
-  }
-
-  &__button.oui-button_link,
-  &__button.oui-button_ghost {
-    &,
-    &:hover,
-    &:focus { text-decoration: none; }
   }
 
   &__item {
     position: relative;
     display: flex;
     border-top: @oui-tile-item-border-width solid @oui-tile-item-border-color;
-    padding: @oui-tile-item-top-spacing 0;
+    padding: @oui-tile-item-padding;
 
     &:last-child {
       border-bottom: @oui-tile-item-border-width solid @oui-tile-item-border-color;

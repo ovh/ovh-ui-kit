@@ -4,6 +4,7 @@
   border: none;
   font-size: @oui-modal-font-size;
   background-color: @oui-modal-background-color;
+  z-index: @oui-model-z-index;
 
   &__header {
     position: relative;
@@ -134,5 +135,14 @@ oui-modal {
 }
 
 .oui-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: @oui-modal-backdrop-color;
+  opacity: @oui-modal-backdrop-opacity;
+  transition: opacity 0.25s ease-out;
+  pointer-events: none;
+  z-index: @base-z-index-modal-backdrop;
 }

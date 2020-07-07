@@ -1,6 +1,7 @@
 @import './_mixins';
 
 .oui-navbar {
+  width: 100%;
   min-height: @oui-navbar-height;
   display: flex;
   flex-direction: row;
@@ -30,6 +31,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: @oui-navbar-z-index_fixed;
   }
 
   // Header/Brand
@@ -88,7 +90,6 @@
       @media screen and (max-width: @device-breakpoint-tablet-max-width) {
         opacity: @oui-navbar-backdrop-opacity;
         pointer-events: auto;
-        z-index: @oui-navbar-z-index;
       }
     }
   }
@@ -648,6 +649,8 @@
 }
 
 oui-navbar {
+  display: block;
+
   &-link,
   &-menu,
   &-brand,
@@ -658,7 +661,6 @@ oui-navbar {
     display: block;
   }
 
-  &,
   &-aside,
   &-main {
     display: flex;

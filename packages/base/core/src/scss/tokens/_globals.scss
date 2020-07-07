@@ -19,6 +19,16 @@ $base-line-height: $earth-line-height;
 $base-spacing-small: 8px;
 $base-spacing-medium: 16px;
 $base-spacing-large: 32px;
+$base-z-index-sidebar: 1000;
+$base-z-index-navbar: 1010;
+$base-z-index-menu: 1020;
+$base-z-index-backdrop: 1030;
+$base-z-index-panel: 1040;
+$base-z-index-navbar-fixed: 1050;
+$base-z-index-modal-backdrop: 1060;
+$base-z-index-modal: 1070;
+$base-z-index-popover: 1080;
+$base-z-index-tooltip: 1090;
 
 // Device breakpoints
 $device-breakpoint-phone: 768px;

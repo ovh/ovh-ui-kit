@@ -1,3 +1,64 @@
+## [4.1.9](https://github.com/ovh/ovh-ui-kit/compare/v4.1.8...v4.1.9) (2020-07-03)
+
+
+### Bug Fixes
+
+* **back-button:** update button style ([8850524](https://github.com/ovh/ovh-ui-kit/commit/88505240879208eb1328d193239ec157ec7056c2))
+
+
+
+## [4.1.8](https://github.com/ovh/ovh-ui-kit/compare/v4.1.7...v4.1.8) (2020-07-01)
+
+
+### Bug Fixes
+
+* **tile:** update tile button padding ([91c144e](https://github.com/ovh/ovh-ui-kit/commit/91c144efacc1d5caa33f2ccc212156e22cb3533e))
+
+
+
+## [4.1.7](https://github.com/ovh/ovh-ui-kit/compare/v4.1.6...v4.1.7) (2020-06-30)
+
+
+### Bug Fixes
+
+* **navbar:** fix backdrop z-index ([f47dd25](https://github.com/ovh/ovh-ui-kit/commit/f47dd258ed9126093b7d74dc28ec76376548a101))
+* **tooltip:** hide empty tooltip ([fd637c5](https://github.com/ovh/ovh-ui-kit/commit/fd637c5da7442ef7e0bc4393486ba5c6e6ed6baa))
+
+
+### Features
+
+* add z-index globals ([644a77d](https://github.com/ovh/ovh-ui-kit/commit/644a77d94d77e03941b716d81591fb9cd70d0c0d))
+
+
+
+## [4.1.6](https://github.com/ovh/ovh-ui-kit/compare/v4.1.5...v4.1.6) (2020-06-29)
+
+
+### Bug Fixes
+
+* **button:** force status color ([f22cdcb](https://github.com/ovh/ovh-ui-kit/commit/f22cdcbd7ce144994e0b911a0e9d7e46a9d13913))
+* **criteria:** use oui-button style ([b31747a](https://github.com/ovh/ovh-ui-kit/commit/b31747a8e9023d249f8a9b14d59ebca808210ae7))
+* **datagrid:** adjust padding in oui-tile ([a3135e1](https://github.com/ovh/ovh-ui-kit/commit/a3135e14efd69cb7605b8102667b24fd874ada13))
+* **dropdown:** apply button changes ([10590a1](https://github.com/ovh/ovh-ui-kit/commit/10590a1c523a8e1a6e7a56cf18794c5aaa9d6dbe))
+* **message:** add border-radius ([ad90cbb](https://github.com/ovh/ovh-ui-kit/commit/ad90cbb90222b327839ede4caa69c6b3239b0bfd))
+
+
+
+## [4.1.5](https://github.com/ovh/ovh-ui-kit/compare/v4.1.4...v4.1.5) (2020-06-26)
+
+
+### Bug Fixes
+
+* **paragraph:** remove forced base font properties ([ae402d0](https://github.com/ovh/ovh-ui-kit/commit/ae402d067efad46f4db3328244f27610b4cb68fe))
+* **tile:** update title style ([a66e6b6](https://github.com/ovh/ovh-ui-kit/commit/a66e6b6df82d06620161145b0aabf4643016509a))
+
+
+### Features
+
+* **tile:** add table support ([e6d270f](https://github.com/ovh/ovh-ui-kit/commit/e6d270f695343a9f916a04b63aeb8095eb626303))
+
+
+
 ## [4.1.4](https://github.com/ovh/ovh-ui-kit/compare/v4.1.3...v4.1.4) (2020-06-23)
 
 

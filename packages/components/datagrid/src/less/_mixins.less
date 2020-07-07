@@ -143,4 +143,32 @@
       margin: 0;
     }
   }
+
+  .table-tile (
+    @selector: oui-table
+  ) {
+    &,
+    &-responsive {
+      margin: @oui-datagrid-tile-margin;
+      border: none;
+    }
+
+    &__row,
+    &__header,
+    &__footer {
+      background: none;
+    }
+
+    &__cell {
+      height: auto;
+      padding: @oui-datagrid-tile-cell-padding;
+      border: none;
+      border-bottom: @oui-datagrid-tile-border-width solid @oui-datagrid-tile-border-color;
+      white-space: nowrap;
+    }
+
+    &__row:first-child .@{selector}__cell {
+      border-top: @oui-datagrid-tile-border-width solid @oui-datagrid-tile-border-color;
+    }
+  }
 }
