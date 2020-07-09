@@ -11,4 +11,11 @@ export default class {
       .addClass('oui-navbar-dropdown')
       .addClass('oui-navbar-list__item'));
   }
+
+  onTriggerClick() {
+    this.navbarCtrl.toggleMenu(this.name);
+    this.onClick({
+      open: !!this.navbarCtrl.navigation && !!this.navbarCtrl.navigation[this.name],
+    });
+  }
 }

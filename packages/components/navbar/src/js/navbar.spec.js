@@ -276,8 +276,10 @@ describe('ouiNavbar', () => {
 
     describe('Dropdown', () => {
       let component;
+      let onClickSpy;
 
       beforeEach(() => {
+        onClickSpy = jasmine.createSpy('onClickSpy');
         component = testUtils.compileTemplate(`
                     <oui-navbar>
                         <oui-navbar-aside>
@@ -286,7 +288,8 @@ describe('ouiNavbar', () => {
                                 text="{{$ctrl.title}}"
                                 aria-label="{{$ctrl.label}}"
                                 icon-badge="$ctrl.badge"
-                                icon-class="{{asideLink.icon}}">
+                                icon-class="{{asideLink.icon}}"
+                                on-click="$ctrl.onClick(open)">
                                 <oui-navbar-dropdown-menu
                                     ng-bind="$ctrl.text">
                                 </oui-navbar-dropdown-menu>
@@ -299,6 +302,7 @@ describe('ouiNavbar', () => {
           badge: 5,
           icon: 'oui-icon oui-icon-help',
           text: 'Lorem ipsum',
+          onClick: onClickSpy,
         });
 
         $timeout.flush();
@@ -314,6 +318,16 @@ describe('ouiNavbar', () => {
         expect(dropdownMenu.hasClass(navbarMenuClass)).toBeTruthy();
         expect(dropdownMenu.hasClass(navbarMenuFixedClass)).toBeTruthy();
         expect(dropdownMenu.hasClass(navbarMenuPanelClass)).toBeFalsy();
+      });
+
+      it('should call click callback with arguments', () => {
+        const link = angular.element(component[0].querySelector('.oui-navbar-link'));
+
+        link.triggerHandler('click');
+        expect(onClickSpy).toHaveBeenCalledWith(true);
+
+        link.triggerHandler('click');
+        expect(onClickSpy).toHaveBeenCalledWith(false);
       });
 
       it('should have content transcluded', () => {
