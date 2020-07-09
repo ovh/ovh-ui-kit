@@ -1,4 +1,5 @@
 import { forModule } from 'storybook-addon-angularjs';
+import { action } from '@storybook/addon-actions';
 
 import Navbar from '@ovh-ux/ui-kit.navbar';
 import Radio from '@ovh-ux/ui-kit.radio';
@@ -86,7 +87,7 @@ export const Advanced = forModule(moduleName).createElement(
             acknowledged: '!true'
           }).length"
           icon-class="{{asideLink.iconClass}}"
-          on-click="asideLink.onClick"
+          on-click="$ctrl.onClick(open)"
           ng-repeat="asideLink in $ctrl.asideLinks track by $index"
           ng-class="asideLink.class">
           <oui-navbar-notification
@@ -130,6 +131,7 @@ export const Advanced = forModule(moduleName).createElement(
         asideLinks,
         mainLinks,
         togglerLinks: mainLinks,
+        onClick: action('onClick'),
       },
     },
   ),
@@ -152,7 +154,7 @@ export const CustomPanels = forModule(moduleName).createElement(
             acknowledged: '!true'
           }).length"
           icon-class="{{asideLink.iconClass}}"
-          on-click="asideLink.onClick"
+          on-click="$ctrl.onClick(open)"
           ng-repeat="asideLink in $ctrl.asideLinks track by $index"
           ng-class="asideLink.class">
           <oui-navbar-notification
@@ -196,6 +198,7 @@ export const CustomPanels = forModule(moduleName).createElement(
         asideLinks,
         mainLinks,
         togglerLinks: mainLinks,
+        onClick: action('onClick'),
       },
     },
   ),
