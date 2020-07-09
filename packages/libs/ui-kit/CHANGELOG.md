@@ -1,3 +1,12 @@
+## [4.1.10](https://github.com/ovh/ovh-ui-kit/compare/v4.1.9...v4.1.10) (2020-07-09)
+
+
+### Features
+
+* **navbar:** add callback argument on dropdown ([72bc3c6](https://github.com/ovh/ovh-ui-kit/commit/72bc3c63511ee575064f8f77224c6d70d8180334))
+
+
+
 ## [4.1.9](https://github.com/ovh/ovh-ui-kit/compare/v4.1.8...v4.1.9) (2020-07-03)
 
 
