@@ -51,6 +51,7 @@
     "webpack": "^4.43.0"
   },
   "peerDependencies": {
+    "@ovh-ux/ui-kit": "*",
     "@ovh-ux/ui-kit.action-menu": "*",
     "@ovh-ux/ui-kit.autocomplete": "*",
     "@ovh-ux/ui-kit.back-button": "*",
