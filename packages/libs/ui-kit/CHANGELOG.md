@@ -1,3 +1,16 @@
+## [4.1.11](https://github.com/ovh/ovh-ui-kit/compare/v4.1.10...v4.1.11) (2020-07-15)
+
+
+### Bug Fixes
+
+* **description:** add bottom margin ([18b1e9d](https://github.com/ovh/ovh-ui-kit/commit/18b1e9d9c00a99e7cbdb1839a5b2c4ee67a1da59))
+* **dropdown:** fix disabled state on item ([81d69e8](https://github.com/ovh/ovh-ui-kit/commit/81d69e8e5d54bacdb04b1e8e65ab3535d9d5a076))
+* **link:** remove underline on icons ([bf5c2bb](https://github.com/ovh/ovh-ui-kit/commit/bf5c2bbb94109d7194df91af66c26cbe62f77540))
+* **stepper:** fix add step with position ([276ae39](https://github.com/ovh/ovh-ui-kit/commit/276ae39e7df6ffd46dfec1ad1b58300a82c4244e))
+* fix getNodeIndex with named nodes ([4dadca5](https://github.com/ovh/ovh-ui-kit/commit/4dadca543ed1ef37efc5a8271aa27b0467dccf98))
+
+
+
 ## [4.1.10](https://github.com/ovh/ovh-ui-kit/compare/v4.1.9...v4.1.10) (2020-07-09)
 
 
