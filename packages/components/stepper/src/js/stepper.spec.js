@@ -73,7 +73,7 @@ describe('ouiStepper', () => {
         });
         $timeout.flush();
 
-        const editLink = angular.element(element[0].querySelector('button.oui-button.oui-button_ghost'));
+        const editLink = angular.element(element[0].querySelector('button.oui-link'));
         expect(editLink.length).toBe(1);
       });
 
@@ -233,7 +233,7 @@ describe('ouiStepper', () => {
         const element = TestUtils.compileTemplate(`
                     <oui-stepper>
                         <oui-step-form name="form1"></oui-step-form>
-                        <oui-step-form name="form2" data-ng-if="$ctrl.isForm2" data-position="2"></oui-step-form>
+                        <oui-step-form name="form2" data-ng-if="$ctrl.isForm2" data-position="1"></oui-step-form>
                         <oui-step-form name="form3"></oui-step-form>
                     </oui-stepper>`, { isForm2: false });
 

@@ -34,8 +34,13 @@ export default class {
 
   addStep(step, index) {
     // Priority for position attribute
-    if (angular.isNumber(step.position)) {
-      this.steps.splice(step.position - 1, 0, step);
+    if (angular.isString(step.position)) {
+      const position = parseInt(step.position, 10);
+      if (!this.steps[position]) {
+        this.steps[position] = step;
+      } else {
+        this.steps.splice(parseInt(step.position, 10), 0, step);
+      }
     } else if (angular.isNumber(index)) {
       this.steps.splice(index, 0, step);
     } else {
