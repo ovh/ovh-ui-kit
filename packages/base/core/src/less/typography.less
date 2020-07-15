@@ -39,9 +39,11 @@ a,
   }
 
   &.oui-link_icon .oui-icon {
+    display: inline-block; // Needed to avoid text-decoration
     margin-left: @oui-link-icon-spacing;
     margin-right: @oui-link-icon-spacing;
     font-size: @oui-link-icon-size;
+    text-decoration: none;
   }
 }
 
@@ -73,6 +75,8 @@ p,
 
 dl,
 .oui-description {
+  margin: @oui-description-margin;
+
   dt {
     font-weight: @oui-description-term-font-weight;
   }
@@ -83,7 +87,6 @@ dl,
 }
 
 .oui-description_horizontal {
-  margin: 0;
   padding: 0;
 
   &::after {
