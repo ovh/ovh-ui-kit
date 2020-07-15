@@ -70,7 +70,7 @@ export default class StepFormController {
     // To get position in parent ouiStepper
     while (item.previousSibling) {
       item = item.previousSibling;
-      if (item.nodeType === Node.ELEMENT_NODE) {
+      if (item.nodeType === Node.ELEMENT_NODE && item.nodeName === 'OUI-STEP-FORM') {
         i += 1;
       }
     }
