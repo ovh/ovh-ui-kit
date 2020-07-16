@@ -1,8 +1,8 @@
 import DatagridPagingAbstract from './datagrid-paging-abstract';
 
 export default class DatagridRemotePaging extends DatagridPagingAbstract {
-  constructor(columns, currentSorting, pageSize, rowLoader, pagingService, rowsLoader) {
-    super(columns, currentSorting, pageSize, rowLoader, pagingService);
+  constructor(columns, currentSorting, offset, pageSize, rowLoader, pagingService, rowsLoader) {
+    super(columns, currentSorting, offset, pageSize, rowLoader, pagingService);
 
     this.rowsLoader = rowsLoader;
   }
