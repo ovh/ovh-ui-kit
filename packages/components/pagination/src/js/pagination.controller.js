@@ -130,7 +130,7 @@ export default class {
   }
 
   updatePaginationSelectors(pageSize) {
-    if (pageSize) {
+    if (pageSize && this.currentOffset && this.totalItems) {
       // PageSize selector
       this.currentPageSize = pageSize || this.pageSize;
       this.pageSizeList = this.getPageSizeList();

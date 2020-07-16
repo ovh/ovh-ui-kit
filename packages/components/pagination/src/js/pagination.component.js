@@ -8,7 +8,7 @@ export default {
     currentOffset: '<',
     pageSize: '<?',
     pageSizeMax: '<?',
-    totalItems: '<?',
+    totalItems: '<',
     onChange: '&',
   },
   controller,
