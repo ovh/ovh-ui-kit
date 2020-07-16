@@ -12,6 +12,7 @@ export default () => {
       columnsDescription: '<?columns',
       columnsParameters: '<?',
       customizable: '<?',
+      page: '@?',
       pageSize: '@?',
       rows: '<?',
       rowsLoader: '&?',

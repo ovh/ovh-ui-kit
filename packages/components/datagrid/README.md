@@ -29,6 +29,7 @@ angular.module('myModule', ['oui.datagrid'])
 | ----                              | ----      | ----      | ----                | ----             | ----         | ----
 | `id`                              | string    | @?        | no                  | n/a              | n/a          | id of the datagrid
 | `page-size`                       | number    | @?        | no                  | n/a              | `25`         | maximum number of rows to show on each pages
+| `page`                            | number    | @?        | no                  | n/a               | `1`         | page to display 
 | `rows`                            | array     | <?        | yes                 | n/a              | n/a          | local rows to load in the datagrid
 | `empty-placeholder`               | string    | @?        | yes                 | n/a              | n/a          | custom placeholder text when there is no data
 | `selectable-rows`                 | boolean   | <?        | no                  | `true`, `false`  | `false`      | allow rows to be selected. Create a sticky column a the start of the datagrid.

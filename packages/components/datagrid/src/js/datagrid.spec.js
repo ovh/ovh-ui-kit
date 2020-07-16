@@ -1298,6 +1298,26 @@ describe('ouiDatagrid', () => {
       expect(getCell($secondRow, 1).children().html()).toBe(fakeData[3].lastName);
     });
 
+    it('should go to the given page', () => {
+      const element = TestUtils.compileTemplate(`
+                    <oui-datagrid rows="$ctrl.rows" page-size="2" page="2">
+                        <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                    </oui-datagrid>
+                `, {
+        rows: fakeData.slice(0, 5),
+      });
+
+      const $firstRow = getRow(element, 0);
+      const $secondRow = getRow(element, 1);
+
+      expect(getCell($firstRow, 0).children().html()).toBe(fakeData[2].firstName);
+      expect(getCell($firstRow, 1).children().html()).toBe(fakeData[2].lastName);
+
+      expect(getCell($secondRow, 0).children().html()).toBe(fakeData[3].firstName);
+      expect(getCell($secondRow, 1).children().html()).toBe(fakeData[3].lastName);
+    });
+
     it('should execute callback when pagination changes', () => {
       const onPageChangeSpy = jasmine.createSpy('onPaginationChangeSpy');
       const element = TestUtils.compileTemplate(`
