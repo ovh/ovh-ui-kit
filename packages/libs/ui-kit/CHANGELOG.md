@@ -1,3 +1,17 @@
+## [4.1.12](https://github.com/ovh/ovh-ui-kit/compare/v4.1.11...v4.1.12) (2020-07-16)
+
+
+### Bug Fixes
+
+* **pagination:** fix selector calculation checks ([d7cf77e](https://github.com/ovh/ovh-ui-kit/commit/d7cf77e6297a8ced76f5fb2377c151c8602f288f))
+
+
+### Features
+
+* **datagrid:** allow to go to given page ([83202d9](https://github.com/ovh/ovh-ui-kit/commit/83202d96b6f2f7b33ba1421819d6d30931d5d0c8))
+
+
+
 ## [4.1.11](https://github.com/ovh/ovh-ui-kit/compare/v4.1.10...v4.1.11) (2020-07-15)
 
 
