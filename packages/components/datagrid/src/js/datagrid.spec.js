@@ -1404,6 +1404,24 @@ describe('ouiDatagrid', () => {
       expect(element.text()).toContain('PLACEHOLDER');
     });
 
+    it('should apply default criteria', () => {
+      const element = TestUtils.compileTemplate(`
+                    <oui-datagrid rows="$ctrl.rows" criteria="[{'property': 'firstName', 'operator': 'is', 'value': 'Keith'}]">
+                        <oui-datagrid-column property="firstName" type="string" filterable></oui-datagrid-column>
+                        <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                    </oui-datagrid>
+                `, {
+        rows: fakeData.slice(0, 5),
+      });
+
+      const $rows = getRows(element);
+      const $firstRow = getRow(element, 0);
+
+      expect(getCell($firstRow, 0).children().html()).toBe(fakeData[2].firstName);
+      expect(getCell($firstRow, 1).children().html()).toBe(fakeData[2].lastName);
+      expect($rows.length).toBe(1);
+    });
+
     describe('Columns', () => {
       it('should support dataset notation', () => {
         const element = TestUtils.compileTemplate(`
