@@ -32,6 +32,10 @@ Once you have `yarn start`-ed the project, you can edit anything with an automat
 
 Documentation is available from the `packages/` folder, every package is self-documented throught a `README.md` file.
 
+## Changelog
+
+For full Changelog, visit <https://ovh.github.io/ovh-ui-kit/?path=/docs/documentation-changelog--page>.
+
 ## Related links
 
  * Contribute: [https://github.com/ovh/ovh-ui-kit/blob/master/CONTRIBUTING.md](https://github.com/ovh/ovh-ui-kit/blob/master/CONTRIBUTING.md)
