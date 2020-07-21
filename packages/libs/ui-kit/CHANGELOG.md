@@ -1,3 +1,12 @@
+# [4.2.0](https://github.com/ovh/ovh-ui-kit/compare/v4.1.12...v4.2.0) (2020-07-21)
+
+
+### Features
+
+* **datagrid:** allow to pass criteria ([#642](https://github.com/ovh/ovh-ui-kit/issues/642)) ([87a8745](https://github.com/ovh/ovh-ui-kit/commit/87a8745531cfbd58fafe53d9ce6aeb423ece857d))
+
+
+
 ## [4.1.12](https://github.com/ovh/ovh-ui-kit/compare/v4.1.11...v4.1.12) (2020-07-16)
 
 
