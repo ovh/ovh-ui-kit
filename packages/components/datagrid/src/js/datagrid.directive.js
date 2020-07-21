@@ -11,6 +11,7 @@ export default () => {
       id: '@?',
       columnsDescription: '<?columns',
       columnsParameters: '<?',
+      criteria: '<?',
       customizable: '<?',
       page: '@?',
       pageSize: '@?',
