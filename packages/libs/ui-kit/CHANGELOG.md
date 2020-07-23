@@ -1,3 +1,13 @@
+## [4.2.1](https://github.com/ovh/ovh-ui-kit/compare/v4.2.0...v4.2.1) (2020-07-23)
+
+
+### Bug Fixes
+
+* **select:** fix native style oui-icon position ([#644](https://github.com/ovh/ovh-ui-kit/issues/644)) ([bc67bdc](https://github.com/ovh/ovh-ui-kit/commit/bc67bdc0298218e04b7aafa238e4e577e24ddb6c))
+* **tile:** inherit oui tile button line height ([#645](https://github.com/ovh/ovh-ui-kit/issues/645)) ([8e45eb1](https://github.com/ovh/ovh-ui-kit/commit/8e45eb10e3167a4b546584bc8e988cfec5269d3f))
+
+
+
 # [4.2.0](https://github.com/ovh/ovh-ui-kit/compare/v4.1.12...v4.2.0) (2020-07-21)
 
 
