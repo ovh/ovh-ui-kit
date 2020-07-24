@@ -1,3 +1,12 @@
+## [4.2.2](https://github.com/ovh/ovh-ui-kit/compare/v4.2.1...v4.2.2) (2020-07-24)
+
+
+### Bug Fixes
+
+* **datagrid:** convert typeOptions to a string to be able to parse it ([#647](https://github.com/ovh/ovh-ui-kit/issues/647)) ([1595610](https://github.com/ovh/ovh-ui-kit/commit/1595610d59468aa448b6e7e3bcd05e374ac83803))
+
+
+
 ## [4.2.1](https://github.com/ovh/ovh-ui-kit/compare/v4.2.0...v4.2.1) (2020-07-23)
 
 
