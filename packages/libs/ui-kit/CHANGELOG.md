@@ -1,3 +1,12 @@
+## [4.2.3](https://github.com/ovh/ovh-ui-kit/compare/v4.2.2...v4.2.3) (2020-08-05)
+
+
+### Bug Fixes
+
+* **stepper:** count transcluded step forms ([#650](https://github.com/ovh/ovh-ui-kit/issues/650)) ([c45bb97](https://github.com/ovh/ovh-ui-kit/commit/c45bb97c5a6459ba2d72d61e31ccf6e4a5194ace))
+
+
+
 ## [4.2.2](https://github.com/ovh/ovh-ui-kit/compare/v4.2.1...v4.2.2) (2020-07-24)
 
 
