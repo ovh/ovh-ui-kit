@@ -10,7 +10,6 @@ describe('ouiCheckbox', () => {
     TestUtils = _TestUtils_;
   }));
 
-
   const getCheckboxInputElement = (element) => element[0].querySelector('input[type=checkbox]');
   const getCheckboxLabelElement = (element) => element[0].querySelector('label');
   const getCheckboxTextContainerElement = (element) => element[0].querySelector('.oui-checkbox__text');

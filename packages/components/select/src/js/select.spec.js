@@ -206,7 +206,6 @@ describe('ouiSelect', () => {
         expect(matchItems.length).toBe(1);
       });
 
-
       it('should trigger onChange callback if an item is removed', () => {
         const onChange = jasmine.createSpy();
         const element = TestUtils.compileTemplate(`

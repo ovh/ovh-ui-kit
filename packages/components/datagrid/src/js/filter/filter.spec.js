@@ -43,7 +43,6 @@ const serverColumns = [{
 const fakeData = angular.copy(originalFakeData);
 const serversFakeData = angular.copy(originalServersFakeData);
 
-
 describe('Filter', () => {
   let filter;
 

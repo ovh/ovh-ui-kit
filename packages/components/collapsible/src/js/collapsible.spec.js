@@ -35,7 +35,6 @@ describe('ouiCollapsible', () => {
       expect(headerEl.getAttribute('aria-label')).toBe(ariaLabel);
     });
 
-
     it('should expand and collapse on header click', () => {
       const element = TestUtils.compileTemplate(`
                 <oui-collapsible heading="Title" aria-label="Action"></oui-collapsible>`);

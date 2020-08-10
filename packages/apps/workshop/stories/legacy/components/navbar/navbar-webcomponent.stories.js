@@ -137,7 +137,6 @@ export const Advanced = forModule(moduleName).createElement(
   ),
 );
 
-
 export const CustomPanels = forModule(moduleName).createElement(
   () => compileTemplate(
     `

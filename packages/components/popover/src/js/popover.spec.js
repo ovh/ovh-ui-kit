@@ -36,7 +36,6 @@ describe('ouiPopover', () => {
         expect(popover.text().trim()).toBe('foo');
       });
 
-
       it('should position the popover with placement attribute value, when trigger is clicked', () => {
         const component = testUtils.compileTemplate('<div><button class="trigger" oui-popover="foo" oui-popover-placement="bottom-start"></button></div>');
 
@@ -92,7 +91,6 @@ describe('ouiPopover', () => {
         trigger.triggerHandler('click');
         expect(trigger.attr('aria-expanded')).toBe('false');
       });
-
 
       it('should open the popover if specified', () => {
         const component = testUtils.compileTemplate(

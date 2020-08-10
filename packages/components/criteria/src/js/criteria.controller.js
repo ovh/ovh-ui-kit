@@ -62,7 +62,6 @@ export default class {
     }
   }
 
-
   static getCriterion(modelValue) {
     return {
       title: modelValue,
