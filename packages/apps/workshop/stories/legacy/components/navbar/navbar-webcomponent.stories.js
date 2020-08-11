@@ -204,9 +204,7 @@ export const CustomPanels = forModule(moduleName).createElement(
   ),
 );
 
-CustomPanels.story = {
-  name: 'Custom panels',
-};
+CustomPanels.storyName = 'Custom panels';
 
 export const CustomMenus = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -239,9 +237,7 @@ export const CustomMenus = forModule(moduleName).createElement(
   ),
 );
 
-CustomMenus.story = {
-  name: 'Custom menus',
-};
+CustomMenus.storyName = 'Custom menus';
 
 export const PlaceholderForNotification = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -266,6 +262,4 @@ export const PlaceholderForNotification = forModule(moduleName).createElement(
   ),
 );
 
-PlaceholderForNotification.story = {
-  name: 'Placeholder for notification',
-};
+PlaceholderForNotification.storyName = 'Placeholder for notification';

@@ -55,9 +55,7 @@ export const ArrayOfStrings = forModule(moduleName).createElement(
   ),
 );
 
-ArrayOfStrings.story = {
-  name: 'Array of strings',
-};
+ArrayOfStrings.storyName = 'Array of strings';
 
 export const ArrayOfObjects = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -94,9 +92,7 @@ export const ArrayOfObjects = forModule(moduleName).createElement(
   ),
 );
 
-ArrayOfObjects.story = {
-  name: 'Array of objects',
-};
+ArrayOfObjects.storyName = 'Array of objects';
 
 export const DeepNestedProperty = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -133,6 +129,4 @@ export const DeepNestedProperty = forModule(moduleName).createElement(
   ),
 );
 
-DeepNestedProperty.story = {
-  name: 'Deep nested property',
-};
+DeepNestedProperty.storyName = 'Deep nested property';

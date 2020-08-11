@@ -89,9 +89,7 @@ export const EmptyPlaceholer = forModule(moduleName).createElement(
   ),
 );
 
-EmptyPlaceholer.story = {
-  name: 'Empty placeholer',
-};
+EmptyPlaceholer.storyName = 'Empty placeholer';
 
 export const WithTopbar = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -118,9 +116,7 @@ export const WithTopbar = forModule(moduleName).createElement(
   ),
 );
 
-WithTopbar.story = {
-  name: 'With topbar',
-};
+WithTopbar.storyName = 'With topbar';
 
 export const WithFooter = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -141,9 +137,7 @@ export const WithFooter = forModule(moduleName).createElement(
   ),
 );
 
-WithFooter.story = {
-  name: 'With footer',
-};
+WithFooter.storyName = 'With footer';
 
 export const Sortable = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -187,9 +181,7 @@ export const SearchAndFiltering = forModule(moduleName).createElement(
   ),
 );
 
-SearchAndFiltering.story = {
-  name: 'Search and filtering',
-};
+SearchAndFiltering.storyName = 'Search and filtering';
 
 export const SelectableRows = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -219,9 +211,7 @@ export const SelectableRows = forModule(moduleName).createElement(
   ),
 );
 
-SelectableRows.story = {
-  name: 'Selectable rows',
-};
+SelectableRows.storyName = 'Selectable rows';
 
 export const ExpandableRows = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -248,9 +238,7 @@ export const ExpandableRows = forModule(moduleName).createElement(
   ),
 );
 
-ExpandableRows.story = {
-  name: 'Expandable rows',
-};
+ExpandableRows.storyName = 'Expandable rows';
 
 export const RowActions = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -278,9 +266,7 @@ export const RowActions = forModule(moduleName).createElement(
   ),
 );
 
-RowActions.story = {
-  name: 'Row actions',
-};
+RowActions.storyName = 'Row actions';
 
 export const CustomizableColumnsDisplay = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -303,9 +289,7 @@ export const CustomizableColumnsDisplay = forModule(moduleName).createElement(
   ),
 );
 
-CustomizableColumnsDisplay.story = {
-  name: 'Customizable columns display',
-};
+CustomizableColumnsDisplay.storyName = 'Customizable columns display';
 
 export const CustomizableCellsTemplate = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -336,9 +320,7 @@ export const CustomizableCellsTemplate = forModule(moduleName).createElement(
   ),
 );
 
-CustomizableCellsTemplate.story = {
-  name: 'Customizable cells template',
-};
+CustomizableCellsTemplate.storyName = 'Customizable cells template';
 
 export const DynamicColumns = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -384,9 +366,7 @@ export const DynamicColumns = forModule(moduleName).createElement(
   ),
 );
 
-DynamicColumns.story = {
-  name: 'Dynamic columns',
-};
+DynamicColumns.storyName = 'Dynamic columns';
 
 export const RemoteData = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -449,6 +429,4 @@ export const RemoteData = forModule(moduleName).createElement(
   ),
 );
 
-RemoteData.story = {
-  name: 'Remote data',
-};
+RemoteData.storyName = 'Remote data';

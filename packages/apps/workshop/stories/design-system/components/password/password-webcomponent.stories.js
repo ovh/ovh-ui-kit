@@ -112,9 +112,7 @@ export const PasswordRulesStrength = forModule(moduleName).createElement(
   ),
 );
 
-PasswordRulesStrength.story = {
-  name: 'Password rules & strength',
-};
+PasswordRulesStrength.storyName = 'Password rules & strength';
 
 export const CustomStrengthFeedback = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -149,9 +147,7 @@ export const CustomStrengthFeedback = forModule(moduleName).createElement(
   ),
 );
 
-CustomStrengthFeedback.story = {
-  name: 'Custom strength feedback',
-};
+CustomStrengthFeedback.storyName = 'Custom strength feedback';
 
 export const ConfirmValidation = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -196,6 +192,4 @@ export const ConfirmValidation = forModule(moduleName).createElement(
   ),
 );
 
-ConfirmValidation.story = {
-  name: 'Confirm validation',
-};
+ConfirmValidation.storyName = 'Confirm validation';

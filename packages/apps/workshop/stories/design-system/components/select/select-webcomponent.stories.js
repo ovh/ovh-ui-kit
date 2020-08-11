@@ -95,9 +95,7 @@ export const ArrayOfObjects = forModule(moduleName).createElement(
   ),
 );
 
-ArrayOfObjects.story = {
-  name: 'Array of objects',
-};
+ArrayOfObjects.storyName = 'Array of objects';
 
 export const Searchable = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -179,9 +177,7 @@ export const DisableItems = forModule(moduleName).createElement(
   ),
 );
 
-DisableItems.story = {
-  name: 'Disable items',
-};
+DisableItems.storyName = 'Disable items';
 
 export const Grouping = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -227,9 +223,7 @@ export const CustomOptionTemplate = forModule(moduleName).createElement(
   ),
 );
 
-CustomOptionTemplate.story = {
-  name: 'Option template',
-};
+CustomOptionTemplate.storyName = 'Option template';
 
 export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(

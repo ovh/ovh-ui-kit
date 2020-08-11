@@ -62,9 +62,7 @@ export const WithWeekNumbers = forModule(moduleName).createElement(
   ),
 );
 
-WithWeekNumbers.story = {
-  name: 'With week numbers',
-};
+WithWeekNumbers.storyName = 'With week numbers';
 
 export const WithTimepicker = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -102,9 +100,7 @@ export const MinAndMax = forModule(moduleName).createElement(
   ),
 );
 
-MinAndMax.story = {
-  name: 'Min and Max',
-};
+MinAndMax.storyName = 'Min and Max';
 
 export const DisablingDates = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -129,9 +125,7 @@ export const DisablingDates = forModule(moduleName).createElement(
   ),
 );
 
-DisablingDates.story = {
-  name: 'Disabling dates',
-};
+DisablingDates.storyName = 'Disabling dates';
 
 export const DisablingAllDatesExceptSelectFew = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -156,9 +150,7 @@ export const DisablingAllDatesExceptSelectFew = forModule(moduleName).createElem
   ),
 );
 
-DisablingAllDatesExceptSelectFew.story = {
-  name: 'Disabling all dates except select few',
-};
+DisablingAllDatesExceptSelectFew.storyName = 'Disabling all dates except select few';
 
 export const DateFormatting = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -171,9 +163,7 @@ export const DateFormatting = forModule(moduleName).createElement(
   ),
 );
 
-DateFormatting.story = {
-  name: 'Date formatting',
-};
+DateFormatting.storyName = 'Date formatting';
 
 export const RangeMode = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -185,9 +175,7 @@ export const RangeMode = forModule(moduleName).createElement(
   ),
 );
 
-RangeMode.story = {
-  name: 'Range mode',
-};
+RangeMode.storyName = 'Range mode';
 
 export const MultipleMode = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -199,6 +187,4 @@ export const MultipleMode = forModule(moduleName).createElement(
   ),
 );
 
-MultipleMode.story = {
-  name: 'Multiple mode',
-};
+MultipleMode.storyName = 'Multiple mode';

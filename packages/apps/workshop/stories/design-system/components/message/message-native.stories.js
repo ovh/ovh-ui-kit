@@ -80,6 +80,4 @@ export const NoIcon = () => `
   <p class="oui-message__body">Error message with close button and no icon</p>
 </div>`;
 
-NoIcon.story = {
-  name: 'No icon',
-};
+NoIcon.storyName = 'No icon';

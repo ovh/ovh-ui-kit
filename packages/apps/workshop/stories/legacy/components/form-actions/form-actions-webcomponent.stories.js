@@ -51,6 +51,4 @@ export const CustomNaming = forModule(moduleName).createElement(
   ),
 );
 
-CustomNaming.story = {
-  name: 'Custom naming',
-};
+CustomNaming.storyName = 'Custom naming';

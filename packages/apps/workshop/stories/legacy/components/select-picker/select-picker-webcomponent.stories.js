@@ -116,9 +116,7 @@ export const MultipleValues = forModule(moduleName).createElement(
   ),
 );
 
-MultipleValues.story = {
-  name: 'Multiple values',
-};
+MultipleValues.storyName = 'Multiple values';
 
 export const WithDescription = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -151,9 +149,7 @@ export const WithDescription = forModule(moduleName).createElement(
   ),
 );
 
-WithDescription.story = {
-  name: 'With description',
-};
+WithDescription.storyName = 'With description';
 
 export const WithPicture = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -196,9 +192,7 @@ export const WithPicture = forModule(moduleName).createElement(
   ),
 );
 
-WithPicture.story = {
-  name: 'With picture',
-};
+WithPicture.storyName = 'With picture';
 
 export const WithSection = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -235,9 +229,7 @@ export const WithSection = forModule(moduleName).createElement(
   ),
 );
 
-WithSection.story = {
-  name: 'With section',
-};
+WithSection.storyName = 'With section';
 
 export const WithFooter = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -273,9 +265,7 @@ export const WithFooter = forModule(moduleName).createElement(
   ),
 );
 
-WithFooter.story = {
-  name: 'With footer',
-};
+WithFooter.storyName = 'With footer';
 
 export const FullExample = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -331,6 +321,4 @@ export const FullExample = forModule(moduleName).createElement(
   ),
 );
 
-FullExample.story = {
-  name: 'Full example',
-};
+FullExample.storyName = 'Full example';

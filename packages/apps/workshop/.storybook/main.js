@@ -14,7 +14,6 @@ module.exports = {
 
     // For toolbar
     '@storybook/addon-docs/register',
-    '@storybook/addon-notes/register',
     '@storybook/addon-backgrounds/register',
     '@storybook/addon-viewport/register',
   ],
