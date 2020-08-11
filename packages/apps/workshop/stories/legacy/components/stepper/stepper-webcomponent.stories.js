@@ -85,9 +85,7 @@ export const Simple = forModule(moduleName).createElement(
   ),
 );
 
-Simple.story = {
-  name: 'Simple ',
-};
+Simple.storyName = 'Simple ';
 
 export const StepFormStates = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -119,9 +117,7 @@ export const StepFormStates = forModule(moduleName).createElement(
   ),
 );
 
-StepFormStates.story = {
-  name: 'Step form states',
-};
+StepFormStates.storyName = 'Step form states';
 
 export const DisableNextButton = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -148,9 +144,7 @@ export const DisableNextButton = forModule(moduleName).createElement(
   ),
 );
 
-DisableNextButton.story = {
-  name: 'Disable next button',
-};
+DisableNextButton.storyName = 'Disable next button';
 
 export const ControllingOpenedStepIndex = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -181,9 +175,7 @@ export const ControllingOpenedStepIndex = forModule(moduleName).createElement(
   ),
 );
 
-ControllingOpenedStepIndex.story = {
-  name: 'Controlling opened step index',
-};
+ControllingOpenedStepIndex.storyName = 'Controlling opened step index';
 
 export const ControllingStepPositionOrder = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -208,6 +200,4 @@ export const ControllingStepPositionOrder = forModule(moduleName).createElement(
   ),
 );
 
-ControllingStepPositionOrder.story = {
-  name: 'Controlling step position order',
-};
+ControllingStepPositionOrder.storyName = 'Controlling step position order';

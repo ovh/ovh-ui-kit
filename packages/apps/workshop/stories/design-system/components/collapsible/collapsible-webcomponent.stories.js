@@ -153,6 +153,4 @@ export const GroupAccordion = forModule(moduleName).createElement(
   ),
 );
 
-GroupAccordion.story = {
-  name: 'Group (Accordion)',
-};
+GroupAccordion.storyName = 'Group (Accordion)';

@@ -43,9 +43,7 @@ export const WithMultiplesLists = () => `
   </ul>
 </nav>`;
 
-WithMultiplesLists.story = {
-  name: 'With multiples lists',
-};
+WithMultiplesLists.storyName = 'With multiples lists';
 
 export const WithLinksVariant = () => `
 <nav class="oui-navbar" role="navigation">
@@ -73,9 +71,7 @@ export const WithLinksVariant = () => `
   </ul>
 </nav>`;
 
-WithLinksVariant.story = {
-  name: 'With links variant',
-};
+WithLinksVariant.storyName = 'With links variant';
 
 export const WithMenus = () => `
 <nav class="oui-navbar" role="navigation">
@@ -102,13 +98,11 @@ export const WithMenus = () => `
   </ul>
 </nav>`;
 
-WithMenus.story = {
-  name: 'With menus',
+WithMenus.storyName = 'With menus';
 
-  parameters: {
-    notes:
-      'The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, of the previous `.oui-navbar-link` button or link.',
-  },
+WithMenus.parameters = {
+  notes:
+    'The menu `.oui-navbar-menu` is open if the attribute `aria-expanded` is `true`, of the previous `.oui-navbar-link` button or link.',
 };
 
 export const WithResponsiveToggler = () => `
@@ -145,11 +139,9 @@ export const WithResponsiveToggler = () => `
   <div class="oui-navbar-backdrop" aria-hidden="true"></div>
 </nav>`;
 
-WithResponsiveToggler.story = {
-  name: 'With responsive toggler',
+WithResponsiveToggler.storyName = 'With responsive toggler';
 
-  parameters: {
-    notes:
-      'The menu `.oui-navbar-menu_toggle` is open if the attribute `aria-expanded` is `true`, of the `.oui-navbar-toggler` button.',
-  },
+WithResponsiveToggler.parameters = {
+  notes:
+    'The menu `.oui-navbar-menu_toggle` is open if the attribute `aria-expanded` is `true`, of the `.oui-navbar-toggler` button.',
 };

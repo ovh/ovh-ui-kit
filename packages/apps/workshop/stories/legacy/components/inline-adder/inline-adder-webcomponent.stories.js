@@ -112,6 +112,4 @@ export const MultipleRows = forModule(moduleName).createElement(
   ),
 );
 
-MultipleRows.story = {
-  name: 'Multiple rows',
-};
+MultipleRows.storyName = 'Multiple rows';

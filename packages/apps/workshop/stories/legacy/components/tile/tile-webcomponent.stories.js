@@ -69,9 +69,7 @@ export const WithButtons = forModule(moduleName).createElement(
   ),
 );
 
-WithButtons.story = {
-  name: 'With buttons',
-};
+WithButtons.storyName = 'With buttons';
 
 export const WithDefinitionList = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -122,9 +120,7 @@ export const WithDefinitionList = forModule(moduleName).createElement(
   ),
 );
 
-WithDefinitionList.story = {
-  name: 'With definition list',
-};
+WithDefinitionList.storyName = 'With definition list';
 
 export const WithTable = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -189,6 +185,4 @@ export const WithTable = forModule(moduleName).createElement(
   ),
 );
 
-WithTable.story = {
-  name: 'With table',
-};
+WithTable.storyName = 'With table';

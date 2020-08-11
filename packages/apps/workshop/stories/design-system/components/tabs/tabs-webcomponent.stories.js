@@ -61,6 +61,4 @@ export const WithSubheadings = forModule(moduleName).createElement(
   ),
 );
 
-WithSubheadings.story = {
-  name: 'With subheadings',
-};
+WithSubheadings.storyName = 'With subheadings';

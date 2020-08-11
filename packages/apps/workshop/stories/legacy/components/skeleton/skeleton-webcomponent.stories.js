@@ -46,6 +46,4 @@ export const RandomizedWidth = forModule(moduleName).createElement(
   ),
 );
 
-RandomizedWidth.story = {
-  name: 'Randomized width',
-};
+RandomizedWidth.storyName = 'Randomized width';

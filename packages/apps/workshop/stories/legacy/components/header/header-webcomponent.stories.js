@@ -52,6 +52,4 @@ export const WithTabs = forModule(moduleName).createElement(
   ),
 );
 
-WithTabs.story = {
-  name: 'With tabs',
-};
+WithTabs.storyName = 'With tabs';
