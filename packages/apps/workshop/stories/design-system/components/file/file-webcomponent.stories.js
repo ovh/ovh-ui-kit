@@ -58,9 +58,7 @@ export const MultipleFiles = forModule(moduleName).createElement(
   ),
 );
 
-MultipleFiles.story = {
-  name: 'Multiple files',
-};
+MultipleFiles.storyName = 'Multiple files';
 
 export const MultipleWithPreview = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -80,12 +78,10 @@ export const MultipleWithPreview = forModule(moduleName).createElement(
   ),
 );
 
-MultipleWithPreview.story = {
-  name: 'Multiple with preview',
+MultipleWithPreview.storyName = 'Multiple with preview';
 
-  parameters: {
-    notes: 'Preview works only with `image/*` files.',
-  },
+MultipleWithPreview.parameters = {
+  notes: 'Preview works only with `image/*` files.',
 };
 
 export const DragDropArea = forModule(moduleName).createElement(
@@ -105,9 +101,7 @@ export const DragDropArea = forModule(moduleName).createElement(
   ),
 );
 
-DragDropArea.story = {
-  name: 'Drag & Drop area',
-};
+DragDropArea.storyName = 'Drag & Drop area';
 
 export const DragDropWithPreview = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -127,9 +121,7 @@ export const DragDropWithPreview = forModule(moduleName).createElement(
   ),
 );
 
-DragDropWithPreview.story = {
-  name: 'Drag & Drop with preview',
-};
+DragDropWithPreview.storyName = 'Drag & Drop with preview';
 
 export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(

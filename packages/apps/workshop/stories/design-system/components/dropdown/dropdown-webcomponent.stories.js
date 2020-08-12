@@ -122,9 +122,7 @@ export const WithArrow = forModule(moduleName).createElement(
   ),
 );
 
-WithArrow.story = {
-  name: 'With arrow',
-};
+WithArrow.storyName = 'With arrow';
 
 export const CustomTriggerButton = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -150,9 +148,7 @@ export const CustomTriggerButton = forModule(moduleName).createElement(
   ),
 );
 
-CustomTriggerButton.story = {
-  name: 'Custom trigger button',
-};
+CustomTriggerButton.storyName = 'Custom trigger button';
 
 export const CustomContentMenu = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -176,6 +172,4 @@ export const CustomContentMenu = forModule(moduleName).createElement(
   ),
 );
 
-CustomContentMenu.story = {
-  name: 'Custom content menu',
-};
+CustomContentMenu.storyName = 'Custom content menu';

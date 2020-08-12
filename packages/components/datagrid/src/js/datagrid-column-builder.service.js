@@ -43,7 +43,7 @@ export default class DatagridColumnBuilder {
         name: description.name || getAttribute(element, 'name'),
         preventCustomization: description.preventCustomization || hasAttribute(element, 'prevent-customization'),
         type: description.type || getAttribute(element, 'type') || 'string',
-        typeOptions: description.typeOptions || description['type-options'] || getAttribute(element, 'type-options'),
+        typeOptions: JSON.stringify(description.typeOptions) || description['type-options'] || getAttribute(element, 'type-options'),
       };
 
       const propertyValue = description.property || getAttribute(element, 'property');

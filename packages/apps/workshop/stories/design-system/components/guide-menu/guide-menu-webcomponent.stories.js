@@ -80,9 +80,7 @@ export const WithSections = forModule(moduleName).createElement(
   ),
 );
 
-WithSections.story = {
-  name: 'With sections',
-};
+WithSections.storyName = 'With sections';
 
 export const InHeader = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -119,6 +117,4 @@ export const InHeader = forModule(moduleName).createElement(
   ),
 );
 
-InHeader.story = {
-  name: 'In header',
-};
+InHeader.storyName = 'In header';

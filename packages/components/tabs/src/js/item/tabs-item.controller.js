@@ -21,7 +21,7 @@ export default class {
     // Return DOM node index
     while (item.previousSibling) {
       item = item.previousSibling;
-      if (item.nodeType === 1) {
+      if (item.nodeType === 1 && item.nodeName === 'OUI-TABS-ITEM') {
         i += 1;
       }
     }

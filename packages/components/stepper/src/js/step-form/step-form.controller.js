@@ -70,8 +70,20 @@ export default class StepFormController {
     // To get position in parent ouiStepper
     while (item.previousSibling) {
       item = item.previousSibling;
-      if (item.nodeType === Node.ELEMENT_NODE) {
+      if (item.nodeType === Node.ELEMENT_NODE && item.nodeName === 'OUI-STEP-FORM') {
         i += 1;
+      }
+
+      // Count transcluded steps
+      if (item.childNodes) {
+        let innerSteps = 0;
+        item.childNodes.forEach((childNode) => {
+          if (childNode.nodeType === Node.ELEMENT_NODE && childNode.nodeName === 'OUI-STEP-FORM') {
+            innerSteps += 1;
+          }
+        });
+
+        i += innerSteps;
       }
     }
 

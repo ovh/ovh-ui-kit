@@ -92,9 +92,7 @@ export const MultiLevels = () => `
   </div>
 </nav>`;
 
-MultiLevels.story = {
-  name: 'Multi levels',
-};
+MultiLevels.storyName = 'Multi levels';
 
 export const Collapsible = () => `
 <nav class="oui-sidebar" style="width: 300px;">

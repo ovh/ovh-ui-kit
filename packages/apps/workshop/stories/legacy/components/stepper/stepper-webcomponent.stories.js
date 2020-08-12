@@ -85,9 +85,7 @@ export const Simple = forModule(moduleName).createElement(
   ),
 );
 
-Simple.story = {
-  name: 'Simple ',
-};
+Simple.storyName = 'Simple ';
 
 export const StepFormStates = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -119,9 +117,7 @@ export const StepFormStates = forModule(moduleName).createElement(
   ),
 );
 
-StepFormStates.story = {
-  name: 'Step form states',
-};
+StepFormStates.storyName = 'Step form states';
 
 export const DisableNextButton = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -148,9 +144,7 @@ export const DisableNextButton = forModule(moduleName).createElement(
   ),
 );
 
-DisableNextButton.story = {
-  name: 'Disable next button',
-};
+DisableNextButton.storyName = 'Disable next button';
 
 export const ControllingOpenedStepIndex = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -181,6 +175,29 @@ export const ControllingOpenedStepIndex = forModule(moduleName).createElement(
   ),
 );
 
-ControllingOpenedStepIndex.story = {
-  name: 'Controlling opened step index',
-};
+ControllingOpenedStepIndex.storyName = 'Controlling opened step index';
+
+export const ControllingStepPositionOrder = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-stepper>
+      <oui-step-form
+        header="Step 3"
+        position="2">
+        <p>Cras sagittis felis enim, ut pharetra arcu ultrices non. Aliquam iaculis magna eget nibh laoreet, ac dapibus diam rutrum. Donec vel vehicula quam. Pellentesque at justo ut quam molestie rutrum in eget orci. Sed mollis nisl ac massa tristique, egestas pellentesque libero sodales. Morbi luctus iaculis mauris eu lobortis. Vestibulum nec aliquam metus. Sed mollis risus ipsum, vel consequat nulla aliquam sed. Phasellus tempor nunc at purus interdum euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse a fringilla elit. Etiam blandit turpis risus, sit amet sodales leo auctor ac.</p>
+      </oui-step-form>
+      <oui-step-form
+        header="Step 2"
+        position="1">
+        <p>Proin ullamcorper ullamcorper imperdiet. Ut vel diam iaculis, tristique nunc fermentum, ultrices lorem. In ultricies lacinia venenatis. Etiam sed risus interdum, pharetra tellus id, lobortis erat. Ut quis ex nibh. Pellentesque euismod condimentum ipsum id dapibus. Ut vitae felis id sapien sollicitudin tincidunt sed et mauris. Nullam facilisis, ex vel elementum porttitor, nisl metus blandit nunc, vel rhoncus tortor leo ac sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+      </oui-step-form>
+      <oui-step-form
+        header="Step 1"
+        position="0">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec laoreet libero ut justo molestie, iaculis accumsan metus sollicitudin. Nulla fermentum ultricies scelerisque. Vestibulum luctus mi eu porttitor dapibus. In sit amet tempor neque. Nullam vehicula sodales elit ac lacinia. Nulla quis feugiat enim. Curabitur nec diam vel enim ornare consequat. Nulla rhoncus felis quis tortor varius blandit. Nam non justo id quam sagittis gravida tincidunt et dolor. Nullam id est ac lectus efficitur venenatis sed eu erat. Pellentesque vel massa at dui sollicitudin luctus. In mi tortor, facilisis eu gravida vel, commodo nec augue. Nullam elit magna, porttitor vel dui sed, congue blandit mauris.</p>
+      </oui-step-form>
+    </oui-stepper>`,
+  ),
+);
+
+ControllingStepPositionOrder.storyName = 'Controlling step position order';

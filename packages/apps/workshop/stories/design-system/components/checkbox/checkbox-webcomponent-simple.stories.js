@@ -147,9 +147,7 @@ export const WithDescription = forModule(moduleName).createElement(
   ),
 );
 
-WithDescription.story = {
-  name: 'With description',
-};
+WithDescription.storyName = 'With description';
 
 export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(

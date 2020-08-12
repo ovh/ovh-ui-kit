@@ -1,3 +1,76 @@
+## [4.2.3](https://github.com/ovh/ovh-ui-kit/compare/v4.2.2...v4.2.3) (2020-08-05)
+
+
+### Bug Fixes
+
+* **stepper:** count transcluded step forms ([#650](https://github.com/ovh/ovh-ui-kit/issues/650)) ([c45bb97](https://github.com/ovh/ovh-ui-kit/commit/c45bb97c5a6459ba2d72d61e31ccf6e4a5194ace))
+
+
+
+## [4.2.2](https://github.com/ovh/ovh-ui-kit/compare/v4.2.1...v4.2.2) (2020-07-24)
+
+
+### Bug Fixes
+
+* **datagrid:** convert typeOptions to a string to be able to parse it ([#647](https://github.com/ovh/ovh-ui-kit/issues/647)) ([1595610](https://github.com/ovh/ovh-ui-kit/commit/1595610d59468aa448b6e7e3bcd05e374ac83803))
+
+
+
+## [4.2.1](https://github.com/ovh/ovh-ui-kit/compare/v4.2.0...v4.2.1) (2020-07-23)
+
+
+### Bug Fixes
+
+* **select:** fix native style oui-icon position ([#644](https://github.com/ovh/ovh-ui-kit/issues/644)) ([bc67bdc](https://github.com/ovh/ovh-ui-kit/commit/bc67bdc0298218e04b7aafa238e4e577e24ddb6c))
+* **tile:** inherit oui tile button line height ([#645](https://github.com/ovh/ovh-ui-kit/issues/645)) ([8e45eb1](https://github.com/ovh/ovh-ui-kit/commit/8e45eb10e3167a4b546584bc8e988cfec5269d3f))
+
+
+
+# [4.2.0](https://github.com/ovh/ovh-ui-kit/compare/v4.1.12...v4.2.0) (2020-07-21)
+
+
+### Features
+
+* **datagrid:** allow to pass criteria ([#642](https://github.com/ovh/ovh-ui-kit/issues/642)) ([87a8745](https://github.com/ovh/ovh-ui-kit/commit/87a8745531cfbd58fafe53d9ce6aeb423ece857d))
+
+
+
+## [4.1.12](https://github.com/ovh/ovh-ui-kit/compare/v4.1.11...v4.1.12) (2020-07-16)
+
+
+### Bug Fixes
+
+* **pagination:** fix selector calculation checks ([d7cf77e](https://github.com/ovh/ovh-ui-kit/commit/d7cf77e6297a8ced76f5fb2377c151c8602f288f))
+
+
+### Features
+
+* **datagrid:** allow to go to given page ([83202d9](https://github.com/ovh/ovh-ui-kit/commit/83202d96b6f2f7b33ba1421819d6d30931d5d0c8))
+
+
+
+## [4.1.11](https://github.com/ovh/ovh-ui-kit/compare/v4.1.10...v4.1.11) (2020-07-15)
+
+
+### Bug Fixes
+
+* **description:** add bottom margin ([18b1e9d](https://github.com/ovh/ovh-ui-kit/commit/18b1e9d9c00a99e7cbdb1839a5b2c4ee67a1da59))
+* **dropdown:** fix disabled state on item ([81d69e8](https://github.com/ovh/ovh-ui-kit/commit/81d69e8e5d54bacdb04b1e8e65ab3535d9d5a076))
+* **link:** remove underline on icons ([bf5c2bb](https://github.com/ovh/ovh-ui-kit/commit/bf5c2bbb94109d7194df91af66c26cbe62f77540))
+* **stepper:** fix add step with position ([276ae39](https://github.com/ovh/ovh-ui-kit/commit/276ae39e7df6ffd46dfec1ad1b58300a82c4244e))
+* fix getNodeIndex with named nodes ([4dadca5](https://github.com/ovh/ovh-ui-kit/commit/4dadca543ed1ef37efc5a8271aa27b0467dccf98))
+
+
+
+## [4.1.10](https://github.com/ovh/ovh-ui-kit/compare/v4.1.9...v4.1.10) (2020-07-09)
+
+
+### Features
+
+* **navbar:** add callback argument on dropdown ([72bc3c6](https://github.com/ovh/ovh-ui-kit/commit/72bc3c63511ee575064f8f77224c6d70d8180334))
+
+
+
 ## [4.1.9](https://github.com/ovh/ovh-ui-kit/compare/v4.1.8...v4.1.9) (2020-07-03)
 
 

@@ -81,9 +81,7 @@ export const WithActions = forModule(moduleName).createElement(
   ),
 );
 
-WithActions.story = {
-  name: 'With actions',
-};
+WithActions.storyName = 'With actions';
 
 export const WithIcons = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -140,6 +138,4 @@ export const WithIcons = forModule(moduleName).createElement(
   ),
 );
 
-WithIcons.story = {
-  name: 'With icons',
-};
+WithIcons.storyName = 'With icons';

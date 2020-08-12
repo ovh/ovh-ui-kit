@@ -83,9 +83,7 @@ export const WithThresholds = forModule(moduleName).createElement(
   ),
 );
 
-WithThresholds.story = {
-  name: 'With thresholds',
-};
+WithThresholds.storyName = 'With thresholds';
 
 export const WithCustomLabel = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -104,9 +102,7 @@ export const WithCustomLabel = forModule(moduleName).createElement(
   ),
 );
 
-WithCustomLabel.story = {
-  name: 'With custom label',
-};
+WithCustomLabel.storyName = 'With custom label';
 
 export const Compact = forModule(moduleName).createElement(
   () => compileTemplate(

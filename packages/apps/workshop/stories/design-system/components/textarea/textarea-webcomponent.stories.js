@@ -69,9 +69,7 @@ export const WithMaxlength = forModule(moduleName).createElement(
   ),
 );
 
-WithMaxlength.story = {
-  name: 'With maxlength',
-};
+WithMaxlength.storyName = 'With maxlength';
 
 export const Inline = forModule(moduleName).createElement(
   () => compileTemplate(

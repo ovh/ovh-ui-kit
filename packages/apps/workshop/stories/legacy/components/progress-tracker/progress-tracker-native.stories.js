@@ -41,9 +41,7 @@ export const HorizontalDefault = () => `
   </ol>
 </div>`;
 
-HorizontalDefault.story = {
-  name: 'Horizontal (Default)',
-};
+HorizontalDefault.storyName = 'Horizontal (Default)';
 
 export const Vertical = () => `
 <div class="oui-progress-tracker oui-progress-tracker_vertical">

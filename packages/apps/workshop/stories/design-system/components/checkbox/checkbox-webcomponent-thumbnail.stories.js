@@ -91,9 +91,7 @@ export const WithDescription = forModule(moduleName).createElement(
   ),
 );
 
-WithDescription.story = {
-  name: 'With description',
-};
+WithDescription.storyName = 'With description';
 
 export const WithFooter = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -128,9 +126,7 @@ export const WithFooter = forModule(moduleName).createElement(
   ),
 );
 
-WithFooter.story = {
-  name: 'With footer',
-};
+WithFooter.storyName = 'With footer';
 
 export const FullExample = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -167,9 +163,7 @@ export const FullExample = forModule(moduleName).createElement(
   ),
 );
 
-FullExample.story = {
-  name: 'Full example',
-};
+FullExample.storyName = 'Full example';
 
 export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(

@@ -2,8 +2,8 @@ import DatagridPagingAbstract from './datagrid-paging-abstract';
 import Filter from '../filter/filter';
 
 export default class DatagridLocalPaging extends DatagridPagingAbstract {
-  constructor(columns, currentSorting, pageSize, rowLoader, pagingService, rows) {
-    super(columns, currentSorting, pageSize, rowLoader, pagingService);
+  constructor(columns, criteria, currentSorting, offset, pageSize, rowLoader, pagingService, rows) {
+    super(columns, criteria, currentSorting, offset, pageSize, rowLoader, pagingService);
 
     this.setRows(rows);
   }

@@ -66,9 +66,7 @@ export const WithASearchField = forModule(moduleName).createElement(
   ),
 );
 
-WithASearchField.story = {
-  name: 'With a search field',
-};
+WithASearchField.storyName = 'With a search field';
 
 export const WithActionMenu = forModule(moduleName).createElement(
   () => compileTemplate(
@@ -105,6 +103,4 @@ export const WithActionMenu = forModule(moduleName).createElement(
   ),
 );
 
-WithActionMenu.story = {
-  name: 'With action menu',
-};
+WithActionMenu.storyName = 'With action menu';

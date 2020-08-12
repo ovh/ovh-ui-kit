@@ -45,6 +45,8 @@ export default class DatagridController {
     this.pageSize = parseInt(this.pageSize, 10) || this.config.pageSize;
     this.filterableColumns = [];
     this.criteria = this.criteria || [];
+    this.page = parseInt(this.page, 10) || 1;
+    this.offset = (this.page - 1) * this.pageSize + 1;
 
     addBooleanParameter(this, 'selectableRows');
     addDefaultParameter(this, 'emptyPlaceholder', this.config.translations.emptyPlaceholder);
@@ -73,24 +75,28 @@ export default class DatagridController {
 
     const builtColumns = this.buildColumns();
     this.previousRows = angular.copy(this.rows);
+    this.appliedCriteria = this.criteria;
 
     if (this.rowsLoader) {
       this.paging = this.ouiDatagridPaging.createRemote(
         this.columns,
+        this.criteria,
         builtColumns.currentSorting,
+        this.offset,
         this.pageSize,
         this.rowLoader,
         this.rowsLoader,
       );
       this.refreshData(() => {
-        this.paging.setOffset(1);
+        this.paging.setOffset(this.offset);
         this.paging.setCriteria(this.criteria);
-        this.appliedCriteria = this.criteria;
       });
     } else {
       this.paging = this.ouiDatagridPaging.createLocal(
         this.columns,
+        this.criteria,
         builtColumns.currentSorting,
+        this.offset,
         this.pageSize,
         this.rowLoader,
         this.rows,
