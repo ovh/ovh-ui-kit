@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57 (83077) - https://sketch.com -->
+    <title>oui-Flag/Shetland</title>
+    <desc>Created with Sketch.</desc>
+    <g id="oui-Flag/Shetland" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Shetland" fill-rule="nonzero">
+            <rect id="Rectangle-path" fill="#007DBE" x="18" y="16" width="18" height="8"></rect>
+            <rect id="Rectangle-path" fill="#007DBE" x="0" y="16" width="11" height="8"></rect>
+            <rect id="Rectangle-path" fill="#007DBE" x="0" y="0" width="11" height="8"></rect>
+            <rect id="Rectangle-path" fill="#007DBE" x="18" y="0" width="18" height="8"></rect>
+            <polygon id="Shape" fill="#FFD505" points="10.8612149 8.77988486 0 8.77988486 0 11 13 11 13 8.77988486 13 0 10.8612149 0"></polygon>
+            <polygon id="Shape" fill="#FFD505" points="16 15.2201151 16 24 18.1253016 24 18.1253016 15.2201151 36 15.2201151 36 13 16 13"></polygon>
+            <polygon id="Shape" fill="#FFD505" points="0 15.2201151 10.8612149 15.2201151 10.8612149 24 13 24 13 15.2201151 13 13 0 13"></polygon>
+            <polygon id="Shape" fill="#FFD505" points="18.1253016 8.77988486 18.1253016 0 16 0 16 8.77988486 16 11 36 11 36 8.77988486"></polygon>
+            <polygon id="Shape" fill="#F4253F" points="15.8598 10.5779104 15.8598 8.44298507 15.8598 0 13.0086 0 13.0086 8.44298507 13.0086 10.5779104 0 10.5779104 0 13.4220896 13.0086 13.4220896 13.0086 15.5570149 13.0086 24 15.8598 24 15.8598 15.5570149 15.8598 13.4220896 36 13.4220896 36 10.5779104"></polygon>
+        </g>
+    </g>
+</svg>
