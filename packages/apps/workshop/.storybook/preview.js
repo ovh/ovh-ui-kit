@@ -1,6 +1,4 @@
 import '@storybook/addon-console';
-import { addParameters, addDecorator } from "@storybook/html";
-import { withA11y } from '@storybook/addon-a11y';
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks';
 import { withKnobs } from '@storybook/addon-knobs';
 
@@ -8,15 +6,24 @@ import 'angular';
 import 'angular-aria';
 import 'angular-sanitize';
 
+import anysort from 'anysort'
+
 // Load src for livereload
 import '../src/index.less';
 
 // Addons
-addDecorator(withA11y);
-addDecorator(withKnobs);
+export const decorators = [
+  withKnobs,
+];
 
 // Options
-addParameters({
+export const parameters = {
+  a11y: {
+    element: "#root",
+    config: {},
+    options: {},
+    manual: true,
+  },
   docs: {
     container: DocsContainer,
     page: DocsPage,
@@ -27,31 +34,27 @@ addParameters({
       return null;
     },
   },
+  layout: 'centered',
   options: {
     name: 'OVHcloud UI Kit',
     panelPosition: 'right',
-    showRoots: true,
-    storySort: ([,a], [,b]) => {
-      if (a.kind === b.kind) return 0;
+    storySort: (previous, next) => {
+      const [previousStory, previousMeta] = previous
+      const [nextStory, nextMeta] = next
 
-      // Put first elements with lower subfolder
-      if (a.kind.split('/').length < b.kind.split('/').length) return -1;
-      if (a.kind.split('/').length > b.kind.split('/').length) return 1;
-
-      // Put Documentation group first
-      if (a.id.startsWith('documentation-') && !b.id.startsWith('documentation-')) return -1;
-      if (!a.id.startsWith('documentation-') && b.id.startsWith('documentation-')) return 1;
-
-      // The put Introduction files first
-      if (a.id.endsWith('-introduction--page') && !b.id.endsWith('-introduction--page')) return -1;
-      if (!a.id.endsWith('-introduction--page') && b.id.endsWith('-introduction--page')) return 1;
-
-      // Then put others MDX files after
-      if (a.id.endsWith('--page') && !b.id.endsWith('--page')) return -1;
-      if (!a.id.endsWith('--page') && b.id.endsWith('--page')) return 1;
-
-      // Then let the compare manage the ordering
-      return a.id.localeCompare(b.id, undefined, { numeric: true });
+      return anysort(previousMeta.kind, nextMeta.kind, [
+        'Documentation/Introduction',
+        'Documentation/Chagelog',
+        'Documentation/**',
+        'Design System/Content/**',
+        'Design System/Components/**/Introduction',
+        'Design System/Components/**',
+        'Design System/Directives/**/Introduction',
+        'Design System/Directives/**',
+        'Design System/Helpers/**',
+        'Legacy/**/Introduction',
+        'Legacy/**',
+      ])
     },
   },
-});
+};

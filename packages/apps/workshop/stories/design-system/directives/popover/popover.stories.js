@@ -40,29 +40,21 @@ export default {
 export const OnButton = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <div class="doc-centered">
-      <div class="doc-centered__content">
-        <button type="button"
-          class="oui-button oui-button_primary"
-          oui-popover="${text('Text', 'This is an awesome popover content.')}"
-          oui-popover-placement="${select(placement.label, placement.options, placement.default)}">
-          Click to toggle popover
-        </button>
-      </div>
-    </div>`,
+    <button type="button"
+      class="oui-button oui-button_primary"
+      oui-popover="${text('Text', 'This is an awesome popover content.')}"
+      oui-popover-placement="${select(placement.label, placement.options, placement.default)}">
+      Click to toggle popover
+    </button>`,
   ),
 );
 
 export const OnHelpButton = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <div class="doc-centered">
-      <div class="doc-centered__content">
-        <button type="button" class="oui-popover-button"
-          oui-popover="${text('Text', 'This is an awesome popover content.')}"
-          oui-popover-placement="right">
-        </button>
-    </div>
-  </div>`,
+    <button type="button" class="oui-popover-button"
+      oui-popover="${text('Text', 'This is an awesome popover content.')}"
+      oui-popover-placement="right">
+    </button>`,
   ),
 );

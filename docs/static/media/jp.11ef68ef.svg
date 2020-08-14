@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="24px" viewBox="0 0 36 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57 (83077) - https://sketch.com -->
+    <title>oui-Flag/Japan</title>
+    <desc>Created with Sketch.</desc>
+    <g id="oui-Flag/Japan" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Japan" fill-rule="nonzero">
+            <path d="M36,0 L0,0 L0,24 L36,24 L36,0 Z M18,19 C14.1340068,19 11,15.8659932 11,12 C11,8.13400675 14.1340068,5 18,5 C21.8659932,5 25,8.13400675 25,12 C25,13.8565154 24.2625021,15.6369928 22.9497475,16.9497475 C21.6369928,18.2625021 19.8565154,19 18,19 L18,19 Z" id="Shape" fill="#F9F9F9"></path>
+            <path d="M18,5 C14.1340068,5 11,8.13400675 11,12 C11,15.8659932 14.1340068,19 18,19 C21.8659932,19 25,15.8659932 25,12 C25,10.1434846 24.2625021,8.36300718 22.9497475,7.05025253 C21.6369928,5.73749788 19.8565154,5 18,5 L18,5 Z" id="Shape" fill="#DC212B"></path>
+        </g>
+    </g>
+</svg>

@@ -40,45 +40,33 @@ export default {
 export const OnButton = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <div class="doc-centered">
-      <div class="doc-centered__content">
-        <button class="oui-button oui-button_primary"
-          oui-tooltip="${text('Text', 'Lorem ipsum')}"
-          oui-tooltip-placement="${select(placement.label, placement.options, placement.default)}">
-          focus or hover me
-        </button>
-      </div>
-    </div>`,
+    <button class="oui-button oui-button_primary"
+      oui-tooltip="${text('Text', 'Lorem ipsum')}"
+      oui-tooltip-placement="${select(placement.label, placement.options, placement.default)}">
+      focus or hover me
+    </button>`,
   ),
 );
 
 export const OnInput = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <div class="doc-centered">
-      <div class="doc-centered__content">
         <input class="oui-input oui-input_inline"
           placeholder="focus or hover me"
           type="text"
           oui-tooltip="${text('Text', 'Lorem ipsum')}"
-          oui-tooltip-placement="${select(placement.label, placement.options, placement.default)}"></textarea>
-      </div>
-    </div>`,
+          oui-tooltip-placement="${select(placement.label, placement.options, placement.default)}">`,
   ),
 );
 
 export const OnLink = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <div class="doc-centered">
-      <div class="doc-centered__content">
-        <a class="oui-link"
-          href="#"
-          oui-tooltip="${text('Text', 'Lorem ipsum')}"
-          oui-tooltip-placement="${select(placement.label, placement.options, placement.default)}">
-          focus or hover me
-        </a>
-      </div>
-    </div>`,
+    <a class="oui-link"
+      href="#"
+      oui-tooltip="${text('Text', 'Lorem ipsum')}"
+      oui-tooltip-placement="${select(placement.label, placement.options, placement.default)}">
+      focus or hover me
+    </a>`,
   ),
 );
