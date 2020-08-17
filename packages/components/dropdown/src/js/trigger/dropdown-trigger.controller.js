@@ -18,10 +18,6 @@ export default class {
 
   $postLink() {
     this.$timeout(() => {
-      if (!this.dropdown.text) {
-        this.$element.removeAttr('aria-label');
-      }
-
       if (this.$element[0].tagName.toLowerCase() === 'oui-dropdown-trigger') {
         this.$compile(template)(this.$scope, (clone) => {
           this.$element.replaceWith(clone);

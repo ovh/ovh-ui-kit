@@ -49,7 +49,7 @@ export const Default = forModule(moduleName).createElement(
 export const Compact = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <oui-action-menu compact disabled="$ctrl.disabled">
+    <oui-action-menu aria-label="Actions" compact disabled="$ctrl.disabled">
       <oui-action-menu-item on-click="$ctrl.onActionClick('Action 1')">
         Action 1 (button)
       </oui-action-menu-item>
