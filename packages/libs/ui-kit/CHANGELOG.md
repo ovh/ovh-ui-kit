@@ -1,3 +1,12 @@
+## [4.2.4](https://github.com/ovh/ovh-ui-kit/compare/v4.2.3...v4.2.4) (2020-08-17)
+
+
+### Bug Fixes
+
+* **action-menu:** fix a11y in compact mode ([2ccbf2a](https://github.com/ovh/ovh-ui-kit/commit/2ccbf2ad8cf865d503feba1c76718a93aa3a0c87))
+
+
+
 ## [4.2.3](https://github.com/ovh/ovh-ui-kit/compare/v4.2.2...v4.2.3) (2020-08-05)
 
 
