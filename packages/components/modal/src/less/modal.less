@@ -90,43 +90,76 @@
   }
 
   &__icon {
-    width: @oui-modal-icon-font-size;
-    height: @oui-modal-icon-font-size;
-    line-height: @oui-modal-icon-font-size;
+    width: @oui-modal-icon-width;
+    height: @oui-modal-icon-height;
+    line-height: @oui-modal-icon-height;
     position: absolute;
     display: block;
     top: @oui-modal-icon-position-top;
     left: @oui-modal-icon-position-left;
     font-size: @oui-modal-icon-font-size;
-
-    &.oui-icon-success_circle, /* Deprecated: Support for old classname */
-    &.oui-icon-success-circle {
-      color: @oui-modal-icon-success-color;
-    }
-
-    &.oui-icon-error_circle, /* Deprecated: Support for old classname */
-    &.oui-icon-error-circle {
-      color: @oui-modal-icon-error-color;
-    }
-
-    &.oui-icon-warning_circle, /* Deprecated: Support for old classname */
-    &.oui-icon-warning-circle {
-      color: @oui-modal-icon-warning-color;
-    }
-
-    &.oui-icon-info_circle, /* Deprecated: Support for old classname */
-    &.oui-icon-info-circle {
-      color: @oui-modal-icon-info-color;
-    }
-
-    &.oui-icon-help_circle, /* Deprecated: Support for old classname */
-    &.oui-icon-help-circle {
-      color: @oui-modal-icon-help-color;
-    }
+    border-radius: @oui-modal-icon-height;
+    text-align: center;
   }
 
   &_shadow {
     box-shadow: @oui-modal-shadow;
+  }
+
+  // Types
+  &_success {
+    .oui-modal__header {
+      background-color: @oui-modal-success-background-color;
+    }
+
+    .oui-modal__icon {
+      background-color: @oui-modal-success-background-color;
+      color: @oui-modal-success-font-color;
+    }
+  }
+
+  &_error {
+    .oui-modal__header {
+      background-color: @oui-modal-error-background-color;
+    }
+
+    .oui-modal__icon {
+      background-color: @oui-modal-error-background-color;
+      color: @oui-modal-error-font-color;
+    }
+  }
+
+  &_warning {
+    .oui-modal__header {
+      background-color: @oui-modal-warning-background-color;
+    }
+
+    .oui-modal__icon {
+      background-color: @oui-modal-warning-background-color;
+      color: @oui-modal-warning-font-color;
+    }
+  }
+
+  &_info {
+    .oui-modal__header {
+      background-color: @oui-modal-info-background-color;
+    }
+
+    .oui-modal__icon {
+      background-color: @oui-modal-info-background-color;
+      color: @oui-modal-info-font-color;
+    }
+  }
+
+  &_help {
+    .oui-modal__header {
+      background-color: @oui-modal-help-background-color;
+    }
+
+    .oui-modal__icon {
+      background-color: @oui-modal-help-background-color;
+      color: @oui-modal-help-font-color;
+    }
   }
 }
 

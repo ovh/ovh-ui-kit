@@ -23,7 +23,8 @@
     <div ng-show="!$ctrl.loading"
         ng-transclude></div>
 </div>
-<div class="oui-modal__footer">
+<div class="oui-modal__footer"
+    ng-if="$ctrl.secondaryLabel || $ctrl.primaryLabel">
     <button class="oui-button oui-button_l oui-button_secondary"
         type="button"
         ng-if="$ctrl.secondaryLabel"

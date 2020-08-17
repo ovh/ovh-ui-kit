@@ -16,8 +16,14 @@ export default class {
   }
 
   $postLink() {
-    this.$timeout(() => this.$element
-      .addClass('oui-modal')
-      .addClass('oui-modal_shadow'));
+    this.$timeout(() => {
+      this.$element
+        .addClass('oui-modal')
+        .addClass('oui-modal_shadow');
+
+      if (this.type) {
+        this.$element.addClass(`oui-modal_${this.type}`);
+      }
+    });
   }
 }
