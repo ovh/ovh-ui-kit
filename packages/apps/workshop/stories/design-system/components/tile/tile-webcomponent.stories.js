@@ -19,7 +19,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Legacy/Components/Tile/WebComponent',
+  title: 'Design System/Components/Tile/WebComponent',
 
   parameters: {
     notes: readme,
