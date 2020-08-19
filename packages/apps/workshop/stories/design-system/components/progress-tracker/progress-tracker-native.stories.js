@@ -1,5 +1,5 @@
 export default {
-  title: 'Legacy/Components/Progress Tracker/Native',
+  title: 'Design System/Components/Progress Tracker/Native',
 
   parameters: {
   },
