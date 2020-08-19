@@ -1,36 +1,50 @@
 // Progress Tracker
 @oui-progress-tracker-margin: 0 0 @base-spacing-large;
 @oui-progress-tracker-step-spacing: rem-calc(30);
-@oui-progress-tracker-font-size: rem-calc(16);
+@oui-progress-tracker-font-size: rem-calc(14);
 @oui-progress-tracker-font-weight: 400;
 
-@oui-progress-tracker-background-color: @g-050;
-@oui-progress-tracker-background-color_active: @p-700;
-@oui-progress-tracker-background-color_complete: @as-400;
-@oui-progress-tracker-background-color_error: @ae-500;
+@oui-progress-tracker-background-color: transparent;
+@oui-progress-tracker-background-color_active: @p-000;
+@oui-progress-tracker-background-color_complete: transparent;
+@oui-progress-tracker-background-color_error: transparent;
 
-@oui-progress-tracker-font-color: @g-400;
-@oui-progress-tracker-font-color_active: @p-000;
-@oui-progress-tracker-font-color_complete: @p-000;
-@oui-progress-tracker-font-color_error: @p-000;
+@oui-progress-tracker-border-color: @g-300;
+@oui-progress-tracker-border-color_active: @p-500;
+@oui-progress-tracker-border-color_complete: transparent;
+@oui-progress-tracker-border-color_error: transparent;
+@oui-progress-tracker-border-width: rem-calc(2);
 
-@oui-progress-tracker-label-color: @g-300;
-@oui-progress-tracker-label-color_active: @p-700;
-@oui-progress-tracker-label-color_complete: @p-700;
-@oui-progress-tracker-label-color_error: @ae-500;
+@oui-progress-tracker-font-color: @g-500;
+@oui-progress-tracker-font-color_active: @p-500;
+@oui-progress-tracker-font-color_complete: @p-500;
+@oui-progress-tracker-font-color_error: @p-500;
+
+@oui-progress-tracker-label-color: @p-800-text;
+@oui-progress-tracker-label-color_active: @p-500;
+@oui-progress-tracker-label-color_complete: @p-800-text;
+@oui-progress-tracker-label-color_error: @p-800-text;
 @oui-progress-tracker-label-spacing: rem-calc(10);
-@oui-progress-tracker-label-font-weight: 600;
-@oui-progress-tracker-label-line-height: 1.4;
+@oui-progress-tracker-label-font-weight: 400;
+@oui-progress-tracker-label-line-height: 1.5;
 
-@oui-progress-tracker-status-height: ~"calc(@{oui-progress-tracker-font-size} * 2)";
-@oui-progress-tracker-status-spacing: rem-calc(10);
+@oui-progress-tracker-status-size: rem-calc(34);
+@oui-progress-tracker-status-size_active: rem-calc(42);
+@oui-progress-tracker-status-top: calc((@oui-progress-tracker-status-size_active - @oui-progress-tracker-status-size) / 2);
+@oui-progress-tracker-status-top_active: 0;
+@oui-progress-tracker-status-margin-top: calc(@oui-progress-tracker-status-size_active + @oui-progress-tracker-status-spacing);
+@oui-progress-tracker-status-spacing: rem-calc(4);
 @oui-progress-tracker-status-font-weight: 600;
-@oui-progress-tracker-status-font-size: rem-calc(20);
+@oui-progress-tracker-status-font-size: rem-calc(16);
 @oui-progress-tracker-status-icon-content_complete: @oui-icon-index-success;
 @oui-progress-tracker-status-icon-content_error: @oui-icon-index-close;
 @oui-progress-tracker-status-icon-font-family: @base-font-family-icon;
-@oui-progress-tracker-status-icon-font-size: rem-calc(20);
+@oui-progress-tracker-status-icon-font-size: rem-calc(24);
 @oui-progress-tracker-status-icon-font-weight: 400;
 
-@oui-progress-tracker-connector-spacing: rem-calc(5);
-@oui-progress-tracker-connector-size: rem-calc(4);
+@oui-progress-tracker-connector-spacing: rem-calc(4);
+@oui-progress-tracker-connector-size: rem-calc(1);
+@oui-progress-tracker-connector-top: calc((@oui-progress-tracker-status-size_active - @oui-progress-tracker-connector-size) / 2);
+@oui-progress-tracker-connector-color: @g-500;
+@oui-progress-tracker-connector-color_complete: @g-500;
+@oui-progress-tracker-connector-color_error: @g-500;
