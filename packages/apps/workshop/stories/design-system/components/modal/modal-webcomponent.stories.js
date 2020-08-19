@@ -12,7 +12,7 @@ const moduleName = 'modal-webcomponent.stories';
 angular.module(moduleName, [Modal]);
 
 export default {
-  title: 'Legacy/Components/Modal/WebComponent',
+  title: 'Design System/Components/Modal/WebComponent',
 
   parameters: {
     notes: readme,
@@ -25,37 +25,6 @@ export const Simple = forModule(moduleName).createElement(
     <oui-modal
       heading="Modal title"
       loading="$ctrl.isLoading"
-      on-dismiss="$ctrl.onDismiss()">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.
-      Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu.
-      Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus.
-      Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate
-      rhoncus vitae ut justo. Ut dignissim varius est in consequat.
-      Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.
-      In et elit ipsum.
-    </oui-modal>`,
-    {
-      $ctrl: {
-        isLoading: boolean('Loading state', false),
-        onDismiss: action('onDismiss'),
-      },
-    },
-  ),
-);
-
-export const WithActions = forModule(moduleName).createElement(
-  () => compileTemplate(
-    `
-    <oui-modal
-      heading="Modal title"
-      loading="$ctrl.isLoading"
-      primary-action="$ctrl.onPrimaryAction()"
-      primary-disabled="$ctrl.primaryDisabled"
-      primary-label="Ok"
-      secondary-action="$ctrl.onSecondaryAction()"
-      secondary-disabled="$ctrl.secondaryDisabled"
-      secondary-label="Cancel"
       on-dismiss="$ctrl.onDismiss()">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -71,19 +40,13 @@ export const WithActions = forModule(moduleName).createElement(
     {
       $ctrl: {
         isLoading: boolean('Loading state', false),
-        primaryDisabled: boolean('Primary disabled', false),
-        secondaryDisabled: boolean('Secondary disabled', false),
         onDismiss: action('onDismiss'),
-        onPrimaryAction: action('onPrimaryAction'),
-        onSecondaryAction: action('onSecondaryAction'),
       },
     },
   ),
 );
 
-WithActions.storyName = 'With actions';
-
-export const WithIcons = forModule(moduleName).createElement(
+export const Types = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-modal
@@ -138,4 +101,41 @@ export const WithIcons = forModule(moduleName).createElement(
   ),
 );
 
-WithIcons.storyName = 'With icons';
+export const WithActions = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-modal
+      heading="Modal title"
+      loading="$ctrl.isLoading"
+      primary-action="$ctrl.onPrimaryAction()"
+      primary-disabled="$ctrl.primaryDisabled"
+      primary-label="Ok"
+      secondary-action="$ctrl.onSecondaryAction()"
+      secondary-disabled="$ctrl.secondaryDisabled"
+      secondary-label="Cancel"
+      on-dismiss="$ctrl.onDismiss()">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.
+        Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu.
+        Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus.
+        Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate
+        rhoncus vitae ut justo. Ut dignissim varius est in consequat.
+        Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.
+        In et elit ipsum.
+      </p>
+    </oui-modal>`,
+    {
+      $ctrl: {
+        isLoading: boolean('Loading state', false),
+        primaryDisabled: boolean('Primary disabled', false),
+        secondaryDisabled: boolean('Secondary disabled', false),
+        onDismiss: action('onDismiss'),
+        onPrimaryAction: action('onPrimaryAction'),
+        onSecondaryAction: action('onSecondaryAction'),
+      },
+    },
+  ),
+);
+
+WithActions.storyName = 'With actions';
