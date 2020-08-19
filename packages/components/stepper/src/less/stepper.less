@@ -30,18 +30,20 @@
       content: counter(steps);
       width: @oui-stepper-step-bullet-size;
       height: @oui-stepper-step-bullet-size;
-      line-height: @oui-stepper-step-bullet-line-height;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
-      top: ~"calc((@{oui-stepper-step-title-line-height} - @{oui-stepper-step-bullet-size}) / 2)";
-      left: -@oui-stepper-step-container-padding-left;
+      top: @oui-stepper-step-bullet-top;
+      left: @oui-stepper-step-bullet-left;
       font-size: @oui-stepper-step-bullet-font-size;
       font-weight: @oui-stepper-step-bullet-font-weight;
       text-align: center;
       vertical-align: baseline;
       color: @oui-stepper-step-bullet-color;
+      border: @oui-stepper-step-bullet-border-color @oui-stepper-step-bullet-border-width solid;
       border-radius: @oui-stepper-step-bullet-border-radius;
-      background: @oui-stepper-step-bullet-background;
+      background: @oui-stepper-step-bullet-background-color;
     }
 
     &::after {
@@ -52,6 +54,12 @@
 
     .oui-link {
       float: right;
+
+      @media screen and (max-width: @device-breakpoint-phone-max-width) {
+        display: block;
+        float: none;
+        margin: @oui-stepper-step-link-margin;
+      }
     }
   }
 
@@ -96,10 +104,13 @@
 
     .oui-stepper__header::before {
       color: @oui-stepper-step-bullet-color_disabled;
-      background: @oui-stepper-step-bullet-background_disabled;
+      border-color: @oui-stepper-step-bullet-border-color_disabled;
     }
 
-    .oui-stepper__title { color: @oui-stepper-step-title-color_disabled; }
+    .oui-stepper__title {
+      color: @oui-stepper-step-title-color_disabled;
+      font-size: @oui-stepper-step-title-font-size_disabled;
+    }
 
     .oui-stepper__label-optional { color: @oui-stepper-step-optional-color_disabled; }
 
@@ -112,12 +123,16 @@
       content: @oui-stepper-step-bullet-icon-content_complete;
       line-height: @oui-stepper-step-bullet-size;
       font-family: @oui-stepper-step-bullet-icon-font-family;
+      font-size: @oui-stepper-step-bullet-icon-font-size;
       font-weight: @oui-stepper-step-bullet-icon-font-weight;
       color: @oui-stepper-step-bullet-color_complete;
-      background: @oui-stepper-step-bullet-background_complete;
+      border-color: @oui-stepper-step-bullet-border-color_complete;
     }
 
-    .oui-stepper__title { color: @oui-stepper-step-title-color_complete; }
+    .oui-stepper__title {
+      color: @oui-stepper-step-title-color_complete;
+      font-size: @oui-stepper-step-title-font-size_complete;
+    }
   }
 }
 
