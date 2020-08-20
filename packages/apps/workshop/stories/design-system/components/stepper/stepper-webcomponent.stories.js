@@ -22,7 +22,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Legacy/Components/Stepper/WebComponent',
+  title: 'Design System/Components/Stepper/WebComponent',
 
   parameters: {
     notes: readme,
