@@ -9,7 +9,7 @@ const moduleName = 'spinner-webcomponent.stories';
 angular.module(moduleName, [Spinner]);
 
 export default {
-  title: 'Legacy/Components/Spinner/WebComponent',
+  title: 'Design System/Components/Spinner/WebComponent',
 
   parameters: {
     notes: readme,
