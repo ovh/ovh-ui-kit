@@ -12,7 +12,7 @@ const moduleName = 'form-actions-webcomponent.stories';
 angular.module(moduleName, [FormActions]);
 
 export default {
-  title: 'Legacy/Components/Form Actions/WebComponent',
+  title: 'Design System/Components/Form Actions/WebComponent',
 
   parameters: {
     notes: readme,
