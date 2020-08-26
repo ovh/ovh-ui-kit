@@ -7,8 +7,14 @@
     flex-direction: row;
     margin-bottom: @oui-inline-adder-row-spacing;
     border: @oui-inline-adder-border-width solid @oui-inline-adder-border-color;
+    border-radius: @oui-inline-adder-border-radius;
     box-shadow: @oui-inline-adder-box-shadow;
     background-color: @oui-inline-adder-background-color;
+
+    &_added {
+      border-color: @oui-inline-adder-border-color_added;
+      background-color: @oui-inline-adder-background-color_added;
+    }
   }
 
   &__fieldset {
@@ -52,33 +58,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: @oui-inline-adder-footer-background-color;
+    border-left: @oui-inline-adder-footer-border-color @oui-inline-adder-footer-border-width solid;
   }
 
-  &__action {
-    &:extend(.oui-button, .oui-button_secondary);
-
-    min-width: @oui-inline-adder-action-size;
-    width: @oui-inline-adder-action-size;
-    height: @oui-inline-adder-action-size;
-    padding-left: @oui-inline-adder-action-padding-x;
-    padding-right: @oui-inline-adder-action-padding-x;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .oui-icon {
-      font-size: @oui-inline-adder-action-icon-size;
-
-      &::before {
-        display: inline;
-        font-size: inherit;
-      }
-    }
-
-    &:focus {
-      #oui > .outline-border();
-    }
+  &__form_added &__footer {
+    border-left-color: @oui-inline-adder-footer-border-color_added;
   }
 }
 
