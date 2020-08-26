@@ -90,13 +90,15 @@ describe('ouiDualList', () => {
       it('should load the source and target data', () => {
         const element = getDualList(sourceStrings, targetStrings);
 
+        const source = element.find('oui-dual-list-source')[0];
         const sourceLength = sourceStrings.length;
-        const sourceItemsLength = element.find('oui-dual-list-source').find('li').length;
+        const sourceItemsLength = angular.element(source.querySelectorAll('.oui-dual-list-item')).length;
 
         expect(sourceItemsLength).toBe(sourceLength);
 
+        const target = element.find('oui-dual-list-target')[0];
         const targetLength = targetStrings.length;
-        const targetItemsLength = element.find('oui-dual-list-target').find('li').length;
+        const targetItemsLength = angular.element(target.querySelectorAll('.oui-dual-list-item')).length;
 
         expect(targetItemsLength).toBe(targetLength);
       });
@@ -150,7 +152,7 @@ describe('ouiDualList', () => {
         const controller = element.controller('ouiDualList');
 
         const source = element.find('oui-dual-list-source')[0];
-        const sourceItem = angular.element(source.querySelector('.oui-dual-list-item:first-child button'));
+        const sourceItem = angular.element(source.querySelector('.oui-dual-list-item:first-child'));
 
         sourceItem.triggerHandler('click');
 
@@ -190,7 +192,7 @@ describe('ouiDualList', () => {
         const controller = element.controller('ouiDualList');
 
         const target = element.find('oui-dual-list-target')[0];
-        const targetItem = angular.element(target.querySelector('.oui-dual-list-item:first-child button'));
+        const targetItem = angular.element(target.querySelector('.oui-dual-list-item:first-child'));
 
         targetItem.triggerHandler('click');
 
@@ -240,7 +242,7 @@ describe('ouiDualList', () => {
 
         // Source click
         const source = element.find('oui-dual-list-source')[0];
-        const sourceItem = angular.element(source.querySelector('.oui-dual-list-item:first-child button'));
+        const sourceItem = angular.element(source.querySelector('.oui-dual-list-item:first-child'));
         sourceItem.triggerHandler('click');
 
         expect(onAddSpy).toHaveBeenCalled();
@@ -248,7 +250,7 @@ describe('ouiDualList', () => {
 
         // Target click
         const target = element.find('oui-dual-list-target')[0];
-        const targetItem = angular.element(target.querySelector('.oui-dual-list-item:first-child button'));
+        const targetItem = angular.element(target.querySelector('.oui-dual-list-item:first-child'));
         targetItem.triggerHandler('click');
 
         expect(onRemoveSpy).toHaveBeenCalled();
