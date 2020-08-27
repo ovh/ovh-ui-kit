@@ -36,7 +36,9 @@
 
       &:hover {
         cursor: pointer;
-        text-decoration: underline;
+        text-decoration: none;
+        color: @oui-header-tabs-item-font-color_hover;
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_hover;
       }
 
       .oui-icon {
@@ -61,6 +63,10 @@
       padding: @oui-header-tabs-item-padding_dropdown;
       transition: none;
 
+      &:hover {
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_hover;
+      }
+
       &:active,
       &:focus {
         background-color: transparent;
@@ -72,15 +78,20 @@
     }
 
     &_disabled .oui-header-tabs__action {
-      color: @oui-header-tabs-item-font-color_disabled;
-
+      &,
       &:hover {
+        color: @oui-header-tabs-item-font-color_disabled;
+        border-bottom: none;
         text-decoration: none;
       }
     }
 
     &_active .oui-button_dropdown {
-      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_active;
+
+      &:hover {
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_hover;
+      }
     }
 
     // Only for the tabs not in dropdown
@@ -91,7 +102,11 @@
       }
 
       &_active .oui-header-tabs__action {
-        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_active;
+
+        &:hover {
+          border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_hover;
+        }
       }
     }
 
@@ -125,12 +140,22 @@
       flex-wrap: nowrap;
     }
 
+    > oui-header-tabs-item,
+    > oui-header-tabs-dropdown {
+      padding-right: @oui-header-tabs-item-spacing;
+    }
+
     // The first child will move all the others
-    oui-header-tabs-item:first-child,
-    oui-header-tabs-dropdown:first-child {
+    > oui-header-tabs-item:first-child,
+    > oui-header-tabs-dropdown:first-child {
       margin-left: 0;
       transition: margin-left 0.25s ease;
       will-change: margin-left;
+    }
+
+    > oui-header-tabs-item:last-child,
+    > oui-header-tabs-dropdown:last-child {
+      padding-right: 0;
     }
   }
 
@@ -140,7 +165,11 @@
 
   .oui-dropdown_active {
     .oui-button_dropdown {
-      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color;
+      border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_active;
+
+      &:hover {
+        border-bottom: @oui-header-tabs-item-border-width solid @oui-header-tabs-item-border-color_hover;
+      }
     }
   }
 }
@@ -148,5 +177,8 @@
 oui-header-tabs {
   &:extend(.oui-header-tabs);
 
-  &-item { display: block; }
+  &-item,
+  &-dropdown {
+    display: block;
+  }
 }

@@ -10,7 +10,7 @@ const moduleName = 'header-webcomponent.stories';
 angular.module(moduleName, [Header]);
 
 export default {
-  title: 'Legacy/Components/Header/WebComponent',
+  title: 'Design System/Components/Header/WebComponent',
 
   parameters: {
     notes: readme,
@@ -21,8 +21,8 @@ export const Simple = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-header
-      heading="My title"
-      description="My subtitle">
+      heading="Page Title"
+      description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem obcaecati perspiciatis, laboriosam repellendus aperiam provident ad voluptas dignissimos distinctio commodi optio tempore at ab possimus cumque odio nesciunt totam.">
     </oui-header>`,
   ),
 );
@@ -31,8 +31,8 @@ export const WithTabs = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-header
-      heading="My title"
-      description="My subtitle">
+      heading="Page Title"
+      description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem obcaecati perspiciatis, laboriosam repellendus aperiam provident ad voluptas dignissimos distinctio commodi optio tempore at ab possimus cumque odio nesciunt totam.">
       <oui-header-tabs>
         <oui-header-tabs-item href="#" active>Home</oui-header-tabs-item>
         <oui-header-tabs-item href="#">Header</oui-header-tabs-item>
