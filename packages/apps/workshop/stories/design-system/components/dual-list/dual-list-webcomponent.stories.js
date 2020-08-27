@@ -14,7 +14,7 @@ const moduleName = 'dual-list-webcomponent.stories';
 angular.module(moduleName, [DualList]);
 
 export default {
-  title: 'Legacy/Components/Dual List/WebComponent',
+  title: 'Design System/Components/Dual List/WebComponent',
 
   parameters: {
     notes: readme,
