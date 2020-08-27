@@ -19,7 +19,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Legacy/Components/Inline Adder/WebComponent',
+  title: 'Design System/Components/Inline Adder/WebComponent',
 
   parameters: {
     notes: readme,
