@@ -24,7 +24,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Legacy/Components/Navbar/WebComponent',
+  title: 'Design System/Components/Navbar/WebComponent',
 
   parameters: {
     notes: readme,

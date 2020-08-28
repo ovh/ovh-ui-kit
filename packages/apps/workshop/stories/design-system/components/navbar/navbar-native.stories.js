@@ -1,5 +1,5 @@
 export default {
-  title: 'Legacy/Components/Navbar/Native',
+  title: 'Design System/Components/Navbar/Native',
 
   parameters: {
   },
