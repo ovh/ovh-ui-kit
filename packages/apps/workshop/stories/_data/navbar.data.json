@@ -41,10 +41,10 @@
         {
             "name": "notifications",
             "class": "navbar-notification__list",
-            "title": "<div>Your</div>notifications",
-            "headerTitle": "Your notifications",
+            "title": "Notifications",
+            "headerTitle": "Notifications",
             "iconClass": "oui-icon oui-icon-bell",
-            "iconAnimated": true,
+            "iconAnimated": false,
             "subLinks": [
               {
                 "subject": "Maecenas id ipsum suscipit",
@@ -85,8 +85,8 @@
         },
         {
             "name": "libero",
-            "title": "<div>Need</div>help",
-            "headerTitle": "Need help",
+            "title": "Help",
+            "headerTitle": "Help",
             "iconClass": "oui-icon oui-icon-help",
             "subLinks": [
                 {
@@ -127,7 +127,7 @@
         },
         {
             "name": "user",
-            "title": "<div>Hello Username</div>your account",
+            "title": "Account",
             "iconClass": "oui-icon oui-icon-user",
             "subLinks": [
                 {

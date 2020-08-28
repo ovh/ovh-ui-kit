@@ -96,7 +96,7 @@
 
   .navbar-link_icon(
     @icon-line-height: @oui-navbar-icon-line-height,
-    @icon-size: @oui-navbar-icon-size,
+    @icon-size: @oui-navbar-icon-font-size,
     @icon-spacing: @oui-navbar-icon-spacing,
     @icon-color: @oui-navbar-icon-color,
     @badge-size: @oui-navbar-badge-size,
@@ -120,19 +120,17 @@
     }
 
     .oui-icon {
-      width: @icon-size;
+      min-width: @icon-size;
       height: @icon-size;
       line-height: @icon-line-height;
       margin-right: @icon-spacing;
       position: relative;
       font-size: @icon-size;
       color: @icon-color;
-      vertical-align: middle;
 
       @media screen and (max-width: @device-breakpoint-medium-max-width) {
         line-height: 1;
         margin: 0;
-        vertical-align: middle;
       }
 
       &__badge {
@@ -140,11 +138,8 @@
         height: @badge-size;
         line-height: @badge-size;
         padding: @badge-padding;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translateX(50%);
-        display: block;
+        display: inline-block;
+        vertical-align: middle;
         text-align: center;
         color: @badge-font-color;
         font-family: @base-font-family;
