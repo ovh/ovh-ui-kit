@@ -11,50 +11,52 @@
 @oui-sidebar-menu-width: rem-calc(300);
 @oui-sidebar-menu-padding: rem-calc(4) 0 0 0;
 @oui-sidebar-menu-background-color: @oui-sidebar-background-color;
-@oui-sidebar-menu-background-color_level-1: @oui-sidebar-background-color;
-@oui-sidebar-menu-background-color_level-2: @oui-sidebar-background-color;
 @oui-sidebar-menu-font-size_small: rem-calc(14);
 @oui-sidebar-menu-font-color: @oui-sidebar-font-color;
 @oui-sidebar-menu-box-shadow: 0 rem-calc(4) rem-calc(6) 0 @oui-sidebar-menu-box-shadow-color;
 @oui-sidebar-menu-box-shadow-color: fade(darken(@p-100, 50%), 25%);
 @oui-sidebar-menu-z-index: @base-z-index-panel;
 
-@oui-sidebar-menu-back-padding: rem-calc(30);
-
-@oui-sidebar-menu-item-border-bottom: solid 1px #0a668d;
-@oui-sidebar-menu-item-border-bottom_level-1: solid 1px @oui-sidebar-menu-background-color;
-@oui-sidebar-menu-item-border-bottom_level-2: solid 1px @oui-sidebar-menu-background-color;
-
-@oui-sidebar-menu-header-padding: rem-calc(11) rem-calc(20) rem-calc(15) rem-calc(20);
-@oui-sidebar-menu-header-background-color: @g-050;
-@oui-sidebar-menu-header-border-bottom: solid 1px @g-050;
-
-@oui-sidebar-menu-title-line-height: 1.2;
-@oui-sidebar-menu-title-font-color: @oui-sidebar-menu-font-color;
-@oui-sidebar-menu-title-font-size: rem-calc(20);
-@oui-sidebar-menu-title-font-weight: 600;
-
-@oui-sidebar-arrow-content: @oui-icon-index-chevron-down;
-@oui-sidebar-arrow-content_active: @oui-icon-index-chevron-up;
+@oui-sidebar-arrow-content: @oui-icon-index-chevron-up;
+@oui-sidebar-arrow-content_active: @oui-icon-index-chevron-down;
 @oui-sidebar-arrow-font-family: @base-font-family-icon;
-@oui-sidebar-arrow-color: @p-200;
-@oui-sidebar-arrow-padding: (@oui-sidebar-menu-back-padding + @oui-sidebar-arrow-spacing);
-@oui-sidebar-arrow-size: rem-calc(16);
-@oui-sidebar-arrow-spacing: rem-calc(16);
-
-// Sidebar List
-@oui-sidebar-list-max-height: 35vh;
+@oui-sidebar-arrow-color: @p-500;
+@oui-sidebar-arrow-padding: calc(@oui-sidebar-arrow-spacing + @oui-sidebar-arrow-size);
+@oui-sidebar-arrow-size: rem-calc(24);
+@oui-sidebar-arrow-spacing: 0;
 
 // Sidebar Link
-@oui-sidebar-link-min-height: rem-calc(40);
+@oui-sidebar-link-min-height: rem-calc(32);
 @oui-sidebar-link-line-height: 1.2;
 @oui-sidebar-link-text-indent: rem-calc(10);
-@oui-sidebar-link-padding-h: (@oui-sidebar-link-min-height - (@oui-sidebar-font-size * @oui-sidebar-link-line-height)) / 2;
-@oui-sidebar-link-padding-v: rem-calc(20);
-@oui-sidebar-link-padding: @oui-sidebar-link-padding-h @oui-sidebar-link-padding-v;
-@oui-sidebar-link-font-color: @oui-sidebar-font-color;
-@oui-sidebar-link-font-color_active: @p-000;
+@oui-sidebar-link-text-decoration: none;
+@oui-sidebar-link-text-decoration_hover: underline;
+@oui-sidebar-link-text-decoration_active: none;
+@oui-sidebar-link-padding-x: rem-calc(12);
+@oui-sidebar-link-padding-y: (@oui-sidebar-link-min-height - (@oui-sidebar-font-size * @oui-sidebar-link-line-height)) / 2;
+@oui-sidebar-link-padding: @oui-sidebar-link-padding-y @oui-sidebar-link-padding-x;
+@oui-sidebar-link-font-color: @p-800-text;
+@oui-sidebar-link-font-color_hover: @p-700;
+@oui-sidebar-link-font-color_active: @p-500;
 @oui-sidebar-link-font-size: rem-calc(16);
 @oui-sidebar-link-font-weight: 400;
+@oui-sidebar-link-font-weight_active: 600;
 @oui-sidebar-link-background-color: transparent;
-@oui-sidebar-link-background-color_active: @p-075;
+@oui-sidebar-link-background-color_active: @p-100;
+@oui-sidebar-link-border-color: transparent;
+@oui-sidebar-link-border-color_hover: @p-700;
+@oui-sidebar-link-border-color_active: @p-500;
+@oui-sidebar-link-border-width: rem-calc(2);
+@oui-sidebar-link-icon-color: @p-500;
+@oui-sidebar-link-icon-size: rem-calc(24);
+@oui-sidebar-link-icon-spacing: rem-calc(8);
+
+// Sidebar Group links
+@oui-sidebar-group-padding-x: 0;
+@oui-sidebar-group-padding-y: @oui-sidebar-link-padding-y;
+@oui-sidebar-group-padding: @oui-sidebar-group-padding-y @oui-sidebar-group-padding-x;
+@oui-sidebar-group-font-color: @p-800;
+@oui-sidebar-group-font-size: rem-calc(18);
+@oui-sidebar-group-font-weight: 700;
+@oui-sidebar-group-bottom-color: @p-200;
+@oui-sidebar-group-bottom-width: 1px;
