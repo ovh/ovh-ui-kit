@@ -1,33 +1,69 @@
 .oui-sidebar {
   position: relative;
+  overflow: auto;
   z-index: @oui-sidebar-z-index;
 
   &_fixed {
     box-shadow: @oui-sidebar-box-shadow;
     z-index: @oui-sidebar-z-index_fixed;
   }
+
+  // Root
+  & > &-menu > &-list > &-list__item {
+    // Group links
+    > .oui-sidebar-link {
+      padding: @oui-sidebar-group-padding;
+      border: none;
+      border-bottom: @oui-sidebar-group-bottom-color solid @oui-sidebar-group-bottom-width;
+      color: @oui-sidebar-group-font-color;
+      font-size: @oui-sidebar-group-font-size;
+      font-weight: @oui-sidebar-group-font-weight;
+
+      .oui-icon {
+        color: @oui-sidebar-link-icon-color;
+        font-size: @oui-sidebar-link-icon-size;
+        margin-right: @oui-sidebar-link-icon-spacing;
+      }
+    }
+  }
+
+  // Level 1
+  & > &-menu &-menu {
+    .oui-sidebar-link { padding-left: calc(@oui-sidebar-link-padding-x * 1); }
+  }
+
+  // Level 2
+  & > &-menu &-menu &-menu {
+    .oui-sidebar-link { padding-left: calc(@oui-sidebar-link-padding-x * 2); }
+  }
+
+  // Level 3
+  & > &-menu &-menu &-menu &-menu {
+    .oui-sidebar-link { padding-left: calc(@oui-sidebar-link-padding-x * 3); }
+  }
 }
 
 .oui-sidebar-link {
   width: 100%;
-  min-height: @oui-sidebar-link-min-height;
   line-height: @oui-sidebar-link-line-height;
   padding: @oui-sidebar-link-padding;
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
-  text-decoration: none;
   text-align: left;
+  text-decoration: @oui-sidebar-link-text-decoration;
   font-size: @oui-sidebar-link-font-size;
   font-weight: @oui-sidebar-link-font-weight;
-  color: @oui-sidebar-font-color;
+  color: @oui-sidebar-link-font-color;
   border: none;
-  background-color: inherit;
+  border-left: @oui-sidebar-link-border-color solid @oui-sidebar-link-border-width;
+  background-color: @oui-sidebar-link-background-color;
 
+  // Add arrow if link has popup
   &[aria-haspopup="true"] {
-    padding-right: @oui-sidebar-arrow-padding;
+    padding-right: @oui-sidebar-arrow-padding !important;
   }
 
-  // Add arrow for button with popup
   &[aria-haspopup="true"]::after {
     content: @oui-sidebar-arrow-content;
     font-family: @oui-sidebar-arrow-font-family;
@@ -47,62 +83,63 @@
 
   a&,
   button& {
+    cursor: pointer;
+
     &:hover,
     &:focus {
-      text-decoration: none;
-    }
-
-    &:hover,
-    &:focus,
-    &_active,
-    &[aria-expanded="true"] {
-      color: @oui-sidebar-link-font-color_active;
-
-      &[aria-haspopup="true"]::after {
-        color: inherit;
-      }
+      color: @oui-sidebar-link-font-color_hover;
+      border-left-color: @oui-sidebar-link-border-color_hover;
+      text-decoration: @oui-sidebar-link-text-decoration_hover;
     }
 
     &:focus {
       #oui > .outline-border-inner();
     }
+
+    &_active {
+      background-color: @oui-sidebar-link-background-color_active;
+    }
+
+    &_active,
+    &[aria-expanded="true"] {
+      font-weight: @oui-sidebar-link-font-weight_active;
+      color: @oui-sidebar-link-font-color_active;
+      border-left-color: @oui-sidebar-link-border-color_active;
+      text-decoration: @oui-sidebar-link-text-decoration_active;
+    }
+
+    // Propagate the border on children
+    &[aria-expanded="true"] ~ .oui-sidebar-menu .oui-sidebar-link {
+      border-left-color: @oui-sidebar-link-border-color_active;
+
+      &:hover {
+        border-left-color: @oui-sidebar-link-border-color_hover;
+      }
+    }
   }
 }
 
 .oui-sidebar-list {
-  overflow: auto;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   list-style: none;
 
-  // Add max-height for collapsible list
-  [aria-expanded] ~ .oui-sidebar-menu & { max-height: @oui-sidebar-list-max-height; }
-
-  [aria-expanded] ~ .oui-sidebar-menu & & { max-height: none; }
-
   // List items
   &__item {
     display: block;
-    border-bottom: @oui-sidebar-menu-item-border-bottom;
-
-    & & { border-bottom: none; }
-
-    & & + & { border-top: @oui-sidebar-menu-item-border-bottom_level-1; }
-
-    & & & + & { border-top: @oui-sidebar-menu-item-border-bottom_level-2; }
+    margin: 0;
 
     &_active > .oui-sidebar-link { color: @oui-sidebar-link-font-color_active; }
   }
 }
 
 .oui-sidebar-menu {
-  width: @oui-sidebar-menu-width;
+  width: 100%;
   height: 100%;
-  box-sizing: content-box;
+  box-sizing: inherit;
+  overflow: auto;
   display: flex;
   flex-direction: column;
-  background-color: @oui-sidebar-menu-background-color;
 
   // Collapsible Menu
   [aria-expanded] ~ & {
@@ -124,71 +161,7 @@
     animation: @oui-sidebar-transition-delay delay-visibility;
   }
 
-  // Menu Level 1
-  & & {
-    width: 100%;
-    display: block;
-    background-color: @oui-sidebar-menu-background-color_level-1;
-
-    .oui-sidebar-link { text-indent: @oui-sidebar-link-text-indent; }
-  }
-
-  // Menu Level 2
-  & & & {
-    background-color: @oui-sidebar-menu-background-color_level-2;
-
-    .oui-sidebar-link { text-indent: calc(@oui-sidebar-link-text-indent * 2); }
-  }
-
   @keyframes delay-visibility {
     from { visibility: visible; }
-  }
-
-  &__header {
-    display: none;
-    position: relative;
-    padding: @oui-sidebar-menu-header-padding;
-    text-align: left;
-    color: @oui-sidebar-menu-font-color;
-    border-bottom: @oui-sidebar-menu-header-border-bottom;
-    background: @oui-sidebar-menu-header-background-color;
-  }
-
-  // Breadcrumb for Header
-  &__breadcrumb {
-    display: block;
-    margin: 0;
-    font-size: @oui-sidebar-menu-font-size_small;
-  }
-
-  // Title for Header
-  &__title {
-    line-height: @oui-sidebar-menu-title-line-height;
-    margin: 0;
-    padding: 0;
-    font-size: @oui-sidebar-menu-title-font-size;
-    font-weight: @oui-sidebar-menu-title-font-weight;
-    color: @oui-sidebar-menu-title-font-color;
-  }
-
-  // Back Button
-  &__back {
-    display: block;
-    position: absolute;
-    left: @oui-sidebar-menu-padding;
-    top: 50%;
-    transform: translateY(-50%);
-
-    .oui-icon,
-    .oui-button {
-      padding: 0;
-      margin-bottom: 0;
-      color: @oui-sidebar-arrow-color;
-    }
-  }
-
-  &__back ~ &__title,
-  &__back ~ &__breadcrumb {
-    padding-left: @oui-sidebar-menu-back-padding;
   }
 }
