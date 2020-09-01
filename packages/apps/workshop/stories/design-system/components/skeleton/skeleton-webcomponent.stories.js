@@ -9,7 +9,7 @@ const moduleName = 'skeleton-webcomponent.stories';
 angular.module(moduleName, [Skeleton]);
 
 export default {
-  title: 'Legacy/Components/Skeleton/WebComponent',
+  title: 'Design System/Components/Skeleton/WebComponent',
 
   parameters: {
     notes: readme,
