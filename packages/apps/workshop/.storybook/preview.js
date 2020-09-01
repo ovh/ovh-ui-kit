@@ -34,7 +34,7 @@ export const parameters = {
       return null;
     },
   },
-  layout: 'centered',
+  // layout: 'centered',
   options: {
     name: 'OVHcloud UI Kit',
     panelPosition: 'right',
