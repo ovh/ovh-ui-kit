@@ -8,6 +8,7 @@ export default {
     id: '@?',
     name: '@?',
     ariaLabel: '@?',
+    previousPage: '@?',
     href: '@?',
     state: '@?',
     stateParams: '<?',

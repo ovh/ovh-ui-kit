@@ -27,6 +27,24 @@ export const Simple = forModule(moduleName).createElement(
       previous-page="{{ $ctrl.previousPage }}"
       aria-label="Aria label for heading"
       on-click="$ctrl.onClick()">
+    </oui-back-button>`,
+    {
+      $ctrl: {
+        previousPage: text('Previous Page', 'Lorem ipsum'),
+        onClick: action('onClick'),
+      },
+    },
+  ),
+);
+
+export const WithHeading = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-back-button
+      href="#"
+      previous-page="{{ $ctrl.previousPage }}"
+      aria-label="Aria label for heading"
+      on-click="$ctrl.onClick()">
       {{ $ctrl.title }}
     </oui-back-button>`,
     {
