@@ -1,11 +1,12 @@
 export default class {
-  constructor($attrs, $element, $timeout, $window) {
+  constructor($attrs, $element, $timeout, $window, ouiBackButtonConfiguration) {
     'ngInject';
 
     this.$attrs = $attrs;
     this.$element = $element;
     this.$timeout = $timeout;
     this.$window = $window;
+    this.translations = ouiBackButtonConfiguration.translations;
   }
 
   $postLink() {
@@ -25,6 +26,12 @@ export default class {
     } else if (!this.href) {
       this.$window.history.back();
     }
+  }
+
+  getBtnText() {
+    return this.previousPage
+      ? `${this.translations.backTo} “${this.previousPage}”`
+      : `${this.translations.backTo} “${this.translations.previousPage}”`;
   }
 
   // Return value of "ui-sref"

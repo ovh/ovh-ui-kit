@@ -23,11 +23,9 @@ describe('ouiBackButton', () => {
   };
 
   describe('Component', () => {
-    it('should display a button with a chevron left icon', () => {
+    it('should at least display a return button', () => {
       const element = compile('<oui-back-button></oui-back-button>');
       expect(element.find('button').length).toBe(1);
-      expect(element.find('button').find('span').length).toBe(1);
-      expect(element.find('span').hasClass('oui-icon-chevron-left')).toBe(true);
     });
 
     it('should have a oui-back-button class', () => {
@@ -63,7 +61,7 @@ describe('ouiBackButton', () => {
 
       $timeout.flush();
 
-      expect(element.find('h2')[0].innerText).toBe(title);
+      expect(element.find('h1')[0].innerText).toBe(title);
     });
 
     it('should go back in history when clicking button if on-click and href are not defined', () => {

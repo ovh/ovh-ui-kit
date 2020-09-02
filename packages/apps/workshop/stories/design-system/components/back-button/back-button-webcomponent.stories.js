@@ -12,7 +12,7 @@ const moduleName = 'back-button-webcomponent.stories';
 angular.module(moduleName, [BackButton]);
 
 export default {
-  title: 'Legacy/Components/Back Button/WebComponent',
+  title: 'Design System/Components/Back Button/WebComponent',
 
   parameters: {
     notes: readme,
@@ -24,13 +24,33 @@ export const Simple = forModule(moduleName).createElement(
     `
     <oui-back-button
       href="#"
+      previous-page="{{ $ctrl.previousPage }}"
       aria-label="Aria label for heading"
       on-click="$ctrl.onClick()">
-      {{ $ctrl.text }}
     </oui-back-button>`,
     {
       $ctrl: {
-        text: text('Text', 'Lorem ipsum dolor sit amet'),
+        previousPage: text('Previous Page', 'Lorem ipsum'),
+        onClick: action('onClick'),
+      },
+    },
+  ),
+);
+
+export const WithHeading = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-back-button
+      href="#"
+      previous-page="{{ $ctrl.previousPage }}"
+      aria-label="Aria label for heading"
+      on-click="$ctrl.onClick()">
+      {{ $ctrl.title }}
+    </oui-back-button>`,
+    {
+      $ctrl: {
+        title: text('Title', 'Lorem ipsum dolor sit amet'),
+        previousPage: text('Previous Page', 'Lorem ipsum'),
         onClick: action('onClick'),
       },
     },
