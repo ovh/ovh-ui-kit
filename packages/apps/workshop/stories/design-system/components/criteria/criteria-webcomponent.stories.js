@@ -20,7 +20,7 @@ angular.module(moduleName, [
 ]);
 
 export default {
-  title: 'Legacy/Components/Criteria/WebComponent',
+  title: 'Design System/Components/Criteria/WebComponent',
 
   parameters: {
     notes: readme,
