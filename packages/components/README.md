@@ -23,7 +23,6 @@
 | header            | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | organism
 | inline-adder      | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
 | input             | :white_check_mark:    | :white_check_mark:    | n/a                   | n/a                   | atom
-| list              | :white_check_mark:    | :white_check_mark:    | n/a                   | n/a                   | atom
 | message           | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
 | modal             | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | organism
 | navbar            | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | organism

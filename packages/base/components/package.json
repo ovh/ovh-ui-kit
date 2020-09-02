@@ -28,7 +28,6 @@
     "@ovh-ux/ui-kit.header": "*",
     "@ovh-ux/ui-kit.inline-adder": "*",
     "@ovh-ux/ui-kit.input": "*",
-    "@ovh-ux/ui-kit.list": "*",
     "@ovh-ux/ui-kit.message": "*",
     "@ovh-ux/ui-kit.modal": "*",
     "@ovh-ux/ui-kit.navbar": "*",
