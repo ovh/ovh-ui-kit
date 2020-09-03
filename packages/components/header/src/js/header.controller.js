@@ -7,6 +7,7 @@ export default class {
   }
 
   $onInit() {
+    this.transcludeBack = this.$transclude.isSlotFilled('back');
     this.transcludeGuide = this.$transclude.isSlotFilled('guide');
     this.transcludeTabs = this.$transclude.isSlotFilled('tabs');
   }
