@@ -21,7 +21,6 @@ import GuideMenu from '@ovh-ux/ui-kit.guide-menu';
 import Header from '@ovh-ux/ui-kit.header';
 import InlineAdder from '@ovh-ux/ui-kit.inline-adder';
 import Input from '@ovh-ux/ui-kit.input';
-import List from '@ovh-ux/ui-kit.list';
 import Message from '@ovh-ux/ui-kit.message';
 import Modal from '@ovh-ux/ui-kit.modal';
 import Navbar from '@ovh-ux/ui-kit.navbar';
@@ -73,7 +72,6 @@ angular
     Header,
     InlineAdder,
     Input,
-    List,
     Message,
     Modal,
     Navbar,
