@@ -66,6 +66,7 @@
   max-width: ~"calc(100% - 50px)";
   position: relative;
   width: @oui-slideshow-width;
+  z-index: @oui-slideshow-z-index;
 
   &__loader {
     align-items: center;
@@ -205,7 +206,7 @@
         &::before {
           width: @oui-slideshow-indicator-size_active;
           height: @oui-slideshow-indicator-size_active;
-          opacity: @oui-slideshow-indicator-opacity_active;
+          background-color: @oui-slideshow-indicator-background-color_active;
         }
       }
     }
@@ -315,16 +316,6 @@
     left: 0;
     position: absolute;
     right: 0;
-
-    .oui-button {
-      border: none;
-      margin-bottom: 0;
-    }
-
-    .oui-icon-external_link, /* Deprecated: Support for old classname */
-    .oui-icon-external-link {
-      margin-left: 2px;
-    }
   }
 
   .oui-slideshow-panel__title + .oui-slideshow-panel__text {
@@ -361,4 +352,17 @@ oui-slideshow {
     width: @oui-slideshow-width_responsive;
     max-width: 100%;
   }
+}
+
+.oui-slideshow-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: @oui-modal-backdrop-color;
+  opacity: @oui-modal-backdrop-opacity;
+  transition: opacity 0.25s ease-out;
+  pointer-events: none;
+  z-index: @oui-modal-backdrop-z-index;
 }

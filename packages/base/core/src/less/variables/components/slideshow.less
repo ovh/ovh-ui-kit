@@ -5,29 +5,34 @@
 @oui-slideshow-height_responsive: 85vh;
 @oui-slideshow-spacing: rem-calc(15) auto;
 @oui-slideshow-border-radius: @base-border-radius-large;
-@oui-slideshow-box-shadow: 0 10px 10px fade(@p-800-text, 25%);
+@oui-slideshow-box-shadow: @base-box-shadow-secondary;
 @oui-slideshow-background-color: @p-000;
+@oui-slideshow-z-index: @base-z-index-modal;
+
+@oui-slideshow-backdrop-color: @g-800;
+@oui-slideshow-backdrop-opacity: 0.5;
+@oui-slideshow-backdrop-z-index: @base-z-index-modal-backdrop;
 
 @oui-slideshow-button-size: rem-calc(60);
 @oui-slideshow-button-font-color: @p-000;
-@oui-slideshow-button-font-size: rem-calc(32);
+@oui-slideshow-button-font-size: rem-calc(24);
 @oui-slideshow-button-background-color: rgba(17, 63, 109, 0.5);
 @oui-slideshow-button-background-color_hover: rgba(17, 63, 109, 0.75);
 
 @oui-slideshow-loader-background-color: rgba(255, 255, 255, 0.6);
 @oui-slideshow-header-height: rem-calc(40);
 @oui-slideshow-panel-padding: rem-calc(20);
-@oui-slideshow-indicators-height: rem-calc(50);
+@oui-slideshow-indicators-height: rem-calc(42);
 
-@oui-slideshow-indicator-size: rem-calc(8);
-@oui-slideshow-indicator-size_active: rem-calc(10);
-@oui-slideshow-indicator-opacity: 0.5;
-@oui-slideshow-indicator-opacity_active: 1;
+@oui-slideshow-indicator-size: rem-calc(6);
+@oui-slideshow-indicator-size_active: rem-calc(6);
+@oui-slideshow-indicator-opacity: 1;
 @oui-slideshow-indicator-border-radius: 50%;
 @oui-slideshow-indicator-background-color: @p-000;
+@oui-slideshow-indicator-background-color_active: @p-500;
 
-@oui-slideshow-indicator-button-size: rem-calc(16);
-@oui-slideshow-indicator-button-spacing: rem-calc(2);
+@oui-slideshow-indicator-button-size: rem-calc(6);
+@oui-slideshow-indicator-button-spacing: rem-calc(4);
 
 // Slideshow - Theme Onboarding
 @oui-slideshow-onboarding-min-height: 43.5%;
