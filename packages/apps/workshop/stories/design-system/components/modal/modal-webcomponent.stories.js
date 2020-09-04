@@ -138,4 +138,31 @@ export const WithActions = forModule(moduleName).createElement(
   ),
 );
 
-WithActions.storyName = 'With actions';
+export const WithBackdrop = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-modal
+      heading="Modal title"
+      loading="$ctrl.isLoading"
+      on-dismiss="$ctrl.onDismiss()">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Duis semper ligula nec fringilla tempor. In rhoncus ullamcorper feugiat.
+        Phasellus vel ipsum vitae neque varius luctus. Proin id iaculis arcu.
+        Fusce justo arcu, egestas vel nulla nec, dictum cursus lacus.
+        Aenean elementum vel odio quis rutrum. In quis tellus in neque vulputate
+        rhoncus vitae ut justo. Ut dignissim varius est in consequat.
+        Donec nisi mauris, pellentesque condimentum congue in, blandit ut arcu.
+        In et elit ipsum.
+      </p>
+    </oui-modal>
+
+    <div class="oui-modal-backdrop"></div>`,
+    {
+      $ctrl: {
+        isLoading: boolean('Loading state', false),
+        onDismiss: action('onDismiss'),
+      },
+    },
+  ),
+);

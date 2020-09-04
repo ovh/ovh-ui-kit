@@ -14,12 +14,12 @@
     </div>
     <div class="oui-slideshow-panel__action"
         ng-if="::$ctrl.onClick || $ctrl.href">
-        <button type="button" class="oui-button oui-button_secondary"
+        <button type="button" class="oui-button oui-button_primary"
             ng-bind="::$ctrl.label"
             ng-click="$ctrl.onClick()"
             ng-if="::$ctrl.onClick && !$ctrl.href">
         </button>
-        <a class="oui-button oui-button_secondary"
+        <a class="oui-button oui-button_primary"
             ng-attr-rel="{{ ::$ctrl.external ? 'noopener' : undefined }}"
             ng-attr-target="{{ ::$ctrl.external ? '_blank' : undefined }}"
             ng-href="{{ ::$ctrl.href }}"
