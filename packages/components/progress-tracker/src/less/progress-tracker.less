@@ -28,16 +28,16 @@
       height: @oui-progress-tracker-connector-size;
       margin: 0 @oui-progress-tracker-connector-spacing;
       position: absolute;
-      top: calc((@oui-progress-tracker-status-height - @oui-progress-tracker-connector-size) / 2);
-      left: @oui-progress-tracker-status-height;
+      top: @oui-progress-tracker-connector-top;
+      left: @oui-progress-tracker-status-size;
       right: 0;
-      background-color: @oui-progress-tracker-background-color;
+      background-color: @oui-progress-tracker-connector-color;
     }
   }
 
   &__status {
     padding-right: @oui-progress-tracker-step-spacing;
-    margin-top: calc(@oui-progress-tracker-status-height + @oui-progress-tracker-status-spacing);
+    margin-top: @oui-progress-tracker-status-margin-top;
     display: block;
     text-align: left;
     color: @oui-progress-tracker-label-color;
@@ -45,17 +45,19 @@
     &::before {
       content: counter(oui-progress-tracker);
       counter-increment: oui-progress-tracker;
-      width: @oui-progress-tracker-status-height;
-      height: @oui-progress-tracker-status-height;
-      display: block;
+      width: @oui-progress-tracker-status-size;
+      height: @oui-progress-tracker-status-size;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       left: 0;
-      top: 0;
-      text-align: center;
+      top: @oui-progress-tracker-status-top;
       font-size: @oui-progress-tracker-status-font-size;
       font-weight: @oui-progress-tracker-status-font-weight;
       color: @oui-progress-tracker-font-color;
       border-radius: 50%;
+      border: @oui-progress-tracker-border-color solid @oui-progress-tracker-border-width;
       background-color: @oui-progress-tracker-background-color;
     }
   }
@@ -85,17 +87,17 @@
 
     &::before {
       content: @oui-progress-tracker-status-icon-content_complete;
-      line-height: @oui-progress-tracker-status-height;
       font-family: @oui-progress-tracker-status-icon-font-family;
       font-size: @oui-progress-tracker-status-icon-font-size;
       font-weight: @oui-progress-tracker-status-icon-font-weight;
       color: @oui-progress-tracker-font-color_complete;
       background-color: @oui-progress-tracker-background-color_complete;
+      border-color: @oui-progress-tracker-border-color_complete;
     }
   }
 
   &__step_complete:not(:last-child)::after {
-    background-color: @oui-progress-tracker-background-color_complete;
+    background-color: @oui-progress-tracker-connector-color_complete;
   }
 
   // Status Error
@@ -104,26 +106,34 @@
 
     &::before {
       content: @oui-progress-tracker-status-icon-content_error;
-      line-height: @oui-progress-tracker-status-height;
       font-family: @oui-progress-tracker-status-icon-font-family;
       font-size: @oui-progress-tracker-status-icon-font-size;
       font-weight: @oui-progress-tracker-status-icon-font-weight;
       color: @oui-progress-tracker-font-color_error;
       background-color: @oui-progress-tracker-background-color_error;
+      border-color: @oui-progress-tracker-border-color_error;
     }
   }
 
   &__step_error:not(:last-child)::after {
-    background-color: @oui-progress-tracker-background-color_error;
+    background-color: @oui-progress-tracker-connector-color_error;
   }
 
   // Status Active
+  &__step_active:not(:last-child)::after {
+    left: @oui-progress-tracker-status-size_active;
+  }
+
   &__step_active &__status {
     color: @oui-progress-tracker-label-color_active;
 
     &::before {
+      width: @oui-progress-tracker-status-size_active;
+      height: @oui-progress-tracker-status-size_active;
+      top: @oui-progress-tracker-status-top_active;
       color: @oui-progress-tracker-font-color_active;
       background-color: @oui-progress-tracker-background-color_active;
+      border-color: @oui-progress-tracker-border-color_active;
     }
   }
 
@@ -192,7 +202,7 @@
 
     &::before {
       position: static;
-      display: inline-block;
+      margin-left: @oui-progress-tracker-status-top;
     }
   }
 
@@ -204,6 +214,10 @@
     flex: 1;
     margin: 0;
     margin-left: @oui-progress-tracker-label-spacing;
+  }
+
+  &_vertical &__step_active &__status::before {
+    margin-left: @oui-progress-tracker-status-top_active;
   }
 
   &_vertical &__step_active &__label {
@@ -219,10 +233,14 @@
     width: @oui-progress-tracker-connector-size;
     height: auto;
     margin: @oui-progress-tracker-connector-spacing 0;
-    left: calc((@oui-progress-tracker-status-height - @oui-progress-tracker-connector-size) / 2);
+    left: @oui-progress-tracker-connector-top;
     right: auto;
-    top: @oui-progress-tracker-status-height;
+    top: @oui-progress-tracker-status-size;
     bottom: 0;
+  }
+
+  &_vertical &__step_active:not(:last-child)::after {
+    top: @oui-progress-tracker-status-size_active;
   }
 
   &_vertical &__step:last-child &__status {

@@ -1,5 +1,6 @@
 <input type="radio" class="oui-select-picker__input"
     name="{{:: $ctrl.name }}"
+    id="{{:: $ctrl.id }}Input"
     ng-attr-aria-labelledby="{{:: $ctrl.id }}Label"
     ng-attr-aria-describedby="{{:: $ctrl.description && $ctrl.id + 'Description' || undefined }}"
     ng-attr-id="{{:: $ctrl.id }}"
@@ -50,7 +51,8 @@
         </span>
         <span class="oui-select-picker__value-container oui-select-picker__section"
             ng-if="$ctrl.values.length > 1">
-            <oui-select name="{{:: $ctrl.name }}"
+            <oui-select name="{{:: $ctrl.id }}Select"
+                id="{{:: $ctrl.id }}Select"
                 disabled="$ctrl.disabled"
                 items="$ctrl.values"
                 match="{{ $ctrl.match }}"

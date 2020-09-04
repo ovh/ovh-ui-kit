@@ -9,6 +9,7 @@ export default {
     description: '@?',
   },
   transclude: {
+    back: '?ouiBackButton',
     guide: '?ouiGuideMenu',
     tabs: '?ouiHeaderTabs',
   },

@@ -3,6 +3,10 @@
   #oui > .radio-base(oui-select-picker);
   #oui > .choice-thumbnail(oui-select-picker);
 
+  & + & {
+    margin-top: @oui-select-picker-spacing;
+  }
+
   & &__description {
     padding-left: 0;
   }
@@ -87,7 +91,8 @@ oui-select-picker-section {
 }
 
 // Select Picker - Error
-.oui-select-picker_error {
+.oui-select-picker_error,
+.oui-field_error .oui-select-picker {
   #oui > .choice-thumbnail_error(oui-select-picker);
 
   .oui-select-picker__input + .oui-select-picker__label-container,

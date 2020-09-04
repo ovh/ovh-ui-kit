@@ -1,6 +1,10 @@
 <header class="oui-header">
     <div class="oui-header__container">
         <div class="oui-header__content">
+            <div class="oui-header__back"
+                ng-if="$ctrl.transcludeBack"
+                ng-transclude="back">
+            </div>
             <h1 class="oui-header__title"
                 ng-bind="::$ctrl.heading">
             </h1>

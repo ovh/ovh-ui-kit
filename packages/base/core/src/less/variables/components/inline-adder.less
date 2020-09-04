@@ -1,18 +1,19 @@
 // Inline Adder
-@oui-inline-adder-margin-bottom: rem-calc(20);
-@oui-inline-adder-border-color: @g-100;
-@oui-inline-adder-border-width: 1px;
-@oui-inline-adder-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.06);
-@oui-inline-adder-background-color: @p-000;
+@oui-inline-adder-margin-bottom: @oui-field-margin;
+@oui-inline-adder-border-color: @oui-choice-thumbnail-border-color;
+@oui-inline-adder-border-color_added: @oui-choice-thumbnail-border-color_checked;
+@oui-inline-adder-border-width: @oui-choice-thumbnail-border-width;
+@oui-inline-adder-border-radius: @oui-choice-thumbnail-border-radius;
+@oui-inline-adder-box-shadow: none;
+@oui-inline-adder-background-color: @oui-choice-thumbnail-background;
+@oui-inline-adder-background-color_added: @oui-choice-thumbnail-background_checked;
 
-@oui-inline-adder-row-spacing: rem-calc(20);
-@oui-inline-adder-row-padding: rem-calc(20);
+@oui-inline-adder-row-spacing: @oui-choice-spacing;
+@oui-inline-adder-row-padding: @oui-choice-thumbnail-padding;
 
-@oui-inline-adder-field-spacing: rem-calc(10);
+@oui-inline-adder-field-spacing: @oui-field-margin;
 
-@oui-inline-adder-footer-background-color: @g-050;
-@oui-inline-adder-footer-padding: rem-calc(10);
-
-@oui-inline-adder-action-size: rem-calc(40);
-@oui-inline-adder-action-padding-x: @oui-button-small-padding-x;
-@oui-inline-adder-action-icon-size: rem-calc(16);
+@oui-inline-adder-footer-border-color: @oui-choice-thumbnail-footer-border-color;
+@oui-inline-adder-footer-border-color_added: @oui-choice-thumbnail-footer-border-color_checked;
+@oui-inline-adder-footer-border-width: @oui-choice-thumbnail-footer-border-width;
+@oui-inline-adder-footer-padding: @oui-choice-thumbnail-footer-padding-x @oui-choice-thumbnail-footer-padding-y; // The fact that X an Y is reversed is willed

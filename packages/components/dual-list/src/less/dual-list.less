@@ -3,28 +3,24 @@
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  border: @oui-dual-list-border;
-  border-radius: @oui-dual-list-border-radius;
-  background: @oui-dual-list-background;
 
   @media screen and (max-width: @device-breakpoint-phone-max-width) {
     flex-direction: column;
   }
 
   &__header {
-    height: @oui-dual-list-header-height;
-    padding: @oui-dual-list-header-padding;
+    #oui > .heading(4);
+
+    margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: @oui-dual-list-header-font-size;
-    font-weight: @oui-dual-list-header-font-weight;
-    color: @oui-dual-list-header-font-color;
-    border: none;
-    background: @oui-dual-list-header-background;
 
     button& {
       display: none;
+      padding: 0;
+      background: none;
+      border: none;
       cursor: pointer;
 
       @media screen and (max-width: @device-breakpoint-phone-max-width) {
@@ -45,7 +41,7 @@
   }
 
   &__toggle-icon {
-    color: inherit;
+    color: @oui-dual-list-toggle-icon-color;
 
     &::before {
       transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -60,7 +56,6 @@
 
   &__wrapper {
     height: @oui-dual-list-wrapper-height;
-    padding: 0 @oui-dual-list-wrapper-gutter;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -84,11 +79,6 @@
       justify-content: center;
       overflow: hidden;
     }
-
-    @media screen and (max-width: @device-breakpoint-phone-max-width) {
-      margin-left: -@oui-dual-list-wrapper-gutter;
-      margin-right: -@oui-dual-list-wrapper-gutter;
-    }
   }
 
   &__search {
@@ -107,11 +97,6 @@
   &__search ~ &__body,
   &__action + &__body {
     margin: @oui-dual-list-action-margin;
-
-    @media screen and (max-width: @device-breakpoint-phone-max-width) {
-      margin-left: -@oui-dual-list-wrapper-gutter;
-      margin-right: -@oui-dual-list-wrapper-gutter;
-    }
   }
 
   &__loading,
@@ -126,83 +111,31 @@
     font-weight: @oui-dual-list-placeholder-font-weight;
   }
 
-  &__items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  // Item
-  &-item {
-    &__button {
-      width: 100%;
-      height: @oui-dual-list-item-height;
-      display: flex;
-      flex-direction: row;
-      margin: @oui-dual-list-item-margin;
-      padding: @oui-dual-list-item-padding;
-      text-align: left;
-      color: @oui-dual-list-item-font-color;
-      font-size: @oui-dual-list-item-font-size;
-      font-weight: @oui-dual-list-item-font-weight;
-      border: none;
-      border-radius: @oui-dual-list-item-border-radius;
-      background: none;
-      cursor: pointer;
-
-      &:focus {
-        #oui > .outline-border-inner();
-      }
-
-      &:hover,
-      &:focus { background: @oui-dual-list-item-background_hover; }
-
-      @media screen and (max-width: @device-breakpoint-phone-max-width) {
-        padding: @oui-dual-list-item-padding_responsive;
-        border-radius: 0;
-      }
-    }
-
-    &__property {
-      flex: 1;
-      align-self: center;
-    }
-
-    &__icon {
-      flex: 0;
-      align-self: center;
-
-      .oui-icon {
-        margin-left: @oui-dual-list-icon-spacing;
-        color: inherit;
-        font-size: @oui-dual-list-icon-size;
-      }
-    }
-  }
-
   // Variant
   &-source,
   &-target {
     display: flex;
     flex: 1;
     flex-direction: column;
+    padding: @oui-dual-list-padding;
+    border: @oui-dual-list-border;
+    border-radius: @oui-dual-list-border-radius;
+    box-shadow: @oui-dual-list-box-shadow;
+    background: @oui-dual-list-background;
 
     @media screen and (max-width: @device-breakpoint-phone-max-width) {
       flex: auto;
     }
   }
 
-  // Variant "source"
   &-source {
-    border-right: @oui-dual-list-border;
+    margin-right: @oui-dual-list-spacing;
 
     @media screen and (max-width: @device-breakpoint-phone-max-width) {
-      border-right: none;
+      margin-right: 0;
+      margin-bottom: @oui-dual-list-spacing;
     }
   }
-
-  // Variant "target"
-  &-target &-item__button { background: @oui-dual-list-item-background_hover; }
 }
 
 oui-dual-list {

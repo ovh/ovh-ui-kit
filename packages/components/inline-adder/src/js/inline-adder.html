@@ -1,6 +1,7 @@
 <form class="oui-inline-adder__form" novalidate
     ng-attr-name="{{::$ctrl.name}}_{{::$index}}"
     ng-attr-id="{{::$ctrl.id}}_{{::$index}}"
+    ng-class="{ 'oui-inline-adder__form_added': $ctrl.isDisabled[$index] }"
     ng-repeat="form in $ctrl.forms track by $index"
     ng-show="$ctrl.forms[$index]"
     ng-submit="$ctrl.onFormSubmit(this[$ctrl.name + '_'+ $index], $index)">
@@ -9,12 +10,12 @@
         ng-transclude>
     </fieldset>
     <footer class="oui-inline-adder__footer">
-        <button type="submit" class="oui-inline-adder__action"
+        <button type="submit" class="oui-inline-adder__action oui-button oui-button_primary oui-button_s"
             ng-attr-aria-label="{{::$ctrl.translations.ariaAddItem}}"
             ng-if="!$ctrl.isDisabled[$index]">
             <span class="oui-icon oui-icon-add"></span>
         </button>
-        <button type="button" class="oui-inline-adder__action"
+        <button type="button" class="oui-inline-adder__action oui-button oui-button_primary oui-button_s"
             ng-attr-aria-label="{{::$ctrl.translations.ariaRemoveItem}}"
             ng-click="$ctrl.onFormRemove(this[$ctrl.name + '_'+ $index], $index)"
             ng-if="$ctrl.isDisabled[$index]">

@@ -1,11 +1,10 @@
 // Navbar
 @oui-navbar-height: rem-calc(44);
-@oui-navbar-line-height: rem-calc(18);
-@oui-navbar-padding: 0 rem-calc(10);
+@oui-navbar-line-height: rem-calc(20);
+@oui-navbar-padding: 0 rem-calc(20) 0 rem-calc(6);
 @oui-navbar-font-size: rem-calc(16);
 @oui-navbar-font-size_small: rem-calc(14);
-@oui-navbar-font-size_large: rem-calc(18);
-@oui-navbar-font-color: @p-800-text;
+@oui-navbar-font-color: @p-500;
 @oui-navbar-background-color: @p-000;
 @oui-navbar-background-color_active: @p-000;
 @oui-navbar-box-shadow: @base-box-shadow-primary;
@@ -13,8 +12,8 @@
 @oui-navbar-z-index_fixed: @base-z-index-navbar-fixed;
 
 // Navbar - Brand
-@oui-navbar-brand-padding: 0 rem-calc(20);
-@oui-navbar-brand-color: @oui-navbar-font-color;
+@oui-navbar-brand-padding: 0 rem-calc(24) 0 rem-calc(6);
+@oui-navbar-brand-color: @p-700;
 @oui-navbar-brand-font-size: rem-calc(28);
 @oui-navbar-brand-font-weight: 300;
 @oui-navbar-brand-icon-size: rem-calc(44);
@@ -63,7 +62,7 @@
 @oui-navbar-hamburger-width: rem-calc(14);
 @oui-navbar-hamburger-height: rem-calc(12);
 @oui-navbar-hamburger-bar-size: 2px;
-@oui-navbar-hamburger-bar-color: @oui-navbar-font-color;
+@oui-navbar-hamburger-bar-color: @p-500;
 
 @oui-navbar-backdrop-background-color: @g-800;
 @oui-navbar-backdrop-opacity: 0.5;
@@ -107,20 +106,29 @@
 @oui-navbar-menu-link-background-color_active: @p-075;
 
 // Navbar Link
-@oui-navbar-link-min-width: @oui-navbar-height;
+@oui-navbar-link-min-width: 0;
 @oui-navbar-link-min-height: @oui-navbar-height;
-@oui-navbar-link-line-height: 1.2;
-@oui-navbar-link-padding-h: (@oui-navbar-link-min-height - (@oui-navbar-font-size * @oui-navbar-link-line-height)) / 2;
-@oui-navbar-link-padding-v: rem-calc(20);
-@oui-navbar-link-padding: @oui-navbar-link-padding-h @oui-navbar-link-padding-v;
-@oui-navbar-link-font-color: @p-500;
-@oui-navbar-link-font-size: rem-calc(16);
-@oui-navbar-link-font-weight: 400;
+@oui-navbar-link-line-height: 1.25;
+@oui-navbar-link-padding-v: (@oui-navbar-link-min-height - (@oui-navbar-font-size * @oui-navbar-link-line-height)) / 2;
+@oui-navbar-link-padding-h: rem-calc(20);
+@oui-navbar-link-padding: @oui-navbar-link-padding-v @oui-navbar-link-padding-h;
+@oui-navbar-link-padding_root: 0 rem-calc(6);
+@oui-navbar-link-padding_primary: 0 rem-calc(12);
+@oui-navbar-link-padding_secondary: 0 rem-calc(12);
+@oui-navbar-link-font-color: @oui-navbar-font-color;
+@oui-navbar-link-font-size: @oui-navbar-font-size;
+@oui-navbar-link-font-weight: 600;
 @oui-navbar-link-text-decoration: none;
 @oui-navbar-link-text-decoration_hover: none;
 @oui-navbar-link-text-decoration_active: none;
 @oui-navbar-link-background-color: transparent;
-@oui-navbar-link-background-color_active: @p-075;
+@oui-navbar-link-background-color_active: transparent;
+@oui-navbar-link-border-height: rem-calc(24);
+@oui-navbar-link-border-line-height: rem-calc(22);
+@oui-navbar-link-border-padding: 0 rem-calc(7);
+@oui-navbar-link-border-color: @p-100;
+@oui-navbar-link-border-radius: rem-calc(24);
+@oui-navbar-link-border-width: 1px;
 
 @oui-navbar-arrow-color: @p-800;
 @oui-navbar-arrow-padding: calc(rem-calc(30) + @oui-navbar-arrow-spacing);
@@ -129,23 +137,25 @@
 
 @oui-navbar-primary-font-color: @oui-navbar-font-color;
 @oui-navbar-primary-font-color_active: @oui-navbar-primary-font-color;
-@oui-navbar-primary-font-size: @oui-navbar-font-size_large;
+@oui-navbar-primary-font-size: @oui-navbar-font-size;
 @oui-navbar-primary-font-weight: 600;
+@oui-navbar-primary-border-width: 2px;
+@oui-navbar-primary-border-color: transparent;
+@oui-navbar-primary-border-color_active: @p-500;
 
-@oui-navbar-secondary-font-color: @p-500;
-@oui-navbar-secondary-font-color_active: @oui-navbar-secondary-font-color;
-@oui-navbar-secondary-font-size: @oui-navbar-font-size_large;
-@oui-navbar-secondary-font-weight: 400;
+@oui-navbar-secondary-font-color: @oui-navbar-primary-font-color;
+@oui-navbar-secondary-font-color_active: @oui-navbar-primary-font-color_active;
+@oui-navbar-secondary-font-size: @oui-navbar-primary-font-size;
+@oui-navbar-secondary-font-weight: @oui-navbar-primary-font-weight;
 
-@oui-navbar-tertiary-font-color: @p-500;
+@oui-navbar-tertiary-font-color: @oui-navbar-font-color;
 @oui-navbar-tertiary-font-color_active: @oui-navbar-tertiary-font-color;
-@oui-navbar-tertiary-font-size: rem-calc(14);
+@oui-navbar-tertiary-font-size: @oui-navbar-font-size_small;
 @oui-navbar-tertiary-font-weight: 600;
 
 @oui-navbar-icon-line-height: 1;
-@oui-navbar-icon-size: rem-calc(30);
-@oui-navbar-icon-spacing: rem-calc(10);
-@oui-navbar-icon-font-size: rem-calc(14);
+@oui-navbar-icon-spacing: rem-calc(4);
+@oui-navbar-icon-font-size: rem-calc(16);
 @oui-navbar-icon-font-weight: 400;
 @oui-navbar-icon-color: inherit;
 @oui-navbar-icon-color_active: @oui-navbar-icon-color;
@@ -159,6 +169,6 @@
 @oui-navbar-badge-radius: @oui-navbar-badge-size / 2;
 @oui-navbar-badge-background-color: @ae-500;
 
-@oui-navbar-external-color: @p-800-text;
-@oui-navbar-external-size: rem-calc(14);
+@oui-navbar-external-color: @oui-navbar-tertiary-font-color;
+@oui-navbar-external-size: @oui-navbar-tertiary-font-size;
 @oui-navbar-external-spacing: rem-calc(5);

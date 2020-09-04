@@ -18,8 +18,8 @@
     "@ovh-ux/ui-kit.skeleton": "*",
     "@ovh-ux/ui-kit.spinner": "*",
     "@ovh-ux/ui-kit.tooltip": "*",
-    "angular": "^1.7.9",
-    "angular-aria": "^1.7.9"
+    "angular": "^1.8.0",
+    "angular-aria": "^1.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -27,11 +27,11 @@
     "@ovh-ux/ui-kit.action-menu": "*",
     "@ovh-ux/ui-kit.dropdown": "*",
     "@ovh-ux/ui-kit.test": "*",
-    "angular-mocks": "^1.7.9",
+    "angular-mocks": "^1.8.0",
     "cross-env": "^7.0.2",
     "escape-string-regexp": "^1.0.5",
     "karma": "^5.0.9",
     "karma-cli": "^2.0.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.20"
   }
 }

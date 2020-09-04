@@ -59,24 +59,22 @@
     <!-- /Placeholder -->
 
     <div class="oui-dual-list__body" ng-if="!$ctrl.isLoading() && $ctrl.dualList.source.length">
-        <ul class="oui-dual-list__items">
+        <div class="oui-dual-list__items oui-chip__container">
 
             <!-- Item -->
-            <li class="oui-dual-list-item"
+            <button type="button" class="oui-dual-list-item oui-chip oui-chip_block oui-chip_closable"
+                ng-attr-aria-label="{{::$ctrl.translations.move}} {{::$ctrl.dualList.getProperty(item)}}"
+                ng-click="$ctrl.dualList.moveToTarget(item)"
                 ng-repeat="item in $ctrl.dualList.source | filter:$ctrl.searchQuery | orderBy:$ctrl.dualList.property">
-                <button type="button" class="oui-dual-list-item__button"
-                    ng-attr-aria-label="{{::$ctrl.translations.move}} {{::$ctrl.dualList.getProperty(item)}}"
-                    ng-click="$ctrl.dualList.moveToTarget(item)">
-                    <span class="oui-dual-list-item__property"
-                        ng-bind="::$ctrl.dualList.getProperty(item)">
-                    </span>
-                    <span class="oui-dual-list-item__icon">
-                        <span class="oui-icon oui-icon-add" aria-hidden="true"></span>
-                    </span>
-                </button>
-            </li>
+                <span class="oui-dual-list-item__property"
+                    ng-bind="::$ctrl.dualList.getProperty(item)">
+                </span>
+                <span class="oui-chip__close oui-icon oui-icon-add"
+                    aria-hidden="true">
+                </span>
+            </button>
             <!-- /Item -->
 
-        </ul>
+        </div>
     </div>
 </section>

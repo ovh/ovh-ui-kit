@@ -14,18 +14,18 @@
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.input": "*",
-    "angular": "^1.7.9",
-    "angular-sanitize": "^1.7.9",
+    "angular": "^1.8.0",
+    "angular-sanitize": "^1.8.0",
     "ui-select": "^0.19.8"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@ovh-ux/ui-kit.test": "*",
-    "angular-mocks": "^1.7.9",
+    "angular-mocks": "^1.8.0",
     "cross-env": "^7.0.2",
     "karma": "^5.0.9",
     "karma-cli": "^2.0.0",
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.20"
   }
 }
