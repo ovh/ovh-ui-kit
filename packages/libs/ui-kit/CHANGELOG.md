@@ -1,3 +1,36 @@
+# [4.3.0](https://github.com/ovh/ovh-ui-kit/compare/v4.2.4...v4.3.0) (2020-09-04)
+
+
+### Bug Fixes
+
+* **select-picker:** fix form validation ([cfa4658](https://github.com/ovh/ovh-ui-kit/commit/cfa465858c0357871ffeb27ebe78037b3cf61a6c))
+
+
+### Features
+
+* **back-button:** add previous page label ([34dc715](https://github.com/ovh/ovh-ui-kit/commit/34dc7155ad34bf87de3f167fab71bd25a2dc1ca6))
+* **back-button:** apply ODS style ([95522af](https://github.com/ovh/ovh-ui-kit/commit/95522afdfa3389d336091fe0d23e59e553945eb0))
+* **criteria:** apply ODS style ([a7f111c](https://github.com/ovh/ovh-ui-kit/commit/a7f111cbbbbeef8f538edde8d97dcdd46d5827c4))
+* **dual-list:** apply ODS style ([09b334d](https://github.com/ovh/ovh-ui-kit/commit/09b334dc09710f2c2426fcc3630d583e664df9c2))
+* **form-actions:** apply ODS style ([f28b76e](https://github.com/ovh/ovh-ui-kit/commit/f28b76ee31e92d6c60c49439c778b8502a9213b8))
+* **form-actions:** update documention stories ([56b0c55](https://github.com/ovh/ovh-ui-kit/commit/56b0c551a440d26ba4daa69c0fbbe2d2af7d0fcf))
+* **header:** add back-button support ([0f41e34](https://github.com/ovh/ovh-ui-kit/commit/0f41e346eeac3edae0ca7921384912dc519167a2))
+* **header:** apply ODS style ([2e265ae](https://github.com/ovh/ovh-ui-kit/commit/2e265ae5430c7b82a088dc1e90acf045845f24ec))
+* **inline-adder:** apply ODS style ([28dde8e](https://github.com/ovh/ovh-ui-kit/commit/28dde8eb32c20b8133eabd30bccd5c3e51e8ed04))
+* **list:** apply ODS style ([a23e2cc](https://github.com/ovh/ovh-ui-kit/commit/a23e2cc4b7001e583c2e1d4963f1dd7c95928192))
+* **modal:** apply ODS style ([f4fb959](https://github.com/ovh/ovh-ui-kit/commit/f4fb95911291fbc908c1dcc57afa9e1bf7cdcd6b))
+* **navbar:** apply ODS style ([71ed6af](https://github.com/ovh/ovh-ui-kit/commit/71ed6af151c40452498ce7bd455c022d5978f657))
+* **progress-tracker:** apply ODS style ([9a0d330](https://github.com/ovh/ovh-ui-kit/commit/9a0d3302e8401a0857e25aa76c2104f5fd56e2f6))
+* **select-picker:** apply ODS style ([870385b](https://github.com/ovh/ovh-ui-kit/commit/870385b5260d43ac3672d21af33317cc77ebc2a2))
+* **sidebar:** apply ODS style ([7fa75f1](https://github.com/ovh/ovh-ui-kit/commit/7fa75f1269e0972daee518a2ffe6a158dd9c1283))
+* **slideshow:** apply ODS style ([59062ee](https://github.com/ovh/ovh-ui-kit/commit/59062eef4b74982d4360e1cfb55f0905996f050b))
+* **spinner:** apply ODS style ([07244a4](https://github.com/ovh/ovh-ui-kit/commit/07244a4bd92032c0af75492171d11d94f2553943))
+* **stepper:** apply ODS style ([b954a0d](https://github.com/ovh/ovh-ui-kit/commit/b954a0d1458e3d71b26cc069ceb9c58f6cb14de3))
+* **tile:** apply ODS style ([38b4931](https://github.com/ovh/ovh-ui-kit/commit/38b493122b55ecea420ae342b86944bc7edacda4))
+* **tokens:** update colors value ([c3fb353](https://github.com/ovh/ovh-ui-kit/commit/c3fb353b09c8208c5d21742059bb9a98d63cdf80))
+
+
+
 ## [4.2.4](https://github.com/ovh/ovh-ui-kit/compare/v4.2.3...v4.2.4) (2020-08-17)
 
 
