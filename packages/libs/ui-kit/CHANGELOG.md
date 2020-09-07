@@ -1,3 +1,12 @@
+## [4.3.1](https://github.com/ovh/ovh-ui-kit/compare/v4.3.0...v4.3.1) (2020-09-07)
+
+
+### Bug Fixes
+
+* **sidebar:** add padding around the root ([2554a8f](https://github.com/ovh/ovh-ui-kit/commit/2554a8f1fde254b05254d233917c3cccd36a8c5a))
+
+
+
 # [4.3.0](https://github.com/ovh/ovh-ui-kit/compare/v4.2.4...v4.3.0) (2020-09-04)
 
 
