@@ -9,10 +9,15 @@ angular.module('myModule', ['oui.calendar']);
 The calendar can be globally configured with a provider.
 
 ```js
+// Importing your locale from flatpickr library
+import 'flatpickr/dist/l10n/fr.js';
+
 angular.module('myModule', ['oui.calendar'])
   .config(ouiCalendarConfigurationProvider => {
+    const locale = 'fr';
+
     // default locale
-    ouiCalendarConfigurationProvider.setLocale('en');
+    ouiCalendarConfigurationProvider.setLocale(locale);
 
     // default options
     ouiCalendarConfigurationProvider.setOptions({
@@ -30,7 +35,7 @@ angular.module('myModule', ['oui.calendar'])
   });
 ```
 
-**Note**: See [Flatpickr Options](https://flatpickr.js.org/options/) for more information about the configuration.
+**Note**: See [Flatpickr Options](https://flatpickr.js.org/options/) for more information about the configuration and [Flatpickr Localization](https://flatpickr.js.org/localization/) for more information about the setup of your locale.
 
 # API
 
