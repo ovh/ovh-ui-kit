@@ -1,3 +1,15 @@
+## [4.3.2](https://github.com/ovh/ovh-ui-kit/compare/v4.3.1...v4.3.2) (2020-09-08)
+
+
+### Bug Fixes
+
+* **a11y:** remove outline radius ([a9c0a92](https://github.com/ovh/ovh-ui-kit/commit/a9c0a92992032ba70bb0cbc841cde289c60c9a0f))
+* **navbar:** fix badge position in responsive ([9b5a9b8](https://github.com/ovh/ovh-ui-kit/commit/9b5a9b8cd6e04f8e44882d910a0263bdddb7b3c3))
+* **navbar:** fix links when active ([3661825](https://github.com/ovh/ovh-ui-kit/commit/3661825f598cb05cbbca3e5f7847b2cf7c773851))
+* **sidebar:** fix padding-bottom with overflow ([88e554f](https://github.com/ovh/ovh-ui-kit/commit/88e554f10e7218e22842834675934627f1de54d5))
+
+
+
 ## [4.3.1](https://github.com/ovh/ovh-ui-kit/compare/v4.3.0...v4.3.1) (2020-09-07)
 
 
