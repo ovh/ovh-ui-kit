@@ -12,10 +12,10 @@ export const Simple = () => `
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_active" href>Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href>Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href>Dolor sit amet</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href>Dolor sit amet</a>
     </li>
   </ul>
 </nav>`;
@@ -27,18 +27,18 @@ export const WithMultiplesLists = () => `
   </a>
   <ul class="oui-navbar-list">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link oui-navbar-link_active" href>Lorem ipsum</a>
+      <a class="oui-navbar-link oui-navbar-link_primary oui-navbar-link_active" href>Lorem ipsum</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href>Dolor sit amet</a>
+      <a class="oui-navbar-link oui-navbar-link_primary" href>Dolor sit amet</a>
     </li>
   </ul>
   <ul class="oui-navbar-list oui-navbar-list_end">
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href>Consectetur</a>
+      <a class="oui-navbar-link oui-navbar-link_secondary" href>Consectetur</a>
     </li>
     <li class="oui-navbar-list__item">
-      <a class="oui-navbar-link" href>Adipiscing elit</a>
+      <a class="oui-navbar-link oui-navbar-link_secondary" href>Adipiscing elit</a>
     </li>
   </ul>
 </nav>`;
