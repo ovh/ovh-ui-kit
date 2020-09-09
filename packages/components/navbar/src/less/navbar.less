@@ -405,7 +405,10 @@
       color: @oui-navbar-menu-font-color;
       border-bottom: @oui-navbar-menu-item-border-bottom;
 
-      &_active { background-color: @oui-navbar-menu-background-color_active; }
+      &_active {
+        color: @oui-navbar-menu-link-font-color_active;
+        background-color: @oui-navbar-menu-link-background-color_active;
+      }
 
       &:hover {
         text-decoration: none;
@@ -495,9 +498,7 @@
 
   // Menu links
   &-menu &-link {
-    #oui > .navbar-link_variant(
-      @font-color: @oui-navbar-menu-font-color
-    );
+    #oui > .navbar-link_variant();
 
     width: 100%;
 
