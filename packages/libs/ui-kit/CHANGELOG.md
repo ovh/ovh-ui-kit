@@ -1,3 +1,12 @@
+## [4.3.3](https://github.com/ovh/ovh-ui-kit/compare/v4.3.2...v4.3.3) (2020-09-09)
+
+
+### Bug Fixes
+
+* **navbar:** fix menu link colors ([9ed4202](https://github.com/ovh/ovh-ui-kit/commit/9ed4202eaab5fff15179f55eaca6ae7db1872a1a))
+
+
+
 ## [4.3.2](https://github.com/ovh/ovh-ui-kit/compare/v4.3.1...v4.3.2) (2020-09-08)
 
 
