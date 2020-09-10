@@ -9,6 +9,13 @@
   }
 
   // Root
+  & > &-menu > &-list {
+    // We're using a border here to create a padding
+    // so that the padding-bottom is not hidden
+    // by the overflow auto of the menu
+    border: @oui-sidebar-padding solid transparent;
+  }
+
   & > &-menu > &-list > &-list__item {
     // Group links
     > .oui-sidebar-link {

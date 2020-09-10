@@ -63,7 +63,6 @@
     position: relative;
     text-decoration: @text-decoration;
     text-align: left;
-    border: none;
 
     &:hover,
     &:focus {
@@ -147,11 +146,6 @@
         font-size: @badge-font-size;
         border-radius: @badge-radius;
         background: @badge-background-color;
-
-        @media screen and (max-width: @device-breakpoint-medium-max-width) {
-          top: 50%;
-          transform: translate(50%, -50%);
-        }
       }
     }
   }

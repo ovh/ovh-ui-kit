@@ -251,8 +251,7 @@ export const PlaceholderForNotification = forModule(moduleName).createElement(
     </p>
 
     <oui-navbar
-      aside-links="$ctrl.placeholderNotification"
-      fixed>
+      aside-links="$ctrl.placeholderNotification">
     </oui-navbar>
     `, {
       $ctrl: {
