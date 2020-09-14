@@ -9,6 +9,7 @@ export default class {
     this.$attrs = $attrs;
     this.$element = $element;
     this.$id = $scope.$id;
+    this.$scope = $scope;
     this.$timeout = $timeout;
     this.locale = ouiCalendarConfiguration.locale;
     this.config = angular.copy(ouiCalendarConfiguration.options);
@@ -83,6 +84,12 @@ export default class {
 
     // Init the flatpickr instance
     this.flatpickr = new flatpickr(this.$element.find('input')[0], this.config); // eslint-disable-line new-cap
+
+    // Watch model value for search engine
+    this.$scope.$watch(
+      () => this.model,
+      (value) => this.setModelValue(value),
+    );
   }
 
   $onInit() {
