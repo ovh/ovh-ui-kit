@@ -1,3 +1,12 @@
+## [4.3.4](https://github.com/ovh/ovh-ui-kit/compare/v4.3.3...v4.3.4) (2020-09-14)
+
+
+### Bug Fixes
+
+* **calendar:** fix updating model value ([7ff1238](https://github.com/ovh/ovh-ui-kit/commit/7ff1238cb11b525e0890debc2133f338df1ba35c))
+
+
+
 ## [4.3.3](https://github.com/ovh/ovh-ui-kit/compare/v4.3.2...v4.3.3) (2020-09-09)
 
 
