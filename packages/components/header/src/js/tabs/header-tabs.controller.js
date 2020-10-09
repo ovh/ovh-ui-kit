@@ -12,7 +12,7 @@ export default class {
 
   checkScroll() {
     this.$timeout(() => {
-      this.canScroll = this.tabsList.clientWidth < this.tabsList.scrollWidth;
+      this.canScroll = this.tabsList.clientWidth < this.initialScrollWidth;
 
       // Reset scroll value
       this.canScrollLeft = false;
@@ -38,8 +38,9 @@ export default class {
       this.scrollIndex = Math.min(this.scrollIndex + 1, maxIndex);
     }
 
+    this.canScrollRight = (this.getOffsetLeft() + this.tabsList.clientWidth)
+      <= this.initialScrollWidth;
     this.canScrollLeft = this.scrollIndex > minIndex;
-    this.canScrollRight = this.scrollIndex < maxIndex;
 
     // The slide animation is done in the CSS with a transition
     // targeting the margin-left property n the first child.
@@ -70,6 +71,8 @@ export default class {
         // eslint-disable-next-line
         element.initialOffsetLeft = element.offsetLeft;
       });
+
+      this.initialScrollWidth = this.tabsList.scrollWidth;
 
       this.$scope.$watch(() => this.tabsList.childNodes.length, () => {
         this.tabs = filter(this.tabsList.childNodes, (node) => node.nodeType === 1);
