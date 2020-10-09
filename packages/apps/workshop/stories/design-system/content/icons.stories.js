@@ -562,6 +562,11 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cloud-essential_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-cloud-essential_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-cloud-eye_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-cloud-eye_concept</code></div>
   </div>
@@ -1049,6 +1054,11 @@ export const Concept = () => `
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-paperplane_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-paperplane_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-partner-platformsh_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-partner-platformsh_concept</code></div>
   </div>
 
   <div class="doc-badge">
