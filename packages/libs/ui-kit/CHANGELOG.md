@@ -1,3 +1,13 @@
+## [4.3.5](https://github.com/ovh/ovh-ui-kit/compare/v4.3.4...v4.3.5) (2020-10-09)
+
+
+### Bug Fixes
+
+* **header:** change detection for scroll right ([#692](https://github.com/ovh/ovh-ui-kit/issues/692)) ([043752b](https://github.com/ovh/ovh-ui-kit/commit/043752bed7ec2e3c7de81b11add53c7933bb22f9))
+* **tile:** add padding for tile responssive ([#690](https://github.com/ovh/ovh-ui-kit/issues/690)) ([54cd197](https://github.com/ovh/ovh-ui-kit/commit/54cd197ecf8573932c7725a3df6c3ec271f8f740))
+
+
+
 ## [4.3.4](https://github.com/ovh/ovh-ui-kit/compare/v4.3.3...v4.3.4) (2020-09-14)
 
 
