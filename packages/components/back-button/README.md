@@ -14,7 +14,8 @@ angular.module('myModule', ['oui.field'])
     // default translations
     ouiBackButtonConfigurationProvider.setTranslations({
       backTo: 'Back to',
-      previousPage: 'Previous page',
+      backToPreviousPage: 'Back to Previous page',
+      previousPage: 'Previous page', //Deprecated
     });
   });
 ```
