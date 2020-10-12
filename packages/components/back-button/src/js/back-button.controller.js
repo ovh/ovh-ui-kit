@@ -31,7 +31,7 @@ export default class {
   getBtnText() {
     return this.previousPage
       ? `${this.translations.backTo} “${this.previousPage}”`
-      : `${this.translations.backTo} “${this.translations.previousPage}”`;
+      : this.translations.backToPreviousPage || `${this.translations.backTo} ${this.translations.previousPage}`;
   }
 
   // Return value of "ui-sref"

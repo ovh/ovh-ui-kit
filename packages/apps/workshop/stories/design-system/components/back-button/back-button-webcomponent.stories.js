@@ -37,6 +37,22 @@ export const Simple = forModule(moduleName).createElement(
   ),
 );
 
+export const Default = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-back-button
+      href="#"
+      aria-label="Aria label for heading"
+      on-click="$ctrl.onClick()">
+    </oui-back-button>`,
+    {
+      $ctrl: {
+        onClick: action('onClick'),
+      },
+    },
+  ),
+);
+
 export const WithHeading = forModule(moduleName).createElement(
   () => compileTemplate(
     `
