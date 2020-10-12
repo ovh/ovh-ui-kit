@@ -1,3 +1,12 @@
+## [4.3.6](https://github.com/ovh/ovh-ui-kit/compare/v4.3.5...v4.3.6) (2020-10-12)
+
+
+### Bug Fixes
+
+* **back-button:** allow to pass full translations ([#694](https://github.com/ovh/ovh-ui-kit/issues/694)) ([79b5c48](https://github.com/ovh/ovh-ui-kit/commit/79b5c486f8adc2c7d0bf768ee79e67447c833326))
+
+
+
 ## [4.3.5](https://github.com/ovh/ovh-ui-kit/compare/v4.3.4...v4.3.5) (2020-10-09)
 
 
