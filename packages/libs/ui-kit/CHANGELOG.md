@@ -1,3 +1,26 @@
+# [4.4.0](https://github.com/ovh/ovh-ui-kit/compare/v4.3.6...v4.4.0) (2020-10-16)
+
+
+### Bug Fixes
+
+* **field:** allow to check if status is invalid outside of a form ([#697](https://github.com/ovh/ovh-ui-kit/issues/697)) ([7ef93cc](https://github.com/ovh/ovh-ui-kit/commit/7ef93cc32b5852d5ed2664afaae8fd71284b4182))
+
+
+### Features
+
+* **icons:** add Platform.sh and Cloud Essential ([#695](https://github.com/ovh/ovh-ui-kit/issues/695)) ([1079305](https://github.com/ovh/ovh-ui-kit/commit/1079305dd80b5a5cfbd2d17efb1fe8f9e2943d0c))
+
+
+
+## [4.3.6](https://github.com/ovh/ovh-ui-kit/compare/v4.3.5...v4.3.6) (2020-10-12)
+
+
+### Bug Fixes
+
+* **back-button:** allow to pass full translations ([#694](https://github.com/ovh/ovh-ui-kit/issues/694)) ([79b5c48](https://github.com/ovh/ovh-ui-kit/commit/79b5c486f8adc2c7d0bf768ee79e67447c833326))
+
+
+
 ## [4.3.5](https://github.com/ovh/ovh-ui-kit/compare/v4.3.4...v4.3.5) (2020-10-09)
 
 
