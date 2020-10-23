@@ -1,3 +1,12 @@
+## [4.4.1](https://github.com/ovh/ovh-ui-kit/compare/v4.4.0...v4.4.1) (2020-10-23)
+
+
+### Bug Fixes
+
+* **typography:** add default pointer-event property on links ([#700](https://github.com/ovh/ovh-ui-kit/issues/700)) ([deb6762](https://github.com/ovh/ovh-ui-kit/commit/deb676224f84a26950953227301614646dcbf662))
+
+
+
 # [4.4.0](https://github.com/ovh/ovh-ui-kit/compare/v4.3.6...v4.4.0) (2020-10-16)
 
 
