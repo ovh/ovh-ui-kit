@@ -12,7 +12,7 @@
              ng-if="$ctrl.loading">
             <oui-spinner></oui-spinner>
         </div>
-        <button type="button" class="oui-icon oui-icon-chevron-left oui-slideshow__prev-button"
+        <button type="button" class="oui-icon oui-icon-arrow-left oui-slideshow__prev-button"
                 ng-click="$ctrl.prev()"
                 ng-disabled="$ctrl.loading || (!$ctrl.loop && $ctrl.currentIndex === 0)"
                 ng-if="($ctrl.loop && $ctrl.panels.length > 1) || $ctrl.currentIndex !== 0">
@@ -20,7 +20,7 @@
         <div class="oui-slideshow__content" aria-live="polite"
              ng-transclude>
         </div>
-        <button type="button" class="oui-icon oui-icon-chevron-right oui-slideshow__next-button"
+        <button type="button" class="oui-icon oui-icon-arrow-right oui-slideshow__next-button"
                 ng-click="$ctrl.next()"
                 ng-disabled="$ctrl.loading || (!$ctrl.loop && $ctrl.currentIndex === $ctrl.panels.length - 1)"
                 ng-if="($ctrl.loop && $ctrl.panels.length > 1) || $ctrl.currentIndex !== $ctrl.panels.length - 1">
