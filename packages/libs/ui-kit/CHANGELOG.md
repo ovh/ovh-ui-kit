@@ -1,3 +1,13 @@
+## [4.4.2](https://github.com/ovh/ovh-ui-kit/compare/v4.4.1...v4.4.2) (2020-11-13)
+
+
+### Bug Fixes
+
+* **slideshow:** rework slideshow design ([#702](https://github.com/ovh/ovh-ui-kit/issues/702)) ([81f9546](https://github.com/ovh/ovh-ui-kit/commit/81f954631e40219c907204e1641af86522b95593))
+* **slideshow:** switch footer font ([#704](https://github.com/ovh/ovh-ui-kit/issues/704)) ([2e908ac](https://github.com/ovh/ovh-ui-kit/commit/2e908accc7ba8b76b3a6d2a70e9961a4a148f091))
+
+
+
 ## [4.4.1](https://github.com/ovh/ovh-ui-kit/compare/v4.4.0...v4.4.1) (2020-10-23)
 
 
