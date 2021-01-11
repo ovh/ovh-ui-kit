@@ -108,6 +108,7 @@ describe('ouiTile', () => {
 
     it('should handle click in a button tile', () => {
       const clickSpy = jasmine.createSpy('click');
+      const hrefClickSpy = jasmine.createSpy('click');
       const element = TestUtils.compileTemplate(
         `<oui-tile>
             <oui-tile-button on-click="$ctrl.clickSpy()">text</oui-tile-button>
@@ -116,8 +117,19 @@ describe('ouiTile', () => {
         },
       );
 
+      const elementWithHref = TestUtils.compileTemplate(
+        `<oui-tile>
+            <oui-tile-button href="#" on-click="$ctrl.hrefClickSpy()">text</oui-tile-button>
+        </oui-tile>`, {
+          hrefClickSpy,
+        },
+      );
+
       getTileButton(element).triggerHandler('click');
       expect(clickSpy).toHaveBeenCalled();
+
+      getTileButton(elementWithHref).triggerHandler('click');
+      expect(hrefClickSpy).toHaveBeenCalled();
     });
 
     it('should disable the button', () => {
