@@ -1,3 +1,12 @@
+## [4.4.3](https://github.com/ovh/ovh-ui-kit/compare/v4.4.2...v4.4.3) (2021-01-11)
+
+
+### Bug Fixes
+
+* **tile.button:** always use on-click binding ([#705](https://github.com/ovh/ovh-ui-kit/issues/705)) ([a52ce3d](https://github.com/ovh/ovh-ui-kit/commit/a52ce3d91ea5f5781a2dab2ccb22b035392bd473))
+
+
+
 ## [4.4.2](https://github.com/ovh/ovh-ui-kit/compare/v4.4.1...v4.4.2) (2020-11-13)
 
 
