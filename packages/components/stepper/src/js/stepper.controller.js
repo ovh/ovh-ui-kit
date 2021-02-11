@@ -103,4 +103,8 @@ export default class {
       }
     });
   }
+
+  $onDestroy() {
+    this.steps = [];
+  }
 }
