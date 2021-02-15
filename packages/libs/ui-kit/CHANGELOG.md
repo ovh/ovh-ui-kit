@@ -1,3 +1,12 @@
+## [4.4.4](https://github.com/ovh/ovh-ui-kit/compare/v4.4.3...v4.4.4) (2021-02-15)
+
+
+### Bug Fixes
+
+* **oui-stepper:** prevent focusing on steps on destroy ([#708](https://github.com/ovh/ovh-ui-kit/issues/708)) ([d80f73e](https://github.com/ovh/ovh-ui-kit/commit/d80f73ed9c7f3b493c79671fcda9abfd108e99c4))
+
+
+
 ## [4.4.3](https://github.com/ovh/ovh-ui-kit/compare/v4.4.2...v4.4.3) (2021-01-11)
 
 
