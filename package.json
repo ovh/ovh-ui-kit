@@ -13,7 +13,8 @@
     "packages/base/*",
     "packages/components/*",
     "packages/libs/*",
-    "packages/vendors/*"
+    "packages/vendors/*",
+    "packages/css"
   ],
   "scripts": {
     "build": "run-s build:*",
