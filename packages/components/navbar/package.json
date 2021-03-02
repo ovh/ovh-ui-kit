@@ -10,15 +10,15 @@
     "test": "cross-env NODE_ENV=test karma start --reporters spec,coverage --single-run",
     "test:watch": "cross-env NODE_ENV=test karma start --watch"
   },
-  "dependencies": {
-    "@ovh-ux/ui-kit.button": "*",
-    "@ovh-ux/ui-kit.core": "*",
+  "peerDependencies": {
+    "@ovh-ux/ui-kit.css": "*",
     "@ovh-ux/ui-kit.spinner": "*",
     "angular": "^1.8.0",
     "angular-aria": "^1.8.0",
     "angular-sanitize": "^1.8.0"
   },
   "devDependencies": {
+    "@ovh-ux/ui-kit.components-utils": "*",
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@ovh-ux/ui-kit.test": "*",

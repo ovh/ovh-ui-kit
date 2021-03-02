@@ -1,4 +1,4 @@
-import { addDefaultParameter, removeHtmlTags } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter, removeHtmlTags } from '@ovh-ux/ui-kit.components-utils/src/js/component-utils';
 
 export default class {
   constructor($attrs, $document, $element, $scope, $timeout, $window) {

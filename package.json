@@ -14,7 +14,8 @@
     "packages/components/*",
     "packages/libs/*",
     "packages/vendors/*",
-    "packages/css"
+    "packages/css",
+    "packages/components"
   ],
   "scripts": {
     "build": "run-s build:*",

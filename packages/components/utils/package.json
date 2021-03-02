@@ -1,0 +1,11 @@
+{
+  "name": "@ovh-ux/ui-kit.components-utils",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./src/js/component-utils.js",
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "peerDependencies": {
+    "angular": "^1.8.0"
+  }
+}

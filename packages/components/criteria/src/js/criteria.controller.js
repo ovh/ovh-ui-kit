@@ -1,4 +1,4 @@
-import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addBooleanParameter } from '@ovh-ux/ui-kit.components-utils/src/js/component-utils';
 import find from 'lodash/find';
 import findIndex from 'lodash/findIndex';
 import isEmpty from 'lodash/isEmpty';

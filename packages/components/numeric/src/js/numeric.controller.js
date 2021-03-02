@@ -1,4 +1,4 @@
-import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.components-utils/src/js/component-utils';
 
 // By design, value is restricted to [0, 99999] interval
 const MIN_VALUE = 0;
