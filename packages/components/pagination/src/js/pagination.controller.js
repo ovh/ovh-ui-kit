@@ -1,4 +1,4 @@
-import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { addDefaultParameter } from '@ovh-ux/ui-kit.components-utils/src/js/component-utils';
 import clamp from 'lodash/clamp';
 import range from 'lodash/range';
 

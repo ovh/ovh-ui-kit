@@ -1,4 +1,4 @@
-import { getAttribute, hasAttribute } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { getAttribute, hasAttribute } from '@ovh-ux/ui-kit.components-utils/src/js/component-utils';
 
 const searchableTypes = [
   'number',
