@@ -5,7 +5,6 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/js/index.js",
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
@@ -16,9 +15,7 @@
     "test:watch": "cross-env NODE_ENV=test karma start --watch"
   },
   "dependencies": {
-    "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.components-utils": "*",
-    "@ovh-ux/ui-kit.dropdown": "*",
     "angular": "^1.8.0"
   },
   "devDependencies": {

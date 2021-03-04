@@ -19,7 +19,9 @@
     "angular": "^1.8.0",
     "angular-aria": "^1.8.0",
     "angular-sanitize": "^1.8.0",
-    "zxcvbn": "^4.4.2"
+    "zxcvbn": "^4.4.2",
+    "@ovh-ux/ui-kit.css": "*",
+    "flatpickr": "^4.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
@@ -64,7 +66,6 @@
     "@ovh-ux/ui-kit.collapsible": "*",
     "@ovh-ux/ui-kit.components": "*",
     "@ovh-ux/ui-kit.config": "*",
-    "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.criteria": "*",
     "@ovh-ux/ui-kit.datagrid": "*",
     "@ovh-ux/ui-kit.dropdown": "*",
