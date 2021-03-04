@@ -19,6 +19,10 @@
     "icons": "mkdirp ./src/fonts/oui-icons && yarn icons-generator && node ./src/js/generate-icons-indexes.js",
     "icons-generator": "icon-font-generator ./src/svg/icons/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types \"woff, woff2\" --center --normalize"
   },
+  "dependencies": {
+    "flatpickr": "^4.6.3",
+    "bloodhound-js": "^1.2.3"
+  },
   "devDependencies": {
     "chalk": "^4.0.0",
     "icon-font-generator": "^2.1.10",

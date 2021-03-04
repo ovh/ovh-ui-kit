@@ -133,7 +133,7 @@ module.exports = merge(baseConfig, {
   },
   output: {
     filename: '[name].js',
-    library: 'oui',
+    library: '[name]',
     libraryTarget: 'umd',
     path: path.resolve('.', 'dist', 'js'),
   },
