@@ -10,9 +10,9 @@
   "main": "./src/oui.js",
   "scripts": {
     "build": "npm-run-all -l -s clean build:* copy",
-    "build:css": "cpx \"../../base/core/src/css/{_tokens.css,tokens/*}\" \"./dist/css\"",
-    "build:less": "cpx \"../../base/core/src/less/{_tokens.less,tokens/*}\" \"./dist/less\"",
-    "build:scss": "cpx \"../../base/core/src/scss/{_tokens.scss,tokens/*}\" \"./dist/scss\"",
+    "build:css": "cpx \"../../css/src/css/{_tokens.css,tokens/*}\" \"./dist/css\"",
+    "build:less": "cpx \"../../css/src/less/{_tokens.less,tokens/*}\" \"./dist/less\"",
+    "build:scss": "cpx \"../../css/src/scss/{_tokens.scss,tokens/*}\" \"./dist/scss\"",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --colors --config ./.config/webpack.config.js",
     "clean": "rimraf ./dist ../../../dist ../../libs/ui-kit/dist",
     "copy": "run-p copy:*",

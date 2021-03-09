@@ -5,5 +5,9 @@
   "main": "./src/index.js",
   "less": "./src/index.less",
   "license": "BSD-3-Clause",
-  "author": "OVH SAS"
+  "author": "OVH SAS",
+  "dependencies": {
+    "@ovh-ux/ui-kit.button": "*",
+    "@ovh-ux/ui-kit.css": "*"
+  }
 }

@@ -19,9 +19,7 @@
     "angular": "^1.8.0",
     "angular-aria": "^1.8.0",
     "angular-sanitize": "^1.8.0",
-    "zxcvbn": "^4.4.2",
-    "@ovh-ux/ui-kit.css": "*",
-    "flatpickr": "^4.6.3"
+    "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",

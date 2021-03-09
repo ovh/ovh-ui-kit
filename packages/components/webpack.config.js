@@ -140,117 +140,12 @@ module.exports = merge(baseConfig, {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        default: false,
-        vendors: false,
-        'oui-button': {
-          test: 'oui-button',
-          chunks: 'all',
-          name: 'oui-button',
-          enforce: true,
-        },
-        'oui-radio': {
-          test: 'oui-radio',
-          chunks: 'all',
-          name: 'oui-radio',
-          enforce: true,
-        },
-        'oui-checkbox': {
-          test: 'oui-checkbox',
-          chunks: 'all',
-          name: 'oui-checkbox',
-          enforce: true,
-        },
-        'oui-tooltip': {
-          test: 'oui-tooltip',
-          chunks: 'all',
-          name: 'oui-tooltip',
-          enforce: true,
-        },
-        'oui-spinner': {
-          test: 'oui-spinner',
-          chunks: 'all',
-          name: 'oui-spinner',
-          enforce: true,
-        },
-        'oui-skeleton': {
-          test: 'oui-skeleton',
-          chunks: 'all',
-          name: 'oui-skeleton',
-          enforce: true,
-        },
-        'oui-switch': {
-          test: 'oui-switch',
-          chunks: 'all',
-          name: 'oui-switch',
-          enforce: true,
-        },
-        'oui-textarea': {
-          test: 'oui-textarea',
-          chunks: 'all',
-          name: 'oui-textarea',
-          enforce: true,
-        },
-        'oui-select': {
-          test: 'oui-select',
-          chunks: 'all',
-          name: 'oui-select',
-          enforce: true,
-        },
-        'oui-dropdown': {
-          test: 'oui-dropdown',
-          chunks: 'all',
-          name: 'oui-dropdown',
-          enforce: true,
-        },
-        'oui-autocomplete': {
-          test: 'oui-autocomplete',
-          chunks: 'all',
-          name: 'oui-autocomplete',
-          enforce: true,
-        },
-        'oui-calendar': {
-          test: 'oui-calendar',
-          chunks: 'all',
-          name: 'oui-calendar',
-          enforce: true,
-        },
-        'oui-popover': {
-          test: 'oui-popover',
-          chunks: 'all',
-          name: 'oui-popover',
-          enforce: true,
-        },
-        'oui-criteria': {
-          test: 'oui-criteria',
-          chunks: 'all',
-          name: 'oui-criteria',
-          enforce: true,
-        },
-        'oui-pagination': {
-          test: 'oui-pagination',
-          chunks: 'all',
-          name: 'oui-pagination',
-          enforce: true,
-        },
-        'oui-chips': {
-          test: 'oui-chips',
-          chunks: 'all',
-          name: 'oui-chips',
-          enforce: true,
-        },
-        'oui-field': {
-          test: 'oui-field',
-          chunks: 'all',
-          name: 'oui-field',
-          enforce: true,
-        },
-        'oui-search': {
-          test: 'oui-search',
-          chunks: 'all',
-          name: 'oui-search',
-          enforce: true,
+        commons: {
+          chunks: 'initial',
+          minChunks: 2,
         },
       },
     },
   },
+
 });

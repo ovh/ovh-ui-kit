@@ -1,46 +1,24 @@
-# Prerequisites
+# Installation
 
-This component has been tested with AngularJS 1.8+.
-
-You need to load these dependencies in your project:
-
-- [angular](https://www.npmjs.com/package/angular)
-- [ui-kit.css](@ovh-ux/ui-kit.css)
-
-## Install prerequisites with [npm](https://www.npmjs.com/)
+## Install with [npm](https://www.npmjs.com/)
 
 ```bash
-npm install angular
 npm install @ovh-ux/ui-kit.css
-```
-
-## Install prerequisites with [yarn](https://yarnpkg.com)
-
-```bash
-yarn add angular
-yarn add @ovh-ux/ui-kit.css
-```
-
-# Install with [npm](https://www.npmjs.com/)
-
-```bash
 npm install @ovh-ux/ui-kit.components
 ```
 
-## Install prerequisites with [yarn](https://yarnpkg.com)
+## Install with [yarn](https://yarnpkg.com)
 
 ```bash
+yarn add @ovh-ux/ui-kit.css
 yarn add @ovh-ux/ui-kit.components
 ```
-
-# Usage
+## Usage
 
 ```js
-// import component
-import ouiButton from '@ovh-ux/ui-kit.components';
-// import styles
 import '@ovh-ux/ui-kit.css/dist/css/oui.css';
-angular.module('myModule', [ouiButton]);
+import '@ovh-ux/ui-kit.components/dist/js/oui-button';
+angular.module('myModule', ['oui.button']);
 ```
 
 # API

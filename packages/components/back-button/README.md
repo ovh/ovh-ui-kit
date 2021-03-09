@@ -1,6 +1,23 @@
 # Installation
 
+## Install with [npm](https://www.npmjs.com/)
+
+```bash
+npm install @ovh-ux/ui-kit.css
+npm install @ovh-ux/ui-kit.components
+```
+
+## Install with [yarn](https://yarnpkg.com)
+
+```bash
+yarn add @ovh-ux/ui-kit.css
+yarn add @ovh-ux/ui-kit.components
+```
+## Usage
+
 ```js
+import '@ovh-ux/ui-kit.css/dist/css/oui.css';
+import '@ovh-ux/ui-kit.components/dist/js/oui-back-button';
 angular.module('myModule', ['oui.back-button']);
 ```
 
@@ -9,7 +26,7 @@ angular.module('myModule', ['oui.back-button']);
 The back button can be globally configured with a provider.
 
 ```js
-angular.module('myModule', ['oui.field'])
+angular.module('myModule', ['oui.back-button'])
   .config(ouiBackButtonConfigurationProvider => {
     // default translations
     ouiBackButtonConfigurationProvider.setTranslations({
