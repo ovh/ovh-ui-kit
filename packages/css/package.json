@@ -9,8 +9,11 @@
   ],
   "style": "./dist/css/oui.css",
   "scripts": {
-    "build": "npm-run-all -l -s clean icons build:*",
+    "build": "npm-run-all -l -s clean build:*",
     "clean": "rimraf ./dist",
+    "build:css": "cpx \"./src/css/{_tokens.css,tokens/*}\" \"./dist/css\"",
+    "build:less": "cpx \"./src/less/{_tokens.less,tokens/*}\" \"./dist/less\"",
+    "build:scss": "cpx \"./src/scss/{_tokens.scss,tokens/*}\" \"./dist/scss\"",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --config webpack.config.js",
     "tokens": "run-s tokens:dir tokens:download",
     "tokens:dir": "mkdirp ./src/css && mkdirp ./src/scss",
@@ -20,8 +23,7 @@
     "icons-generator": "icon-font-generator ./src/svg/icons/**/*.svg -n oui-icons -p oui-icon -o ./src/fonts/oui-icons -t span --types \"woff, woff2\" --center --normalize"
   },
   "dependencies": {
-    "flatpickr": "^4.6.3",
-    "bloodhound-js": "^1.2.3"
+    "flatpickr": "^4.6.3"
   },
   "devDependencies": {
     "chalk": "^4.0.0",

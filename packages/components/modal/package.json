@@ -10,7 +10,8 @@
     "test": "cross-env NODE_ENV=test karma start --reporters spec,coverage --single-run",
     "test:watch": "cross-env NODE_ENV=test karma start --watch"
   },
-  "peerDependencies": {
+  "dependencies": {
+    "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.css": "*",
     "@ovh-ux/ui-kit.spinner": "*",
     "angular": "^1.8.0"

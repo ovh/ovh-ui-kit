@@ -11,12 +11,12 @@
     "test:watch": "cross-env NODE_ENV=test karma start --watch"
   },
   "dependencies": {
-    "clipboard": "^2.0.4"
-  },
-  "peerDependencies": {
+    "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.css": "*",
+    "@ovh-ux/ui-kit.input": "*",
     "@ovh-ux/ui-kit.tooltip": "*",
-    "angular": "^1.8.0"
+    "angular": "^1.8.0",
+    "clipboard": "^2.0.4"
   },
   "devDependencies": {
     "@ovh-ux/ui-kit.components-utils": "*",
