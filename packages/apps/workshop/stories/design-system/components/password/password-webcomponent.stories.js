@@ -3,9 +3,9 @@ import zxcvbn from 'zxcvbn';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Field from '@ovh-ux/ui-kit.field';
-import FormActions from '@ovh-ux/ui-kit.form-actions';
-import Password from '@ovh-ux/ui-kit.password';
+import '@ovh-ux/ui-kit.field';
+import '@ovh-ux/ui-kit.form-actions';
+import '@ovh-ux/ui-kit.password';
 
 import readme from '@ovh-ux/ui-kit.password/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -13,11 +13,9 @@ import { compileTemplate } from '../../../../src/utils';
 // Create mock module for the stories
 const moduleName = 'password-webcomponent.stories';
 angular.module(moduleName, [
-  Password,
-
-  // For examples
-  Field,
-  FormActions,
+  'oui.password',
+  'oui.field',
+  'oui.form-actions',
 ]);
 
 export default {

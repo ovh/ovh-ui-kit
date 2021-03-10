@@ -1,8 +1,8 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
-import GuideMenu from '@ovh-ux/ui-kit.guide-menu';
-import Header from '@ovh-ux/ui-kit.header';
+import '@ovh-ux/ui-kit.guide-menu';
+import '@ovh-ux/ui-kit.header';
 
 import readme from '@ovh-ux/ui-kit.guide-menu/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -10,10 +10,8 @@ import { compileTemplate } from '../../../../src/utils';
 // Create mock module for the stories
 const moduleName = 'guide-menu-webcomponent.stories';
 angular.module(moduleName, [
-  GuideMenu,
-
-  // For examples
-  Header,
+  'oui.guide-menu',
+  'oui.header',
 ]);
 
 export default {

@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Search from '@ovh-ux/ui-kit.search';
+import '@ovh-ux/ui-kit.search';
 
 import readme from '@ovh-ux/ui-kit.search/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -10,7 +10,7 @@ import { compileTemplate } from '../../../../src/utils';
 import { objects } from '../../../_data/autocomplete.data.json';
 
 const moduleName = 'search-webcomponent.stories';
-angular.module(moduleName, [Search]);
+angular.module(moduleName, ['oui.search']);
 
 export default {
   title: 'Design System/Components/Search/WebComponent',

@@ -1,12 +1,12 @@
 import { forModule } from 'storybook-addon-angularjs';
 
-import Spinner from '@ovh-ux/ui-kit.spinner';
+import '@ovh-ux/ui-kit.spinner';
 
 import readme from '@ovh-ux/ui-kit.spinner/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 const moduleName = 'spinner-webcomponent.stories';
-angular.module(moduleName, [Spinner]);
+angular.module(moduleName, ['oui.spinner']);
 
 export default {
   title: 'Design System/Components/Spinner/WebComponent',

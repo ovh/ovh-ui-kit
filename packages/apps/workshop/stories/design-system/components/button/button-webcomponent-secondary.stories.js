@@ -1,14 +1,14 @@
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Button from '@ovh-ux/ui-kit.button';
+import '@ovh-ux/ui-kit.button';
 
 import readme from '@ovh-ux/ui-kit.button/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'button-webcomponent-secondary.stories';
-angular.module(moduleName, [Button]);
+angular.module(moduleName, ['oui.button']);
 
 export default {
   title: 'Design System/Components/Buttons/WebComponent/Secondary',

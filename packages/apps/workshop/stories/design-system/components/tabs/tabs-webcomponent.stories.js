@@ -1,13 +1,13 @@
 import { text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Tabs from '@ovh-ux/ui-kit.tabs';
+import '@ovh-ux/ui-kit.tabs';
 
 import readme from '@ovh-ux/ui-kit.tabs/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 const moduleName = 'tabs-webcomponent.stories';
-angular.module(moduleName, [Tabs]);
+angular.module(moduleName, ['oui.tabs']);
 
 export default {
   title: 'Design System/Components/Tabs/WebComponent',

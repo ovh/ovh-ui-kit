@@ -1,7 +1,7 @@
 import { select, text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Popover from '@ovh-ux/ui-kit.popover';
+import '@ovh-ux/ui-kit.popover';
 
 import readme from '@ovh-ux/ui-kit.popover/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -27,7 +27,7 @@ const placement = {
 };
 
 const moduleName = 'popover.stories';
-angular.module(moduleName, [Popover]);
+angular.module(moduleName, ['oui.popover']);
 
 export default {
   title: 'Design System/Directives/Popover',

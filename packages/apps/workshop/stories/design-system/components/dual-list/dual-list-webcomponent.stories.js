@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import DualList from '@ovh-ux/ui-kit.dual-list';
+import '@ovh-ux/ui-kit.dual-list';
 
 import readme from '@ovh-ux/ui-kit.dual-list/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -11,7 +11,7 @@ import data from '../../../_data/dual-list.data.json';
 
 // Create mock module for the stories
 const moduleName = 'dual-list-webcomponent.stories';
-angular.module(moduleName, [DualList]);
+angular.module(moduleName, ['oui.dual-list']);
 
 export default {
   title: 'Design System/Components/Dual List/WebComponent',

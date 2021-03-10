@@ -6,6 +6,7 @@ Install and run Storybook in a dev mode
 
 ```sh
 yarn
+yarn build:dependency
 yarn start
 ```
 

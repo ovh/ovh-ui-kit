@@ -2,9 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Field from '@ovh-ux/ui-kit.field';
-import FormActions from '@ovh-ux/ui-kit.form-actions';
-import SelectPicker from '@ovh-ux/ui-kit.select-picker';
+import '@ovh-ux/ui-kit.field';
+import '@ovh-ux/ui-kit.form-actions';
+import '@ovh-ux/ui-kit.select-picker';
 
 import readme from '@ovh-ux/ui-kit.select-picker/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -14,11 +14,9 @@ import image from '../../../_assets/ovh.svg';
 // Create mock module for the stories
 const moduleName = 'select-picker-webcomponent.stories';
 angular.module(moduleName, [
-  SelectPicker,
-
-  // For examples
-  Field,
-  FormActions,
+  'oui.select-picker',
+  'oui.field',
+  'oui.form-actions',
 ]);
 
 export default {

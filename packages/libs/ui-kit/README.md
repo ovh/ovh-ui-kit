@@ -41,6 +41,7 @@ yarn add @ovh-ux/ui-kit
 
 ## Usage
 
+### Import all components
 1. In your `index.html`, you need to load `oui.css` and `oui.js`:
 
 ```html
@@ -54,9 +55,25 @@ yarn add @ovh-ux/ui-kit
 ```js
 angular.module('myAwesomeApp', ['oui']);
 ```
+### Import only components required
+1. In your `index.html`, you need to load `oui.css` and `<component-name>.js`:
+
+```html
+<link rel="stylesheet" href="path/to/@ovh-ux/ui-kit/dist/css/oui.css">
+
+<script src="path/to/@ovh-ux/ui-kit/dist/js/<component-name>.js" type="text/javascript"></script>
+```
+
+2. You need to add the component module dependency like that:
+
+```js
+import ouiComponent from '@ovh-ux/ui-kit/dist/js/<component-name>.js';
+angular.module('myAwesomeApp', [ouiComponent]);
+```
 
 ### Webpack
 
+### Import all components
 In your `index.js`, you need to import the library, with its CSS file separately.
 
 ```js
@@ -64,6 +81,16 @@ import '@ovh-ux/ui-kit/dist/css/oui.css';
 import oui from '@ovh-ux/ui-kit';
 
 angular.module('myAwesomeApp', [oui]);
+```
+
+### Import only components required
+In your `index.js`, you need to import the components, with its CSS file separately.
+
+```js
+import '@ovh-ux/ui-kit/dist/css/oui.css';
+import ouiComponent from '@ovh-ux/ui-kit/dist/js/<component-name>.js';
+
+angular.module('myAwesomeApp', [ouiComponent]);
 ```
 
 ### LESS variables

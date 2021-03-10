@@ -1,12 +1,12 @@
 import { forModule } from 'storybook-addon-angularjs';
 
-import Skeleton from '@ovh-ux/ui-kit.skeleton';
+import '@ovh-ux/ui-kit.skeleton';
 
 import readme from '@ovh-ux/ui-kit.skeleton/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 const moduleName = 'skeleton-webcomponent.stories';
-angular.module(moduleName, [Skeleton]);
+angular.module(moduleName, ['oui.skeleton']);
 
 export default {
   title: 'Design System/Components/Skeleton/WebComponent',

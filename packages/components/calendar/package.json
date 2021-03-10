@@ -18,7 +18,6 @@
     "flatpickr": "^4.6.3"
   },
   "devDependencies": {
-    "@ovh-ux/ui-kit.components-utils": "*",
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@ovh-ux/ui-kit.test": "*",

@@ -9,16 +9,21 @@
   ],
   "main": "./src/oui.js",
   "scripts": {
-    "build": "npm-run-all -l -s clean build:* copy",
+    "build": "npm-run-all -l -s clean build:dependency build:* copy",
     "build:css": "cpx \"../../css/src/css/{_tokens.css,tokens/*}\" \"./dist/css\"",
     "build:less": "cpx \"../../css/src/less/{_tokens.less,tokens/*}\" \"./dist/less\"",
-    "build:scss": "cpx \"../../css/src/scss/{_tokens.scss,tokens/*}\" \"./dist/scss\"",
+    "build:scss": "cpx \"../../css/dist/scss/{_tokens.scss,tokens/*}\" \"./dist/scss\"",
     "build:webpack": "cross-env NODE_ENV=production webpack --progress --colors --config ./.config/webpack.config.js",
     "clean": "rimraf ./dist ../../../dist ../../libs/ui-kit/dist",
     "copy": "run-p copy:*",
     "copy:root": "cpx \"./dist/**/!(oui-flags.j*|oui-icons.j*)\" \"../../../dist\"",
     "copy:lib": "cpx \"./dist/**/!(oui-flags.j*|oui-icons.j*)\" \"../../libs/ui-kit/dist\"",
-    "prepare": "yarn build"
+    "copy:components": "cpx \"./dist/**/!(oui-flags.j*|oui-icons.j*)\" \"../../libs/ui-kit/dist\"",
+    "prepare": "yarn build",
+    "build:dependency": "run-s buildCss:css buildComponents:*",
+    "buildCss:css": "lerna exec --scope @ovh-ux/ui-kit.css -- yarn build",
+    "buildComponents:components": "lerna exec --scope @ovh-ux/ui-kit.components -- yarn build",
+    "buildComponents:copy": "cpx \"../../components/dist/js/*\" \"./dist/js\""
   },
   "dependencies": {
     "@ovh-ux/ui-kit.components": "*",

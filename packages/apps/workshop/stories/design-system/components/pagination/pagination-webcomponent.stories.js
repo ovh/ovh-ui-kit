@@ -2,14 +2,14 @@ import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 import { number, select } from '@storybook/addon-knobs';
 
-import Pagination from '@ovh-ux/ui-kit.pagination';
+import '@ovh-ux/ui-kit.pagination';
 
 import readme from '@ovh-ux/ui-kit.pagination/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'pagination-webcomponent.stories';
-angular.module(moduleName, [Pagination]);
+angular.module(moduleName, ['oui.pagination']);
 
 const mode = {
   label: 'Mode',

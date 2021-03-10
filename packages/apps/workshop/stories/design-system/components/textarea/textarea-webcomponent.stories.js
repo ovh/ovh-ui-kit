@@ -2,20 +2,18 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Field from '@ovh-ux/ui-kit.field';
-import FormActions from '@ovh-ux/ui-kit.form-actions';
-import Textarea from '@ovh-ux/ui-kit.textarea';
+import '@ovh-ux/ui-kit.field';
+import '@ovh-ux/ui-kit.form-actions';
+import '@ovh-ux/ui-kit.textarea';
 
 import readme from '@ovh-ux/ui-kit.textarea/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 const moduleName = 'textarea-webcomponent.stories';
 angular.module(moduleName, [
-  Textarea,
-
-  // For examples
-  Field,
-  FormActions,
+  'oui.textarea',
+  'oui.field',
+  'oui.form-actions',
 ]);
 
 export default {
