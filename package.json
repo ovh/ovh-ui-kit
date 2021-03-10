@@ -19,8 +19,8 @@
   ],
   "scripts": {
     "build": "run-s build:*",
-    "build:docs": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn build",
     "build:dist": "lerna exec --scope @ovh-ux/ui-kit-builder -- yarn build",
+    "build:docs": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn build",
     "karma": "cross-env NODE_ENV=test karma start --reporters spec,coverage --single-run",
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint \"packages/**/*.less\"",

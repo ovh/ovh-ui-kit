@@ -5,10 +5,7 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "scripts": {
-    "build": "npm-run-all -l -s clean build:dependency build-storybook copy",
-    "build:dependency": "run-s build:css build:components",
-    "build:css": "lerna exec --scope @ovh-ux/ui-kit.css -- yarn build",
-    "build:components": "lerna exec --scope @ovh-ux/ui-kit.components -- yarn build",
+    "build": "npm-run-all -l -s clean build-storybook copy",
     "build-storybook": "build-storybook -c .storybook -o docs",
     "clean": "rimraf ./docs ../../../docs",
     "copy": "cpx \"./docs/**/*\" \"../../../docs\"",
