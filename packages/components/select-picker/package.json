@@ -15,7 +15,8 @@
     "@ovh-ux/ui-kit.dropdown": "*",
     "@ovh-ux/ui-kit.radio": "*",
     "@ovh-ux/ui-kit.select": "*",
-    "angular": "^1.8.0"
+    "angular": "^1.8.0",
+    "@ovh-ux/ui-kit.components-utils": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

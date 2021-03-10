@@ -14,7 +14,8 @@
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.css": "*",
     "angular": "^1.8.0",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "@ovh-ux/ui-kit.components-utils": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

@@ -14,7 +14,8 @@
     "@ovh-ux/ui-kit.calendar": "*",
     "@ovh-ux/ui-kit.css": "*",
     "angular": "^1.8.0",
-    "flatpickr": "^4.6.3"
+    "flatpickr": "^4.6.3",
+    "@ovh-ux/ui-kit.components-utils": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
