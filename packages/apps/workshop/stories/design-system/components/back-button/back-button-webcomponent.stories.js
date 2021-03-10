@@ -2,14 +2,14 @@ import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import BackButton from '@ovh-ux/ui-kit.back-button';
+import '@ovh-ux/ui-kit/dist/js/oui-back-button';
 
 import readme from '@ovh-ux/ui-kit.back-button/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'back-button-webcomponent.stories';
-angular.module(moduleName, [BackButton]);
+angular.module(moduleName, ['oui.back-button']);
 
 export default {
   title: 'Design System/Components/Back Button/WebComponent',

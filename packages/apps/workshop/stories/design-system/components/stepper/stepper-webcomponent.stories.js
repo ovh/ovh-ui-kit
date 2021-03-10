@@ -2,10 +2,10 @@ import { boolean, number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Button from '@ovh-ux/ui-kit.button';
-import Field from '@ovh-ux/ui-kit.field';
-import Select from '@ovh-ux/ui-kit.select';
-import Stepper from '@ovh-ux/ui-kit.stepper';
+import '@ovh-ux/ui-kit/dist/js/oui-button';
+import '@ovh-ux/ui-kit/dist/js/oui-field';
+import '@ovh-ux/ui-kit/dist/js/oui-select';
+import '@ovh-ux/ui-kit/dist/js/oui-stepper';
 
 import readme from '@ovh-ux/ui-kit.stepper/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -13,12 +13,10 @@ import { compileTemplate } from '../../../../src/utils';
 // Create mock module for the stories
 const moduleName = 'stepper-webcomponent.stories';
 angular.module(moduleName, [
-  Stepper,
-
-  // For examples
-  Button,
-  Field,
-  Select,
+  'oui.stepper',
+  'oui.button',
+  'oui.field',
+  'oui.select',
 ]);
 
 export default {

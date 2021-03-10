@@ -1,14 +1,14 @@
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Message from '@ovh-ux/ui-kit.message';
+import '@ovh-ux/ui-kit/dist/js/oui-message';
 
 import readme from '@ovh-ux/ui-kit.message/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'message-webcomponent.stories';
-angular.module(moduleName, [Message]);
+angular.module(moduleName, ['oui.message']);
 
 export default {
   title: 'Design System/Components/Message/WebComponent',

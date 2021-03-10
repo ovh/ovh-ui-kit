@@ -2,14 +2,14 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Dropdown from '@ovh-ux/ui-kit.dropdown';
+import '@ovh-ux/ui-kit/dist/js/oui-dropdown';
 
 import readme from '@ovh-ux/ui-kit.dropdown/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 // Create mock module for the stories
 const moduleName = 'odropdown-webcomponent.stories';
-angular.module(moduleName, [Dropdown]);
+angular.module(moduleName, ['oui.dropdown']);
 
 export default {
   title: 'Design System/Components/Dropdown/WebComponent',

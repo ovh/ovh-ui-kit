@@ -2,20 +2,18 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Field from '@ovh-ux/ui-kit.field';
-import FormActions from '@ovh-ux/ui-kit.form-actions';
-import Radio from '@ovh-ux/ui-kit.radio';
+import '@ovh-ux/ui-kit/dist/js/oui-field';
+import '@ovh-ux/ui-kit/dist/js/oui-form-actions';
+import '@ovh-ux/ui-kit/dist/js/oui-radio';
 
 import readme from '@ovh-ux/ui-kit.radio/README.md';
 import { compileTemplate } from '../../../../src/utils';
 
 const moduleName = 'radio-webcomponent-thumbnail.stories';
 angular.module(moduleName, [
-  Radio,
-
-  // For examples
-  Field,
-  FormActions,
+  'oui.radio',
+  'oui.field',
+  'oui.form-actions',
 ]);
 
 export default {

@@ -13,7 +13,7 @@
   "dependencies": {
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.chips": "*",
-    "@ovh-ux/ui-kit.css": "*",
+    "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.dropdown": "*",
     "@ovh-ux/ui-kit.field": "*",
     "@ovh-ux/ui-kit.search": "*",
@@ -21,7 +21,6 @@
     "angular": "^1.8.0"
   },
   "devDependencies": {
-    "@ovh-ux/ui-kit.components-utils": "*",
     "@babel/core": "^7.9.6",
     "@babel/node": "^7.8.7",
     "@ovh-ux/ui-kit.test": "*",

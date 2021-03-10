@@ -32,12 +32,22 @@ yarn add @ovh-ux/ui-kit.css
 <link rel="stylesheet" href="path/to/@ovh-ux/ui-kit.css/dist/css/oui.css">
 ```
 
-### Webpack
+### Webpack (import all styles, icons and flags).
 
 In your `index.js`, you need to import the CSS file separately.
 
 ```js
 import '@ovh-ux/ui-kit.css/dist/css/oui.css';
+```
+
+### Webpack (import styles, icons or flags selectively).
+
+In your `index.js`, you need to import the CSS file separately.
+
+```js
+import '@ovh-ux/ui-kit.css/dist/css/oui-core.css';
+import '@ovh-ux/ui-kit.css/dist/css/oui-icons.css';
+import '@ovh-ux/ui-kit.css/dist/css/oui-flags.css';
 ```
 
 ### LESS variables

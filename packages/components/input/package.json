@@ -8,6 +8,6 @@
   "author": "OVH SAS",
   "dependencies": {
     "@ovh-ux/ui-kit.button": "*",
-    "@ovh-ux/ui-kit.css": "*"
+    "@ovh-ux/ui-kit.core": "*"
   }
 }

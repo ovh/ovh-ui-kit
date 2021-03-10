@@ -1,28 +1,7 @@
 # Installation
 
-## Install with [npm](https://www.npmjs.com/)
-
-```bash
-npm install bloodhound-js@1.2.3
-npm install popper.js@1.16.1
-npm install @ovh-ux/ui-kit.css
-npm install @ovh-ux/ui-kit.components
-```
-
-## Install with [yarn](https://yarnpkg.com)
-
-```bash
-yarn add bloodhound-js@1.2.3
-yarn add popper.js@1.16.1
-yarn add @ovh-ux/ui-kit.css
-yarn add @ovh-ux/ui-kit.components
-```
-## Usage
-
 ```js
-import '@ovh-ux/ui-kit.css/dist/css/oui.css';
-import '@ovh-ux/ui-kit.components/dist/js/oui-autocomplete';
-angular.module('myModule', ['oui.autocomplete]);
+angular.module('myModule', ['oui.autocomplete']);
 ```
 
 # Configuration

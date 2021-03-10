@@ -2,9 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Field from '@ovh-ux/ui-kit.field';
-import FormActions from '@ovh-ux/ui-kit.form-actions';
-import Select from '@ovh-ux/ui-kit.select';
+import '@ovh-ux/ui-kit/dist/js/oui-field';
+import '@ovh-ux/ui-kit/dist/js/oui-form-actions';
+import '@ovh-ux/ui-kit/dist/js/oui-select';
 
 import readme from '@ovh-ux/ui-kit.select/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -13,11 +13,9 @@ import countries from '../../../_data/countries.data.json';
 
 const moduleName = 'select-webcomponent.stories';
 angular.module(moduleName, [
-  Select,
-
-  // For examples
-  FormActions,
-  Field,
+  'oui.select',
+  'oui.field',
+  'oui.form-actions',
 ]);
 
 export default {

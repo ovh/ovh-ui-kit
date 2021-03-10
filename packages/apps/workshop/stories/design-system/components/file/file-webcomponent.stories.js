@@ -1,9 +1,9 @@
 import { boolean } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Field from '@ovh-ux/ui-kit.field';
-import File from '@ovh-ux/ui-kit.file';
-import FormActions from '@ovh-ux/ui-kit.form-actions';
+import '@ovh-ux/ui-kit/dist/js/oui-field';
+import '@ovh-ux/ui-kit/dist/js/oui-file';
+import '@ovh-ux/ui-kit/dist/js/oui-form-actions';
 
 import readme from '@ovh-ux/ui-kit.file/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -11,11 +11,9 @@ import { compileTemplate } from '../../../../src/utils';
 // Create mock module for the stories
 const moduleName = 'file-webcomponent.stories';
 angular.module(moduleName, [
-  File,
-
-  // For examples
-  Field,
-  FormActions,
+  'oui.file',
+  'oui.field',
+  'oui.form-actions',
 ]);
 
 export default {

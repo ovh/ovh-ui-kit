@@ -1,6 +1,6 @@
-const baseConfig = require('@ovh-ux/ui-kit.config/src/webpack.dist.config');
+const baseConfig = require('@ovh-ux/ui-kit.config/src/webpack.dev.config');
 const merge = require('webpack-merge');
-const path = require('path');
+const { resolve } = require('path');
 
 module.exports = merge(baseConfig, {
   entry: {
@@ -135,17 +135,7 @@ module.exports = merge(baseConfig, {
     filename: '[name].js',
     library: '[name]',
     libraryTarget: 'umd',
-    path: path.resolve('.', 'dist', 'js'),
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          chunks: 'initial',
-          minChunks: 2,
-        },
-      },
-    },
+    path: resolve(__dirname, 'dist/js'),
   },
 
 });

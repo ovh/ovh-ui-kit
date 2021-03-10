@@ -1,7 +1,7 @@
 import { select, text } from '@storybook/addon-knobs';
 import { forModule } from 'storybook-addon-angularjs';
 
-import Tooltip from '@ovh-ux/ui-kit.tooltip';
+import '@ovh-ux/ui-kit/dist/js/oui-tooltip';
 
 import readme from '@ovh-ux/ui-kit.tooltip/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -27,7 +27,7 @@ const placement = {
 };
 
 const moduleName = 'tooltip.stories';
-angular.module(moduleName, [Tooltip]);
+angular.module(moduleName, ['oui.tooltip']);
 
 export default {
   title: 'Design System/Directives/Tooltip',

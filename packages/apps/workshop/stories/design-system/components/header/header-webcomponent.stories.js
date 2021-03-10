@@ -1,8 +1,8 @@
 import { forModule } from 'storybook-addon-angularjs';
 
-import BackButton from '@ovh-ux/ui-kit.back-button';
-import GuideMenu from '@ovh-ux/ui-kit.guide-menu';
-import Header from '@ovh-ux/ui-kit.header';
+import '@ovh-ux/ui-kit/dist/js/oui-back-button';
+import '@ovh-ux/ui-kit/dist/js/oui-guide-menu';
+import '@ovh-ux/ui-kit/dist/js/oui-header';
 
 import readme from '@ovh-ux/ui-kit.header/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -10,11 +10,9 @@ import { compileTemplate } from '../../../../src/utils';
 // Create mock module for the stories
 const moduleName = 'header-webcomponent.stories';
 angular.module(moduleName, [
-  Header,
-
-  // For examples
-  BackButton,
-  GuideMenu,
+  'oui.guide-menu',
+  'oui.header',
+  'oui.back-button',
 ]);
 
 export default {
