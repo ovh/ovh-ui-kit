@@ -168,7 +168,7 @@ export default class DatagridController {
     }
 
     if (this.expandableRows) {
-      this.rowDetailCompiledTemplate = this.$compile(`<div>${this.rowDetailElements[0].innerHTML}</div>`);
+      this.rowDetailCompiledTemplates = this.rowDetailElements.map((rowDetail) => this.$compile(`<div>${rowDetail.innerHTML}</div>`));
     }
 
     this.availableColumns = angular.copy(builtColumns.columns)
