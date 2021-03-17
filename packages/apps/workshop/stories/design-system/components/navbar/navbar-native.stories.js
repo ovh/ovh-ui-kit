@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Components/Navbar/Native',
 
   parameters: {
+    docs: { iframeHeight: 350 },
   },
 };
 

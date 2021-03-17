@@ -13,6 +13,7 @@ export default {
   title: 'Design System/Components/Tabs/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 280 },
     notes: readme,
   },
 };

@@ -24,6 +24,7 @@ export default {
   title: 'Design System/Components/Password/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 180 },
     notes: readme,
   },
 };

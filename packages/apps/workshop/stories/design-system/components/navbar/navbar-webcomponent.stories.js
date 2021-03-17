@@ -27,6 +27,7 @@ export default {
   title: 'Design System/Components/Navbar/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 350 },
     notes: readme,
   },
 };

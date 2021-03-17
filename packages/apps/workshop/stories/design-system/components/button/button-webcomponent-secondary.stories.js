@@ -14,6 +14,7 @@ export default {
   title: 'Design System/Components/Buttons/WebComponent/Secondary',
 
   parameters: {
+    docs: { iframeHeight: 150 },
     notes: readme,
   },
 };

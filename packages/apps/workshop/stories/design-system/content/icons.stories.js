@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Content/Icons',
 
   parameters: {
+    docs: { iframeHeight: 600 },
     options: {
       showPanel: false,
     },

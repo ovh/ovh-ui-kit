@@ -17,6 +17,7 @@ export default {
   title: 'Design System/Components/Dual List/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 450 },
     notes: readme,
   },
 };

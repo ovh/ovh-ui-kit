@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Components/Sidebar/Native',
 
   parameters: {
+    docs: { iframeHeight: 400 },
   },
 };
 

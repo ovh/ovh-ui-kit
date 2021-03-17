@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Content/Headings',
 
   parameters: {
+    docs: { iframeHeight: 420 },
   },
 };
 

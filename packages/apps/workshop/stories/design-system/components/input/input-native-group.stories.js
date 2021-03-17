@@ -16,6 +16,7 @@ export default {
   title: 'Design System/Components/Input/Native/Group',
 
   parameters: {
+    docs: { iframeHeight: 200 },
     notes: readme,
   },
 };

@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Back Button/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 150 },
     notes: readme,
   },
 };

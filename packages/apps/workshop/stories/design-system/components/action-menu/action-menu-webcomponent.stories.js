@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Action Menu/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 200 },
     notes: readme,
   },
 };

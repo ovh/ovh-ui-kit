@@ -22,6 +22,7 @@ export default {
   title: 'Design System/Components/Checkbox/WebComponent/Thumbnail',
 
   parameters: {
+    docs: { iframeHeight: 350 },
     notes: readme,
   },
 };
@@ -187,18 +188,8 @@ export const Validation = forModule(moduleName).createElement(
             disabled="$ctrl.disabled"
             thumbnail
             required>
-            <oui-checkbox-label>64 GB RAM</oui-checkbox-label>
-            <oui-checkbox-footer>Pellentesque habitant morbi tristique</oui-checkbox-footer>
-          </oui-checkbox>
-
-          <oui-checkbox
-            name="oui-checkbox-3"
-            model="$ctrl.model3"
-            disabled="$ctrl.disabled"
-            thumbnail
-            required>
             <oui-checkbox-label>
-              128 GB RAM
+              64 GB RAM
               <span class="oui-badge oui-badge_new">New</span>
             </oui-checkbox-label>
             <oui-checkbox-footer>Pellentesque habitant morbi tristique</oui-checkbox-footer>
@@ -213,7 +204,6 @@ export const Validation = forModule(moduleName).createElement(
         disabled: boolean('Disabled state', false),
         model1: true,
         model2: undefined,
-        model3: undefined,
         onChange: action('onChange'),
       },
     },

@@ -29,6 +29,7 @@ export default {
   title: 'Design System/Components/Input/Native/Overlay',
 
   parameters: {
+    docs: { iframeHeight: 200 },
     notes: readme,
   },
 };

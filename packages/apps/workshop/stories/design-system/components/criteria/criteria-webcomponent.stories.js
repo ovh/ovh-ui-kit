@@ -23,6 +23,7 @@ export default {
   title: 'Design System/Components/Criteria/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 350 },
     notes: readme,
   },
 };

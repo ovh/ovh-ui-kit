@@ -26,6 +26,7 @@ export default {
   title: 'Design System/Components/Datagrid/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 400 },
     notes: readme,
   },
 };

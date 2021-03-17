@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Select/Native',
 
   parameters: {
+    docs: { iframeHeight: 200 },
     notes: readme,
   },
 };

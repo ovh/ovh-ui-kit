@@ -22,6 +22,7 @@ export default {
   title: 'Design System/Components/Radio/WebComponent/Thumbnail',
 
   parameters: {
+    docs: { iframeHeight: 350 },
     notes: readme,
   },
 };
@@ -200,17 +201,8 @@ export const Validation = forModule(moduleName).createElement(
             value="$ctrl.value2"
             thumbnail
             required>
-            <oui-radio-label>64 GB RAM</oui-radio-label>
-            <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
-          </oui-radio>
-
-          <oui-radio
-            disabled="$ctrl.disabled"
-            value="$ctrl.value3"
-            thumbnail
-            required>
             <oui-radio-label>
-              128 GB RAM
+              64 GB RAM
               <span class="oui-badge oui-badge_new">New</span>
             </oui-radio-label>
             <oui-radio-footer>Pellentesque habitant morbi tristique</oui-radio-footer>
@@ -227,7 +219,6 @@ export const Validation = forModule(moduleName).createElement(
         model: undefined,
         value1: '32',
         value2: '64',
-        value3: '128',
         onChange: action('onChange'),
       },
     },

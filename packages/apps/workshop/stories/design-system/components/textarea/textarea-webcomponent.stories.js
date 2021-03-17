@@ -22,6 +22,7 @@ export default {
   title: 'Design System/Components/Textarea/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 300 },
     notes: readme,
   },
 };
