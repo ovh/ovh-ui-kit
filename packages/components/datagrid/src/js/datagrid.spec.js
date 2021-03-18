@@ -578,6 +578,34 @@ describe('ouiDatagrid', () => {
         ctrl.toggleRowExpansion(0);
         expect(ctrl.expandedRows.length).toEqual(0);
       });
+      it('should have as many columns in expanded row than in parent', () => {
+        const element = TestUtils.compileTemplate(`
+            <oui-datagrid rows="$ctrl.rows">
+                <oui-datagrid-column property="firstName"></oui-datagrid-column>
+                <oui-datagrid-column property="lastName"></oui-datagrid-column>
+                <oui-datagrid-row-detail>
+                  <span>Email : <span ng-bind="$row.email"></span>
+              </oui-datagrid-row-detail>
+              <oui-datagrid-row-detail>
+                  <span>Email : <span ng-bind="$row.phone"></span>
+              </oui-datagrid-row-detail>
+            </oui-datagrid>
+          `, {
+          rows: fakeData.slice(0, 5),
+        });
+
+        const ctrl = element.controller('ouiDatagrid');
+        expect(ctrl.expandableRows).toBe(true);
+        expect(ctrl.expandedRows.length).toEqual(0);
+        ctrl.toggleRowExpansion(0);
+        expect(ctrl.expandedRows.length).toEqual(1);
+        expect(ctrl.isRowExpanded(0)).toBe(true);
+        expect(element.find('<span ng-bind="$row.email>')).not.toBe(null);
+        expect(element.find('<span ng-bind="$row.phone>')).not.toBe(null);
+        ctrl.toggleRowExpansion(0);
+        expect(ctrl.expandedRows.length).toEqual(0);
+        expect(ctrl.isRowExpanded(0)).toBe(false);
+      });
     });
 
     describe('Remote rows', () => {
