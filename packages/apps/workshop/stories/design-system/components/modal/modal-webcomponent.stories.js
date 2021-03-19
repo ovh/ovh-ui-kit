@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Modal/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 400 },
     notes: readme,
   },
 };

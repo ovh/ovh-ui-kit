@@ -20,6 +20,7 @@ export default {
   title: 'Design System/Components/Guide Menu/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 300 },
     notes: readme,
   },
 };

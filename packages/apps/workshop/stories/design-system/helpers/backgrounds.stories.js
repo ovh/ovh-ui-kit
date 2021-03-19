@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Helpers/Backgrounds',
 
   parameters: {
+    docs: { iframeHeight: 400 },
     options: {
       showPanel: false,
     },

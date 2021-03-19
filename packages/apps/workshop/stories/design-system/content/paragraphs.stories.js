@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Content/Paragraphs',
 
   parameters: {
+    docs: { iframeHeight: 130 },
   },
 };
 

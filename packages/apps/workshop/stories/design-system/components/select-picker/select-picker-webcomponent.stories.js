@@ -25,6 +25,7 @@ export default {
   title: 'Design System/Components/Select Picker/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 650 },
     notes: readme,
   },
 };

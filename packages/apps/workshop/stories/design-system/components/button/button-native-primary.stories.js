@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Buttons/Native/Primary',
 
   parameters: {
+    docs: { iframeHeight: 150 },
     notes: readme,
   },
 };

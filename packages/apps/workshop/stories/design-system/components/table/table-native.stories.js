@@ -7,6 +7,7 @@ export default {
   title: 'Design System/Components/Table/Native',
 
   parameters: {
+    docs: { iframeHeight: 350 },
   },
 };
 

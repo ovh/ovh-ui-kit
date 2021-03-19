@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Components/Progress/Native',
 
   parameters: {
+    docs: { iframeHeight: 180 },
   },
 };
 

@@ -14,6 +14,7 @@ export default {
   title: 'Design System/Components/Buttons/WebComponent/Ghost',
 
   parameters: {
+    docs: { iframeHeight: 150 },
     notes: readme,
   },
 };

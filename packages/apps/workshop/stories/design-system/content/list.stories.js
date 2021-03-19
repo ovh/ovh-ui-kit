@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Content/List',
 
   parameters: {
+    docs: { iframeHeight: 500 },
   },
 };
 

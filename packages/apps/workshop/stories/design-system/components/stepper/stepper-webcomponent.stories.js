@@ -25,6 +25,7 @@ export default {
   title: 'Design System/Components/Stepper/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 850 },
     notes: readme,
   },
 };

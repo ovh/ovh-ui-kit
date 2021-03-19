@@ -14,6 +14,7 @@ export default {
   title: 'Design System/Components/Timepicker/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 300 },
     notes: readme,
   },
 };

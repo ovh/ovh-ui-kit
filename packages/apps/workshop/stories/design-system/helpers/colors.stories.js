@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Helpers/Colors',
 
   parameters: {
+    docs: { iframeHeight: 400 },
     options: {
       showPanel: false,
     },

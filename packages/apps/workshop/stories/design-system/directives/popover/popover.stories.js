@@ -33,6 +33,7 @@ export default {
   title: 'Design System/Directives/Popover',
 
   parameters: {
+    docs: { iframeHeight: 130 },
     notes: readme,
   },
 };

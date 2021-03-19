@@ -16,6 +16,7 @@ export default {
   title: 'Design System/Components/Chips/WebComponent/Stacked',
 
   parameters: {
+    docs: { iframeHeight: 250 },
     notes: readme,
   },
 };

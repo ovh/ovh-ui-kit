@@ -22,6 +22,7 @@ export default {
   title: 'Design System/Components/Radio/WebComponent/Simple',
 
   parameters: {
+    docs: { iframeHeight: 250 },
     notes: readme,
   },
 };

@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Slideshow/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 600 },
     notes: readme,
   },
 };

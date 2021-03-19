@@ -2,6 +2,7 @@ export default {
   title: 'Design System/Content/Descriptions',
 
   parameters: {
+    docs: { iframeHeight: 370 },
   },
 };
 
