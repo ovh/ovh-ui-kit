@@ -84,12 +84,6 @@ export default class {
 
     // Init the flatpickr instance
     this.flatpickr = new flatpickr(this.$element.find('input')[0], this.config); // eslint-disable-line new-cap
-
-    // Watch model value for search engine
-    this.$scope.$watch(
-      () => this.model,
-      (value) => this.setModelValue(value),
-    );
   }
 
   $onInit() {
