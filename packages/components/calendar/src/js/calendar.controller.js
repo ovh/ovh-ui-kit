@@ -1,5 +1,5 @@
 import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
-import flatpickr from 'flatpickr';
+import flatpickr from 'flatpickr/dist/flatpickr';
 import merge from 'lodash/merge';
 
 export default class {

@@ -1,4 +1,4 @@
-import 'flatpickr';
+import 'flatpickr/dist/flatpickr';
 import 'flatpickr/dist/l10n/fr';
 
 import './index';
