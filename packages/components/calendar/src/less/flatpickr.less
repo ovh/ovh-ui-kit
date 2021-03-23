@@ -369,7 +369,7 @@
     }
   }
 
-  &-calendar.showTimeInput.hasTime &-time {
+  &-calendar.hasTime &-time {
     height: @oui-calendar-time-height;
     box-sizing: content-box;
     border: none;
@@ -382,7 +382,7 @@
     margin: 0;
   }
 
-  &-calendar.showTimeInput.hasTime &-innerContainer + &-time { border-top: @oui-calendar-header-border-bottom; }
+  &-calendar.hasTime &-innerContainer + &-time { border-top: @oui-calendar-header-border-bottom; }
 
   &-time &-am-pm {
     #oui > .button-ghost-color();
