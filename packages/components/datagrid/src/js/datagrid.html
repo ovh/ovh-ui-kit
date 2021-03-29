@@ -143,12 +143,11 @@
             <tr class="oui-datagrid-row-detail"
                 ng-repeat-end
                 ng-show="$ctrl.isRowExpanded($index)">
-                <td class="oui-datagrid__cell oui-datagrid__cell_s"
-                    ng-if="$ctrl.selectableRows">
-                </td>
+                <td class="oui-datagrid__cell oui-datagrid__cell_s"></td>
                 <td class="oui-datagrid-row-detail__cell"
-                    ng-attr-colspan="{{ $ctrl.columns.length + 1 + ($ctrl.selectableRows ? 1 : 0) }}">
-                    <oui-datagrid-row-detail class="oui-datagrid-row-detail__container" row="row">
+                    ng-repeat="rowDetail in $ctrl.rowDetailElements track by $index"
+                    ng-attr-colspan="{{$last ? $ctrl.columns.length - $ctrl.rowDetailElements.length + 1 : 1}}">
+                    <oui-datagrid-row-detail class="oui-datagrid-row-detail__container" row="row" index="$index">
                     </oui-datagrid-row-detail>
                 </td>
             </tr>

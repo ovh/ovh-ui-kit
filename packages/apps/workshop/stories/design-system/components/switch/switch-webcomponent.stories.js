@@ -22,6 +22,7 @@ export default {
   title: 'Design System/Components/Switch/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 200 },
     notes: readme,
   },
 };

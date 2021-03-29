@@ -14,7 +14,7 @@ export default class {
     this.rowDetailScope.$row = this.row;
     this.copyRow = angular.copy(this.row);
 
-    this.datagridCtrl.rowDetailCompiledTemplate(this.rowDetailScope, (clone) => {
+    this.datagridCtrl.rowDetailCompiledTemplates[this.index](this.rowDetailScope, (clone) => {
       this.$element.empty();
       this.$element.append(clone);
     });

@@ -1,5 +1,5 @@
 import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
-import flatpickr from 'flatpickr';
+import flatpickr from 'flatpickr/dist/flatpickr';
 import merge from 'lodash/merge';
 
 export default class {
@@ -84,12 +84,6 @@ export default class {
 
     // Init the flatpickr instance
     this.flatpickr = new flatpickr(this.$element.find('input')[0], this.config); // eslint-disable-line new-cap
-
-    // Watch model value for search engine
-    this.$scope.$watch(
-      () => this.model,
-      (value) => this.setModelValue(value),
-    );
   }
 
   $onInit() {

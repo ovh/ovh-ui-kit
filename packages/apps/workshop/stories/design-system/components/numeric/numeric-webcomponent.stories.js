@@ -23,6 +23,7 @@ export default {
   title: 'Design System/Components/Numeric/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 180 },
     notes: readme,
   },
 };

@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Components/Dropdown/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 320 },
     notes: readme,
   },
 };

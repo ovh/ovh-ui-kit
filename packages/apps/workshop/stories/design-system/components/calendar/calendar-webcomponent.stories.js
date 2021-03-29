@@ -16,6 +16,7 @@ export default {
   title: 'Design System/Components/Calendar/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 450 },
     notes: readme,
   },
 };

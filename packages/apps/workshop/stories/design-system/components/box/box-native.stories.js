@@ -4,6 +4,7 @@ export default {
   title: 'Design System/Components/Box/Native',
 
   parameters: {
+    docs: { iframeHeight: 250 },
     notes: readme,
   },
 };

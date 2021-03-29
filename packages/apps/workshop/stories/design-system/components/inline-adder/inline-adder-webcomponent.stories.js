@@ -22,6 +22,7 @@ export default {
   title: 'Design System/Components/Inline Adder/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 280 },
     notes: readme,
   },
 };

@@ -19,6 +19,7 @@ export default {
   title: 'Design System/Components/Field/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 200 },
     notes: readme,
   },
 };

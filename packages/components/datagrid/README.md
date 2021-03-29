@@ -128,6 +128,25 @@ The template inside the element will be placed at the bottom of each row, making
 </oui-datagrid>
 ```
 
+As many row details can be added as needed 
+
+```html
+<oui-datagrid rows="$ctrl.data">
+    <oui-datagrid-column title="'FirstName'">
+        <span ng-bind="$row.firstName"></span>
+    </oui-datagrid-column>
+    <oui-datagrid-column title="'LastName'">
+        <span ng-bind="$row.lastName"></span>
+    </oui-datagrid-column>
+    <oui-datagrid-row-detail>
+        <a href="mailto:{{$row.email}}">{{$row.email}}</a>
+    </oui-datagrid-row-detail>
+    <oui-datagrid-row-detail>
+        <span ng-bind="$row.birth"></span>
+    </oui-datagrid-row-detail>
+</oui-datagrid>
+```
+
 ### Attribute `on-row-select`
 
 When `selectable-rows` is provided, you can listen to checkboxes changes with the `on-row-select` event. It provides `$row` as the triggered row and `$rows` as the complete list of rows selected so far.

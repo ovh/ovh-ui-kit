@@ -16,6 +16,7 @@ export default {
   title: 'Design System/Components/Textarea/Native',
 
   parameters: {
+    docs: { iframeHeight: 600 },
     notes: readme,
   },
 };

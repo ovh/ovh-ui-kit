@@ -14,6 +14,7 @@ export default {
   title: 'Design System/Components/Message/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 350 },
     notes: readme,
   },
 };

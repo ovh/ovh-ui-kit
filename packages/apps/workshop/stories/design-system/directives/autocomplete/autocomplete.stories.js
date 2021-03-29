@@ -15,6 +15,7 @@ export default {
   title: 'Design System/Directives/Autocomplete',
 
   parameters: {
+    docs: { iframeHeight: 150 },
   },
 };
 

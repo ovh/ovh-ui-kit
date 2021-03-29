@@ -13,6 +13,7 @@ export default {
   title: 'Design System/Components/Progress/WebComponent',
 
   parameters: {
+    docs: { iframeHeight: 220 },
     notes: readme,
   },
 };
