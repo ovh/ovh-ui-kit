@@ -1,3 +1,18 @@
+# [4.5.0](https://github.com/ovh/ovh-ui-kit/compare/v4.4.4...v4.5.0) (2021-03-29)
+
+
+### Bug Fixes
+
+* bump flatpickr ([3631aa0](https://github.com/ovh/ovh-ui-kit/commit/3631aa045fff36987a035244ca98750809065a84))
+* **calendar:** avoid watching property ([dae98b3](https://github.com/ovh/ovh-ui-kit/commit/dae98b38017317c521fb891ee4a3f4baa0cafeb3))
+
+
+### Features
+
+* **datagrid:** allow to align with columns in expanded row ([#710](https://github.com/ovh/ovh-ui-kit/issues/710)) ([37daf84](https://github.com/ovh/ovh-ui-kit/commit/37daf8435cb533989f6fce138a14eced29d2739a))
+
+
+
 ## [4.4.4](https://github.com/ovh/ovh-ui-kit/compare/v4.4.3...v4.4.4) (2021-02-15)
 
 
