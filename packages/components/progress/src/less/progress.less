@@ -166,14 +166,6 @@
       border-radius: (@oui-progress-height / 2);
     }
 
-    &_info {
-      color: @oui-progress-info-foreground-color;
-
-      &::-webkit-progress-value { background-color: @oui-progress-info-foreground-color; }
-      &::-moz-progress-bar { background-color: @oui-progress-info-foreground-color; }
-      &::-ms-fill { background-color: @oui-progress-info-foreground-color; }
-    }
-
     &_success {
       color: @oui-progress-success-foreground-color;
 
@@ -199,6 +191,14 @@
     }
   }
 }
+
+.segment-colors(@i: length(@oui-progress-segment-colors)) when (@i > 0) {
+    .oui-progress__bar_info:nth-of-type(@{i})::before {
+        @name: extract(@oui-progress-segment-colors, @i);
+        background-color: @name;
+    }
+    .segment-colors((@i - 1));
+} .segment-colors;
 
 oui-progress {
   &,
