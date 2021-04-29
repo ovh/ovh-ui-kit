@@ -12,6 +12,7 @@ export default class {
   $onInit() {
     addBooleanParameter(this, 'size');
     addBooleanParameter(this, 'compact');
+    addBooleanParameter(this, 'noLabels');
     addDefaultParameter(this, 'minValue', '0');
     addDefaultParameter(this, 'maxValue', '100');
   }
@@ -26,6 +27,10 @@ export default class {
 
       if (this.compact) {
         this.$element.addClass('oui-progress_compact');
+      }
+
+      if (this.noLabels) {
+        this.$element.addClass('oui-progress_no-labels');
       }
     });
   }

@@ -117,6 +117,29 @@ export const WithCustomLabel = forModule(moduleName).createElement(
 
 WithCustomLabel.storyName = 'With custom label';
 
+export const WithoutLabels = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-progress no-labels>
+      <oui-progress-bar value="7.5"></oui-progress-bar>
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar>
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar>
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar>
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar>
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+      <oui-progress-bar value="7.5"></oui-progress-bar> 
+    </oui-progress>`,
+  ),
+);
+
+WithoutLabels.storyName = 'Without labels';
+
 export const Compact = forModule(moduleName).createElement(
   () => compileTemplate(
     `

@@ -5,6 +5,7 @@ export default {
   bindings: {
     size: '@?',
     compact: '<?',
+    noLabels: '<?',
     minValue: '@?',
     maxValue: '@?',
   },
