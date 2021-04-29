@@ -58,6 +58,18 @@ export const Stacked = forModule(moduleName).createElement(
   ),
 );
 
+export const Sizes = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-progress size="m">
+      <oui-progress-bar type="info" value="50"></oui-progress-bar>
+    </oui-progress>
+    <oui-progress size="l">
+      <oui-progress-bar type="info" value="50"></oui-progress-bar>
+    </oui-progress>`,
+  ),
+);
+
 export const WithThresholds = forModule(moduleName).createElement(
   () => compileTemplate(
     `

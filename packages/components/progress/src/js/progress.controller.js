@@ -10,6 +10,7 @@ export default class {
   }
 
   $onInit() {
+    addBooleanParameter(this, 'size');
     addBooleanParameter(this, 'compact');
     addDefaultParameter(this, 'minValue', '0');
     addDefaultParameter(this, 'maxValue', '100');
@@ -18,6 +19,10 @@ export default class {
   $postLink() {
     this.$timeout(() => {
       this.$element.addClass('oui-progress');
+
+      if (this.size) {
+        this.$element.addClass(`oui-progress_size-${this.size}`);
+      }
 
       if (this.compact) {
         this.$element.addClass('oui-progress_compact');
