@@ -55,6 +55,17 @@ describe('ouiProgress', () => {
       expect(element.hasClass(`${progressClass}_compact`)).toBeTruthy();
     });
 
+    it('should display a progress bar without labels', () => {
+      const element = TestUtils.compileTemplate(`
+                <oui-progress compact>
+                    <oui-progress-bar value="50"></oui-progress-bar>
+                </oui-progress>`);
+
+      $timeout.flush();
+
+      expect(element.hasClass(`${progressClass}_no-labels`)).toBeTruthy();
+    });
+
     it('should set type info by default', () => {
       const element = TestUtils.compileTemplate(`
                 <oui-progress>
