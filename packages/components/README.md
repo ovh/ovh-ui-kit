@@ -10,6 +10,7 @@
 | calendar          | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
 | checkbox          | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | atom
 | chips             | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
+| circle-chart      | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
 | clipboard         | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
 | collapsible       | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | molecule
 | criteria          | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | :white_check_mark:    | organism

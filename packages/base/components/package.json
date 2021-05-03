@@ -15,6 +15,7 @@
     "@ovh-ux/ui-kit.calendar": "*",
     "@ovh-ux/ui-kit.checkbox": "*",
     "@ovh-ux/ui-kit.chips": "*",
+    "@ovh-ux/ui-kit.circle-chart": "*",
     "@ovh-ux/ui-kit.clipboard": "*",
     "@ovh-ux/ui-kit.collapsible": "*",
     "@ovh-ux/ui-kit.criteria": "*",

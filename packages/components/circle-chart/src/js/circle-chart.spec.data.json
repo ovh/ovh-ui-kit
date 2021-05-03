@@ -1,0 +1,69 @@
+{
+  "segments": [
+    {
+      "title": "Lorem ipsum",
+      "description": "dolor sit amet",
+      "value": "7.6"
+    },
+    {
+      "title": "Consectetur",
+      "description": "adipiscing elit",
+      "value": "7.6"
+    },
+    {
+      "title": "Nunc",
+      "description": "quam velit",
+      "value": "7.6"
+    },
+    {
+      "title": "Tempor",
+      "description": "et neque sit amet",
+      "value": "7.6"
+    },
+    {
+      "title": "Faucibus",
+      "description": "varius diam",
+      "value": "7.6"
+    },
+    {
+      "title": "Nunc",
+      "description": "maximus",
+      "value": "7.6"
+    },
+    {
+      "title": "Nibh",
+      "description": "id feugiat ullamcorper",
+      "value": "7.6"
+    },
+    {
+      "title": "Maecenas",
+      "description": "non dui risus",
+      "value": "7.6"
+    },
+    {
+      "title": "Fusce",
+      "description": "laoreet finibus mauris",
+      "value": "7.6"
+    },
+    {
+      "title": "In",
+      "description": "facilisis nisi fringilla quis",
+      "value": "7.6"
+    },
+    {
+      "title": "Vestibulum",
+      "description": "mattis pulvinar dolor",
+      "value": "7.6"
+    },
+    {
+      "title": "Maecenas",
+      "description": "blandit",
+      "value": "7.6"
+    },
+    {
+      "title": "Est",
+      "description": "in vulputate fermentum",
+      "value": "7.6"
+    }
+  ]
+}
