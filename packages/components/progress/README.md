@@ -10,11 +10,11 @@ angular.module('myModule', ['oui.progress']);
 
 | Attribute     | Type      | Binding   | One-time binding  | Values                                | default       | Description
 | ----          | ----      | ----      | ----              | ----                                  | ----          | ----
-| `size`        | string    | @?        | yes               | `m` (default), `l`                                   | `0`           | min value of progress component
+| `size`        | string    | @?        | yes               | `m`, `l`                              | `m`           | expected size of component
 | `min-value`   | number    | @?        | yes               | n/a                                   | `0`           | min value of progress component
 | `max-value`   | number    | @?        | yes               | n/a                                   | `100`         | max value of progress component
 | `compact`     | boolean   | <?        | yes               | `true`, `false`                       | `false`       | compact mode flag
-| `no-labels`   | boolean   | <?        | yes               | `true`, `false`                       | `false`       | compact mode flag
+| `no-labels`   | boolean   | <?        | yes               | `true`, `false`                       | `false`       | removing segment labels or not 
 
 ## Component `oui-progress-bar`
 | Attribute     | Type      | Binding | One-time binding    | Values                                | default       | Description
