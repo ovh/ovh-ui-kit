@@ -1,0 +1,75 @@
+<figure>
+    <div class="oui-circle-chart__figure"
+         aria-hidden="true">
+        <svg width="100%"
+             height="100%"
+             viewBox="0 0 42 42"
+             class="oui-circle-chart__figure-donut"
+             aria-labelledby="chart-title chart-desc"
+             role="img">
+            <title id="chart-title"
+                   data-ng-bind="$ctrl.ariaTitle"></title>
+            <desc id="chart-desc"
+                  data-ng-bind="$ctrl.ariaDescription"></desc>
+
+            <circle class="oui-circle-chart__figure-donut-ring"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    fill="transparent"></circle>
+
+            <circle data-ng-repeat="segment in $ctrl.segments track by $index"
+                    class="oui-circle-chart__figure-donut-segment"
+                    id="segment-{{$index + 1}}"
+                    data-ng-style="$ctrl.getSegmentStyle(segment)"
+                    cx="21"
+                    cy="21"
+                    r="15.91549430918954"
+                    aria-labelledby="chart-segment-{{ $index + 1 }}-title chart-segment-{{ $index + 1 }}-desc">
+                <title id="segment-{{ $index + 1 }}-title"
+                       data-ng-bind="segment.title"></title>
+                <desc id="segment-{{ $index + 1 }}-desc"
+                      data-ng-bind="segment.description"></desc>
+            </circle>
+
+            <g class="oui-circle-chart__figure-text"
+               data-ng-if="$ctrl.chartTitle || $ctrl.chartSubtitle">
+                <text x="50%"
+                      y="50%"
+                      class="oui-circle-chart__figure-title"
+                      data-ng-if="$ctrl.chartTitle"
+                      data-ng-bind="$ctrl.chartTitle">
+                </text>
+                <text x="50%"
+                      y="50%"
+                      class="oui-circle-chart__figure-subtitle"
+                      data-ng-if="$ctrl.chartSubtitle"
+                      data-ng-bind="$ctrl.chartSubtitle">
+                </text>
+            </g>
+        </svg>
+    </div>
+    <figcaption class="oui-circle-chart__legends"
+                data-ng-class="{'sr-only': !$ctrl.withLegends}">
+        <div class="sr-only">
+            <div data-ng-bind="$ctrl.chartTitle"></div>
+            <div data-ng-bind="$ctrl.chartSubtitle"></div>
+        </div>
+        <ul class="oui-circle-chart__legends-key-list"
+            aria-hidden="true"
+            role="presentation">
+            <li class="oui-circle-chart__legends-key-item"
+                data-ng-repeat="segment in $ctrl.segments track by $index">
+                <span class="oui-circle-chart__legends-key-item-circle"
+                      ng-style="{'background-color': $ctrl.getStrokeColor($index)}"></span>
+                <span>
+                    <span data-ng-bind="segment.title"></span>
+                    <small class="d-block"
+                           data-ng-bind="segment.description"></small>
+                    <span class="sr-only"
+                          data-ng-bind="segment.value"></span>
+                </span>
+            </li>
+        </ul>
+    </figcaption>
+</figure>

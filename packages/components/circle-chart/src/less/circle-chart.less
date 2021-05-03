@@ -1,0 +1,101 @@
+.oui-circle-chart {
+  figure {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    figure {
+      flex-direction: row;
+    }
+  }
+
+  &__figure-content,
+  &__legends {
+    flex: 1;
+    padding: @oui-circle-chart-padding;
+    align-self: center;
+  }
+
+  &__figure {
+    &-text {
+      fill: @oui-circle-chart-font-color;
+      transform: translateY(0.25em);
+    }
+
+    &-title {
+      font-size: @oui-circle-chart-title-font-size;
+      line-height: 1;
+      text-anchor: middle;
+      transform: @oui-circle-chart-title-transform;
+    }
+
+    &-subtitle {
+      font-size: @oui-circle-chart-subtitle-font-size;
+      text-transform: uppercase;
+      text-anchor: middle;
+      transform: @oui-circle-chart-subtitle-transform;
+    }
+  }
+
+  &__figure-donut {
+    &-ring,
+    &-segment {
+      fill: @oui-circle-chart-background-color;
+    }
+
+    &-ring {
+      stroke: @oui-circle-chart-ring-background-color;
+      stroke-width: @oui-circle-chart-ring-background-width;
+    }
+
+    &-segment {
+      stroke-width: @oui-circle-chart-ring-segment-width;
+    }
+  }
+
+  &__legends {
+    &-key {
+      flex: 0 1 auto;
+
+      &-list {
+        margin: @oui-circle-chart-legends-margin;
+        padding: @oui-circle-chart-legends-padding;
+        list-style: none;
+        display: flex;
+        flex-flow: column wrap;
+      }
+
+      &-item {
+        margin: @oui-circle-chart-legend-item-margin;
+        padding: @oui-circle-chart-legend-item-padding;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        &-circle {
+          display: inline-block;
+          vertical-align: middle;
+          width: @oui-circle-chart-icon-width;
+          height: @oui-circle-chart-icon-height;
+          margin-right: @oui-circle-chart-icon-margin-right;
+          border-radius: @oui-circle-chart-icon-border-radius;
+          background-color: @oui-circle-chart-icon-background;
+        }
+      }
+    }
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
