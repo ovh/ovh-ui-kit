@@ -112,6 +112,39 @@ describe('ouiNumeric', () => {
       expect(scope.foo).toBe(foo + 1);
     });
 
+    it('should decrement value by step when clicking first button', () => {
+      const elt = angular.element('<oui-numeric model="foo" step="5"></oui-numeric>');
+      const scope = $rootScope.$new();
+      const foo = 10;
+      $compile(elt)(scope);
+      scope.foo = foo;
+      scope.$digest();
+      getDecrementBtn(elt).triggerHandler('click');
+      expect(scope.foo).toBe(foo - 5);
+    });
+
+    it('should increment value by step when clicking second button', () => {
+      const elt = angular.element('<oui-numeric model="foo" step="5"></oui-numeric>');
+      const scope = $rootScope.$new();
+      const foo = 10;
+      $compile(elt)(scope);
+      scope.foo = foo;
+      scope.$digest();
+      getIncrementBtn(elt).triggerHandler('click');
+      expect(scope.foo).toBe(foo + 5);
+    });
+
+    it('should not trigger onChange callback when invalid value is entered when step is set', () => {
+      const elt = angular.element('<oui-numeric min="4" model="foo" step="5" on-change="onChange(modelValue)"></oui-numeric>');
+      const scope = $rootScope.$new();
+      scope.foo = 5;
+      scope.onChange = jasmine.createSpy('onChange');
+      $compile(elt)(scope);
+      scope.$digest();
+      elt.find('input').controller('ngModel').$setViewValue('3');
+      expect(scope.onChange).not.toHaveBeenCalled();
+    });
+
     it('should disable left button is value is lower or equal to min', () => {
       const elt = angular.element('<oui-numeric model="foo" min="3"></oui-numeric>');
       const scope = $rootScope.$new();

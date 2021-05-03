@@ -20,7 +20,8 @@
     ng-model="$ctrl.model"
     ng-style="{
         'width': $ctrl.getWidth(),
-    }">
+    }"
+    ng-attr-step="{{ $ctrl.step }}">
 <button class="oui-numeric__button oui-button oui-button_primary oui-button_s"
     type="button"
     ng-disabled="$ctrl.disabled || $ctrl.model >= $ctrl.max"

@@ -68,6 +68,30 @@ export const Limits = forModule(moduleName).createElement(
   ),
 );
 
+export const Step = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-numeric
+      min="$ctrl.min"
+      max="$ctrl.max"
+      model="$ctrl.model"
+      disabled="$ctrl.disabled"
+      step="$ctrl.step"
+      on-change="$ctrl.onChange(modelValue)">
+    </oui-numeric>`,
+    {
+      $ctrl: {
+        min: number('Min', 0),
+        max: number('Max', 50),
+        model: 5,
+        step: number('Step', 5),
+        disabled: boolean('Disabled state', false),
+        onChange: action('onChange'),
+      },
+    },
+  ),
+);
+
 export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(
     `
