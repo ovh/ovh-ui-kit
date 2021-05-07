@@ -10,6 +10,7 @@ export default {
     model: '=',
     min: '<?',
     max: '<?',
+    step: '<?',
     disabled: '<?',
     onChange: '&?',
   },
