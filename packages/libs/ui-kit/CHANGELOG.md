@@ -1,3 +1,12 @@
+# [4.6.0](https://github.com/ovh/ovh-ui-kit/compare/v4.5.0...v4.6.0) (2021-05-07)
+
+
+### Features
+
+* **numeric:** add step support to oui numeric component ([#717](https://github.com/ovh/ovh-ui-kit/issues/717)) ([87964d8](https://github.com/ovh/ovh-ui-kit/commit/87964d85663fb266e397b8e26e71b28d767bd45d))
+
+
+
 # [4.5.0](https://github.com/ovh/ovh-ui-kit/compare/v4.4.4...v4.5.0) (2021-03-29)
 
 

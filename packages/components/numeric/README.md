@@ -17,3 +17,4 @@ angular.module('myModule', ['oui.numeric']);
 | `max`         | integer   | <?        | no                | n/a               | `99999`   | model upper bound
 | `disabled`    | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
 | `on-change`   | function  | &?        | no                | n/a               | n/a       | handler triggered when model changes
+| `step`         | integer   | <?        | no                | n/a               | `1`   | value to be increased/decreased when +/- button is clicked

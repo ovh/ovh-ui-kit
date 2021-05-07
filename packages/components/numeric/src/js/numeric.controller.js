@@ -4,6 +4,7 @@ import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/sr
 const MIN_VALUE = 0;
 const MAX_VALUE = 99999;
 const MIN_WIDTH = 3;
+const STEP = 1;
 
 export default class {
   constructor($attrs, $element, $log, $scope, $timeout) {
@@ -20,6 +21,7 @@ export default class {
     addDefaultParameter(this, 'id', `ouiNumeric${this.$id}`);
     addDefaultParameter(this, 'min', MIN_VALUE);
     addDefaultParameter(this, 'max', MAX_VALUE);
+    addDefaultParameter(this, 'step', STEP);
     addBooleanParameter(this, 'disabled');
 
     if (!angular.isNumber(this.min)) {
@@ -34,6 +36,13 @@ export default class {
         this.$log.warn(`Invalid attribute max, expected number got '${this.max}'`);
       }
       this.max = MAX_VALUE;
+    }
+
+    if (!angular.isNumber(this.step)) {
+      if (angular.isDefined(this.step)) {
+        this.$log.warn(`Invalid attribute step, expected number got '${this.step}'`);
+      }
+      this.step = STEP;
     }
 
     if (!angular.isNumber(this.model)) {
@@ -92,7 +101,7 @@ export default class {
 
   increment() {
     if (angular.isNumber(this.model)) {
-      this.setModelValue(this.model + 1);
+      this.setModelValue(this.model + this.step);
     } else {
       this.setModelValue(this.min);
     }
@@ -100,7 +109,7 @@ export default class {
 
   decrement() {
     if (angular.isNumber(this.model)) {
-      this.setModelValue(this.model - 1);
+      this.setModelValue(this.model - this.step);
     } else {
       this.setModelValue(this.min);
     }
