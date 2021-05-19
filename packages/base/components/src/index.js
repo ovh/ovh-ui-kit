@@ -8,6 +8,7 @@ import Button from '@ovh-ux/ui-kit.button';
 import Calendar from '@ovh-ux/ui-kit.calendar';
 import Checkbox from '@ovh-ux/ui-kit.checkbox';
 import Chips from '@ovh-ux/ui-kit.chips';
+import { CircleChart } from '@ovh-ux/ui-kit.circle-chart';
 import Clipboard from '@ovh-ux/ui-kit.clipboard';
 import Collapsible from '@ovh-ux/ui-kit.collapsible';
 import Criteria from '@ovh-ux/ui-kit.criteria';
@@ -59,6 +60,7 @@ angular
     Calendar,
     Checkbox,
     Chips,
+    CircleChart,
     Clipboard,
     Collapsible,
     Criteria,
