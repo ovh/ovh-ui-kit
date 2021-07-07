@@ -1,3 +1,12 @@
+## [4.6.1](https://github.com/ovh/ovh-ui-kit/compare/v4.6.0...v4.6.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* **config:** prevent processing svg as html ([#721](https://github.com/ovh/ovh-ui-kit/issues/721)) ([0c2cae5](https://github.com/ovh/ovh-ui-kit/commit/0c2cae5c14c2be0b341bc81e0dc708512c79b35a)), closes [#696](https://github.com/ovh/ovh-ui-kit/issues/696)
+
+
+
 # [4.6.0](https://github.com/ovh/ovh-ui-kit/compare/v4.5.0...v4.6.0) (2021-05-07)
 
 
