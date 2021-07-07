@@ -58,7 +58,7 @@ const babelLoader = {
 };
 
 const htmlLoader = {
-  test: /\.(html|svg)$/,
+  test: /\.(html)$/,
   use: [
     {
       loader: 'html-loader',
