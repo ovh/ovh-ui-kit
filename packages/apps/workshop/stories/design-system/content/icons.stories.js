@@ -738,6 +738,11 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-enterprise-file-storage_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-enterprise-file-storage_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-envelop_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-envelop_concept</code></div>
   </div>
