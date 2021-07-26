@@ -1,3 +1,12 @@
+# [4.7.0](https://github.com/ovh/ovh-ui-kit/compare/v4.6.1...v4.7.0) (2021-07-26)
+
+
+### Features
+
+* **icons:** add enterprise file storage icon ([529a4e1](https://github.com/ovh/ovh-ui-kit/commit/529a4e10065501d7f68a438a8ef9a4d5466d1b58))
+
+
+
 ## [4.6.1](https://github.com/ovh/ovh-ui-kit/compare/v4.6.0...v4.6.1) (2021-07-07)
 
 
