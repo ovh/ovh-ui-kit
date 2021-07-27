@@ -1288,6 +1288,11 @@ export const Concept = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-trusted_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-trusted_concept</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-typing_concept"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-typing_concept</code></div>
   </div>
