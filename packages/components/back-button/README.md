@@ -15,7 +15,6 @@ angular.module('myModule', ['oui.field'])
     ouiBackButtonConfigurationProvider.setTranslations({
       backTo: 'Back to',
       backToPreviousPage: 'Back to Previous page',
-      previousPage: 'Previous page', //Deprecated
     });
   });
 ```
@@ -28,7 +27,6 @@ angular.module('myModule', ['oui.field'])
 | ----                      | ----      | ----      | ----              | ----   | ----             | ----
 | `id`                      | string    | @?        | yes               | n/a    | n/a              | id attribute of the button/link
 | `name`                    | string    | @?        | yes               | n/a    | n/a              | name attribute of the button/link
-| `previous-page`           | string    | @?        | yes               | n/a    | `Previous page`  | name of the previous page in the button/link
 | `aria-label`              | string    | @?        | yes               | n/a    | n/a              | accessibility label of the button/link
 | `href`                    | string    | @?        | yes               | n/a    | n/a              | url of the return link
 | `state`                   | string    | @?        | yes               | n/a    | n/a              | state of the return link
