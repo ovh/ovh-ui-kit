@@ -4,7 +4,6 @@ export default class {
   constructor() {
     this.translations = {
       backTo: 'Back to',
-      previousPage: 'Previous page', // Deprecated
       backToPreviousPage: 'Back to “Previous page“',
     };
   }
