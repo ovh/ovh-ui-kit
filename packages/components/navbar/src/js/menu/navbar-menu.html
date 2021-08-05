@@ -50,7 +50,7 @@
             ng-href="{{::menuLink.url}}"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
-            <span ng-bind-html="::menuLink.title"></span>
+            <span ng-bind="::menuLink.title"></span>
             <span class="oui-icon oui-icon-external-link" aria-hidden="true"
                 ng-if="::!!menuLink.isExternal">
             </span>
@@ -66,7 +66,7 @@
                 'oui-navbar_desktop-only': !!menuLink.subLinks
             }"
             ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
-            ng-bind-html="::menuLink.title"
+            ng-bind="::menuLink.title"
             ui-sref="{{::$ctrl.constructor.getFullSref(menuLink)}}"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
@@ -79,7 +79,7 @@
             ng-attr-aria-label="{{::!!menuLink.label ? menuLink.label : null}}"
             ng-attr-title="{{::!!menuLink.label ? menuLink.label : null}}"
             ng-click="$ctrl.closeMenuWithCallback($event, menuLink.click)"
-            ng-bind-html="::menuLink.title"
+            ng-bind="::menuLink.title"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
         </button>
@@ -95,7 +95,7 @@
                 'oui-navbar_mobile-only': !!menuLink.url || !!menuLink.state
             }"
             ng-click="$ctrl.navbarCtrl.toggleMenu(menuLink.name, true)"
-            ng-bind-html="::menuLink.title"
+            ng-bind="::menuLink.title"
             oui-navbar-group="{{::$ctrl.menuName}}"
             oui-navbar-group-last="::$last">
         </button>
