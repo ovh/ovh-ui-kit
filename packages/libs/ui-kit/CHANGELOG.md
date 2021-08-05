@@ -1,3 +1,24 @@
+# [5.0.0](https://github.com/ovh/ovh-ui-kit/compare/v4.7.0...v5.0.0) (2021-08-05)
+
+
+### Bug Fixes
+
+* **oui.back-button:** remove deprecated translation key ([#730](https://github.com/ovh/ovh-ui-kit/issues/730)) ([d645e19](https://github.com/ovh/ovh-ui-kit/commit/d645e19bc55f227633560686ded9483b103208ce))
+* **oui.navbar:** remove vulnerable ng-bind-html ([4ea7186](https://github.com/ovh/ovh-ui-kit/commit/4ea71867cef1059acec368ead83f11e09af2bd70))
+
+
+### Features
+
+* add trusted icon ([7aa3efe](https://github.com/ovh/ovh-ui-kit/commit/7aa3efe3268154627feb2c0b53a34c39cbc38469)), closes [#MANAGER-5414](https://github.com/ovh/ovh-ui-kit/issues/MANAGER-5414)
+
+
+### BREAKING CHANGES
+
+* **oui.navbar:** simple menu will no more accept HTML chars in in text
+Signed-off-by: JeremyDec <jeremy.de-cesare@ovhcloud.com>
+
+
+
 # [4.7.0](https://github.com/ovh/ovh-ui-kit/compare/v4.6.1...v4.7.0) (2021-07-26)
 
 
