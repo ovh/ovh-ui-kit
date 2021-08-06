@@ -15,7 +15,6 @@
 ### BREAKING CHANGES
 
 * **oui.navbar:** simple menu will no more accept HTML chars in in text
-Signed-off-by: JeremyDec <jeremy.de-cesare@ovhcloud.com>
 
 
 
@@ -1007,16 +1006,16 @@ Other batches of modifications will be gradually deployed on the other component
   ## Project
 
   * Package name has been renamed to `@ovh-ux/ui-kit`.
-  * Files from `ovh-ui-angular` has been moved and merged in this 
+  * Files from `ovh-ui-angular` has been moved and merged in this
 repository. No need to use `ovh-ui-angular` anymore.
-  * Files from `ovh-ui-kit-documentation` has been moved and merged in 
+  * Files from `ovh-ui-kit-documentation` has been moved and merged in
 this repository. No need to use `ovh-ui-kit-documentation` anymore.
   * Drop of bower support.
 
   ## Components
 
   * __oui-formfield__: Deprecated component. Use `oui-field` instead.
-  * __oui-popover__: Deprecated component. Use `oui-popover` directive 
+  * __oui-popover__: Deprecated component. Use `oui-popover` directive
 instead.
   * __oui-tip__: Deprecated component. Use `oui-popover` instead.
 
@@ -1030,50 +1029,50 @@ instead.
   ### Attributes changes
 
   * __oui-action-menu__: Attribute `align` renamed to `placement`.
-  * __oui-action-menu__: Attribute `placement` is set to `start` by 
+  * __oui-action-menu__: Attribute `placement` is set to `start` by
 default.
-  * __oui-action-menu-item__: Attribute `text` replaced by transclude 
+  * __oui-action-menu-item__: Attribute `text` replaced by transclude
 value.
-  * __oui-back-button__: Attributes `heading` and `title` replaced by 
+  * __oui-back-button__: Attributes `heading` and `title` replaced by
 transclude value.
   * __oui-button__: Attribute `text` replaced by transclude value.
   * __oui-checkbox__: Attribute `text` replaced by transclude value.
   * __oui-criteria-adder__: Attribute `align` renamed to `placement`.
   * __oui-dropdown__: Attribute `align` renamed to `placement`.
-  * __oui-dropdown-item__: Attribute `text` replaced by transclude 
+  * __oui-dropdown-item__: Attribute `text` replaced by transclude
 value.
   * __oui-guide-menu__: Attribute `align` renamed to `placement`.
-  * __oui-guide-menu__: Attribute `placement` is set to `start` by 
+  * __oui-guide-menu__: Attribute `placement` is set to `start` by
 default.
-  * __oui-guide-menu-item__: Attribute `text` replaced by transclude 
+  * __oui-guide-menu-item__: Attribute `text` replaced by transclude
 value.
-  * __oui-message__: Attribute `dismissable` is set to `false` by 
+  * __oui-message__: Attribute `dismissable` is set to `false` by
 default for all types.
   * __oui-message__: Attribute `on-dismissed` renamed to `on-dismiss`.
   * __oui-modal__: Attribute `title` renamed to `heading`.
-  * __oui-navbar-dropdown-menu__: Attribute `align` renamed to 
+  * __oui-navbar-dropdown-menu__: Attribute `align` renamed to
 `placement`.
   * __oui-navbar-link__: Attribute `text` replaced by transclude value.
   * __oui-navbar-menu__: Attribute `align` renamed to `placement`.
-  * __oui-navbar-notification__: Attribute `align` renamed to 
+  * __oui-navbar-notification__: Attribute `align` renamed to
 `placement`.
   * __oui-progress-bar__: Attribute `text` replaced by transclude value.
   * __oui-radio__: Attribute `text` replaced by transclude value.
   * __oui-select__: Unused `align` attribute removed.
   * __oui-select-picker__: Attribute `text` renamed to `label`.
-  * __oui-select-picker__: Remove deprecated `span` tag as transclude 
+  * __oui-select-picker__: Remove deprecated `span` tag as transclude
 slot. Use `oui-select-picker-section` tag instead.
-  * __oui-slideshow-panel__: Attribute `text` replaced by transclude 
+  * __oui-slideshow-panel__: Attribute `text` replaced by transclude
 value.
   * __oui-tile-button__: Attribute `text` replaced by transclude value.
 
   ## Modules
 
-  * __oui.criteria-adder__: Module has been removed. Use `oui.criteria` 
+  * __oui.criteria-adder__: Module has been removed. Use `oui.criteria`
 instead.
-  * __oui.criteria-container__: Module has been renamed to 
+  * __oui.criteria-container__: Module has been renamed to
 `oui.criteria`.
-  * __oui-header-tabs__: Module has been removed. Use `oui.header` 
+  * __oui-header-tabs__: Module has been removed. Use `oui.header`
 instead.
   * __oui.page-header__: Module has been renamed to `oui.header`.
 
@@ -1118,12 +1117,12 @@ instead.
   * __oui-color-badge__: Used only for the documentation.
   * __oui-formfield__: Use `oui-field` instead.
   * __oui-icon-badge__: Used only for the documentation.
-  * __oui-input-group_clipboard__: Use `.oui-clipboard` instead. This 
+  * __oui-input-group_clipboard__: Use `.oui-clipboard` instead. This
 classname extend `.oui-input-group`.
   * __oui-list_steps__: Not used anymore
-  * __oui-input-group_numeric__: Use `.oui-numeric` instead. This 
+  * __oui-input-group_numeric__: Use `.oui-numeric` instead. This
 classname extend `.oui-input-group`.
-  * __oui-input-group_search__: Use `.oui-search` instead. This 
+  * __oui-input-group_search__: Use `.oui-search` instead. This
 classname extend `.oui-input-group`.
 
   ### Deprecated mixins has been removed
@@ -1311,6 +1310,3 @@ classname extend `.oui-input-group`.
 * remove deprecated components ([bf24f0d](https://github.com/ovh/ovh-ui-kit/commit/bf24f0d))
 * remove deprecated imports ([c80fbe0](https://github.com/ovh/ovh-ui-kit/commit/c80fbe0))
 * remove deprecated styles ([17eac47](https://github.com/ovh/ovh-ui-kit/commit/17eac47))
-
-
-
