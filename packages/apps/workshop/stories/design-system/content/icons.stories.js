@@ -1347,6 +1347,11 @@ export const Concept = () => `
     <div class="doc-badge__code"><code>.oui-icon-world_concept</code></div>
   </div>
 
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-nutanix_concept"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-nutanix_concept</code></div>
+  </div>
+
 </div>`;
 
 export const Flags = () => `
