@@ -1,3 +1,12 @@
+# [5.1.0](https://github.com/ovh/ovh-ui-kit/compare/v5.0.0...v5.1.0) (2021-08-17)
+
+
+### Features
+
+* **icons:** add nutanix icon ([#732](https://github.com/ovh/ovh-ui-kit/issues/732)) ([d9d4588](https://github.com/ovh/ovh-ui-kit/commit/d9d4588f7bd1d5ce9581c7eaaa96422756d8f094))
+
+
+
 # [5.0.0](https://github.com/ovh/ovh-ui-kit/compare/v4.7.0...v5.0.0) (2021-08-05)
 
 
