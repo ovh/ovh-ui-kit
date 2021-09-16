@@ -1,3 +1,12 @@
+## [5.1.1](https://github.com/ovh/ovh-ui-kit/compare/v5.1.0...v5.1.1) (2021-09-16)
+
+
+### Bug Fixes
+
+* **action-menu:** set action menu button type ([#733](https://github.com/ovh/ovh-ui-kit/issues/733)) ([e804017](https://github.com/ovh/ovh-ui-kit/commit/e80401710feadfb0ed98fb6007b4733fbc6f41eb))
+
+
+
 # [5.1.0](https://github.com/ovh/ovh-ui-kit/compare/v5.0.0...v5.1.0) (2021-08-17)
 
 
