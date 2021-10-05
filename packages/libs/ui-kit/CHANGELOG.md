@@ -1,3 +1,12 @@
+## [5.1.2](https://github.com/ovh/ovh-ui-kit/compare/v5.1.1...v5.1.2) (2021-10-05)
+
+
+### Bug Fixes
+
+* **file:** set file droparea button type ([#734](https://github.com/ovh/ovh-ui-kit/issues/734)) ([ecfaccf](https://github.com/ovh/ovh-ui-kit/commit/ecfaccf0e1fa5eff2dc9c3f4a1978f5c6544f996))
+
+
+
 ## [5.1.1](https://github.com/ovh/ovh-ui-kit/compare/v5.1.0...v5.1.1) (2021-09-16)
 
 
