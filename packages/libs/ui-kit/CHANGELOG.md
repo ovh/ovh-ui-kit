@@ -1,3 +1,12 @@
+## [5.1.3](https://github.com/ovh/ovh-ui-kit/compare/v5.1.2...v5.1.3) (2021-10-20)
+
+
+### Bug Fixes
+
+* **chips:** add type button to prevent form submit ([#735](https://github.com/ovh/ovh-ui-kit/issues/735)) ([e411ee7](https://github.com/ovh/ovh-ui-kit/commit/e411ee7edc5bbb8b3f50be44ef6d7c495d75679e))
+
+
+
 ## [5.1.2](https://github.com/ovh/ovh-ui-kit/compare/v5.1.1...v5.1.2) (2021-10-05)
 
 
