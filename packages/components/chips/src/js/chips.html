@@ -6,6 +6,7 @@
     ng-class="::{ 'oui-chip_block': !!$ctrl.stacked }">
 </span>
 <button class="oui-chip oui-chip_closable"
+    type="button"
     ng-if="::!!$ctrl.closable"
     ng-click="$ctrl.removeItem($index)"
     ng-repeat="item in $ctrl.items"
