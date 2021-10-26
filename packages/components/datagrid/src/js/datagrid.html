@@ -95,7 +95,6 @@
                 aria-expanded="{{$ctrl.isRowExpanded($index)}}"
                 ng-repeat-start="row in $ctrl.displayedRows track by $index"
                 ng-init="rowIndex = $index"
-                ng-click="$ctrl.toggleRowExpansion($index)"
                 tabindex="0">
                 <td class="oui-datagrid__cell oui-datagrid__cell_s"
                     ng-if="$ctrl.selectableRows">
@@ -109,6 +108,7 @@
                     <button type="button"
                         class="oui-button oui-button_s oui-button_ghost"
                         ng-if="$ctrl.expandableRows"
+                        ng-click="$ctrl.toggleRowExpansion($index)"
                         tabindex="-1">
                         <span class="oui-icon"
                             ng-class="{
