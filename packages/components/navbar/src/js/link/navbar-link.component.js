@@ -13,6 +13,7 @@ export default {
     label: '@?ariaLabel',
     variant: '@?',
     onClick: '&',
+    external: '<?',
   },
   controller,
   template,

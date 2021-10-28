@@ -357,3 +357,4 @@ The property `name` **must be** `"user"`.
 | `state-params`        | object    | <?        | yes               | n/a                                   | n/a       | state-params of the link
 | `variant`             | string    | @?        | yes               | `primary`, `secondary`, `tertiary`    | n/a       | style modifier of the link
 | `on-click`            | function  | &         | no                | n/a                                   | n/a       | click callback
+| `external`            | boolean   | &         | yes                | n/a                                   | n/a       | flag for external
