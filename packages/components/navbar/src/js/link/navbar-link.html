@@ -10,7 +10,9 @@
     }"
     ng-href="{{::$ctrl.href}}"
     ng-click="$ctrl.onClick()"
-    ng-transclude>
+    ng-attr-rel="{{:: $ctrl.external ? 'noopener' : undefined }}"
+    ng-attr-target="{{::$ctrl.external ? '_blank' : null}}">
+        <span ng-transclude></span>
 </a>
 <a class="oui-navbar-link"
     ng-if="::!!$ctrl.state"
