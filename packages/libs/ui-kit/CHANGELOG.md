@@ -1,3 +1,12 @@
+## [5.1.4](https://github.com/ovh/ovh-ui-kit/compare/v5.1.3...v5.1.4) (2021-10-28)
+
+
+### Bug Fixes
+
+* **oui-datagrid:** expand row on button click instead of row click ([#737](https://github.com/ovh/ovh-ui-kit/issues/737)) ([eec4112](https://github.com/ovh/ovh-ui-kit/commit/eec4112ea81cb979105a21566d1a44017936aea3))
+
+
+
 ## [5.1.3](https://github.com/ovh/ovh-ui-kit/compare/v5.1.2...v5.1.3) (2021-10-20)
 
 
