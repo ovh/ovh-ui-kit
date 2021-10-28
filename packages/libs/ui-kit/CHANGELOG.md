@@ -1,3 +1,12 @@
+# [5.2.0](https://github.com/ovh/ovh-ui-kit/compare/v5.1.4...v5.2.0) (2021-10-28)
+
+
+### Features
+
+* **navbar:** add external option to navbar link ([#739](https://github.com/ovh/ovh-ui-kit/issues/739)) ([2e025c8](https://github.com/ovh/ovh-ui-kit/commit/2e025c87a5e23b97192c7f04ee41baaf9682c797))
+
+
+
 ## [5.1.4](https://github.com/ovh/ovh-ui-kit/compare/v5.1.3...v5.1.4) (2021-10-28)
 
 
