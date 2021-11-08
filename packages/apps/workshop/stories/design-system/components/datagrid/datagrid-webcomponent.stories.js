@@ -269,6 +269,34 @@ export const RowActions = forModule(moduleName).createElement(
 
 RowActions.storyName = 'Row actions';
 
+export const Helper = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-datagrid
+      page-size="5"
+      rows="$ctrl.data">
+      <oui-datagrid-column title="'First name'" property="firstName" helper="'This is an helper text'"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+      <oui-action-menu text="Actions" compact>
+        <oui-action-menu-item
+          on-click="$ctrl.onActionClick($row)">
+          Action
+        </oui-action-menu-item>
+      </oui-action-menu>
+    </oui-datagrid>`,
+    {
+      $ctrl: {
+        data,
+        onActionClick: action('onActionClick'),
+      },
+    },
+  ),
+);
+
+Helper.storyName = 'With helper';
+
 export const CustomizableColumnsDisplay = forModule(moduleName).createElement(
   () => compileTemplate(
     `

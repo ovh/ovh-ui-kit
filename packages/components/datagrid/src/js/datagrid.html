@@ -35,6 +35,13 @@
                         ng-if="column.sortable"
                         aria-hidden="true">
                     </span>
+                    <button
+                        ng-if="!!column.helper"
+                        type="button"
+                        class="oui-popover-button"
+                        oui-popover="{{:: column.helper }}"
+                        oui-popover-placement="right"
+                    ></button>
                 </th>
                 <th ng-if="$ctrl.hasActionMenu || $ctrl.customizable"
                     class="oui-datagrid__header oui-datagrid__header_s">

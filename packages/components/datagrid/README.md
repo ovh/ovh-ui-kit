@@ -29,7 +29,7 @@ angular.module('myModule', ['oui.datagrid'])
 | ----                              | ----      | ----      | ----                | ----             | ----         | ----
 | `id`                              | string    | @?        | no                  | n/a              | n/a          | id of the datagrid
 | `page-size`                       | number    | @?        | no                  | n/a              | `25`         | maximum number of rows to show on each pages
-| `page`                            | number    | @?        | no                  | n/a               | `1`         | page to display 
+| `page`                            | number    | @?        | no                  | n/a               | `1`         | page to display
 | `rows`                            | array     | <?        | yes                 | n/a              | n/a          | local rows to load in the datagrid
 | `criteria`                        | array     | <?        | yes                 | n/a              | n/a          | default filter criteria to apply
 | `empty-placeholder`               | string    | @?        | yes                 | n/a              | n/a          | custom placeholder text when there is no data
@@ -128,7 +128,7 @@ The template inside the element will be placed at the bottom of each row, making
 </oui-datagrid>
 ```
 
-As many row details can be added as needed 
+As many row details can be added as needed
 
 ```html
 <oui-datagrid rows="$ctrl.data">
@@ -350,6 +350,7 @@ These parameters override properties defined in `oui-datagrid-column` or `column
 | `type`                  | string          | n/a      | no                | See below         | `string`  | define a column type
 | `property`              | string          | n/a      | yes               | n/a               | `null`    | property path used to get value from value
 | `sortable`              | string          | n/a      | yes               | `asc`, `desc`     | `asc`     | makes a column sortable and gives the order
+| `helper`                | string          | n/a      | yes               | n/a               | null      | adds a helper text next to column title
 | `filterable`            | n/a             | n/a      | no                | n/a               | n/a       | define a filterable column
 | `searchable`            | n/a             | n/a      | no                | n/a               | n/a       | define a searchable column
 | `type-options`          | object          | n/a      | no                | See below         | `{}`      | define options related to column type (see below)

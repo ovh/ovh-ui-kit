@@ -128,7 +128,7 @@ describe('ouiDatagrid', () => {
         expect(getCell($firstRow, 2).children().html()).toBe(additionnalDataValue);
       }));
 
-      it('shoshould display a skeleton when a cell is not loaded', inject(($q) => {
+      it('should display a skeleton when a cell is not loaded', inject(($q) => {
         const deferred = $q.defer();
         const loadRowSpy = jasmine.createSpy('loadRow');
 
@@ -857,6 +857,38 @@ describe('ouiDatagrid', () => {
             }));
           });
         });
+      });
+    });
+
+    describe('Helper popover', () => {
+      it('should be present if helper text is provided', () => {
+        const element = TestUtils.compileTemplate(`
+                    <oui-datagrid rows="$ctrl.rows"
+                        columns="$ctrl.columns">
+                        <oui-datagrid-column property="firstName" type="text" helper="Helper text"></oui-datagrid-column>
+                    </oui-datagrid>
+                `, {
+          columns: columnsData.columns1,
+          rows: fakeData.slice(0, 5),
+        });
+
+        const helperPopover = element[0].querySelector('.oui-popover-button');
+        expect(helperPopover).not.toEqual(null);
+      });
+
+      it('should not be present if helper text is not provided', () => {
+        const element = TestUtils.compileTemplate(`
+                    <oui-datagrid rows="$ctrl.rows"
+                        columns="$ctrl.columns">
+                        <oui-datagrid-column property="firstName" type="text"></oui-datagrid-column>
+                    </oui-datagrid>
+                `, {
+          columns: columnsData.columns1,
+          rows: fakeData.slice(0, 5),
+        });
+
+        const helperPopover = element[0].querySelector('.oui-popover-button');
+        expect(helperPopover).toEqual(null);
       });
     });
 
