@@ -39,6 +39,7 @@ export default class DatagridColumnBuilder {
 
       const column = {
         footer: description.footer || getAttribute(element, 'footer'),
+        helper: getAttribute(element, 'helper'),
         hidden: description.hidden || hasAttribute(element, 'hidden'),
         name: description.name || getAttribute(element, 'name'),
         preventCustomization: description.preventCustomization || hasAttribute(element, 'prevent-customization'),
