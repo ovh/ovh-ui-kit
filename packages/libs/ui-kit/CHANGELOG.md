@@ -1,3 +1,12 @@
+# [5.3.0](https://github.com/ovh/ovh-ui-kit/compare/v5.2.0...v5.3.0) (2021-11-09)
+
+
+### Features
+
+* **oui-datagrid:** add column helper text ([ca41a52](https://github.com/ovh/ovh-ui-kit/commit/ca41a522817793af85bc49445c39e97c0e5a1eba))
+
+
+
 # [5.2.0](https://github.com/ovh/ovh-ui-kit/compare/v5.1.4...v5.2.0) (2021-10-28)
 
 
