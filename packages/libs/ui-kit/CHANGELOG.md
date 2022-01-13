@@ -1,3 +1,12 @@
+## [5.3.2](https://github.com/ovh/ovh-ui-kit/compare/v5.3.1...v5.3.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* **icons:** update nutanix icon ([#764](https://github.com/ovh/ovh-ui-kit/issues/764)) ([b16c08e](https://github.com/ovh/ovh-ui-kit/commit/b16c08e70db54174ea1581fcb2375f3996b52e26))
+
+
+
 ## [5.3.1](https://github.com/ovh/ovh-ui-kit/compare/v5.3.0...v5.3.1) (2021-11-23)
 
 
