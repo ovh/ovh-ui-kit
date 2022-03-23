@@ -1,3 +1,12 @@
+## [5.3.3](https://github.com/ovh/ovh-ui-kit/compare/v5.3.2...v5.3.3) (2022-03-23)
+
+
+### Bug Fixes
+
+* **tooltip:** fix work-break inheritance ([#776](https://github.com/ovh/ovh-ui-kit/issues/776)) ([efad66d](https://github.com/ovh/ovh-ui-kit/commit/efad66d32de4d8cfe9998ac38fb2f1a0eec078dd)), closes [#774](https://github.com/ovh/ovh-ui-kit/issues/774)
+
+
+
 ## [5.3.2](https://github.com/ovh/ovh-ui-kit/compare/v5.3.1...v5.3.2) (2022-01-12)
 
 
