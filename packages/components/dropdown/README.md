@@ -63,7 +63,8 @@ angular.module('myModule', ['oui.dropdown']);
 | `state`           | string    | @?        | yes               | n/a                       | n/a       | state of the item
 | `state-params`    | object    | <?        | no                | n/a                       | n/a       | state-params of the item
 | `disabled`        | boolean   | <?        | no                | `true`, `false`           | `false`   | disabled flag
-| `external`        | boolean   | <?        | yes               | `true`, `false`           | `false`   | external flag
+| `external`        | boolean   | <?        | yes               | `true`, `false`           | `false`   | external flag (incompatible with target top flag)
+| `top`        | boolean   | <?        | yes               | `true`, `false`           | `false`   | target top flag (incompatible with external flag)
 | `on-click`        | function  | &         | no                | n/a                       | n/a       | callback on component click
 
 **Note**: `@uirouter/angularjs` is needed for the attributes `state` and `state-params`.
