@@ -11,6 +11,7 @@ export default {
     stateParams: '<?',
     disabled: '<?',
     external: '<?',
+    top: '<?',
     onClick: '&',
   },
   transclude: true,

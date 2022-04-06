@@ -224,6 +224,22 @@ describe('ouiDropdown', () => {
         expect(link.attr('rel')).toBe('noopener');
       });
 
+      it('has target top when top is passed', () => {
+        const element = TestUtils.compileTemplate(`
+                    <oui-dropdown>
+                        <oui-dropdown-trigger text="Actions"></oui-dropdown-trigger>
+                        <oui-dropdown-content>
+                            <oui-dropdown-item href="#" top>Lorem ipsum</oui-dropdown-item>
+                        </oui-dropdown-content>
+                    </oui-dropdown>
+                `);
+        const link = element.find('oui-dropdown-item').find('a');
+
+        $timeout.flush();
+
+        expect(link.attr('target')).toBe('_top');
+      });
+
       it('should call click callback', () => {
         const onLinkClickSpy = jasmine.createSpy('onLinkClickSpy');
         const onButtonClickSpy = jasmine.createSpy('onButtonClickSpy');
