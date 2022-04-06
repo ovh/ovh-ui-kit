@@ -10,11 +10,14 @@ export default class {
   }
 
   $onInit() {
+    addBooleanParameter(this, 'top');
     addBooleanParameter(this, 'external');
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'sticky');
 
-    if (this.external) {
+    if (this.top) {
+      this.linkTarget = '_top';
+    } else if (this.external) {
       this.linkTarget = '_blank';
       this.linkRel = 'noopener';
     }
@@ -27,8 +30,7 @@ export default class {
         .removeAttr('aria-label');
 
       if (this.sticky) {
-        this.$element
-          .addClass('oui-dropdown-menu__item_sticky');
+        this.$element.addClass('oui-dropdown-menu__item_sticky');
       }
     });
   }
