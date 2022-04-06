@@ -1,3 +1,12 @@
+# [5.4.0](https://github.com/ovh/ovh-ui-kit/compare/v5.3.3...v5.4.0) (2022-04-06)
+
+
+### Features
+
+* **dropdown:** handle target top ([420e1c7](https://github.com/ovh/ovh-ui-kit/commit/420e1c7e640aa38cb2c04b2871148d4cc2a99989))
+
+
+
 ## [5.3.3](https://github.com/ovh/ovh-ui-kit/compare/v5.3.2...v5.3.3) (2022-03-23)
 
 
