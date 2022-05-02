@@ -865,7 +865,7 @@ describe('ouiDatagrid', () => {
         const element = TestUtils.compileTemplate(`
                     <oui-datagrid rows="$ctrl.rows"
                         columns="$ctrl.columns">
-                        <oui-datagrid-column property="firstName" type="text" helper="Helper text"></oui-datagrid-column>
+                        <oui-datagrid-column property="firstName" type="text" helper="'Helper text'"></oui-datagrid-column>
                     </oui-datagrid>
                 `, {
           columns: columnsData.columns1,
