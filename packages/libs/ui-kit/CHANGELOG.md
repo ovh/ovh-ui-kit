@@ -1,3 +1,12 @@
+# [6.0.0](https://github.com/ovh/ovh-ui-kit/compare/v5.4.0...v6.0.0) (2022-05-05)
+
+
+### Bug Fixes
+
+* **datagrid:** dynamic data management for helper ([#781](https://github.com/ovh/ovh-ui-kit/issues/781)) ([88dc247](https://github.com/ovh/ovh-ui-kit/commit/88dc247bae331cf211877dce436a00b997512cd4))
+
+
+
 # [5.4.0](https://github.com/ovh/ovh-ui-kit/compare/v5.3.3...v5.4.0) (2022-04-06)
 
 
