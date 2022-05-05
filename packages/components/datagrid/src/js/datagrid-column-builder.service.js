@@ -78,6 +78,11 @@ export default class DatagridColumnBuilder {
         column.title = this.buildTitle(column.rawTitle, $scope);
       }
 
+      if (hasAttribute(element, 'helper')) {
+        column.rawHelper = getAttribute(element, 'helper');
+        column.helper = this.$parse(column.rawHelper)($scope);
+      }
+
       // If one column has a footer, we set true for all
       if (column.footer) {
         hasFooter = true;
