@@ -22,6 +22,7 @@ angular.module('myModule', ['oui.tile']);
 | `aria-label`      | string    | @?        | no                | n/a               | `null`    | accessibility label
 | `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
 | `external`        | boolean   | <?        | yes               | `true`, `false`   | `false`   | open in new tab and display external icon
+| `top`             | boolean   | <?        | yes               | `true`, `false`   | `false`   | target top flag (incompatible with external flag)
 | `on-click`        | funcion   | &         | no                | n/a               | n/a       | button action callback
 
 ## Component `oui-tile-definition`
