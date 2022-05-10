@@ -106,6 +106,20 @@ describe('ouiTile', () => {
       expect(button.attr('target')).toBe(targetAttr);
     });
 
+    it('should add a target _top when top is passed', () => {
+      const element = TestUtils.compileTemplate(
+        `<oui-tile>
+            <oui-tile-button href="http://myurl.com" top>text</oui-tile-button>
+        </oui-tile>`,
+      );
+
+      const button = getTileButton(element);
+
+      $timeout.flush();
+
+      expect(button.attr('target')).toBe('_top');
+    });
+
     it('should handle click in a button tile', () => {
       const clickSpy = jasmine.createSpy('click');
       const hrefClickSpy = jasmine.createSpy('click');

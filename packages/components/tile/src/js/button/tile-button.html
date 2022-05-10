@@ -12,8 +12,8 @@
     ng-if="::!!$ctrl.href && !$ctrl.disabled"
     class="oui-tile__button oui-button oui-button_ghost oui-button_icon-right oui-button_block"
     ng-href="{{:: $ctrl.href }}"
-    ng-attr-rel="{{:: $ctrl.external ? 'noopener' : undefined }}"
-    ng-attr-target="{{:: $ctrl.external ? '_blank' : undefined }}"
+    ng-attr-rel="{{::$ctrl.linkRel}}"
+    ng-attr-target="{{::$ctrl.linkTarget}}"
     ng-attr-aria-label="{{ :: $ctrl.ariaLabel }}"
     ng-click="$ctrl.onClick()">
     <span ng-transclude></span>

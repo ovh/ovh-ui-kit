@@ -9,6 +9,7 @@ export default {
     ariaLabel: '@?',
     disabled: '<?',
     external: '<?',
+    top: '<?',
     onClick: '&',
   },
   transclude: true,

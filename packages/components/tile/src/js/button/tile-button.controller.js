@@ -12,6 +12,14 @@ export default class {
   $onInit() {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'external');
+    addBooleanParameter(this, 'top');
+
+    if (this.top) {
+      this.linkTarget = '_top';
+    } else if (this.external) {
+      this.linkTarget = '_blank';
+      this.linkRel = 'noopener';
+    }
   }
 
   $postLink() {
