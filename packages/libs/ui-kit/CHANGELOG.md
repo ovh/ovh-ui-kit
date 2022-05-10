@@ -1,3 +1,12 @@
+# [6.1.0](https://github.com/ovh/ovh-ui-kit/compare/v6.0.0...v6.1.0) (2022-05-10)
+
+
+### Features
+
+* **oui-tile:** add top attribute on oui-tile-button ([a965e5c](https://github.com/ovh/ovh-ui-kit/commit/a965e5c13e52e8ff54bc7792f10ebd55d54b4714))
+
+
+
 # [6.0.0](https://github.com/ovh/ovh-ui-kit/compare/v5.4.0...v6.0.0) (2022-05-05)
 
 
