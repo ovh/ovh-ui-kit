@@ -296,11 +296,6 @@
     }
 
     &.today {
-      color: @oui-calendar-cell-font-color;
-      border-color: @oui-calendar-cell-background-color;
-      background-color: @oui-calendar-cell-background-color;
-      font-weight: @oui-calendar-cell-font-weight;
-
       &:hover,
       &:focus {
         color: @oui-calendar-cell-font-color_hover;
@@ -339,6 +334,13 @@
     &.notAllowed.nextMonthDay {
       opacity: 0.5;
     }
+  }
+
+  &.today {
+    color: @oui-calendar-cell-font-color;
+    border-color: @oui-calendar-cell-background-color;
+    background-color: @oui-calendar-cell-background-color;
+    font-weight: @oui-calendar-cell-font-weight;
   }
 
   // Timepicker
