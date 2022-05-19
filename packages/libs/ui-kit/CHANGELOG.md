@@ -1,3 +1,12 @@
+## [6.1.1](https://github.com/ovh/ovh-ui-kit/compare/v6.1.0...v6.1.1) (2022-05-19)
+
+
+### Bug Fixes
+
+* **oui-calendar:** set today disabled date style ([3a09f3d](https://github.com/ovh/ovh-ui-kit/commit/3a09f3d748e94cf9038932b943ad33c8aa973e51))
+
+
+
 # [6.1.0](https://github.com/ovh/ovh-ui-kit/compare/v6.0.0...v6.1.0) (2022-05-10)
 
 
