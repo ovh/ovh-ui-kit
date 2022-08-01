@@ -1,3 +1,12 @@
+## [6.1.2](https://github.com/ovh/ovh-ui-kit/compare/v6.1.1...v6.1.2) (2022-08-01)
+
+
+### Bug Fixes
+
+* **oui.datagrid:** delay offset reset on remote data refresh ([52ddaa9](https://github.com/ovh/ovh-ui-kit/commit/52ddaa920e0dabf8877242b8c2df8c03177a96c6))
+
+
+
 ## [6.1.1](https://github.com/ovh/ovh-ui-kit/compare/v6.1.0...v6.1.1) (2022-05-19)
 
 
