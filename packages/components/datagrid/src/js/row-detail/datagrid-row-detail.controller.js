@@ -8,6 +8,7 @@ export default class {
   $postLink() {
     this.rowDetailScope = this.datagridCtrl.getParentScope().$new(false);
     this.compileElement();
+    this.onRowExpand();
   }
 
   compileElement() {

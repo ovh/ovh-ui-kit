@@ -410,6 +410,7 @@ export default class DatagridController {
     if (this.expandableRows) {
       if (!this.isRowExpanded(index)) {
         this.expandedRows.push(index);
+        this.onRowExpand();
       } else {
         this.expandedRows.splice(this.expandedRows.indexOf(index), 1);
       }
@@ -418,6 +419,13 @@ export default class DatagridController {
 
   isRowExpanded(index) {
     return this.expandedRows.includes(index);
+  }
+
+  onRowExpand() {
+    if (angular.isFunction(this.onRowExpand)) {
+      return true;
+    }
+    return null;
   }
 
   static createEmptyRows(pageSize) {

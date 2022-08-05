@@ -224,7 +224,7 @@ export const ExpandableRows = forModule(moduleName).createElement(
       <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
       <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
       <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
-      <oui-datagrid-row-detail>
+      <oui-datagrid-row-detail on-row-expand="$ctrl.onRowExpand()">
         Birth date : <span ng-bind="$row.birth"></span>
         <br />
         Parents :
@@ -234,6 +234,7 @@ export const ExpandableRows = forModule(moduleName).createElement(
     {
       $ctrl: {
         data,
+        onRowExpand: action('onRowExpand'),
       },
     },
   ),

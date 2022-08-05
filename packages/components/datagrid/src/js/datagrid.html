@@ -154,7 +154,7 @@
                 <td class="oui-datagrid-row-detail__cell"
                     ng-repeat="rowDetail in $ctrl.rowDetailElements track by $index"
                     ng-attr-colspan="{{$last ? $ctrl.columns.length - $ctrl.rowDetailElements.length + 1 : 1}}">
-                    <oui-datagrid-row-detail class="oui-datagrid-row-detail__container" row="row" index="$index">
+                    <oui-datagrid-row-detail class="oui-datagrid-row-detail__container" row="row" index="$index" on-row-expand="$ctrl.onRowExpand()">
                     </oui-datagrid-row-detail>
                 </td>
             </tr>

@@ -534,7 +534,7 @@ describe('ouiDatagrid', () => {
                 <oui-datagrid-column property="firstName"></oui-datagrid-column>
                 <oui-datagrid-column property="lastName"></oui-datagrid-column>
                 <oui-datagrid-column property="description"></oui-datagrid-column>
-                <oui-datagrid-row-detail>
+                <oui-datagrid-row-detail on-row-expand="$ctrl.onRowExpand()">
                     Contact informations :
                     <ul>
                         <li>Email : <span ng-bind="$row.email"></span></li>
@@ -552,6 +552,9 @@ describe('ouiDatagrid', () => {
         ctrl.toggleRowExpansion(0);
         expect(ctrl.expandedRows.length).toEqual(1);
         expect(ctrl.isRowExpanded(0)).toBe(true);
+        spyOn(ctrl, 'onRowExpand').and.callThrough();
+        ctrl.onRowExpand();
+        expect(ctrl.onRowExpand).toHaveBeenCalled();
         expect(element.find('<span ng-bind="$row.phone>')).not.toBe(null);
         expect(ctrl.isRowExpanded(1)).toBe(false);
         expect(ctrl.isRowExpanded(2)).toBe(false);
