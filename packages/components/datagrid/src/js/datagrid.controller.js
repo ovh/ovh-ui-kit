@@ -273,10 +273,20 @@ export default class DatagridController {
       });
     }
 
+    const delayOffsetReset = typeof this.rowsLoader === 'function';
     this.refreshData(() => {
-      this.paging.setOffset(1);
+      // If rows loader function is defined, we should not change offset before refreshing data
+      if (!delayOffsetReset) {
+        this.paging.setOffset(1);
+      }
       this.paging.setCriteria(criteria);
-    }, false);
+    }, false)
+      .then(() => {
+        // Reset the offset after data refresh
+        if (delayOffsetReset) {
+          this.paging.setOffset(1);
+        }
+      });
   }
 
   onPaginationChange({ offset, pageSize }) {
