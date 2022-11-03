@@ -1,7 +1,7 @@
 @font-face {
     font-family: "oui-icons";
-    src: url("./oui-icons.woff2?e6207891c6a5d3a86e0fd46c2cd72256") format("woff2"),
-url("./oui-icons.woff?e6207891c6a5d3a86e0fd46c2cd72256") format("woff");
+    src: url("./oui-icons.woff2?1b0e6bb125f6f2a02c3b6a16808cdcd7") format("woff2"),
+url("./oui-icons.woff?1b0e6bb125f6f2a02c3b6a16808cdcd7") format("woff");
 }
 
 span[class^="oui-icon-"]:before, span[class*=" oui-icon-"]:before {

@@ -1637,4 +1637,9 @@ export const Flags = () => `
     <div class="doc-badge__code"><code>.oui-flag_vn</code></div>
   </div>
 
+  <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-flag oui-flag_uk"></span></div>
+    <div class="doc-badge__code"><code>.oui-flag_uk</code></div>
+  </div>
+
 </div>`;
