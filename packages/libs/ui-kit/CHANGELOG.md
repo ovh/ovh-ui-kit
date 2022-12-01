@@ -1,3 +1,12 @@
+## [6.1.3](https://github.com/ovh/ovh-ui-kit/compare/v6.1.2...v6.1.3) (2022-12-01)
+
+
+### Bug Fixes
+
+* **datagrid:** click action-menu in expandable row ([#796](https://github.com/ovh/ovh-ui-kit/issues/796)) ([7d974c0](https://github.com/ovh/ovh-ui-kit/commit/7d974c001592c93d3d011e4396052e477053f107))
+
+
+
 ## [6.1.2](https://github.com/ovh/ovh-ui-kit/compare/v6.1.1...v6.1.2) (2022-08-01)
 
 
