@@ -101,8 +101,7 @@
             <tr class="oui-datagrid__row oui-datagrid__row_expandable"
                 aria-expanded="{{$ctrl.isRowExpanded($index)}}"
                 ng-repeat-start="row in $ctrl.displayedRows track by $index"
-                ng-init="rowIndex = $index"
-                tabindex="0">
+                ng-init="rowIndex = $index">
                 <td class="oui-datagrid__cell oui-datagrid__cell_s"
                     ng-if="$ctrl.selectableRows">
                     <oui-checkbox model="$ctrl.selectedRows[$index]"
@@ -115,8 +114,7 @@
                     <button type="button"
                         class="oui-button oui-button_s oui-button_ghost"
                         ng-if="$ctrl.expandableRows"
-                        ng-click="$ctrl.toggleRowExpansion($index)"
-                        tabindex="-1">
+                        ng-click="$ctrl.toggleRowExpansion($index)">
                         <span class="oui-icon"
                             ng-class="{
                                 'oui-icon-chevron-down': !$ctrl.isRowExpanded($index),
