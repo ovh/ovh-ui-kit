@@ -1,3 +1,12 @@
+# [6.2.0](https://github.com/ovh/ovh-ui-kit/compare/v6.1.3...v6.2.0) (2022-12-09)
+
+
+### Features
+
+* add nutanix icon with tm ([#798](https://github.com/ovh/ovh-ui-kit/issues/798)) ([e9ab39e](https://github.com/ovh/ovh-ui-kit/commit/e9ab39e328a8e575aeffeff630eccfd493de68df))
+
+
+
 ## [6.1.3](https://github.com/ovh/ovh-ui-kit/compare/v6.1.2...v6.1.3) (2022-12-01)
 
 
