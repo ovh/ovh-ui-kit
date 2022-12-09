@@ -43,6 +43,7 @@ export default class DatagridController {
     this.hasFooter = false;
     this.firstLoading = true;
     this.pageSize = parseInt(this.pageSize, 10) || this.config.pageSize;
+    this.pageSizeMax = parseInt(this.pageSizeMax, 10) || null;
     this.filterableColumns = [];
     this.criteria = this.criteria || [];
     this.page = parseInt(this.page, 10) || 1;
@@ -84,6 +85,7 @@ export default class DatagridController {
         builtColumns.currentSorting,
         this.offset,
         this.pageSize,
+        this.pageSizeMax,
         this.rowLoader,
         this.rowsLoader,
       );
@@ -98,6 +100,7 @@ export default class DatagridController {
         builtColumns.currentSorting,
         this.offset,
         this.pageSize,
+        this.pageSizeMax,
         this.rowLoader,
         this.rows,
       );

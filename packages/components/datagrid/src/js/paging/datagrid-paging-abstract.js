@@ -1,9 +1,19 @@
 export default class DatagridPagingAbstract {
-  constructor(columns, criteria, currentSorting, offset, pageSize, rowLoader, pagingService) {
+  constructor(
+    columns,
+    criteria,
+    currentSorting,
+    offset,
+    pageSize,
+    pageSizeMax,
+    rowLoader,
+    pagingService,
+  ) {
     this.columns = columns;
     this.currentSorting = currentSorting;
     this.criteria = criteria;
     this.pageSize = pageSize;
+    this.pageSizeMax = pageSizeMax;
     this.offset = offset;
     this.rowLoader = rowLoader;
 

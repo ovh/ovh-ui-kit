@@ -15,6 +15,7 @@ export default () => {
       customizable: '<?',
       page: '@?',
       pageSize: '@?',
+      pageSizeMax: '@?',
       rows: '<?',
       rowsLoader: '&?',
       rowLoader: '&?',

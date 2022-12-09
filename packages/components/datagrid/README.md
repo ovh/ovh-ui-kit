@@ -29,6 +29,7 @@ angular.module('myModule', ['oui.datagrid'])
 | ----                              | ----      | ----      | ----                | ----             | ----         | ----
 | `id`                              | string    | @?        | no                  | n/a              | n/a          | id of the datagrid
 | `page-size`                       | number    | @?        | no                  | n/a              | `25`         | maximum number of rows to show on each pages
+ `page-size-max`                    | number    | @?        | no                  | n/a              | n/a          | max page size of the page sizes list
 | `page`                            | number    | @?        | no                  | n/a               | `1`         | page to display
 | `rows`                            | array     | <?        | yes                 | n/a              | n/a          | local rows to load in the datagrid
 | `criteria`                        | array     | <?        | yes                 | n/a              | n/a          | default filter criteria to apply

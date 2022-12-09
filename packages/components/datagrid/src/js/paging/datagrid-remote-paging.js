@@ -7,11 +7,21 @@ export default class DatagridRemotePaging extends DatagridPagingAbstract {
     currentSorting,
     offset,
     pageSize,
+    pageSizeMax,
     rowLoader,
     pagingService,
     rowsLoader,
   ) {
-    super(columns, criteria, currentSorting, offset, pageSize, rowLoader, pagingService);
+    super(
+      columns,
+      criteria,
+      currentSorting,
+      offset,
+      pageSize,
+      pageSizeMax,
+      rowLoader,
+      pagingService,
+    );
 
     this.rowsLoader = rowsLoader;
   }
