@@ -1,3 +1,12 @@
+# [6.3.0](https://github.com/ovh/ovh-ui-kit/compare/v6.2.0...v6.3.0) (2022-12-12)
+
+
+### Features
+
+* **datagrid:** page-size-max option for data-grid ([#801](https://github.com/ovh/ovh-ui-kit/issues/801)) ([946c0fd](https://github.com/ovh/ovh-ui-kit/commit/946c0fd94edb580f89f35134d3388af1d2450ed2))
+
+
+
 # [6.2.0](https://github.com/ovh/ovh-ui-kit/compare/v6.1.3...v6.2.0) (2022-12-09)
 
 
