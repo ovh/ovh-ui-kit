@@ -55,6 +55,7 @@ export const Pagination = forModule(moduleName).createElement(
     `
     <oui-datagrid
       page-size="5"
+      page-size-max="100"
       rows="$ctrl.data"
       on-page-change="$ctrl.onPageChange($pagination)">
       <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
