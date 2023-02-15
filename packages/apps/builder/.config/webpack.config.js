@@ -8,8 +8,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = merge(baseConfig, {
   entry: {
     'oui': [
-      './src/oui.js',
       './src/oui.less',
+      './src/oui.js',
     ],
     'oui-flags': [
       './src/oui-flags.less',
@@ -22,6 +22,7 @@ module.exports = merge(baseConfig, {
     filename: '[name].js',
     library: 'oui',
     libraryTarget: 'umd',
+    libraryExport: 'default',
     path: path.resolve('.', 'dist', 'js'),
     // libraryTarget: 'umd',
   },
