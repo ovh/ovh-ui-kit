@@ -17,6 +17,7 @@ const mode = {
     Button: 'button',
     Select: 'select',
     Input: 'input',
+    Arrows: 'arrows',
   },
   default: '',
 };
