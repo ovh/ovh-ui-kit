@@ -283,6 +283,21 @@ describe('ouiPagination', () => {
         expect(items.hasClass('oui-pagination-items_input')).toBe(true);
       });
 
+      it('should display items in arrows mode', () => {
+        const element = TestUtils.compileTemplate(`
+          <oui-pagination
+            mode="arrows"
+            current-offset="1"
+            total-items="100">
+          </oui-pagination>
+        `);
+
+        expect(getPaginationNavPrevious(element)).toBeDefined();
+        expect(getPaginationNavNext(element)).toBeDefined();
+        expect(getPaginationResult(element)).toBeFalsy();
+        expect(getPaginationItems(element)).toBeFalsy();
+      });
+
       it('should change the mode automatically based on the pageCount', () => {
         let items;
         const element = TestUtils.compileTemplate(`

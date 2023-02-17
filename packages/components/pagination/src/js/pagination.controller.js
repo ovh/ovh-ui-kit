@@ -2,10 +2,11 @@ import { addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils'
 import clamp from 'lodash/clamp';
 import range from 'lodash/range';
 
-const MODES = [
+export const MODES = [
   'button',
   'select',
   'input',
+  'arrows',
 ];
 
 const MAX_THRESHOLD_MODE = {
@@ -21,6 +22,10 @@ export default class {
     this.$element = $element;
     this.$timeout = $timeout;
     this.config = ouiPaginationConfiguration;
+  }
+
+  get isArrowsMode() {
+    return this.mode === 'arrows';
   }
 
   getCurrentPage() {

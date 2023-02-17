@@ -1,4 +1,5 @@
-<div class="oui-pagination-result">
+<div class="oui-pagination-result"
+    ng-if="!$ctrl.isArrowsMode">
     <label class="oui-select oui-select_inline">
         <select class="oui-pagination-result__selector oui-select__input"
             ng-change="$ctrl.onPageSizeChange($ctrl.currentPageSize)"
@@ -60,6 +61,7 @@
 
     <!-- Input -->
     <form class="oui-pagination-items oui-pagination-items_input"
+        ng-if="!$ctrl.isArrowsMode"
         ng-switch-default
         novalidate>
         <span aria-hidden="true"

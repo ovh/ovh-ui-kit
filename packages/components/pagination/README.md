@@ -34,6 +34,7 @@ angular.module('myModule', ['oui.pagination'])
 
 | Attribute         | Type      | Binding   | One-time Binding  | Values    | Default   | Description
 | ----              | ----      | ----      | ----              | ----      | ----      | ----
+| `mode`            | string    | @?        | no                | n/a       | n/a       | Set the pagination mode. It can be one these values : `button`, `select`, `input` or `arrows` 
 | `current-offset`  | number    | <         | no                | n/a       | n/a       | offset of the current page first item
 | `page-size`       | number    | <?        | no                | n/a       | `25`      | number of items per page
 | `page-size-max`   | number    | <?        | no                | n/a       | n/a       | max page size of the page sizes list
