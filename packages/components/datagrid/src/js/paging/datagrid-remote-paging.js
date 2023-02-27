@@ -11,6 +11,7 @@ export default class DatagridRemotePaging extends DatagridPagingAbstract {
     rowLoader,
     pagingService,
     rowsLoader,
+    paginationMode,
   ) {
     super(
       columns,
@@ -21,6 +22,7 @@ export default class DatagridRemotePaging extends DatagridPagingAbstract {
       pageSizeMax,
       rowLoader,
       pagingService,
+      paginationMode,
     );
 
     this.rowsLoader = rowsLoader;
@@ -42,6 +44,10 @@ export default class DatagridRemotePaging extends DatagridPagingAbstract {
   loadRows(pageResult) {
     this.loadRowsData(pageResult.data);
     this.totalCount = pageResult.meta.totalCount;
+
+    if (pageResult.meta.currentOffset) {
+      this.offset = pageResult.meta.currentOffset;
+    }
 
     return pageResult;
   }

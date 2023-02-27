@@ -25,20 +25,21 @@ angular.module('myModule', ['oui.datagrid'])
 
 ## Component `oui-datagrid`
 
-| Attribute                         | Type      | Binding   | One-time binding    | Values           | Default      | Description
-| ----                              | ----      | ----      | ----                | ----             | ----         | ----
-| `id`                              | string    | @?        | no                  | n/a              | n/a          | id of the datagrid
-| `page-size`                       | number    | @?        | no                  | n/a              | `25`         | maximum number of rows to show on each pages
- `page-size-max`                    | number    | @?        | no                  | n/a              | n/a          | max page size of the page sizes list
-| `page`                            | number    | @?        | no                  | n/a               | `1`         | page to display
-| `rows`                            | array     | <?        | yes                 | n/a              | n/a          | local rows to load in the datagrid
-| `criteria`                        | array     | <?        | yes                 | n/a              | n/a          | default filter criteria to apply
-| `empty-placeholder`               | string    | @?        | yes                 | n/a              | n/a          | custom placeholder text when there is no data
-| `selectable-rows`                 | boolean   | <?        | no                  | `true`, `false`  | `false`      | allow rows to be selected. Create a sticky column a the start of the datagrid.
-| `on-criteria-change`              | function  | &         | no                  | n/a              | n/a          | triggered when criteria changed. Use `$criteria` in your callback to get the result
-| `on-page-change`                  | function  | &         | no                  | n/a              | n/a          | triggered when pagination is changed
-| `on-row-select`                   | function  | &         | no                  | n/a              | n/a          | triggered when a row is selected
-| `on-sort-change`                  | function  | &         | no                  | n/a              | n/a          | triggered when sort is triggered. Use `$sort` in your callback to get the result
+| Attribute                         | Type      | Binding   | One-time binding    | Values                                 | Default      | Description
+| ----                              | ----      | ----      | ----                | ----                                   | ----         | ----
+| `id`                              | string    | @?        | no                  | n/a                                    | n/a          | id of the datagrid
+| `page-size`                       | number    | @?        | no                  | n/a                                    | `25`         | maximum number of rows to show on each pages
+ `page-size-max`                    | number    | @?        | no                  | n/a                                    | n/a          | max page size of the page sizes list
+| `page`                            | number    | @?        | no                  | n/a                                    | `1`          | page to display
+| `rows`                            | array     | <?        | yes                 | n/a                                    | n/a          | local rows to load in the datagrid
+| `criteria`                        | array     | <?        | yes                 | n/a                                    | n/a          | default filter criteria to apply
+| `empty-placeholder`               | string    | @?        | yes                 | n/a                                    | n/a          | custom placeholder text when there is no data
+| `selectable-rows`                 | boolean   | <?        | no                  | `true`, `false`                        | `false`      | allow rows to be selected. Create a sticky column a the start of the datagrid.
+| `on-criteria-change`              | function  | &         | no                  | n/a                                    | n/a          | triggered when criteria changed. Use `$criteria` in your callback to get the result
+| `on-page-change`                  | function  | &         | no                  | n/a                                    | n/a          | triggered when pagination is changed
+| `on-row-select`                   | function  | &         | no                  | n/a                                    | n/a          | triggered when a row is selected
+| `on-sort-change`                  | function  | &         | no                  | n/a                                    | n/a          | triggered when sort is triggered. Use `$sort` in your callback to get the result
+| `pagination-mode`                 | string    | @?        | no                  | `button`, `select`, `input`, `arrows`  | `input`      | Set the pagination mode
 
 ### Custom cell templates
 

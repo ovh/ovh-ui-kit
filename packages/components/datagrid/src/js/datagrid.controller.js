@@ -1,4 +1,5 @@
 import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import { MODES as PAGINATION_MODES } from '@ovh-ux/ui-kit.pagination';
 import find from 'lodash/find';
 import hasIn from 'lodash/hasIn';
 
@@ -10,6 +11,8 @@ const cssSortable = 'oui-datagrid__header_sortable';
 const iconSortable = 'oui-icon-sort-inactive';
 const iconSortableAsc = 'oui-icon-sort-up';
 const iconSortableDesc = 'oui-icon-sort-down';
+
+export { PAGINATION_MODES };
 
 export default class DatagridController {
   constructor($attrs, $compile, $element, $transclude, $q, $scope, $window, $timeout,
@@ -48,6 +51,7 @@ export default class DatagridController {
     this.criteria = this.criteria || [];
     this.page = parseInt(this.page, 10) || 1;
     this.offset = (this.page - 1) * this.pageSize + 1;
+    this.paginationMode = (PAGINATION_MODES.includes(this.paginationMode) && this.paginationMode) || '';
 
     addBooleanParameter(this, 'selectableRows');
     addDefaultParameter(this, 'emptyPlaceholder', this.config.translations.emptyPlaceholder);
@@ -88,6 +92,7 @@ export default class DatagridController {
         this.pageSizeMax,
         this.rowLoader,
         this.rowsLoader,
+        this.paginationMode,
       );
       this.refreshData(() => {
         this.paging.setOffset(this.offset);
@@ -103,6 +108,7 @@ export default class DatagridController {
         this.pageSizeMax,
         this.rowLoader,
         this.rows,
+        this.paginationMode,
       );
 
       if (this.rows) {
@@ -124,6 +130,17 @@ export default class DatagridController {
 
     if (changes.columnsParameters && !changes.columnsParameters.isFirstChange()) {
       this.buildColumns();
+    }
+
+    if (changes.paginationMode && !changes.paginationMode.isFirstChange()) {
+      const { currentValue: paginationMode } = changes.paginationMode;
+
+      if (!PAGINATION_MODES.includes(paginationMode)) {
+        return;
+      }
+
+      this.paginationMode = paginationMode;
+      this.paging.paginationMode = paginationMode;
     }
   }
 

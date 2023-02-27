@@ -1,7 +1,11 @@
+import { last } from 'lodash';
+
 import '@ovh-ux/ui-kit.action-menu';
 
+import { PAGINATION_MODES } from './datagrid.controller';
 import columnsData from './columns.spec.data.json';
 import originalFakeData from './datagrid.spec.data.json';
+
 
 describe('ouiDatagrid', () => {
   let TestUtils;
@@ -18,6 +22,7 @@ describe('ouiDatagrid', () => {
   const getFooterCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__footer')[columnNumber]);
   const getCell = (element, columnNumber) => angular.element(element[0].querySelectorAll('.oui-datagrid__cell')[columnNumber]);
   const getNextPagePaginationButton = (element) => angular.element(element[0].querySelector('.oui-pagination-nav__next'));
+  const getPaginationNav = (element) => angular.element(element[0].querySelector('.oui-pagination-nav'));
   const isSortableCell = (element) => element.hasClass('oui-datagrid__header_sortable');
   const isSortableAscCell = (element) => {
     const isSortable = isSortableCell(element);
@@ -1393,6 +1398,33 @@ describe('ouiDatagrid', () => {
       getNextPagePaginationButton(element).triggerHandler('click');
 
       expect(onPageChangeSpy).toHaveBeenCalled();
+    });
+
+    it('should pass through the pagination mode', () => {
+      const element = TestUtils.compileTemplate(`
+            <oui-datagrid rows="$ctrl.rows" page-size="2" pagination-mode="{{ $ctrl.paginationMode }}">
+                <oui-column property="firstName"></oui-column>
+            </oui-datagrid>
+        `, {
+        rows: fakeData.slice(0, 5),
+      });
+
+      const setMode = (mode) => {
+        TestUtils.getElementController(element).paginationMode = mode;
+        element.scope().$apply();
+      };
+      const controller = element.controller('ouiDatagrid');
+      const paginationController = getPaginationNav(element).controller('ouiPagination');
+
+      PAGINATION_MODES.forEach((paginationMode) => {
+        setMode(paginationMode);
+        expect(controller.paging.paginationMode).toBe(paginationMode);
+        expect(paginationController.mode).toBe(paginationMode);
+      });
+
+      setMode('unknown');
+      expect(controller.paging.paginationMode).toBe(last(PAGINATION_MODES));
+      expect(paginationController.mode).toBe(last(PAGINATION_MODES));
     });
 
     it('should support action-menu as column', () => {

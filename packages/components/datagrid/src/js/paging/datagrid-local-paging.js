@@ -12,6 +12,7 @@ export default class DatagridLocalPaging extends DatagridPagingAbstract {
     rowLoader,
     pagingService,
     rows,
+    paginationMode,
   ) {
     super(
       columns,
@@ -22,6 +23,7 @@ export default class DatagridLocalPaging extends DatagridPagingAbstract {
       pageSizeMax,
       rowLoader,
       pagingService,
+      paginationMode,
     );
 
     this.setRows(rows);

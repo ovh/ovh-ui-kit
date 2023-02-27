@@ -37,4 +37,5 @@ angular
   .service('ouiDatagridService', DatagridService)
   .component('ouiDatagridParameters', DatagridParameters);
 
+export { PAGINATION_MODES } from './js/datagrid.controller';
 export default moduleName;
