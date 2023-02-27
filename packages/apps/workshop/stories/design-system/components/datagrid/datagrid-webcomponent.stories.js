@@ -7,6 +7,7 @@ import Datagrid from '@ovh-ux/ui-kit.datagrid';
 
 import { action } from '@storybook/addon-actions';
 import { forModule } from 'storybook-addon-angularjs';
+import { select } from '@storybook/addon-knobs';
 
 import readme from '@ovh-ux/ui-kit.datagrid/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -459,4 +460,36 @@ export const RemoteData = forModule(moduleName).createElement(
   ),
 );
 
-RemoteData.storyName = 'Remote data';
+const paginationMode = {
+  label: 'Mode',
+  options: {
+    Button: 'button',
+    Select: 'select',
+    Input: 'input',
+    Arrows: 'arrows',
+  },
+};
+paginationMode.default = paginationMode.options.Arrows;
+
+
+export const PaginationMode = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-datagrid
+      page-size="5"
+      rows="$ctrl.data"
+      pagination-mode="${select(paginationMode.label, paginationMode.options, paginationMode.default)}">
+      <oui-datagrid-column title="'First name'" property="firstName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Last name'" property="lastName"></oui-datagrid-column>
+      <oui-datagrid-column title="'Email'" property="email"></oui-datagrid-column>
+      <oui-datagrid-column title="'Phone'" property="phone"></oui-datagrid-column>
+    </oui-datagrid>`,
+    {
+      $ctrl: {
+        data: data.slice(0, 30),
+      },
+    },
+  ),
+);
+
+PaginationMode.storyName = 'Pagination Mode';

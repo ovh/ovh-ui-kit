@@ -8,6 +8,7 @@ export default class DatagridPagingAbstract {
     pageSizeMax,
     rowLoader,
     pagingService,
+    paginationMode,
   ) {
     this.columns = columns;
     this.currentSorting = currentSorting;
@@ -16,6 +17,7 @@ export default class DatagridPagingAbstract {
     this.pageSizeMax = pageSizeMax;
     this.offset = offset;
     this.rowLoader = rowLoader;
+    this.paginationMode = paginationMode;
 
     this.$q = pagingService.$q;
     this.$timeout = pagingService.$timeout;

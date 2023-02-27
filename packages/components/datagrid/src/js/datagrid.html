@@ -204,6 +204,7 @@
         page-size="$ctrl.paging.pageSize"
         page-size-max="$ctrl.paging.pageSizeMax"
         total-items="$ctrl.paging.totalCount"
-        on-change="$ctrl.onPaginationChange($event)">
+        on-change="$ctrl.onPaginationChange($event)"
+        mode="{{ $ctrl.paging.paginationMode }}">
     </oui-pagination>
 </div>

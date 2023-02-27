@@ -10,7 +10,17 @@ export default class {
     this.orderByFilter = orderByFilter;
   }
 
-  createLocal(columns, criteria, sorting, offset, pageSize, pageSizeMax, rowLoader, rows) {
+  createLocal(
+    columns,
+    criteria,
+    sorting,
+    offset,
+    pageSize,
+    pageSizeMax,
+    rowLoader,
+    rows,
+    paginationMode,
+  ) {
     return new DatagridLocalPaging(
       columns,
       criteria,
@@ -21,10 +31,21 @@ export default class {
       rowLoader,
       this,
       rows,
+      paginationMode,
     );
   }
 
-  createRemote(columns, criteria, sorting, offset, pageSize, pageSizeMax, rowLoader, rowsLoader) {
+  createRemote(
+    columns,
+    criteria,
+    sorting,
+    offset,
+    pageSize,
+    pageSizeMax,
+    rowLoader,
+    rowsLoader,
+    paginationMode,
+  ) {
     return new DatagridRemotePaging(
       columns,
       criteria,
@@ -35,6 +56,7 @@ export default class {
       rowLoader,
       this,
       rowsLoader,
+      paginationMode,
     );
   }
 }

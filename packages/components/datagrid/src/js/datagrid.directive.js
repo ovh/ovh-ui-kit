@@ -25,6 +25,7 @@ export default () => {
       onPageChange: '&',
       onRowSelect: '&',
       onSortChange: '&',
+      paginationMode: '@?',
     },
     compile: (elm) => {
       // Transclude can't be used here otherwise transcluded
