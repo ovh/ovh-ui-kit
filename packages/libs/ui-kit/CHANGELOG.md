@@ -1,3 +1,18 @@
+# [6.4.0](https://github.com/ovh/ovh-ui-kit/compare/v6.3.0...v6.4.0) (2023-02-28)
+
+
+### Bug Fixes
+
+* **build:** export default library name ([e1e7d98](https://github.com/ovh/ovh-ui-kit/commit/e1e7d98159d5179629e1cd422395bddcfa0bbfe3))
+
+
+### Features
+
+* **datagrid:** add pagination-mode option ([81b25a9](https://github.com/ovh/ovh-ui-kit/commit/81b25a9c839e1b86a25dc7723ad892e58a7bc3af))
+* **pagination:** add arrows mode ([cdb47be](https://github.com/ovh/ovh-ui-kit/commit/cdb47be236e753769943138820579a83afc79ce9))
+
+
+
 # [6.3.0](https://github.com/ovh/ovh-ui-kit/compare/v6.2.0...v6.3.0) (2022-12-12)
 
 
