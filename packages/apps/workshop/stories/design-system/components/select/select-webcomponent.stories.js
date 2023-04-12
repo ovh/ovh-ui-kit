@@ -5,6 +5,7 @@ import { forModule } from 'storybook-addon-angularjs';
 import Field from '@ovh-ux/ui-kit.field';
 import FormActions from '@ovh-ux/ui-kit.form-actions';
 import Select from '@ovh-ux/ui-kit.select';
+import Button from '@ovh-ux/ui-kit.button';
 
 import readme from '@ovh-ux/ui-kit.select/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -18,6 +19,7 @@ angular.module(moduleName, [
   // For examples
   FormActions,
   Field,
+  Button,
 ]);
 
 export default {
@@ -246,6 +248,49 @@ export const Validation = forModule(moduleName).createElement(
     {
       $ctrl: {
         disabled: boolean('Disabled state', false),
+      },
+    },
+  ),
+);
+
+export const Load = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+      <oui-button
+        style="margin: 5px 0"
+        on-click="$ctrl.load()"
+        disabled="$ctrl.url || $ctrl.holidays"
+      >Load holidays</oui-button>
+      <oui-select
+        disabled="!$ctrl.holidays"
+        load="{{ $ctrl.url }}"
+        on-load="$ctrl.onLoad(response)"
+        on-error="$ctrl.onError(error)"
+        model="$ctrl.model"
+        match="localName"
+        name="holidays"
+        placeholder="{{ $ctrl.holidays ? 'Select a holiday' : 'Please load holydays' }}"
+      ></oui-select>
+      <small
+        style="display: block; background: #F8F8F8; margin: 1px 0; padding: 3px 5px"
+        ng-repeat="message in $ctrl.messages track by $index"
+      >{{ message }}</small>
+    `,
+    {
+      $ctrl: {
+        messages: [],
+        load() {
+          this.url = 'https://date.nager.at/api/v2/publicholidays/2023/US';
+          this.messages.push('Start loading holidays');
+        },
+        onError(error) {
+          this.url = '';
+          this.messages.push(`Error while loading holidays : ${error.xhrStatus} (${error.status})`);
+        },
+        onLoad({ data: holidays }) {
+          this.holidays = holidays;
+          this.messages.push('Holidays are loaded');
+        },
       },
     },
   ),

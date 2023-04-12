@@ -14,7 +14,9 @@
     "@ovh-ux/ui-kit.button": "*",
     "@ovh-ux/ui-kit.core": "*",
     "@ovh-ux/ui-kit.input": "*",
+    "@ovh-ux/ui-kit.spinner": "*",
     "angular": "^1.8.0",
+    "angular-inview": "^2.2.0",
     "angular-sanitize": "^1.8.0",
     "ui-select": "^0.19.8"
   },

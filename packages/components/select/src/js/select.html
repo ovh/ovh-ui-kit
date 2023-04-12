@@ -10,7 +10,7 @@
     on-remove="$ctrl.onUiSelectRemove($model)"
     search-enabled="{{::!!$ctrl.searchable}}"
     theme="oui-ui-select">
-    <ui-select-match placeholder="{{::$ctrl.placeholder}}">
+    <ui-select-match placeholder="{{$ctrl.placeholder}}">
         <span ng-bind-html="$ctrl.getPropertyValue($item)"></span>
     </ui-select-match>
     <ui-select-choices repeat="$item in $ctrl.items | filter: $select.search track by $index"

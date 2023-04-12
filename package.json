@@ -20,6 +20,7 @@
     "build:docs": "lerna exec --scope @ovh-ux/ui-kit-workshop -- yarn build",
     "build:dist": "lerna exec --scope @ovh-ux/ui-kit-builder -- yarn build",
     "karma": "cross-env NODE_ENV=test karma start --reporters spec,coverage --single-run",
+    "karma:watch": "cross-env NODE_ENV=test karma start --watch",
     "lint": "run-p lint:css lint:js",
     "lint:css": "stylelint \"packages/**/*.less\"",
     "lint:css-fix": "stylelint \"packages/**/*.less\" --fix",

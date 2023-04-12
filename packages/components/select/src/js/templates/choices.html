@@ -12,11 +12,12 @@
                 'ui-select-choices-row_active': $select.isActive(this) && !$select.isDisabled(this),
                 'ui-select-choices-row_selected': $item === $select.selected
             }"
-            ng-disabled="$select.isDisabled(this)"
+            ng-disabled="$item.isSpinner || $select.isDisabled(this)"
             role="option"
             tabindex="-1"
             type="button">
-            <span class="ui-select-choices-row-inner"></span>
+            <span class="ui-select-choices-row-inner" ng-if="!$item.isSpinner"></span>
+            <oui-spinner class="ui-select-choices-spinner" size="s" ng-if="$item.isSpinner" in-view="$inview && $ctrl.onSpinnerInView($item)"></oui-spinner>
         </button>
     </li>
 </ul>

@@ -19,11 +19,11 @@
             ng-class="{ 'ui-select-search_hidden': !$select.searchEnabled || !$select.open }"
             ng-disabled="$select.disabled"
             ng-model="$select.search"
-            placeholder="{{::$select.placeholder}}"
+            placeholder="{{$select.placeholder}}"
             type="search">
     </div>
     <div class="ui-select-dropdown"
-        ng-show="$select.items.length > 0">
+        ng-show="$select.items.length > 0" ui-view-container>
         <div class="ui-select-header"></div><!-- replaced by header.html -->
         <div class="ui-select-choices"></div><!-- replaced by choices.html -->
         <div class="ui-select-footer"></div><!-- replaced by footer.html -->

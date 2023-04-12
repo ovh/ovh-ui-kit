@@ -2,7 +2,9 @@ import { addBooleanParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils'
 import get from 'lodash/get';
 
 export default class {
-  constructor($attrs, $compile, $element, $rootScope, $scope, $timeout) {
+  constructor(
+    $attrs, $compile, $element, $rootScope, $scope, $timeout, $http, $q, ouiSelectConfiguration,
+  ) {
     'ngInject';
 
     this.$attrs = $attrs;
@@ -11,6 +13,9 @@ export default class {
     this.$rootScope = $rootScope;
     this.$scope = $scope;
     this.$timeout = $timeout;
+    this.$http = $http;
+    this.$q = $q;
+    this.ouiSelectConfiguration = ouiSelectConfiguration;
   }
 
   $onInit() {
@@ -19,6 +24,15 @@ export default class {
     addBooleanParameter(this, 'required');
     addBooleanParameter(this, 'multiple');
     addBooleanParameter(this, 'searchable');
+  }
+
+  $onChanges(changes) {
+    if (changes.load?.currentValue) {
+      this.loadItems();
+    }
+    if (changes.placeholder) {
+      this.placeholder = changes.placeholder.currentValue;
+    }
   }
 
   $postLink() {
@@ -138,5 +152,73 @@ export default class {
 
   getPropertyValue(item) {
     return get(item, this.match, item);
+  }
+
+  loadItems() {
+    const { load, loadCursor, loadOptions } = this;
+    const { paginationHeaders } = this.ouiSelectConfiguration;
+    let request = {
+      ...loadOptions?.global,
+      method: loadOptions?.method || 'GET',
+      url: load,
+      timeout: Number.isInteger(loadOptions?.timeout) && loadOptions.timeout >= 0
+        ? loadOptions.timeout
+        : 30000,
+      headers: {
+        ...loadOptions?.headers,
+        ...(loadCursor && { [paginationHeaders.cursor]: loadCursor }),
+        ...(() => {
+          if (Number.isInteger(loadOptions?.size)) {
+            return loadOptions.size > 0 ? { [paginationHeaders.size]: loadOptions.size } : null;
+          }
+          return { [paginationHeaders.size]: 25 };
+        })(),
+      },
+    };
+
+    if (this.onBeforeLoad) {
+      request = this.onBeforeLoad({ request });
+    }
+
+    this.loading = true;
+
+    return this.$http(request).then((response) => {
+      if (response.config.url !== this.load) return;
+
+      const { data, headers } = response;
+      const next = headers(paginationHeaders.nextCursor);
+
+      response.nextCursor = next;
+      this.loadCursor = next;
+
+      if (loadCursor) {
+        this.items = [
+          ...this.items.filter(({ isSpinner }) => !isSpinner),
+          ...data,
+        ];
+      } else {
+        this.items = data || [];
+      }
+      if (this.onLoad) {
+        this.onLoad({ request, response });
+      }
+      if (next) {
+        this.items = [...this.items, { isSpinner: true, isInView: false }];
+      }
+    }).catch((error) => {
+      if (this.onError) {
+        this.onError({ request, error });
+      }
+    }).finally(() => {
+      this.loading = false;
+    });
+  }
+
+  onSpinnerInView(spinner) {
+    const { isInView } = spinner;
+    if (!isInView) {
+      Object.assign(spinner, { isInView: true });
+      this.loadItems();
+    }
   }
 }
