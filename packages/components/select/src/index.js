@@ -1,5 +1,9 @@
 import 'ui-select';
+import 'angular-inview';
+import Spinner from '@ovh-ux/ui-kit.spinner';
+
 import Select from './js/select.directive';
+import SelectProvider from './js/select.provider';
 
 const choicesTpl = require('./js/templates/choices.html');
 const headerTpl = require('./js/templates/header.html');
@@ -16,6 +20,8 @@ angular
   .module(moduleName, [
     'ngSanitize',
     'ui.select',
+    'angular-inview',
+    Spinner,
   ])
   .run(['$templateCache', ($templateCache) => {
     $templateCache.put('oui-ui-select/choices.tpl.html', choicesTpl);
@@ -27,6 +33,7 @@ angular
     $templateCache.put('oui-ui-select/select.tpl.html', selectTpl);
     $templateCache.put('oui-ui-select/select-multiple.tpl.html', selectMultipleTpl);
   }])
+  .provider('ouiSelectConfiguration', SelectProvider)
   .directive('ouiSelect', Select);
 
 export default moduleName;

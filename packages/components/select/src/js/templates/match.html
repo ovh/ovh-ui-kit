@@ -4,7 +4,7 @@
     aria-owns="ui-select-choices-{{ $select.generatedId }}"
     ng-class="{ 'ui-select-match_focus': $select.focus }"
     ng-hide="$select.searchEnabled && $select.open"
-    ng-disabled="$select.disabled"
+    ng-disabled="$ctrl.loading || $select.disabled"
     ng-click="$ctrl.onUiSelectClick()"
     tabindex="-1"
     type="button">
@@ -12,12 +12,13 @@
         aria-label="{{ $select.baseTitle }} activate">
         <span class="ui-select-placeholder"
             ng-show="$select.isEmpty()"
-            ng-bind="::$select.placeholder">
+            ng-bind="$select.placeholder">
         </span>
         <span class="ui-select-match-text"
             ng-hide="$select.isEmpty()"
             ng-bind-html="$ctrl.getPropertyValue($select.selected)">
         </span>
     </span>
-    <span class="ui-select-match-icon oui-icon oui-icon-chevron-down"></span>
+    <span class="ui-select-match-icon oui-icon oui-icon-chevron-down" ng-if="!$ctrl.loading"></span>
+    <oui-spinner class="ui-select-match-spinner" size="s" ng-if="$ctrl.loading"></oui-spinner>
 </button>
