@@ -28,6 +28,7 @@ export default class {
 
   $onChanges(changes) {
     if (changes.load?.currentValue) {
+      this.loadCursor = null;
       this.loadItems();
     }
     if (changes.placeholder) {
