@@ -1,3 +1,12 @@
+## [6.4.1](https://github.com/ovh/ovh-ui-kit/compare/v6.4.0...v6.4.1) (2023-04-13)
+
+
+### Features
+
+* **select:** add load property ([1a545ba](https://github.com/ovh/ovh-ui-kit/commit/1a545ba3b912fa842e00190ded81f6e9bb74c982))
+
+
+
 # [6.4.0](https://github.com/ovh/ovh-ui-kit/compare/v6.3.0...v6.4.0) (2023-02-28)
 
 
