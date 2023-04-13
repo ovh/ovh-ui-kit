@@ -720,6 +720,38 @@ describe('ouiSelect', () => {
           }, 500);
         });
 
+        it('should reset the cursor on change', () => {
+          const onLoad = jasmine.createSpy();
+          const element = TestUtils.compileTemplate(`
+              <oui-select
+                load="{{ $ctrl.load }}"
+                on-load="$ctrl.onLoad(request, response)"
+                model="$ctrl.model"
+              ></oui-select>
+            `, {
+            load: '/paginateddata',
+            model: null,
+            onLoad,
+          });
+          $httpBackend.flush();
+
+          const scope = angular.element(element).scope();
+          scope.$ctrl.load = '/data';
+          scope.$apply();
+
+          $httpBackend.flush();
+
+          expect(onLoad).toHaveBeenCalledTimes(2);
+          expect(onLoad.calls.argsFor(0)).toEqual([
+            jasmine.objectContaining({ url: '/paginateddata' }),
+            jasmine.objectContaining({ data: data.slice(0, 25) }),
+          ]);
+          expect(onLoad.calls.argsFor(1)).toEqual([
+            jasmine.objectContaining({ url: '/data', headers: { 'X-Pagination-Size': 25 } }),
+            jasmine.objectContaining({ data }),
+          ]);
+        });
+
         it('should load the second page once', (done) => {
           const element = TestUtils.compileTemplate(`
             <div>
