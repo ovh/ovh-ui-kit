@@ -1,3 +1,12 @@
+## [6.4.2](https://github.com/ovh/ovh-ui-kit/compare/v6.4.1...v6.4.2) (2023-04-14)
+
+
+### Bug Fixes
+
+* **select:** reset cursor on change ([0eca2ed](https://github.com/ovh/ovh-ui-kit/commit/0eca2ed4d41a811e0f86fdaf3ebcf10b1f331506))
+
+
+
 ## [6.4.1](https://github.com/ovh/ovh-ui-kit/compare/v6.4.0...v6.4.1) (2023-04-13)
 
 
