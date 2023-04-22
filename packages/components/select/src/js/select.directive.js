@@ -24,6 +24,7 @@ export default () => ({
     onBeforeLoad: '&?',
     onBlur: '&',
     onChange: '&',
+    onConfirmRemove: '&?',
     onError: '&?',
     onFocus: '&',
     onLoad: '&?',
