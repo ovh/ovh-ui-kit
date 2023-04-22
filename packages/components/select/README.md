@@ -8,29 +8,30 @@ angular.module('myModule', ['oui.select']);
 
 ## Component `oui-select`
 
-| Attribute         | Type      | Binding   | One-time binding  | Values            | Default   | Description
-| ----              | ----      | ----      | ----              | ----              | ----      | ----
-| `model`           | object    | =         | no                | n/a               | n/a       | model bound to component
-| `name`            | string    | @?        | yes               | n/a               | n/a       | name of the form component
-| `title`           | string    | @?        | yes               | n/a               | n/a       | title of the form component
-| `placeholder`     | string    | @?        | yes               | n/a               | n/a       | placeholder displayed when model is undefined
-| `match`           | string    | @?        | no                | n/a               | n/a       | property of item to show as selected item
-| `items`           | array     | <?        | no                | n/a               | n/a       | array used to populate the list
-| `disable-items`   | function  | &         | no                | n/a               | n/a       | predicate to determine items to disable
-| `required`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is required
-| `disabled`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is disabled
-| `searchable`      | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is searchable
-| `multiple`        | boolean   | <?        | yes               | `true`, `false`   | `false`   | allow multiple selection
-| `inline`          | boolean   | <?        | no                | `true`, `false`   | `false`   | enable inline style
-| `group-by`        | function  | <?        | no                | n/a               | n/a       | function taking an item as parameter and returning the group name as as string
-| `load`            | string    | @?        | no                | n/a               | n/a       | Load items over http using this property
-| `load-options`    | object    | <?        | yes               | n/a               | n/a       | Configure the items http call. Options are `global`, `headers`, `method`, `timeout` and `size`
-| `on-before-load`  | function  | &?        | no                | n/a               | n/a       | handler triggered just before the items are loaded
-| `on-blur`         | function  | &         | no                | n/a               | n/a       | called focus is lost
-| `on-focus`        | function  | &         | no                | n/a               | n/a       | called on focus
-| `on-change`       | function  | &         | no                | n/a               | n/a       | handler triggered when value has changed
-| `on-load`         | function  | &?        | no                | n/a               | n/a       | handler triggered when items have been loaded
-| `on-error`        | function  | &?        | no                | n/a               | n/a       | handler triggered if an error occured when loading items
+| Attribute           | Type      | Binding   | One-time binding  | Values            | Default   | Description
+| ----                | ----      | ----      | ----              | ----              | ----      | ----
+| `model`             | object    | =         | no                | n/a               | n/a       | model bound to component
+| `name`              | string    | @?        | yes               | n/a               | n/a       | name of the form component
+| `title`             | string    | @?        | yes               | n/a               | n/a       | title of the form component
+| `placeholder`       | string    | @?        | yes               | n/a               | n/a       | placeholder displayed when model is undefined
+| `match`             | string    | @?        | no                | n/a               | n/a       | property of item to show as selected item
+| `items`             | array     | <?        | no                | n/a               | n/a       | array used to populate the list
+| `disable-items`     | function  | &         | no                | n/a               | n/a       | predicate to determine items to disable
+| `required`          | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is required
+| `disabled`          | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is disabled
+| `searchable`        | boolean   | <?        | no                | `true`, `false`   | `false`   | define if the component is searchable
+| `multiple`          | boolean   | <?        | yes               | `true`, `false`   | `false`   | allow multiple selection
+| `inline`            | boolean   | <?        | no                | `true`, `false`   | `false`   | enable inline style
+| `group-by`          | function  | <?        | no                | n/a               | n/a       | function taking an item as parameter and returning the group name as as string
+| `load`              | string    | @?        | no                | n/a               | n/a       | Load items over http using this property
+| `load-options`      | object    | <?        | yes               | n/a               | n/a       | Configure the items http call. Options are `global`, `headers`, `method`, `timeout` and `size`
+| `on-before-load`    | function  | &?        | no                | n/a               | n/a       | handler triggered just before the items are loaded
+| `on-blur`           | function  | &         | no                | n/a               | n/a       | called focus is lost
+| `on-focus`          | function  | &         | no                | n/a               | n/a       | called on focus
+| `on-change`         | function  | &         | no                | n/a               | n/a       | handler triggered when value has changed
+| `on-load`           | function  | &?        | no                | n/a               | n/a       | handler triggered when items have been loaded
+| `on-error`          | function  | &?        | no                | n/a               | n/a       | handler triggered if an error occured when loading items
+| `on-confirm-remove` | function  | &?        | no                | n/a               | n/a       | handler triggered before removing an item 
 
 ### Attribute `disable-items`
 
@@ -44,11 +45,35 @@ If you want to access the new model inside the `on-change` callback you need to 
 
 ```html
 <oui-select
-    model="$ctrl.modal"
+    model="$ctrl.model"
     items="$ctrl.countries"
     match="country.name"
     on-change="$ctrl.onChange(modelValue)">
 </oui-select>
+```
+
+### Attribute `on-confirm-remove`
+
+When `multiple` is `true`, you may provide this handler before an item is removed from the selection. This handler is passed the item to remove and must return a promise. If the return value of that promise is truthy, the item is removed from the selection, otherwise it is kept.
+
+```html
+<oui-select
+    model="$ctrl.model"
+    items="$ctrl.items"
+    multiple="true"
+    on-confirm-remove="$ctrl.onConfirmRemove(item)">
+</oui-select>
+```
+
+```javascript
+async onConfirmRemove(item) {
+  try {
+    const removed = await doSomeAsyncTasksWith(item);
+    return removed;
+  } catch (e) {
+    return false;
+  }
+}
 ```
 
 ### Custom option template

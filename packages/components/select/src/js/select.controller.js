@@ -78,12 +78,21 @@ export default class {
     }
   }
 
-  removeChoice(e, index, callback) {
+  removeChoice(e, index, item, callback) {
     e.preventDefault();
     e.stopPropagation();
 
-    // Call $selectMultiple.removeChoice of ui-select
-    callback(index, this);
+    if (this.onConfirmRemove) {
+      this.onConfirmRemove({ item, index }).then((response) => {
+        if (response) {
+          // Call $selectMultiple.removeChoice of ui-select
+          callback(index, this);
+        }
+      });
+    } else {
+      // Call $selectMultiple.removeChoice of ui-select
+      callback(index, this);
+    }
   }
 
   onUiSelectClick() {

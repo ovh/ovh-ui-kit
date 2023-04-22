@@ -5,7 +5,7 @@
     </span>
     <button type="button" class="oui-chip ui-select-match-item"
         ng-class="{ 'oui-chip_closable': !$select.disabled }"
-        ng-click="$ctrl.removeChoice($event, $index, $selectMultiple.removeChoice)"
+        ng-click="$ctrl.removeChoice($event, $index, $item, $selectMultiple.removeChoice)"
         ng-repeat="$item in $select.selected track by $index"
         ng-disabled="$ctrl.loading || $select.disabled"
         ui-select-sort="$select.selected"
