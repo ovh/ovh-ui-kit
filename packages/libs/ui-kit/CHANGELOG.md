@@ -1,3 +1,12 @@
+# [6.5.0](https://github.com/ovh/ovh-ui-kit/compare/v6.4.2...v6.5.0) (2023-04-26)
+
+
+### Features
+
+* **select:** add on-confirm-remove property ([835a26f](https://github.com/ovh/ovh-ui-kit/commit/835a26f60406189c52f9820f385365a95446fd76))
+
+
+
 ## [6.4.2](https://github.com/ovh/ovh-ui-kit/compare/v6.4.1...v6.4.2) (2023-04-14)
 
 
