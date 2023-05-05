@@ -142,6 +142,16 @@ export default class DatagridController {
       this.paginationMode = paginationMode;
       this.paging.paginationMode = paginationMode;
     }
+
+    if (changes.page && !changes.page.isFirstChange()) {
+      const currentPageValue = parseInt(changes.page.currentValue, 10) || 1;
+      if (currentPageValue !== changes.page.previousValue) {
+        this.page = currentPageValue;
+        this.offset = (this.page - 1) * this.pageSize + 1;
+        this.paging.setOffset(this.offset);
+        this.refreshData();
+      }
+    }
   }
 
   $doCheck() {
@@ -311,6 +321,7 @@ export default class DatagridController {
 
   onPaginationChange({ offset, pageSize }) {
     this.refreshData(() => {
+      this.page = Math.floor((pageSize + offset - 1) / pageSize);
       this.paging.setOffset(offset);
       this.paging.setPageSize(pageSize);
       this.onPageChange({
