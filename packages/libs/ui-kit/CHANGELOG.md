@@ -1,3 +1,12 @@
+## [6.5.1](https://github.com/ovh/ovh-ui-kit/compare/v6.5.0...v6.5.1) (2023-05-09)
+
+
+### Bug Fixes
+
+* **datagrid:** update the page property on changes ([42cf4fd](https://github.com/ovh/ovh-ui-kit/commit/42cf4fd3e439902e5e8014ba08bcf061ee1b3702))
+
+
+
 # [6.5.0](https://github.com/ovh/ovh-ui-kit/compare/v6.4.2...v6.5.0) (2023-04-26)
 
 
