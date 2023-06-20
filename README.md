@@ -1,5 +1,7 @@
 # OVHcloud UI Kit
 
+hello world
+
 ## Introduction
 
 This repository is a monorepo containing all the source code of our components framework.
