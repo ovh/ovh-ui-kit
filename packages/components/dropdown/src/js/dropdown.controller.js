@@ -158,7 +158,7 @@ export default class {
         },
         preventOverflow: {
           boundariesElement: 'viewport',
-          escapeWithReference: true,
+          escapeWithReference: false,
         },
       },
     });
