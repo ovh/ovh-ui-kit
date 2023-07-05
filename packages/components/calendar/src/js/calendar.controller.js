@@ -1,4 +1,7 @@
-import { addBooleanParameter, addDefaultParameter } from '@ovh-ux/ui-kit.core/src/js/component-utils';
+import {
+  addBooleanParameter,
+  addDefaultParameter,
+} from '@ovh-ux/ui-kit.core/src/js/component-utils';
 import flatpickr from 'flatpickr/dist/flatpickr';
 import merge from 'lodash/merge';
 
@@ -63,16 +66,14 @@ export default class {
 
     // Append calendar to control wrapper
     if (!this.appendToBody) {
-      const wrapper = this.$element[0].querySelector('.oui-calendar__control-wrapper');
+      const wrapper = this.$element[0].querySelector(
+        '.oui-calendar__control-wrapper',
+      );
       this.setOptionsProperty('appendTo', wrapper);
     }
 
     // Set events with array of supported hooks/attributes
-    this.setEventHooks([
-      'onChange',
-      'onOpen',
-      'onClose',
-    ]);
+    this.setEventHooks(['onChange', 'onOpen', 'onClose']);
 
     // Get instance of flatpickr when component is ready
     this.setOptionsProperty('onReady', (selectedDates, dateStr, instance) => {
@@ -102,14 +103,37 @@ export default class {
     this.initCalendarInstance();
   }
 
+  handleReadonlyElement(htmlElt, hidden = false) {
+    const element = angular.element(htmlElt);
+    if (this.disabled) {
+      element.attr('disabled', 'disabled');
+      element.addClass('disabled');
+      if (hidden) {
+        element.attr('hidden', 'hidden');
+      }
+    } else {
+      element.removeAttr('disabled');
+      element.removeClass('disabled');
+      if (hidden) {
+        element.removeAttr('hidden');
+      }
+    }
+  }
+
   $onChanges({ minDate, maxDate }) {
     if (this.flatpickr) {
       if (this.flatpickr.altInput) {
         // Fix disabled state when there is an alt input
-        if (this.disabled) {
-          angular.element(this.flatpickr.altInput).attr('disabled', 'disabled');
-        } else {
-          angular.element(this.flatpickr.altInput).removeAttr('disabled');
+        this.handleReadonlyElement(this.flatpickr.altInput);
+        // In inline mode, inputs are managed in calendar container
+        if (this.inline) {
+          const { calendarContainer } = this.flatpickr;
+          const inputs = calendarContainer.querySelectorAll('input');
+          angular.forEach(inputs, (input) => {
+            this.handleReadonlyElement(input);
+          });
+          // span AM-PM must be hide to avoid modifiying AM/PM value in readonly mode
+          this.handleReadonlyElement(calendarContainer.querySelectorAll('.flatpickr-am-pm'), true);
         }
       }
 
@@ -129,7 +153,9 @@ export default class {
 
   $postLink() {
     this.$timeout(() => {
-      const controls = angular.element(this.$element[0].querySelectorAll('.oui-calendar__control'));
+      const controls = angular.element(
+        this.$element[0].querySelectorAll('.oui-calendar__control'),
+      );
 
       this.$element
         .addClass('oui-calendar')
