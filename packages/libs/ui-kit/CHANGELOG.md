@@ -1,3 +1,13 @@
+## [6.5.2](https://github.com/ovh/ovh-ui-kit/compare/v6.5.1...v6.5.2) (2023-07-07)
+
+
+### Bug Fixes
+
+* **calendar:** fix calendar disabled in inline mode ([faf9efb](https://github.com/ovh/ovh-ui-kit/commit/faf9efbbb277c940a0dcf91ef32d72c6615c3596))
+* **dropdown:** update popper modifiers option ([56abcd0](https://github.com/ovh/ovh-ui-kit/commit/56abcd0d764a7cc08c249c1810cbdcdc2da31192))
+
+
+
 ## [6.5.1](https://github.com/ovh/ovh-ui-kit/compare/v6.5.0...v6.5.1) (2023-05-09)
 
 
