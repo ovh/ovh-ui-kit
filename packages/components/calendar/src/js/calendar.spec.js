@@ -180,40 +180,38 @@ describe('ouiCalendar', () => {
       expect(angular.element(input).attr('disabled')).toBe('disabled');
     });
 
-    it('should enable and disable component in "inline" mode', () => {
+    it('should disable and enable component in "inline" mode', () => {
       // setup: calendar inline
       const template = `<oui-calendar model="$ctrl.model" disabled="$ctrl.disabled"
        format="d-m-Y" alt-format="H:i" enable-time inline></oui-calendar>`;
 
-      // when: component is enabled
-      const component = testUtils.compileTemplate(template, { model: 'today', disabled: false });
+      // when: component is disabled
+      const component = testUtils.compileTemplate(template, { model: 'today', disabled: true });
       const ctrl = component.controller('ouiCalendar');
       $timeout.flush();
 
-      // then: none of input are disabled
+      // then: all inputs are disabled
       const input = angular.element(component[0].querySelector('.oui-calendar__control'));
-      const altInput = angular.element(component[0].querySelector('.oui-calendar__control_alt'));
       const inputs = component[0].querySelectorAll('.numInput');
 
       expect(ctrl.inline).toBeTrue();
-      expect(ctrl.disabled).toBeFalse();
-      expect(angular.element(input).attr('type')).toBe('hidden');
-      expect(angular.element(altInput).attr('type')).toBe('hidden');
-      expect(angular.element(altInput).attr('disabled')).toBeUndefined();
-      angular.forEach(inputs, (i) => {
-        expect(angular.element(i).attr('disabled')).toBeUndefined();
-      });
-
-      // when: component is disabled
-      const scope = component.scope();
-      scope.$ctrl.disabled = true;
-      scope.$apply();
-
-      // then: all inputs are disabled
       expect(ctrl.disabled).toBeTrue();
-      expect(angular.element(altInput).attr('disabled')).toBe('disabled');
+      expect(angular.element(input).attr('type')).toBe('hidden');
+      expect(angular.element(input).attr('disabled')).toBe('disabled');
       angular.forEach(inputs, (i) => {
         expect(angular.element(i).attr('disabled')).toBe('disabled');
+      });
+
+      // when: component is enabled
+      const scope = component.scope();
+      scope.$ctrl.disabled = false;
+      scope.$apply();
+
+      // then: none of input are disabled
+      expect(ctrl.disabled).toBeFalse();
+      expect(angular.element(input).attr('disabled')).toBeUndefined();
+      angular.forEach(inputs, (i) => {
+        expect(angular.element(i).attr('disabled')).toBeUndefined();
       });
     });
   });
