@@ -101,6 +101,7 @@ export default class {
     addDefaultParameter(this, 'name', `ouiCalendar${this.$id}`);
 
     this.initCalendarInstance();
+    this.handleInputsVisibility();
   }
 
   handleReadonlyElement(htmlElt, hidden = false) {
@@ -120,27 +121,32 @@ export default class {
     }
   }
 
+  handleInputsVisibility() {
+    if (this.flatpickr.altInput) {
+      // Fix disabled state when there is an alt input
+      this.handleReadonlyElement(this.flatpickr.altInput);
+    }
+    // In inline mode, inputs are managed in calendar container
+    if (this.inline) {
+      const { calendarContainer } = this.flatpickr;
+      const inputs = calendarContainer.querySelectorAll('input');
+      angular.forEach(inputs, (input) => {
+        this.handleReadonlyElement(input);
+      });
+      // span AM-PM must be hide to avoid modifiying AM/PM value in readonly mode
+      this.handleReadonlyElement(
+        calendarContainer.querySelectorAll('.flatpickr-am-pm'),
+        true,
+      );
+    }
+  }
+
   $onChanges({ minDate, maxDate }) {
     if (this.flatpickr) {
-      if (this.flatpickr.altInput) {
-        // Fix disabled state when there is an alt input
-        this.handleReadonlyElement(this.flatpickr.altInput);
-        // In inline mode, inputs are managed in calendar container
-        if (this.inline) {
-          const { calendarContainer } = this.flatpickr;
-          const inputs = calendarContainer.querySelectorAll('input');
-          angular.forEach(inputs, (input) => {
-            this.handleReadonlyElement(input);
-          });
-          // span AM-PM must be hide to avoid modifiying AM/PM value in readonly mode
-          this.handleReadonlyElement(calendarContainer.querySelectorAll('.flatpickr-am-pm'), true);
-        }
-      }
-
+      this.handleInputsVisibility();
       if (maxDate) {
         this.flatpickr.set('maxDate', maxDate.currentValue);
       }
-
       if (minDate) {
         this.flatpickr.set('minDate', minDate.currentValue);
       }
