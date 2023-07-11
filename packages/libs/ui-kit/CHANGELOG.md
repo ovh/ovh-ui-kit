@@ -1,3 +1,12 @@
+## [6.5.3](https://github.com/ovh/ovh-ui-kit/compare/v6.5.2...v6.5.3) (2023-07-11)
+
+
+### Bug Fixes
+
+* **calendar:** fix calendar inline disabled by default ([acfb192](https://github.com/ovh/ovh-ui-kit/commit/acfb1924a4e9bfbbaaddd22d9d8a1eaeec5a3e65))
+
+
+
 ## [6.5.2](https://github.com/ovh/ovh-ui-kit/compare/v6.5.1...v6.5.2) (2023-07-07)
 
 
