@@ -1,3 +1,12 @@
+# [6.6.0](https://github.com/ovh/ovh-ui-kit/compare/v6.5.3...v6.6.0) (2023-07-25)
+
+
+### Features
+
+* **icons:** add vrack services icon ([c8a088a](https://github.com/ovh/ovh-ui-kit/commit/c8a088a691bf2bcd96a31542fba42d8c7f1e2374))
+
+
+
 ## [6.5.3](https://github.com/ovh/ovh-ui-kit/compare/v6.5.2...v6.5.3) (2023-07-11)
 
 
