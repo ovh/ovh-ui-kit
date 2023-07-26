@@ -1521,6 +1521,11 @@ export const Flags = () => `
   </div>
 
   <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-flag oui-flag_in"></span></div>
+    <div class="doc-badge__code"><code>.oui-flag_in</code></div>
+  </div>
+
+  <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-flag oui-flag_it"></span></div>
     <div class="doc-badge__code"><code>.oui-flag_it</code></div>
   </div>
