@@ -1,3 +1,12 @@
+## [6.6.1](https://github.com/ovh/ovh-ui-kit/compare/v6.6.0...v6.6.1) (2023-07-28)
+
+
+### Features
+
+* **flags:** add indian flag ([aa80b9e](https://github.com/ovh/ovh-ui-kit/commit/aa80b9e14b35a2b19567da31864d3e77b9a4a315))
+
+
+
 # [6.6.0](https://github.com/ovh/ovh-ui-kit/compare/v6.5.3...v6.6.0) (2023-07-25)
 
 
