@@ -226,7 +226,9 @@ export default class FieldController {
       const attributes = VALIDATION_PARAMETERS[validationName];
       attributes.forEach((attributeName) => {
         if (hasAttributeValue(controlElement, attributeName)) {
-          validationParameters[validationName] = getAttribute(controlElement, attributeName);
+          Object.defineProperty(validationParameters, validationName, {
+            get: () => getAttribute(controlElement, attributeName),
+          });
         }
       });
     });

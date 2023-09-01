@@ -643,6 +643,44 @@ describe('ouiField', () => {
         expect(controller.getErrorMessage('minlength')).toContain(messageMinlength);
       });
 
+      it('should give a dynamic message containing parameters', () => {
+        const minValue = 5;
+        const element = TestUtils.compileTemplate(`
+                    <form name="form">
+                        <oui-field label="{{'range'}}">
+                            <input type="number"
+                                class="oui-input"
+                                id="range_start"
+                                name="range_start"
+                                ng-model="$ctrl.rangeStart">
+                            <input type="number"
+                                class="oui-input"
+                                id="range_end"
+                                name="range_end"
+                                ng-min="$ctrl.rangeStart"
+                                ng-model="$ctrl.rangeEnd">
+                        </oui-field>
+                    </form>
+                    `, {
+          rangeStart: 0,
+          rangeEnd: 0,
+        });
+
+        const controller = getField(element).controller('ouiField');
+
+        $timeout.flush();
+
+        const $rangeStartControl = getControl(controller, 'range_start');
+        $rangeStartControl.val(minValue);
+        $rangeStartControl.triggerHandler('input');
+        $rangeStartControl.triggerHandler('blur');
+
+        $timeout.flush();
+
+        expect(controller.getFirstError().min).toBeTruthy();
+        expect(controller.getErrorMessage('min')).toContain(minValue);
+      });
+
       it('should show error on submit', () => {
         const element = TestUtils.compileTemplate(`
                     <form name="form" ng-submit="$ctrl.noop()">
