@@ -1,3 +1,12 @@
+## [6.6.2](https://github.com/ovh/ovh-ui-kit/compare/v6.6.1...v6.6.2) (2023-09-04)
+
+
+### Bug Fixes
+
+* **field:** use current validation value ([425183b](https://github.com/ovh/ovh-ui-kit/commit/425183b79781554e760a442ce8f99cb0eb7ffa31))
+
+
+
 ## [6.6.1](https://github.com/ovh/ovh-ui-kit/compare/v6.6.0...v6.6.1) (2023-07-28)
 
 
