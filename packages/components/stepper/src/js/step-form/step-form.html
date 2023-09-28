@@ -63,10 +63,11 @@
                 ng-bind="::$ctrl.cancelText"
                 ng-href="{{::$ctrl.cancelHref}}">
             </a>
-            <oui-button class="oui-stepper__skippable-link" type="submit"
+            <oui-button class="oui-stepper__skippable-link"
                 variant="link"
                 size="l"
-                ng-if="$ctrl.skippable">
+                ng-if="$ctrl.skippable"
+                on-click="$ctrl.onSkip() || $ctrl.onFormSubmit(this[$ctrl.name])">
                 {{::$ctrl.translations.skipThisStep}}
             </oui-button>
         </footer>

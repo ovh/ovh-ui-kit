@@ -68,6 +68,7 @@ If you want to access the forms inside `on-finish` callback, you need to use the
 | `on-cancel`       | function  | &?        | no                | n/a               | n/a       | cancel step function
 | `on-focus`        | function  | &         | no                | n/a               | n/a       | focused step function
 | `on-submit`       | function  | &         | no                | n/a               | n/a       | submit step function
+| `on-skip`         | function  | &?        | no                | n/a               | n/a       | skip step function
 
 ### Attribute `valid`
 
