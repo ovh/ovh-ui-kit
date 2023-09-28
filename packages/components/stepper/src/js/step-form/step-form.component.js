@@ -29,6 +29,7 @@ export default {
     onCancel: '&?',
     onFocus: '&',
     onSubmit: '&',
+    onSkip: '&?',
   },
   controller,
   template,
