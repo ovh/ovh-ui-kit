@@ -1,3 +1,12 @@
+## [6.6.3](https://github.com/ovh/ovh-ui-kit/compare/v6.6.2...v6.6.3) (2023-09-29)
+
+
+### Features
+
+* **stepper:** add stepper skip callback ([23b8cd2](https://github.com/ovh/ovh-ui-kit/commit/23b8cd20f5f675d2a9f2c02cd876ef4c8f09a35b))
+
+
+
 ## [6.6.2](https://github.com/ovh/ovh-ui-kit/compare/v6.6.1...v6.6.2) (2023-09-04)
 
 
