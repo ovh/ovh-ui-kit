@@ -12,6 +12,10 @@ describe('ouiPageHeader', () => {
     return element[0].querySelector('.oui-header__title');
   }
 
+  function getText(element) {
+    return angular.element(element).text().trim();
+  }
+
   function getDescriptionElement(element) {
     return element[0].querySelector('.oui-header__description');
   }
@@ -21,7 +25,18 @@ describe('ouiPageHeader', () => {
       const element = TestUtils.compileTemplate('<oui-header heading="title"></oui-header>');
 
       const titleElement = getTitleElement(element);
-      expect(angular.element(titleElement).html()).toBe('title');
+      expect(getText(titleElement)).toBe('title');
+    });
+
+    it('should display header with custom slot', () => {
+      const element = TestUtils.compileTemplate(`
+        <oui-header>
+          <oui-header-heading>title using slot</oui-header-heading>
+        </oui-header>
+      `);
+
+      const titleElement = getTitleElement(element);
+      expect(getText(titleElement)).toBe('title using slot');
     });
 
     it('should display header with title and subtitle', () => {
@@ -29,8 +44,8 @@ describe('ouiPageHeader', () => {
 
       const titleElement = getTitleElement(element);
       const subtitleElement = getDescriptionElement(element);
-      expect(angular.element(titleElement).html()).toBe('title');
-      expect(angular.element(subtitleElement).html()).toBe('subtitle');
+      expect(getText(titleElement)).toBe('title');
+      expect(getText(subtitleElement)).toBe('subtitle');
     });
   });
 });

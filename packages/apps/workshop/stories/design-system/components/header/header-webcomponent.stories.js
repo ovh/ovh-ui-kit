@@ -3,6 +3,7 @@ import { forModule } from 'storybook-addon-angularjs';
 import BackButton from '@ovh-ux/ui-kit.back-button';
 import GuideMenu from '@ovh-ux/ui-kit.guide-menu';
 import Header from '@ovh-ux/ui-kit.header';
+import Badge from '@ovh-ux/ui-kit.badge';
 
 import readme from '@ovh-ux/ui-kit.header/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -15,6 +16,7 @@ angular.module(moduleName, [
   // For examples
   BackButton,
   GuideMenu,
+  Badge,
 ]);
 
 export default {
@@ -113,6 +115,18 @@ export const WithHeaderTabs = forModule(moduleName).createElement(
           External link
         </oui-guide-menu-item>
       </oui-guide-menu>
+    </oui-header>`,
+  ),
+);
+
+export const WithHeadingSlot = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-header
+      description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem dolorem obcaecati perspiciatis, laboriosam repellendus aperiam provident ad voluptas dignissimos distinctio commodi optio tempore at ab possimus cumque odio nesciunt totam.">
+      <oui-header-heading>
+        Page Title <span class="oui-badge oui-badge_info">heading slot</span>
+      </oui-header-heading>
     </oui-header>`,
   ),
 );
