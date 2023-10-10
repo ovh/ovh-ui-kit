@@ -10,5 +10,6 @@ export default class {
     this.transcludeBack = this.$transclude.isSlotFilled('back');
     this.transcludeGuide = this.$transclude.isSlotFilled('guide');
     this.transcludeTabs = this.$transclude.isSlotFilled('tabs');
+    this.transcludeHeading = this.$transclude.isSlotFilled('heading');
   }
 }

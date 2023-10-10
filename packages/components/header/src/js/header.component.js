@@ -12,5 +12,6 @@ export default {
     back: '?ouiBackButton',
     guide: '?ouiGuideMenu',
     tabs: '?ouiHeaderTabs',
+    heading: '?ouiHeaderHeading',
   },
 };

@@ -5,8 +5,15 @@
                 ng-if="$ctrl.transcludeBack"
                 ng-transclude="back">
             </div>
-            <h1 class="oui-header__title"
-                ng-bind="::$ctrl.heading">
+            <h1 class="oui-header__title">
+                <span
+                    ng-if="!$ctrl.transcludeHeading"
+                    ng-bind="::$ctrl.heading"
+                ></span>
+                <span
+                    ng-if="$ctrl.transcludeHeading"
+                    ng-transclude="heading">
+                </div>
             </h1>
             <h2 class="oui-header__description"
                 ng-if="::!!$ctrl.description"
