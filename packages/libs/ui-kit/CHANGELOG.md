@@ -1,3 +1,12 @@
+# [6.7.0](https://github.com/ovh/ovh-ui-kit/compare/v6.6.3...v6.7.0) (2023-10-11)
+
+
+### Features
+
+* **header:** add heading slot ([6ee6ab8](https://github.com/ovh/ovh-ui-kit/commit/6ee6ab852feebfbcd85dc9ddd51ec5887d9d9246))
+
+
+
 ## [6.6.3](https://github.com/ovh/ovh-ui-kit/compare/v6.6.2...v6.6.3) (2023-09-29)
 
 
