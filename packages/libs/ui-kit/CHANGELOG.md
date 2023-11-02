@@ -1,3 +1,12 @@
+## [6.7.1](https://github.com/ovh/ovh-ui-kit/compare/v6.7.0...v6.7.1) (2023-11-02)
+
+
+### Bug Fixes
+
+* **datagrid:** fix cross display in helper tooltip ([ea6bfe1](https://github.com/ovh/ovh-ui-kit/commit/ea6bfe1e47ea6d63d728bb05d6cbbcd4dddb598f))
+
+
+
 # [6.7.0](https://github.com/ovh/ovh-ui-kit/compare/v6.6.3...v6.7.0) (2023-10-11)
 
 
