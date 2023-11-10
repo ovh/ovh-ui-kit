@@ -739,6 +739,29 @@ describe('ouiField', () => {
         $timeout.flush();
         expect(element[0].querySelector('.oui-field__error')).not.toBeNull();
       });
+
+      it('should show error without user interaction', () => {
+        const element = TestUtils.compileTemplate(`
+                    <form name="form" ng-submit="$ctrl.noop()">
+                        <oui-field label="{{'username'}}" force-error-display="true">
+                            <input type="text"
+                                class="oui-input"
+                                type="text"
+                                id="username"
+                                name="username"
+                                required
+                                ng-model="$ctrl.username">
+                        </oui-field>
+                        <button type="submit">Ok</button>
+                    </form>
+                `, {
+          noop,
+        });
+        $timeout.flush();
+
+        // Initial state
+        expect(element[0].querySelector('.oui-field__error')).not.toBeNull();
+      });
     });
   });
 });

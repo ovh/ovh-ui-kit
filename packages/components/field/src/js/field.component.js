@@ -8,6 +8,7 @@ export default {
     size: '@?',
     errorMessages: '<?',
     labelPopover: '@?',
+    forceErrorDisplay: '<?',
   },
   controller,
   require: {

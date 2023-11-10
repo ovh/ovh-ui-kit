@@ -31,10 +31,11 @@ angular.module('myModule', ['oui.field'])
 
 ## Component `oui-field`
 
-| Attribute         | Type      | Binding   | One-time binding  | Values                            | Default   | Description
-| ----              | ----      | ----      | ----              | ----                              | ----      | ----
-| `label`           | string    | @?        | no                | n/a                               | n/a       | field label
-| `label-popover`   | string    | @?        | no                | n/a                               | n/a       | text to describe the field or give more information
-| `help-text`       | string    | @?        | no                | n/a                               | n/a       | text to help fill the form field
-| `size`            | string    | @?        | yes               | `xs`, `s`, `m`, `l`, `xl`, `auto` | `auto`    | field size
-| `error-messages`  | object    | <?        | no                | n/a                               | n/a       | dictionary to override default messages
+| Attribute             | Type    | Binding   | One-time binding  | Values                            | Default   | Description
+|-----------------------|---------| ----      | ----              |-----------------------------------| ----      | ----
+| `label`               | string  | @?        | no                | n/a                               | n/a       | field label
+| `label-popover`       | string  | @?        | no                | n/a                               | n/a       | text to describe the field or give more information
+| `help-text`           | string  | @?        | no                | n/a                               | n/a       | text to help fill the form field
+| `size`                | string  | @?        | yes               | `xs`, `s`, `m`, `l`, `xl`, `auto` | `auto`    | field size
+| `force-error-display` | boolean | <?        | no                | true / false                      | n/a       | allow to display error messages even if the field is not blurred nor form submitted
+| `error-messages`      | object  | <?        | no                | n/a                               | n/a       | dictionary to override default messages
