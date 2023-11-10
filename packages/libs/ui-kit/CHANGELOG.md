@@ -1,3 +1,12 @@
+## [6.7.2](https://github.com/ovh/ovh-ui-kit/compare/v6.7.1...v6.7.2) (2023-11-10)
+
+
+### Features
+
+* **field:** allow displaying error message without user interaction ([ff60396](https://github.com/ovh/ovh-ui-kit/commit/ff603963e39c70ceab808a71ca6cd99ddb509631))
+
+
+
 ## [6.7.1](https://github.com/ovh/ovh-ui-kit/compare/v6.7.0...v6.7.1) (2023-11-02)
 
 
