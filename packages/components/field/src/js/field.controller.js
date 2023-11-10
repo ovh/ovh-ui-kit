@@ -148,7 +148,7 @@ export default class FieldController {
     }
 
     this.checkAllErrors();
-    return this.invalid && (this.blurred || this.form.$submitted);
+    return this.invalid && (this.forceErrorDisplay || this.blurred || this.form.$submitted);
   }
 
   checkAllErrors() {
