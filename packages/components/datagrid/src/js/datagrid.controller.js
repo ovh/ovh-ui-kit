@@ -360,8 +360,13 @@ export default class DatagridController {
     return this.refreshDatagridPromise;
   }
 
-  sort(column) {
-    if (!column || !column.sortable) {
+  sort(column, event) {
+    if (
+      !column
+      || !column.sortable
+      || event.target.classList.contains('oui-popover-button')
+      || event.target.classList.contains('oui-popover__content')
+      || event.target.classList.contains('oui-popover__close-button')) {
       return;
     }
 
