@@ -1,3 +1,13 @@
+## [6.7.3](https://github.com/ovh/ovh-ui-kit/compare/v6.7.2...v6.7.3) (2023-11-20)
+
+
+### Bug Fixes
+
+* **datagrid:** fix filter arrow scrolling ([6e8955e](https://github.com/ovh/ovh-ui-kit/commit/6e8955e57712742dda787efaacb3895b810204c2))
+* **datagrid:** fix multiple popover not hiding ([#830](https://github.com/ovh/ovh-ui-kit/issues/830)) ([e6f7dca](https://github.com/ovh/ovh-ui-kit/commit/e6f7dca7bbb3e0d6e1d2e79164cfc096fcb6d7eb))
+
+
+
 ## [6.7.2](https://github.com/ovh/ovh-ui-kit/compare/v6.7.1...v6.7.2) (2023-11-10)
 
 
