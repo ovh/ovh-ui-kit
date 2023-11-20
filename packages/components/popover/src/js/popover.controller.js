@@ -119,8 +119,8 @@ export default class PopoverController {
 
     // Avoid events if the opening is handled from outside
     if (angular.isUndefined(this.$attrs.ouiPopoverOpen)) {
-      this.$document.on('click', (evt) => this.documentClickHandler(evt));
-      this.$document.on('keydown', (evt) => this.triggerKeyHandler(evt));
+      this.$document.on(`click.${this.id}`, (evt) => this.documentClickHandler(evt));
+      this.$document.on(`keydown.${this.id}`, (evt) => this.triggerKeyHandler(evt));
     }
 
     this.$element.attr('aria-expanded', true);
@@ -133,8 +133,8 @@ export default class PopoverController {
     this.isPopoverOpen = false;
 
     if (angular.isUndefined(this.$attrs.ouiPopoverOpen)) {
-      this.$document.off('click');
-      this.$document.off('keydown');
+      this.$document.off(`click.${this.id}`);
+      this.$document.off(`keydown.${this.id}`);
     }
 
     this.$element.attr('aria-expanded', false);

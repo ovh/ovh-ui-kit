@@ -28,7 +28,7 @@
                     ng-attr-tabindex="{{column.sortable ? '0' : '-1'}}"
                     ng-class="$ctrl.getSortableClasses(column)"
                     ng-repeat="column in $ctrl.columns track by $index"
-                    ng-click="::$ctrl.sort(column)">
+                    ng-click="::$ctrl.sort(column, $event)">
                     <span ng-bind="column.title"></span>
                     <span class="oui-icon"
                         ng-class="$ctrl.getSortableIcons(column)"
@@ -41,6 +41,7 @@
                         class="oui-popover-button"
                         oui-popover="{{:: column.helper }}"
                         oui-popover-placement="right"
+                        oui-popover-id="{{:: 'popover-' + column.name}}"
                     ></button>
                 </th>
                 <th ng-if="$ctrl.hasActionMenu || $ctrl.customizable"
