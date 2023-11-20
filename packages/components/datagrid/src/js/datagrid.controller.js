@@ -361,12 +361,11 @@ export default class DatagridController {
   }
 
   sort(column, event) {
+    const popoverClassNames = ['oui-popover-button', 'oui-popover__content', 'oui-popover__close-button'];
     if (
       !column
       || !column.sortable
-      || event.target.classList.contains('oui-popover-button')
-      || event.target.classList.contains('oui-popover__content')
-      || event.target.classList.contains('oui-popover__close-button')) {
+      || popoverClassNames.some((className) => event.target.classList.contains(className))) {
       return;
     }
 
