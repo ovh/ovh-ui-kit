@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="icon_multiAZ" data-name="icon multiAZ" transform="translate(-69 7731)">
+    <rect id="Zone" width="16" height="16" transform="translate(69 -7731)" fill="none"/>
+    <g id="Icon" transform="translate(0 1.5)">
+      <circle id="Ellipse_103" data-name="Ellipse 103" cx="2.5" cy="2.5" r="2.5" transform="translate(74.5 -7731.5)" fill="#2859c0"/>
+      <circle id="Ellipse_104" data-name="Ellipse 104" cx="2.5" cy="2.5" r="2.5" transform="translate(79 -7722.5)" fill="#2859c0"/>
+      <circle id="Ellipse_105" data-name="Ellipse 105" cx="2.5" cy="2.5" r="2.5" transform="translate(70 -7722.5)" fill="#2859c0"/>
+      <path id="Ligne_17" data-name="Ligne 17" d="M9,.5H0v-1H9Z" transform="translate(72.5 -7720)" fill="#2859c0"/>
+      <path id="Ligne_18" data-name="Ligne 18" d="M4.064,8.245l-4.5-8,.872-.49,4.5,8Z" transform="translate(77 -7729)" fill="#2859c0"/>
+      <path id="Ligne_19" data-name="Ligne 19" d="M.436,8.245l-.872-.49,4.5-8,.872.49Z" transform="translate(72.5 -7729)" fill="#2859c0"/>
+    </g>
+  </g>
+</svg>
