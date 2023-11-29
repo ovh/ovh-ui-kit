@@ -1,3 +1,13 @@
+## [6.7.4](https://github.com/ovh/ovh-ui-kit/compare/v6.7.3...v6.7.4) (2023-11-29)
+
+
+### Bug Fixes
+
+* **header:** correctly close span tag ([c030dd5](https://github.com/ovh/ovh-ui-kit/commit/c030dd50d08856d2f62ce41893210a5cc919cae6))
+* **icon:** add cluster concept icon ([5f503f9](https://github.com/ovh/ovh-ui-kit/commit/5f503f93bc9d1df0b81e33ff41d26a80a8492940))
+
+
+
 ## [6.7.3](https://github.com/ovh/ovh-ui-kit/compare/v6.7.2...v6.7.3) (2023-11-20)
 
 
