@@ -740,22 +740,23 @@ describe('ouiField', () => {
         expect(element[0].querySelector('.oui-field__error')).not.toBeNull();
       });
 
-      it('should show error without user interaction', () => {
+      it('should show error without user interaction and with preset value', () => {
         const element = TestUtils.compileTemplate(`
-                    <form name="form" ng-submit="$ctrl.noop()">
-                        <oui-field label="{{'username'}}" force-error-display="true">
+                    <form name="form">
+                        <oui-field label="{{'username'}}">
                             <input type="text"
                                 class="oui-input"
                                 type="text"
                                 id="username"
                                 name="username"
                                 required
-                                ng-model="$ctrl.username">
+                                ng-model="$ctrl.username"
+                                ng-pattern="/^[a-zA-Z]{3,8}$/">
                         </oui-field>
                         <button type="submit">Ok</button>
                     </form>
                 `, {
-          noop,
+          username: 'ch@t12',
         });
         $timeout.flush();
 
