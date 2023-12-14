@@ -9,6 +9,7 @@ export default {
     errorMessages: '<?',
     labelPopover: '@?',
     forceErrorDisplay: '<?',
+    inline: '<?',
   },
   controller,
   require: {
