@@ -1,10 +1,4 @@
 <div class="oui-button-group">
-    <button class="oui-button oui-button_l oui-button_primary"
-        type="submit"
-        ng-bind="::$ctrl.submitText"
-        ng-click="$ctrl.onSubmit()"
-        ng-disabled="$ctrl.disabled">
-    </button>
     <button class="oui-button oui-button_l oui-button_secondary"
         type="button"
         ng-if="::!$ctrl.href && !!$ctrl.onCancel"
@@ -17,4 +11,10 @@
         ng-click="$ctrl.onCancel()"
         ng-href="{{:: $ctrl.href }}">
     </a>
+    <button class="oui-button oui-button_l oui-button_primary"
+        type="submit"
+        ng-bind="::$ctrl.submitText"
+        ng-click="$ctrl.onSubmit()"
+        ng-disabled="$ctrl.disabled">
+    </button>
 </div>
