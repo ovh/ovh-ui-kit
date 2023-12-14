@@ -1,6 +1,7 @@
 <div class="oui-field"
     ng-class="[
         { 'oui-field_error': $ctrl.isErrorVisible() },
+        { 'oui-field_inline': $ctrl.inline },
         (!!$ctrl.size && 'oui-field_' + $ctrl.size),
     ]">
     <div class="oui-field__header"
