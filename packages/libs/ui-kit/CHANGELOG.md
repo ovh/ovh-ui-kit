@@ -1,3 +1,13 @@
+## [6.7.5](https://github.com/ovh/ovh-ui-kit/compare/v6.7.4...v6.7.5) (2023-12-14)
+
+
+### Features
+
+* **field:** add inline label ([#834](https://github.com/ovh/ovh-ui-kit/issues/834)) ([de558d3](https://github.com/ovh/ovh-ui-kit/commit/de558d3dd62e31995d60217f218f4d772c95bdb1))
+* **field:** changed restriction on error display ([#833](https://github.com/ovh/ovh-ui-kit/issues/833)) ([7b48892](https://github.com/ovh/ovh-ui-kit/commit/7b488921eacc89de16acffe5c30c82fc0e159678))
+
+
+
 ## [6.7.4](https://github.com/ovh/ovh-ui-kit/compare/v6.7.3...v6.7.4) (2023-11-29)
 
 
