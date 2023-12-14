@@ -1,3 +1,12 @@
+## [6.7.6](https://github.com/ovh/ovh-ui-kit/compare/v6.7.5...v6.7.6) (2023-12-14)
+
+
+### Features
+
+* **form-actions:** switch  buttons positions ([#835](https://github.com/ovh/ovh-ui-kit/issues/835)) ([61ed9fd](https://github.com/ovh/ovh-ui-kit/commit/61ed9fda8bd87862fe61777744bf834fb3b95daa))
+
+
+
 ## [6.7.5](https://github.com/ovh/ovh-ui-kit/compare/v6.7.4...v6.7.5) (2023-12-14)
 
 
