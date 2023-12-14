@@ -40,8 +40,8 @@ describe('ouiFormActions', () => {
                     on-submit="$ctrl.submit()"
                     on-cancel="$ctrl.cancel()">
                 </oui-form-actions>`);
-      const submitButton = component.find('button').eq(0);
-      const cancelButton = component.find('button').eq(1);
+      const cancelButton = component.find('button').eq(0);
+      const submitButton = component.find('button').eq(1);
 
       expect(submitButton.hasClass('oui-button_primary')).toBe(true);
       expect(cancelButton.hasClass('oui-button_secondary')).toBe(true);
@@ -53,8 +53,8 @@ describe('ouiFormActions', () => {
                     on-submit="$ctrl.submit()"
                     on-cancel="$ctrl.cancel()">
                 </oui-form-actions>`);
-      const submitButton = component.find('button').eq(0);
-      const cancelButton = component.find('button').eq(1);
+      const cancelButton = component.find('button').eq(0);
+      const submitButton = component.find('button').eq(1);
 
       expect(submitButton.text().trim()).toBe(SUBMIT_TEXT);
       expect(cancelButton.text().trim()).toBe(CANCEL_TEXT);
@@ -68,8 +68,8 @@ describe('ouiFormActions', () => {
                     submit-text="testSubmit"
                     cancel-text="testCancel">
                 </oui-form-actions>`);
-      const submitButton = component.find('button').eq(0);
-      const cancelButton = component.find('button').eq(1);
+      const cancelButton = component.find('button').eq(0);
+      const submitButton = component.find('button').eq(1);
 
       expect(submitButton.text().trim()).toBe('testSubmit');
       expect(cancelButton.text().trim()).toBe('testCancel');
@@ -82,7 +82,7 @@ describe('ouiFormActions', () => {
               on-cancel="$ctrl.cancel()"
               disabled>
           </oui-form-actions>`);
-      const submitButton = component.find('button').eq(0);
+      const submitButton = component.find('button').eq(1);
 
       expect(submitButton.attr('disabled')).toBe('disabled');
     });
@@ -93,7 +93,7 @@ describe('ouiFormActions', () => {
                     on-submit="$ctrl.submit()"
                     on-cancel="$ctrl.cancel()">
                 </oui-form-actions>`);
-      const cancelButton = component.find('button').eq(1);
+      const cancelButton = component.find('button').eq(0);
 
       expect(cancelButton.hasClass('ng-hide')).toBe(false);
     });
@@ -115,7 +115,7 @@ describe('ouiFormActions', () => {
                 </oui-form-actions>`, {
         onSubmitTest: jasmine.createSpy('onSubmit'),
       });
-      component.find('button').eq(0).triggerHandler('click');
+      component.find('button').eq(1).triggerHandler('click');
 
       expect(component.scope().$ctrl.onSubmitTest).toHaveBeenCalled();
     });
@@ -128,7 +128,7 @@ describe('ouiFormActions', () => {
                 </oui-form-actions>`, {
         onCancelTest: jasmine.createSpy('onCancel'),
       });
-      component.find('button').eq(1).triggerHandler('click');
+      component.find('button').eq(0).triggerHandler('click');
 
       expect(component.scope().$ctrl.onCancelTest).toHaveBeenCalled();
     });
