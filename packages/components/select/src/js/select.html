@@ -13,8 +13,8 @@
     <ui-select-match placeholder="{{$ctrl.placeholder}}">
         <span ng-bind-html="$ctrl.getPropertyValue($item)"></span>
     </ui-select-match>
-    <ui-select-choices repeat="$item in $ctrl.items | filter: $select.search track by $index"
-        ui-disable-choice="$ctrl.disableItems({ $item: $item })">
+    <ui-select-choices repeat="$ctrl.getValue($item) as $item in $ctrl.items | filter: $select.search track by $index"
+                       ui-disable-choice="$ctrl.disableItems({ $item: $item })">
         <span ng-bind-html="$ctrl.getPropertyValue($item) | highlight: $select.search"></span>
     </ui-select-choices>
 </ui-select>
