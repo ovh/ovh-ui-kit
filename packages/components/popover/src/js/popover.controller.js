@@ -145,6 +145,9 @@ export default class PopoverController {
 
   createPopper() {
     this.popperElement.style.minWidth = `${this.triggerElement.offsetWidth}px`;
+    if (this.size) {
+      this.popperElement.style.width = `${this.size}ch`;
+    }
 
     this.popper = new Popper(this.triggerElement, this.popperElement, {
       placement: this.placement,
