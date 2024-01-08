@@ -1,3 +1,12 @@
+## [6.7.7](https://github.com/ovh/ovh-ui-kit/compare/v6.7.6...v6.7.7) (2024-01-08)
+
+
+### Features
+
+* **popover:** allow custom popover size ([4f113bc](https://github.com/ovh/ovh-ui-kit/commit/4f113bc7739c7e2801e40d9cb24f21ef245056d6))
+
+
+
 ## [6.7.6](https://github.com/ovh/ovh-ui-kit/compare/v6.7.5...v6.7.6) (2023-12-14)
 
 
