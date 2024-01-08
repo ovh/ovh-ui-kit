@@ -150,6 +150,17 @@ describe('ouiPopover', () => {
         expect(closeSpy).toHaveBeenCalled();
         expect(closeSpy.calls.count()).toEqual(1);
       });
+
+      it('should create a popover with a fixed size', () => {
+        const component = testUtils.compileTemplate('<div><button class="trigger" oui-popover="foo" oui-popover-size="30"></button></div>');
+
+        $timeout.flush();
+
+        const trigger = angular.element(component[0].querySelector('.trigger')).triggerHandler('click');
+        const popover = trigger.next();
+
+        expect(popover[0].style.width).toEqual('30ch');
+      });
     });
   });
 });
