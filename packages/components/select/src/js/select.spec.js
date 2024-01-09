@@ -500,6 +500,43 @@ describe('ouiSelect', () => {
       });
     });
 
+    describe('value-property attribute', () => {
+      it('should select the value-property of the selected item', () => {
+        const title = 'Select a country';
+        const placeholder = 'Select a country...';
+        const onChange = jasmine.createSpy();
+        const index = 4;
+
+        const element = TestUtils.compileTemplate(`
+          <oui-select name="country"
+              model="$ctrl.country"
+              title="${title}"
+              placeholder="${placeholder}"
+              items="$ctrl.countries"
+              match="name"
+              value-property="code"
+              on-change="$ctrl.onChange(modelValue)">
+          </oui-select>`, {
+          model: 'FR',
+          countries: data.map(({ country }) => country),
+          onChange,
+        });
+
+        const $triggerButton = angular.element(getDropdownButton(element));
+
+        // Open the dropdown
+        $triggerButton.triggerHandler('click');
+
+        // Select 5th element (AS)
+        const $itemButton = angular.element(getDropdownItem(element, index));
+        $itemButton.triggerHandler('click');
+        $triggerButton.triggerHandler('click');
+        $timeout.flush();
+
+        expect(onChange).toHaveBeenCalledWith(data[index].country.code);
+      });
+    });
+
     describe('using load', () => {
       it('should load with basic setup', () => {
         const onLoad = jasmine.createSpy();

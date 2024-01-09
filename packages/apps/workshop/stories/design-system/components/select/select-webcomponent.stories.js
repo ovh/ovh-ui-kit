@@ -295,3 +295,24 @@ export const Load = forModule(moduleName).createElement(
     },
   ),
 );
+
+export const PropertyValue = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+      <oui-select
+        items="$ctrl.items"
+        model="$ctrl.model"
+        match="name"
+        value-property="code"
+        name="country"
+      ></oui-select>
+      <span>model value = {{ $ctrl.model }}</span>
+    `,
+    {
+      $ctrl: {
+        model: 'FR',
+        items: countries.map(({ country }) => country),
+      },
+    },
+  ),
+);

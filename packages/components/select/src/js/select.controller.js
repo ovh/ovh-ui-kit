@@ -160,6 +160,10 @@ export default class {
     }
   }
 
+  getValue(item) {
+    return get(item, this.valueProperty, item);
+  }
+
   getPropertyValue(item) {
     return get(item, this.match, item);
   }

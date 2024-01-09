@@ -18,6 +18,7 @@ export default () => ({
     load: '@?',
     loadOptions: '<?',
     match: '@?',
+    valueProperty: '@?',
     model: '=',
     multiple: '<?',
     name: '@?',
