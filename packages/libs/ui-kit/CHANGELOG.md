@@ -1,3 +1,12 @@
+## [6.7.8](https://github.com/ovh/ovh-ui-kit/compare/v6.7.7...v6.7.8) (2024-01-10)
+
+
+### Features
+
+* **select:** adding capacity to use value as item syntax ([#836](https://github.com/ovh/ovh-ui-kit/issues/836)) ([401b880](https://github.com/ovh/ovh-ui-kit/commit/401b8807175701ebd8e846ed6d16279b5a32100f))
+
+
+
 ## [6.7.7](https://github.com/ovh/ovh-ui-kit/compare/v6.7.6...v6.7.7) (2024-01-08)
 
 
