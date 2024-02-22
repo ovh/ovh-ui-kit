@@ -13,5 +13,7 @@ export default {
     step: '<?',
     disabled: '<?',
     onChange: '&?',
+    tooltipIncrease: '@?',
+    tooltipDecrease: '@?',
   },
 };

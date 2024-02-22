@@ -1,5 +1,6 @@
 <button class="oui-numeric__button oui-button oui-button_primary oui-button_s"
     type="button"
+    ng-attr-title="{{::$ctrl.tooltipDecrease}}"
     ng-disabled="$ctrl.disabled || $ctrl.model <= $ctrl.min"
     ng-click="$ctrl.decrement()"
     tabindex="-1"
@@ -24,6 +25,7 @@
     ng-attr-step="{{ $ctrl.step }}">
 <button class="oui-numeric__button oui-button oui-button_primary oui-button_s"
     type="button"
+    ng-attr-title="{{::$ctrl.tooltipIncrease}}"
     ng-disabled="$ctrl.disabled || $ctrl.model >= $ctrl.max"
     ng-click="$ctrl.increment()"
     tabindex="-1"

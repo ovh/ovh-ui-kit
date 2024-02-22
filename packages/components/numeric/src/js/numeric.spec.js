@@ -50,6 +50,17 @@ describe('ouiNumeric', () => {
       expect(elt.find('input').val()).toBe('5');
     });
 
+    it('should display a tooltip', () => {
+      const elt = angular.element('<oui-numeric model="foo" min="0" max="5" tooltip-increase="Increment Number" tooltip-decrease="Decrement Number"></oui-numeric>');
+      const scope = $rootScope.$new();
+      $compile(elt)(scope);
+      scope.$digest();
+      elt.find('input').controller('ngModel').$setViewValue('1');
+      expect(scope.foo).toBe(1);
+      expect(getDecrementBtn(elt).attr('title')).toBe('Decrement Number');
+      expect(getIncrementBtn(elt).attr('title')).toBe('Increment Number');
+    });
+
     it('should not updates model when input is given invalid value', () => {
       const elt = angular.element('<oui-numeric model="foo" min="0" max="5"></oui-numeric>');
       const scope = $rootScope.$new();
