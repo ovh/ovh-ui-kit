@@ -11,11 +11,13 @@
     </fieldset>
     <footer class="oui-inline-adder__footer">
         <button type="submit" class="oui-inline-adder__action oui-button oui-button_primary oui-button_s"
+            ng-attr-title="{{::$ctrl.tooltipAdd}}"
             ng-attr-aria-label="{{::$ctrl.translations.ariaAddItem}}"
             ng-if="!$ctrl.isDisabled[$index]">
             <span class="oui-icon oui-icon-add"></span>
         </button>
         <button type="button" class="oui-inline-adder__action oui-button oui-button_primary oui-button_s"
+            ng-attr-title="{{::$ctrl.tooltipDelete}}"
             ng-attr-aria-label="{{::$ctrl.translations.ariaRemoveItem}}"
             ng-click="$ctrl.onFormRemove(this[$ctrl.name + '_'+ $index], $index)"
             ng-if="$ctrl.isDisabled[$index]">

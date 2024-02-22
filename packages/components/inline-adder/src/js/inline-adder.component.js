@@ -8,6 +8,8 @@ export default {
     onAdd: '&',
     onChange: '&',
     onRemove: '&',
+    tooltipAdd: '@?',
+    tooltipDelete: '@?',
   },
   controller,
   template,

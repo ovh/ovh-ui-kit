@@ -31,6 +31,8 @@ export const Simple = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-inline-adder
+      tooltip-add="Click here to add an item"
+      tooltip-delete="Click here to remove an item"
       on-add="$ctrl.onAdd(form)"
       on-change="$ctrl.onChange(form)"
       on-remove="$ctrl.onRemove(form)">
