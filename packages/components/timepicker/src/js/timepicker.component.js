@@ -23,6 +23,7 @@ export default {
     onChange: '&',
     onClose: '&',
     onOpen: '&',
+    tooltip: '@?',
   },
   controller,
   template,

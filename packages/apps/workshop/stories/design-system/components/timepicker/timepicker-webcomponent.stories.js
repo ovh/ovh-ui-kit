@@ -23,6 +23,7 @@ export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-timepicker
+      tooltip="Click here to open the timepicker"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       on-change="$ctrl.onChange(modelValue)"
