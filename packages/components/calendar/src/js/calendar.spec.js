@@ -59,6 +59,13 @@ describe('ouiCalendar', () => {
       expect(input.attr('name')).toBe('bar');
     });
 
+    it('should have tooltip', () => {
+      const component = testUtils.compileTemplate('<oui-calendar id="foo" name="bar" tooltip="Click here to open the calendar" model="$ctrl.model"></oui-calendar>');
+      const input = component.find('input');
+
+      expect(input.attr('title')).toBe('Click here to open the calendar');
+    });
+
     it('should set the picker inline', () => {
       const component = testUtils.compileTemplate('<oui-calendar model="$ctrl.model" inline></oui-calendar>');
       const controller = component.controller('ouiCalendar');

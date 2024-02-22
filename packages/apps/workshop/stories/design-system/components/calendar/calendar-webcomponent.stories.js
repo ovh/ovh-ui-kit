@@ -25,6 +25,7 @@ export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-calendar
+      tooltip="Click here to open the calendar"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       on-change="$ctrl.onChange(selectedDates, dateStr)"
