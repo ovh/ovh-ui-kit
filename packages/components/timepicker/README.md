@@ -26,6 +26,7 @@ angular.module('myModule', ['oui.timepicker']);
 | `on-change`       | function  | &         | no                | n/a                                                                                       | n/a       | handler triggered when the user change the selected time
 | `on-close`        | function  | &         | no                | n/a                                                                                       | n/a       | handler triggered when the timepicker is closed
 | `on-open`         | function  | &         | no                | n/a                                                                                       | n/a       | handler triggered when the timepicker is opened
+| `tooltip`         | string    | @?        | yes               | n/a                                                                                       | n/a       | tooltip to display
 
 ### Attributes `on-*`
 

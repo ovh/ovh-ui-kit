@@ -11,5 +11,6 @@ export default {
     disabled: '<?',
     required: '<?',
     onChange: '&',
+    tooltip: '@?',
   },
 };

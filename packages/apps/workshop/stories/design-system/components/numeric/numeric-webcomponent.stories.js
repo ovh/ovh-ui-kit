@@ -33,6 +33,8 @@ export const Simple = forModule(moduleName).createElement(
     `
     <oui-numeric
       model="$ctrl.model"
+      tooltip-increase="Increment Number"
+      tooltip-decrease="Decrement Number"
       disabled="$ctrl.disabled"
       on-change="$ctrl.onChange(modelValue)">
     </oui-numeric>`,

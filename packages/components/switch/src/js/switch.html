@@ -1,4 +1,4 @@
-<label class="oui-switch__label-container">
+<label class="oui-switch__label-container" ng-attr-title="{{:: $ctrl.tooltip }}">
     <input class="oui-switch__checkbox" type="checkbox" id="{{:: $ctrl.id }}" name="{{:: $ctrl.name }}"
            ng-change="$ctrl.onChange({ modelValue: $ctrl.model })"
            ng-disabled="$ctrl.disabled"

@@ -31,6 +31,7 @@ export const Default = forModule(moduleName).createElement(
   () => compileTemplate(
     `
     <oui-switch
+      tooltip="Click to enable/disable"
       disabled="$ctrl.disabled"
       model="$ctrl.model"
       on-change="$ctrl.onChange(modelValue)">

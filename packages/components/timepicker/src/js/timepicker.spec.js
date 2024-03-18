@@ -32,6 +32,16 @@ describe('ouiTimepicker', () => {
       expect(input.attr('name')).toBe('bar');
     });
 
+    it('should have a tooltip on the input', () => {
+      const component = testUtils.compileTemplate(`
+                <oui-timepicker id="foo" name="bar" model="$ctrl.model"
+                                tooltip="Click here to open the timepicker">
+                </oui-timepicker>`);
+
+      const calendar = component.find('oui-calendar');
+      expect(calendar.attr('title')).toBe('Click here to open the timepicker');
+    });
+
     it('should set the picker inline', () => {
       const component = testUtils.compileTemplate('<oui-timepicker model="$ctrl.model" inline></oui-timepicker>');
       const controller = component.controller('ouiTimepicker');

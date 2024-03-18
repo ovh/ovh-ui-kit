@@ -23,11 +23,13 @@ angular.module('myModule', ['oui.inline-adder'])
 
 ## Component `oui-inline-adder`
 
-| Attribute     | Type      | Binding   | One-time binding  | Values            | Default   | Description
-| ----          | ----      | ----      | ----              | ----              | ----      | ----
-| `on-add`      | function  | &         | no                | n/a               | n/a       | handler triggered when a row is added
-| `on-remove`   | function  | &         | no                | n/a               | n/a       | handler triggered when a row is removed
-| `on-change`   | function  | &         | no                | n/a               | n/a       | handler triggered when rows have changed
+| Attribute        | Type      | Binding   | One-time binding  | Values            | Default   | Description
+| ----             | ----      | ----      | ----              | ----              | ----      | ----
+| `on-add`         | function  | &         | no                | n/a               | n/a       | handler triggered when a row is added
+| `on-remove`      | function  | &         | no                | n/a               | n/a       | handler triggered when a row is removed
+| `on-change`      | function  | &         | no                | n/a               | n/a       | handler triggered when rows have changed
+| `tooltip-add`    | string    | @?        | yes               | n/a               | n/a       | tooltip to display for the add button
+| `tooltip-delete` | string    | @?        | yes               | n/a               | n/a       | tooltip to display for the delete button
 
 ### Attributes `on-*`
 

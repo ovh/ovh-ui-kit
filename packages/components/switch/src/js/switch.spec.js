@@ -49,6 +49,14 @@ describe('ouiSwitch', () => {
       });
     });
 
+    describe('tooltip attribute', () => {
+      it('should display a disable action tooltip when defined', () => {
+        const element = TestUtils.compileTemplate('<oui-switch model="$ctrl.checked" tooltip="Click to enable/disable"></oui-switch>');
+        const label = angular.element(element.find('label')[0]);
+        expect(label.attr('title')).toBe('Click to enable/disable');
+      });
+    });
+
     describe('model attribute', () => {
       it('should display an unchecked switch when no model', () => {
         const element = TestUtils.compileTemplate('<oui-switch></oui-switch>');

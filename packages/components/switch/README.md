@@ -16,6 +16,7 @@ angular.module('myModule', ['oui.switch']);
 | `disabled`    | boolean   | <?        | no                | `true`, `false`   | `false`   | disabled flag
 | `required`    | boolean   | <?        | no                | `true`, `false`   | `false`   | required flag
 | `on-change`   | function  | &         | no                | n/a               | n/a       | function to call when model changes
+| `tooltip`     | string    | @?        | yes               | n/a               | n/a       | tooltip to display
 
 ### Attribute `on-change`
 

@@ -116,6 +116,31 @@ describe('ouiInlineAdder', () => {
         form.find('button').triggerHandler('click');
         expect(form.hasClass('ng-hide')).toBeTruthy();
       });
+
+      it('should have a tooltip', () => {
+        const element = TestUtils.compileTemplate(`
+                    <oui-inline-adder tooltip-add="Add an item" tooltip-delete="Delete an item">
+                        <oui-inline-adder-row>
+                            <oui-inline-adder-field>
+                                <oui-field label="Field 1">
+                                    <input type="text" class="oui-input" name="field1" required>
+                                </oui-field>
+                            </oui-inline-adder-field>
+                        </oui-inline-adder-row>
+                    </oui-inline-adder>`);
+
+        const form = angular.element(element.find('form')[0]);
+        const footer = angular.element(form.find('footer')[0]);
+        const button = angular.element(footer.find('button')[0]);
+        expect(button.attr('title')).toBe('Add an item');
+
+        form.triggerHandler('submit');
+
+        const newform = angular.element(element.find('form')[0]);
+        const newfooter = angular.element(newform.find('footer')[0]);
+        const newbutton = angular.element(newfooter.find('button')[0]);
+        expect(newbutton.attr('title')).toBe('Delete an item');
+      });
     });
 
     describe('oui-inline-adder-row', () => {
