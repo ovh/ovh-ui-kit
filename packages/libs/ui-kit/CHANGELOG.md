@@ -1,3 +1,12 @@
+# [6.8.0](https://github.com/ovh/ovh-ui-kit/compare/v6.7.8...v6.8.0) (2024-03-18)
+
+
+### Features
+
+* **components:** add tooltip options to components ([#842](https://github.com/ovh/ovh-ui-kit/issues/842)) ([526324e](https://github.com/ovh/ovh-ui-kit/commit/526324eb242abe2d9c573dfb7ad43617e09fc4db))
+
+
+
 ## [6.7.8](https://github.com/ovh/ovh-ui-kit/compare/v6.7.7...v6.7.8) (2024-01-10)
 
 
