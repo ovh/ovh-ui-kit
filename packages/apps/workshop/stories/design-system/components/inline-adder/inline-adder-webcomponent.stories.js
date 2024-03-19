@@ -33,6 +33,7 @@ export const Simple = forModule(moduleName).createElement(
     <oui-inline-adder
       tooltip-add="Click here to add an item"
       tooltip-delete="Click here to remove an item"
+      rows-limit=3
       on-add="$ctrl.onAdd(form)"
       on-change="$ctrl.onChange(form)"
       on-remove="$ctrl.onRemove(form)">

@@ -144,6 +144,35 @@ describe('ouiInlineAdder', () => {
     });
 
     describe('oui-inline-adder-row', () => {
+      it('should have a row limit', () => {
+        const element = TestUtils.compileTemplate(`
+                    <oui-inline-adder rows-limit=3>
+                        <oui-inline-adder-row>
+                            <oui-inline-adder-field>
+                                <oui-field label="Field 1">
+                                    <input type="text" class="oui-input" name="field1" required>
+                                </oui-field>
+                            </oui-inline-adder-field>
+                        </oui-inline-adder-row>
+                    </oui-inline-adder>`);
+
+        const form = angular.element(element.find('form')[0]);
+
+        form.triggerHandler('submit');
+        expect(element.find('form').length).toBe(2);
+
+        form.triggerHandler('submit');
+        expect(element.find('form').length).toBe(3);
+
+        form.triggerHandler('submit');
+        expect(element.find('form').length).toBe(3); // limit reached
+
+        const newform = angular.element(element.find('form')[0]);
+        const newfooter = angular.element(newform.find('footer')[0]);
+        const newbutton = angular.element(newfooter.find('button')[0]);
+        newbutton.triggerHandler('click');
+      });
+
       it('should have a default classname', () => {
         const element = TestUtils.compileTemplate(`
                     <oui-inline-adder>
