@@ -10,6 +10,7 @@ export default {
     onRemove: '&',
     tooltipAdd: '@?',
     tooltipDelete: '@?',
+    rowsLimit: '<?',
   },
   controller,
   template,

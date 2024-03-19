@@ -16,6 +16,11 @@ export default class {
     this.forms = [true];
     this.isDisabled = [false];
 
+    this.count = 0;
+    if (typeof this.rowsLimit === 'undefined') {
+      this.rowsLimit = Number.MAX_SAFE_INTEGER;
+    }
+
     addDefaultParameter(this, 'id', `ouiInlineAdderForm${this.$scope.$id}`);
     addDefaultParameter(this, 'name', `ouiInlineAdderForm${this.$scope.$id}`);
   }
@@ -32,10 +37,16 @@ export default class {
 
   onFormSubmit(form, index) {
     if (form.$valid) {
+      this.count += 1;
       this.forms[index] = form;
 
       // Create new instance of form
       this.isDisabled[index] = true;
+
+      if (this.count >= this.rowsLimit) {
+        return;
+      }
+
       this.forms.push(true);
 
       // Callbacks
@@ -48,8 +59,14 @@ export default class {
     // Hide removed form to avoid refreshing ngRepeat
     this.forms[index] = false;
 
+    if (this.count === this.rowsLimit) {
+      // we have unreached the limit, so we need to display again a fresh new empty row
+      this.forms.push(true);
+    }
+
     // Callback
     this.onRemove({ form });
     this.onFormsChange();
+    this.count -= 1;
   }
 }
