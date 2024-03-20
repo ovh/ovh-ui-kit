@@ -12,6 +12,7 @@ export default {
   bindings: {
     name: '@?',
     direction: '@?',
+    dense: '@?',
     model: '=?',
     onChange: '&',
   },
