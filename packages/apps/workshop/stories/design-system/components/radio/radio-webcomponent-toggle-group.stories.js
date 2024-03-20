@@ -63,3 +63,50 @@ export const Default = forModule(moduleName).createElement(
     },
   ),
 );
+
+export const Dense = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-radio-toggle-group
+      direction="{{$ctrl.direction}}"
+      model="$ctrl.model"
+      dense
+      on-change="$ctrl.onChange(modelValue)">
+      <oui-radio
+        disabled="$ctrl.disabled"
+        value="$ctrl.value1">
+        Value A
+      </oui-radio>
+
+      <oui-radio
+        disabled="$ctrl.disabled"
+        value="$ctrl.value2">
+        Value B
+      </oui-radio>
+
+      <oui-radio
+        disabled="$ctrl.disabled"
+        value="$ctrl.value3">
+        Less content tt
+      </oui-radio>
+    </oui-radio-toggle-group>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+        direction: radios(
+          'Direction',
+          {
+            Column: 'column',
+            Row: 'row',
+          },
+          'row',
+        ),
+        model: 'a',
+        value1: 'a',
+        value2: 'b',
+        value3: 'c',
+        onChange: action('onChange'),
+      },
+    },
+  ),
+);
