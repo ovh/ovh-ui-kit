@@ -1,3 +1,12 @@
+## [6.8.1](https://github.com/ovh/ovh-ui-kit/compare/v6.8.0...v6.8.1) (2024-03-21)
+
+
+### Features
+
+* **icons:** add 4 system icons ([de488c4](https://github.com/ovh/ovh-ui-kit/commit/de488c475b10a8d5a9dba844115ca61cdcdf139d))
+
+
+
 # [6.8.0](https://github.com/ovh/ovh-ui-kit/compare/v6.7.8...v6.8.0) (2024-03-18)
 
 
