@@ -52,6 +52,26 @@ export const System = () => `
     <div class="doc-badge__code"><code>.oui-icon-arrow-transfer</code></div>
   </div>
 
+<div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-down-left-arrow-up-right-to-center"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-down-left-arrow-up-right-to-center</code></div>
+  </div>
+
+ <div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-arrow-up-right-arrow-down-left-from-center"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-arrow-up-right-arrow-down-left-from-center</code></div>
+  </div>
+
+<div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-play"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-play</code></div>
+  </div>
+
+<div class="doc-badge">
+    <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-pause"></span></div>
+    <div class="doc-badge__code"><code>.oui-icon-pause</code></div>
+  </div>
+
   <div class="doc-badge">
     <div class="doc-badge__preview doc-badge__preview_s"><span class="oui-icon oui-icon-bell"></span></div>
     <div class="doc-badge__code"><code>.oui-icon-bell</code></div>
