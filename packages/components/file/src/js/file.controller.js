@@ -103,12 +103,14 @@ export default class {
   removeFile(file) {
     if (angular.isArray(this.model)) {
       remove(this.model, (item) => item === file);
+      this.onRemove({ modelValue: this.model });
     }
   }
 
   resetFile() {
     this.model = undefined;
     this.fileSelector[0].value = '';
+    this.onRemove({ modelValue: this.model });
 
     if (this.form && this.form[this.name]) {
       this.form[this.name].$setValidity('maxsize', true);
