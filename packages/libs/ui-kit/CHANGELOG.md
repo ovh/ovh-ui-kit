@@ -1,3 +1,13 @@
+## [6.8.2](https://github.com/ovh/ovh-ui-kit/compare/v6.8.1...v6.8.2) (2024-03-27)
+
+
+### Features
+
+* **oui-radio-toggle-group:** add dense attribute ([8141941](https://github.com/ovh/ovh-ui-kit/commit/8141941aee07d33d86792b68c7ff023c42db0aa1))
+* **oui-radio-toggle-group:** remove empty line ([0694a80](https://github.com/ovh/ovh-ui-kit/commit/0694a809cb1de10879ef2a261a83768a6762792a))
+
+
+
 ## [6.8.1](https://github.com/ovh/ovh-ui-kit/compare/v6.8.0...v6.8.1) (2024-03-21)
 
 
