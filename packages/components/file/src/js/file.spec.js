@@ -190,15 +190,20 @@ describe('ouiFile', () => {
       let element;
       let controller;
       let onSelectSpy;
+      let onRemoveSpy;
 
       beforeEach(() => {
         onSelectSpy = jasmine.createSpy('onSelectSpy');
+        onRemoveSpy = jasmine.createSpy('onRemoveSpy');
         element = TestUtils.compileTemplate(`
                 <oui-file
                     model="$ctrl.model"
-                    on-select="$ctrl.onSelectSpy(modelValue)">
+                    on-select="$ctrl.onSelectSpy(modelValue)"
+                    on-remove="$ctrl.onRemoveSpy(modelValue)"
+                >
                 </oui-file>`, {
           onSelectSpy,
+          onRemoveSpy,
         });
         controller = element.controller('ouiFile');
 
@@ -254,6 +259,7 @@ describe('ouiFile', () => {
         controller.addFiles(mockFiles);
         controller.removeFile(mockFile);
         expect(controller.model.length).toBe(0);
+        expect(onRemoveSpy).toHaveBeenCalledWith(controller.model);
       });
     });
 

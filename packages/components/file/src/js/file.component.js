@@ -18,6 +18,7 @@ export default {
     droparea: '<?',
     preview: '<?',
     onSelect: '&',
+    onRemove: '&',
   },
   controller,
   template,
