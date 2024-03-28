@@ -1,3 +1,13 @@
+# [6.9.0](https://github.com/ovh/ovh-ui-kit/compare/v6.8.2...v6.9.0) (2024-03-28)
+
+
+### Features
+
+* **components/inline-adder:** add rows limit option ([62c9e76](https://github.com/ovh/ovh-ui-kit/commit/62c9e7671c463abbe7c9d61f1fb5ed359ae7e21b))
+* **oui-radio-toggle-group:** quick fix on storybook content ([00fc55c](https://github.com/ovh/ovh-ui-kit/commit/00fc55c144914ae16bf2f9f2890dda824bdc4f67))
+
+
+
 ## [6.8.2](https://github.com/ovh/ovh-ui-kit/compare/v6.8.1...v6.8.2) (2024-03-27)
 
 
