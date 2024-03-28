@@ -87,7 +87,7 @@ export const Dense = forModule(moduleName).createElement(
       <oui-radio
         disabled="$ctrl.disabled"
         value="$ctrl.value3">
-        Less content tt
+        Value C
       </oui-radio>
     </oui-radio-toggle-group>`,
     {
