@@ -175,12 +175,12 @@ export const EventHandling = forModule(moduleName).createElement(
 
         onSelect(model) {
           const plural = model.length > 1;
-          this.message = `You select a file ! Currently ${model.length} file${plural ? 's' : ''} selected`;
+          this.message = `You've selected a file ! Currently ${model.length} file${plural ? 's' : ''} selected`;
         }
 
         onRemove(model) {
           const plural = model.length > 1;
-          this.message = `You remove a file ! Currently ${model.length} file${plural ? 's' : ''} selected`;
+          this.message = `You've removed a file ! Currently ${model.length} file${plural ? 's' : ''} selected`;
         }
       })(),
     },
