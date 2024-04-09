@@ -4,6 +4,7 @@ import { forModule } from 'storybook-addon-angularjs';
 import Field from '@ovh-ux/ui-kit.field';
 import File from '@ovh-ux/ui-kit.file';
 import FormActions from '@ovh-ux/ui-kit.form-actions';
+import Message from '@ovh-ux/ui-kit.message';
 
 import readme from '@ovh-ux/ui-kit.file/README.md';
 import { compileTemplate } from '../../../../src/utils';
@@ -16,6 +17,7 @@ angular.module(moduleName, [
   // For examples
   Field,
   FormActions,
+  Message,
 ]);
 
 export default {
@@ -147,3 +149,42 @@ export const Validation = forModule(moduleName).createElement(
     },
   ),
 );
+
+export const EventHandling = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-message
+      type="info"
+      ng-if="$ctrl.message">
+      {{$ctrl.message}}
+    </oui-message>
+    <oui-file
+      disabled="$ctrl.disabled"
+      model="$ctrl.model"
+      multiple
+      on-select="$ctrl.onSelect(modelValue)"
+      on-remove="$ctrl.onRemove(modelValue)"
+    >
+    </oui-file>
+    `,
+    {
+      $ctrl: new (class {
+        constructor() {
+          this.message = '';
+        }
+
+        onSelect(model) {
+          const plural = model.length > 1;
+          this.message = `You've selected a file ! Currently ${model.length} file${plural ? 's' : ''} selected`;
+        }
+
+        onRemove(model) {
+          const plural = model.length > 1;
+          this.message = `You've removed a file ! Currently ${model.length} file${plural ? 's' : ''} selected`;
+        }
+      })(),
+    },
+  ),
+);
+
+EventHandling.storyName = 'Trigger event on selection and deletion';

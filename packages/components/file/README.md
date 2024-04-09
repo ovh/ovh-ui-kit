@@ -51,3 +51,4 @@ angular.module('myModule', ['oui.file'])
 | `droparea`        | boolean           | <?        | yes               | `true`, `false`   | `false`   | enable a drop area to drag files
 | `preview`         | boolean           | <?        | yes               | `true`, `false`   | `false`   | show preview of image files (works only with `image/*` files.)
 | `on-select`       | function          | &         | no                | n/a               | n/a       | handler triggered when files are selected
+| `on-remove`       | function          | &         | no                | n/a               | n/a       | handler triggered when an attachment is removed
