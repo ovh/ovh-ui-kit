@@ -1,3 +1,12 @@
+# [6.10.0](https://github.com/ovh/ovh-ui-kit/compare/v6.9.0...v6.10.0) (2024-04-09)
+
+
+### Features
+
+* **components.file:** add an onremove callback on file input ([#847](https://github.com/ovh/ovh-ui-kit/issues/847)) ([90db7b3](https://github.com/ovh/ovh-ui-kit/commit/90db7b35d4f34415465d4e07d9394c50b446408e))
+
+
+
 # [6.9.0](https://github.com/ovh/ovh-ui-kit/compare/v6.8.2...v6.9.0) (2024-03-28)
 
 
