@@ -219,8 +219,9 @@ export default class {
           .on('drop', (e) => {
             // FileList from input file is read-only
             // Needed to be port as an array for manipulation
-            if (!this.disabled && e.dataTransfer) {
-              this.addFiles(Array.from(e.dataTransfer.files));
+            const dataTransfer = e.dataTransfer || e.originalEvent.dataTransfer;
+            if (!this.disabled && dataTransfer) {
+              this.addFiles(Array.from(dataTransfer.files));
             }
           });
       }
