@@ -1,3 +1,12 @@
+## [6.10.1](https://github.com/ovh/ovh-ui-kit/compare/v6.10.0...v6.10.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* **components.file:** fallback to originalEvent ([38ef1c3](https://github.com/ovh/ovh-ui-kit/commit/38ef1c39ef2203eea1d6c24d797d02e8f7584c0f))
+
+
+
 # [6.10.0](https://github.com/ovh/ovh-ui-kit/compare/v6.9.0...v6.10.0) (2024-04-09)
 
 
