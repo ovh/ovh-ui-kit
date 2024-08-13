@@ -129,7 +129,7 @@ DragDropWithPreview.storyName = 'Drag & Drop with preview';
 export const Validation = forModule(moduleName).createElement(
   () => compileTemplate(
     `
-    <form novalidate name="form">
+    <form novalidate name="$ctrl.form">
       <oui-field label="Upload file" help-text="image/jpeg, image/png, image/gif (max size 150 KB)">
         <oui-file name="fileUpload"
           accept="image/jpeg,image/png,image/gif"
@@ -140,7 +140,7 @@ export const Validation = forModule(moduleName).createElement(
         </oui-file>
       </oui-field>
 
-      <oui-form-actions></oui-form-actions>
+      <oui-form-actions disabled="$ctrl.form.fileUpload.$invalid"></oui-form-actions>
     </form>`,
     {
       $ctrl: {

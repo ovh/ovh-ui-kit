@@ -196,16 +196,18 @@ describe('ouiFile', () => {
         onSelectSpy = jasmine.createSpy('onSelectSpy');
         onRemoveSpy = jasmine.createSpy('onRemoveSpy');
         element = TestUtils.compileTemplate(`
-                <oui-file
-                    model="$ctrl.model"
-                    on-select="$ctrl.onSelectSpy(modelValue)"
-                    on-remove="$ctrl.onRemoveSpy(modelValue)"
-                >
-                </oui-file>`, {
+            <form name="form">
+              <oui-file
+                model="$ctrl.model"
+                on-select="$ctrl.onSelectSpy(modelValue)"
+                on-remove="$ctrl.onRemoveSpy(modelValue)"
+              >
+              </oui-file>
+            </form>`, {
           onSelectSpy,
           onRemoveSpy,
         });
-        controller = element.controller('ouiFile');
+        controller = element.find('oui-file').controller('ouiFile');
 
         $timeout.flush();
       });
@@ -260,6 +262,14 @@ describe('ouiFile', () => {
         controller.removeFile(mockFile);
         expect(controller.model.length).toBe(0);
         expect(onRemoveSpy).toHaveBeenCalledWith(controller.model);
+      });
+
+      it('should clear errors after file removal', () => {
+        controller.maxsize = 100000;
+        controller.addFiles(mockFiles);
+        expect(controller.form[controller.name].$invalid).toBe(true);
+        controller.removeFile(mockFile);
+        expect(controller.form[controller.name].$invalid).toBe(false);
       });
     });
 
