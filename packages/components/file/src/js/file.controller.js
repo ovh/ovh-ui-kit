@@ -32,9 +32,29 @@ export default class {
         file.errors.maxsize = true;
       }
 
+      // Check extension / type
+      if (this.accept) {
+        const [fileType, fileExtension] = file.type.split('/');
+        const acceptedTypes = this.accept.split(',');
+        file.errors.type = !acceptedTypes.some((acceptedType) => {
+          const [type, extension] = acceptedType.split('/');
+          if (extension) {
+            const isTypeValid = type === '*' || type.toLowerCase() === fileType.toLowerCase();
+            const isExtensionValid = extension === '*' || extension.toLowerCase() === fileExtension.toLowerCase();
+            return isTypeValid && isExtensionValid;
+          }
+          return type === '*' || type.replace('.', '').toLowerCase() === fileExtension.toLowerCase();
+        });
+      }
+
       // Set form validation
       if (this.form && this.form[this.name]) {
-        this.form[this.name].$setValidity('maxsize', !file.errors.maxsize);
+        if (file.errors.maxsize) {
+          this.form[this.name].$setValidity('maxsize', false);
+        }
+        if (file.errors.type) {
+          this.form[this.name].$setValidity('type', false);
+        }
         this.form[this.name].$setDirty();
       }
 
@@ -68,6 +88,7 @@ export default class {
   }
 
   addFile(file) {
+    if (!file) return;
     this.getFileInfos(file);
     this.checkFileValidity(file);
 
@@ -103,9 +124,15 @@ export default class {
   removeFile(file) {
     if (angular.isArray(this.model)) {
       remove(this.model, (item) => item === file);
-      if (file.errors && this.model.every((item) => !item.errors)
-        && this.form && this.form[this.name]) {
-        this.form[this.name].$setValidity('maxsize', true);
+      if (file.errors && this.form && this.form[this.name]) {
+        let hasMaxsizeErrors = false;
+        let hasTypeErrors = false;
+        this.model.forEach((item) => {
+          hasMaxsizeErrors = hasMaxsizeErrors || item.errors?.maxsize;
+          hasTypeErrors = hasTypeErrors || item.errors?.type;
+        });
+        this.form[this.name].$setValidity('maxsize', !hasMaxsizeErrors);
+        this.form[this.name].$setValidity('type', !hasTypeErrors);
       }
       this.onRemove({ modelValue: this.model });
     }
@@ -118,6 +145,7 @@ export default class {
 
     if (this.form && this.form[this.name]) {
       this.form[this.name].$setValidity('maxsize', true);
+      this.form[this.name].$setValidity('type', true);
     }
   }
 
@@ -176,6 +204,21 @@ export default class {
     }
   }
 
+  parseAcceptAttribute() {
+    const acceptedTypes = this.accept?.split(',') || [];
+    let accept = '';
+    acceptedTypes.forEach((acceptedType) => {
+      const isExtension = acceptedType.indexOf('/') === -1;
+      const isValid = isExtension
+        ? acceptedType.startsWith('.')
+        : /^([\x20-\x7F]+|\*)\/([\x20-\x7F]+|\*)$/.test(acceptedType);// match "string/string","*/string" and "string/*"
+      if (isValid) {
+        accept = accept ? `${accept},${acceptedType}` : acceptedType;
+      }
+    });
+    return accept;
+  }
+
   $onInit() {
     addBooleanParameter(this, 'disabled');
     addBooleanParameter(this, 'required');
@@ -190,6 +233,8 @@ export default class {
     this.selectorId = `${this.id}Selector`;
     this.dropareaId = `${this.id}Droparea`;
     this.attachments = Boolean(this.multiple || this.droparea || this.preview);
+
+    this.accept = this.parseAcceptAttribute();
   }
 
   $postLink() {

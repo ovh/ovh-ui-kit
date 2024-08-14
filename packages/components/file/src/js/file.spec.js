@@ -17,6 +17,12 @@ describe('ouiFile', () => {
     type: 'image/png',
   };
 
+  const invalidMockFile = {
+    name: 'test_invalid.png',
+    size: 500000,
+    type: 'image/jpeg',
+  };
+
   const mockFiles = [mockFile];
 
   beforeEach(angular.mock.module('oui.file'));
@@ -263,14 +269,6 @@ describe('ouiFile', () => {
         expect(controller.model.length).toBe(0);
         expect(onRemoveSpy).toHaveBeenCalledWith(controller.model);
       });
-
-      it('should clear errors after file removal', () => {
-        controller.maxsize = 100000;
-        controller.addFiles(mockFiles);
-        expect(controller.form[controller.name].$invalid).toBe(true);
-        controller.removeFile(mockFile);
-        expect(controller.form[controller.name].$invalid).toBe(false);
-      });
     });
 
     describe('Form controls', () => {
@@ -302,6 +300,22 @@ describe('ouiFile', () => {
         expect(element.find('oui-file').attr('name')).toBeUndefined();
       });
 
+      // Due to an unexplained issue, file component's controller is correctly updated but the
+      // variable controller used here is not, to bypass this we're triggering the $onInit by hand
+      it('should ignore invalid accept attribute', () => {
+        controller.accept = 'test';
+        controller.$onInit();
+        expect(controller.accept).toBe('');
+
+        controller.accept = '.png';
+        controller.$onInit();
+        expect(controller.accept).toBe('.png');
+
+        controller.accept = '*/png';
+        controller.$onInit();
+        expect(controller.accept).toBe('*/png');
+      });
+
       it('should set input form $touched', () => {
         const label = angular.element(element[0].querySelector('.oui-file-selector__label'));
 
@@ -315,7 +329,7 @@ describe('ouiFile', () => {
 
         controller.maxsize = 200000;
         controller.checkFileValidity(mockFile);
-        expect(controller.form[name].$error.maxsize).toBeUndefined();
+        expect(controller.form[name].$error.maxsize).toBeFalsy();
 
         expect(controller.form[name].$dirty).toBeTruthy();
 
@@ -323,8 +337,48 @@ describe('ouiFile', () => {
         controller.checkFileValidity(mockFile);
         expect(controller.form[name].$error.maxsize).toBeTruthy();
 
+        // Valid extension tests
+        controller.accept = 'image/png';
+        controller.checkFileValidity(mockFile);
+        expect(controller.form[name].$error.type).toBeFalsy();
+
+        controller.accept = 'image/*';
+        controller.checkFileValidity(mockFile);
+        expect(controller.form[name].$error.type).toBeFalsy();
+
+        controller.accept = '*/png';
+        controller.checkFileValidity(mockFile);
+        expect(controller.form[name].$error.type).toBeFalsy();
+
+        controller.accept = '.png';
+        controller.checkFileValidity(mockFile);
+        expect(controller.form[name].$error.type).toBeFalsy();
+
+        // Invalid extension tests
+        controller.accept = 'image/jpeg';
+        controller.checkFileValidity(mockFile);
+        expect(controller.form[name].$error.type).toBeTruthy();
+
         controller.resetFile();
-        expect(controller.form[name].$error.maxsize).toBeUndefined();
+        expect(controller.form[name].$error.maxsize).toBeFalsy();
+        expect(controller.form[name].$error.type).toBeFalsy();
+      });
+
+      it('should not set form as valid after uploading an invalid and then a valid file', () => {
+        controller.maxsize = 200000;
+        controller.addFile(invalidMockFile);
+        expect(controller.form[controller.name].$invalid).toBe(true);
+        controller.addFile(mockFile);
+        expect(controller.form[controller.name].$invalid).toBe(true);
+      });
+
+      it('should clear errors after file removal', () => {
+        controller.maxsize = 200000;
+        controller.accept = 'image/png';
+        controller.addFiles([mockFile, invalidMockFile]);
+        expect(controller.form[controller.name].$invalid).toBe(true);
+        controller.removeFile(invalidMockFile);
+        expect(controller.form[controller.name].$invalid).toBe(false);
       });
     });
   });
