@@ -1,3 +1,12 @@
+## [6.10.2](https://github.com/ovh/ovh-ui-kit/compare/v6.10.1...v6.10.2) (2024-08-14)
+
+
+### Bug Fixes
+
+* **file:** add error cleanup on file removal ([cac182a](https://github.com/ovh/ovh-ui-kit/commit/cac182a474dcdc16682e8c9cd6cc9ab1ba528a53))
+
+
+
 ## [6.10.1](https://github.com/ovh/ovh-ui-kit/compare/v6.10.0...v6.10.1) (2024-06-21)
 
 
