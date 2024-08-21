@@ -1,3 +1,12 @@
+## [6.10.3](https://github.com/ovh/ovh-ui-kit/compare/v6.10.2...v6.10.3) (2024-08-21)
+
+
+### Bug Fixes
+
+* **file:** added file extension validation ([3d451de](https://github.com/ovh/ovh-ui-kit/commit/3d451de6a725a4ad445d2cc913cddc1def7673bf))
+
+
+
 ## [6.10.2](https://github.com/ovh/ovh-ui-kit/compare/v6.10.1...v6.10.2) (2024-08-14)
 
 
