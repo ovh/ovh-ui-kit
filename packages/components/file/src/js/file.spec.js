@@ -328,14 +328,18 @@ describe('ouiFile', () => {
         expect(controller.form[name].$dirty).toBeFalsy();
 
         controller.maxsize = 200000;
-        controller.checkFileValidity(mockFile);
+        let file = controller.checkFileValidity(mockFile);
         expect(controller.form[name].$error.maxsize).toBeFalsy();
+        expect(file.errors).toBeUndefined();
 
         expect(controller.form[name].$dirty).toBeTruthy();
 
         controller.maxsize = 100000;
-        controller.checkFileValidity(mockFile);
+        file = controller.checkFileValidity(mockFile);
         expect(controller.form[name].$error.maxsize).toBeTruthy();
+        expect(file.errors).toBeDefined();
+        expect(file.errors.maxsize).toBeDefined();
+        expect(file.errors.type).toBeUndefined();
 
         // Valid extension tests
         controller.accept = 'image/png';
@@ -351,13 +355,19 @@ describe('ouiFile', () => {
         expect(controller.form[name].$error.type).toBeFalsy();
 
         controller.accept = '.png';
-        controller.checkFileValidity(mockFile);
+        file = controller.checkFileValidity(mockFile);
         expect(controller.form[name].$error.type).toBeFalsy();
+        expect(file.errors).toBeDefined();
+        expect(file.errors.maxsize).toBeDefined();
+        expect(file.errors.type).toBeUndefined();
 
         // Invalid extension tests
         controller.accept = 'image/jpeg';
-        controller.checkFileValidity(mockFile);
+        file = controller.checkFileValidity(mockFile);
         expect(controller.form[name].$error.type).toBeTruthy();
+        expect(file.errors).toBeDefined();
+        expect(file.errors.maxsize).toBeDefined();
+        expect(file.errors.type).toBeDefined();
 
         controller.resetFile();
         expect(controller.form[name].$error.maxsize).toBeFalsy();
