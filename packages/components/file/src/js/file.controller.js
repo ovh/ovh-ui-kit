@@ -36,7 +36,7 @@ export default class {
       if (this.accept) {
         const [fileType, fileExtension] = file.type.split('/');
         const acceptedTypes = this.accept.split(',');
-        file.errors.type = !acceptedTypes.some((acceptedType) => {
+        const hasTypeError = !acceptedTypes.some((acceptedType) => {
           const [type, extension] = acceptedType.split('/');
           if (extension) {
             const isTypeValid = type === '*' || type.toLowerCase() === fileType.toLowerCase();
@@ -45,6 +45,9 @@ export default class {
           }
           return type === '*' || type.replace('.', '').toLowerCase() === fileExtension.toLowerCase();
         });
+        if (hasTypeError) {
+          file.errors.type = true;
+        }
       }
 
       // Set form validation
