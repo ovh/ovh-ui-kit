@@ -1,3 +1,12 @@
+## [6.10.4](https://github.com/ovh/ovh-ui-kit/compare/v6.10.3...v6.10.4) (2024-08-22)
+
+
+### Bug Fixes
+
+* **file:** cleanup file error when none is present ([050e7a1](https://github.com/ovh/ovh-ui-kit/commit/050e7a1fba16295cca04be8d488e0c9aa5cf3a93))
+
+
+
 ## [6.10.3](https://github.com/ovh/ovh-ui-kit/compare/v6.10.2...v6.10.3) (2024-08-21)
 
 
