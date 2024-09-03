@@ -39,11 +39,11 @@ export default class {
         const hasTypeError = !acceptedTypes.some((acceptedType) => {
           const [type, extension] = acceptedType.split('/');
           if (extension) {
-            const isTypeValid = type === '*' || type.toLowerCase() === fileType.toLowerCase();
-            const isExtensionValid = extension === '*' || extension.toLowerCase() === fileExtension.toLowerCase();
+            const isTypeValid = type === '*' || type.toLowerCase() === fileType?.toLowerCase();
+            const isExtensionValid = extension === '*' || extension.toLowerCase() === fileExtension?.toLowerCase();
             return isTypeValid && isExtensionValid;
           }
-          return type === '*' || type.replace('.', '').toLowerCase() === fileExtension.toLowerCase();
+          return type === '*' || type.replace('.', '').toLowerCase() === fileExtension?.toLowerCase();
         });
         if (hasTypeError) {
           file.errors.type = true;
