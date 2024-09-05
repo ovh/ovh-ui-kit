@@ -1,4 +1,5 @@
 import find from 'lodash/find';
+import isEmpty from 'lodash/isEmpty';
 
 describe('ouiFile', () => {
   let $timeout;
@@ -17,6 +18,12 @@ describe('ouiFile', () => {
     type: 'image/png',
   };
 
+  const mockFile2 = {
+    name: 'test2.png',
+    size: 150000,
+    type: 'image/png',
+  };
+
   const invalidMockFile = {
     name: 'test_invalid.png',
     size: 500000,
@@ -24,6 +31,7 @@ describe('ouiFile', () => {
   };
 
   const mockFiles = [mockFile];
+  const mockMultipleFiles = [mockFile, mockFile2];
 
   beforeEach(angular.mock.module('oui.file'));
   beforeEach(angular.mock.module('oui.file.configuration'));
@@ -189,6 +197,68 @@ describe('ouiFile', () => {
             files: mockFiles,
           },
         });
+      });
+    });
+
+    describe('Drop area without multiple', () => {
+      let element;
+      let controller;
+      let inputFile;
+      let selector;
+      let attachments;
+
+      beforeEach(() => {
+        element = TestUtils.compileTemplate('<oui-file model="$ctrl.model" droparea></oui-file>');
+        controller = element.controller('ouiFile');
+
+        $timeout.flush();
+
+        inputFile = getInputFile(element);
+        selector = getDropArea(element);
+        attachments = getAttachments(element);
+      });
+
+      it('should have input file multiple', () => {
+        expect(inputFile.multiple).toBeTruthy();
+      });
+
+      it('should show drop area and attachments', () => {
+        expect(selector).toBeTruthy();
+        expect(attachments).toBeTruthy();
+      });
+
+      it('should update classname with drag & drop events', () => {
+        controller.fileDroparea.triggerHandler('dragenter');
+        expect(controller.fileDroparea.hasClass('oui-file-droparea_dragover')).toBeTruthy();
+
+        controller.fileDroparea.triggerHandler('dragleave');
+        expect(controller.fileDroparea.hasClass('oui-file-droparea_dragover')).toBeFalsy();
+      });
+
+      it('should add files when dropped', () => {
+        controller.fileDroparea.triggerHandler({
+          type: 'drop',
+          dataTransfer: {
+            files: mockMultipleFiles,
+          },
+        });
+      });
+
+      it('should have error because multiple files have been loaded', () => {
+        controller.addFiles(mockMultipleFiles);
+        expect(controller.model.reduce(
+          (acc, item) => acc && !isEmpty(item.errors),
+          true,
+        )).toBeTruthy();
+      });
+
+      it('should have not error because we remove one of the two files loaded', () => {
+        controller.addFiles(mockMultipleFiles);
+        controller.removeFile(mockFile);
+        expect(controller.model.reduce(
+          (acc, item) => acc && !isEmpty(item.errors),
+          true,
+        )).toBeFalsy();
       });
     });
 

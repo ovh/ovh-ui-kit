@@ -21,7 +21,7 @@ export default class {
     this.units = orderBy(this.$filter('orderBy')(ouiFileConfiguration.units, '-size'), 'size', 'desc');
   }
 
-  checkFileValidity(_file_) {
+  checkFileValidity(_file_, errors) {
     const file = _file_;
 
     if (file) {
@@ -58,7 +58,17 @@ export default class {
         if (file.errors.type) {
           this.form[this.name].$setValidity('type', false);
         }
+        if (errors?.notSingle) {
+          this.form[this.name].$setValidity('not-single', false);
+        }
         this.form[this.name].$setDirty();
+      }
+
+      if (!isEmpty(errors)) {
+        file.errors = {
+          ...file.errors,
+          ...errors,
+        };
       }
 
       // Clean errors
@@ -108,12 +118,22 @@ export default class {
       this.model = [];
     }
 
+    const errors = {};
+    if ((!this.multiple && this.droparea) && (files.length + this.model?.length || 0) > 1) {
+      errors.notSingle = true;
+      this.model.forEach((_item_) => {
+        const item = _item_;
+        if (!item.errors) item.errors = {};
+        item.errors.notSingle = true;
+      });
+    }
+
     if (angular.isArray(files)) {
       files.forEach((file) => {
         // Check for duplicate before adding
         if (!find(this.model, (item) => file.name === item.name)) {
           this.getFileInfos(file);
-          this.checkFileValidity(file);
+          this.checkFileValidity(file, errors);
           this.loadFilePreview(file);
           this.model.push(file);
         }
@@ -127,15 +147,35 @@ export default class {
   removeFile(file) {
     if (angular.isArray(this.model)) {
       remove(this.model, (item) => item === file);
-      if (file.errors && this.form && this.form[this.name]) {
+      if (file.errors) {
         let hasMaxsizeErrors = false;
         let hasTypeErrors = false;
-        this.model.forEach((item) => {
+        let hasNotSingleError = false;
+
+        if (!this.multiple && this.droparea) {
+          hasNotSingleError = (this.model?.length || 0) > 1;
+        }
+
+        this.model.forEach((_item_) => {
+          const item = _item_;
           hasMaxsizeErrors = hasMaxsizeErrors || item.errors?.maxsize;
           hasTypeErrors = hasTypeErrors || item.errors?.type;
+          if (hasNotSingleError) {
+            if (!item.errors) item.errors = {};
+            item.errors.notSingle = true;
+          } else if (item.errors?.notSingle) {
+            delete item.errors.notSingle;
+          }
+          if (isEmpty(item.errors)) {
+            delete item.errors;
+          }
         });
-        this.form[this.name].$setValidity('maxsize', !hasMaxsizeErrors);
-        this.form[this.name].$setValidity('type', !hasTypeErrors);
+
+        if (this.form && this.form[this.name]) {
+          this.form[this.name].$setValidity('maxsize', !hasMaxsizeErrors);
+          this.form[this.name].$setValidity('type', !hasTypeErrors);
+          this.form[this.name].$setValidity('not-single', !hasNotSingleError);
+        }
       }
       this.onRemove({ modelValue: this.model });
     }
@@ -149,6 +189,7 @@ export default class {
     if (this.form && this.form[this.name]) {
       this.form[this.name].$setValidity('maxsize', true);
       this.form[this.name].$setValidity('type', true);
+      this.form[this.name].$setValidity('not-single', true);
     }
   }
 
