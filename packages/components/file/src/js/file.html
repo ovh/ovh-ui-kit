@@ -94,7 +94,8 @@
         <span class="oui-icon oui-icon-file" aria-hidden="true"></span>
     </div>
     <div class="oui-file-droparea__text" >
-        <span ng-bind="::$ctrl.translations.dropArea"></span>
+        <span ng-if="$ctrl.multiple" ng-bind="::$ctrl.translations.dropArea"></span>
+        <span ng-if="!$ctrl.multiple" ng-bind="::$ctrl.translations.dropAreaSingle"></span>
         <button class="oui-link"
             type="button"
             ng-bind="::$ctrl.translations.dropAreaSelector"
@@ -143,6 +144,10 @@
                 <span class="oui-file-attachments__error"
                     ng-if="file.errors && file.errors.maxsize"
                     ng-bind="::$ctrl.translations.maxsizeError">
+                </span>
+                <span class="oui-file-attachments__error"
+                    ng-if="file.errors && file.errors.notSingle"
+                    ng-bind="::$ctrl.translations.notSingleError">
                 </span>
             </span>
             <button class="oui-file-attachments__remove oui-icon oui-icon-close"

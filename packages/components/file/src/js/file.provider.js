@@ -6,11 +6,13 @@ export default class {
     this.translations = {
       attachmentsHeading: 'Attachment(s)',
       dropArea: 'Attach document(s) by drap and drop or',
+      dropAreaSingle: 'Attach a document by drap and drop or',
       dropAreaSelector: 'select a file',
       filePlaceholder: 'Select a file...',
       fileSelector: 'Select file',
       filesSelector: 'Select file(s)...',
       maxsizeError: 'This file exceeds the size limit',
+      notSingleError: 'You can only add one file',
       removeFile: 'Remove file from selector',
     };
 

@@ -94,6 +94,7 @@ export const DragDropArea = forModule(moduleName).createElement(
       disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
+      multiple
       droparea>
     </oui-file>`,
     {
@@ -106,6 +107,25 @@ export const DragDropArea = forModule(moduleName).createElement(
 
 DragDropArea.storyName = 'Drag & Drop area';
 
+export const DragDropAreaSingle = forModule(moduleName).createElement(
+  () => compileTemplate(
+    `
+    <oui-file
+      disabled="$ctrl.disabled"
+      maxsize="150000"
+      model="$ctrl.model"
+      droparea>
+    </oui-file>`,
+    {
+      $ctrl: {
+        disabled: boolean('Disabled state', false),
+      },
+    },
+  ),
+);
+
+DragDropAreaSingle.storyName = 'Drag & Drop area single file';
+
 export const DragDropWithPreview = forModule(moduleName).createElement(
   () => compileTemplate(
     `
@@ -113,6 +133,7 @@ export const DragDropWithPreview = forModule(moduleName).createElement(
       disabled="$ctrl.disabled"
       maxsize="150000"
       model="$ctrl.model"
+      multiple
       droparea
       preview>
     </oui-file>`,
