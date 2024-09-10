@@ -1,3 +1,12 @@
+## [6.10.5](https://github.com/ovh/ovh-ui-kit/compare/v6.10.4...v6.10.5) (2024-09-10)
+
+
+### Bug Fixes
+
+* **file:** handle multiple boolean on droparea ([#858](https://github.com/ovh/ovh-ui-kit/issues/858)) ([46430ff](https://github.com/ovh/ovh-ui-kit/commit/46430ff6b5c0da7c1a7d2f99fdbcb3ff485fadd2))
+
+
+
 ## [6.10.4](https://github.com/ovh/ovh-ui-kit/compare/v6.10.3...v6.10.4) (2024-08-22)
 
 
