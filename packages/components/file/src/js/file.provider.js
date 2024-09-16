@@ -14,6 +14,7 @@ export default class {
       maxsizeError: 'This file exceeds the size limit',
       notSingleError: 'You can only add one file',
       removeFile: 'Remove file from selector',
+      typeError: 'This file extension is not supported',
     };
 
     this.units = [

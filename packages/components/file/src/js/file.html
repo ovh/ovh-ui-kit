@@ -142,11 +142,15 @@
                     <span class="oui-file-ellipsis__size" ng-bind="file.infos.size"></span>
                 </span>
                 <span class="oui-file-attachments__error"
-                    ng-if="file.errors && file.errors.maxsize"
+                    ng-if="file.errors.maxsizeError"
                     ng-bind="::$ctrl.translations.maxsizeError">
                 </span>
                 <span class="oui-file-attachments__error"
-                    ng-if="file.errors && file.errors.notSingle"
+                    ng-if="file.errors.type"
+                    ng-bind="::$ctrl.translations.typeError">
+                </span>
+                <span class="oui-file-attachments__error"
+                    ng-if="file.errors.notSingle"
                     ng-bind="::$ctrl.translations.notSingleError">
                 </span>
             </span>
